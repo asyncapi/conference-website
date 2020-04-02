@@ -43,5 +43,15 @@ html( lang='en', class= htmlClass )
     script( src='js/core.min.js' )
     script( src='js/script.js' )
 
+
+    script( async src='https://www.googletagmanager.com/gtag/js?id=UA-109278936-3')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109278936-3');
+
+
     if( pageName === 'Privacy Policy' )
       //coded by gelbman20
