@@ -1,0 +1,147 @@
+/** @section Thumbnails */
+
+// Figure Light
+.figure-light figcaption {
+  padding-top: 10px;
+  color: $gray-400;
+}
+
+.thumbnail {
+  display: block;
+  position: relative;
+  max-width: 298px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail-overlay {
+  @extend .triangle-overlay;
+  border-top-color: rgba($primary, .8);
+  transform: scale(.3);
+  transform-origin: right top;
+  opacity: 0;
+  transition: .3s ease-out all;
+}
+
+.thumbnail:hover {
+  .thumbnail-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.thumbnail-icon {
+  position: absolute;
+  right: 38px;
+  top: 38px;
+  width: 30px;
+  height: 30px;
+
+  &:before,&:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+    opacity: 0;
+    transition: .3s ease-out all;
+  }
+
+  &:before {
+    transform: rotate(0);
+  }
+
+  &:after {
+    transform: rotate(90deg);
+  }
+}
+
+.thumbnail:hover {
+  .thumbnail-icon {
+
+    &:before,&:after {
+      opacity: 1;
+    }
+
+    &:before {
+      transform: rotate(90deg);
+    }
+
+    &:after {
+      transform: rotate(0);
+    }
+  }
+}
+
+// Thumbnail big
+.thumbnail-big {
+  display: block;
+  position: relative;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.thumbnail-big-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba( $primary , .8 );
+  opacity: 0;
+  transform: scale(1.05);
+  transition: .3s ease-out all;
+}
+
+.thumbnail-big:hover {
+  .thumbnail-big-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.thumbnail-big-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+
+  &:before,&:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+    opacity: 0;
+    transition: .3s ease-out all;
+  }
+
+  &:before {
+    transform: rotate(0);
+  }
+
+  &:after {
+    transform: rotate(90deg);
+  }
+}
+
+.thumbnail-big:hover {
+  .thumbnail-big-icon {
+
+    &:before,&:after {
+      opacity: 1;
+    }
+
+    &:before {
+      transform: rotate(90deg);
+    }
+
+    &:after {
+      transform: rotate(0);
+    }
+  }
+}

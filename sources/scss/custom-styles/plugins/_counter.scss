@@ -1,0 +1,81 @@
+/** @section Counter */
+
+// Box Counter
+.box-counter {
+  position: relative;
+  font-family: $font-family-sec;
+  text-align: center;
+  color: $gray-700;
+}
+
+.box-counter-title {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+.box-counter-main {
+  font-size: 0;
+  font-weight: 500;
+  line-height: 1.2;
+
+  > * {
+    display: inline;
+    font-size: 45px;
+  }
+
+  .small { font-size: 28px; }
+
+  .small_top {
+    position: relative;
+    top: .2em;
+    vertical-align: top;
+  }
+}
+
+.box-counter-divider {
+  font-size: 0;
+  line-height: 0;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 2px;
+    background: $primary;
+  }
+}
+
+* + .box-counter-title { margin-top: 10px; }
+
+* + .box-counter-main { margin-top: 20px; }
+
+* + .box-counter-divider { margin-top: 10px; }
+
+
+@include media-breakpoint-up(xl) {
+  .box-counter-main {
+    > * {
+      font-size: 50px;
+    }
+
+    .small { font-size: 36px; }
+  }
+
+  * + .box-counter-main { margin-top: 30px; }
+  * + .box-counter-divider { margin-top: 15px; }
+  * + .box-counter-title { margin-top: 18px; }
+}
+
+.bg-primary {
+
+  .box-counter { color: $white; }
+
+  .box-counter-divider {
+    &::after { background: $white; }
+  }
+}

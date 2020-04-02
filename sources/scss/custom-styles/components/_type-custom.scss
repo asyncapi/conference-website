@@ -1,0 +1,275 @@
+/** @section Typography */
+
+// Body
+body {
+  font-size: $font-size-body;
+  line-height: 1.5;
+  font-weight: 500;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  @include media-breakpoint-up(md) {
+    line-height: 1.75;
+  }
+
+  @include media-breakpoint-up(lg) {
+    line-height: $line-height-base;
+  }
+}
+
+// Headings
+#{headings()} {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: $headings-font-family;
+  color: $headings-color;
+
+  a {
+    @include link(inherit, $primary);
+  }
+}
+
+h1,
+.heading-1 {
+  font-size: 42px;
+  line-height: $h1-line-height;
+
+  @include media-breakpoint-up(md) {
+    font-size: $h1-font-size * .45;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size * .7;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h1-font-size;
+  }
+}
+
+h4 + h1,
+.heading-4 + .heading-1 { margin-top: 25px; }
+@include media-breakpoint-up(xl) {
+  h4 + h1 { margin-top: 0; }
+}
+
+h2,
+.heading-2 {
+  font-size: 36px;
+  line-height: $h2-line-height;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h2-font-size * .7;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h2-font-size;
+  }
+}
+
+h6 + h2,
+h6 + .heading-2,
+.heading-6 + h2,
+.heading-6 + .heading-2 { margin-top: 10px; }
+
+h3,
+.heading-3 {
+  font-size: 30px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h3-font-size * .7;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
+  }
+}
+
+h6 + h3,
+h6 + .heading-3,
+.heading-6 + h3,
+.heading-6 + .heading-3 { margin-top: 10px; }
+
+.heading-lg-postfix-15 {
+  margin-right: -15px;
+}
+
+h4,
+.heading-4 {
+  font-size: 22px;
+  font-weight: 600;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
+  }
+}
+
+.badge-promo + h4,
+.badge-promo + .heading-4 { margin-top: 30px; }
+
+h5,
+.heading-5 {
+  font-weight: 500;
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+
+  .big {
+    line-height: 1.2;
+  }
+
+  @include media-breakpoint-up(xl) {
+    .big {
+      font-size: $h5-font-size * ( ( $h5-font-size + 4 ) / $h5-font-size );
+    }
+  }
+}
+
+h6,
+.heading-6 {
+  letter-spacing: .2em;
+  font-size: $h6-font-size;
+  line-height: $h6-line-height;
+  color: $secondary;
+}
+
+.video-link + h6,
+.video-link + .heading-6 { margin-top: 10px; }
+
+@include media-breakpoint-up(xl) {
+  .video-link + h6,
+  .video-link + .heading-6 { margin-top: 20px; }
+}
+
+
+// Emphasis
+small,
+.small {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+}
+
+mark,
+.mark {
+  padding: 3px 5px;
+  color: $white;
+  background: $primary;
+}
+
+// Big text
+.big {
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+}
+
+.lead {
+  font-size: $lead-font-size;
+  line-height: $lead-line-height;
+  font-weight: $lead-font-weight;
+}
+
+code {
+  padding: $code-padding-y $code-padding-x;
+  border-radius: $border-radius-sm;
+  font-size: $code-font-size;
+  color: $code-color;
+  background: $code-bg;
+}
+
+// Paragraph
+p {
+  [data-toggle='tooltip'] {
+    padding-left: .25em;
+    padding-right: .25em;
+    color: $primary;
+  }
+
+  [style*='max-width'] { display: inline-block; }
+}
+
+.paragraph-inset-right-25 {
+  padding-right: 25px;
+}
+
+* + p { margin-top: 15px; }
+p + p { margin-top: 12px; }
+figure + p { margin-top: 5px; }
+img + p { margin-top: 15px; }
+h2 + p,
+.heading-2 + p { margin-top: 12px; }
+h3 + p,
+.heading-3 + p { margin-top: 15px; }
+h5 + p,
+.heading-5 + p { margin-top: 5px; }
+
+@include media-breakpoint-up(lg) {
+  h3 + p,
+  .heading-3 + p { margin-top: 30px; }
+}
+
+@include media-breakpoint-up(xl) {
+  h3 + p,
+  .heading-3 + p { margin-top: 40px; }
+}
+
+// Selection
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $primary;
+  color: $white;
+}
+
+// Event Detail
+.event-detail {
+  font-family: $font-family-sec;
+  font-weight: 400;
+}
+
+.event-detail-time {
+  color: $primary;
+}
+
+.event-detail-link {
+  display: inline-block;
+  font-family: $font-family-sec;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  @include link($secondary, $primary);
+}
+
+* + .event-detail { margin-top: 10px; }
+* + .event-detail-address { margin-top: 0; }
+* + .event-detail-link { margin-top: 10px; }
+
+@include media-breakpoint-up(md) {
+  * + .event-detail { margin-top: 15px; }
+}
+
+@include media-breakpoint-up(lg) {
+  * + .event-detail { margin-top: 25px; }
+  * + .event-detail-link { margin-top: 20px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .event-detail { margin-top: 35px; }
+  * + .event-detail-link { margin-top: 40px; }
+}
+
+.bg-gray-900 {
+  .event-detail {
+    color: $gray-400;
+  }
+}

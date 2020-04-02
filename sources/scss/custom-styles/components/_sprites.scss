@@ -1,0 +1,161 @@
+.icon-svg {
+    font-size: 10px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../images/svg/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 51.2em 362.5em;
+
+      .no-svg & {
+        background-image: url("../images/svg/sprite.svg");
+      }
+    }
+}
+
+
+.icon-svg.bullseye {
+  &:before {
+      background-position: 0em 0em;
+      width: 48.0011em;
+      height: 48.0011em;
+    }
+  }
+
+  @mixin icon-svg-bullseye(){
+    @extend .bullseye;
+  }
+
+
+.icon-svg.clock {
+  &:before {
+      background-position: 0em -48.1em;
+      width: 3.1059em;
+      height: 3.1059em;
+    }
+  }
+
+  @mixin icon-svg-clock(){
+    @extend .clock;
+  }
+
+
+.icon-svg.diamond {
+  &:before {
+      background-position: 0em -51.3em;
+      width: 5.9986em;
+      height: 5.9986em;
+    }
+  }
+
+  @mixin icon-svg-diamond(){
+    @extend .diamond;
+  }
+
+
+.icon-svg.earth-globe {
+  &:before {
+      background-position: 0em -57.3em;
+      width: 51.2em;
+      height: 51.2em;
+    }
+  }
+
+  @mixin icon-svg-earth-globe(){
+    @extend .earth-globe;
+  }
+
+
+.icon-svg.flag {
+  &:before {
+      background-position: 0em -108.5em;
+      width: 51.2em;
+      height: 51.2em;
+    }
+  }
+
+  @mixin icon-svg-flag(){
+    @extend .flag;
+  }
+
+
+.icon-svg.handshake {
+  &:before {
+      background-position: 0em -159.7em;
+      width: 49.1064em;
+      height: 49.1064em;
+    }
+  }
+
+  @mixin icon-svg-handshake(){
+    @extend .handshake;
+  }
+
+
+.icon-svg.lightbulb {
+  &:before {
+      background-position: 0em -208.9em;
+      width: 48em;
+      height: 48em;
+    }
+  }
+
+  @mixin icon-svg-lightbulb(){
+    @extend .lightbulb;
+  }
+
+
+.icon-svg.plus-symbol {
+  &:before {
+      background-position: 0em -256.9em;
+      width: 3.1444em;
+      height: 3.1444em;
+    }
+  }
+
+  @mixin icon-svg-plus-symbol(){
+    @extend .plus-symbol;
+  }
+
+
+.icon-svg.puzzle {
+  &:before {
+      background-position: 0em -260.1em;
+      width: 48em;
+      height: 48em;
+    }
+  }
+
+  @mixin icon-svg-puzzle(){
+    @extend .puzzle;
+  }
+
+
+.icon-svg.small-calendar {
+  &:before {
+      background-position: 0em -308.1em;
+      width: 3.2em;
+      height: 3.2em;
+    }
+  }
+
+  @mixin icon-svg-small-calendar(){
+    @extend .small-calendar;
+  }
+
+
+.icon-svg.tick {
+  &:before {
+      background-position: 0em -311.3em;
+      width: 51.2em;
+      height: 51.2em;
+    }
+  }
+
+  @mixin icon-svg-tick(){
+    @extend .tick;
+  }
+
+
+

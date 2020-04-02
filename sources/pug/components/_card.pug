@@ -1,0 +1,55 @@
+//- Bootstrap Card
+  @param {object}  obj           - card object
+  @param {boolean} obj.show      - is card not collapsed
+  @param {string}  obj.parentId  - parent accordion id
+  @param {string}  obj.title     - card title
+mixin card( obj )
+  -
+    var
+      headId = obj.parentId +'-card-head-'+ randomStr(8),
+      bodyId = obj.parentId +'-card-body-'+ randomStr(8);
+
+  //Bootstrap card
+  article.card.card-custom&attributes( attributes )
+    .card-header( role='tab' )
+      .card-title
+        a( id= headId, data-toggle='collapse', data-parent='#'+ obj.parentId, href='#'+ bodyId, aria-controls= bodyId, aria-expanded= Boolean( obj.show ).toString(), class={ collapsed: !obj.show }, role='button' )
+          = obj.title
+          .card-arrow
+
+    .collapse( id= bodyId, aria-labelledby= headId, data-parent='#'+ obj.parentId, class={ show: obj.show }, role='tabpanel' )
+      .card-body
+        block
+
+mixin card-schedule( obj )
+  -
+    var
+    headId = obj.parentId +'-card-head-'+ randomStr(8),
+    bodyId = obj.parentId +'-card-body-'+ randomStr(8);
+
+  //Bootstrap card
+  article.card.card-custom&attributes( attributes )
+    .card-header( role='tab' )
+      .card-title
+        a( id= headId, data-toggle='collapse', data-parent='#' + obj.parentId, href='#' + bodyId, aria-controls= bodyId, aria-expanded= Boolean(obj.show).toString(), class={collapsed: !obj.show}, role='button' )
+          case obj.case
+            when 1
+              include ../components/card-content/schedule-item-1/_schedule-item-header
+            when 2
+              include ../components/card-content/schedule-item-2/_schedule-item-header
+            when 3
+              include ../components/card-content/schedule-item-3/_schedule-item-header
+            when 5
+              include ../components/card-content/schedule-item-5/_schedule-item-header
+
+    .collapse( id= bodyId, aria-labelledby= headId, data-parent='#' + obj.parentId, class={show: obj.show}, role='tabpanel' )
+      .card-body
+        case obj.case
+          when 1
+            include ../components/card-content/schedule-item-1/_schedule-item-body
+          when 2
+            include ../components/card-content/schedule-item-2/_schedule-item-body
+          when 3
+            include ../components/card-content/schedule-item-3/_schedule-item-body
+          when 5
+            include ../components/card-content/schedule-item-5/_schedule-item-body

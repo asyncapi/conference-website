@@ -1,0 +1,83 @@
+/** @section Pagination custom */
+
+// Base styles
+.pagination-classic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include group(10px);
+  font-family: $font-family-sec;
+}
+
+.pagination-classic-item {
+  &:nth-child(1) {
+    display: none;
+  }
+}
+
+.pagination-classic-link-prev,
+.pagination-classic-link-next,
+.pagination-classic-link {
+  position: relative;
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+
+  &, &:focus, &:active {
+    color: $gray-600;
+    background: $gray-100;
+  }
+}
+
+.pagination-classic-link-prev,
+.pagination-classic-link-next {
+  font-size: 20px;
+
+  &.disabled,
+  &.active,
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+
+  &.disabled {
+    cursor: auto;
+  }
+}
+
+.pagination-classic-link {
+  font-size: 18px;
+  font-weight: 600;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+}
+
+.pagination-classic-overlay {
+  @extend .triangle-overlay;
+}
+
+@include media-breakpoint-up(xs) {
+  .pagination-classic-item {
+    &:nth-child(1) {
+      display: block;
+    }
+  }
+}
+
+* + .pagination-classic { margin-top: 35px; }
+
+@include media-breakpoint-up(lg) {
+  * + .pagination-classic { margin-top: 45px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .pagination-classic { margin-top: 60px; }
+}

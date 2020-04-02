@@ -1,0 +1,130 @@
+/** @section Schedule */
+.schedule-classic {
+  display: block;
+  text-align: left;
+
+  .unit-left,
+  .unit-body { display: block; }
+
+  .unit-left {
+    min-width: 122px;
+  }
+
+  .unit-body { flex-grow: 1; }
+}
+
+.collapsed .schedule-classic-content {
+  background-color: $white;
+}
+
+.schedule-classic-content {
+  padding: 30px 20px;
+  background-color: $gray-100;
+}
+
+.schedule-classic-img {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  > img {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
+.schedule-classic-img + .schedule-classic-img { margin-top: 6px; }
+
+.schedule-classic-content,
+.schedule-classic-time,
+.schedule-classic-title,
+.schedule-classic-author {
+  display: block;
+}
+
+.schedule-classic-time,
+.schedule-classic-title {
+  text-transform: uppercase;
+}
+
+.schedule-classic-time {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: $primary;
+}
+
+.schedule-classic-title {
+  &, &:focus, &:active {
+    color: rgba($martinique, 1);
+  }
+  transition: .3s ease-out all;
+
+  &:hover {
+    color: rgba($martinique, .8);
+  }
+}
+
+.schedule-classic-author {
+  color: $gray-600;
+}
+
+.schedule-classic-author-name {
+  color: $secondary;
+  text-decoration: underline;
+}
+
+* + .schedule-classic-title { margin-top: 8px; }
+* + .schedule-classic-author { margin-top: 12px; }
+
+@include media-breakpoint-up(md) {
+  .schedule-classic-img {
+    text-align: center;
+    padding-left: 0;
+  }
+  .schedule-classic-content {
+    padding: 40px 30px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .schedule-classic-content {
+    padding: 60px 66px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .schedule-classic-title {
+    font-size: $h4-font-size * 1.133;
+  }
+}
+
+// Schedule Classic Simple
+.schedule-classic-simple {
+  font-family: $font-family-sec;
+  * + .schedule-classic-time { margin-top: 5px; }
+}
+
+@include media-breakpoint-up(md) {
+  .schedule-classic-simple {
+    .schedule-classic-img {
+      position: absolute;
+      left: 61px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .schedule-classic-content {
+      position: relative;
+      padding-left: 173px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .schedule-classic-simple {
+    .schedule-classic-content {
+      padding-left: 207px;
+    }
+  }
+}

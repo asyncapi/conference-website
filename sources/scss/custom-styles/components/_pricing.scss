@@ -1,0 +1,148 @@
+/** @section Pricing */
+
+// Pricing
+.pricing {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  * + .pricing-price { margin-top: 5px; }
+  * + .pricing-description { margin-top: 8px; }
+}
+
+.pricing-header {
+  font-family: $font-family-sec;
+  background-color: $white;
+  padding: 30px 20px 26px;
+  border-bottom: 1px solid #f4f2ee;
+}
+
+.pricing-body {
+  padding: 35px 20px;
+  background-color: $gray-200;
+}
+
+.pricing-title {
+  font-size: 14px;
+  color: $gray-900;
+}
+
+.pricing-price {
+  font-weight: 300;
+  line-height: 1;
+  color: $secondary;
+}
+
+.pricing-description {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pricing-list {
+  color: $gray-600;
+  > li + li { margin-top: 7px; }
+}
+
+@include media-breakpoint-up(lg) {
+  .pricing-description { font-size: 16px; }
+}
+
+@include media-breakpoint-up(xl) {
+  .pricing {
+    * + .button { margin-top: 50px; }
+  }
+
+  .pricing-header {
+    padding: 59px 20px 54px;
+  }
+
+  .pricing-body {
+    padding: 51px 20px;
+  }
+}
+
+.context-dark {
+  .pricing-title { color: $gray-900; }
+  .pricing-price { color: $secondary; }
+  .pricing-description { color: $body-color }
+}
+
+// Pricing Modern
+.pricing-modern {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  * + .pricing-modern-price { margin-top: 5px; }
+  * + .pricing-modern-description { margin-top: 8px; }
+}
+
+.pricing-modern-header {
+  font-family: $font-family-sec;
+  background-color: $secondary;
+  padding: 30px 20px 26px;
+}
+
+.pricing-modern-body {
+  padding: 35px 20px;
+  background-color: $white;
+  border: 2px solid $gray-100;
+  border-top: 0;
+}
+
+.pricing-modern-title {
+  font-size: 14px;
+  color: $white;
+}
+
+.pricing-modern-price {
+  font-weight: 300;
+  line-height: 1;
+  color: $white;
+}
+
+.pricing-modern-description {
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+}
+
+.pricing-modern-list {
+  color: $gray-600;
+  > li + li { margin-top: 7px; }
+}
+
+.pricing-modern-primary {
+  .pricing-modern-header {
+    background-color: $primary;
+  }
+  .pricing-modern-body {
+    border-color: $primary;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pricing-modern-description { font-size: 16px; }
+}
+
+@include media-breakpoint-up(xl) {
+  .pricing-modern {
+    * + .button { margin-top: 50px; }
+  }
+
+  .pricing-modern-header {
+    padding: 59px 20px 54px;
+  }
+
+  .pricing-modern-body {
+    padding: 51px 20px;
+  }
+}
+
+.context-dark {
+  .pricing-modern-title { color: $gray-900; }
+  .pricing-modern-price { color: $secondary; }
+  .pricing-modern-description { color: $body-color }
+}

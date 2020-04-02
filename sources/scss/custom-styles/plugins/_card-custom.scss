@@ -1,0 +1,127 @@
+/** @section Panel custom */
+
+// Local variables
+$accordion-corporate-color: $gray-700;
+$accordion-corporate-background: $white;
+$accordion-corporate-border: #dedede;
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $white;
+$accordion-corporate-arrow-background: $primary;
+$accordion-corporate-shadow: -1px 2px 5px 0px rgba(#444953, 0.12);
+$accordion-corporate-border-radius: 6px;
+$accordion-corporate-header-padding: 21px 82px 21px 32px;
+$accordion-corporate-content-padding: 25px 44px 25px nth($accordion-corporate-header-padding, 4);
+
+// Panel groups
+.card-group-custom {
+  margin-bottom: 0;
+
+  .card-header + .collapse > .card-body,
+  .card-header + .collapse > .list-group { border-top: 0; }
+
+  .card + .card { margin-top: 0; }
+
+  @include media-breakpoint-down(sm) {
+    * + .card { padding-top: 30px; }
+  }
+}
+
+
+.card-group-custom.card-group-corporate {
+  .card + .card {
+    border-top: 2px solid $gray-100;
+  }
+}
+
+.card-custom {
+  margin: 0;
+  background: inherit;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  a { display: block; }
+
+  // Panel heading
+  .card-header {
+    padding:  0;
+    border-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: $white;
+    font-family: $font-family-sec;
+  }
+
+  // Panel contents
+  .card-body {
+    padding: 20px 20px 40px;
+    border: 0;
+    > * + * { margin-top: 20px; }
+  }
+
+  .card-title { margin-bottom: 0; }
+}
+
+* + .card-group-custom {
+  margin-top: 35px;
+}
+
+@include media-breakpoint-up(md) {
+
+  .card-custom {
+    &:not(:first-child) {
+      .card-header {
+        .card-title {
+          > a {
+            margin-top: 60px;
+          }
+
+          a.collapsed {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 15px 10px 35px 168px;
+    }
+  }
+
+  * + .card-group-custom { margin-top: 50px; }
+}
+
+@include media-breakpoint-up(lg) {
+  .card-custom {
+    .card-body {
+      padding: 45px 10px 45px 208px;
+
+      > * + * { margin-top: 30px; }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card-custom {
+    .card-body {
+      padding: 45px 10px 45px 208px;
+
+      > * + * { margin-top: 48px; }
+    }
+  } 
+} 
+
+// Panel corporate
+.card-corporate {
+  display: flex;
+  text-align: left;
+
+  .card-title a,
+  .card-body {
+    background: $accordion-corporate-background;
+  }
+
+  .collapse {
+    position: relative;
+    z-index: 1;
+  }
+}

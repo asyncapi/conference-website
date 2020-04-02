@@ -1,0 +1,9 @@
+/** @section Brand */
+
+.brand {
+  display: inline-block;
+
+  .brand-logo-light { display: block; }
+
+  .brand-logo-dark { display: none; }
+}

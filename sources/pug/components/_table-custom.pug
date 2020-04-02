@@ -1,0 +1,31 @@
+//- Table
+	@param {object} table - table object
+	@param {Array} table.body
+	@param {Array} [table.head]
+	@param {Array} [table.foot]
+	@example
+		+table-custom({
+			head: [ 'Column 1', 'Column 2' ],
+			body: [[ 'Item #1', 'Description' ]],
+			foot: [ 'All Items', 'Description' ]
+		}).table-custom-secondary
+mixin table-custom( table )
+	.table-custom-responsive
+		table.table-custom&attributes( attributes )
+			if ( table.head )
+				thead
+					tr
+						each col in table.head
+							th= col
+
+			tbody
+				each row, i in table.body
+					tr
+						each col in row
+							td= col
+
+			if ( table.foot )
+				tfoot
+					tr
+						each col in table.foot
+							td= col

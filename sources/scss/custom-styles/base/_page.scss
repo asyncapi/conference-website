@@ -1,0 +1,40 @@
+/** @section Page layout */
+
+// Page
+.page {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+
+	&.fadeIn { animation-timing-function: ease-out; }
+	&.fadeOut { animation-timing-function: ease-in; }
+
+	[data-x-mode] & { opacity: 1; }
+}
+
+// Boxed Layout
+html.boxed {
+	body { background: $page-boxed-background-color $page-boxed-background-image repeat fixed; }
+
+	@media (min-width: $page-boxed-width + $grid-gutter-width) {
+		.page {
+			max-width: $page-boxed-width;
+			margin-left: auto;
+			margin-right: auto;
+			box-shadow: 0 0 23px 0 rgba(1, 1, 1, 0.1);
+		}
+
+		.rd-navbar-static {
+			max-width: $page-boxed-width;
+			margin-left: auto;
+			margin-right: auto;
+
+			&.rd-navbar--is-stuck {
+				max-width: $page-boxed-width;
+				width: 100%;
+				left: calc(50% - #{$page-boxed-width});
+				right: calc(50% - #{$page-boxed-width});
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+// Section Pre Footer
+section.section.section-lg.bg-gray-900
+  .container
+    .row.row-30
+      .col-xs-10.col-lg-4.align-self-center
+        a.brand( href='index.html' )
+          img.brand-logo-light( src='/images/asyncapi-horizontal-white.svg', style='width: 60%;' )
+      .col-xs-10.col-sm-6.col-lg-4
+        h5: span.big.font-weight-sbold Event detail
+        .event-detail
+          p.event-detail-time.big: time( data-splitting  datetime='2020-04-22' ) April 22, 2020
+          p.event-detail-address.big( data-splitting ) Remote, at your favorite quarantine room.
+          a.event-detail-link(href="" onClick='alert("You need to see where you live? 😜"); return false;') View map location
+      .col-xs-10.col-sm-6.col-lg-4
+        h5: span.big.font-weight-sbold Social Updates
+        .event-detail
+          p.big You may wonder: why this event so popular? If you do,
+            br.d-none.d-xl-block
+            =" "
+            | find more info about it here.
+          ul.list-inline.list-inline-xs
+            li( data-wow-delay='.65s' ): a.icon.icon-rect.icon-xs.icon-white.fa-globe( href='https://www.asyncapi.com' target='_blank' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+            li( data-wow-delay='.65s' ): a.icon.icon-rect.icon-xs.icon-white.fa-slack( href='https://www.asyncapi.com/slack-invite' target='_blank' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+            li( data-wow-delay='.35s' ): a.icon.icon-rect.icon-xs.icon-white.fa-twitter( href='https://www.twitter.com/AsyncAPISpec' target='_blank' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+            li( data-wow-delay='.5s' ): a.icon.icon-rect.icon-xs.icon-white.fa-linkedin( href='https://www.linkedin.com/company/asyncapi' target='_blank' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+            li( data-wow-delay='.65s' ): a.icon.icon-rect.icon-xs.icon-white.fa-youtube-play( href='https://www.youtube.com/channel/UCIz9zGwDLbrYQcDKVXdOstQ' target='_blank' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+
+// Divider
+.divider.divider-gray-900.text-center
+
+// Footer Classic
+footer.section.footer-classic.context-dark
+  .container
+    +rights

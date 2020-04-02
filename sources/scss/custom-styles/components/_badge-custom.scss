@@ -1,0 +1,37 @@
+/** @section Badge custom */
+
+// Badge promo
+.badge-promo {
+  display: inline-block;
+  position: relative;
+  padding: 6px 33px 9px;
+  text-align: center;
+}
+
+.badge-promo-text {
+  position: relative;
+  display: inline-block;
+  max-width: 390px;
+  z-index: 1;
+  font-family: $font-family-sec;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.badge-promo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 280px;
+  width: 280px;
+  height: 100%;
+}
+
+@include media-breakpoint-up(xs) {
+  .badge-promo-icon {
+    width: 100%;
+  }
+}

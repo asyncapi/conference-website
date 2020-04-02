@@ -1,0 +1,42 @@
+// Element-groups
+@mixin group($offset-x, $offset-y: $offset-x) {
+	margin-bottom: -$offset-y;
+	margin-left: -$offset-x;
+
+	&:empty {
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+
+	> * {
+		margin-top: 0;
+		margin-bottom: $offset-y;
+		margin-left: $offset-x;
+	}
+}
+
+@mixin group-media($offset-x, $offset-y: $offset-x) {
+	margin-bottom: -$offset-y;
+	margin-left: -$offset-x;
+
+	> * {
+		margin-bottom: $offset-y;
+		margin-left: $offset-x;
+	}
+}
+
+@mixin groupX($offset-x) {
+	margin-left: -$offset-x;
+
+	> * {
+		margin-left: $offset-x;
+	}
+}
+
+@mixin groupY($offset-y) {
+	margin-bottom: -$offset-y;
+
+	> * {
+		margin-bottom: $offset-y;
+	}
+}

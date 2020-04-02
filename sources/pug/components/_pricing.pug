@@ -1,0 +1,29 @@
+mixin pricing( obj )
+  .pricing&attributes( attributes )
+    .pricing-header
+      h6.pricing-title= obj.title
+      p.pricing-price.heading-3 $
+        = obj.price
+      p.pricing-description= obj.description
+    .pricing-body
+      ul.pricing-list
+        each item in obj.list
+          li= item
+      button.button.button-primary( type='submit' data-triangle=".button-overlay" )
+        span Buy Tickets
+        span.button-overlay
+
+mixin pricing-modern( obj )
+  .pricing-modern&attributes( attributes )
+    .pricing-modern-header
+      h6.pricing-modern-title= obj.title
+      p.pricing-modern-price.heading-3 $
+        = obj.price
+      p.pricing-modern-description= obj.description
+    .pricing-modern-body
+      ul.pricing-modern-list
+        each item in obj.list
+          li= item
+      button.button.button-primary( type='submit' data-triangle=".button-overlay" )
+        span Buy Tickets
+        span.button-overlay

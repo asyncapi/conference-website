@@ -1,0 +1,177 @@
+extends ../_skeleton
+
+include ../components/_svg-icons
+include ../components/_countdown
+include ../components/_speaker
+include ../components/_card
+include ../components/_thumbnail
+include ../components/_sponsor
+include ../components/_news
+
+block variables
+  - pageName = 'AsyncAPI online conference'
+
+block page
+  include ../sections/_section-swiper-slider-modern
+
+  // Section First-ever AsyncAPI Conference
+  section.section.section-lg.bg-default.wow.fadeIn
+    .container
+      .row.row-30.justify-content-center
+        .col-md-10.col-lg-6.col-xl-5
+          h6 About the event
+          h3.heading-lg-postfix-15 First-ever AsyncAPI conference
+          p It all started like a crazy idea. Since we're all confined at home due to the coronavirus pandemic, why not organizing a fully-remote online conference to meet each other and have some fun? We asked the community and the response was overwhelmingly positive. We had no choice! Time for some action!
+          // List Inline
+          ul.list-inline.list-inline-xl
+            li
+              .unit
+                .unit-left: +svg-icon(`euro`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 Price
+                  p Free
+            li
+              .unit
+                .unit-left: +svg-icon(`earth-globe`)(class='svg-icon-sm svg-icon-primary')
+                .unit-body
+                  h5 Where
+                  p Online
+            li
+              .unit
+                .unit-left: +svg-icon(`small-calendar`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 When
+                  p: time(datetime='2020-04-22') April 22, 2020
+        .col-md-10.col-lg-6.col-xl-7.text-md-right
+          // Image Box
+          .images-box
+            .images-box-item-right
+              .wow.fadeScale
+                +img('light-world-polygon.png')
+
+  // Section Who Is Speaking
+  +parallax({
+    img:        'bg-parallax-02-1894x1950.jpg',
+    innerClass: 'section-lg context-dark text-center'
+  }).section
+    .container
+      h6.text-secondary Join us
+      h3 Want to speak?
+
+      .group
+        a.button.button-primary.box-with-triangle-right.wow.fadeScale( href='https://forms.gle/tntZP33tJwPiECKP8' data-lightgallery="item" data-triangle=".button-overlay" )
+          span Submit your talk
+          span.button-overlay
+  
+  //- +parallax({
+  //-   img:        'bg-parallax-02-1894x1950.jpg',
+  //-   innerClass: 'section-lg context-dark text-center'
+  //- }).section
+  //-   .container
+  //-     h6.text-secondary Our Speakers
+  //-     h3 who is speaking.
+  //-     .row.row-30
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-01-330x354',
+  //-             title:    'Jesscia brown',
+  //-             position: 'Co Founder'
+  //-           })
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-02-330x354',
+  //-             title:    'Mike hardons',
+  //-             position: 'Lead Developer'
+  //-           })
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-03-330x354',
+  //-             title:    'Chritine Eve',
+  //-             position: 'Manager'
+  //-           })
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-04-330x354',
+  //-             title:    'Kevin Martin',
+  //-             position: 'Supporter'
+  //-           })
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-05-330x354',
+  //-             title:    'Sarah Rose',
+  //-             position: 'Designer'
+  //-           })
+  //-       .col-md-6.col-lg-4
+  //-         div
+  //-           +speaker({
+  //-             img:      'speaker-06-330x354',
+  //-             title:    'John Smith',
+  //-             position: 'Assistant'
+  //-           })
+
+  // Section Conference Schedule
+  section.section.section-lg.bg-default.text-center
+    .container
+      h6 Event Schedule plan
+      h3 Conference Schedule.
+
+      p Coming soon...
+
+  //- section.section.section-lg.bg-default.text-center
+  //-   .container
+  //-     h6 Event Schedule plan
+  //-     h3 Conference Schedule.
+  //-     .tabs-custom.tabs-horizontal.tabs-corporate
+  //-       //Tab panes
+  //-       .tab-content.wow.fadeIn
+  //-         .tab-pane
+  //-           #accordion1.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
+  //-             +card-schedule({
+  //-               parentId: 'accordion1',
+  //-               case: 1
+  //-             }).card-corporate
+  //-             +card-schedule({
+  //-               parentId: 'accordion1',
+  //-               case: 2
+  //-             }).card-corporate
+  //-             +card-schedule({
+  //-               parentId: 'accordion1',
+  //-               case: 3
+  //-             }).card-corporate
+  //-             // Schedule Simple
+  //-             include ../components/card-content/schedule-item-4/_schedule-item-header
+  //-             +schedule-classic-simple()
+  //-             +card-schedule({
+  //-               parentId: 'accordion1',
+  //-               case: 5
+  //-             }).card-corporate
+
+  //- // Section Official Sponsors
+  //- +parallax({
+  //-   img:        'bg-parallax-04-1894x1170.jpg',
+  //-   innerClass: 'section-lg context-dark text-center'
+  //- }).section
+  //-   .container
+  //-     h6 Our sponsorships
+  //-     h3 Official Sponsors.
+  //-     .row.row-30.row-lg-50.justify-content-center
+  //-       .col-sm-5.col-lg-3
+  //-         .wow: div: +sponsor( 'sponsor-01-117x70' )
+  //-       .col-sm-5.col-lg-3
+  //-         .wow: div: +sponsor( 'sponsor-02-66x83' )
+  //-       .col-sm-5.col-lg-3
+  //-         .wow: div: +sponsor( 'sponsor-03-119x33' )
+  //-       .col-sm-5.col-lg-3
+  //-         .wow: div: +sponsor( 'sponsor-04-116x68' )
+  //-       .col-xl-12
+  //-         p.font-weight-sbold.font-secondary
+  //-           span.wow( data-splitting ) Don’t hesitate, contact us for better help and services.
+  //-           =" "
+  //-           a.link-inline.wow.fadeScale( href='#' ) View All Sponsors
+
+  include ../sections/_footer-classic

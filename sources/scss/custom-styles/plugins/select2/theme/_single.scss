@@ -1,0 +1,73 @@
+.select2-selection--single {
+	background-color: map-get( $select2, background-default );
+
+	.select2-selection__rendered {
+		padding-top: (map-get( $select2, input-height ) - map-get( $select2, input-fsz ))/2;
+		padding-bottom: (map-get( $select2, input-height ) - map-get( $select2, input-fsz ))/2;
+		padding-left: map-get( $select2, input-side-indent );
+		font-size: map-get( $select2, input-fsz );
+		line-height: 1;
+		color: map-get( $select2, color-default );
+
+		@if ( map-get( $select2, input-side-indent ) > map-get( $select2-CONST, input-single-right-indent ) ) {
+			padding-right: map-get( $select2, input-side-indent );
+		} @else {
+			padding-right: map-get( $select2-CONST, input-single-right-indent )
+		}
+	}
+
+	.select2-selection__clear {
+		cursor: pointer;
+		float: right;
+		font-weight: bold;
+	}
+
+	.select2-selection__placeholder {
+		color: map-get( $select2, color-default );;
+	}
+
+	.select2-selection__arrow {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+		width: 20px;
+		height: 26px;
+
+		b {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			margin-left: -4px;
+			margin-top: -2px;
+			border-color: map-get( $select2, color-default ) transparent transparent transparent;
+			border-style: solid;
+			border-width: 5px 4px 0 4px;
+		}
+	}
+}
+
+&.select2-container--disabled {
+	.select2-selection--single {
+		cursor: default;
+		background-color: map-get( $select2, background-disabled );
+		color: map-get( $select2, color-disabled );
+
+		.select2-selection__clear {
+			display: none;
+		}
+	}
+}
+
+&.select2-container--open {
+	.select2-selection--single {
+		.select2-selection__arrow {
+			b {
+				border-color: transparent transparent map-get( $select2, color-default ) transparent;
+				border-width: 0 4px 5px 4px;
+			}
+		}
+	}
+}

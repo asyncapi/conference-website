@@ -1,0 +1,15 @@
+/** @section Waves */
+
+.waves {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100% !important;
+  height: 100% !important;
+  transform-origin: 40% 50%;
+  transform: rotate(-9deg) scale(1.03);
+  pointer-events: none;
+}

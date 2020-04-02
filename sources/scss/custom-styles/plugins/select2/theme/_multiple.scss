@@ -1,0 +1,71 @@
+.select2-selection--multiple {
+	background-color: map-get( $select2, background-default );
+	cursor: text;
+
+	.select2-selection__rendered {
+		width: 100%;
+		//min-height: map-get( $select2, input-height );
+		padding:
+			( map-get( $select2, input-height ) - map-get( $select2-CONST, input-multiple-height ) ) / 2 + map-get( $select2-CONST, input-multiple-indentation )
+			map-get( $select2, input-side-indent ) + map-get( $select2-CONST, input-multiple-indentation )
+			( map-get( $select2, input-height ) - map-get( $select2-CONST, input-multiple-height ) ) / 2
+			map-get( $select2, input-side-indent ) - map-get( $select2-CONST, input-multiple-indentation );
+		list-style: none;
+		box-sizing: border-box;
+
+		li {
+			list-style: none;
+			margin-bottom: map-get( $select2-CONST, input-multiple-indentation );
+			margin-left: map-get( $select2-CONST, input-multiple-indentation );
+		}
+	}
+
+	.select2-selection__placeholder {
+		color: map-get( $select2, color-default );
+	}
+
+	.select2-selection__clear {
+		cursor: pointer;
+		font-weight: bold;
+		margin-top: 5px;
+		margin-right: 10px;
+	}
+
+	.select2-selection__choice {
+		padding: map-get( $select2-CONST, input-multiple-indentation );
+		cursor: default;
+		font-size: map-get( $select2, input-fsz );
+		background-color: map-get( $select2, background-selected );
+		color: map-get( $select2, color-selected );
+	}
+
+	.select2-selection__choice__remove {
+		cursor: pointer;
+		display: inline-block;
+		font-weight: bold;
+		margin-right: 2px;
+		color: map-get( $select2, color-selected );
+
+		&:hover {
+			color: map-get( $select2, background-default );
+		}
+	}
+}
+
+&.select2-container--focus {
+	.select2-selection--multiple {
+		outline: 0;
+	}
+}
+
+&.select2-container--disabled {
+	.select2-selection--multiple {
+		cursor: default;
+		background-color: map-get( $select2, background-disabled );
+		color: map-get( $select2, color-disabled );
+	}
+
+	.select2-selection__choice__remove {
+		display: none;
+	}
+}

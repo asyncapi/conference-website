@@ -1,0 +1,97 @@
+-
+  var
+    htmlClass = "wide", 
+    fonts = "https://fonts.googleapis.com/css?family=Barlow%7CBarlow+Condensed:300,400,500,600,700,900",
+    logo = {
+      default: {
+        desktop: 'logo-default.png',
+        retina:  'logo-default@2x.png 2x'
+      },
+      inverse:{
+        desktop: 'logo-inverse.png',
+        retina:  'logo-inverse@2x.png 2x'
+      },
+      inverseBig: {
+        desktop: 'logo-inverse-big.png',
+        retina:  'logo-inverse-big@2x.png 2x'
+      },
+      name:       'Voelas'
+    },
+    links = {
+      post:        'single-news.html',
+      getTemplate: '#get-template'
+    },
+    colors = {
+      primary: {
+        hex: '#d90e90',
+        rgb: '217,14,144'
+      },
+      'purple-heart': {
+        hex: '#822ea8',
+        rgb: '130,46,168'
+      }
+    },
+    menu = [
+      {
+        title: 'Home',
+        link:  'index.html',
+        dropdown: [
+          {
+            title: 'Home 1',
+            link: 'index.html'
+          },
+          { title: 'Home 2' }
+        ]
+      },
+      {
+        title: 'Pages',
+        link: '#',
+        megamenu: [
+          {
+            list: [
+              { title: 'About' },
+              { title: 'Pricing' },
+              { title: 'Gallery' },
+              { title: 'Become a sponsor' },
+              { title: 'Sponsors' }
+            ]
+          },
+          {
+            list: [
+              { title: 'Typography' },
+              { title: 'Buttons' },
+              { title: 'Forms' },
+              { title: 'Progress bars' },
+              { title: 'Tables' },
+              { title: 'Grid system' }
+            ]
+          },
+          {
+            list: [
+              { title: '404' },
+              { title: '503' },
+              { title: 'Privacy policy' },
+              { title: 'Under Construction' },
+              { title: 'Search results' }
+            ]
+          }
+        ]
+      },
+      { title: 'Speakers' },
+      { title: 'Schedule' },
+      {
+        title: 'News',
+        link: '#',
+        dropdown: [
+          { title: 'News Right Sidebar' },
+          { title: 'News Left Sidebar' },
+          { title: 'News Grid' },
+          { title: 'Single News' }
+        ]
+      },
+      { title: 'Contact' }
+    ],
+
+    // Predefined variables
+    breadcrumbs = [],
+    pageName = 'Home'

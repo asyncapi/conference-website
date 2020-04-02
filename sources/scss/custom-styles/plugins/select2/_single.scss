@@ -1,0 +1,18 @@
+.select2-selection--single {
+	display: block;
+	height: map-get( $select2, input-height );
+	box-sizing: border-box;
+	cursor: pointer;
+	user-select: none;
+
+	.select2-selection__rendered {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.select2-selection__clear {
+		position: relative;
+	}
+}

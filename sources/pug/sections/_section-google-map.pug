@@ -1,0 +1,9 @@
+//Google Map
+section.section
+  //Please, add the data attribute data-key='YOUR_API_KEY' in order to insert your own API key for the Google map.
+  //Please note that YOUR_API_KEY should replaced with your key.
+  //Example: <div class='google-map-container' data-key='YOUR_API_KEY'>
+  .google-map-container( data-center='Central Park, New York, US', data-key='AIzaSyBUPsDPtyZG7EPBB2XDN55Rxt_fYUoc4Ak' data-zoom='15', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles!=[{'featureType':'landscape','stylers':[{'saturation':-100},{'lightness':60}]},{'featureType':'road.local','stylers':[{'saturation':-100},{'lightness':40},{'visibility':'on'}]},{'featureType':'transit','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'administrative.province','stylers':[{'visibility':'off'}]},{'featureType':'water','stylers':[{'visibility':'on'},{'lightness':30}]},{'featureType':'road.highway','elementType':'geometry.fill','stylers':[{'color':'#ef8c25'},{'lightness':40}]},{'featureType':'road.highway','elementType':'geometry.stroke','stylers':[{'visibility':'off'}]},{'featureType':'poi.park','elementType':'geometry.fill','stylers':[{'color':'#b6c54c'},{'lightness':40},{'saturation':-40}]},{}] )
+    .google-map
+    ul.google-map-markers
+      li( data-location='Central Park, New York, US', data-description='Central Park, New York, US' )

@@ -1,0 +1,115 @@
+/** @section Blocks */
+
+
+// Block center
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+// Block Lg
+.block-lg { max-width: 670px; }
+
+// Block promo
+.block-promo {
+  max-width: 950px;
+
+  * + h1 { margin-top: 10px; }
+  * + .list-inline {}
+}
+
+@include media-breakpoint-up(xl) {
+  .block-promo {
+    * + .list-inline { margin-top: 30px; }
+    * + .group { margin-top: 40px; }
+  }
+}
+
+// Block about
+.block-about {
+  max-width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-about-content {
+  max-width: 785px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-about-img {
+  box-shadow: $shadow-area-3;
+}
+
+* + .block-about-img { margin-top: 20px; }
+
+@include media-breakpoint-up(lg) {
+  * + .block-about-img { margin-top: 30px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .block-about-img { margin-top: 55px; }
+}
+
+// Block Address
+.block-address {
+  padding: 30px 20px;
+  font-family: $font-family-sec;
+  color: $white;
+  background-color: $primary;
+
+  a {
+    @include link($white, $secondary);
+  }
+
+  .icon-rect.icon-white {
+
+    &[class*='facebook'],
+    &[class*='twitter'],
+    &[class*='linkedin'],
+    &[class*='youtube'] {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:after {
+      @include gradient-horizontal($secondary-darker, $secondary);
+    }
+
+    &, &:focus, &:active {
+      color: $white;
+      background-color: $gray-900;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.block-address-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $white;
+}
+
+.block-address-text {
+  font-size: 16px;
+  line-height: (28 / 16);
+  font-weight: 600;
+  opacity: .9;
+}
+
+* + .block-address-item { margin-top: 25px; }
+
+@include media-breakpoint-up(lg) {
+  .block-address {
+    padding: 55px;
+  }
+
+  * + .block-address-item { margin-top: 35px; }
+}

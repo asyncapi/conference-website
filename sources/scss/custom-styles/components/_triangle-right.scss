@@ -1,0 +1,14 @@
+/** @section Triangle */
+
+.triangle-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: solid rgba($white, .08);
+  border-top-width: 74px;
+  border-left: solid transparent;
+  border-left-width: 212px;
+  pointer-events: none;
+}

@@ -1,0 +1,256 @@
+/** @section Icons */
+
+// Base styles
+.icon {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+
+  &::before {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+  }
+}
+
+// Alternate icons
+.icon-default { color: $gray-700; }
+.icon-primary {
+  color: $primary;
+  fill: $primary;
+}
+.icon-secondary {
+  color: $secondary;
+  fill: $secondary;
+}
+.icon-success {
+  color: $success-color;
+  fill: $success-color;
+}
+.icon-purple-heart {
+  color: $purple-heart;
+  fill: $purple-heart;
+}
+.icon-dodger-blue {
+  color: $dodger-blue;
+  fill: $dodger-blue;
+}
+.icon-pumpkin {
+  color: $pumpkin;
+  fill: $pumpkin;
+}
+.icon-gray-900 {
+  color: $gray-900;
+  fill: $gray-900;
+}
+
+.icon[class*='facebook'] { color: $facebook; }
+.icon[class*='twitter'] { color: $twitter; }
+.icon[class*='youtube'] { color: $google; }
+
+a.icon[class*='facebook'] {
+  @include link($facebook, $primary);
+}
+
+a.icon[class*='twitter'] {
+  @include link($twitter, $primary);
+}
+
+a.icon[class*='youtube'] {
+  @include link($google, $primary);
+}
+
+// Icon Shapes
+.icon-circle { border-radius: 50%; }
+
+// Icon Sizes
+.icon-xs { font-size: 14px; } // used
+.icon-sm { font-size: 16px; } // used
+.icon-lg { font-size: 20px; }
+
+// Icon rect
+.icon-rect {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.icon-rect.icon-gray-900 {
+  z-index: 1;
+  opacity: .3;
+  transition: .3s ease-out all;
+
+  &[class*='facebook'],
+  &[class*='twitter'],
+  &[class*='linkedin'],
+  &[class*='slack'],
+  &[class*='globe'],
+  &[class*='youtube'] {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include gradient-horizontal($purple-heart, $primary);
+    transition: .3s ease-out all;
+    opacity: 0;
+  }
+
+  &, &:focus, &:active {
+    color: $white;
+    background-color: $gray-900;
+  }
+
+  &:hover {
+    color: $white;
+    opacity: 1;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.icon-rect.icon-gray-900:hover {
+  .icon-rect-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Icon White
+.icon-rect.icon-white {
+  z-index: 1;
+  opacity: .9;
+  transition: .3s ease-out all;
+
+  &[class*='facebook'],
+  &[class*='twitter'],
+  &[class*='linkedin'],
+  &[class*='globe'],
+  &[class*='slack'],
+  &[class*='youtube'] {
+    color: $gray-900;
+
+    &:focus {
+      color: $gray-900;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include gradient-horizontal($purple-heart, $primary);
+    transition: .3s ease-out all;
+    opacity: 0;
+  }
+
+  &, &:focus, &:active {
+    color: $white;
+    background-color: $white;
+  }
+
+  &:hover {
+    color: $white;
+    opacity: 1;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.icon-rect-overlay {
+  @extend .triangle-overlay;
+  transform: scale(.3);
+  transform-origin: right top;
+  opacity: 0;
+  transition: .3s ease-out all;
+}
+
+.icon-rect.icon-white:hover {
+  .icon-rect-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+// Svg Icons
+.svg-icon-sm {
+  width: 23px;
+  height: 23px;
+}
+
+.svg-icon-sm-1 {
+  width: 22px;
+  height: 22px;
+}
+
+.svg-icon-md {
+  width: 30px;
+  height: 30px;
+}
+
+.svg-icon-lg {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-rect {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  line-height: 50px;
+}
+
+.icon-rect-secodanry {
+  @include gradient-horizontal($secondary-darker, $secondary);
+  > svg {
+    fill: $white;
+  }
+
+  .icon-rect-overlay {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.svg-icon-primary {
+  fill: url('#svg-gradient-primary') $primary;
+}
+
+.block-with-svg-gradients {
+  opacity: 0;
+  position: fixed;
+  left: -50vw;
+}

@@ -1,0 +1,252 @@
+/** @section Animate */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(1.11) translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.fadeScale {
+  animation-name: fadeScale;
+}
+
+.reveal-effect {
+  position: relative;
+}
+
+.fadeInRightSmall {
+  animation-name: fadeInRightSmall
+}
+
+@keyframes fadeInRightSmall {
+  0% {
+    opacity: 0;
+    transform: translateX(30px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.fadeInLeftSmall {
+  animation-name: fadeInLeftSmall
+}
+
+@keyframes fadeInLeftSmall {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.reveal-effect {
+  transition-property: transform;
+
+  > * {
+    position: relative;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.785, .135, .15, .86);
+  }
+}
+
+.desktop {
+  .reveal-effect {
+    > * { opacity: 0; }
+  }
+}
+
+.reveal-effect {
+  transition-duration: 1.2s;
+  transition-timing-function: cubic-bezier(.25, .1, .25, 1);
+}
+
+.reveal-effect.animated {
+  transform: translate(0, 0);
+}
+
+.reveal-effect.animated > * {
+  opacity: 1;
+  transition: .3s ease-out all;
+}
+
+.reveal-effect-1.animated > * { transition-delay: 1s; }
+.reveal-effect-2.animated > * { transition-delay: 1s; }
+.reveal-effect-3.animated > * { transition-delay: 1s; }
+.reveal-effect-4.animated > * { transition-delay: 1s; }
+.reveal-effect-5.animated > * { transition-delay: 1s; }
+
+.reveal-effect.animated * {
+  animation-name: show-img-1;
+}
+
+.reveal-effect-1.animated * { animation-delay: .1s; }
+.reveal-effect-2.animated * { animation-delay: .2s; }
+.reveal-effect-3.animated * { animation-delay: .3s; }
+.reveal-effect-4.animated * { animation-delay: .4s; }
+.reveal-effect-5.animated * { animation-delay: .5s; }
+
+.reveal-effect:after {
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.785, .135, .15, .86);
+}
+
+.reveal-effect:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reveal-effect:after {
+  transform-origin: left top;
+  transform: scale3d(.05, 0, 0);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.785, .135, .15, .86);
+}
+
+.reveal-effect.masker:after {
+  background-color: $white;
+}
+
+.reveal-effect.masker-primary:after {
+  background-color: $primary;
+}
+
+.reveal-effect.animated:after {
+  animation-name: slide-bg-2;
+}
+
+.reveal-effect-1.animated:after { animation-delay: .1s; }
+.reveal-effect-2.animated:after { animation-delay: .2s; }
+.reveal-effect-3.animated:after { animation-delay: .3s; }
+.reveal-effect-4.animated:after { animation-delay: .4s; }
+.reveal-effect-5.animated:after { animation-delay: .5s; }
+
+/* SPLITTING */
+.splitting .word, .splitting .char {
+  display: inline-block;
+}
+
+.splitting .char {
+  position: relative;
+}
+
+.animated .char {
+  display: inline-block;
+  animation: texteffect 0.6s cubic-bezier(.5, 0, .5, 1) both;
+  animation-delay: calc(6ms * var(--char-index));
+}
+
+
+@keyframes texteffect {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-img-1 {
+  0%, 66.6% {
+    visibility: hidden
+  }
+
+  100%, 66.7% {
+    visibility: visible
+  }
+}
+
+
+@keyframes slide-bg-2 {
+  33.3% {
+    transform-origin: left top;
+    transform: scale(.05, 1);
+  }
+
+  66.6% {
+    transform-origin: left center;
+    transform: scale(1, 1);
+  }
+
+  66.7% {
+    transform-origin: right center;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform-origin: right center;
+    transform: scale(0, 1);
+  }
+}

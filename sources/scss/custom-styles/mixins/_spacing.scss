@@ -1,0 +1,33 @@
+// Spacing: padding-based layout
+
+@mixin spacing($x, $y : $x) {
+	transform: translate3d(0, -$y, 0);
+	margin-bottom: -$y;
+	margin-left: - round($x / 2);
+	margin-right: - round($x / 2);
+
+	> * {
+		margin-top: $y;
+		padding-left: round($x / 2);
+		padding-right: round($x / 2);
+	}
+}
+
+@mixin spacingX($x) {
+	margin-left: - round($x / 2);
+	margin-right: - round($x / 2);
+
+	> * {
+		padding-left: round($x / 2);
+		padding-right: round($x / 2);
+	}
+}
+
+@mixin spacingY($y) {
+	transform: translate3d(0, -$y, 0);
+	margin-bottom: -$y;
+
+	> * {
+		margin-top: $y;
+	}
+}

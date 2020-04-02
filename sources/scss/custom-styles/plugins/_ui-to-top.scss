@@ -1,0 +1,54 @@
+/** @section ToTop */
+
+
+.ui-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 46px;
+  color: $white;
+  background: $primary;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  transition: .45s all ease-in-out;
+  transform: translate3d(0, 100px, 0);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: solid rgba($white, .08);
+    border-top-width: 50px;
+    border-left: solid transparent;
+    border-left-width: 50px;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: $white;
+    background: $gray-900;
+    text-decoration: none;
+  }
+
+  &:focus { color: $white; }
+
+  &.active { transform: translate3d(0, 0, 0); }
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top { display: none !important; }
+
+@include media-breakpoint-up(sm) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+}

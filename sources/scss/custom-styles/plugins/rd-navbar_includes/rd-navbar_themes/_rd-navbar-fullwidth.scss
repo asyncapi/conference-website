@@ -1,0 +1,25 @@
+/*
+*
+* RD Navbar Fullwidth
+*/
+$rd-navbar-fullwidth-width: map-get($container-max-widths, xl);
+$navbar-fullwidth-nav-indent: 20px;
+
+.rd-navbar-fullwidth {
+	display: block;
+
+	// RD Navbar Nav
+	.rd-navbar-nav {
+		> li + li {
+			margin-left: $navbar-fullwidth-nav-indent;
+		}
+	}
+
+	// RD Navbar Stuck || Clone
+	&.rd-navbar--is-stuck,
+	&.rd-navbar--is-clone {
+		.rd-navbar-main {
+			padding: 10px 0;
+		}
+	}
+}

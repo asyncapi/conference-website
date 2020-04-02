@@ -1,0 +1,40 @@
+/** @section Text styling */
+
+// Text styles
+.text-italic { font-style: italic; }
+
+.text-normal { font-style: normal; }
+
+// Text decoration
+.text-underline { text-decoration: underline; }
+
+.text-strike { text-decoration: line-through; }
+
+// Text weight
+.font-weight-thin { font-weight: 100; }
+.font-weight-light { font-weight: 300; }
+.font-weight-regular { font-weight: 400; }
+.font-weight-medium { font-weight: 500; }
+.font-weight-sbold { font-weight: 600; }
+.font-weight-bold { font-weight: 700; }
+.font-weight-ubold { font-weight: 900; }
+
+// Font face
+.font-secondary { font-family: $font-family-sec; }
+
+// Text spacing
+.text-spacing-0 { letter-spacing: 0; }
+.text-spacing-100 { letter-spacing: .1em; }
+.text-spacing-200 { letter-spacing: .2em; }
+
+.text-primary { color: $primary; }
+.text-secondary { color: $secondary; }
+
+.context-dark {
+  .text-secondary {
+    @extend .text-secondary;
+  }
+}
+
+.line-height-reset { line-height: 0; }
+.line-height-auto { line-height: 1.2; }

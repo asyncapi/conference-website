@@ -1,0 +1,136 @@
+/** @section Utilities custom */
+
+
+.height-fill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+
+// Object inline
+.object-inline {
+  white-space: nowrap;
+
+  > * {
+    display: inline-block;
+    min-width: 20px;
+    vertical-align: top;
+    white-space: normal;
+  }
+
+  > * + * { margin-left: 5px; }
+}
+
+.oh {
+  position: relative;
+  overflow: hidden;
+}
+
+
+// Text decorations
+.text-decoration-lines {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &-content {
+    position: relative;
+    display: inline-block;
+    min-width: 170px;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      background: $gray-200;
+      top: 50%;
+      width: 100vw;
+    }
+
+    &::before {
+      left: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    &::after {
+      right: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+}
+
+* + .text-decoration-lines { margin-top: 30px; }
+
+
+// JSColor Workaround
+[style*='z-index: 1000;'] { z-index: $zindex-layout-panel + 1 !important; }
+
+.text-block {
+  > * {
+    margin-left: .125em;
+    margin-right: .125em;
+  }
+}
+
+// Privacy link
+.privacy-link { display: inline-block; }
+
+* + .privacy-link { margin-top: 30px; }
+
+// Row Bordered
+@include media-breakpoint-up(md) {
+  .row-bordered-item + .row-bordered-item {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 138px;
+      border-left: 2px solid $gray-100;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// Row Separated
+@include media-breakpoint-down(xs) {
+  .row-separated-item:nth-child( 1n + 2 ) {
+    border-top: 1px solid $gray-100;
+  }
+}
+
+@include media-breakpoint-between(sm, md) {
+  .row-separated-item:nth-child( 1n + 3 ) {
+    border-top: 1px solid $gray-100;
+  }
+
+  .row-separated-item:nth-child(even) {
+    border-left: 1px solid $gray-100;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .row-separated-item:nth-child( 1n + 4 ) {
+    border-top: 1px solid $gray-100;
+  }
+
+  .row-separated-item:nth-child(3n + 2) {
+    border-left: 1px solid $gray-100;
+    border-right: 1px solid $gray-100;
+  }
+}
+
+.rights {
+  font-family: $font-family-sec;
+}

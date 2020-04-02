@@ -1,0 +1,16 @@
+mixin news( obj )
+  .news&attributes( attributes )
+    .news-img
+      a( href= links.post data-triangle=".news-img-overlay" )
+        span.news-img-overlay
+        +img( obj.img )
+    p.news-meta by
+      =" "
+      a.news-author( href= links.post )= obj.author
+      =" "
+      span -
+      =" "
+      a.news-time( href= links.post ): time( datetime= obj.datetime )= obj.date
+    h4.news-title: a( href= links.post )= obj.title
+    p.news-text= obj.text
+    a.news-link( href= links.post ) Read More

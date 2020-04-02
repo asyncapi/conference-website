@@ -1,0 +1,13 @@
+mixin thumbnail( thumb )
+  // Gallery Thumbnail
+  a.thumbnail( href= `images/${thumb.original}.jpg` data-lightgallery="item" data-triangle=".thumbnail-overlay" )
+    span.thumbnail-overlay
+    span.thumbnail-icon
+    +img( thumb.img )
+
+mixin thumbnail-big( thumb )
+  // Gallery Thumbnail
+  a.thumbnail-big( href= `images/${thumb.original}.jpg` data-lightgallery="item" )
+    span.thumbnail-big-overlay
+    span.thumbnail-big-icon
+    +img( thumb.img )

@@ -1,0 +1,45 @@
+//- Pagination Item
+	@typedef {object|string} PagItem
+	@property {string} [link] - page number link
+	@property {string} [prev] - 'previous' button link
+	@property {string} [next] - 'next' button link
+	@property {boolean} [active]
+	@property {boolean} [disabled]
+
+//- Pagination
+	@param {Array.PagItem} arr - pagination items array
+	@example
+		+pagination-bootstrap([
+			{ prev: '#', disabled: true },
+			{ link: '#', active: true },
+			{ link: '#' },
+			{ next: '#' }
+		])
+mixin pagination-bootstrap( arr )
+	//Bootstrap Pagination
+	nav.pagination-nav( aria-label='Page navigation' )
+		ul.pagination
+			- for ( var i = 0; i < arr.length; i++ )
+				- item = typeof( arr[ i ] ) === 'string' ? { link: item } : arr[ i ];
+
+				if ( item.prev )
+					li.page-item.page-item-control( class={ disabled: item.disabled } )
+						a.page-link( href= item.link, aria-label='Previous' )
+							span.icon( aria-hidden='true' )
+
+				else if ( item.next )
+					li.page-item.page-item-control( class={ disabled: item.disabled } )
+						a.page-link( href= item.link, aria-label='Next' )
+							span.icon( aria-hidden='true' )
+
+				else if ( item.active )
+					li.page-item.active
+						span.page-link= i
+
+				else if ( item.disabled )
+					li.page-item.disabled
+						span.page-link= i
+
+				else
+					li.page-item
+						a.page-link( href= item.link )= i

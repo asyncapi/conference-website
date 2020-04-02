@@ -1,0 +1,47 @@
+//- Countdown
+  @param {object} data
+  @param {string} data.to
+  @param {string} [data.from]
+  @param {string} [data.count]
+mixin countdown( data )
+  .countdown( data-countdown, data-from= data.from, data-to= data.to, data-count= data.count )
+    - let arr = [ 'dys', 'hrs', 'min', 'sec' ]
+    each item, index in [ 'days', 'hours', 'minutes', 'seconds' ]
+      - var attrProgress = {}; attrProgress[ 'data-progress-'+ item ] = '';
+      - var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+      .countdown-block( class= 'countdown-block-'+ item )
+        svg.countdown-circle( x='0', y='0', width='200', height='200', viewbox='0 0 200 200' )&attributes( attrProgress )
+          circle.countdown-circle-bg( cx=100, cy=100, r=90 )
+          circle.countdown-circle-fg.clipped( cx=100, cy=100, r=90 )
+        .countdown-wrap
+          .countdown-counter&attributes( attrCounter ) 00
+          .countdown-title= arr[index]
+
+mixin countdown-rect( data )
+  // Countdown rectangle
+  .countdown.countdown-rect( data-countdown, data-from= data.from, data-to= data.to, data-count= data.count )
+    each item, index in [ 'days', 'hours', 'minutes', 'seconds' ]
+      - var attrProgress = {}; attrProgress[ 'data-progress-'+ item ] = '';
+      - var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+      .countdown-block.box-with-triangle-right.wow.fadeScale( data-wow-delay=`${index / 8}s`  class= 'countdown-block-'+ item  data-triangle=".countdown-block-overlay" )
+        .countdown-block-overlay
+        svg.countdown-circle( x='0', y='0', width='200', height='237', viewbox='0 0 200 237' )&attributes( attrProgress )
+          rect.countdown-rect-bg(x='0', y='0', width='200', height='237')
+          rect.countdown-rect-fg.clipped(x='0', y='0', width='200', height='237')
+        .countdown-wrap
+          .countdown-counter&attributes( attrCounter ) 00
+          .countdown-title= item
+
+mixin countdown-classic( data )
+  // Countdown rectangle
+  .countdown.countdown-classic( data-countdown, data-from= data.from, data-to= data.to, data-count= data.count )
+    - let arr = [ 'dys', 'hrs', 'min', 'sec' ]
+    each item, index in [ 'days', 'hours', 'minutes', 'seconds' ]
+      - var attrProgress = {}; attrProgress[ 'data-progress-'+ item ] = '';
+      - var attrCounter = {}; attrCounter[ 'data-counter-'+ item ] = '';
+      .countdown-block.wow.fadeScale( data-wow-delay=`${index / 8}s` class= 'countdown-block-'+ item )
+        .countdown-wrap
+          .countdown-title= arr[index]
+          .countdown-counter&attributes( attrCounter ) 00
+
+

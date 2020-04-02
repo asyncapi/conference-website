@@ -1,0 +1,438 @@
+@keyframes rd-navbar-slide-down {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes rd-navbar-slide-up {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+//
+// Navbar Toggle Presets
+//
+@mixin toggle($width-size: 48px, $height-size: 48px, $font-size: 24px) {
+	display: inline-block;
+	position: relative;
+	width: $width-size;
+	height: $height-size;
+	font-size: $font-size;
+	line-height: $height-size;
+	text-align: center;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+}
+
+@mixin toggle-icons-via-rotation($width-size: 48px, $height-size: 48px, $font-size: 24px,  $icon-before: '\f002', $icon-after: '\f00d',  $icon-before-family: 'Material Design Icons', $icon-after-family: 'Material Design Icons') {
+	span {
+		@include toggle($width-size, $height-size, $font-size);
+
+		&, &::before, &::after {
+			transition: .3s all ease-in-out;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		&::before {
+			content: $icon-before;
+			transform: rotate(0deg) scale(1);
+			opacity: 1;
+			visibility: visible;
+			font-family: $icon-before-family;
+		}
+
+		&::after {
+			content: $icon-after;
+			transform: rotate(-90deg) scale(.4);
+			opacity: 0;
+			visibility: hidden;
+			font-family: $icon-after-family;
+		}
+	}
+
+	&.active {
+		span {
+			&::before {
+				opacity: 0;
+				visibility: hidden;
+				transform: rotate(90deg) scale(.4);
+			}
+
+			&::after {
+				transform: rotate(0deg) scale(1);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+// Hamburger
+@mixin button-lines($size: 48px, $font-size: 24px, $border-radius: 2px, $color: #111111) {
+	span {
+		position: relative;
+		display: block;
+		margin: auto;
+		transition: .3s all ease;
+
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: (round($font-size / 6)) * -2;
+			transition: .3s all ease;
+		}
+
+		&:after {
+			top: (round($font-size / 6)) * 2;
+		}
+
+		&:after,
+		&:before,
+		& {
+			width: $font-size;
+			height: round($font-size / 6);
+			background-color: $color;
+			backface-visibility: hidden;
+			border-radius: $border-radius;
+		}
+	}
+}
+
+// Hamburger to Cross
+@mixin button-lines__cross-1($size: 48px, $font-size: 24px, $color: #111111) {
+	&.active span {
+		background: transparent;
+
+		&:before, &:after {
+			transform-origin: 50% 50%;
+			top: 0;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+@mixin button-lines__cross-2($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		&:before, &:after {
+			-webkit-transition-duration: 0.3s, 0.3s;
+			transition-duration: 0.3s, 0.3s;
+			-webkit-transition-delay: 0.3s, 0s;
+			transition-delay: 0.3s, 0s;
+			-webkit-transition-property: top, -webkit-transform;
+			transition-property: top, transform;
+		}
+	}
+
+	&.active span {
+		transition: background .3s 0s ease;
+		background: transparent;
+
+		&:before, &:after {
+			top: 0;
+			-webkit-transition-delay: 0s, 0.3s;
+			transition-delay: 0s, 0.3s;
+		}
+		&:before {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		&:after {
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+@mixin button-lines__cross-3($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		&:before, &:after {
+			-webkit-transition-duration: 0.3s, 0.3s;
+			transition-duration: 0.3s, 0.3s;
+			-webkit-transition-delay: 0.3s, 0s;
+			transition-delay: 0.3s, 0s;
+			-webkit-transition-property: top, -webkit-transform;
+			transition-property: top, transform;
+		}
+	}
+
+	&.active span {
+		transform: rotate(180deg);
+		transition: background .3s 0s ease;
+		background: transparent;
+
+		&:before, &:after {
+			top: 0;
+			-webkit-transition-delay: 0s, 0.3s;
+			transition-delay: 0s, 0.3s;
+		}
+		&:before {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		&:after {
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+// Hamburger to Arrow
+@mixin button-lines__arrow-1($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		&:before,
+		&:after {
+			transform-origin: $font-size/14 center;
+		}
+	}
+
+	&.active span {
+		&:before,
+		&:after {
+			top: 0;
+			width: $font-size/1.6;
+		}
+
+		&:before {
+			transform: rotate(-40deg);
+		}
+		&:after {
+			transform: rotate(40deg);
+		}
+	}
+}
+
+// Hamburger to Arrow (Material Design)
+@mixin button-lines__arrow-2($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		transform: rotate(180deg);
+		&:before,
+		&:after {
+			transform-origin: $font-size/14 center;
+		}
+	}
+
+	&.active span {
+		transform: rotate(360deg);
+
+		&:before,
+		&:after {
+			top: 0;
+			width: $font-size/1.6;
+		}
+
+		&:before {
+			-webkit-transform: rotate3d(0, 0, 1, -40deg);
+			transform: rotate3d(0, 0, 1, -40deg);
+		}
+		&:after {
+			-webkit-transform: rotate3d(0, 0, 1, 40deg);
+			transform: rotate3d(0, 0, 1, 40deg);
+		}
+	}
+}
+
+// Hamburger to Minus
+@mixin button-lines__minus-1($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		&:before,
+		&:after {
+			transition: .3s all ease;
+		}
+	}
+
+	&.active span {
+		&:before,
+		&:after {
+			top: 0;
+		}
+	}
+}
+
+@mixin search-preset-1($size: 48px, $font-size: 24px, $color: #111111) {
+	text-align: center;
+	font-size: $font-size;
+
+	&:before {
+		content: "\f002";
+		font-weight: 400;
+		font-family: "FontAwesome";
+	}
+
+	&.active {
+		transform: scale(0.7);
+	}
+}
+
+@mixin collapse-preset-1($size: 48px, $font-size: 24px, $color: #111111) {
+	span {
+		top: 50%;
+		margin-top: -($size / 16);
+
+		&, &:before, &:after {
+			position: absolute;
+			width: $size / 8;
+			height: $size / 8;
+			line-height: $size / 8;
+			text-align: center;
+			background: $color;
+			left: 50%;
+			margin-left: -($size / 16);
+			border-radius: 50%;
+			transition: .3s all ease;
+		}
+
+		&:before, &:after {
+			content: '';
+		}
+
+		&:before {
+			bottom: 100%;
+			margin-bottom: ($size / 16);
+		}
+
+		&:after {
+			top: 100%;
+			margin-top: ($size / 16);
+		}
+	}
+
+	&.active {
+		span {
+			transform: scale(0.7);
+			&:before {
+				transform: translateY(($size / 8)*2 + ($size / 16)*2);
+			}
+
+			&:after {
+				transform: translateY(-(($size / 8)*2 + ($size / 16)*2));
+			}
+		}
+	}
+}
+
+@mixin make-toggle($preset: "button-lines-arrow-2", $size: 48px, $font-size: 24px, $border-radius: 2px, $color: #111111) {
+	display: inline-block;
+	position: relative;
+	width: $size;
+	height: $size;
+	line-height: $size;
+	cursor: pointer;
+	color: $color;
+
+	@if ($preset == "collapse-preset-1") {
+		@include collapse-preset-1($size, $font-size, $color);
+	}
+
+	@if ($preset == "search-preset-1") {
+		@include search-preset-1($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-cross-1") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__cross-1($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-cross-2") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__cross-2($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-cross-3") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__cross-3($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-arrow-1") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__arrow-1($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-arrow-2") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__arrow-2($size, $font-size, $color);
+	}
+
+	@if ($preset == "button-lines-minus-1") {
+		@include button-lines($size, $font-size, $border-radius, $color);
+		@include button-lines__minus-1($size, $font-size, $color);
+	}
+}
+
+// RD Navbar Submenu with Arrow
+@mixin submenu-with-arrow() {
+	li {
+		> a {
+			position: relative;
+			left: -3px;
+			display: flex;
+			padding: 1px 14px 1px 0;
+			text-align: left;
+			@include link($rd-navbar-dropdown-item-color, $rd-navbar-dropdown-item-hover-color);
+
+			&,
+			&::before {
+				transition: .15s ease-in-out;
+			}
+
+			&::before {
+				position: relative;
+				top: 0;
+				left: -6px;
+				display: inline-block;
+				content: '\f105';
+				font-family: 'FontAwesome';
+				font-size: inherit;
+				line-height: inherit;
+				color: $rd-navbar-dropdown-item-hover-color;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		&.focus > a,
+		&.opened > a,
+		> a:hover {
+			left: 0;
+			padding-left: 14px;
+			padding-right: 0;
+
+			&::before {
+				left: -7px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

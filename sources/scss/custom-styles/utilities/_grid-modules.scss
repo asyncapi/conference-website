@@ -1,0 +1,141 @@
+/** @section Grid modules */
+
+.grid-demo {
+  letter-spacing: 0;
+  text-align: center;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  * + p { margin-top: 5px; }
+
+  * + .row { margin-top: 20px; }
+
+  .row + .row { margin-top: 0; }
+
+  @include media-breakpoint-up(xl) {
+    text-align: left;
+
+    p {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+    }
+
+    * + p { margin-top: 25px; }
+  }
+}
+
+.grid-demo-bordered {
+  .row {
+    border: 0 solid $gray-200;
+    border-top-width: 2px;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+  }
+
+  [class*='col'] {
+    padding: 5px 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1px;
+      border-left: 2px solid $gray-200;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 50px 50px 45px;
+    }
+  }
+}
+
+.grid-demo-underlined {
+  .row { border-bottom: 2px solid $gray-200; }
+
+  [class*='col'] {
+    padding: 5px 15px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
+}
+
+.container-wide {
+  max-width: $screen-fullhd;
+}
+
+// Row Narrow
+//
+// Change $grid-gutter-width-narrow in _variables.scss
+// it will change the padding between columns
+.row-narrow {
+  margin-left: -$grid-gutter-width-narrow / 2;
+  margin-right: -$grid-gutter-width-narrow / 2;
+
+  > [class*='col'] {
+    padding-left: $grid-gutter-width-narrow / 2;
+    padding-right: $grid-gutter-width-narrow / 2;
+  }
+}
+
+.row-narrow-xs {
+  margin-left: -$grid-gutter-width-narrow-xs / 2;
+  margin-right: -$grid-gutter-width-narrow-xs / 2;
+
+  > [class*='col'] {
+    padding-left: $grid-gutter-width-narrow-xs / 2;
+    padding-right: $grid-gutter-width-narrow-xs / 2;
+  }
+}
+
+// Custom Grid
+//
+// Change $enable-grid-classes-custom: true
+// that would generate custom grid (example: 10 columns)
+
+$enable-grid-classes-custom: true;
+
+@mixin make-grid-columns-custom($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+    }
+  }
+}
+
+@if $enable-grid-classes-custom {
+  .row-ten { @include make-grid-columns-custom(10); }
+
+  .row-xl-ten { @include make-grid-columns-custom(10, 30px, (xl: map-get($grid-breakpoints, xl), xlg: map-get($grid-breakpoints, xlg), xxl: map-get($grid-breakpoints, xxl))); }
+
+
+  @include media-breakpoint-up(xxl) {
+    h4 + .row-ten { margin-top: 55px; }
+    * + .row-ten { margin-top: 75px; }
+  }
+}

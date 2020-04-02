@@ -1,0 +1,132 @@
+/**
+*
+* RD Navbar Modern
+* =====================================================
+*/
+.rd-navbar-modern {
+  // Static
+  &.rd-navbar-static {
+    background-color: transparent;
+    border-bottom: none;
+
+    .rd-navbar-aside-outer,
+    .rd-navbar-main-outer {
+      padding-left: $grid-gutter-width / 2;
+      padding-right: $grid-gutter-width / 2;
+    }
+
+    .rd-navbar-aside,
+    .rd-navbar-main {
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rd-navbar-aside {
+      padding: 10px 0;
+    }
+
+    .rd-navbar-main {
+      margin-top: 42px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px;
+      transition: .3s ease-out all;
+      background-color: $white;
+    }
+
+    .rd-menu {
+      margin-top: 35px;
+      box-shadow: $shadow-area-3;
+    }
+
+    .rd-megamenu-list-link,
+    .rd-dropdown-link {
+      text-transform: uppercase;
+    }
+
+    // RD Navbar Brand
+    .rd-navbar-brand {
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+
+    .rd-navbar-main-element {
+      display: flex;
+      align-items: center;
+    }
+
+    .rd-nav-item {
+      &.focus,
+      &.opened {
+        .rd-nav-link {
+          color: $primary;
+          background: transparent;
+        }
+
+        > .rd-navbar-submenu-toggle { color: $primary; }
+      }
+
+      &.active {
+        .rd-nav-link {
+          color: $primary;
+          background: transparent;
+        }
+
+        > .rd-navbar-submenu-toggle { color: $primary; }
+      }
+
+
+      > .rd-navbar-submenu-toggle {
+        color: $gray-600;
+
+        &:hover { color: $primary; }
+      }
+    }
+
+    .rd-nav-item + .rd-nav-item { margin-left: $navbar-static-nav-indent; }
+
+    // Rd Nav Link 1-st level
+    .rd-nav-link {
+
+      &,
+      &:not([href]) { color: $gray-600; }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .brand {
+      .brand-logo-light { display: none; }
+      .brand-logo-dark { display: block; }
+    }
+
+    &.rd-navbar--is-stuck,
+    &.rd-navbar--is-clone {
+      background-color: $white;
+      box-shadow: $shadow-area-2;
+
+
+      .rd-navbar-aside-outer {
+        display: none;
+      }
+
+      .rd-navbar-main {
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .rd-navbar-nav-item {
+        > .rd-navbar-submenu {
+          margin-top: 17px;
+        }
+      }
+    }
+  }
+}

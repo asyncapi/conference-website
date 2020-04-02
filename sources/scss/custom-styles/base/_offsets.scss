@@ -1,0 +1,41 @@
+/** @section Offsets */
+
+// Paragraph
+
+p + h2,
+p + .heading-2 { margin-top: 15px; }
+
+// Heading
+h3 + h5 { margin-top: 10px; }
+h3 + figure { margin-top: 20px; }
+h3 + img { margin-top: 42px; }
+
+// Classes
+* + .row { margin-top: 30px; }
+* + .big { margin-top: 20px; }
+* + .text-block { margin-top: 30px; }
+
+@include media-breakpoint-up(xl) {
+  * + .row { margin-top: 50px; }
+}
+
+// Classes + Tags
+.row + h3,
+.row + .heading-3 { margin-top: 80px; }
+
+// Classes + Classes
+.container + .container { margin-top: 35px; }
+.row + .row { margin-top: 35px; }
+
+// Media offsets
+@include media-breakpoint-up(xl) {
+  * + .rd-form { margin-top: 30px; }
+  .container + .container { margin-top: 60px; }
+  .row + .row { margin-top: 60px; }
+}
+
+@include media-breakpoint-up(lg) {
+  .inset-lg-right-30 {
+    padding-right: 30px;
+  }
+}

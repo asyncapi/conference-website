@@ -1,0 +1,29 @@
+//- Speaker element
+  @param {speaker} speaker - parameters storage
+  @param {string} speaker.img - image path
+  @param {string} speaker.title - speaker name
+  @param {string} speaker.position - speaker position
+mixin speaker( speaker )
+  // Speaker
+  .speaker&attributes( attributes )
+    .speaker-img( data-triangle=".speaker-overlay" )
+      .speaker-overlay
+      a(href='#'): +img( speaker.img )
+      ul.speaker-social-list
+        li: a.icon.icon-xs.fa-facebook-f(href='#')
+        li: a.icon.icon-xs.fa-twitter(href='#')
+        li: a.icon.icon-xs.fa-youtube-play(href='#')
+    h5.speaker-title: a(href='#')= speaker.title
+    p.speaker-position= speaker.position
+
+mixin speaker-classic( speaker )
+  // Speaker Classic
+  .speaker-classic&attributes( attributes )
+    .speaker-classic-img
+      a(href='#'): +img( speaker.img )
+      ul.speaker-classic-social-list
+        li: a.icon.icon-xs.fa-facebook-f(href='#')
+        li: a.icon.icon-xs.fa-twitter(href='#')
+        li: a.icon.icon-xs.fa-youtube-play(href='#')
+    h5.speaker-classic-title: a(href='#')= speaker.title
+    p.speaker-classic-position= speaker.position

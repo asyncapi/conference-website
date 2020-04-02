@@ -1,0 +1,55 @@
+/** @section Preloader */
+
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: $white;
+	transition: .3s all ease;
+
+	[data-x-mode='true'] &,
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.preloader-body {
+	text-align: center;
+
+	p {
+		position: relative;
+		right: -8px;
+	}
+}
+
+
+// Custom Styles
+.cssload-container {
+	width: 100%;
+	height: 36px;
+	text-align: center;
+}
+
+.cssload-speeding-wheel {
+	width: 36px;
+	height: 36px;
+	margin: 0 auto;
+	border: 3px solid $primary;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	animation: cssload-spin .88s infinite linear;
+}
+
+@keyframes cssload-spin {
+	100% { transform: rotate(360deg); }
+}

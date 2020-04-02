@@ -1,0 +1,50 @@
+/** @section Groups */
+
+html {
+  .group {
+    @include group(15px, 20px);
+  }
+
+  .group-sm {
+    @include group(10px, 10px);
+  }
+
+  .group-xl {
+    @include group(30px, 20px);
+
+    @include media-breakpoint-up(lg) {
+      @include group-media(45px, 20px);
+    }
+  }
+
+  .group-custom {
+    display: flex;
+    flex-flow: wrap column;
+    max-width: 100%;
+    margin-bottom: -10px;
+
+    > * {
+      flex-grow: 1;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      flex-flow: row nowrap;
+      align-items: center;
+
+      > * {
+        margin-right: 10px;
+        &:last-child { margin-right: 0; }
+      }
+    }
+  }
+}
+
+* + .group-custom { margin-top: 30px; }
+* + .group { margin-top: 30px; }
+* + .group-sm { margin-top: 30px; }
+* + .group-xl { margin-top: 20px; }

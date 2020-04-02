@@ -1,0 +1,33 @@
+mixin sponsor( img )
+  // Sponsor
+  a.sponsor( href='#' data-triangle=".sponsor-overlay" )&attributes( attributes )
+    .sponsor-overlay
+    .sponsor-img: +img(`${img}.png`)
+
+mixin sponsor-modern( obj )
+  // Sponsor Modern
+  a.sponsor-modern( href='#' data-triangle=".sponsor-modern-overlay" )&attributes( attributes )
+    .sponsor-modern-overlay
+    .sponsor-modern-img
+      .sponsor-modern-img-default: +img( obj.default )
+      .sponsor-modern-img-active:  +img( obj.active )
+
+mixin sponsor-ritmo( obj )
+  // Sponsor Modern
+  .sponsor-ritmo
+    a.sponsor-ritmo-header( href='#' data-triangle=".sponsor-ritmo-overlay" )&attributes( attributes )
+      .sponsor-ritmo-overlay
+      .sponsor-ritmo-img
+        .sponsor-ritmo-img-default: +img( obj.img.default )
+        .sponsor-ritmo-img-active:  +img( obj.img.active )
+    .sponsor-ritmo-body
+      h5.sponsor-ritmo-title: span.big= obj.title
+      p.sponsor-ritmo-text= obj.text
+
+mixin sponsor-info( obj )
+  // Sponsor Info
+  .sponsor-info&attributes( attributes )
+    .sponsor-info-icon: +svg-icon( obj.icon.name )(class= obj.icon.className)
+    h5.sponsor-info-title: span.big= obj.title
+    .sponsor-info-text= obj.text
+    a.sponsor-info-link(href='#') Read More

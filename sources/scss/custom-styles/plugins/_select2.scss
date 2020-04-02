@@ -1,0 +1,83 @@
+/**
+ * Select 2
+ */
+
+// Local variables
+$select2: (
+  input-height: $form-input-height,
+  input-fsz: $form-input-font-size,
+  input-side-indent: $form-input-padding-horizontal,
+  input-border-width: 2px,
+
+  background-default: $form-input-background,
+  color-default: $form-input-color,
+
+  background-selected: $primary,
+  color-selected: $white,
+
+  background-disabled: $form-input-background,
+  color-disabled: lighten( $form-input-color, 15% )
+);
+
+$select2-CONST: (
+  input-single-right-indent: 20px,
+  input-multiple-indentation: 5px,
+);
+
+$select2-CONST: map-merge(
+  $select2-CONST,
+  ( input-multiple-height: map-get( $select2, input-fsz ) + map-get( $select2-CONST, input-multiple-indentation ) * 4 )
+);
+
+
+.select2-container {
+  position: relative;
+  display: inline-block;
+  width: 100% !important;
+  margin: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  @import "select2/single";
+  @import "select2/multiple";
+  
+  .has-error & {
+    outline: 1px dashed red;
+  }
+}
+
+@import "select2/dropdown";
+
+.select2-close-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 99;
+
+  // styles required for IE to work
+  background-color: #fff;
+  filter: alpha(opacity=0);
+}
+
+.select2-hidden-accessible {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+@import "select2/theme/layout";

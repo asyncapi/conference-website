@@ -1,0 +1,32 @@
+.select2-selection--multiple {
+	display: block;
+	box-sizing: border-box;
+	cursor: pointer;
+	user-select: none;
+
+	.select2-selection__rendered {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 1;
+	}
+}
+
+.select2-search--inline {
+	align-self: center;
+
+	.select2-search__field {
+		display: block;
+		padding: 0;
+		border: none;
+		font-size: map-get( $select2, input-fsz );
+		min-height: map-get( $select2, input-fsz ) + map-get( $select2-CONST, input-multiple-indentation ) * 2;
+		box-sizing: border-box;
+
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+		}
+	}
+}

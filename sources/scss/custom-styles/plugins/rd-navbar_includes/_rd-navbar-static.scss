@@ -1,0 +1,307 @@
+/*
+* @subsection  RD Navbar Static
+*/
+// - li first level and li
+// - link first level and link
+// - menus
+// - dropdowns
+// - megamenus
+// - rd-search
+// - submenus
+
+.rd-navbar-static {
+  z-index: $zindex-rd-navbar;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: block;
+
+
+  // RD Navbar Nav
+  //
+  // RD Nav item 1-st level
+  .rd-nav-item {
+    display: inline-block;
+
+    &.focus,
+    &.opened {
+      .rd-nav-link {
+        color: $white;
+        background: transparent;
+        &:before {
+          opacity: 1;
+          transform: scale(1, 1);
+        }
+      }
+
+      > .rd-navbar-submenu-toggle { color: $white; }
+    }
+
+    &.active {
+      .rd-nav-link {
+        color: $white;
+        background: transparent;
+        &:before {
+          opacity: 1;
+          transform: scale(1, 1);
+        }
+      }
+
+      > .rd-navbar-submenu-toggle { color: $white; }
+    }
+
+    &.focus > .rd-navbar-submenu-toggle,
+    &.opened > .rd-navbar-submenu-toggle,
+    .rd-nav-link:hover + .rd-navbar-submenu-toggle {
+      &::before { transform: rotate(180deg); }
+    }
+
+    > .rd-navbar-submenu-toggle {
+      margin-left: 4px;
+      font-family: $fa;
+      font-size: 16px;
+      cursor: pointer;
+      color: $white;
+
+      &::before {
+        position: relative;
+        display: inline-block;
+        transition: .22s;
+        content: '\f107';
+      }
+
+      &:hover { color: $rd-navbar-nav-hover-color; }
+    }
+
+    // If Have submenu
+    > .rd-navbar-submenu {
+      margin-top: 20px;
+    }
+  }
+
+  .rd-nav-item + .rd-nav-item { margin-left: $navbar-static-nav-indent; }
+
+  // Rd Nav Link 1-st level
+  .rd-nav-link {
+    position: relative;
+    display: inline-block;
+    font-family: $font-family-sec;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-out all;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform-origin: center center;
+      border-bottom: 1px solid;
+      transform: scale(.2, 1);
+      opacity: 0;
+      transition: .2s ease-out transform, .07s ease opacity;
+    }
+
+    &,
+    &:not([href]) { color: $white; }
+
+    &:hover {
+      color: $white;
+      &:before {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  // Rd Menu (dropdown and megamenu)
+  .rd-menu {
+    z-index: 15;
+    position: absolute;
+    display: block;
+    margin-top: 22px;
+    visibility: hidden;
+    opacity: 0;
+    font-family: $font-family-sec;
+    text-align: left;
+    border: $rd-navbar-border;
+    transform: translate3d(0, 30px, 0);
+    @extend %rd-navbar-transition;
+  }
+
+  // RD Dropdown 1-st level
+  .rd-navbar-dropdown {
+    position: absolute;
+    left: 0;
+    width: $rd-navbar-dropdown-width;
+    padding: 20px 25px;
+    background: $rd-navbar-dropdown-background;
+    z-index: 5;
+
+    .rd-navbar-dropdown {
+      top: -1px;
+      left: 100%;
+      z-index: 2;
+      margin-top: -15px;
+      margin-left: 15px;
+      transform: translate3d(30px, 0, 0);
+
+      // If the menu is on the right edge window
+      &.rd-navbar-open-left {
+        left: auto;
+        right: 100%;
+        margin-left: 0;
+        margin-right: 15px;
+        transform: translate3d(-30px, 0, 0);
+      }
+    }
+  }
+
+  .rd-dropdown-item {
+    &.focus,
+    &.opened {
+      .rd-dropdown-link {
+        color: $rd-navbar-dropdown-item-active-color;
+        //background: $rd-navbar-dropdown-item-active-background;
+      }
+    }
+  }
+
+  .rd-dropdown-link {
+    color: $rd-navbar-dropdown-item-color;
+    //background: $rd-navbar-dropdown-item-background;
+
+    &:hover {
+      color: $rd-navbar-dropdown-item-hover-color;
+      //background: $rd-navbar-dropdown-item-hover-background;
+    }
+  }
+
+  .rd-navbar-dropdown,
+  .rd-megamenu-list {
+    @include submenu-with-arrow;
+  }
+
+  // RD all megamenu
+  .rd-navbar-megamenu {
+    display: flex;
+    left: 0;
+    width: 100%;
+    max-width: $rd-navbar-width;
+    padding: 30px 40px;
+    background: $rd-navbar-megamenu-background;
+  }
+
+  // Megamenu item 1st level
+  .rd-megamenu-item {
+    flex-basis: 50%;
+    flex-grow: 1;
+
+    + .rd-megamenu-item { padding-left: 20px; }
+  }
+
+  // Megamenu title
+  .rd-megamenu-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  * + .rd-megamenu-title { margin-top: 30px; }
+
+  // Megamenu list item
+  .rd-megamenu-list-item {
+    + .rd-megamenu-list-item { margin-top: 5px; }
+  }
+
+  // Megamenu list link
+  .rd-megamenu-list-link {
+    color: $rd-navbar-megamenu-item-color;
+    background: $rd-navbar-megamenu-item-background;
+
+    &:hover {
+      color: $rd-navbar-megamenu-item-hover-color;
+      background: $rd-navbar-megamenu-item-hover-background;
+    }
+  }
+
+  // Megamenu list offset
+  * + .rd-megamenu-list { margin-top: 10px; }
+
+  // RD all submenus
+  .rd-navbar-submenu {
+    &.focus,
+    &.opened {
+      > .rd-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  // RD navbar search
+  .rd-navbar-search {
+    &.active {
+      .rd-search {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .rd-search {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 270px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    margin-top: 20px;
+    z-index: 2;
+  }
+
+  // RD search offset
+  * + .rd-navbar-search { margin-left: $navbar-static-nav-indent; }
+
+  .rd-navbar-search-toggle {
+    display: inline-flex;
+    @include toggle-icons-via-rotation(32px, 32px, 26px, '\f43b', '\f24c', 'Material Design Icons', 'Material Design Icons');
+    color: $rd-navbar-nav-color;
+
+    &:hover { color: $rd-navbar-nav-hover-color; }
+  }
+
+  // RD navbar Clone
+  &.rd-navbar--is-clone {
+    display: block;
+    transform: translate3d(0, -100%, 0);
+
+    &.rd-navbar--is-stuck {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+
+  // RD Navbar Stuck || Clone
+  &.rd-navbar--is-stuck,
+  &.rd-navbar--is-clone {
+    background: $rd-navbar-background;
+
+    transform: translate3d(0, 0, 0);
+
+    &.scroll-bottom {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  // RD Navbar States
+  .rd-navbar--has-dropdown {
+    position: relative;
+  }
+}

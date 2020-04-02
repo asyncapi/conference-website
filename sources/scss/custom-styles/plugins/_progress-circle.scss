@@ -1,0 +1,52 @@
+/** @section Progress Circle */
+
+
+.progress-circle {
+  display: inline-block;
+  text-align: center;
+  font-family: $font-family-sec;
+  line-height: 1.2;
+}
+
+.progress-circle-block { position: relative; }
+
+.progress-circle-bg {
+  fill: transparent;
+  stroke: $gray-100;
+  stroke-width: 6px;
+}
+
+.bg-gray-100 {
+  .progress-circle-bg {
+    stroke: $white;
+  }
+}
+
+.progress-circle-fg {
+  fill: transparent;
+  stroke: url('#svg-gradient-primary') $primary;
+  stroke-width: 6px;
+}
+
+.progress-circle-counter {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  font-size: 36px;
+  line-height: 36px;
+  transform: translate(-50%, -50%);
+  color: $martinique;
+
+  &::after { content: "%"; }
+}
+
+.progress-circle-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: $secondary;
+  text-decoration: underline;
+}
+
+* + .progress-bar-circle-title { margin-top: 12px; }

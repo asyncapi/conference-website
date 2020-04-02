@@ -1,0 +1,166 @@
+/** @section Lists */
+
+// Vertical list
+.list {
+  > li + li { margin-top: 10px; }
+}
+
+.list-xs {
+  > li + li { margin-top: 5px; }
+}
+
+.list-sm {
+  > li + li { margin-top: 10px; }
+}
+
+.list-md {
+  > li + li { margin-top: 18px; }
+} // used
+
+.list-lg {
+  > li + li { margin-top: 25px; }
+}
+
+.list-xl {
+  > li + li { margin-top: 30px; }
+}
+
+* + .list-md { margin-top: 25px; }
+
+@include media-breakpoint-up(md) {
+  .list-xl {
+    > li + li { margin-top: 60px; }
+  }
+
+  * + .list-md { margin-top: 35px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .list-md { margin-top: 50px; }
+}
+
+// List inline
+.list-inline {
+  > li { display: inline-block; }
+}
+
+.list-inline-xs {
+  @include spacing(5px, 8px);
+}
+
+.list-inline-md {
+  @include spacing(20px, 8px);
+
+  @include media-breakpoint-up(lg) {
+    @include spacingX(30px);
+  }
+}
+
+.list-inline-xl {
+  @include spacing(35px, 30px);
+}
+
+* + .list-inline-xs { margin-top: 20px; }
+* + .list-inline-md { margin-top: 30px; }
+* + .list-inline-xl { margin-top: 20px; }
+
+@include media-breakpoint-up(lg) {
+  * + .list-inline-xs { margin-top: 30px; }
+  * + .list-inline-xl { margin-top: 30px; }
+}
+
+@include media-breakpoint-up(xl) {
+  * + .list-inline-md { margin-top: 20px; }
+  * + .list-inline-xl { margin-top: 50px; }
+}
+
+// List terms
+.list-terms {
+  dt + dd { margin-top: 10px; }
+  dd + dt { margin-top: 35px; }
+}
+
+* + .list-terms { margin-top: 25px; }
+
+@include media-breakpoint-up(xl) {
+  * + .list-terms { margin-top: 40px; }
+}
+
+// Index list
+.index-list {
+  counter-reset: li;
+
+  > li {
+    .list-index-counter {
+      &:before {
+        content: counter(li, decimal-leading-zero);
+        counter-increment: li;
+      }
+    }
+  }
+}
+
+
+// Marked list
+.list-marked {
+  text-align: left;
+
+  > li {
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.2;
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      min-width: 25px;
+      content: '\f105';
+      font: 400 16px/22px 'FontAwesome';
+      color: $gray-600;
+    }
+
+    &:hover {
+      &:before {
+        color: $primary;
+      }
+    }
+  }
+
+  a {
+    @include link($gray-600, $martinique)
+  }
+
+  > li + li { margin-top: 23px; }
+}
+
+* + .list-marked { margin-top: 15px; }
+p + .list-marked { margin-top: 10px; }
+
+
+// Ordered List
+.list-ordered {
+  counter-reset: li;
+  text-align: left;
+
+  > li {
+    position: relative;
+    padding-left: 25px;
+
+    &:before {
+      position: absolute;
+      content: counter(li, decimal) '.';
+      counter-increment: li;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 15px;
+      color: $gray-400;
+    }
+  }
+
+  > li + li { margin-top: 10px; }
+}
+
+* + .list-ordered { margin-top: 15px; }

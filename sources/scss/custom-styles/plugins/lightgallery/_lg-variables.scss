@@ -1,0 +1,57 @@
+$backdrop-opacity: .85;
+$lg-toolbar-bg: rgba(0, 0, 0, 0.45);
+$lg-border-radius-base: 2px;
+$lg-theme-highlight: $primary;
+$lg-theme: #0D0A0A;
+
+// basic icon colours
+$lg-icon-bg: rgba(0, 0, 0, 0.45);
+$lg-icon-color: #999;
+$lg-icon-hover-color: #FFF;
+
+// counter
+$lg-counter-color: #e6e6e6;
+$lg-counter-font-size: 16px;
+
+// Next prev icons
+$lg-next-prev-bg: $lg-icon-bg;
+$lg-next-prev-color: $lg-icon-color;
+$lg-next-prev-hover-color: $lg-icon-hover-color;
+
+// toolbar icons
+$lg-toolbar-icon-color: $lg-icon-color;
+$lg-toolbar-icon-hover-color: $lg-icon-hover-color;
+
+// autoplay progress bar
+$lg-progress-bar-bg: #333;
+$lg-progress-bar-active-bg: $lg-theme-highlight;
+$lg-progress-bar-height: 5px;
+
+// paths
+$lg-path-fonts: '../fonts';
+$lg-path-images: '../images';
+
+// Zoom plugin
+$zoom-transition-duration: 0.3s;
+
+// Sub html - titile
+$lg-sub-html-bg: rgba(0, 0, 0, 0.45);
+$lg-sub-html-color: #EEE;
+
+// thumbnail toggle button
+$lg-thumb-toggle-bg: #0D0A0A;
+$lg-thumb-toggle-color: $lg-icon-color;
+$lg-thumb-toggle-hover-color: $lg-icon-hover-color;
+$lg-thumb-bg: #0D0A0A;
+
+// z-index
+$zindex-outer: $zindex-lg;
+$zindex-progressbar: $zindex-lg + 3;
+$zindex-controls: $zindex-lg;
+$zindex-toolbar: $zindex-lg + 2;
+$zindex-subhtml: $zindex-lg;
+$zindex-thumbnail: $zindex-lg;
+$zindex-pager: $zindex-lg;
+$zindex-playbutton: $zindex-lg;
+$zindex-item: $zindex-lg;
+$zindex-backdrop: $zindex-lg;

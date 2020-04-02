@@ -1,0 +1,82 @@
+/** @section Material Parallax */
+
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.material-parallax {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  bottom: 0;
+  z-index: 0;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+}
+
+.material-parallax img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  min-width: 101%;
+  min-height: 101%;
+  max-width: none;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.parallax-disabled {
+  background-size: cover;
+  background-position: center;
+
+  html:not(.ie-11):not(.ios) & { background-attachment: fixed; }
+}
+
+.parallax-overlay-gradient-primary {
+  position: relative;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .8;
+  }
+
+  &:before {
+    @include gradient-horizontal($purple-heart, $primary);
+  }
+
+  &:after {
+    @include gradient-horizontal($primary, $purple-heart);
+    animation: fadeBoth 6s infinite;
+  }
+}
+
+@keyframes fadeBoth {
+  0%,100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+.parallax-overlay-gradient-primary-1 {
+  @extend .parallax-overlay-gradient-primary;
+  &:before,&:after {
+    opacity: .7;
+  }
+}

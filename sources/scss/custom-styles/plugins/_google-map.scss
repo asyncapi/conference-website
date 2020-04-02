@@ -1,0 +1,19 @@
+/** @section Google Map */
+
+
+.google-map-markers { display: none; }
+
+.google-map-container { width: 100%; }
+
+.google-map {
+  height: 250px;
+  width: 100%;
+
+  @include media-breakpoint-up(xs) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 550px;
+  }
+}

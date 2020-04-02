@@ -1,0 +1,15 @@
+/** @section Tooltop Custom */
+
+
+.tooltip {
+	font-size: $font-size-body;
+	line-height: 1.2;
+
+	&.bs-tooltip-top {
+		.arrow::before { border-top-color: $tooltip-arrow-color; }
+	}
+
+	&.bs-tooltip-bottom {
+		.arrow::before { border-bottom-color: $tooltip-arrow-color; }
+	}
+}

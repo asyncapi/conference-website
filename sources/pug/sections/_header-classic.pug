@@ -1,0 +1,46 @@
+// Section Header Default
+header.section.page-header
+  //RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar(
+    data-layout='rd-navbar-fixed',
+    data-sm-layout= 'rd-navbar-fixed',
+    data-md-layout= 'rd-navbar-fixed',
+    data-md-device-layout='rd-navbar-fixed',
+    data-lg-layout= 'rd-navbar-static',
+    data-lg-device-layout='rd-navbar-static',
+    data-xl-layout= 'rd-navbar-static',
+    data-xl-device-layout='rd-navbar-static',
+    data-xxl-layout='rd-navbar-static',
+    data-xxl-device-layout='rd-navbar-static',
+    data-lg-stick-up-offset='46px',
+    data-xl-stick-up-offset='46px',
+    data-xxl-stick-up-offset='76px',
+    data-lg-stick-up='true',
+    data-xl-stick-up='true',
+    data-xxl-stick-up='true' class= ( pageName === 'Home 2' ? 'rd-navbar-modern' : 'rd-navbar-classic' ) )
+      .rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span
+      .rd-navbar-main-outer
+        .rd-navbar-main
+          //RD Navbar Panel
+          .rd-navbar-panel
+            //RD Navbar Toggle
+            button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+            //RD Navbar Brand
+            .rd-navbar-brand
+              +logo
+          // Rd Navbar Navigation
+          .rd-navbar-main-element
+            .rd-navbar-nav-wrap
+              +navigation( menu )
+          // RD Navbar Collapse
+          .rd-navbar-collapse
+            - if ( pageName === 'Home 2' )
+              ul.list-inline.list-inline-xs.line-height-reset
+                li: a.icon.icon-rect.icon-xs.icon-gray-900.fa-facebook( href='#' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+                li: a.icon.icon-rect.icon-xs.icon-gray-900.fa-twitter( href='#' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+                li: a.icon.icon-rect.icon-xs.icon-gray-900.fa-linkedin( href='#' data-triangle=".icon-rect-overlay" ): .icon-rect-overlay
+            - else
+              a.button.button-primary( href='#' data-triangle=".button-overlay" )
+                span Buy Tickets
+                span.button-overlay

@@ -1,0 +1,49 @@
+// Section Swiper Slider
+section.section.section-swiper-absoulte.context-dark.text-center.wow.fadeIn
+  // Waves
+  canvas.waves( data-speed='5' data-wave-width='150%' data-animation='SineInOut' )
+
+  // Swiper Content
+  .section-swiper-content
+    .container
+      .row.justify-content-lg-center
+        .col-lg-10
+          .badge-promo.wow.fadeScale( data-wow-delay=".6s" )
+            span.badge-promo-text Upcoming New 2019 event
+            svg.badge-promo-icon( width='319', height='49', viewBox='0 0 319 49', fill='none', xmlns='http://www.w3.org/2000/svg' )
+              path( fill-rule='evenodd', clip-rule='evenodd', d='M0 0H319L299 25L319 49H0L20 25L0 0Z', fill='url( #svg-gradient-primary )' )
+              path( opacity='0.08', fill-rule='evenodd', clip-rule='evenodd', d='M0 0H319L299 25L319 49L0 0Z', fill='white' )
+          h4.wow.fadeInUp.text-spacing-200( data-wow-delay=".8s"  data-caption-animate='fadeInUp', data-caption-delay='300' data-caption-duration='900' ) Hurryup! Don’t waste time
+          h1.wow.fadeScale( data-caption-animate='fadeInUp', data-caption-delay='100' data-caption-duration='900' ) biggest digital conference
+          // List Inline
+          ul.list-inline.list-inline-md.wow( data-splitting data-wow-delay="1.5s" )
+            li
+              .unit.unit-spacing-xs.align-items-center
+                .unit-left.line-height-reset: +svg-icon('earth-globe')(class='svg-icon-sm svg-icon-primary')
+                .unit-body: h5.text-spacing-100: span.big New York, USA
+            li
+              .unit.unit-spacing-xs.align-items-center
+                .unit-left.line-height-reset: +svg-icon('small-calendar')(class='svg-icon-sm svg-icon-primary')
+                .unit-body: h5.text-spacing-100: span.big: time( datetime='2019-01-05' ) January 5 to 9, 2019
+    // Thumbnail Video Link
+    .video-link-wrapper
+      .unit.align-items-center
+        .unit-body.text-right
+          h5
+            span.big Watch Promo
+              br
+              =" "
+              | Video
+        .unit-right
+          a.video-link( href='https://youtu.be/nbfFDnKkMvw' data-lightgallery="item" )
+            .video-link-bg( data-triangle=".video-link-overlay" )
+              span.video-link-overlay
+            span.icon.fa-play
+  // Swiper Slider Absolute
+  .swiper-container.swiper-slider.swiper-slider-1( data-loop='true',  data-simulate-touch='false' data-autoplay='8500' data-direction='horizontal' data-effect='fade' )
+    .swiper-wrapper
+      // Swiper Slide 01
+      .swiper-slide( data-slide-bg='images/slide-01-1894x1042.jpg')
+      // Swiper Slide 02
+      .swiper-slide( data-slide-bg='images/slide-02-1894x1042.jpg')
+    .swiper-pagination

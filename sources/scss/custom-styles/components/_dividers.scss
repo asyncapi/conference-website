@@ -1,0 +1,40 @@
+/** @section Dividers */
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
+
+.divider {
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1170px;
+    height: 2px;
+    background-color: $primary;
+  }
+}
+
+.divider-gray-100 {
+  &:after {
+    background-color: $gray-100;
+  }
+}
+
+.divider-gray-900 {
+  background-color: $gray-900;
+  &:after {
+    background-color: rgba( $white, .05 );
+  }
+}
+
+.container + .divider { margin-top: 40px; }
+
+@include media-breakpoint-up(xl) {
+  .container + .divider { margin-top: 50px; }
+}

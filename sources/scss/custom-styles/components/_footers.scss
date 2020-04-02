@@ -1,0 +1,25 @@
+/** @section Footers */
+
+// Footer Classic
+.footer-classic {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-weight: 400;
+  text-align: center;
+  color: $gray-400;
+  background: $gray-900;
+
+  a {
+    @include link(inherit, $primary);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .footer-classic {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}

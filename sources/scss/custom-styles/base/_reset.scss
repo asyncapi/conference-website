@@ -1,0 +1,61 @@
+/** @section Reset Styles */
+
+a,
+button {
+	&:focus { outline: none !important; }
+}
+
+button::-moz-focus-inner { border: 0; }
+
+*:focus { outline: none; }
+
+blockquote {
+	padding: 0;
+	margin: 0;
+}
+
+input,
+button,
+select,
+textarea { outline: none; }
+
+label { margin-bottom: 0; }
+
+p { margin: 0; }
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li { display: block; }
+}
+
+dl { margin: 0; }
+
+dt,
+dd { line-height: inherit; }
+
+dt { font-weight: inherit; }
+
+dd { margin-bottom: 0; }
+
+cite { font-style: normal; }
+
+form { margin-bottom: 0; }
+
+address {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+figure {
+	margin-bottom: 0;
+}
+
+html p a {
+	&:hover {
+		text-decoration: none;
+	}
+}

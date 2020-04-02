@@ -1,0 +1,38 @@
+/** @section Boxes */
+
+// Box Minimal
+.box-minimal {
+  text-align: center;
+
+  .box-minimal-icon {
+    font-size: 50px;
+    line-height: 50px;
+    color: $primary;
+  }
+}
+
+.box-minimal-divider {
+  width: 36px;
+  height: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  background: $primary;
+}
+
+.box-minimal-text {
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* + .box-minimal { margin-top: 30px; }
+* + .box-minimal-title { margin-top: 10px; }
+* + .box-minimal-divider { margin-top: 20px; }
+* + .box-minimal-text { margin-top: 15px; }
+
+%context-dark {
+	.box-minimal {
+		p { color: $body-color; }
+	}
+}

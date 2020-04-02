@@ -1,0 +1,83 @@
+/**
+*
+* RD Navbar Classic
+* =====================================================
+*/
+.rd-navbar-classic {
+  // Static
+  &.rd-navbar-static {
+    background-color: transparent;
+    border-bottom: 1px solid rgba($white, .05);
+
+    .rd-navbar-aside-outer,
+    .rd-navbar-main-outer {
+      padding-left: $grid-gutter-width / 2;
+      padding-right: $grid-gutter-width / 2;
+    }
+
+    .rd-navbar-aside,
+    .rd-navbar-main {
+      max-width: $rd-navbar-static-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rd-navbar-aside {
+      padding: 10px 0;
+    }
+
+    .rd-navbar-main {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      transition: .3s ease-out padding;
+    }
+
+    .rd-menu {
+      margin-top: 35px;
+      box-shadow: $shadow-area-3;
+    }
+
+    .rd-megamenu-list-link,
+    .rd-dropdown-link {
+      text-transform: uppercase;
+    }
+
+    // RD Navbar Brand
+    .rd-navbar-brand {
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+
+    .rd-navbar-main-element {
+      display: flex;
+      align-items: center;
+    }
+
+    &.rd-navbar--is-stuck,
+    &.rd-navbar--is-clone {
+      background-color: $martinique;
+      
+      
+      .rd-navbar-aside-outer {
+        display: none;
+      }
+
+      .rd-navbar-main {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .rd-navbar-nav-item {
+        > .rd-navbar-submenu {
+          margin-top: 17px;
+        }
+      }
+    }
+  }
+}

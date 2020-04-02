@@ -1,0 +1,46 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Clearfix
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Disable padding - top on two similar backgrounds
+@mixin bg-behaviour($bg-color) {
+	background-color: $bg-color;
+
+	&:not([style*="background-"]) + &:not([style*="background-"]) { padding-top: 0; }
+}
+
+// Grid related values
+@mixin make-grid-parameter($parameter, $offset, $container, $col) {
+	@if $offset > 0 {
+		#{$parameter}: calc(50% - #{$container} / 2 + #{$offset} + (#{$container} / #{$grid-columns}) * #{$col});
+	} @else if ($offset < 0) {
+		#{$parameter}: calc(50% - #{$container} / 2 - #{-$offset} + (#{$container} / #{$grid-columns}) * #{$col});
+	} @else {
+		#{$parameter}: calc(50% - #{$container} / 2 + (#{$container} / #{$grid-columns}) * #{$col});
+	}
+}
+
+// Link universal mixin
+@mixin link($default-clr, $hover-color) {
+	&,
+	&:active,
+	&:focus {
+		color: $default-clr;
+	}
+
+	&:hover {
+		color: $hover-color;
+	}
+}

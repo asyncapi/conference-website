@@ -1,0 +1,93 @@
+-
+	/**
+	* @desc Get the resolution of the image from its name
+	* @param {string} imgName - image name
+	* @return {Array} - image width and height
+	*/
+	function getImageSize( imgName ) {
+		var match = imgName.match( /\d+x\d+/i );
+		if ( match !== null && match.length !== 0 ) return match[0].split( 'x' );
+		else return [];
+	}
+
+	/**
+	* @desc Sets the image extension if it is missing and adds 'images/' if the link is not external
+	* @param {string} imgName - image name
+	* @return {string}
+	*/
+	function procImg( imgName ) {
+		var
+			extMatch = imgName.match( /(.jpg|.png|.gif)$/i ),
+			httpTest = /:\/\//.test( imgName );
+
+		if ( !httpTest && ( extMatch === null || extMatch.length === 0 ) ) imgName += '.jpg';
+		if ( !httpTest ) imgName = 'images/'+ imgName;
+
+		return imgName;
+	}
+
+	/**
+	* @desc Generates link from string
+	* @param {string} string
+	*/
+	function genLink( string ) {
+		return string.trim().replace( /\s/g, '-' ).replace( /[\(\)]/g, '' ).toLowerCase() +'.html';
+	}
+
+	/**
+	* @desc Returns random string
+	* @param {number} length - string length
+	*/
+	function randomStr( length ) {
+		var str = '';
+		for ( var n = 0; n < length; n++ ) str += String.fromCharCode( 97 + Math.random() * 25 );
+		return str;
+	}
+
+	/**
+	* @todo Description
+	*/
+	function procMenu ( menu, parent ) {
+		menu.forEach( function( item ) {
+			if ( parent ) item._parent = parent;
+			if ( !(item instanceof Array) && item.title && !item.link && typeof( item.link ) === 'undefined' ) item.link = genLink( item.title );
+
+			if ( item.dropdown ) procMenu( item.dropdown, item );
+			else if ( item.megamenu ) procMenu( item.megamenu, item );
+			else if ( item.list ) procMenu( item.list, item );
+			else if ( item instanceof Array ) procMenu( item, item );
+		});
+	}
+
+	function directMenuPass ( menu, cb ) {
+		for( var i = 0; i < menu.length; i++ ) {
+			var item = menu[i];
+			if ( self.directMenuPassEnd ) break;  // Not for async or parallel processes
+			if ( cb ) if ( cb( item ) ) self.directMenuPassEnd = true;
+			if ( item.dropdown ) directMenuPass( item.dropdown, cb );
+			else if ( item.megamenu ) directMenuPass( item.megamenu, cb );
+			else if ( item.list ) directMenuPass( item.list, cb );
+			else if ( item instanceof Array ) directMenuPass( item, cb );
+		}
+	}
+
+	function inverseMenuPass ( item, cb ) {
+		if ( cb ) cb( item );
+		if ( item._parent ) inverseMenuPass( item._parent, cb );
+	}
+
+	function main () {
+		// Primary menu processing
+		procMenu( menu );
+
+		// Setting active elements and generating breadcrumbs
+		directMenuPass( menu, function( item ) {
+			if ( item.title && item.title.toLowerCase() === pageName.toLowerCase() ) {
+				inverseMenuPass( item, function( item ) {
+					item.active = true;
+					if ( !item.list ) breadcrumbs.unshift( item );
+				});
+				return true;
+			}
+		});
+	}

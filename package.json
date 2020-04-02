@@ -1,0 +1,25 @@
+{
+  "name": "project-builder",
+  "version": "1.0.0",
+  "description": "Common project builder",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gelbman20",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-pub": "^1.1.2",
+    "gulp-ruby-sass": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprites": "^4.1.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "gulp-pug": "^4.0.1"
+  }
+}

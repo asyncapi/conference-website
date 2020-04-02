@@ -1,0 +1,20 @@
+// Links
+@mixin link($color: $body-color, $color-hover: $primary) {
+	&,
+	&:focus,
+	&:active {
+		color: $color;
+	}
+	&:hover {
+		color: $color-hover;
+	}
+}
+
+@mixin text-var($color, $hover-color) {
+	&#{&} {
+		color: $color;
+	}
+	@at-root  a#{&}#{&} {
+		@include link($color, $hover-color);
+	}
+}
