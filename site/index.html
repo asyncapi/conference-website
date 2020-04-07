@@ -327,7 +327,211 @@
         <div class="container">
           <h6>Event Schedule</h6>
           <h3>Conference Schedule</h3>
-          <p>Coming soon...</p>
+          <div class="tabs-custom tabs-horizontal tabs-corporate">
+            <!--Tab panes-->
+            <div class="tab-content wow fadeIn">
+              <div class="tab-pane">
+                <div class="card-group-custom card-group-corporate" id="schedule" role="tablist" aria-multiselectable="false">
+                                    <div class="schedule-classic schedule-classic-simple">
+                                      <div class="schedule-classic-content"><span class="schedule-classic-time">11:00 am to 11:05 am (UTC)</span><span class="schedule-classic-title heading-4">Welcome!</span></div>
+                                    </div>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="paul-taylor-header" data-toggle="collapse" data-parent="#schedule" href="#paul-taylor" aria-controls="paul-taylor" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/paul-taylor.png" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">11:10 am to 11:40 am (UTC)</span><span class="schedule-classic-title heading-4">Unhappy Path & Dealing with Bad Events</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Paul Taylor</span> -  Strategic Advisor at Mulesoft</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="paul-taylor" aria-labelledby="paul-taylor-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>An architects view on the lessons learnt on implementing event based patterns for large insurance & wealth management clients. Taking a look at the pain that can be caused when event driven goes wrong in a stateful world that happens to be supporting a 24 x 7 business environment. Along with the remediation to try ensure the business and ops teams don't want to run you out of town. This is not a product based talk but more a view from the trenches.</p>
+                        <h5>Bio</h5>
+                        <p>Paul is an architect with a long career guiding enterprise customer on integration best practice, he clearly remembers when RPC with hand crafted payloads was the height of sophistication way before SOA got all formal and he means RPC not gRPC! </p>
+                        <p>Paul is based in Sydney, Australia and has the pleasure of working for MuleSoft in the JAPAC Customer Success Strategy and Architecture team.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="abel-gomez-header" data-toggle="collapse" data-parent="#schedule" href="#abel-gomez" aria-controls="abel-gomez" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/abel-gomez.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">11:45 am to 12:00 pm (UTC)</span><span class="schedule-classic-title heading-4">A model-based AsyncAPI code generator for IoT environments</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Abel Gómez</span> -  Postdoctoral researcher at Internet Interdisciplinary Institute (IN3), Universitat Oberta de Catalunya (UOC)</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="abel-gomez" aria-labelledby="abel-gomez-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>In the new Internet of Things (IoT) era, our everyday objects have evolved in the so-called cyber-physical systems (CPS). The use and deployment of CPS has especially penetrated the industry, giving rise to the Industry 4.0 or Industrial IoT (IIoT). Typically, architectures in IIot environments are distributed and asynchronous, communication being guided by events such as the publication of (and corresponding subscription to) messages.</p>
+                        <p>In this talk, we present AsyncAPI toolkit, our proposal relying on AsyncAPI to automate the design and implementation of these architectures using model-based techniques. AsyncAPI toolkit provides a set of editors and Eclipse-based tools which allows defining JSON-based specifications of message-driven APIs using AsyncAPI. From these specifications, the prototype is able to generate the Java code supporting the creation and serialization of JSON-based message payloads according to the modeled AsyncAPI, including nested JSON objects, as well as the necessary code to publish and subscribe to different topics. The initial prototype that implements this proposal as an open-source project is available at <a href="https://github.com/SOM-Research/asyncapi-toolkit" target="_blank" style="display: inline;">https://github.com/SOM-Research/asyncapi-toolkit</a>.</p>
+                        <h5>Bio</h5>
+                        <p>Abel Gómez is a researcher of the Internet Interdisciplinary Institute, a research center of the Universitat Oberta de Catalunya, Spain. Previously, he has hold different positions at the Universidad de Zaragoza, the École des Mines de Nantes & Inria, and the Universitat Politècnica de València; being this latter institution where he obtained his PhD degree in Computer Science.</p>
+                        <p>His research interests fall in the broad field of Model-Driven Engineering (MDE), and his research lines have evolved in two complementary directions: on the one hand, the development of core technologies to support MDE activities; and on the other hand, the application of MDE techniques to solve Software Engineering problems. More information is available at <a href="https://abel.gomez.llana.me" target="_blank" style="display: inline;">https://abel.gomez.llana.me</a>.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="kevin-dunglas-header" data-toggle="collapse" data-parent="#schedule" href="#kevin-dunglas" aria-controls="kevin-dunglas" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/kevin-dunglas.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">12:05 pm to 12:35 pm (UTC)</span><span class="schedule-classic-title heading-4">Building async public APIs using HTTP/2+ and the Mercure protocol</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Kévin Dunglas</span> -  CEO at Les-Tilleuls.coop</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="kevin-dunglas" aria-labelledby="kevin-dunglas-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p><a href="https://mercure.rocks" target="_blank" style="display: inline;">Mercure.rocks</a> is a new protocol allowing to push data updates to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way. It is especially useful to publish real-time updates of resources served through web APIs, to reactive web and mobile apps.</p>
+                        <p>From the ground up, Mercure has been designed to work with technologies not able to maintain persistent connections. It's especially relevant in serverless environments, but is also convenient when using PHP or FastCGI scripts.</p>
+                        <p>Mercure is basically a higher-level replacement for WebSockets. But unlike WebSockets, it leverages the new capabilities of HTTP/2 and HTTP/3.</p>
+                        <p>It has been designed with hypermedia APIs in mind, is auto-discoverable through the Web Linking RFC and is also compatible with GraphQL.</p>
+                        <p>It natively supports authorization, reconnection in case of network issue (with refetching of missed events), subscribing to several topics, topics patterns (using templated URIs)...</p>
+                        <p>Because it is built on top of Server-sent Events and plain old HTTP requests, it is already compatible with all modern browsers, and requires 0 client-side dependencies.</p>
+                        <p>The protocol is open (available as an Internet Draft), and a reference open source implementation of the server written in Go is available. Integrations with popular web frameworks are already available!</p>
+                        <p>During this talk, you'll learn everything you need to get started with the Mercure protocol!</p>
+                        <h5>Bio</h5>
+                        <p>Kévin is the founder of <a href="https://les-tilleuls.coop" target="_blank" style="display: inline;">Les-Tilleuls.coop</a>, a worker-owned cooperative, the creator of the API Platform framework, of the <a href="https://mercure.rocks" target="_blank" style="display: inline;">Mercure.rocks</a> and <a href="https://vulcain.rocks" target="_blank" style="display: inline;">Vulcain.rocks</a> protocols and a member of the Symfony Core Team. Kévin is also an international speaker, a lecturer and a book writer.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="nauman-ali-header" data-toggle="collapse" data-parent="#schedule" href="#nauman-ali" aria-controls="nauman-ali" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/nauman-ali.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">12:40 pm to 12:55 pm (UTC)</span><span class="schedule-classic-title heading-4">Increasing consistency and speed through code-generation</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Nauman Ali</span> -  Product Manager</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="nauman-ali" aria-labelledby="nauman-ali-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>With my background in SDK generation from APIMatic, I want to talk about the importance of introducing code generation early into your event-driven API pipelines. Doing that will allow you to introduce consistency internally and externally, improve your speed of development and ensure conforming to the specification. Design first. Generate SDKs. Consume them to develop and test. Automate this process.</p>
+                        <h5>Bio</h5>
+                        <p>Nauman is a former Head of Product at APIMatic, with vast experience and expertise in developer experience of APIs. He has spoken at conferences across the world, evangelising about the advantages of automation in the API Lifecycle led by machine readable specifications. He is currently working as an independent API expert working with API companies on their strategy. If you want to talk about APIs, IPAS, spicy food or any type of sports, find him at <a href="https://www.linkedin.com/in/nauman-ali" target="_blank" style="display: inline;">https://www.linkedin.com/in/nauman-ali</a></p>
+                      </div>
+                    </div>
+                  </article>
+                                    <div class="schedule-classic schedule-classic-simple">
+                                      <div class="schedule-classic-content">
+                                        <div class="schedule-classic-img">
+                                          <svg class="svg-icon-md svg-icon-primary" role="img">
+                                            <use xlink:href="images/svg/sprite.svg#clock"></use>
+                                          </svg>
+                                        </div><span class="schedule-classic-time">01:00 pm to 01:30 pm (UTC)</span><span class="schedule-classic-title heading-4">Enjoy the coffee/beer break</span>
+                                      </div>
+                                    </div>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="norberto-herz-header" data-toggle="collapse" data-parent="#schedule" href="#norberto-herz" aria-controls="norberto-herz" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/norberto-herz.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">01:35 pm to 02:05 pm (UTC)</span><span class="schedule-classic-title heading-4">Jukeberry: An IoT DIY use case</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Norberto Herz</span> -  CTO at Stealth Mode</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="norberto-herz" aria-labelledby="norberto-herz-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>Jukeberry is a basic jukebox powered by a Raspberry Pi and an RFID reader. Isolated, it's a nice gadget but, connected, it's an endless source of creativity, ideas, and fun.</p>
+                        <p>Let's explore this PoC together, the architecture, the state of the art, and the next steps!</p>
+                        <h5>Bio</h5>
+                        <p>Norberto is a Software builder. Along with his career, he performed different roles (developer, architect, manager) at various companies, such as IBM, Mulesoft, and Medallia (among others). Currently CTO at a startup in stealth mode. Father of Tomi and Guille, eternal guitarist wannabe and shower singer.</p>
+                        <p><span>Twitter: <a href="https://twitter.com/nohorbee" target="_blank">https://twitter.com/nohorbee</a><br></span><span>LinkedIn: <a href="https://ar.linkedin.com/in/norberto-herz-1778875" target="_blank">https://ar.linkedin.com/in/norberto-herz-1778875</a></span></p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="doug-davis-header" data-toggle="collapse" data-parent="#schedule" href="#doug-davis" aria-controls="doug-davis" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/doug-davis.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">02:10 pm to 02:40 pm (UTC)</span><span class="schedule-classic-title heading-4">CloudEvents - A First Step Towards Serverless Interop</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Doug Davis</span> -  PM Knative at IBM</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="doug-davis" aria-labelledby="doug-davis-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>In our distributed Cloud Native world, loosely coupled services are a central architectural design point, and along with those comes the events that flow between them. Now, add in the dynamic nature of extending these systems with new components and the need to have middleware that can manage, process and route those events efficiently (without needing to understand the business logic within the events, or even who sent the events) will be critical.</p>
+                        <p>The <a href="https://github.com/cloudevents/spec" target="_blank" style="display: inline;">CNCF CloudEvents project</a> has introduced a specification to help solve this problem by introducing a way to standardize key bits of metadata in the events without forcing people to adopt a ""one-size-fits-all"" common event format. Come see why this simple little specification has managed to bring every major Cloud provider together to solve these concerns.</p>
+                        <h5>Bio</h5>
+                        <p>Doug works in IBM's Hybrid Cloud division. He's been working on Cloud related technologies for many years and has worked on many of the most popular OSS projects, including OpenStack, CloudFoundry, Docker, Kubernetes and Knative. He's currently the PM for Knative, co-chairing the CNCF's Serverless WG and the Cloud Events project.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="fran-mendez-header" data-toggle="collapse" data-parent="#schedule" href="#fran-mendez" aria-controls="fran-mendez" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/fran-mendez.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">02:45 pm to 03:15 pm (UTC)</span><span class="schedule-classic-title heading-4">To be announced</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Fran Mendez</span> -  Founder at AsyncAPI Initiative</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="fran-mendez" aria-labelledby="fran-mendez-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>To be announced</p>
+                        <h5>Bio</h5>
+                        <p>Fran is the founder of the <a href="https://www.asyncapi.com" style="display: inline;" target="_blank">AsyncAPI Initiative</a>. He’s a software engineer with a strong focus on event-driven APIs and microservices. In his spare time, he enjoys playing beach volleyball, kayaking, and stand-up paddle surf.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="marc-dipasquale-header" data-toggle="collapse" data-parent="#schedule" href="#marc-dipasquale" aria-controls="marc-dipasquale" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/marc-dipasquale.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">03:20 pm to 03:50 pm (UTC)</span><span class="schedule-classic-title heading-4">From Design to Code using AsyncAPI</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Marc DiPasquale</span> -  Developer Advocate at Solace</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="marc-dipasquale" aria-labelledby="marc-dipasquale-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>A long standing gap has been filled! The AsyncAPI specification has risen as the industry standard for defining asynchronous APIs and is being incorporated into several products to enable a better tomorrow for Event-Driven Architecture (EDA). In this talk you will learn how AsyncAPI has been adopted by the Solace PubSub+ Event Portal to provide full lifecycle management of your EDA. I will focus on how you can use the tool to design your architecture and demonstrate how to use the AsyncAPI’s Code Generators to quickly develop a Spring Cloud Stream microservice.</p>
+                        <h5>Bio</h5>
+                        <p>Marc is a Developer Advocate with extensive engineering experience in the public and private sector across multiple domains including healthcare, aviation and weather imagery processing. He has been using event-driven techniques and methodologies throughout his career and is excited by its elevation to the mainstream. Marc works with prospective and existing clients to enable the development of modern and reactive applications.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="james-higginbotham-header" data-toggle="collapse" data-parent="#schedule" href="#james-higginbotham" aria-controls="james-higginbotham" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/james-higginbotham.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">03:55 pm to 04:25 pm (UTC)</span><span class="schedule-classic-title heading-4">Event-Based API Patterns and Practices</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">James Higginbotham</span> -  API Architect at LaunchAny</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="james-higginbotham" aria-labelledby="james-higginbotham-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>Event-based APIs are becoming more popular, enabling developers to craft new integrations and solutions that go beyond the original design of an API. Yet, there remains a challenge: how can teams design thoughtful event-based APIs that are long-lasting, evolvable, and discoverable? This talk will dive into the design practices of event-based APIs and anti-patterns should we avoid.</p>
+                        <h5>Bio</h5>
+                        <p>James Higginbotham is an API and microservice architecture consultant with over 20 years of experience in developing and deploying apps and APIs. He provides API strategy, design and microservice architecture guidance to enterprise IT and organizations undergoing digital transformation.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="emmelyn-wang-header" data-toggle="collapse" data-parent="#schedule" href="#emmelyn-wang" aria-controls="emmelyn-wang" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/emmelyn-wang.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">04:30 pm to 04:35 pm (UTC)</span><span class="schedule-classic-title heading-4">Simple Ways to Get Your Organization to Adopt AsyncAPI</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Emmelyn A. Wang</span> -  API Strategist at Axway</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="emmelyn-wang" aria-labelledby="emmelyn-wang-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>AsyncAPI community has great culture. Here are 3 ways to influence, equip, and empower your company, product leader or engineering organization to adopt the AsyncAPI spec.</p>
+                        <h5>Bio</h5>
+                        <p>Emmelyn is an API Strategist on the Evangelism team at Axway. Her team is part of the Office of the CTIO and works closely with Product and Engineering leadership on the API management and hybrid integration platform. The Evangelism team is also involved in the greater community including building applications and solutions and telling stories that cover the ecosystem and landscape of digital business.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="matt-bishop-header" data-toggle="collapse" data-parent="#schedule" href="#matt-bishop" aria-controls="matt-bishop" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/matt-bishop.png" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">04:40 pm to 05:10 pm (UTC)</span><span class="schedule-classic-title heading-4">Defining Event Modeled systems with AsyncAPI</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Matt Bishop</span> -  Principal Architect, API Strategist at AdapTech Group</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="matt-bishop" aria-labelledby="matt-bishop-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>Event Modeling is a new approach to designing CQRS + event-sourced systems. It picks up where Event Storming leaves off and creates artifacts for the commands, events and views in the system. These artifacts are produced and consumed asynchronously and thus are an ideal candidate for describing in AsyncAPI. This talk will walk through the Event Modeling approach and show examples of the artifacts as AsyncAPI definitions. More info about Event Modeling can be found at <a href="https://eventmodeling.org" target="_blank" style="display: inline;">https://eventmodeling.org</a>.</p>
+                        <h5>Bio</h5>
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/matt-bishop-l3/" target="_blank">https://www.linkedin.com/in/matt-bishop-l3/</a></p>
+                      </div>
+                    </div>
+                  </article>
+                  <!--Bootstrap card-->
+                  <article class="card card-custom card-corporate">
+                    <div class="card-header" role="tab">
+                      <div class="card-title"><a class="collapsed js-talk-title" id="kin-lane-header" data-toggle="collapse" data-parent="#schedule" href="#kin-lane" aria-controls="kin-lane" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="schedule-classic-img"><img src="images/speakers/kin-lane.jpg" alt=""/></span></span><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-time">05:15 pm to 05:45 pm (UTC)</span><span class="schedule-classic-title heading-4">OpenAPI, AsyncAPI, Postman Collections, JSON Schema and ALPS All Living In Harmony Using APIs.json</span><span class="schedule-classic-author">by <span class="schedule-classic-author-name">Kin Lane</span> -  Chief Evangelist at Postman</span></span></span></span></span></a></div>
+                    </div>
+                    <div class="collapse js-talk-body" id="kin-lane" aria-labelledby="kin-lane-header" data-parent="#schedule" role="tabpanel">
+                      <div class="card-body">
+                        <h5>Talk abstract</h5>
+                        <p>Demonstrating how robust API operations can utilize many different API and schema specifications side by side to describe different dimensions of the API stack, bringing them all together in a single APIs.json index. The talk will be using the Slack API as a working example (<a href="https://apievangelist.com/2019/10/31/a-diverse-api-json-index-example-for-slack/" target="_blank" style="display: inline;">https://apievangelist.com/2019/10/31/a-diverse-api-json-index-example-for-slack/</a>).</p>
+                        <h5>Bio</h5>
+                        <p>I am the <a href="https://twitter.com/apievangelist" target="_blank" style="display: inline;">@apievangelist</a>, and the Chief Evangelist for <a href="https://twitter.com/getpostman" target="_blank" style="display: inline;">@getpostman</a>, sharing stories of the API life cycle.</p>
+                      </div>
+                    </div>
+                  </article>
+                                    <div class="schedule-classic schedule-classic-simple">
+                                      <div class="schedule-classic-content"><span class="schedule-classic-time">05:50 pm to 06:00 pm (UTC)</span><span class="schedule-classic-title heading-4">Closing words</span></div>
+                                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Section Pre Footer-->

@@ -1,6 +1,13 @@
-mixin schedule-classic-simple()
-  .schedule-classic.schedule-classic-simple&attributes( attributes )
-    .schedule-classic-content
-      .schedule-classic-img: +svg-icon('clock')(class='svg-icon-md svg-icon-primary')
-      span.schedule-classic-time 11:00 am to 12:00 pm
-      span.schedule-classic-title.heading-4 Enjoy the coffee break
+span.schedule-classic
+  span.unit.unit-spacing-md.align-items-center.d-block.d-md-flex
+    span.unit-left: span.schedule-classic-img: +img( 'speakers/nauman-ali.jpg' )
+    span.unit-body
+      span.schedule-classic-content
+        span.schedule-classic-time 12:40 pm to 12:55 pm (UTC)
+        span.schedule-classic-title.heading-4 Increasing consistency and speed through code-generation
+        span.schedule-classic-author
+          | by
+          =" "
+          span.schedule-classic-author-name Nauman Ali
+          =" "
+          | -  Product Manager
