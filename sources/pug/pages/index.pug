@@ -109,27 +109,31 @@ block page
         //Tab panes
         .tab-content.wow.fadeIn
           .tab-pane
-            #accordion1.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
+            #schedule.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
               include ../components/card-content/schedule-item-intro/_schedule-item-header
               +schedule-intro()
 
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'paul-taylor',
                 case: 1
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'abel-gomez',
                 case: 2
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'kevin-dunglas',
                 case: 3
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'nauman-ali',
                 case: 4
               }).card-corporate
 
@@ -137,42 +141,50 @@ block page
               +schedule-classic-simple()
 
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'norberto-herz',
                 case: 5
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'doug-davis',
                 case: 6
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'fran-mendez',
                 case: 7
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'marc-dipasquale',
                 case: 8
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'james-higginbotham',
                 case: 9
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'emmelyn-wang',
                 case: 10
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'matt-bishop',
                 case: 11
               }).card-corporate
               
               +card-schedule({
-                parentId: 'accordion1',
+                parentId: 'schedule',
+                slug: 'kin-lane',
                 case: 12
               }).card-corporate
 
