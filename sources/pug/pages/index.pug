@@ -105,37 +105,79 @@ block page
     .container
       h6 Event Schedule
       h3 Conference Schedule
+      .tabs-custom.tabs-horizontal.tabs-corporate
+        //Tab panes
+        .tab-content.wow.fadeIn
+          .tab-pane
+            #accordion1.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
+              include ../components/card-content/schedule-item-intro/_schedule-item-header
+              +schedule-intro()
 
-      p Coming soon...
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 1
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 2
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 3
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 4
+              }).card-corporate
 
-  //- section.section.section-lg.bg-default.text-center
-  //-   .container
-  //-     h6 Event Schedule
-  //-     h3 Conference Schedule
-  //-     .tabs-custom.tabs-horizontal.tabs-corporate
-  //-       //Tab panes
-  //-       .tab-content.wow.fadeIn
-  //-         .tab-pane
-  //-           #accordion1.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
-  //-             +card-schedule({
-  //-               parentId: 'accordion1',
-  //-               case: 1
-  //-             }).card-corporate
-  //-             +card-schedule({
-  //-               parentId: 'accordion1',
-  //-               case: 2
-  //-             }).card-corporate
-  //-             +card-schedule({
-  //-               parentId: 'accordion1',
-  //-               case: 3
-  //-             }).card-corporate
-  //-             // Schedule Simple
-  //-             include ../components/card-content/schedule-item-4/_schedule-item-header
-  //-             +schedule-classic-simple()
-  //-             +card-schedule({
-  //-               parentId: 'accordion1',
-  //-               case: 5
-  //-             }).card-corporate
+              include ../components/card-content/schedule-item-break/_schedule-item-header
+              +schedule-classic-simple()
+
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 5
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 6
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 7
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 8
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 9
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 10
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 11
+              }).card-corporate
+              
+              +card-schedule({
+                parentId: 'accordion1',
+                case: 12
+              }).card-corporate
+
+              include ../components/card-content/schedule-item-outro/_schedule-item-header
+              +schedule-outro()
 
   //- // Section Official Sponsors
   //- +parallax({

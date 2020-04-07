@@ -39,8 +39,24 @@ mixin card-schedule( obj )
               include ../components/card-content/schedule-item-2/_schedule-item-header
             when 3
               include ../components/card-content/schedule-item-3/_schedule-item-header
+            when 4
+              include ../components/card-content/schedule-item-4/_schedule-item-header
             when 5
               include ../components/card-content/schedule-item-5/_schedule-item-header
+            when 6
+              include ../components/card-content/schedule-item-6/_schedule-item-header
+            when 7
+              include ../components/card-content/schedule-item-7/_schedule-item-header
+            when 8
+              include ../components/card-content/schedule-item-8/_schedule-item-header
+            when 9
+              include ../components/card-content/schedule-item-9/_schedule-item-header
+            when 10
+              include ../components/card-content/schedule-item-10/_schedule-item-header
+            when 11
+              include ../components/card-content/schedule-item-11/_schedule-item-header
+            when 12
+              include ../components/card-content/schedule-item-12/_schedule-item-header
 
     .collapse( id= bodyId, aria-labelledby= headId, data-parent='#' + obj.parentId, class={show: obj.show}, role='tabpanel' )
       .card-body
@@ -51,5 +67,21 @@ mixin card-schedule( obj )
             include ../components/card-content/schedule-item-2/_schedule-item-body
           when 3
             include ../components/card-content/schedule-item-3/_schedule-item-body
+          when 4
+            include ../components/card-content/schedule-item-4/_schedule-item-body
           when 5
             include ../components/card-content/schedule-item-5/_schedule-item-body
+          when 6
+            include ../components/card-content/schedule-item-6/_schedule-item-body
+          when 7
+            include ../components/card-content/schedule-item-7/_schedule-item-body
+          when 8
+            include ../components/card-content/schedule-item-8/_schedule-item-body
+          when 9
+            include ../components/card-content/schedule-item-9/_schedule-item-body
+          when 10
+            include ../components/card-content/schedule-item-10/_schedule-item-body
+          when 11
+            include ../components/card-content/schedule-item-11/_schedule-item-body
+          when 12
+            include ../components/card-content/schedule-item-12/_schedule-item-body

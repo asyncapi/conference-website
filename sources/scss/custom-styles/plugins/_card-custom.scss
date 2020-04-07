@@ -83,7 +83,7 @@ $accordion-corporate-content-padding: 25px 44px 25px nth($accordion-corporate-he
       }
     }
     .card-body {
-      padding: 15px 10px 35px 168px;
+      padding: 15px 30px 35px 150px;
     }
   }
 
@@ -93,9 +93,9 @@ $accordion-corporate-content-padding: 25px 44px 25px nth($accordion-corporate-he
 @include media-breakpoint-up(lg) {
   .card-custom {
     .card-body {
-      padding: 45px 10px 45px 208px;
+      padding: 45px 30px 45px 150px;
 
-      > * + * { margin-top: 30px; }
+      > * + * { margin-top: 20px; }
     }
   }
 }
@@ -103,9 +103,9 @@ $accordion-corporate-content-padding: 25px 44px 25px nth($accordion-corporate-he
 @include media-breakpoint-up(xl) {
   .card-custom {
     .card-body {
-      padding: 45px 10px 45px 208px;
+      padding: 45px 30px 45px 150px;
 
-      > * + * { margin-top: 48px; }
+      > * + * { margin-top: 20px; }
     }
   } 
 } 
