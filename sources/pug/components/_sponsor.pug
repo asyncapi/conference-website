@@ -1,8 +1,9 @@
-mixin sponsor( img )
+mixin sponsor( img, name, url, platinum=false )
   // Sponsor
-  a.sponsor( href='#' data-triangle=".sponsor-overlay" )&attributes( attributes )
-    .sponsor-overlay
-    .sponsor-img: +img(`${img}.png`)
+  a.sponsor( href=url, target='_blank', class={platinum: platinum} )
+    .sponsor-img
+      img(src=img)
+  a(href=url, target='_blank'): h4(style='margin-top:20px;')=name
 
 mixin sponsor-modern( obj )
   // Sponsor Modern
