@@ -1662,20 +1662,22 @@
 
   if (window.location.hash) {
     var $header = $(window.location.hash + '-header');
-    var $el = $(window.location.hash);
-    $header.removeClass('collapsed');
-    $header.attr('aria-expanded', true);
-    $el.removeClass('collapse');
-
-    $('html, body').animate({
-      scrollTop: $header.offset().top
-    }, 1000);
+    if ($header.hasClass('.js-talk-title')) {
+      var $el = $(window.location.hash);
+      $header.removeClass('collapsed');
+      $header.attr('aria-expanded', true);
+      $el.removeClass('collapse');
+  
+      $('html, body').animate({
+        scrollTop: $header.offset().top
+      }, 1000);
+    }
   }
 
   $('.js-talk-title').on('click', function (ev) {
     const hash = $(ev.currentTarget).attr('href');
     if (hash) {
-      var $header = $(hash + '-header');
+      var $header = $(hash + '-header');      
       $('.js-talk-title').addClass('collapsed').attr('aria-expanded', true);
       $('.js-talk-body').addClass('collapse');
       window.location.hash = hash;
