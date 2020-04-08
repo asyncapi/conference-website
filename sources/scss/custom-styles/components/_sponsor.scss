@@ -17,11 +17,16 @@
   margin-right: auto;
   padding: 30px;
   background-color: $white;
-  opacity: .3;
-
-  &:hover {
-    opacity: 1;
+  border-radius: 10px;
+  
+  &:not(.platinum) {
+    opacity: .3;
+    
+    &:hover {
+      opacity: 1;
+    }
   }
+  
 }
 
 .sponsor-overlay {

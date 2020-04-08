@@ -191,28 +191,24 @@ block page
               include ../components/card-content/schedule-item-outro/_schedule-item-header
               +schedule-outro()
 
-  //- // Section Official Sponsors
-  //- +parallax({
-  //-   img:        'bg-parallax-04-1894x1170.jpg',
-  //-   innerClass: 'section-lg context-dark text-center'
-  //- }).section
-  //-   .container
-  //-     h6 Our sponsorships
-  //-     h3 Official Sponsors.
-  //-     .row.row-30.row-lg-50.justify-content-center
-  //-       .col-sm-5.col-lg-3
-  //-         .wow: div: +sponsor( 'sponsor-01-117x70' )
-  //-       .col-sm-5.col-lg-3
-  //-         .wow: div: +sponsor( 'sponsor-02-66x83' )
-  //-       .col-sm-5.col-lg-3
-  //-         .wow: div: +sponsor( 'sponsor-03-119x33' )
-  //-       .col-sm-5.col-lg-3
-  //-         .wow: div: +sponsor( 'sponsor-04-116x68' )
-  //-       .col-xl-12
-  //-         p.font-weight-sbold.font-secondary
-  //-           span.wow( data-splitting ) Don’t hesitate, contact us for better help and services.
-  //-           =" "
-  //-           a.link-inline.wow.fadeScale( href='#' ) View All Sponsors
+  // Section Official Sponsors
+  +parallax({
+    img:        'bg-parallax-04-1894x1170.jpg',
+    innerClass: 'section-lg context-dark text-center'
+  }).section
+    #sponsors.container
+      h6 Our sponsors
+      h3 Platinum Sponsors
+      .row.row-30.row-lg-50.justify-content-center
+        .col-12
+          .wow: div: +sponsor( 'images/sponsors/ably.png', 'Ably.io', 'https://ably.io', true )
+              
+        .col-xl-12
+          p.font-weight-sbold.font-secondary
+            span.wow( data-splitting ) Interested in sponsoring? We've got tiers for everyone.
+            =" "
+            a.link-inline.wow.fadeScale( href='https://opencollective.com/asyncapi-online-conference-fd574661/', target='_blank' ) Check it out
+            ='.'
 
   // Section Collaborators
   section#collaborators.section.section-lg.bg-default.text-center
