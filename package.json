@@ -4,7 +4,9 @@
   "description": "Common project builder",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "develop": "gulp server"
   },
   "author": "gelbman20",
   "license": "ISC",
