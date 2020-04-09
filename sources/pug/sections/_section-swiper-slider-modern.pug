@@ -22,7 +22,14 @@ section.section.section-swiper-absoulte.context-dark.text-center( data-triangle=
               .unit-left.line-height-reset: +svg-icon('small-calendar')(class='svg-icon-sm svg-icon-primary')
               .unit-body: h5.text-spacing-100: span.big: time(datetime='2020-04-22') April 22, 2020
         +countdown-rect( {to: '04/22/2020 10:00:00'} )
+        .row
+          .col-md-6.offset-md-3
+            h4(style='font-weight:normal;') No registration needed!
+            p The event will be broadcasted live on our <a href="https://www.youtube.com/watch?v=oMSzGc5bDr4" style="color: white; text-decoration: underline;" target="_blank">YouTube channel</a>. Set a reminder so you don't forget about it!
         .group
+          a.button.button-primary.box-with-triangle-right.wow.fadeScale( href='https://www.youtube.com/watch?v=oMSzGc5bDr4' target="_blank" data-triangle=".button-overlay" )
+            span YouTube Live
+            span.button-overlay
           a.button.button-secondary.box-with-triangle-right.wow.fadeScale( href='https://youtu.be/EsCiDSwfAMw' data-lightgallery="item" data-triangle=".button-overlay" )
             span Watch promo
             span.button-overlay
