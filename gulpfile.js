@@ -106,7 +106,7 @@ let copy = () => {
     .pipe(gulp.dest('dist/'))
 };
 
-const build = gulp.series(cleanFolder, copy);
+const build = gulp.series(cleanFolder, compilePug, copy);
 const watch = gulp.series(compilePug, watchFiles, browserSync);
 const server = gulp.series(watchFiles, browserSync);
 
