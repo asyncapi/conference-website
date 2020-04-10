@@ -3,7 +3,7 @@ mixin sponsor( img, name, url, platinum=false )
   a.sponsor( href=url, target='_blank', class={platinum: platinum} )
     .sponsor-img
       img(src=img)
-  a(href=url, target='_blank'): h4(style='margin-top:20px;')=name
+  a(href=url, target='_blank'): h4(style='margin-top:20px;margin-bottom:20px;')=name
 
 mixin sponsor-modern( obj )
   // Sponsor Modern
