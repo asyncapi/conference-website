@@ -11,22 +11,16 @@
   justify-content: center;
   align-items: center;
   max-width: 270px;
-  min-height: 208px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
   background-color: $white;
   border-radius: 10px;
-  
-  &:not(.platinum) {
-    opacity: .3;
-    
-    &:hover {
-      opacity: 1;
-    }
+
+  .sponsor-img {
+    width: 100%;
   }
-  
 }
 
 .sponsor-overlay {
