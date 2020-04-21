@@ -99,6 +99,7 @@ let copy = () => {
       'site/**/css/**/fonts.css',
       'site/**/fonts/**/*',
       'site/**/images/**/*',
+      'site/**/attachments/**/*',
       'site/**/js/**/script.js',
       'site/**/js/**/core.min.js',
       'site/**/**/*.html'
