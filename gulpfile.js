@@ -102,7 +102,8 @@ let copy = () => {
       'site/**/attachments/**/*',
       'site/**/js/**/script.js',
       'site/**/js/**/core.min.js',
-      'site/**/**/*.html'
+      'site/**/**/*.html',
+      'site/_redirects',
     ])
     .pipe(gulp.dest('dist/'))
 };
