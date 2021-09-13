@@ -9,7 +9,7 @@ include ../components/_sponsor
 include ../components/_news
 
 block variables
-  - pageName = 'AsyncAPI online conference'
+  - pageName = 'AsyncAPI Hackathon & Conference'
 
 block page
   include ../sections/_section-swiper-slider-modern
@@ -20,8 +20,33 @@ block page
       .row.row-30.justify-content-center
         .col-md-10.col-lg-6.col-xl-5
           h6 About the event
-          h3.heading-lg-postfix-15 First-ever AsyncAPI conference
-          p It all started as a crazy idea. Since we're all confined at home due to the coronavirus pandemic, why not organizing a fully-remote online conference to meet each other and have some fun? We asked the community and the response was overwhelmingly positive. We had no choice! Time for some action!
+          h3.heading-lg-postfix-15 First-ever AsyncAPI Hackathon
+          // List Inline
+          ul.list-inline.list-inline-xl
+            li
+              .unit
+                .unit-left: +svg-icon(`euro`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 $5000
+                  p Winner
+            li
+              .unit
+                .unit-left: +svg-icon(`euro`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 $3000
+                  p Runner-up
+            li
+              .unit
+                .unit-left: +svg-icon(`euro`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 $1000
+                  p 3rd
+          p We bring to you a month-long hackathon. Its goal is to provide MVP solutions that can help AsyncAPI Community in ways like:
+            ul
+              li Ease education and getting started with the project
+              li Bring new AsyncAPI-related solutions to challenges the community has with event-driven architectures
+              li Extend existing tools, reuse them in some scenarios, add the extra implementation on top
+          p Can't come up with an idea? <a target="_blank" href="https://github.com/asyncapi/community/discussions/categories/asyncapi-hack-2021-ideas-brainstorming">Discuss</a> with others, pick proposed ideas.
           // List Inline
           ul.list-inline.list-inline-xl
             li
@@ -41,14 +66,43 @@ block page
                 .unit-left: +svg-icon(`small-calendar`)(class='svg-icon-sm svg-icon-primary' )
                 .unit-body
                   h5 When
-                  p: time(datetime='2020-04-22') April 22, 2020
+                  p: time(datetime='2021-10-01') October 1 - 31, 2021
         .col-md-10.col-lg-6.col-xl-7.text-md-right
           // Image Box
           .images-box
             .images-box-item-right
               .wow.fadeScale
                 +img('light-world-polygon.png')
-  
+        .col-md-10.col-lg-6.col-xl-7.text-md-right
+          // Image Box
+          .images-box
+            .images-box-item-right
+              .wow.fadeScale
+                +img('light-world-polygon.png')
+        .col-md-10.col-lg-6.col-xl-5
+          h6 About the event
+          h3.heading-lg-postfix-15 AsyncAPI Conference with Contributors Summit
+          p First day of the conference is dedicated entirely to folks that want to contribute to AsyncAPI Initiative. You will learn how to start first baby steps as AsyncAPI contributor and also how to contribute to some of the tools. Next two days of the conference are a pure learning experience, community for the community.
+          // List Inline
+          ul.list-inline.list-inline-xl
+            li
+              .unit
+                .unit-left: +svg-icon(`euro`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 Price
+                  p Free
+            li
+              .unit
+                .unit-left: +svg-icon(`earth-globe`)(class='svg-icon-sm svg-icon-primary')
+                .unit-body
+                  h5 Where
+                  p Online
+            li
+              .unit
+                .unit-left: +svg-icon(`small-calendar`)(class='svg-icon-sm svg-icon-primary' )
+                .unit-body
+                  h5 When
+                  p: time(datetime='2021-11-16') November 16-18, 2021
   //- +parallax({
   //-   img:        'bg-parallax-02-1894x1950.jpg',
   //-   innerClass: 'section-lg context-dark text-center'
@@ -105,92 +159,95 @@ block page
     .container
       h6 Event Schedule
       h3 Conference Schedule
-      div Use <a target="_blank" href="https://everytimezone.com/s/8570f313">Every Time Zone</a> to translate UTC to your local time zone.
-      .tabs-custom.tabs-horizontal.tabs-corporate
-        //Tab panes
-        .tab-content.wow.fadeIn
-          .tab-pane
-            #schedule.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
-              include ../components/card-content/schedule-item-intro/_schedule-item-header
-              +schedule-intro()
+      .row
+        .col-md-6.offset-md-3
+          h4(style='font-weight:normal;') CFP is still opened! We will share link soon...
+      //- div Use <a target="_blank" href="https://everytimezone.com/s/8570f313">Every Time Zone</a> to translate UTC to your local time zone.
+      //- .tabs-custom.tabs-horizontal.tabs-corporate
+      //-   //Tab panes
+      //-   .tab-content.wow.fadeIn
+      //-     .tab-pane
+      //-       #schedule.card-group-custom.card-group-corporate(role='tablist', aria-multiselectable='false')
+      //-         include ../components/card-content/schedule-item-intro/_schedule-item-header
+      //-         +schedule-intro()
 
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'paul-taylor',
-                case: 1
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'paul-taylor',
+      //-           case: 1
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'abel-gomez',
-                case: 2
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'abel-gomez',
+      //-           case: 2
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'kevin-dunglas',
-                case: 3
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'kevin-dunglas',
+      //-           case: 3
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'nauman-ali',
-                case: 4
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'nauman-ali',
+      //-           case: 4
+      //-         }).card-corporate
 
-              include ../components/card-content/schedule-item-break/_schedule-item-header
-              +schedule-classic-simple()
+      //-         include ../components/card-content/schedule-item-break/_schedule-item-header
+      //-         +schedule-classic-simple()
 
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'norberto-herz',
-                case: 5
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'norberto-herz',
+      //-           case: 5
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'doug-davis',
-                case: 6
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'doug-davis',
+      //-           case: 6
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'kin-lane',
-                case: 7
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'kin-lane',
+      //-           case: 7
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'marc-dipasquale',
-                case: 8
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'marc-dipasquale',
+      //-           case: 8
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'james-higginbotham',
-                case: 9
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'james-higginbotham',
+      //-           case: 9
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'emmelyn-wang',
-                case: 10
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'emmelyn-wang',
+      //-           case: 10
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'fran-mendez',
-                case: 11
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'fran-mendez',
+      //-           case: 11
+      //-         }).card-corporate
               
-              +card-schedule({
-                parentId: 'schedule',
-                slug: 'matt-bishop',
-                case: 12
-              }).card-corporate
+      //-         +card-schedule({
+      //-           parentId: 'schedule',
+      //-           slug: 'matt-bishop',
+      //-           case: 12
+      //-         }).card-corporate
 
-              include ../components/card-content/schedule-item-outro/_schedule-item-header
-              +schedule-outro()
+      //-         include ../components/card-content/schedule-item-outro/_schedule-item-header
+      //-         +schedule-outro()
 
   // Section Official Sponsors
   +parallax({
@@ -198,93 +255,98 @@ block page
     innerClass: 'section-lg context-dark text-center'
   }).section
     #sponsors.container
-      h6 Our sponsors
-      h3 Platinum Sponsors
-      .row.row-30.row-lg-50.justify-content-center
-        .col-12.col-md-6
-          .row
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/ably.png', 'Ably.io', 'https://ably.io', true )
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/smartbear.jpg', 'Smartbear', 'https://smartbear.com', true )
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/mulesoft.png', 'Mulesoft', 'https://mulesoft.com', true )
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/redhat.jpg', 'Red Hat', 'https://redhat.com', true )
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/openapi.png', 'OpenAPI Initiative', 'https://openapis.org', true )
-            .col-12.col-sm-6.col-lg-6
-              .wow: div: +sponsor( 'images/sponsors/solace.png', 'Solace', 'https://solace.com/', true )
-      h3 Golden Sponsors
-      .row.row-30.row-lg-50.justify-content-center
-        .col-12.col-md-6
-          .row
-            .col-12.col-sm-6.offset-sm-3.col-lg-4.offset-lg-4
-              .wow: div: +sponsor( 'images/sponsors/slack.svg', 'Slack', 'https://slack.com', false )
+      h3 Our sponsors
+      .row
+        .col-md-6.offset-md-3
+          h4(style='font-weight:normal;') Want to become a sponsor?
+          h4(style='font-weight:normal;') <a target="_blank" href="https://opencollective.com/asyncapi/events/asyncapi-hackathon-and-conference-2021-3156d7af">Join others!</a>
+
+  //-     h3 Platinum Sponsors
+  //-     .row.row-30.row-lg-50.justify-content-center
+  //-       .col-12.col-md-6
+  //-         .row
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/ably.png', 'Ably.io', 'https://ably.io', true )
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/smartbear.jpg', 'Smartbear', 'https://smartbear.com', true )
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/mulesoft.png', 'Mulesoft', 'https://mulesoft.com', true )
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/redhat.jpg', 'Red Hat', 'https://redhat.com', true )
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/openapi.png', 'OpenAPI Initiative', 'https://openapis.org', true )
+  //-           .col-12.col-sm-6.col-lg-6
+  //-             .wow: div: +sponsor( 'images/sponsors/solace.png', 'Solace', 'https://solace.com/', true )
+  //-     h3 Golden Sponsors
+  //-     .row.row-30.row-lg-50.justify-content-center
+  //-       .col-12.col-md-6
+  //-         .row
+  //-           .col-12.col-sm-6.offset-sm-3.col-lg-4.offset-lg-4
+  //-             .wow: div: +sponsor( 'images/sponsors/slack.svg', 'Slack', 'https://slack.com', false )
               
-        .col-xl-12
-          p.font-weight-sbold.font-secondary
-            span.wow( data-splitting ) Interested in sponsoring? We've got tiers for everyone.
-            =" "
-            a.link-inline.wow.fadeScale( href='https://opencollective.com/asyncapi-online-conference-fd574661/', target='_blank' ) Check it out
-            ='.'
+  //-       .col-xl-12
+  //-         p.font-weight-sbold.font-secondary
+  //-           span.wow( data-splitting ) Interested in sponsoring? We've got tiers for everyone.
+  //-           =" "
+  //-           a.link-inline.wow.fadeScale( href='https://opencollective.com/asyncapi-online-conference-fd574661/', target='_blank' ) Check it out
+  //-           ='.'
 
-  // Section Collaborators
-  section#collaborators.section.section-lg.bg-default.text-center
-    .container
-      h6 Huge thanks to our
-      h3 Collaborators
+  //- // Section Collaborators
+  //- section#collaborators.section.section-lg.bg-default.text-center
+  //-   .container
+  //-     h6 Huge thanks to our
+  //-     h3 Collaborators
 
-      .row
-        .col-md-10.offset-md-1
-          .row
-            .col-md-3
-              a(href='https://twitter.com/pieroginomicon' target='_blank')
-                img(src='/images/collaborators/andrzej-jarzyna.jpg', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
-                h4 Andrzej Jarzyna
-                h6 Adidas
-            .col-md-3
-              a(href='https://github.com/jonaslagoni/' target='_blank')
-                img(src='/images/collaborators/jonas-lagoni.webp', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
-                h4 Jonas Lagoni
-                h6 EURISCO
-            .col-md-3
-              a(href='https://twitter.com/PermittedSoc' target='_blank')
-                img(src='/images/collaborators/mike-ralphson.png', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
-                h4 Mike Ralphson
-                h6 Mermade Software
-            .col-md-3
-              a(href='https://twitter.com/WaleedAshraf01' target='_blank')
-                img(src='/images/collaborators/waleed-ashraf.jpg', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
-                h4 Waleed Ashraf
-                h6 Relayr
+  //-     .row
+  //-       .col-md-10.offset-md-1
+  //-         .row
+  //-           .col-md-3
+  //-             a(href='https://twitter.com/pieroginomicon' target='_blank')
+  //-               img(src='/images/collaborators/andrzej-jarzyna.jpg', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
+  //-               h4 Andrzej Jarzyna
+  //-               h6 Adidas
+  //-           .col-md-3
+  //-             a(href='https://github.com/jonaslagoni/' target='_blank')
+  //-               img(src='/images/collaborators/jonas-lagoni.webp', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
+  //-               h4 Jonas Lagoni
+  //-               h6 EURISCO
+  //-           .col-md-3
+  //-             a(href='https://twitter.com/PermittedSoc' target='_blank')
+  //-               img(src='/images/collaborators/mike-ralphson.png', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
+  //-               h4 Mike Ralphson
+  //-               h6 Mermade Software
+  //-           .col-md-3
+  //-             a(href='https://twitter.com/WaleedAshraf01' target='_blank')
+  //-               img(src='/images/collaborators/waleed-ashraf.jpg', style='width:80%;border-radius:100%;object-fit:cover;margin-bottom:20px;')
+  //-               h4 Waleed Ashraf
+  //-               h6 Relayr
 
-  // Section Media
-  section#media-partners.section.section-lg.bg-default.text-center
-    .container
-      h6 Great communities helping us
-      h3 Media Partners
+  //- // Section Media
+  //- section#media-partners.section.section-lg.bg-default.text-center
+  //-   .container
+  //-     h6 Great communities helping us
+  //-     h3 Media Partners
 
-      .row
-        .col-md-10.offset-md-1
-          .row
-            .col-md-2
-              a(href='https://www.axway.com/en/company/events' target='_blank')
-                img(src='/images/media/axway-logo-vector-xs.png')    
-            .col-md-2
-              a(href='https://www.facebook.com/GophersSilesia/photos/a.560245014341319/1100087733690375/?type=3&theater' target='_blank')
-                img(src='/images/media/gophers-silesia.png', style='margin-top:10%')
-            .col-md-2
-              a(href='https://launchany.com/subscribe/' target='_blank')
-                img(src='/images/media/LaunchAny.png', style='margin-top:10%')    
-            .col-md-2
-              a(href='https://solace.com/event/asyncapi-online-conference/' target='_blank')
-                img(src='/images/media/Solace-logo-green.png', style='margin-top:10%')   
-            .col-md-2
-              a(href='https://www.apidays.co/' target='_blank')
-                img(src='/images/media/apidays.png', style='margin-top:10%')   
-            .col-md-2
-              a(href='https://www.apiscene.io/' target='_blank')
-                img(src='/images/media/apiscene.png', style='margin-top:10%')   
+  //-     .row
+  //-       .col-md-10.offset-md-1
+  //-         .row
+  //-           .col-md-2
+  //-             a(href='https://www.axway.com/en/company/events' target='_blank')
+  //-               img(src='/images/media/axway-logo-vector-xs.png')    
+  //-           .col-md-2
+  //-             a(href='https://www.facebook.com/GophersSilesia/photos/a.560245014341319/1100087733690375/?type=3&theater' target='_blank')
+  //-               img(src='/images/media/gophers-silesia.png', style='margin-top:10%')
+  //-           .col-md-2
+  //-             a(href='https://launchany.com/subscribe/' target='_blank')
+  //-               img(src='/images/media/LaunchAny.png', style='margin-top:10%')    
+  //-           .col-md-2
+  //-             a(href='https://solace.com/event/asyncapi-online-conference/' target='_blank')
+  //-               img(src='/images/media/Solace-logo-green.png', style='margin-top:10%')   
+  //-           .col-md-2
+  //-             a(href='https://www.apidays.co/' target='_blank')
+  //-               img(src='/images/media/apidays.png', style='margin-top:10%')   
+  //-           .col-md-2
+  //-             a(href='https://www.apiscene.io/' target='_blank')
+  //-               img(src='/images/media/apiscene.png', style='margin-top:10%')   
 
   include ../sections/_footer-classic
