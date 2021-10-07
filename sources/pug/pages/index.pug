@@ -261,30 +261,25 @@ block page
       h3 Our sponsors
       .row
         .col-md-6.offset-md-3
-          a.button.button-primary.box-with-triangle-right.wow.fadeScale( href='https://conference.asyncapi.com/attachments/AsyncAPI-Hackathon-and-Conference-Prospectus.pdf' target="_blank" data-triangle=".button-overlay" )
+          a.button.button-primary.box-with-triangle-right.wow.fadeScale( href='http://localhost:8000/attachments/AsyncAPI-Hackathon-and-Conference-Prospectus.pdf' target="_blank" data-triangle=".button-overlay" )
             span View Sponsorship Details
             span.button-overlay
       .row
         .col-md-6.offset-md-3
           h4(style='font-weight:normal;') Want to become a sponsor?
-          h4(style='font-weight:normal;') <a target="_blank" href="https://opencollective.com/asyncapi/events/asyncapi-hackathon-and-conference-2021-3156d7af">Join others!</a>
+          h4(style='font-weight:normal;' class='text-underline') <a target="_blank" href="https://opencollective.com/asyncapi/events/asyncapi-hackathon-and-conference-2021-3156d7af">Join others!</a>
 
-  //-     h3 Platinum Sponsors
-  //-     .row.row-30.row-lg-50.justify-content-center
-  //-       .col-12.col-md-6
-  //-         .row
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/ably.png', 'Ably.io', 'https://ably.io', true )
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/smartbear.jpg', 'Smartbear', 'https://smartbear.com', true )
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/mulesoft.png', 'Mulesoft', 'https://mulesoft.com', true )
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/redhat.jpg', 'Red Hat', 'https://redhat.com', true )
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/openapi.png', 'OpenAPI Initiative', 'https://openapis.org', true )
-  //-           .col-12.col-sm-6.col-lg-6
-  //-             .wow: div: +sponsor( 'images/sponsors/solace.png', 'Solace', 'https://solace.com/', true )
+      h3 Platinum Sponsors
+      .row.row-30.row-lg-50.justify-content-center
+        .col-12.col-md-6
+          .row
+            .col-12.col-sm-6.col-lg-6
+              .wow: div: +sponsor( 'images/sponsors/ibm.png', 'IBM', 'https://ibm.com', true )
+            .col-12.col-sm-6.col-lg-6
+              .wow: div: +sponsor( 'images/sponsors/ably.png', 'Ably', 'https://ably.io/', true )
+            .col-12.col-sm-6.col-lg-6
+              .wow: div: +sponsor( 'images/sponsors/wso2.png', 'WSO2', 'https://wso2.com', true )
+
   //-     h3 Golden Sponsors
   //-     .row.row-30.row-lg-50.justify-content-center
   //-       .col-12.col-md-6
@@ -329,32 +324,23 @@ block page
   //-               h4 Waleed Ashraf
   //-               h6 Relayr
 
-  //- // Section Media
-  //- section#media-partners.section.section-lg.bg-default.text-center
-  //-   .container
-  //-     h6 Great communities helping us
-  //-     h3 Media Partners
+  // Section Partners
+  section#event-partners.section.section-lg.bg-default.text-center
+    .container
+      h6 Great communities helping us
+      h3 Event Partners
 
-  //-     .row
-  //-       .col-md-10.offset-md-1
-  //-         .row
-  //-           .col-md-2
-  //-             a(href='https://www.axway.com/en/company/events' target='_blank')
-  //-               img(src='/images/media/axway-logo-vector-xs.png')    
-  //-           .col-md-2
-  //-             a(href='https://www.facebook.com/GophersSilesia/photos/a.560245014341319/1100087733690375/?type=3&theater' target='_blank')
-  //-               img(src='/images/media/gophers-silesia.png', style='margin-top:10%')
-  //-           .col-md-2
-  //-             a(href='https://launchany.com/subscribe/' target='_blank')
-  //-               img(src='/images/media/LaunchAny.png', style='margin-top:10%')    
-  //-           .col-md-2
-  //-             a(href='https://solace.com/event/asyncapi-online-conference/' target='_blank')
-  //-               img(src='/images/media/Solace-logo-green.png', style='margin-top:10%')   
-  //-           .col-md-2
-  //-             a(href='https://www.apidays.co/' target='_blank')
-  //-               img(src='/images/media/apidays.png', style='margin-top:10%')   
-  //-           .col-md-2
-  //-             a(href='https://www.apiscene.io/' target='_blank')
-  //-               img(src='/images/media/apiscene.png', style='margin-top:10%')   
+      .row
+        .col-md-6.offset-md-3
+          h4(style='font-weight:normal;') We accept any kind of help
+          h4(style='font-weight:normal;' class='text-underline') <a target="_blank" href="mailto:info@asyncapi.io">Become a partner!</a>
+
+      .row
+        .col-md-10.offset-md-1
+          .row
+            center
+              .col-md-2  
+                a(href='https://restream.io' target='_blank')
+                  img(src='/images/partners/restream.png') 
 
   include ../sections/_footer-classic
