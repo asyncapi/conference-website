@@ -4,9 +4,12 @@
   "description": "Common project builder",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "echo \"No test specified\"",
     "build": "gulp build",
-    "dev": "gulp build && gulp server"
+    "lint": "echo \"No linter specified\"",
+    "dev": "gulp build && gulp server",
+    "release": "echo \"Error: no release for this\"",
+    "generate:assets": "echo \"No assets to generate\""
   },
   "author": "gelbman20",
   "license": "ISC",
