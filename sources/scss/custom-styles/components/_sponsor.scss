@@ -24,6 +24,72 @@
   }
 }
 
+.sponsor-lg {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
+  max-height: 260px;
+  height: 260px;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: $white;
+  border-radius: 10px;
+
+  .sponsor-img {
+    width: 100%;
+  }
+}
+
+.sponsor-md {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  max-height: 200px;
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: $white;
+  border-radius: 10px;
+
+  .sponsor-img {
+    width: 100%;
+  }
+}
+
+.sponsor-sm {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 140px;
+  max-height: 140px;
+  height: 140px;
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: $white;
+  border-radius: 10px;
+
+  .sponsor-img {
+    width: 100%;
+  }
+}
+
 .sponsor-overlay {
   z-index: -1;
   @extend .triangle-overlay;

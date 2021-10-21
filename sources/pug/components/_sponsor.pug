@@ -5,6 +5,27 @@ mixin sponsor( img, name, url, platinum=false )
       img(src=img)
   a(href=url, target='_blank'): h4(style='margin-top:20px;margin-bottom:20px;')=name
 
+mixin sponsor-lg( img, name, url, platinum=false )
+  // Sponsor
+  a.sponsor-lg( href=url, target='_blank', class={platinum: platinum} )
+    .sponsor-img
+      img(src=img)
+  a(href=url, target='_blank'): h4(style='margin-top:20px;margin-bottom:20px;')=name
+
+mixin sponsor-md( img, name, url, platinum=false )
+  // Sponsor
+  a.sponsor-md( href=url, target='_blank', class={platinum: platinum} )
+    .sponsor-img
+      img(src=img)
+  a(href=url, target='_blank'): h4(style='margin-top:20px;margin-bottom:20px;')=name
+
+mixin sponsor-sm( img, name, url, platinum=false )
+  // Sponsor
+  a.sponsor-sm( href=url, target='_blank', class={platinum: platinum} )
+    .sponsor-img
+      img(src=img)
+  a(href=url, target='_blank'): h4(style='margin-top:20px;margin-bottom:20px;')=name
+
 mixin sponsor-modern( obj )
   // Sponsor Modern
   a.sponsor-modern( href='#' data-triangle=".sponsor-modern-overlay" )&attributes( attributes )
