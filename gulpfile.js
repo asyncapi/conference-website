@@ -1,7 +1,7 @@
 const
   gulp =          require('gulp'),
   pug =           require('gulp-pug'),
-  sass =          require('gulp-sass'),
+  sass =          require('gulp-sass')(require('node-sass')),
   autoprefixer  = require('gulp-autoprefixer'),
   browsersync =   require('browser-sync').create(),
   svgSprites =    require("gulp-svg-sprites"),
@@ -108,7 +108,7 @@ let copy = () => {
     .pipe(gulp.dest('dist/'))
 };
 
-const build = gulp.series(cleanFolder, compilePug, copy);
+const build = gulp.series(cleanFolder, compilePug, compileSass, copy);
 const watch = gulp.series(compilePug, watchFiles, browserSync);
 const server = gulp.series(watchFiles, browserSync);
 
