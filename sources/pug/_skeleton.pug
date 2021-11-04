@@ -20,7 +20,7 @@ html( lang='en', class= htmlClass )
 
     // Open Graph / Facebook
     meta( property='og:type', content='website' )
-    meta( property='og:url', content='https://conference.asyncapi.com/' )
+    meta( property='og:url', content=process.env.URL )
     meta( property='og:title', content=ogData.title )
     meta( property='og:description', content=ogData.description )
     meta( property='og:image', content=ogData.image )
