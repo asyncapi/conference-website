@@ -22,7 +22,7 @@
     "gulp-ruby-sass": "^4.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-svg-sprites": "^4.1.2",
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "gulp-pug": "^4.0.1"
