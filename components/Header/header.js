@@ -2,11 +2,18 @@
 import Image from "next/image";
 import React from "react";
 import pattern1 from "../illustrations/pattern1.svg";
+import dots from "../illustrations/dots.svg";
 import pattern2 from "../illustrations/pattern2.svg";
 
 function Header() {
   return (
     <div>
+      <div className="absolute">
+        <Image src={dots} alt="dots" />
+      </div>
+      <div className="absolute bottom-0 right-0 rotate-180">
+        <Image src={dots} alt="dots" />
+      </div>
       <div className="absolute right-0 opacity-50">
         <Image src={pattern1} alt="pattern" />
       </div>
