@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from '../components/Header/header';
 import Navbar from "../components/Navbar/navbar";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <h1 className="text-3xl font-bold underline">Hello world</h1>
+        <Header />
       </main>
     </div>
   );

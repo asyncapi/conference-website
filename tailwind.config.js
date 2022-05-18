@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         "fainted-white": "#797393",
+        "fainted-paint": "#ad7dfa",
+        "dark-paint": "#2e2344",
       },
     },
   },
