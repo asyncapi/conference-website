@@ -29,7 +29,7 @@ const fields = [
 ];
 
 function Form() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const [step, setStep] = useState(1);
 
   let view = <StepOne steStep={setStep} />;
@@ -83,6 +83,7 @@ function Form() {
                         {field.icon}
                       </div>
                       <div
+                        className={`${i === 3 && "hidden"}`}
                         style={{
                           height: "100%",
                           borderRight: `1px solid ${
