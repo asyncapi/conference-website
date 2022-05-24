@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header/header';
 import Navbar from "../components/Navbar/navbar";
+import Form from "../components/Form/form";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Navbar />
         <Header />
+        <Form />
       </main>
     </div>
   );

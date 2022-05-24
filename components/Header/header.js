@@ -7,13 +7,15 @@ import pattern2 from "../illustrations/pattern2.svg";
 
 function Header() {
   return (
-    <div>
+    <div style={{
+      height: "100vh"
+    }}>
       <div className="absolute">
         <Image src={dots} alt="dots" />
       </div>
-      <div className="absolute bottom-0 right-0 rotate-180">
+      {/* <div className="absolute bottom-0 right-0 rotate-180">
         <Image src={dots} alt="dots" />
-      </div>
+      </div> */}
       <div className="absolute right-0 opacity-50">
         <Image src={pattern1} alt="pattern" />
       </div>
@@ -51,9 +53,9 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 opacity-50">
+      {/* <div className="absolute bottom-0 opacity-50">
         <Image src={pattern2} alt="pattern" />
-      </div>
+      </div> */}
     </div>
   );
 }
