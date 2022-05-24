@@ -29,17 +29,16 @@ const fields = [
 ];
 
 function Form() {
-  const [active, setActive] = useState(0);
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({});
-
-  let view = <StepOne steStep={setStep} setForm={setFormData} data={formData} />;
+    const onStepUpdate = (e, step) => {
+      e.preventDefault();
+      setStep(step);
+    };
+  let view = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 2) {
     view = <h1>H</h1>;
   }
-    useEffect(() => {
-        console.log(formData);
-    },[formData])
   return (
     <div className="p-5">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
@@ -61,7 +60,8 @@ function Form() {
           }}
         >
           <div className="p-16">
-            {fields.map((field, i) => {
+                      {fields.map((field, i) => {
+                const index = i + 1
               return (
                 <div
                   key={field.title}
@@ -79,7 +79,7 @@ function Form() {
                     <div className="">
                       <div
                         className={`ml-3 w-12 h-12 rounded-full ${
-                          active === i || active > i
+                          step === index || step > index
                             ? "bg-tetiary-pink"
                             : "bg-fainted-gray"
                         } flex items-center justify-center`}
@@ -87,11 +87,11 @@ function Form() {
                         {field.icon}
                       </div>
                       <div
-                        className={`${i === 3 && "hidden"}`}
+                        className={`${index === 4 && "hidden"}`}
                         style={{
                           height: "100%",
                           borderRight: `1px solid ${
-                            active === i || active > i ? "#E50E99" : "white"
+                            step === index || step > index ? "#E50E99" : "white"
                           }`,
                           marginRight: "24px",
                         }}

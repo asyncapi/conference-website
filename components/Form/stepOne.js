@@ -3,7 +3,7 @@ import React from "react";
 
 function StepOne({ setStep, setForm, data }) {
   return (
-    <form className="mt-3">
+    <form className="mt-3" onSubmit={(e) => setStep(e, 2)}>
       <h1 className="text-white font-bold text-4xl">
         Let's start with your name
       </h1>
@@ -19,7 +19,7 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-                  onChange={(e) => setForm({...data, fullName:e.target.value})}
+          onChange={(e) => setForm({ ...data, fullName: e.target.value })}
         />
         <button
           type="submit"
