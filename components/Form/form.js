@@ -3,6 +3,7 @@ import Avatar from "../illustrations/avatar";
 import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
 import Location from "../illustrations/location";
+import StepOne from "./stepOne";
 
 const fields = [
   {
@@ -28,7 +29,13 @@ const fields = [
 ];
 
 function Form() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
+  const [step, setStep] = useState(1);
+
+  let view = <StepOne steStep={setStep} />;
+  if (step === 2) {
+    view = <h1>H</h1>;
+  }
   return (
     <div className="p-5">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
@@ -68,7 +75,9 @@ function Form() {
                     <div className="">
                       <div
                         className={`ml-3 w-12 h-12 rounded-full ${
-                          active === i ? "bg-tetiary-pink" : "bg-fainted-gray"
+                          active === i || active > i
+                            ? "bg-tetiary-pink"
+                            : "bg-fainted-gray"
                         } flex items-center justify-center`}
                       >
                         {field.icon}
@@ -76,7 +85,9 @@ function Form() {
                       <div
                         style={{
                           height: "100%",
-                          borderRight: "1px solid white",
+                          borderRight: `1px solid ${
+                            active === i || active > i ? "#E50E99" : "white"
+                          }`,
                           marginRight: "24px",
                         }}
                       />
@@ -87,7 +98,10 @@ function Form() {
             })}
           </div>
         </div>
-        <div></div>
+        <div className="p-16">
+          <p className="text-fainted-white">Step {step}/5</p>
+          {view}
+        </div>
       </div>
     </div>
   );
