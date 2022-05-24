@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Avatar from "../illustrations/avatar";
 import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
@@ -30,12 +30,16 @@ const fields = [
 
 function Form() {
   const [active, setActive] = useState(0);
-  const [step, setStep] = useState(1);
+    const [step, setStep] = useState(1);
+    const [formData, setFormData] = useState({});
 
-  let view = <StepOne steStep={setStep} />;
+  let view = <StepOne steStep={setStep} setForm={setFormData} data={formData} />;
   if (step === 2) {
     view = <h1>H</h1>;
   }
+    useEffect(() => {
+        console.log(formData);
+    },[formData])
   return (
     <div className="p-5">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
