@@ -6,8 +6,10 @@ export default function Invitation() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
+      width="22px"
+      height="22px"
+      fill="white"
       viewBox="0 0 407.524 407.524"
-      style="enable-background:new 0 0 407.524 407.524;"
       xmlSpace="preserve"
     >
       <path

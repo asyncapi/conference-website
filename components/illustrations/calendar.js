@@ -6,10 +6,10 @@ export default function Calendar() {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="484.663px"
-      height="484.663px"
+      width="22px"
+      height="22px"
+      fill="white"
       viewBox="0 0 484.663 484.663"
-      style="enable-background:new 0 0 484.663 484.663;"
       xmlSpace="preserve"
     >
       <g>

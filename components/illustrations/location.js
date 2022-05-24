@@ -7,7 +7,9 @@ export default function Location() {
       x="0px"
       y="0px"
       viewBox="0 0 315 315"
-      style="enable-background:new 0 0 315 315;"
+      width="22px"
+      height="22px"
+      fill="white"
       xmlSpace="preserve"
     >
       <path

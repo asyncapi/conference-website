@@ -46,7 +46,7 @@ function Header() {
                 placeholder="Click the button to start survey"
                 className="h-full bg-transparent outline-none text-white w-5/6"
               />
-              <button className="bg-fainted-paint p-2 rounded-md text-white">
+              <button className="bg-tetiary-pink p-2 rounded-md text-white">
                 Register
               </button>
             </div>
