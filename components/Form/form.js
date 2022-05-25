@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import Avatar from "../illustrations/avatar";
 import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
@@ -7,6 +8,7 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
+import pattern3 from "../illustrations/Group 3.svg";
 
 const fields = [
   {
@@ -61,7 +63,7 @@ function Form() {
         );
       }
   return (
-    <div className="p-5">
+    <div className="p-5 relative">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
       <p className="mt-2 text-fainted-white text-lg">
         Fill up the form in other to help us make <br /> this event outstanding
@@ -81,8 +83,8 @@ function Form() {
           }}
         >
           <div className="p-16">
-                      {fields.map((field, i) => {
-                const index = i + 1
+            {fields.map((field, i) => {
+              const index = i + 1;
               return (
                 <div
                   key={field.title}
@@ -127,6 +129,9 @@ function Form() {
         <div className="p-16">
           <p className="text-fainted-white">Step {step}/5</p>
           {view}
+          <div className="absolute bottom-0 right-0 opacity-50">
+            <Image src={pattern3} alt="dots" />
+          </div>
         </div>
       </div>
     </div>
