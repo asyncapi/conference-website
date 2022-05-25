@@ -2,24 +2,24 @@
 import React, { useState, useEffect } from "react";
 import Select from "../Select/select";
 
-const options = ["Virtual", "In-person"];
+const options = ["Barcelona", "Sevilla", "Valencia"];
 
-function StepTwo({ setStep, setForm, data }) {
+function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
-    setForm({ ...data, location: value });
+    setForm({ ...data, type: value });
   }, [value]);
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 4)}>
-      <h1 className="text-white font-bold text-4xl">Preferable Conf type</h1>
+      <h1 className="text-white font-bold text-4xl">Conference Location</h1>
       <p className="mt-3 text-fainted-white">
-        Please select how you'd love to attend the conference
+        If you're to attend in-person, where would you like to be?
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
         <Select
           options={options}
-          title="Select conference type"
+          title="Select conference location"
           setValue={setValue}
         />
         <button
@@ -33,4 +33,4 @@ function StepTwo({ setStep, setForm, data }) {
   );
 }
 
-export default StepTwo;
+export default StepThree;

@@ -5,6 +5,7 @@ import Calendar from "../illustrations/calendar";
 import Location from "../illustrations/location";
 import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
+import StepThree from "./stepThree";
 
 const fields = [
   {
@@ -30,7 +31,7 @@ const fields = [
 ];
 
 function Form() {
-    const [step, setStep] = useState(2);
+    const [step, setStep] = useState(3);
     const [formData, setFormData] = useState({});
     const onStepUpdate = (e, step) => {
       e.preventDefault();
@@ -42,6 +43,11 @@ function Form() {
       <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />
     );
   }
+    if (step === 3) {
+      view = (
+        <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />
+      );
+    }
   return (
     <div className="p-5">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
