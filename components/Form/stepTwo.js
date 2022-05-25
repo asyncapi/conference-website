@@ -10,7 +10,7 @@ function StepTwo({ setStep, setForm, data }) {
     setForm({ ...data, location: value });
   }, [value]);
   return (
-    <form className="mt-3" onSubmit={(e) => setStep(e, 4)}>
+    <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl">Preferable Conf type</h1>
       <p className="mt-3 text-fainted-white">
         Please select how you'd love to attend the conference
@@ -22,12 +22,20 @@ function StepTwo({ setStep, setForm, data }) {
           title="Select conference type"
           setValue={setValue}
         />
-        <button
-          type="submit"
-          className="bg-tetiary-pink p-3 rounded-md text-white mt-3 float-right w-36"
-        >
-          Next
-        </button>
+        <div className="float-right">
+          <a
+            className="mr-10 text-fainted-white cursor-pointer"
+            onClick={() => setStep(null, 1)}
+          >
+            Back
+          </a>
+          <button
+            type="submit"
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </form>
   );

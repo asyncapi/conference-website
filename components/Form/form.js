@@ -6,6 +6,7 @@ import Location from "../illustrations/location";
 import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
+import StepFour from "./stepFour";
 
 const fields = [
   {
@@ -33,8 +34,10 @@ const fields = [
 function Form() {
     const [step, setStep] = useState(3);
     const [formData, setFormData] = useState({});
-    const onStepUpdate = (e, step) => {
-      e.preventDefault();
+  const onStepUpdate = (e, step) => {
+    if (e) {
+              e.preventDefault();
+      }
       setStep(step);
     };
   let view = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
@@ -48,6 +51,15 @@ function Form() {
         <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />
       );
     }
+      if (step === 4) {
+        view = (
+          <StepFour
+            setStep={onStepUpdate}
+            setForm={setFormData}
+            data={formData}
+          />
+        );
+      }
   return (
     <div className="p-5">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
