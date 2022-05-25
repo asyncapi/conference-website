@@ -4,6 +4,7 @@ import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
 import Location from "../illustrations/location";
 import StepOne from "./stepOne";
+import StepTwo from "./stepTwo";
 
 const fields = [
   {
@@ -29,7 +30,7 @@ const fields = [
 ];
 
 function Form() {
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(2);
     const [formData, setFormData] = useState({});
     const onStepUpdate = (e, step) => {
       e.preventDefault();
@@ -37,7 +38,9 @@ function Form() {
     };
   let view = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 2) {
-    view = <h1>H</h1>;
+    view = (
+      <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />
+    );
   }
   return (
     <div className="p-5">
