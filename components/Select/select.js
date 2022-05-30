@@ -51,6 +51,7 @@ function Select({ options, title, setValue }) {
                   key={option}
                   onClick={() => {
                     setActive(option);
+                    setShow(false);
                     setValue(option);
                   }}
                   className={`text-gray-700 cursor-pointer hover:bg-tetiary-pink hover:text-white block px-4 py-2 text-sm ${

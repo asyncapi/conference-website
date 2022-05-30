@@ -43,7 +43,7 @@ function StepThree({ setStep, setForm, data }) {
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
           >
-            Next
+            Submit
           </button>
         </div>
       </div>
