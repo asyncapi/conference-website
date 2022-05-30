@@ -16,10 +16,10 @@ function Navbar() {
         <span className="glow ml-3">Conf</span>
       </div>
       <div className="flex items-center justify-between w-1/5 text-fainted-white font-bold text-sm">
-        <Link href="#">Schedule</Link>
+        {/* <Link href="#">Schedule</Link>
         <Link href="#">Speakers</Link>
         <Link href="#">Expo</Link>
-        <Link href="#">Jobs</Link>
+        <Link href="#">Jobs</Link> */}
       </div>
     </div>
   );

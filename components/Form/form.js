@@ -80,7 +80,7 @@ function Form() {
             minHeight: "50vh",
           }}
         >
-          <div className="p-16">
+          <div className="p-16 sm:p-0 sm:py-2 sm:pr-4">
             {fields.map((field, i) => {
               const index = i + 1;
               return (
@@ -91,7 +91,7 @@ function Form() {
                   }}
                 >
                   <div className="flex justify-between">
-                    <div>
+                    <div className="md:hidden">
                       <h3 className="text-white font-bold text-lg">
                         {field.title}
                       </h3>
@@ -124,7 +124,7 @@ function Form() {
             })}
           </div>
         </div>
-        <div className="p-16">
+        <div className="p-16 sm:p-4">
           <p className="text-fainted-white">Step {step}/5</p>
           {view}
           <div

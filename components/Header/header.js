@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Scrollspy from "react-scrollspy";
 import pattern1 from "../illustrations/pattern1.svg";
+import Pattern1 from "../illustrations/pattern1";
 import dots from "../illustrations/dots.svg";
 import pattern2 from "../illustrations/Group 1.svg";
 
@@ -17,24 +18,25 @@ function Header() {
         <Image src={dots} alt="dots" />
       </div>
       <div className="absolute right-0">
-        <Image src={pattern1} alt="pattern" />
+        <Pattern1 className="w-full sm:w-32" />
+        {/* <Image src={pattern1} alt="pattern" className="w-1/3" /> */}
       </div>
-      <div className="absolute flex justify-center flex-col items-center mt-20 w-full">
+      <div className="absolute flex justify-center flex-col items-center mt-20 w-full sm:px-32">
         <div>
-          <h1 className="text-white text-7xl text-center font-bold leading-tight">
+          <h1 className="text-white text-7xl sm:text-4xl text-center font-bold leading-tight">
             Building the future of <br /> APIs Together.
           </h1>
-          <p className="text-center mt-6 text-fainted-white text-lg">
+          <p className="text-center mt-6 text-fainted-white text-lg sm:text-base">
             Celebrate 3 years of AsyncAPI at our 2nd Global Community <br />
             Conference. October 26, 2021 9am-1pm PT / Online.
           </p>
           <div className="text-center mt-16">
             <div className="flex items-center justify-center">
-              <h3 className="text-fainted-paint text-xl">
+              <h3 className="text-fainted-paint text-xl sm:text-lg">
                 Semptember 22, 2022
               </h3>
               <span className="ml-2 text-fainted-white">|</span>
-              <h3 className="ml-2 text-fainted-paint font-bold text-xl">
+              <h3 className="ml-2 text-fainted-paint font-bold text-xl  sm:text-lg">
                 ONLINE & OFFLINE
               </h3>
             </div>

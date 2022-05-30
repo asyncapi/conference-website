@@ -3,8 +3,8 @@ import React from "react";
 
 function StepOne({ setStep, setForm, data }) {
   return (
-    <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 2)}>
-      <h1 className="text-white font-bold text-4xl">
+    <form className="mt-3 w-[30rem] md:w-fit" onSubmit={(e) => setStep(e, 2)}>
+      <h1 className="text-white font-bold text-4xl sm:text-3xl">
         Let's start with your name
       </h1>
       <p className="mt-3 text-fainted-white">
