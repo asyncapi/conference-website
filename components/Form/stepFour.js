@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Select from "../Select/select";
 
 const options = [
@@ -17,10 +18,21 @@ const options = [
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
-    setForm({ ...data, type: value });
+    setForm({ ...data, Date: value });
   }, [value]);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setStep(e, 4);
+    axios.post(
+      "https://sheet.best/api/sheets/cca4be2c-87b7-4151-88f8-cde4ce78ed06", data
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
   return (
-    <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 4)}>
+    <form className="mt-3 w-[30rem]" onSubmit={(e) => onSubmit(e)}>
       <h1 className="text-white font-bold text-4xl">Conference Date</h1>
       <p className="mt-3 text-fainted-white">
         Which month do you think is preferable?

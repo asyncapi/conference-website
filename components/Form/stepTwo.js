@@ -7,7 +7,7 @@ const options = ["Virtual", "In-person"];
 function StepTwo({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
-    setForm({ ...data, location: value });
+    setForm({ ...data, Type: value });
   }, [value]);
   return (
     <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 3)}>

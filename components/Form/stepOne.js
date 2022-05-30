@@ -19,7 +19,7 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, fullName: e.target.value })}
+          onChange={(e) => setForm({ ...data, Name: e.target.value })}
         />
         <button
           type="submit"

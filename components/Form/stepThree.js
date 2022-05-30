@@ -17,7 +17,7 @@ const options = [
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
-    setForm({ ...data, type: value });
+    setForm({ ...data, Location: value });
   }, [value]);
   return (
     <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 4)}>
