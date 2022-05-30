@@ -8,7 +8,7 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
-import pattern3 from "../illustrations/Group 3.svg";
+import pattern3 from "../illustrations/pattern2.svg";
 
 const fields = [
   {
@@ -34,34 +34,32 @@ const fields = [
 ];
 
 function Form() {
-    const [step, setStep] = useState(3);
-    const [formData, setFormData] = useState({});
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({});
   const onStepUpdate = (e, step) => {
     if (e) {
-              e.preventDefault();
-      }
-      setStep(step);
-    };
-  let view = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
+      e.preventDefault();
+    }
+    setStep(step);
+  };
+  let view = (
+    <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
+  );
   if (step === 2) {
     view = (
       <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />
     );
   }
-    if (step === 3) {
-      view = (
-        <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />
-      );
-    }
-      if (step === 4) {
-        view = (
-          <StepFour
-            setStep={onStepUpdate}
-            setForm={setFormData}
-            data={formData}
-          />
-        );
-      }
+  if (step === 3) {
+    view = (
+      <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />
+    );
+  }
+  if (step === 4) {
+    view = (
+      <StepFour setStep={onStepUpdate} setForm={setFormData} data={formData} />
+    );
+  }
   return (
     <div className="p-5 relative">
       <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
@@ -129,7 +127,12 @@ function Form() {
         <div className="p-16">
           <p className="text-fainted-white">Step {step}/5</p>
           {view}
-          <div className="absolute bottom-0 right-0 opacity-50">
+          <div
+            className="absolute bottom-0 right-0 rotate-0 opacity-50"
+            style={{
+              transform: "scaleX(-1)",
+            }}
+          >
             <Image src={pattern3} alt="dots" />
           </div>
         </div>

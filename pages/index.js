@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header/header';
 import Navbar from "../components/Navbar/navbar";
 import Form from "../components/Form/form";
+import NewsLetter from '../components/Form/newsLetter';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <Form />
+        <NewsLetter />
       </main>
     </div>
   );
