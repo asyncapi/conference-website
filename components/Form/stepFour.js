@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Select from "../Select/select";
+import ActivityLoader from "../illustrations/activityLoader";
+import { toast } from "react-hot-toast";
 
 const options = [
   "3-5 (Thursday-Saturday) November",
@@ -17,20 +19,31 @@ const options = [
 
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
   useEffect(() => {
     setForm({ ...data, Date: value });
   }, [value]);
   const onSubmit = (e) => {
     e.preventDefault();
     setStep(e, 4);
-    axios.post(
-      "https://sheet.best/api/sheets/cca4be2c-87b7-4151-88f8-cde4ce78ed06", data
-    ).then((res) => {
-      console.log(res);
-    }).catch((err) => {
-      console.log(err);
-    });
-  }
+    setSubmitting(true);
+    axios
+      .post(
+        "https://sheet.best/api/sheets/cca4be2c-87b7-4151-88f8-cde4ce78ed06",
+        data
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success("Feedback submitted successfully!");
+          setStep(null, 1);
+        } else {
+          toast.error("Ooops! Something went wrong");
+        }
+      })
+      .catch((err) => {
+        toast.error("Failed to submit feedback. Try again");
+      });
+  };
   return (
     <form className="mt-3 w-[30rem]" onSubmit={(e) => onSubmit(e)}>
       <h1 className="text-white font-bold text-4xl">Conference Date</h1>
@@ -54,8 +67,9 @@ function StepThree({ setStep, setForm, data }) {
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
+            disabled={submitting}
           >
-            Submit
+            {submitting ? <ActivityLoader /> : "Submit"}
           </button>
         </div>
       </div>
