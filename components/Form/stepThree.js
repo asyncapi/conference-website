@@ -2,7 +2,17 @@
 import React, { useState, useEffect } from "react";
 import Select from "../Select/select";
 
-const options = ["Barcelona", "Sevilla", "Valencia"];
+const options = [
+  "Greece, Athens",
+  "Spain, Barcelona",
+  "Spain, Valencia",
+  "Spain, Seville",
+  "Spain, Canary Islands",
+  "Italy, Naples",
+  "Italy, Bari",
+  "Portugal, Lisbon",
+  "Marocco, Casablanca",
+];
 
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);

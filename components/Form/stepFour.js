@@ -2,7 +2,17 @@
 import React, { useState, useEffect } from "react";
 import Select from "../Select/select";
 
-const options = ["September", "October", "November"];
+const options = [
+  "3-5 (Thursday-Saturday) November",
+  "6-8 (Sunday-Tuesday) November",
+  "7-9 (Monday-Wednesday) November",
+  "9-11 (Wednesday-Friday) November",
+  "10-12 (Thursday-Saturday) November",
+  "13-15 (Sunday-Tuesday) November",
+  "14-16 (Monday-Wednesday) November",
+  "16-18 (Wednesday-Friday) November",
+  "17-19 (Thursday-Saturday) November",
+];
 
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
