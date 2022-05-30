@@ -1,15 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React from "react";
+import Scrollspy from "react-scrollspy";
 import pattern1 from "../illustrations/pattern1.svg";
 import dots from "../illustrations/dots.svg";
 import pattern2 from "../illustrations/Group 1.svg";
 
 function Header() {
   return (
-    <div style={{
-      height: "100vh"
-    }}>
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
       <div className="absolute">
         <Image src={dots} alt="dots" />
       </div>
@@ -43,9 +46,13 @@ function Header() {
                 placeholder="Click the button to start survey"
                 className="h-full bg-transparent outline-none text-white w-5/6"
               />
-              <button className="bg-tetiary-pink p-2 rounded-md text-white">
-                Register
-              </button>
+              <Scrollspy items={["forms"]}>
+                <a href="#forms">
+                  <button className="bg-tetiary-pink p-2 rounded-md text-white">
+                    Register
+                  </button>
+                </a>
+              </Scrollspy>
             </div>
           </div>
         </div>
