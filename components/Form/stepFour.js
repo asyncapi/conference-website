@@ -6,15 +6,42 @@ import ActivityLoader from "../illustrations/activityLoader";
 import { toast } from "react-hot-toast";
 
 const options = [
-  "3-5 (Thursday-Saturday) November",
-  "6-8 (Sunday-Tuesday) November",
-  "7-9 (Monday-Wednesday) November",
-  "9-11 (Wednesday-Friday) November",
-  "10-12 (Thursday-Saturday) November",
-  "13-15 (Sunday-Tuesday) November",
-  "14-16 (Monday-Wednesday) November",
-  "16-18 (Wednesday-Friday) November",
-  "17-19 (Thursday-Saturday) November",
+  {
+    value: "3-5 (Thursday-Saturday) November",
+    label: "3-5 (Thursday-Saturday) November",
+  },
+  {
+    value: "6-8 (Sunday-Tuesday) November",
+    label: "6-8 (Sunday-Tuesday) November",
+  },
+  {
+    value: "7-9 (Monday-Wednesday) November",
+    label: "7-9 (Monday-Wednesday) November",
+  },
+  {
+    value: "9-11 (Wednesday-Friday) November",
+    label: "9-11 (Wednesday-Friday) November",
+  },
+  {
+    value: "10-12 (Thursday-Saturday) November",
+    label: "10-12 (Thursday-Saturday) November",
+  },
+  {
+    value: "13-15 (Sunday-Tuesday) November",
+    label: "13-15 (Sunday-Tuesday) November",
+  },
+  {
+    value: "14-16 (Monday-Wednesday) November",
+    label: "14-16 (Monday-Wednesday) November",
+  },
+  {
+    value: "16-18 (Wednesday-Friday) November",
+    label: "16-18 (Wednesday-Friday) November",
+  },
+  {
+    value: "17-19 (Thursday-Saturday) November",
+    label: "17-19 (Thursday-Saturday) November",
+  },
 ];
 
 function StepThree({ setStep, setForm, data }) {
@@ -56,6 +83,7 @@ function StepThree({ setStep, setForm, data }) {
           options={options}
           title="Select conference date"
           setValue={setValue}
+          multi={true}
         />
         <div className="float-right">
           <a

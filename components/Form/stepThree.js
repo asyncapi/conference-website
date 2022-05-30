@@ -3,20 +3,48 @@ import React, { useState, useEffect } from "react";
 import Select from "../Select/select";
 
 const options = [
-  "Greece, Athens",
-  "Spain, Barcelona",
-  "Spain, Valencia",
-  "Spain, Seville",
-  "Spain, Canary Islands",
-  "Italy, Naples",
-  "Italy, Bari",
-  "Portugal, Lisbon",
-  "Marocco, Casablanca",
+  {
+    value: "Greece, Athens",
+    label: "Greece, Athens",
+  },
+  {
+    value: "Spain, Barcelona",
+    label: "Spain, Barcelona",
+  },
+  {
+    value: "Spain, Valencia",
+    label: "Spain, Valencia",
+  },
+  {
+    value: "Spain, Seville",
+    label: "Spain, Seville",
+  },
+  {
+    value: "Spain, Canary Islands",
+    label: "Spain, Canary Islands",
+  },
+  {
+    value: "Italy, Naples",
+    label: "Italy, Naples",
+  },
+  {
+    value: "Italy, Bari",
+    label: "Italy, Bari",
+  },
+  {
+    value: "Portugal, Lisbon",
+    label: "Portugal, Lisbon",
+  },
+  {
+    value: "Marocco, Casablanca",
+    label: "Marocco, Casablanca",
+  },
 ];
 
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
+    console.log(value)
     setForm({ ...data, Location: value });
   }, [value]);
   return (
@@ -31,6 +59,7 @@ function StepThree({ setStep, setForm, data }) {
           options={options}
           title="Select conference location"
           setValue={setValue}
+          multi={true}
         />
         <div className="float-right">
           <a

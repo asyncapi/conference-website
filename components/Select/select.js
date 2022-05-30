@@ -1,11 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
 
-function Select({ options, title, setValue }) {
-  const [show, setShow] = useState(false);
-  const [active, setActive] = useState(null);
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    color: state.isSelected ? "white" : "black",
+    background: state.isSelected && "#E50E99",
+    padding: 10,
+  }),
+  control: () => ({
+    // none of react-select's styles are passed to <Control />
+    display: "flex",
+    padding: "10px",
+    borderRadius: "5px",
+    background: "#2e2344",
+    color: "green",
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 0.5 : 1;
+    const transition = "opacity 300ms";
+
+    return { ...provided, opacity, transition };
+  },
+};
+
+function Dropdown({ options, title, setValue, multi }) {
+  const [selectedOption, setSelectedOption] = useState(title);
+  useEffect(() => {
+    if (multi && Array.isArray(selectedOption)) {
+      const newValue = [];
+      selectedOption.map((option) => {
+        newValue.push(option.value);
+      });
+      setValue(newValue)
+    } else {
+      setValue(selectedOption.value);
+    }
+  }, [selectedOption]);
   return (
     <div className="relative inline-block w-full">
-      <div className="w-full">
+      <Select
+        styles={customStyles}
+        defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        options={options}
+        isMulti={multi}
+      />
+      {/* <div className="w-full">
         <button
           onClick={() => {
             if (show) {
@@ -67,9 +108,9 @@ function Select({ options, title, setValue }) {
             })}
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default Select;
+export default Dropdown;

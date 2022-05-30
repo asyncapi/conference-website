@@ -2,7 +2,16 @@
 import React, { useState, useEffect } from "react";
 import Select from "../Select/select";
 
-const options = ["Virtual", "In-person"];
+const options = [
+  {
+    value: "Virtual",
+    label: "Virtual",
+  },
+  {
+    value: "In-person",
+    label: "In-person",
+  },
+];
 
 function StepTwo({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
@@ -21,6 +30,7 @@ function StepTwo({ setStep, setForm, data }) {
           options={options}
           title="Select conference type"
           setValue={setValue}
+          multi={false}
         />
         <div className="float-right">
           <a
