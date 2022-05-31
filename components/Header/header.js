@@ -1,9 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
 import React from "react";
 import Scrollspy from "react-scrollspy";
 import Pattern1 from "../illustrations/pattern1";
-import dots from "../illustrations/dots.svg";
 import Polygon from "../illustrations/polygon"
 
 function Header() {
@@ -15,7 +13,7 @@ function Header() {
       }}
     >
       <div className="absolute">
-        <Image src={dots} alt="dots" />
+        <img src="dots.svg"/>
       </div>
       <div className="absolute right-0">
         <Pattern1 className="w-full sm:w-32" />
@@ -23,20 +21,19 @@ function Header() {
       <div className="absolute flex justify-center flex-col items-center mt-20 w-full sm:px-32">
         <div>
           <h1 className="text-white text-7xl sm:text-4xl text-center font-bold leading-tight">
-            Building the future of <br /> APIs Together.
+            Building the future of <br /> Event-Driven APIs <br /> Together.
           </h1>
           <p className="text-center mt-6 text-fainted-white text-lg sm:text-base">
-            Celebrate 3 years of AsyncAPI at our 2nd Global Community <br />
-            Conference. October 26, 2021 9am-1pm PT / Online.
+            Celebrate 5 years of AsyncAPI at our Conference.
           </p>
           <div className="text-center mt-16">
             <div className="flex items-center justify-center">
               <h3 className="text-fainted-paint text-xl sm:text-lg">
-                Semptember 22, 2022
+                November, 2022
               </h3>
               <span className="ml-2 text-fainted-white">|</span>
               <h3 className="ml-2 text-fainted-paint font-bold text-xl  sm:text-lg">
-                ONLINE & OFFLINE
+                In-person & Virtual
               </h3>
             </div>
           </div>
@@ -50,7 +47,7 @@ function Header() {
               <Scrollspy items={["forms"]}>
                 <a href="#forms">
                   <button className="bg-tetiary-pink p-2 rounded-md text-white">
-                    Register
+                    Start
                   </button>
                 </a>
               </Scrollspy>

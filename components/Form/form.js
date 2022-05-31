@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Avatar from "../illustrations/avatar";
 import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
