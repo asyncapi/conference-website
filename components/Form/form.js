@@ -61,8 +61,10 @@ function Form() {
     );
   }
   return (
-    <div className="pl-5 relative mt-40 sm:mt-0" id="forms">
-      <h1 className="text-white font-bold text-5xl ">Share your opinion</h1>
+    <div className="pl-5 relative mt-40 sm:mt-0 sm:pl-0 sm:p-5" id="forms">
+      <h1 className="text-white font-bold text-5xl sm:text-4xl">
+        Share your opinion
+      </h1>
       <p className="mt-2 text-fainted-white text-lg">
         Fill up the form in other to help us make <br /> this event outstanding
       </p>
@@ -128,7 +130,7 @@ function Form() {
           <p className="text-fainted-white">Step {step}/5</p>
           {view}
           <div
-            className="absolute bottom-0 right-0 rotate-0 opacity-50"
+            className="absolute bottom-0 right-0 rotate-0 opacity-50 sm:hidden"
             style={{
               transform: "scaleX(-1)",
             }}
