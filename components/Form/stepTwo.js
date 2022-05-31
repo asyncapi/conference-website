@@ -19,8 +19,10 @@ function StepTwo({ setStep, setForm, data }) {
     setForm({ ...data, Type: value });
   }, [value]);
   return (
-    <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 3)}>
-      <h1 className="text-white font-bold text-4xl">Preferable Conf type</h1>
+    <form className="mt-3 w-[30rem] md:w-fit" onSubmit={(e) => setStep(e, 3)}>
+      <h1 className="text-white font-bold text-4xl sm:text-3xl">
+        Preferable Conf type
+      </h1>
       <p className="mt-3 text-fainted-white">
         Please select how you'd love to attend the conference
       </p>

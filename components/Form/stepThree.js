@@ -48,8 +48,10 @@ function StepThree({ setStep, setForm, data }) {
     setForm({ ...data, Location: value });
   }, [value]);
   return (
-    <form className="mt-3 w-[30rem]" onSubmit={(e) => setStep(e, 4)}>
-      <h1 className="text-white font-bold text-4xl">Conference Location</h1>
+    <form className="mt-3 w-[30rem] md:w-fit" onSubmit={(e) => setStep(e, 4)}>
+      <h1 className="text-white font-bold text-4xl sm:text-3xl">
+        Conference Location
+      </h1>
       <p className="mt-3 text-fainted-white">
         If you're to attend in-person, where would you like to be?
       </p>

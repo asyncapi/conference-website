@@ -73,7 +73,9 @@ function StepThree({ setStep, setForm, data }) {
   };
   return (
     <form className="mt-3 w-[30rem] sm:w-fit" onSubmit={(e) => onSubmit(e)}>
-      <h1 className="text-white font-bold text-4xl">Conference Date</h1>
+      <h1 className="text-white font-bold text-4xl sm:text-3xl">
+        Conference Date
+      </h1>
       <p className="mt-3 text-fainted-white">
         Which month do you think is preferable?
       </p>

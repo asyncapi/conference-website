@@ -8,7 +8,7 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
-import pattern3 from "../illustrations/pattern2.svg";
+import Pattern2 from "../illustrations/pattern2";
 
 const fields = [
   {
@@ -133,7 +133,7 @@ function Form() {
               transform: "scaleX(-1)",
             }}
           >
-            <Image src={pattern3} alt="dots" />
+            <Pattern2 className="w-full sm:w-12" />
           </div>
         </div>
       </div>
