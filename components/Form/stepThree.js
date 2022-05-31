@@ -44,7 +44,6 @@ const options = [
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState(null);
   useEffect(() => {
-    console.log(value)
     setForm({ ...data, Location: value });
   }, [value]);
   return (
@@ -57,6 +56,7 @@ function StepThree({ setStep, setForm, data }) {
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
+        <div className="text-fainted-white text-lg mb-4">Choose location</div>
         <Select
           options={options}
           title="Select conference location"
@@ -73,6 +73,7 @@ function StepThree({ setStep, setForm, data }) {
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
+            disabled={!data.Location && true}
           >
             Next
           </button>

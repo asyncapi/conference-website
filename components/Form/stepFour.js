@@ -81,6 +81,7 @@ function StepThree({ setStep, setForm, data }) {
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
+        <div className="text-fainted-white text-lg mb-4">Choose date</div>
         <Select
           options={options}
           title="Select conference date"
@@ -97,7 +98,8 @@ function StepThree({ setStep, setForm, data }) {
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
-            disabled={submitting}
+            disabled={submitting || !data.Location && true}
+            
           >
             {submitting ? <ActivityLoader /> : "Submit"}
           </button>

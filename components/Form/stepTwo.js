@@ -28,6 +28,7 @@ function StepTwo({ setStep, setForm, data }) {
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
+        <div className="text-fainted-white text-lg mb-4">Select conf type</div>
         <Select
           options={options}
           title="Select conference type"
@@ -43,6 +44,7 @@ function StepTwo({ setStep, setForm, data }) {
           </a>
           <button
             type="submit"
+            disabled={!data.Type && true}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
           >
             Next

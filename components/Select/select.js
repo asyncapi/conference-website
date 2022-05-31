@@ -14,7 +14,7 @@ const customStyles = {
     background: "white",
     textOverflow: "ellipsis",
     width: "150px",
-    display: "flex"
+    display: "flex",
   }),
   control: (_, { selectProps: { width } }) => ({
     // none of react-select's styles are passed to <Control />
@@ -22,6 +22,7 @@ const customStyles = {
     padding: "10px",
     borderRadius: "5px",
     background: "#2e2344",
+    border: "2px solid #E50E99",
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
