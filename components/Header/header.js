@@ -2,16 +2,16 @@
 import Image from "next/image";
 import React from "react";
 import Scrollspy from "react-scrollspy";
-import pattern1 from "../illustrations/pattern1.svg";
 import Pattern1 from "../illustrations/pattern1";
 import dots from "../illustrations/dots.svg";
-import pattern2 from "../illustrations/Group 1.svg";
+import Polygon from "../illustrations/polygon"
 
 function Header() {
   return (
     <div
       style={{
-        height: "100vh",
+        position: "relative",
+        height: "70vh",
       }}
     >
       <div className="absolute">
@@ -19,7 +19,6 @@ function Header() {
       </div>
       <div className="absolute right-0">
         <Pattern1 className="w-full sm:w-32" />
-        {/* <Image src={pattern1} alt="pattern" className="w-1/3" /> */}
       </div>
       <div className="absolute flex justify-center flex-col items-center mt-20 w-full sm:px-32">
         <div>
@@ -59,8 +58,8 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 opacity-50">
-        <Image src={pattern2} alt="pattern" />
+      <div className="absolute bottom-0 opacity-50 sm:hidden">
+       <Polygon className="w-full" />
       </div>
     </div>
   );
