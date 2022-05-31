@@ -4,6 +4,6 @@
     X-Frame-Options = "ALLOW-FROM https://www.youtube.com/"
 
 [build]
-  command = "npm run build && npm run export"
+  command = "npm run build"
   functions = "netlify/functions"
   publish = "out"
