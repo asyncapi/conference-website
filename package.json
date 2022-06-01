@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:assets": "echo \"No assets to configure\"",
+    "test": "echo \"No tests configured yet\"",
+    "release": "echo \"No release to npm for this project\""
   },
   "dependencies": {
     "axios": "^0.27.2",
