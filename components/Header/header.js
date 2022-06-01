@@ -13,7 +13,7 @@ function Header() {
       }}
     >
       <div className="absolute">
-        <img src="dots.svg"/>
+        <img src="dots.svg" alt="dots"/>
       </div>
       <div className="absolute right-0">
         <Pattern1 className="w-full sm:w-32" />
