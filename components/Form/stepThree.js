@@ -52,11 +52,11 @@ function StepThree({ setStep, setForm, data }) {
         Conference Location
       </h1>
       <p className="mt-3 text-fainted-white">
-        If you're to attend in-person, where would you like to be?
+        If you're to attend in-person, where would you like to go?
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
-        <div className="text-fainted-white text-lg mb-4">Choose location</div>
+        <div className="text-fainted-white text-lg mb-4">Choose preferred locations</div>
         <Select
           options={options}
           title="Select conference location"

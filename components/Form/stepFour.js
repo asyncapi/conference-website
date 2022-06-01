@@ -53,11 +53,11 @@ function StepThree({ setStep, setForm, data }) {
         Conference Date
       </h1>
       <p className="mt-3 text-fainted-white">
-        Which month do you think is preferable?
+        Which dates for 3 days event are best for you?
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
-        <div className="text-fainted-white text-lg mb-4">Choose date</div>
+        <div className="text-fainted-white text-lg mb-4">Choose preferred dates</div>
         <Select
           options={options}
           title="Select conference date"

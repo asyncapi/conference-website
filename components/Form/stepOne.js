@@ -12,7 +12,7 @@ function StepOne({ setStep, setForm, data }) {
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
       <div className="mt-10">
-        <div className="text-fainted-white text-lg">Enter fullname</div>
+        <div className="text-fainted-white text-lg">Enter full name</div>
         <input
           required
           className="mt-3 w-full p-4 rounded-md bg-dark-paint text-white focus:outline-none"
