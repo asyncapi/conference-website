@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Avatar from "../illustrations/avatar";
+import Message from "../illustrations/message";
 import Invitation from "../illustrations/invite";
 import Calendar from "../illustrations/calendar";
 import Location from "../illustrations/location";
@@ -8,12 +8,13 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
+import StepFive from "./stepFive";
 import Pattern2 from "../illustrations/pattern2";
 
 const fields = [
   {
     title: "Your Name",
-    description: "Your Details",
+    description: "Your details",
     icon: <Avatar />,
   },
   {
@@ -28,9 +29,14 @@ const fields = [
   },
   {
     title: "Date",
-    description: "Best Date",
+    description: "Best date",
     icon: <Calendar />,
   },
+  {
+    title: "Email",
+    description: "Email address",
+    icon: <Message />,
+  }
 ];
 
 function Form() {
@@ -60,6 +66,15 @@ function Form() {
       <StepFour setStep={onStepUpdate} setForm={setFormData} data={formData} />
     );
   }
+    if (step === 5) {
+      view = (
+        <StepFive
+          setStep={onStepUpdate}
+          setForm={setFormData}
+          data={formData}
+        />
+      );
+    }
   return (
     <div className="pl-5 relative mt-40 sm:mt-0 sm:pl-0 sm:p-5" id="forms">
       <h1 className="text-white font-bold text-5xl sm:text-4xl">
@@ -110,7 +125,7 @@ function Form() {
                         {field.icon}
                       </div>
                       <div
-                        className={`${index === 4 && "hidden"}`}
+                        className={`${index === 5 && "hidden"}`}
                         style={{
                           height: "100%",
                           borderRight: `1px solid ${
