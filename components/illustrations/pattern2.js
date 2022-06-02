@@ -1,0 +1,106 @@
+export default function Pattern1({className }) {
+  return (
+    <svg className={className} viewBox="0 0 360 432" fill="none">
+      <rect x="72" y="288" width="72" height="72" fill="#1B0255" />
+      <mask
+        id="mask0"
+        mask-type="alpha"
+        maskUnits="userSpaceOnUse"
+        x="72"
+        y="288"
+        width="72"
+        height="72"
+      >
+        <rect x="72" y="288" width="72" height="72" fill="#1B0255" />
+      </mask>
+      <g mask="url(#mask0)">
+        <circle cx="72" cy="360" r="72" fill="#482D9E" />
+      </g>
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(-1 0 0 1 72 360)"
+        fill="#1B0255"
+      />
+      <mask
+        id="mask1"
+        mask-type="alpha"
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="360"
+        width="72"
+        height="72"
+      >
+        <rect
+          width="72"
+          height="72"
+          transform="matrix(-1 0 0 1 72 360)"
+          fill="#1B0255"
+        />
+      </mask>
+      <g mask="url(#mask1)">
+        <circle r="72" transform="matrix(-1 0 0 1 72 432)" fill="#4700C9" />
+      </g>
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(-1 0 0 1 72 144)"
+        fill="#1B0255"
+      />
+      <path d="M0 144V216H72L0 144Z" fill="#4700C9" />
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(-1 0 0 1 216 216)"
+        fill="#1B0255"
+      />
+      <path d="M144 216V288H216L144 216Z" fill="#4700C9" />
+      <rect x="288" y="360" width="72" height="72" fill="#482D9E" />
+      <path d="M360 360V432H288L360 360Z" fill="#1B0255" />
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(1 0 0 -1 0 144)"
+        fill="#150241"
+      />
+      <path d="M72 144V72H0L72 144Z" fill="#1B0255" />
+      <rect x="144" y="144" width="72" height="72" fill="#150241" />
+      <path d="M216 144V216H144L216 144Z" fill="#1B0255" />
+      <rect x="144" y="72" width="72" height="72" fill="#150241" />
+      <path d="M216 72V144H144L216 72Z" fill="#1B0255" />
+      <rect x="216" width="72" height="72" fill="#150241" />
+      <path d="M288 0V72H216L288 0Z" fill="#1B0255" />
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(-1 0 0 1 216 360)"
+        fill="#886DFF"
+      />
+      <rect
+        width="36"
+        height="36"
+        transform="matrix(-1 0 0 1 216 396)"
+        fill="#1B0255"
+      />
+      <rect
+        width="72"
+        height="72"
+        transform="matrix(1 0 0 -1 217 360)"
+        fill="#886DFF"
+      />
+      <rect
+        width="36"
+        height="36"
+        transform="matrix(1 0 0 -1 217 324)"
+        fill="#1B0255"
+      />
+      <rect x="72" y="360" width="72" height="72" fill="#1B0255" />
+      <rect x="72" y="144" width="72" height="72" fill="#1B0255" />
+      <rect x="216" y="360" width="72" height="72" fill="#4700C9" />
+      <rect y="288" width="72" height="72" fill="#886DFF" />
+      <rect y="216" width="72" height="72" fill="#482D9E" />
+      <circle cx="36" cy="252" r="36" fill="#1B0255" />
+      <circle cx="36" cy="252" r="16" fill="#886DFF" />
+    </svg>
+  );
+}
