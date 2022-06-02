@@ -6,9 +6,9 @@ import ActivityLoader from "../illustrations/activityLoader";
 
 function StepFive({ setStep, setForm, data }) {
   const [submitting, setSubmitting] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const onSubmit = (e) => {
     e.preventDefault();
-    setStep(e, null);
     setSubmitting(true);
     axios
       .post(
@@ -16,14 +16,16 @@ function StepFive({ setStep, setForm, data }) {
         data
       )
       .then((res) => {
+        setSubmitting(false);
         if (res.status === 200) {
           toast.success("Feedback submitted successfully!");
-          setStep(null, 1);
+          setDisabled(true);
         } else {
           toast.error("Ooops! Something went wrong");
         }
       })
       .catch((err) => {
+        setSubmitting(false);
         toast.error("Failed to submit feedback. Try again");
       });
   };
@@ -45,19 +47,20 @@ function StepFive({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
+          disabled={disabled}
           onChange={(e) => setForm({ ...data, Email: e.target.value })}
         />
         <div className="float-right">
           <a
             className="mr-10 text-fainted-white cursor-pointer"
-            onClick={() => setStep(null, 3)}
+            onClick={() => !disabled && setStep(null, 3)}
           >
             Back
           </a>
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
-            disabled={submitting || (!data.Email && true)}
+            disabled={submitting || (!data.Email && true) || disabled}
           >
             {submitting ? <ActivityLoader /> : "Submit"}
           </button>
