@@ -16,7 +16,7 @@ function Header() {
         <img src="dots.svg" alt="dots"/>
       </div>
       <div className="absolute right-0">
-        <Pattern1 className="w-full sm:w-32" />
+        <Pattern1 className="w-72 sm:w-32" />
       </div>
       <div className="absolute flex justify-center flex-col items-center mt-20 w-full sm:px-32">
         <div>
@@ -56,7 +56,7 @@ function Header() {
         </div>
       </div>
       <div className="absolute bottom-0 opacity-50 sm:hidden">
-       <Polygon className="w-full" />
+       <Polygon className="w-72" />
       </div>
     </div>
   );
