@@ -76,7 +76,7 @@ function Form() {
       );
     }
   return (
-    <div className="pl-5 relative mt-40 sm:mt-0 sm:pl-0 sm:p-5" id="forms">
+    <div className="p-5 relative mt-40 sm:mt-0" id="forms">
       <h1 className="text-white font-bold text-5xl sm:text-4xl">
         Share your opinion
       </h1>
@@ -97,7 +97,7 @@ function Form() {
             minHeight: "50vh",
           }}
         >
-          <div className="p-16 sm:p-0 sm:py-2 sm:pr-4">
+          <div className="p-16 lg:p-0 lg:py-2 lg:pr-4">
             {fields.map((field, i) => {
               const index = i + 1;
               return (

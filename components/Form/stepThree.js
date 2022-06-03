@@ -39,6 +39,10 @@ const options = [
     value: "Marocco, Casablanca",
     label: "Marocco, Casablanca",
   },
+  {
+    value: "Virtual Online Meeting",
+    label: "Virtual Online Meeting",
+  }
 ];
 
 function StepThree({ setStep, setForm, data }) {
