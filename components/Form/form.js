@@ -19,7 +19,7 @@ const fields = [
   },
   {
     title: "Preferable Type",
-    description: "Type peferable",
+    description: "Type preferable",
     icon: <Invitation />,
   },
   {
