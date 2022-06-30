@@ -58,6 +58,9 @@ function Header() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 right-0 rotate-180 ">
+        <img src="dots.svg" alt="dots" />
+      </div>
       <div className="absolute bottom-0 rotate-0 opacity-50">
         <Pattern2 className="w-72 sm:w-32" />
       </div>
