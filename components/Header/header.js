@@ -36,12 +36,15 @@ function Header() {
                 Barcelona, Spain
               </h3>
             </div>
+            <h3 className="mt-4 text-fainted-paint font-bold text-xl  sm:text-lg">
+              In-person & Virtual
+            </h3>
           </div>
           <div className="flex items-center justify-center mt-12">
             <div className="w-96 h-12 p-2 bg-dark-paint rounded-md flex items-center justify-between">
               <input
                 disabled={true}
-                placeholder="Submit call for paper"
+                placeholder="Call for Proposals"
                 className="h-full bg-transparent outline-none text-white w-11/12"
               />
               <a
