@@ -20,7 +20,7 @@ function Navbar() {
         </div>
         <span className="ml-5 text-sm text-dark-400">Barcelona, spain</span>
       </div>
-      <div className="flex items-center text-white">
+      <div className="flex items-center text-white sm:hidden">
         <span className='text-xs mr-4'>Nov 6-8</span>
         <Button text='Add to Calendar' className='text-xs' />
       </div>
