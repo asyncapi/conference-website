@@ -12,7 +12,7 @@ function Navbar() {
     >
       <div className="flex items-center sm:justify-between text-white sm:w-full">
         <div className="flex items-center">
-          <Logo />
+          <Logo width='40px' height='40px' />
           <div className="ml-3 text-xl">
             <span className="font-black">Conf </span>{" "}
             <span className="font-light text-dark-paint">2022</span>
