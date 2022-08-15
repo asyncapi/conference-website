@@ -1,3 +1,10 @@
+const colors = require("tailwindcss/colors");
+
+const dark = {
+  400: "#C6BED9",
+  600: "#A8A1B61A",
+};
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,9 +13,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...colors,
+        dark: dark,
         "fainted-white": "#797393",
         "fainted-paint": "#ad7dfa",
-        "dark-paint": "#2e2344",
+        "dark-paint": "#C6BED9",
         "fainted-gray": "#151034",
         "tetiary-pink": "#E50E99",
       },
