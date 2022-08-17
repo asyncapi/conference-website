@@ -1,10 +1,11 @@
-export default function Step() {
+export default function Step({className}) {
   return (
     <svg
       width="338"
       height="409"
       viewBox="0 0 338 409"
       fill="none"
+      className={className}
     >
       <path
         d="M184.457 1L123.289 36.8708L276.185 125.477L337.352 89.5832L184.457 1Z"

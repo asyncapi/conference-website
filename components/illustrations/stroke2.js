@@ -1,10 +1,11 @@
-export default function Stroke2() {
+export default function Stroke2({className}) {
   return (
     <svg
       width="322"
       height="224"
       viewBox="0 0 322 224"
       fill="none"
+      className={className}
     >
       <path
         d="M289.386 1L321.429 19.5047L33.0429 186.285L1 167.781L289.386 1Z"

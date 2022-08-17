@@ -1,11 +1,11 @@
-export default function Stroke1() {
+export default function Stroke1({className}) {
   return (
     <svg
       width="322"
       height="224"
       viewBox="0 0 322 224"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M33.0429 1L1 19.4808L289.362 186.262L321.405 167.781L33.0429 1Z"
