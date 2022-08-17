@@ -9,8 +9,8 @@ import Step from "../illustrations/stepLike";
 function Header() {
   return (
     <div>
-      <div className="mt-10 flex justify-center">
-        <div className="flex flex-col items-center text-white w-2/4 sm:w-full">
+      <div className="mt-10 flex justify-center relative z-50 h-[43vh]">
+        <div className="absolute flex flex-col items-center text-white w-2/4 sm:w-full">
           <Logo className="" height="112px" width="112px" />
           <h1 className="mt-5 text-7xl sm:text-4xl font-black"> AsyncAPI</h1>
           <h1 className="mt-5 text-7xl sm:text-4xl -mt-1 font-black">
@@ -30,7 +30,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="bg-architectureCover w-full h-full-screen bg-cover bg-center -mt-4"></div>
+      <img src="/img/architecture.svg" alt='architecture' className="-mt-10 w-[100%]" />
       <div className="container mx-auto -mt-20 w-full flex justify-center items-center relative">
         <div className="w-full relative">
           <div className="absolute bg-red w-full">
