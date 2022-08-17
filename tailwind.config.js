@@ -3,6 +3,7 @@ const colors = require("tailwindcss/colors");
 const dark = {
   400: "#C6BED9",
   600: "#A8A1B61A",
+  500: "#9081B0",
 };
 
 module.exports = {
@@ -11,6 +12,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "12rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
     backgroundImage: {
       architectureCover: "url('/img/architecture.svg')",
     },
