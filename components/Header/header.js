@@ -78,7 +78,7 @@ function Header() {
                 like: when the official conference schedule is posted, virtual
                 and in-person event details, and more.
               </p>
-              <div className="flex mt-4 items-center h-10 border border-dark-600">
+              <div className="flex mt-4 items-center h-10 rounded-sm border border-dark-600">
                 <input
                   type="email"
                   className="bg-transparent h-full w-3/4 text-sm focus:outline-none indent-3"
