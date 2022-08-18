@@ -2,8 +2,9 @@ const colors = require("tailwindcss/colors");
 
 const dark = {
   400: "#C6BED9",
-  600: "#A8A1B61A",
   500: "#9081B0",
+  600: "#A8A1B61A",
+  700: "#453763",
 };
 
 module.exports = {
