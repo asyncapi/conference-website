@@ -31,3 +31,21 @@ a {
   background: linear-gradient(0deg, rgba(114, 78, 208, 0.5), rgba(114, 78, 208, 0.5)), linear-gradient(180deg, #390E96 0%, #84CCE2 100%);
   mix-blend-mode: normal;
 }
+
+.card-bg {
+  background: rgba(36, 30, 49, 0.3);
+  backdrop-filter: blur(68px);
+}
+
+.slick-slide {
+  margin-left: 46px;
+  margin-right: 46px;
+}
+.slick-list {
+  margin-left: -10px; /* px size of slide space */
+  width: calc(100% + 46px); /* add double the px size of slide space */
+}
+
+.slick-track {
+  display: flex !important;
+}
