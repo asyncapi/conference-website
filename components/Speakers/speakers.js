@@ -18,7 +18,7 @@ function Speakers() {
             borderRadius: "10px",
             padding: "10px",
             display: "flex",
-            bottom: "-55px",
+            bottom: "-85px",
             alignItems: "center",
           }}
         >
