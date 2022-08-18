@@ -39,11 +39,11 @@ function Header() {
               <Stroke2 className="-mt-[220px] w-[160px] h-[200px] absolute z-50" />
             </div>
             <div className="w-full">
-              <Step className="absolute w-[220px] right-0 top-[10rem]" />
+              <Step className="absolute w-[220px] right-0 top-[12rem]" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 text-white">
-            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-10">
+            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14">
               <h1 className="font-bold text-lg mb-4">
                 What is the AsyncAPI Conference?
               </h1>
@@ -60,7 +60,7 @@ function Header() {
                 className="text-sm p-2 mt-4"
               />
             </div>
-            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-10">
+            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14">
               <h1 className="font-bold text-lg mb-4">Apply to be a speaker</h1>
               <p className="text-xs text-dark-500 leading-4">
                 We are in the process of looking for those interested in giving
@@ -71,7 +71,7 @@ function Header() {
                 className="text-sm p-2 mt-4 btn-gradient"
               />
             </div>
-            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-10">
+            <div className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14">
               <h1 className="font-bold text-lg mb-4">Sign up for updates</h1>
               <p className="text-xs text-dark-500 leading-4">
                 Subscribe to email notifications to receive updates on events

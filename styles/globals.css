@@ -23,5 +23,6 @@ a {
 
 .btn-gradient{
   background: linear-gradient(270deg, rgba(135, 90, 226, 0.7) 0%, rgba(71, 188, 238, 0.7) 100%);
-  border: 1px solid #675788
+  border: 1px solid #675788;
+  backdrop-filter: blur(36px)
 }
