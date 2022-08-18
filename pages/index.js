@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header/header';
-import { Toaster } from "react-hot-toast";
 import Navbar from "../components/Navbar/navbar";
-// import Form from "../components/Form/form";
+import Speakers from '../components/Speakers/speakers';
 
 export default function Home() {
   return (
@@ -13,10 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Toaster  />
         <Navbar />
         <Header />
-        {/* <Form /> */}
+        <Speakers />
       </main>
     </div>
   );

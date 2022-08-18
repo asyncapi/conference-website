@@ -26,3 +26,8 @@ a {
   border: 1px solid #675788;
   backdrop-filter: blur(36px)
 }
+
+.speakers-bg{
+  background: linear-gradient(0deg, rgba(114, 78, 208, 0.5), rgba(114, 78, 208, 0.5)), linear-gradient(180deg, #390E96 0%, #84CCE2 100%);
+  mix-blend-mode: normal;
+}
