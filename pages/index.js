@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header/header';
 import Navbar from "../components/Navbar/navbar";
+import Recordings from '../components/Recordings/recordings';
 import Speakers from '../components/Speakers/speakers';
 import Sponsors from '../components/Sponsors/sponsors';
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Header />
         <Speakers />
         <Sponsors />
+        <Recordings />
       </main>
     </div>
   );

@@ -1,100 +1,35 @@
 import React from 'react';
-import Slider from 'react-slick';
 import Card from '../Cards/card';
-import Arrow from '../illustrations/arrow';
 import Tower from '../illustrations/tower';
 import Stack from "../illustrations/stack";
+import CardSlider from '../Cards/slider';
 
 function Speakers() {
-    const slider = React.useRef(null);
-    const settings = {
-      dots: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      appendDots: (dots) => (
-        <div
-          style={{
-            borderRadius: "10px",
-            padding: "10px",
-            display: "flex",
-            bottom: "-85px",
-            alignItems: "center",
-          }}
-        >
-          <button
-            onClick={() => slider?.current?.slickPrev()}
-            className="mr-[40px]"
-            disabled={
-              slider.current &&
-              slider.current.innerSlider.state.currentSlide === 0
-            }
-          >
-            <Arrow
-              className="rotate-[180deg]"
-              stroke={
-                slider.current &&
-                slider.current.innerSlider.state.currentSlide === 0 &&
-                "#94a3b8"
-              }
-            />
-          </button>
-          <ul style={{ margin: "0px" }}>
-            {dots.map((d) => {
-              return (
-                <li
-                  key={d.key}
-                  className={`w-[11px] h-[11px] bg-dark-700 rounded-full ${
-                    d.props.className && "bg-white"
-                  }`}
-                ></li>
-              );
-            })}
-          </ul>
-          <button
-            onClick={() => {
-              console.log(slider.current.innerSlider.state);
-              console.log(dots.length);
-              slider?.current?.slickNext();
-            }}
-            className="ml-[40px]"
-            disabled={
-              slider.current &&
-              slider.current.innerSlider.state.currentSlide === dots.length - 1
-            }
-          >
-            <Arrow
-              stroke={
-                slider.current &&
-                slider.current.innerSlider.state.currentSlide === dots.length - 1 &&
-                "#94a3b8"
-              }
-            />
-          </button>
-        </div>
-      ),
-    };
   return (
     <div className="container mx-auto w-full speakers-bg h-[958px] relative overflow-hidden">
       <div className="absolute right-0 top-[80px]">
         <div className="relative h-[25rem]">
-          <Tower className='absolute right-[20px]' />
+          <Tower className="absolute right-[20px]" />
         </div>
-        <Stack className='mt-[30px]' />
+        <Stack className="mt-[30px]" />
       </div>
       <div className="pt-[100px]">
         <h1 className="text-[84px] text-white tracking-tight">Speakers</h1>
         <div className="mt-[46px]">
-          <Slider ref={slider} {...settings}>
+          <CardSlider>
             {Array(7)
               .fill()
               .map((i) => (
                 <div key={i} className="">
-                  <Card />
+                  <Card
+                    title="Missy Turco"
+                    alt="missy"
+                    summary="Product Designer, Postman"
+                    img="/img/missy.png"
+                  />
                 </div>
               ))}
-          </Slider>
+          </CardSlider>
         </div>
       </div>
     </div>
