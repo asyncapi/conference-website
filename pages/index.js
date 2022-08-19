@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header/header';
 import Navbar from "../components/Navbar/navbar";
 import Speakers from '../components/Speakers/speakers';
+import Sponsors from '../components/Sponsors/sponsors';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <Speakers />
+        <Sponsors />
       </main>
     </div>
   );

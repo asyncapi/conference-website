@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card() {
   return (
-    <div className='card-bg p-[22px] text-white rounded-lg border bg-transparent w-[439px] h-[537px]'>
+    <div className='card-bg p-[22px] text-white rounded-lg border bg-transparent w-full h-[537px]'>
         <div className='h-[406px]'>
             <img src='/img/missy.png' alt='missy' />
         </div>

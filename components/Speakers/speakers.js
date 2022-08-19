@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import Card from '../Cards/card';
 import Arrow from '../illustrations/arrow';
-
+import Tower from '../illustrations/tower';
+import Stack from "../illustrations/stack";
 
 function Speakers() {
     const slider = React.useRef(null);
@@ -75,7 +76,13 @@ function Speakers() {
       ),
     };
   return (
-    <div className="container mx-auto w-full speakers-bg h-[958px]">
+    <div className="container mx-auto w-full speakers-bg h-[958px] relative overflow-hidden">
+      <div className="absolute right-0 top-[80px]">
+        <div className="relative h-[25rem]">
+          <Tower className='absolute right-[20px]' />
+        </div>
+        <Stack className='mt-[30px]' />
+      </div>
       <div className="pt-[100px]">
         <h1 className="text-[84px] text-white tracking-tight">Speakers</h1>
         <div className="mt-[46px]">
