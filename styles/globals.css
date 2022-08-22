@@ -45,3 +45,8 @@ a {
   display: flex !important;
 
 }
+.navbar{
+  z-index: 999;
+background: rgba(36, 30, 49, 0.5);
+backdrop-filter: blur(36px);
+}

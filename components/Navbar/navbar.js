@@ -4,7 +4,7 @@ import Button from '../Button/button';
 
 function Navbar() {
   return (
-    <div className="flex justify-between p-3 border border-0 border-b border-dark-600 h-[84px]">
+    <div className="flex justify-between p-3 border border-0 border-b border-dark-600 h-[84px] sticky top-0 w-full navbar">
       <div className="flex items-center sm:justify-between text-white sm:w-full">
         <div className="flex items-center">
           <Logo width="40px" height="40px" />
