@@ -60,12 +60,12 @@ function Footer() {
               <span className="text-[16px] mr-4">Follow us</span>
               <div className="flex">
                 {links.map((link, i) => (
-                  <div
+                  <button
                     key={i}
                     className="p-[8px] bg-dark-600 rounded-lg ml-[12px] backdrop-blur-xl border border-dark-500"
                   >
                     {link.icon}
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../Button/button';
 import Card from '../Cards/card';
 import CardSlider from '../Cards/slider';
+import Play from '../illustrations/play';
 
 function Recordings() {
   return (
@@ -13,7 +14,7 @@ function Recordings() {
           Check out the talks from the AsyncAPI Conference 2021
         </p>
         <div className="mt-[53px]">
-          <CardSlider dotPosition='center'>
+          <CardSlider dotPosition="center">
             {Array(6)
               .fill()
               .map((i) => (
@@ -23,7 +24,16 @@ function Recordings() {
                     alt="missy"
                     summary="GSoC: Generating diffs using AsyncAPI Diff - Aayush Sahu, Individual Contributor"
                     img="/img/banner.png"
-                    optional = {<Button text='Watch Video' className='w-[229px] h-[56px] mt-[70px]' />}
+                    optional={
+                      <Button
+                        text={
+                          <div className='flex items-center ml-[28px]'>
+                            <Play /> <span className='ml-[16px]'>Watch Video</span>
+                          </div>
+                        }
+                        className="w-[229px] h-[56px] mt-[70px]"
+                      />
+                    }
                   />
                 </div>
               ))}

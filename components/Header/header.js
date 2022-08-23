@@ -90,13 +90,13 @@ function Header() {
       />
       <div className="container mx-auto -mt-20 w-full flex justify-center items-center relative pb-[84px]">
         <div className="w-full relative">
-          <div className="absolute bg-red w-full">
-            <div className="right-[15rem] top-[120px] absolute">
-              <Stroke1 className="mt-0 ml-[50px] mr-[40px] w-[160px] h-[200px]" />
-              <Stroke2 className="-mt-[220px] w-[160px] h-[200px] absolute z-50" />
+          <div className="absolute w-full h-full">
+            <div className="top-[270px] right-[20%] absolute">
+              <Stroke1 className="mt-0 ml-[70px] w-[320px] h-[222px]" />
+              <Stroke2 className="-mt-[240px] w-[320px] h-[222px] absolute z-[99]" />
             </div>
             <div className="w-full">
-              <Step className="absolute w-[220px] right-0 top-[12rem]" />
+              <Step className="absolute right-0 bottom-0" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 text-white">
@@ -105,9 +105,7 @@ function Header() {
                 key={i}
                 className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14"
               >
-                <h1 className="font-bold text-[32px] mb-4">
-                 {list.title}
-                </h1>
+                <h1 className="font-bold text-[32px] mb-4">{list.title}</h1>
                 <p className="text-[18px] text-dark-500 leading-[29px]">
                   {list.description}
                 </p>
