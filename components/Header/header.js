@@ -33,31 +33,31 @@ function Header() {
               </h3>
               <span className="ml-2 text-fainted-white">|</span>
               <h3 className="ml-2 text-fainted-paint font-bold text-xl  sm:text-lg">
-                Barcelona, Spain
+                Online
               </h3>
             </div>
-            <h3 className="mt-4 text-fainted-paint font-bold text-xl  sm:text-lg">
-              In-person & Virtual
-            </h3>
           </div>
           <div className="flex items-center justify-center mt-12">
             <div className="w-96 h-12 p-2 bg-dark-paint rounded-md flex items-center justify-between">
               <input
                 disabled={true}
-                placeholder="Call for Proposals"
+                placeholder="Join us!"
                 className="h-full bg-transparent outline-none text-white w-11/12"
               />
               <a
-                href="https://linuxfoundation.smapply.io/prog/asyncapi_conference_2022/"
+                href="https://cvent.me/R5G740"
                 target="_blank"
                 rel="noreferrer"
                 className="w-6/12"
               >
                 <button className="bg-tetiary-pink p-2 w-full rounded-md text-white">
-                  Apply now
+                  Register
                 </button>
               </a>
             </div>
+          </div>
+          <div className="mt-20 bg-violet-200">
+            <a id="sched-embed" href="//asyncapi2022.sched.com/">View the AsyncAPI Conference 2022 schedule directory.</a>
           </div>
         </div>
       </div>

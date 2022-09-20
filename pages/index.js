@@ -3,6 +3,7 @@ import Header from '../components/Header/header';
 import { Toaster } from "react-hot-toast";
 import Navbar from "../components/Navbar/navbar";
 // import Form from "../components/Form/form";
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         <Navbar />
         <Header />
         {/* <Form /> */}
+        <Script type="text/javascript" src="//asyncapi2022.sched.com/js/embed.js"/>
       </main>
     </div>
+    
   );
 }
