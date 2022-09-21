@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../illustrations/logo';
-import Button from '../Button/button';
+// import Button from '../Button/button';
 import Link from 'next/link';
 
 function Navbar() {
@@ -19,10 +19,10 @@ function Navbar() {
       </div>
       <div className="flex items-center text-white sm:hidden">
         <span className="text-[16px] mr-4">Nov 6-8</span>
-        <Button
+        {/* <Button
           text="Add to Calendar"
           className="text-[16px] py-[8px] px-[14px]"
-        />
+        /> */}
       </div>
     </div>
   );

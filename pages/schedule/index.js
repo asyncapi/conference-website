@@ -7,7 +7,7 @@ function index() {
   return (
     <div>
       <Navbar />
-      <div className=" container text-white">
+      <div className="container text-white">
         <h1 className="mt-5 text-[100px] sm:text-4xl font-black">Schedule</h1>
         <p className="mt-4 text-dark-400 text-[28px]">
           This schedule is automatically displayed in Irish Standard Time (UTC
@@ -15,7 +15,7 @@ function index() {
           from the drop-down menu to the right, above "Filter by Date."
         </p>
       </div>
-      <div className="mt-20 speakers-bg">
+      <div className="mt-20 bg-white">
         <a id="sched-embed" href="//asyncapi2022.sched.com/"></a>
       </div>
       <Script

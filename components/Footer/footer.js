@@ -33,9 +33,6 @@ function Footer() {
                 <div className="font-black text-3xl">Conf </div>{" "}
                 <div className="font-thin text-3xl ml-2">2022</div>
               </div>
-              <span className="ml-5 text-sm text-dark-400 text-[16px]">
-                Barcelona, spain
-              </span>
             </div>
             <div className="mt-[76px] text-dark-500 text-[14px]">
               <a href="" className="underline">

@@ -11,10 +11,11 @@ const data = [
   {
     title: "What is the AsyncAPI Conference?",
     description:
-      "At the 2022 AsyncAPI Conference, speakers from all around the world will take the stage in Barcelona, Spain where they will have the opportunity to present how they are using the AsyncAPI Specification in their real-world use cases, how they use tooling to support the specification, and how they have contributed to the project.",
+      "At the 2022 AsyncAPI Conference, speakers from all around the world will join us online to present how they are using the AsyncAPI Specification in their real-world use cases, how they use tooling to support the specification, and how they have contributed to the project.",
     button: (
       <Button
         text="Visit the AsyncAPI Website"
+        link="https://www.asyncapi.com/"
         className="text-[21px] py-[14px] px-[26px] mt-[32px]"
       />
     ),
@@ -75,7 +76,7 @@ function Header() {
               className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl"
             />
             <Button
-              text="Join us"
+              text="Register for free"
               link="https://cvent.me/R5G740"
               className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient"
             />
