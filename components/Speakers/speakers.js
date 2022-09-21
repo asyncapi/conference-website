@@ -3,6 +3,8 @@ import Card from '../Cards/card';
 import Tower from '../illustrations/tower';
 import Stack from "../illustrations/stack";
 import CardSlider from '../Cards/slider';
+import speakers from './speakersList';
+import Link from 'next/link';
 
 function Speakers() {
   return (
@@ -17,18 +19,25 @@ function Speakers() {
         <h1 className="text-[84px] text-white tracking-tight">Speakers</h1>
         <div className="mt-[46px]">
           <CardSlider>
-            {Array(7)
-              .fill()
-              .map((i) => (
-                <div key={i} className="">
-                  <Card
-                    title="Missy Turco"
-                    alt="missy"
-                    summary="Product Designer, Postman"
-                    img="/img/missy.png"
-                  />
-                </div>
-              ))}
+            {speakers.map((speaker) => (
+              <div key={speaker.name} className="">
+                <Card
+                  title={speaker.name}
+                  alt={speaker.name}
+                  summary={`${speaker.title}, ${speaker.company}`}
+                  img={speaker.avatar}
+                />
+              </div>
+            ))}
+            <Card>
+              <div className="justify-center flex flex-col items-center h-full">
+                <Link href="/schedule">
+                  <h4 className="cursor-pointer underline">
+                    View all speakers & schedule
+                  </h4>
+                </Link>
+              </div>
+            </Card>
           </CardSlider>
         </div>
       </div>

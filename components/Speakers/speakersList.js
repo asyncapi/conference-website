@@ -1,4 +1,4 @@
-export const list = [
+const list = [
   {
     name: "Laurent Broudoux",
     company: "Microcks.io",
@@ -18,101 +18,12 @@ export const list = [
     avatar: "https://avatars.sched.co/2/63/14724416/avatar.jpg?d9d",
   },
   {
-    name: "Tamimi Ahmad",
-    company: "Solace",
-    title: "Developer Advocate",
-    avatar: null,
-  },
-  {
-    name: "Anisat Akinbani",
-    company: "AsyncAPI Initiative",
-    title: "Technical Writer",
-    avatar: null,
-  },
-  {
-    name: "Nauman Ali",
-    company: "Stoplight",
-    title: "Product Manager",
-    avatar: null,
-  },
-  {
-    name: "David Boyne",
-    company: "AWS",
-    title: "Senior Developer Advocate",
-    avatar: null,
-  },
-  {
-    name: "Dan Farrelly",
-    company: "Inngest",
-    title: "Co-founder & Engineer",
-    avatar: null,
-  },
-  {
-    name: "Rob Galanakis",
-    company: "Lithic Technology",
-    title: "Principal",
-    avatar: null,
-  },
-  {
     name: "Lukasz Gornicki",
     company: "AsyncAPI Initiative",
     title: "Maintainer and Community Guardian",
     avatar: "https://avatars.sched.co/6/2f/13550768/avatar.jpg?d4b",
   },
-  {
-    name: "Pratik Arvind Haldankar",
-    company: "AsyncAPI Initiative",
-    title: "Technical Writer",
-    avatar: null,
-  },
-  {
-    name: "Luke Hedger",
-    company: "The LEGO Group",
-    title: "Lead Engineer",
-    avatar: null,
-  },
-  {
-    name: "Marc Oriol Hilari",
-    company: "Universitat Oberta de Catalunya (UOC)",
-    title: "Postdoctoral Researcher",
-    avatar: null,
-  },
-  {
-    name: "Marius Ileana",
-    company: "Signicat AS",
-    title: "Solution Architect",
-    avatar: null,
-  },
-  {
-    name: "Jonas Lagoni",
-    company: "Postman",
-    title: "Lead Software Engineer",
-    avatar: null,
-  },
-  {
-    name: "José Enrique García Maciñeiras",
-    company: "Sngular",
-    title: "Initiative Coordinator",
-    avatar: null,
-  },
-  {
-    name: "Jesse Menning",
-    company: "Solace",
-    title: "CTO Architect",
-    avatar: null,
-  },
-  {
-    name: "Nelson Michael",
-    company: "BirdEatsBug",
-    title: null,
-    avatar: null,
-  },
-  {
-    name: "Florence Njeri",
-    company: "GSOD Intern",
-    title: "Technical Writer",
-    avatar: null,
-  },
+
   {
     name: "Abir Pal",
     company: "Certa",
@@ -126,27 +37,11 @@ export const list = [
     avatar: "https://cdn.sched.co/common/img/avatar-empty.png",
   },
   {
-    name: "V Thulisile Sibanda",
-    company: "AsyncAPI Initiative",
-    title: "GSoD Technical Writer",
-    avatar: null,
-  },
-  {
-    name: "James Urquhart",
-    company: "VMware",
-    title: "Principle Technologist, Tanzu",
-    avatar: null,
-  },
-  {
-    name: "Ismael Velasco",
-    company: "Graze.com",
-    title: "Technical Development Lead",
-    avatar: null,
-  },
-  {
     name: "Erik Wilde",
     company: "Axway",
     title: "Catalyst",
     avatar: "https://avatars.sched.co/8/ae/5719090/avatar.jpg?26d",
   },
 ];
+
+export default list;
