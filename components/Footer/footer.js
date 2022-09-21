@@ -47,13 +47,13 @@ function Footer() {
             </div>
           </div>
           <div>
-            <div className="flex items-center text-white">
+            {/* <div className="flex items-center text-white">
               <span className="text-[16px] mr-4">Nov 6-8</span>
               <Button
                 text="Add to Calendar"
                 className="text-[16px] py-[8px] px-[14px]"
               />
-            </div>
+            </div> */}
             <div className="flex items-center text-white mt-[80px]">
               <span className="text-[16px] mr-4">Follow us</span>
               <div className="flex">
