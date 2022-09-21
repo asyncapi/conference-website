@@ -4,18 +4,19 @@ import Button from "../Button/button";
 import Github from "../illustrations/github";
 import Linkedin from "../illustrations/linkedIn";
 import Twitter from "../illustrations/twitter";
+import Link from 'next/link';
 
 const links = [
   {
-    href: "/",
+    href: "https://github.com/asyncapi",
     icon: <Github />,
   },
   {
-    href: "/",
+    href: "ttps://twitter.com/AsyncAPISpec",
     icon: <Twitter />,
   },
   {
-    href: "/",
+    href: "https://www.linkedin.com/company/asyncapi/",
     icon: <Linkedin />,
   },
 ];
@@ -60,12 +61,11 @@ function Footer() {
               <span className="text-[16px] mr-4">Follow us</span>
               <div className="flex">
                 {links.map((link, i) => (
-                  <button
-                    key={i}
-                    className="p-[8px] bg-dark-600 rounded-lg ml-[12px] backdrop-blur-xl border border-dark-500"
-                  >
-                    {link.icon}
-                  </button>
+                  <a key={i} href={link.href} target="_blank" rel="noreferrer">
+                    <button className="p-[8px] bg-dark-600 rounded-lg ml-[12px] backdrop-blur-xl border border-dark-500">
+                      {link.icon}
+                    </button>
+                  </a>
                 ))}
               </div>
             </div>

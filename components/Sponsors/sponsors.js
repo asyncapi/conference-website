@@ -31,7 +31,11 @@ function Sponsors() {
             ))}
         </div>
         <div className="mt-[48px] text-center">
-          <Button text="Become a sponsor" className="px-[14px] py-[24px] w-[244px] text-[21px] btn-gradient" />
+          <Button
+            text="Become a sponsor"
+            link="https://github.com/asyncapi/community/files/9568764/Sponsorship_Prospectus_2022_v2.pdf"
+            className="px-[14px] py-[24px] w-[244px] text-[21px] btn-gradient"
+          />
         </div>
       </div>
     </div>
