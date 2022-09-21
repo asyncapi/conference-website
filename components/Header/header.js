@@ -20,9 +20,9 @@ const data = [
     ),
   },
   {
-    title: "Apply to be a speaker",
+    title: "Apply to be a sponsor",
     description:
-      "We are in the process of looking for those interested in giving a talk at the upcoming AsyncAPI Conference.",
+      "We are in the process of looking for those interested in sponsoring the upcoming AsyncAPI Conference.",
     button: (
       <Button
         text="Submit a proposal"
@@ -66,18 +66,18 @@ function Header() {
             </h1>
           </div>
           <p className="mt-4 text-[30px]">
-            An In-person and Virtual Tech Conference
+            Virtual Tech Conference
           </p>
           <p className="mt-1 text-dark-400 text-[28px]">
-            Nov 6-8 * Barcelona, Spain
+            Nov 6-8
           </p>
           <div className="flex mt-4">
             <Button
-              text="More Info"
+              text="View Schedule"
               className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl"
             />
             <Button
-              text="Become a speaker"
+              text="Become a sponsor"
               className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient"
             />
           </div>
