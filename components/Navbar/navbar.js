@@ -16,9 +16,6 @@ function Navbar() {
             </div>
           </div>
         </Link>
-        <span className="ml-[29px] text-[16px] text-dark-400">
-          Barcelona, spain
-        </span>
       </div>
       <div className="flex items-center text-white sm:hidden">
         <span className="text-[16px] mr-4">Nov 6-8</span>

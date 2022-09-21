@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Script from "next/script";
 import Button from "../Button/button";
 import Logo from "../illustrations/logo";
 import Stroke1 from "../illustrations/stroke1";
@@ -26,7 +25,8 @@ const data = [
       "We are in the process of looking for those interested in sponsoring the upcoming AsyncAPI Conference.",
     button: (
       <Button
-        text="Submit a proposal"
+        text="Become a sponsor"
+        link="https://github.com/asyncapi/community/files/9568764/Sponsorship_Prospectus_2022_v2.pdf"
         className="text-[21px] py-[14px] px-[26px] mt-4 btn-gradient"
       />
     ),
@@ -75,7 +75,8 @@ function Header() {
               className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl"
             />
             <Button
-              text="Become a sponsor"
+              text="Join us"
+              link="https://cvent.me/R5G740"
               className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient"
             />
           </div>
@@ -113,10 +114,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <Script
-        type="text/javascript"
-        src="//asyncapi2022.sched.com/js/embed.js"
-      />
     </div>
   );
 }
