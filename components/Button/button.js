@@ -1,9 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
 
-function Button({text, type, className}) {
+function Button({text, className, link}) {
   return (
-    <button className={`border border-dark-600 p-1 rounded bg-dark-600 ${className}`}>{text}</button>
-  )
+    <Link href={link ? link : "/"}>
+      <button
+        className={`border border-dark-600 p-1 rounded bg-dark-600 ${className}`}
+      >
+        {text}
+      </button>
+    </Link>
+  );
 }
 
 export default Button

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import Script from "next/script";
 import Button from "../Button/button";
 import Logo from "../illustrations/logo";
 import Stroke1 from "../illustrations/stroke1";
@@ -65,15 +66,12 @@ function Header() {
               Conf 2022
             </h1>
           </div>
-          <p className="mt-4 text-[30px]">
-            Virtual Tech Conference
-          </p>
-          <p className="mt-1 text-dark-400 text-[28px]">
-            Nov 6-8
-          </p>
+          <p className="mt-4 text-[30px]">Virtual Tech Conference</p>
+          <p className="mt-1 text-dark-400 text-[28px]">Nov 6-8</p>
           <div className="flex mt-4">
             <Button
               text="View Schedule"
+              link="/schedule"
               className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl"
             />
             <Button
@@ -115,6 +113,10 @@ function Header() {
           </div>
         </div>
       </div>
+      <Script
+        type="text/javascript"
+        src="//asyncapi2022.sched.com/js/embed.js"
+      />
     </div>
   );
 }
