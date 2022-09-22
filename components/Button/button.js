@@ -5,7 +5,7 @@ function Button({text, className, link}) {
   return (
     <Link href={link ? link : "/"}>
       <button
-        className={`border border-dark-600 p-1 rounded bg-dark-600 ${className}`}
+        className={`btn border border-dark-600 p-1 rounded bg-dark-600 ${className}`}
       >
         {text}
       </button>

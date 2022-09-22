@@ -28,12 +28,12 @@ function index() {
           <img
             src="/img/scheduleArcLeft.svg"
             alt="architect"
-            className="w-[100%]"
+            className="w-[700px]"
           />
           <img
             src="/img/scheduleArcRight.svg"
             alt="architect"
-            className="w-[100%]"
+            className="w-[700px]"
           />
         </div>
         {/* <div className="flex justify-between relative mt-60 overflow-hidden">
