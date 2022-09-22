@@ -1,8 +1,6 @@
 export default function ConfLogo({ className, width, height }) {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 210 44"
       fill="none"
       className={className}

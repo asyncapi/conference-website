@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../illustrations/logo';
 import ConfLogo from "../illustrations/confLogo";
 // import Button from '../Button/button';
 import Link from 'next/link';
@@ -10,7 +9,7 @@ function Navbar() {
       <div className="flex items-center sm:justify-between text-white sm:w-full">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <ConfLogo width="210px" height="44px" />
+            <ConfLogo className="w-[210px] height-[44px] md:w-[152px] md:h-[32px]"/>
           </div>
         </Link>
       </div>

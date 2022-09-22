@@ -27,7 +27,7 @@ function Footer() {
       <div className="container mx-auto w-full  h-[303px] flex items-center">
         <div className="flex justify-between w-full md:flex-col sm:items-center">
           <div className="md:mt-40 md:text-center sm:text-left w-full md:flex md:flex-col md:items-center">
-            <ConfLogo width="210px" height="44px" />
+            <ConfLogo className="w-[210px] height-[44px] md:w-[152px] md:h-[32px]" />
             <h4 className="mt-5 lg:hidden text-dark-400 text-[14px]">
               Virtual Tech Conference
             </h4>

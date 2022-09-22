@@ -21,7 +21,7 @@ const data = [
     ),
   },
   {
-    title: "Apply to be a sponsor",
+    title: "Become a sponsor",
     description:
       "We are in the process of looking for those interested in sponsoring the upcoming AsyncAPI Conference.",
     button: (
@@ -32,24 +32,6 @@ const data = [
       />
     ),
   },
-  // {
-  //   title: "Sign up for updates",
-  //   description:
-  //     "Subscribe to email notifications to receive updates on events like: when the official conference schedule is posted, virtual and in-person event details, and more.",
-  //   button: (
-  //     <div className="flex h-[56px] mt-[26px] items-center rounded-lg border border-dark-600">
-  //       <input
-  //         type="email"
-  //         className="bg-transparent py-[14px] px-[26px] h-full w-3/4 text-[18px] focus:outline-none indent-3"
-  //         placeholder="Your email address"
-  //       />
-  //       <Button
-  //         text="Subscribe"
-  //         className="text-sm h-full w-1/4 border-none rounded-none"
-  //       />
-  //     </div>
-  //   ),
-  // },
 ];
 
 function Header() {
@@ -59,7 +41,7 @@ function Header() {
         <div className="mobile-headerbg lg:hidden"></div>
         <div className="mt-10 flex justify-center relative z-50 h-[43vh] md:absolute md:w-full">
           <div className="absolute flex flex-col items-center text-white w-2/4 md:w-full md:relative">
-            <Logo className="" height="112px" width="112px" />
+            <Logo className="w-[72px] h-[72px] lg:w-[112px] lg:h-[112px]" />
             <div className="text-center leading-[7rem]">
               <h1 className="mt-5 text-[100px] md:text-5xl font-black">
                 AsyncAPI
