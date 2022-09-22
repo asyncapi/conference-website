@@ -18,7 +18,7 @@ function Navbar() {
         </Link>
       </div>
       <div className="flex items-center text-white sm:hidden">
-        <span className="text-[16px] mr-4">Nov 6-8</span>
+        <span className="text-[16px] mr-4">Nov 3-5</span>
         {/* <Button
           text="Add to Calendar"
           className="text-[16px] py-[8px] px-[14px]"

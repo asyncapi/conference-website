@@ -4,7 +4,7 @@ import Button from "../Button/button";
 import Github from "../illustrations/github";
 import Linkedin from "../illustrations/linkedIn";
 import Twitter from "../illustrations/twitter";
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const links = [
   {
@@ -35,14 +35,11 @@ function Footer() {
               </div>
             </div>
             <div className="mt-[76px] text-dark-500 text-[14px]">
-              <a href="" className="underline">
+              <a
+                href="https://events.linuxfoundation.org/about/code-of-conduct/" target="_blank" rel="noreferrer"
+                className="underline"
+              >
                 Code of Conduct
-              </a>
-              <a href="" className="ml-[20px] underline">
-                Link
-              </a>
-              <a href="" className="ml-[20px] underline">
-                Link
               </a>
             </div>
           </div>

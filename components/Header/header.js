@@ -68,7 +68,7 @@ function Header() {
             </h1>
           </div>
           <p className="mt-4 text-[30px]">Virtual Tech Conference</p>
-          <p className="mt-1 text-dark-400 text-[28px]">Nov 6-8</p>
+          <p className="mt-1 text-dark-400 text-[28px]">Nov 3-5</p>
           <div className="flex mt-4">
             <Button
               text="View Schedule"
