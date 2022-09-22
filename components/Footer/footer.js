@@ -26,7 +26,7 @@ function Footer() {
     <div className="mt-[123px] border border-0 border-t border-dark-500">
       <div className="container mx-auto w-full  h-[303px] flex items-center">
         <div className="flex justify-between w-full">
-          <div>
+          <div className=''>
             <div className="flex items-center">
               <Logo width="50px" height="50px" />
               <div className="ml-3 text-white flex">
@@ -44,14 +44,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            {/* <div className="flex items-center text-white">
-              <span className="text-[16px] mr-4">Nov 6-8</span>
-              <Button
-                text="Add to Calendar"
-                className="text-[16px] py-[8px] px-[14px]"
-              />
-            </div> */}
-            <div className="flex items-center text-white mt-[80px]">
+            <div className="flex md:block items-center text-white mt-[80px]">
               <span className="text-[16px] mr-4">Follow us</span>
               <div className="flex">
                 {links.map((link, i) => (

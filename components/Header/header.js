@@ -32,85 +32,90 @@ const data = [
       />
     ),
   },
-  {
-    title: "Sign up for updates",
-    description:
-      "Subscribe to email notifications to receive updates on events like: when the official conference schedule is posted, virtual and in-person event details, and more.",
-    button: (
-      <div className="flex h-[56px] mt-[26px] items-center rounded-lg border border-dark-600">
-        <input
-          type="email"
-          className="bg-transparent py-[14px] px-[26px] h-full w-3/4 text-[18px] focus:outline-none indent-3"
-          placeholder="Your email address"
-        />
-        <Button
-          text="Subscribe"
-          className="text-sm h-full w-1/4 border-none rounded-none"
-        />
-      </div>
-    ),
-  },
+  // {
+  //   title: "Sign up for updates",
+  //   description:
+  //     "Subscribe to email notifications to receive updates on events like: when the official conference schedule is posted, virtual and in-person event details, and more.",
+  //   button: (
+  //     <div className="flex h-[56px] mt-[26px] items-center rounded-lg border border-dark-600">
+  //       <input
+  //         type="email"
+  //         className="bg-transparent py-[14px] px-[26px] h-full w-3/4 text-[18px] focus:outline-none indent-3"
+  //         placeholder="Your email address"
+  //       />
+  //       <Button
+  //         text="Subscribe"
+  //         className="text-sm h-full w-1/4 border-none rounded-none"
+  //       />
+  //     </div>
+  //   ),
+  // },
 ];
 
 function Header() {
   return (
     <div>
-      <div className="mt-10 flex justify-center relative z-50 h-[43vh]">
-        <div className="absolute flex flex-col items-center text-white w-2/4 sm:w-full">
-          <Logo className="" height="112px" width="112px" />
-          <div className="text-center leading-[7rem]">
-            <h1 className="mt-5 text-[100px] sm:text-4xl font-black">
-              AsyncAPI
-            </h1>
-            <h1 className="mt-5 text-[100px] sm:text-4xl -mt-1 font-black">
-              {" "}
-              Conf 2022
-            </h1>
-          </div>
-          <h4 className="mt-4 text-[30px] font-[500]">
-            A Virtual Tech Conference
-          </h4>
-          <h4 className="mt-1 text-dark-400 font-[400] text-[28px]">
-            Nov 6-8 * Online via live stream
-          </h4>
-          <div className="flex mt-4">
-            <Button
-              text="View Schedule"
-              link="/schedule"
-              className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl"
-            />
-            <Button
-              text="Register for free"
-              link="https://cvent.me/R5G740"
-              className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient"
-            />
+      <div>
+        <div className="mobile-headerbg lg:hidden"></div>
+        <div className="mt-10 flex justify-center relative z-50 h-[43vh] md:absolute md:w-full">
+          <div className="absolute flex flex-col items-center text-white w-2/4 md:w-full md:relative">
+            <Logo className="" height="112px" width="112px" />
+            <div className="text-center leading-[7rem]">
+              <h1 className="mt-5 text-[100px] md:text-5xl font-black">
+                AsyncAPI
+              </h1>
+              <h1 className="mt-5 text-[100px] md:text-5xl -mt-1 font-black">
+                {" "}
+                Conf 2022
+              </h1>
+            </div>
+            <h4 className="mt-4 text-[30px] font-[500] md:text-[20px]">
+              A Virtual Tech Conference
+            </h4>
+            <h4 className="mt-1 text-dark-400 text-center font-[400] text-[28px] md:text-[19px]">
+              Nov 6-8 * Online via live stream
+            </h4>
+            <div className="flex mt-4">
+              <Button
+                text="View Schedule"
+                link="/schedule"
+                className="text-[21px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
+              />
+              <Button
+                text="Register for free"
+                link="https://cvent.me/R5G740"
+                className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+              />
+            </div>
           </div>
         </div>
+        <img
+          src="/img/architecture.svg"
+          alt="architecture"
+          className="mt-[60px] w-[100%]"
+        />
       </div>
-      <img
-        src="/img/architecture.svg"
-        alt="architecture"
-        className="mt-[60px] w-[100%]"
-      />
-      <div className="container mx-auto -mt-20 w-full flex justify-center items-center relative pb-[84px]">
-        <div className="w-full relative">
+      <div className="container -mt-20 w-full flex justify-center items-center relative pb-[84px] md:mt-[200px]">
+        <div className="w-full relative lg:h-[100vh]">
           <div className="absolute w-full h-full">
-            <div className="top-[270px] right-[20%] absolute">
+            <div className="top-[270px] right-[20%] absolute md:hidden">
               <Stroke1 className="mt-0 ml-[70px] w-[320px] h-[222px]" />
               <Stroke2 className="-mt-[240px] w-[320px] h-[222px] absolute z-[99]" />
             </div>
-            <div className="w-full">
+            <div className="w-full md:hidden">
               <Step className="absolute right-0 bottom-0" />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 text-white">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-1 text-white">
             {data.map((list, i) => (
               <div
                 key={i}
-                className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14"
+                className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14 md:p-8"
               >
-                <h1 className="font-bold text-[32px] mb-4">{list.title}</h1>
-                <p className="text-[18px] text-dark-500 leading-[29px] font-[300]">
+                <h1 className="font-bold text-[32px] mb-4 md:text-[20px]">
+                  {list.title}
+                </h1>
+                <p className="text-[18px] md:text-[16px] text-dark-500 leading-[29px] font-[300]">
                   {list.description}
                 </p>
                 {list.button}

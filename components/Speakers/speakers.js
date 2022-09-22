@@ -8,17 +8,17 @@ import Link from 'next/link';
 
 function Speakers() {
   return (
-    <div className="speakers-bg h-[958px] relative overflow-hidden">
+    <div className="speakers-bg h-[958px] relative overflow-hidden md:h-[auto]">
       <div className="container mx-auto w-full">
-        <div className="absolute right-0 top-[80px]">
+        <div className="absolute right-0 top-[80px] md:top-[0]">
           <div className="relative h-[25rem]">
-            <Tower className="absolute right-[20px]" />
+            <Tower className="absolute right-[20px] md:w-[130px] md:right-[-40px] md:top-[-50px]" />
           </div>
-          <Stack className="mt-[30px]" />
+          <Stack className="mt-[30px] md:w-[200px]" />
         </div>
-        <div className="pt-[100px]">
-          <h1 className="text-[84px] text-center text-white font-[400] tracking-tight">Speakers</h1>
-          <div className="mt-[46px]">
+        <div className="pt-[100px] md:pt-[50px]">
+          <h1 className="text-[84px] text-center text-white font-[400] tracking-tight md:text-[30px]">Speakers</h1>
+          <div className="mt-[46px] md:mb-[100px]">
             <CardSlider>
               {speakers.map((speaker) => (
                 <div key={speaker.name} className="">

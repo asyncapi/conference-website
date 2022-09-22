@@ -1,14 +1,30 @@
 import Slider from "react-slick";
 import Arrow from "../illustrations/arrow";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useMediaQuery } from "react-responsive";
 
 function CardSlider({children, dotPosition}) {
+    const isDesktop = useMediaQuery({minWidth: "1224px"});
+     const isTablet = useMediaQuery({ maxWidth: "1224px" });
+     const isMobile = useMediaQuery({ maxWidth: "500px" });
+     const [slides, setSlides] = useState(3)
+     useEffect(() => {
+      if(isTablet){
+        setSlides(2)
+      }
+      if(isMobile){
+        setSlides(1)
+      }
+      if(isDesktop){
+        setSlides(3)
+      }
+     },[isMobile, isTablet])
         const slider = React.useRef(null);
         const settings = {
           dots: true,
           speed: 500,
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: slides,
+          slidesToScroll: slides,
           arrows: false,
           appendDots: (dots) => (
             <div
@@ -16,7 +32,7 @@ function CardSlider({children, dotPosition}) {
                 borderRadius: "10px",
                 padding: "10px",
                 display: "flex",
-                justifyContent: dotPosition ? dotPosition : "start",
+                justifyContent: isTablet ? "center" : "start",
                 bottom: "-85px",
                 alignItems: "center",
               }}
