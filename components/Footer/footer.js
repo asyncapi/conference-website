@@ -25,13 +25,13 @@ function Footer() {
   return (
     <div className="mt-[123px] border border-0 border-t border-dark-500">
       <div className="container mx-auto w-full  h-[303px] flex items-center">
-        <div className="flex justify-between w-full sm:flex-col sm:items-center">
-          <div className="sm:mt-40 text-center w-full sm:flex sm:flex-col sm:items-center">
+        <div className="flex justify-between w-full md:flex-col sm:items-center">
+          <div className="md:mt-40 md:text-center sm:text-left w-full md:flex md:flex-col md:items-center">
             <ConfLogo width="210px" height="44px" />
             <h4 className="mt-5 lg:hidden text-dark-400 text-[14px]">
               Virtual Tech Conference
             </h4>
-            <div className="mt-20 border border-0 border-t border-dark-500 w-full" />
+            <div className="lg:hidden mt-20 border border-0 border-t border-dark-500 w-full lg:hidden" />
             <div className="mt-[76px] sm:mt-[40px] text-dark-500 text-[14px]">
               <a
                 href="https://events.linuxfoundation.org/about/code-of-conduct/"
@@ -44,7 +44,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <div className="flex items-center text-white mt-[80px] sm:mt-[20px] sm:w-full sm:items-center sm:mb-10">
+            <div className="flex items-center text-white mt-[80px] md:mt-[20px] md:w-full md:items-center md:mb-10">
               <h4 className="text-[16px] mr-4">Follow us</h4>
               <div className="flex">
                 {links.map((link, i) => (

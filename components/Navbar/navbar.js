@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../illustrations/logo';
+import ConfLogo from "../illustrations/confLogo";
 // import Button from '../Button/button';
 import Link from 'next/link';
 
@@ -9,15 +10,11 @@ function Navbar() {
       <div className="flex items-center sm:justify-between text-white sm:w-full">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <Logo width="40px" height="40px" />
-            <div className="ml-3 text-3xl">
-              <span className="font-black">Conf </span>{" "}
-              <span className="font-thin">2022</span>
-            </div>
+            <ConfLogo width="210px" height="44px" />
           </div>
         </Link>
       </div>
-      <div className="flex items-center text-white sm:hidden">
+      <div className="flex items-center justify-end text-white w-[50%]">
         <span className="text-[16px] mr-4">Nov 3-5</span>
         {/* <Button
           text="Add to Calendar"
