@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Footer from '../components/Footer/footer';
 import Header from '../components/Header/header';
-import Navbar from "../components/Navbar/navbar";
 // import Recordings from '../components/Recordings/recordings';
 import Speakers from '../components/Speakers/speakers';
 // import Sponsors from '../components/Sponsors/sponsors';
@@ -15,12 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar />
         <Header />
         <Speakers />
         {/* <Sponsors />
         <Recordings /> */}
-        <Footer />
       </main>
     </div>
   );

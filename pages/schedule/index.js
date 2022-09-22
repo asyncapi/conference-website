@@ -1,21 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import Navbar from '../../components/Navbar/navbar'
 import Script from "next/script";
 
 function index() {
   return (
     <div>
-      <Navbar />
       <div className="h-[450px] flex flex-col justify-between relative overflow-hidden">
         <div className="schedule-bg" />
         <div className='relative'>
           <div className="absolute w-full flex justify-center z-[9] mt-10">
             <div className="container text-white text-center w-[1200px]">
-              <h2 className="mt-5 text-[70px] sm:text-4xl font-[400]">
+              <h2 className="mt-5 text-[70px] md:text-4xl font-[400]">
                 Conference Schedule
               </h2>
-              <h4 className="mt-4 text-dark-400 font-[400] text-[22px]">
+              <h4 className="mt-4 text-dark-400 font-[400] text-[22px] md:text-[15px]">
                 This schedule is automatically displayed in Coordinated
                 Universal Time (UTC). To see the schedule in your preferred
                 timezone, please select it from the Timezone drop-down menu to
