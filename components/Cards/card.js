@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card({img, alt, title, summary, optional, children}) {
   return (
-    <div className="card-bg p-[22px] text-white rounded-lg border bg-transparent w-full h-[520px]">
+    <div className="card-bg p-[22px] text-white rounded-lg border bg-transparent w-full min-h-[520px] h-auto">
       {!children && (
         <div>
           <div
