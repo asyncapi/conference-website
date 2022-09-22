@@ -57,7 +57,7 @@ backdrop-filter: blur(36px);
 
 .schedule-bg{
 position: absolute;
-width: 1926px;
+width: 100%;
 height: 455px;
 left: -6px;
 top: -5px;
