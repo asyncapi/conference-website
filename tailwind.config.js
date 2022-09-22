@@ -24,6 +24,7 @@ module.exports = {
     },
     backgroundImage: {
       architectureCover: "url('/img/architecture.svg')",
+      schBg1: "url('/img/scheduleArcLeft.svg')",
     },
     extend: {
       colors: {

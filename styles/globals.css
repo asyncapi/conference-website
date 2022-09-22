@@ -54,3 +54,20 @@ backdrop-filter: blur(36px);
 .container{
   max-width: 1400px;
 }
+
+.schedule-bg{
+position: absolute;
+width: 1926px;
+height: 455px;
+left: -6px;
+top: -5px;
+
+background: linear-gradient(180deg, #241E31 35.94%, rgba(36, 30, 49, 0.67) 100%);
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+}
