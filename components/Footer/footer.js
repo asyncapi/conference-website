@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from "../illustrations/logo";
-import Button from "../Button/button";
+import ConfLogo from '../illustrations/confLogo';
 import Github from "../illustrations/github";
 import Linkedin from "../illustrations/linkedIn";
 import Twitter from "../illustrations/twitter";
@@ -25,18 +25,18 @@ function Footer() {
   return (
     <div className="mt-[123px] border border-0 border-t border-dark-500">
       <div className="container mx-auto w-full  h-[303px] flex items-center">
-        <div className="flex justify-between w-full">
-          <div className=''>
-            <div className="flex items-center">
-              <Logo width="50px" height="50px" />
-              <div className="ml-3 text-white flex">
-                <div className="font-black text-3xl">Conf </div>{" "}
-                <div className="font-thin text-3xl ml-2">2022</div>
-              </div>
-            </div>
-            <div className="mt-[76px] text-dark-500 text-[14px]">
+        <div className="flex justify-between w-full sm:flex-col sm:items-center">
+          <div className="sm:mt-40 text-center w-full sm:flex sm:flex-col sm:items-center">
+            <ConfLogo width="210px" height="44px" />
+            <h4 className="mt-5 lg:hidden text-dark-400 text-[14px]">
+              Virtual Tech Conference
+            </h4>
+            <div className="mt-20 border border-0 border-t border-dark-500 w-full" />
+            <div className="mt-[76px] sm:mt-[40px] text-dark-500 text-[14px]">
               <a
-                href="https://events.linuxfoundation.org/about/code-of-conduct/" target="_blank" rel="noreferrer"
+                href="https://events.linuxfoundation.org/about/code-of-conduct/"
+                target="_blank"
+                rel="noreferrer"
                 className="underline"
               >
                 Code of Conduct
@@ -44,8 +44,8 @@ function Footer() {
             </div>
           </div>
           <div>
-            <div className="flex md:block items-center text-white mt-[80px]">
-              <span className="text-[16px] mr-4">Follow us</span>
+            <div className="flex items-center text-white mt-[80px] sm:mt-[20px] sm:w-full sm:items-center sm:mb-10">
+              <h4 className="text-[16px] mr-4">Follow us</h4>
               <div className="flex">
                 {links.map((link, i) => (
                   <a key={i} href={link.href} target="_blank" rel="noreferrer">
