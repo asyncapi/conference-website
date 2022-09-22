@@ -17,8 +17,8 @@ function Card({img, alt, title, summary, optional, children}) {
             )}
           </div>
           <div className="mt-[16px]">
-            <h2 className="font-bold text-[24px]">{title}</h2>
-            <p className="mt-[8px] text-[18px]">{summary}</p>
+            <h2 className="font-[600] text-[24px]">{title}</h2>
+            <p className="mt-[8px] text-[18px] font-[400]">{summary}</p>
             {optional}
           </div>
         </div>

@@ -67,8 +67,12 @@ function Header() {
               Conf 2022
             </h1>
           </div>
-          <p className="mt-4 text-[30px]">Virtual Tech Conference</p>
-          <p className="mt-1 text-dark-400 text-[28px]">Nov 3-5</p>
+          <h4 className="mt-4 text-[30px] font-[500]">
+            A Virtual Tech Conference
+          </h4>
+          <h4 className="mt-1 text-dark-400 font-[400] text-[28px]">
+            Nov 6-8 * Online via live stream
+          </h4>
           <div className="flex mt-4">
             <Button
               text="View Schedule"
@@ -106,7 +110,7 @@ function Header() {
                 className="h-fit bg-[rgba(36, 30, 49, 0.8)] backdrop-blur-sm border rounded-lg border-dark-600 p-14"
               >
                 <h1 className="font-bold text-[32px] mb-4">{list.title}</h1>
-                <p className="text-[18px] text-dark-500 leading-[29px]">
+                <p className="text-[18px] text-dark-500 leading-[29px] font-[300]">
                   {list.description}
                 </p>
                 {list.button}

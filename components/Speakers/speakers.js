@@ -17,7 +17,7 @@ function Speakers() {
           <Stack className="mt-[30px]" />
         </div>
         <div className="pt-[100px]">
-          <h1 className="text-[84px] text-white tracking-tight">Speakers</h1>
+          <h1 className="text-[84px] text-center text-white font-[400] tracking-tight">Speakers</h1>
           <div className="mt-[46px]">
             <CardSlider>
               {speakers.map((speaker) => (

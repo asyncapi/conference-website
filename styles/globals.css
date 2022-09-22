@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Work+Sans:wght@300;400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,14 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
+}
+
+h4{
+font-family: 'Fira Code';
+}
+
+p{
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -55,6 +64,9 @@ backdrop-filter: blur(36px);
   max-width: 1400px;
 }
 
+.btn{
+  font-family: 'Fira Code';
+}
 .btn:hover{
   background: linear-gradient(270deg, rgba(135, 90, 226, 0.7) 0%, rgba(71, 188, 238, 0.7) 100%);
   border: 1px solid #675788;
