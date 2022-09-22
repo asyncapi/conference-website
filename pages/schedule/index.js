@@ -10,17 +10,17 @@ function index() {
       <div className="h-[450px] flex flex-col justify-between relative overflow-hidden">
         <div className="schedule-bg" />
         <div className='relative'>
-          <div className="absolute w-full flex justify-center z-[9]">
+          <div className="absolute w-full flex justify-center z-[9] mt-10">
             <div className="container text-white text-center w-[1200px]">
-              <h1 className="mt-5 text-[100px] sm:text-4xl font-black">
-                Schedule
-              </h1>
-              <p className="mt-4 text-dark-400 text-[28px]">
+              <h2 className="mt-5 text-[70px] sm:text-4xl font-[400]">
+                Conference Schedule
+              </h2>
+              <h4 className="mt-4 text-dark-400 font-[400] text-[22px]">
                 This schedule is automatically displayed in Coordinated
                 Universal Time (UTC). To see the schedule in your preferred
                 timezone, please select it from the Timezone drop-down menu to
                 the right, above "Filter by Date."
-              </p>
+              </h4>
             </div>
           </div>
         </div>
