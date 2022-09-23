@@ -55,7 +55,7 @@ function Header() {
               A Virtual Tech Conference
             </h4>
             <h4 className="mt-1 text-dark-400 text-center font-[400] text-[28px] md:text-[19px]">
-              Nov 6-8 * Online via live stream
+              Nov 3-5 * Online via live stream
             </h4>
             <div className="flex mt-4">
               <Button
