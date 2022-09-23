@@ -77,7 +77,7 @@ function Header() {
           className="mt-[60px] w-[100%]"
         />
       </div>
-      <div className="container -mt-20 w-full flex justify-center items-center relative pb-[84px] md:mt-[200px]">
+      <div className="container mx-auto -mt-20 w-full flex justify-center items-center relative pb-[84px] md:mt-[200px]">
         <div className="w-full relative lg:h-[100vh]">
           <div className="absolute w-full h-full">
             <div className="top-[270px] right-[20%] absolute md:hidden">
