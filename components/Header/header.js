@@ -27,7 +27,7 @@ const data = [
     button: (
       <Button
         text="Become a sponsor"
-        link="https://github.com/asyncapi/community/files/9568764/Sponsorship_Prospectus_2022_v2.pdf"
+        link="https://github.com/asyncapi/community/files/9616803/Sponsorship_Prospectus_2022_v4.pdf"
         className="text-[21px] py-[14px] px-[26px] mt-4 btn-gradient"
       />
     ),
