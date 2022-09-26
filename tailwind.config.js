@@ -1,9 +1,10 @@
 const colors = require("tailwindcss/colors");
 
 const dark = {
+  300: "#E8E2F4",
   400: "#C6BED9",
   500: "#9081B0",
-  600: "#A8A1B61A",
+  600: "#675788",
   700: "#453763",
 };
 
@@ -32,9 +33,11 @@ module.exports = {
         dark: dark,
         "fainted-white": "#797393",
         "fainted-paint": "#ad7dfa",
+        "dark-gray": "#3A304F",
         "dark-paint": "#C6BED9",
         "fainted-gray": "#151034",
         "tetiary-pink": "#E50E99",
+        "default-btn": "#A8A1B6"
       },
       height: {
         72: "18rem",
@@ -66,6 +69,9 @@ module.exports = {
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
     },
+    fontFamily: {
+      'secondary': ['Fira Code', 'monospace']
+    }
   },
   plugins: [],
 };

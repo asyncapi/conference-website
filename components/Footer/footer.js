@@ -23,7 +23,7 @@ const links = [
 
 function Footer() {
   return (
-    <div className="border border-0 border-t border-dark-500">
+    <div className="border border-0 border-t border-dark-gray">
       <div className="container mx-auto w-full  h-[303px] flex items-center">
         <div className="flex justify-between w-full md:flex-col sm:items-center">
           <div className="md:mt-40 md:text-center sm:text-left w-full md:flex md:flex-col md:items-center">
@@ -45,11 +45,11 @@ function Footer() {
           </div>
           <div className='lg:w-[50%] lg:flex lg:justify-end'>
             <div className="flex items-center text-white mt-[80px] md:mt-[20px] md:w-full md:items-center md:mb-10 md:justify-center">
-              <h4 className="text-[16px] mr-4">Follow us</h4>
+              <h4 className="font-secondary text-dark-400 font-[700] text-[16px] mr-4">Follow us</h4>
               <div className="flex">
                 {links.map((link, i) => (
                   <a key={i} href={link.href} target="_blank" rel="noreferrer">
-                    <button className="p-[8px] bg-dark-600 rounded-lg ml-[12px] backdrop-blur-xl border border-dark-500">
+                    <button className="p-[8px] bg-default-btn/10 hover:bg-default-btn/30 transition ease-in-out duration-150 rounded-lg ml-[12px] backdrop-blur-xl border border-dark-600">
                       {link.icon}
                     </button>
                   </a>

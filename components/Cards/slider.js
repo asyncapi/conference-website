@@ -46,7 +46,7 @@ function CardSlider({children, dotPosition}) {
                 }
               >
                 <Arrow
-                  className="rotate-[180deg]"
+                  className="rotate-[180deg] w-[32px] h-[30px]"
                   stroke={
                     slider.current &&
                     slider.current.innerSlider.state.currentSlide === 0 &&
@@ -80,6 +80,7 @@ function CardSlider({children, dotPosition}) {
                 }
               >
                 <Arrow
+                  className="w-[32px] h-[30px]"
                   stroke={
                     slider.current &&
                     slider.current.innerSlider.state.currentSlide ===
