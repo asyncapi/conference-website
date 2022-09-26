@@ -17,7 +17,9 @@ function Speakers() {
           <Stack className="mt-[30px] md:w-[200px]" />
         </div>
         <div className="pt-[100px] md:pt-[50px]">
-          <h1 className="text-[84px] text-center text-white font-[400] tracking-tight md:text-[30px]">Speakers</h1>
+          <h1 className="text-[84px] text-center text-white font-[400] tracking-tight md:text-[30px]">
+            Speakers
+          </h1>
           <div className="mt-[46px] md:mb-[100px]">
             <CardSlider>
               {speakers.map((speaker) => (
@@ -30,8 +32,8 @@ function Speakers() {
                   />
                 </div>
               ))}
-              <Card>
-                <div className="justify-center flex flex-col items-center h-full">
+              <Card className="flex flex-col justify-center items-center">
+                <div className="h-full">
                   <Link href="/schedule">
                     <h4 className="cursor-pointer underline">
                       View all speakers & schedule

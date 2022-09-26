@@ -6,14 +6,12 @@ function Card({img, alt, title, summary, optional, children}) {
       {!children && (
         <div>
           <div
-            style={{
-              height: "70%",
-            }}
+          className='h-[70%] border rounded-md'
           >
             {img ? (
               <img src={img} alt={alt} className="w-full h-full rounded-md" />
             ) : (
-              <div className="h-full w-full bg-dark-500 rounded-md">jehe</div>
+              <div className="h-full w-full bg-dark-500 rounded-md"></div>
             )}
           </div>
           <div className="mt-[16px]">

@@ -23,7 +23,7 @@ const links = [
 
 function Footer() {
   return (
-    <div className="mt-[123px] border border-0 border-t border-dark-500">
+    <div className="border border-0 border-t border-dark-500">
       <div className="container mx-auto w-full  h-[303px] flex items-center">
         <div className="flex justify-between w-full md:flex-col sm:items-center">
           <div className="md:mt-40 md:text-center sm:text-left w-full md:flex md:flex-col md:items-center">
@@ -43,8 +43,8 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div>
-            <div className="flex items-center text-white mt-[80px] md:mt-[20px] md:w-full md:items-center md:mb-10">
+          <div className='lg:w-[50%] lg:flex lg:justify-end'>
+            <div className="flex items-center text-white mt-[80px] md:mt-[20px] md:w-full md:items-center md:mb-10 md:justify-center">
               <h4 className="text-[16px] mr-4">Follow us</h4>
               <div className="flex">
                 {links.map((link, i) => (

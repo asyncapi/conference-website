@@ -32,7 +32,7 @@ function CardSlider({children, dotPosition}) {
                 borderRadius: "10px",
                 padding: "10px",
                 display: "flex",
-                justifyContent: isTablet ? "center" : "start",
+                justifyContent: "center",
                 bottom: "-85px",
                 alignItems: "center",
               }}
@@ -56,11 +56,12 @@ function CardSlider({children, dotPosition}) {
               </button>
               <ul style={{ margin: "0px" }}>
                 {dots.map((d) => {
+                  console.log(d.props.className)
                   return (
                     <li
                       key={d.key}
-                      className={`w-[11px] h-[11px] bg-dark-700 rounded-full ${
-                        d.props.className && "bg-white"
+                      className={`w-[11px] h-[11px] rounded-full ${
+                        (d.props.className && "bg-white") || "bg-dark-700"
                       }`}
                     ></li>
                   );
@@ -69,7 +70,6 @@ function CardSlider({children, dotPosition}) {
               <button
                 onClick={() => {
                   console.log(slider.current.innerSlider.state);
-                  console.log(dots.length);
                   slider?.current?.slickNext();
                 }}
                 className="ml-[40px]"

@@ -10,6 +10,7 @@ function Navbar() {
         <Link href="/">
           <div className="flex items-center cursor-pointer">
             <ConfLogo className="w-[210px] height-[44px] md:w-[152px] md:h-[32px]"/>
+            <h4 className='ml-5 text-[16px] text-dark-paint'>Virtual Conference</h4>
           </div>
         </Link>
       </div>
