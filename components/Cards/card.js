@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Card({img, alt, title, summary, optional, children}) {
+function Card({img, alt, title, summary, optional, children, className}) {
   return (
-    <div className="card-bg p-[22px] text-white rounded-lg border bg-transparent w-full min-h-[520px] h-auto">
+    <div
+      className={`card-bg p-[22px] text-white rounded-lg border bg-transparent w-full min-h-[550px] h-auto ${className}`}
+    >
       {!children && (
         <div>
-          <div
-          className='h-[70%] border rounded-md'
-          >
+          <div className="h-[70%] border rounded-md">
             {img ? (
               <img src={img} alt={alt} className="w-full h-full rounded-md" />
             ) : (

@@ -73,7 +73,7 @@ backdrop-filter: blur(36px);
 
 .btn{
   font-family: 'Fira Code';
-  transition: .3s;
+  transition: ease-in-out .3s;
 }
 .btn:hover{
   background: linear-gradient(270deg, rgba(135, 90, 226, 0.7) 0%, rgba(71, 188, 238, 0.7) 100%);
