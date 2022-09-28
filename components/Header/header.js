@@ -40,11 +40,10 @@ function Header() {
       <div className="overflow-hidden">
         <div className="pt-10 md:pt-0 relative z-50 w-full">
           <div className="md:pt-10 text-center w-full md:relative">
-            
-            { /* Mobile BG Gradient */ }
+            {/* Mobile BG Gradient */}
             <div className="mobile-headerbg lg:hidden"></div>
 
-            { /* Content Container */ }
+            {/* Content Container */}
             <div className="relative z-10">
               <Logo className="w-[72px] h-[72px] m-auto lg:w-[112px] lg:h-[112px]" />
               <div className="text-center text-white">
@@ -76,25 +75,27 @@ function Header() {
               </div>
             </div>
 
-            { /* Image Container */ }
+            {/* Image Container */}
             <div className="w-full max-w-[1600px] mx-auto md:absolute md:top-[-10px] overflow-hidden md:h-full">
               <img
-              src="/img/architecture.svg"
-              alt="architecture"
-              className="w-full mt-[60px] w-[100%] md:w-[150%] md:max-w-[150%] md:left-[50%] md:translate-x-[-50%] md:absolute"/>
+                src="/img/architecture.svg"
+                alt="architecture"
+                className="w-full mt-[60px] w-[100%] md:w-[150%] md:max-w-[150%] md:left-[50%] md:translate-x-[-50%] md:absolute"
+              />
             </div>
-
           </div>
         </div>
       </div>
       <div className="container mx-auto w-full h-[80vh] md:h-auto flex justify-center relative py-10">
         <div className="w-full relative md:h-full">
-          <div className="bottom-[44%] right-[15%] absolute md:hidden">
-            <Stroke1 className="mt-0 ml-[70px] w-[320px] h-[222px]" />
-            <Stroke2 className="-mt-[240px] w-[320px] h-[222px] absolute z-[99]" />
-          </div>
-          <div className="md:hidden absolute right-0 bottom-0">
-            <Step />
+          <div className="absolute w-full h-full">
+            <div className="top-[270px] right-[20%] absolute md:hidden">
+              <Stroke1 className="mt-0 ml-[70px] w-[320px] h-[222px]" />
+              <Stroke2 className="-mt-[240px] w-[320px] h-[222px] absolute z-[99]" />
+            </div>
+            <div className="w-full md:hidden">
+              <Step className="absolute right-0 bottom-0" />
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-1 text-white">
             {data.map((list, i) => (
