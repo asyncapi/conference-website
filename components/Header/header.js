@@ -88,7 +88,6 @@ function Header() {
       </div>
       <div className="container mx-auto w-full h-[80vh] md:h-auto flex justify-center relative py-10">
         <div className="w-full relative md:h-full">
-          <div className="absolute w-full h-full">
             <div className="top-[270px] right-[20%] absolute md:hidden">
               <Stroke1 className="mt-0 ml-[70px] w-[320px] h-[222px]" />
               <Stroke2 className="-mt-[240px] w-[320px] h-[222px] absolute z-[99]" />
@@ -96,7 +95,6 @@ function Header() {
             <div className="w-full md:hidden">
               <Step className="absolute right-0 bottom-0" />
             </div>
-          </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-1 text-white">
             {data.map((list, i) => (
               <div
