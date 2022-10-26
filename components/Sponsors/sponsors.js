@@ -21,3 +21,5 @@ function Sponsors() {
     </div>
   );
 }
+
+export default Sponsors;
