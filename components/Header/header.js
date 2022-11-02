@@ -16,6 +16,7 @@ const data = [
     button: (
       <Button
         text="Visit the AsyncAPI Website"
+        target="_blank"
         link="https://www.asyncapi.com/"
         className="text-[21px] py-[14px] px-[26px] mt-[32px]"
       />
@@ -74,27 +75,37 @@ function Header() {
                 A Virtual Tech Conference
               </h4>
               <h4 className="mt-1 text-dark-400 text-center font-[400] text-[28px] tracking-[0.03em] md:text-[19px]">
-                Nov 3-5 * Online via live stream
+                <span>Nov 3-5 * Online via live stream</span>
+                {details && (
+                  <span>. Day {details.day} is running!</span>
+                )}
               </h4>
               <div className="flex justify-center mt-8">
                 <Button
                   text="View Schedule"
                   link="/schedule"
-                  className="text-[21px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
+                  className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
                 />
-                <Button
-                  text="Register for free"
-                  link="https://cvent.me/R5G740"
-                  className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
-                />
+                {details ? (
+                  <Button
+                    text="Comment in #conference2022"
+                    link="https://asyncapi.slack.com/archives/C047CGM2D2N"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+                  />
+                ) : (
+                  <Button
+                    text="Register for free"
+                    link="https://cvent.me/R5G740"
+                    className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+                  />
+                )}
               </div>
             </div>
 
             {details && (
               <div className="my-12">
-                <h4 className="text-[30px] font-[500] md:text-[20px] tracking-[0.03em] text-white">
-                  AsyncAPI Conference 2022 Day {details.day} is running!
-                </h4>
                 <div className='mx-auto mt-8 max-w-7xl'>
                   <YouTube id={details.ytId} />
                 </div>

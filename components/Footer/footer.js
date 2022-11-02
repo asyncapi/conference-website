@@ -12,7 +12,7 @@ const links = [
     icon: <Github />,
   },
   {
-    href: "ttps://twitter.com/AsyncAPISpec",
+    href: "https://twitter.com/AsyncAPISpec",
     icon: <Twitter />,
   },
   {
