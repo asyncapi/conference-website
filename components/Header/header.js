@@ -36,7 +36,7 @@ const data = [
 ];
 
 function getConferenceDetails() {
-  const day = 4 //new Date().getUTCDate();
+  const day = new Date().getUTCDate();
   switch (day) {
     // 3rd November
     case 3: return { day: 1, ytId: 'NTHsezlKBh8' };
