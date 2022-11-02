@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import YouTube from 'react-youtube-embed'
 import Button from "../Button/button";
 import Logo from "../illustrations/logo";
 import Stroke1 from "../illustrations/stroke1";
@@ -15,6 +16,7 @@ const data = [
     button: (
       <Button
         text="Visit the AsyncAPI Website"
+        target="_blank"
         link="https://www.asyncapi.com/"
         className="text-[21px] py-[14px] px-[26px] mt-[32px]"
       />
@@ -34,7 +36,21 @@ const data = [
   },
 ];
 
+function getConferenceDetails() {
+  const day = new Date().getUTCDate();
+  switch (day) {
+    // 3rd November
+    case 3: return { day: 1, ytId: 'NTHsezlKBh8' };
+    // 4th November
+    case 4: return { day: 2, ytId: '8khuAfL7TSE' };
+    // 5th November
+    case 5: return { day: 3, ytId: 'R8PYWXDDZbI' };
+  }
+}
+
 function Header() {
+  const details = getConferenceDetails();
+
   return (
     <div>
       <div className="overflow-hidden">
@@ -59,21 +75,42 @@ function Header() {
                 A Virtual Tech Conference
               </h4>
               <h4 className="mt-1 text-dark-400 text-center font-[400] text-[28px] tracking-[0.03em] md:text-[19px]">
-                Nov 3-5 * Online via live stream
+                <span>Nov 3-5 * Online via live stream</span>
+                {details && (
+                  <span>. Day {details.day} is running!</span>
+                )}
               </h4>
               <div className="flex justify-center mt-8">
                 <Button
                   text="View Schedule"
                   link="/schedule"
-                  className="text-[21px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
+                  className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
                 />
-                <Button
-                  text="Register for free"
-                  link="https://cvent.me/R5G740"
-                  className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
-                />
+                {details ? (
+                  <Button
+                    text="Comment in #conference2022"
+                    link="https://asyncapi.slack.com/archives/C047CGM2D2N"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+                  />
+                ) : (
+                  <Button
+                    text="Register for free"
+                    link="https://cvent.me/R5G740"
+                    className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+                  />
+                )}
               </div>
             </div>
+
+            {details && (
+              <div className="my-12">
+                <div className='mx-auto mt-8 max-w-7xl'>
+                  <YouTube id={details.ytId} />
+                </div>
+              </div>
+            )}
 
             {/* Image Container */}
             <div className="w-full max-w-[1600px] mx-auto md:absolute md:top-[-10px] overflow-hidden md:h-full">

@@ -21,6 +21,7 @@
     "react-scrollspy": "^3.4.3",
     "react-select": "^5.3.2",
     "react-slick": "^0.29.0",
+    "react-youtube-embed": "^1.0.3",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
