@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import YouTube from 'react-youtube-embed'
 import Button from "../Button/button";
 import Logo from "../illustrations/logo";
 import Stroke1 from "../illustrations/stroke1";
@@ -34,7 +35,21 @@ const data = [
   },
 ];
 
+function getConferenceDetails() {
+  const day = 4 //new Date().getUTCDate();
+  switch (day) {
+    // 3rd November
+    case 3: return { day: 1, ytId: 'NTHsezlKBh8' };
+    // 4th November
+    case 4: return { day: 2, ytId: '8khuAfL7TSE' };
+    // 5th November
+    case 5: return { day: 3, ytId: 'R8PYWXDDZbI' };
+  }
+}
+
 function Header() {
+  const details = getConferenceDetails();
+
   return (
     <div>
       <div className="overflow-hidden">
@@ -74,6 +89,17 @@ function Header() {
                 />
               </div>
             </div>
+
+            {details && (
+              <div className="my-12">
+                <h4 className="text-[30px] font-[500] md:text-[20px] tracking-[0.03em] text-white">
+                  AsyncAPI Conference 2022 Day {details.day} is running!
+                </h4>
+                <div className='mx-auto mt-8 max-w-7xl'>
+                  <YouTube id={details.ytId} />
+                </div>
+              </div>
+            )}
 
             {/* Image Container */}
             <div className="w-full max-w-[1600px] mx-auto md:absolute md:top-[-10px] overflow-hidden md:h-full">
