@@ -38,6 +38,14 @@ const data = [
 
 function getConferenceDetails() {
   const day = new Date().getUTCDate();
+  const month = new Date().getUTCMonth();
+  const year = new Date().getUTCFullYear();
+
+  // month=10 is November
+  if (year > 2022 || month !== 10) {
+    return;
+  }
+
   switch (day) {
     // 3rd November
     case 3: return { day: 1, ytId: 'NTHsezlKBh8' };
@@ -75,29 +83,35 @@ function Header() {
                 A Virtual Tech Conference
               </h4>
               <h4 className="mt-1 text-dark-400 text-center font-[400] text-[28px] tracking-[0.03em] md:text-[19px]">
-                <span>Nov 3-5 * Online via live stream</span>
-                {details && (
-                  <span>. Day {details.day} is running!</span>
+                {details ? (
+                  <span>Nov 3-5 * Online via live stream. Day {details.day} is running!</span>
+                ) : (
+                  <div>
+                    <span className="block">Nov 3-5 * Online via live stream.</span>
+                    <span className="block">Conference has ended. Good news, you can still watch the recording!</span>
+                  </div>
                 )}
               </h4>
               <div className="flex justify-center mt-8">
-                <Button
-                  text="View Schedule"
-                  link="/schedule"
-                  className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
-                />
                 {details ? (
-                  <Button
-                    text="Comment in #conference2022"
-                    link="https://asyncapi.slack.com/archives/C047CGM2D2N"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
-                  />
+                  <>
+                    <Button
+                      text="View Schedule"
+                      link="/schedule"
+                      className="text-[21px] py-[14px] px-[26px] backdrop-blur-xl md:text-[14px] md:px-[10px]"
+                    />
+                    <Button
+                      text="Comment in #conference2022"
+                      link="https://asyncapi.slack.com/archives/C047CGM2D2N"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
+                    />
+                  </>
                 ) : (
                   <Button
-                    text="Register for free"
-                    link="https://cvent.me/R5G740"
+                    text="Check playlist"
+                    link="https://www.youtube.com/playlist?list=PLbi1gRlP7pijRiA32SU36hD_FW-2qyPhl"
                     className="text-[21px] py-[14px] px-[26px] ml-4 btn-gradient md:py-[10px] md:text-[14px]"
                   />
                 )}
