@@ -16,6 +16,8 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-ga": "^3.3.1",
+    "react-gtm-module": "^2.0.11",
     "react-hot-toast": "^2.2.0",
     "react-responsive": "^9.0.0",
     "react-scrollspy": "^3.4.3",
