@@ -2,7 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+
+First, fork the repository and clone it.
+
+```bash
+git clone https://github.com/<username>/conference-website.git
+```
+
+Install Dependencies
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
