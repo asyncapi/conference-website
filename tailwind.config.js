@@ -73,7 +73,7 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     fontFamily: {
-      'secondary': ['Fira Code', 'monospace']
+      'secondary': ['Work Sans', 'monospace']
     }
   },
   plugins: [],

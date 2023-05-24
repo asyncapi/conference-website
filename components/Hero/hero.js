@@ -1,10 +1,25 @@
 import React from 'react'
 import {FiCalendar,} from 'react-icons/fi'
 import {MdOutlineLocationOn} from 'react-icons/md'
+import dynamic from 'next/dynamic';
+
+const GlobeComponent = dynamic(() => import('./Globe'), {
+  loading: () => <Loader />,
+  ssr: false
+});
+
+const Loader = () => {
+  return (
+    <div className="flex flex-col items-center justify-center h-full">
+      <div className="w-10 h-10 border-4 border-t-0 border-b-0 border-blue-500 rounded-full animate-spin"></div>
+      <div className="mt-4 text-gray-600"></div>
+    </div>
+  );
+};
 
 const Hero = () => {
     return (
-        <div className="flex flex-col lg:flex-row h-screen bg-gradientToRight -mt-20 pl-6 bg-blend-soft-light">
+        <div className="flex flex-col justify-center  lg:flex-row h-screen bg-gradientToRight -mt-20 pl-6 bg-blend-soft-light">
 
           {/* Left Side */}
           <div className="flex flex-col justify-center items-start w-full lg:w-1/2  text-white p-10">
@@ -30,9 +45,9 @@ const Hero = () => {
           </div>
     
           {/* Right Side */}
-          <div className="w-full lg:w-1/2 ">
+          <div className="w-full lg:w-1/2 hidden lg:block">
             {/* Place your three.js code here to render the rotating globe */}
-            apple
+            <GlobeComponent />
           </div>
 
         </div>
