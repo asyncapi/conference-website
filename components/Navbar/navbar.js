@@ -10,12 +10,15 @@ function Navbar() {
         <Link href="/">
           <div className="flex items-center cursor-pointer">
             <ConfLogo className="w-[210px] height-[44px] md:w-[152px] md:h-[32px]"/>
-            <h4 className='ml-5 text-[16px] tracking-[0.03em] text-dark-400 font-secondary font-[400] md:hidden'>Virtual Conference</h4>
+            {/* <h4 className='ml-5 text-[16px] tracking-[0.03em] text-dark-400 font-secondary font-[400] md:hidden'>Virtual Conference</h4> */}
           </div>
         </Link>
       </div>
       <div className="flex items-center justify-end text-white w-[50%]">
-        <span className="font-secondary text-dark-400 text-[16px] tracking-[0.03em] mr-4">Nov 3-5</span>
+        <span className="font-secondary text-dark-400 text-[16px] tracking-[0.03em] mr-4">About</span>
+        <span className="font-secondary text-dark-400 text-[16px] tracking-[0.03em] mr-4">Venu</span>
+        <span className="font-secondary text-dark-400 text-[16px] tracking-[0.03em] mr-4">Speakers</span>
+        <span className="font-secondary text-dark-400 text-[16px] tracking-[0.03em] mr-4">Sponsors</span>
         {/* <Button
           text="Add to Calendar"
           className="text-[16px] py-[8px] px-[14px]"

@@ -61,7 +61,7 @@ function CardSlider({children, dotPosition}) {
                     <li
                       key={d.key}
                       className={`w-[11px] h-[11px] rounded-full ${
-                        (d.props.className && "bg-white") || "bg-dark-700"
+                        (d.props.className && "bg-white") || " bg-slate-100 bg-opacity-40"
                       }`}
                     ></li>
                   );

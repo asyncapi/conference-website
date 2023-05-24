@@ -4,6 +4,9 @@ import Speakers from "../components/Speakers/speakers";
 import Sponsors from "../components/Sponsors/sponsors";
 import ReactGA from 'react-ga'
 import TagManager from 'react-gtm-module'
+import Hero from "../components/Hero/hero";
+import About from "../components/About/about";
+import Venue from "../components/Venue/venue";
 
 export default function Home() {
   if (typeof window !== 'undefined') {
@@ -20,7 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
+        <Hero/>
+        <About/>
+        {/* <Header /> */}
+        <Venue/>
         <Speakers />
         <Sponsors />
       </main>

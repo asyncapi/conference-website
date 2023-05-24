@@ -26,6 +26,9 @@ module.exports = {
     backgroundImage: {
       architectureCover: "url('/img/architecture.svg')",
       schBg1: "url('/img/scheduleArcLeft.svg')",
+      gradientToRight: "linear-gradient(90deg, rgba(2,2,11,1) 0%, rgba(26,49,113,1) 51%, rgba(24,59,164,1) 100%)",
+      buttonGradient: "linear-gradient(29deg, rgba(197,53,232,1) 23%, rgba(24,202,241,1) 80%)",
+      venueGradient: "linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%)"
     },
     extend: {
       colors: {
@@ -40,7 +43,7 @@ module.exports = {
         "default-btn": "#A8A1B6"
       },
       height: {
-        72: "18rem",
+        72: "18rem",    
         80: "20rem",
         88: "22rem",
         96: "24rem",
