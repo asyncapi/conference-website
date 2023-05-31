@@ -60,36 +60,50 @@ export const venues = [
   {
     lat: 40.7128,
     lng: -74.0060,
+    name: "New York",
+    alt: 0.08,
     size: 0.15
   },
   {
     lat: 34.0522,
     lng: -118.2437,
+    name: "Los Angeles",
+    alt: 0.08,
     size: 0.1
   },
   {
     lat: 37.7749,
     lng: -122.4194,
+    name: "San Francisco",
+    alt: 0.08,
     size: 0.12
   },
   {
     lat: 51.5074,
     lng: -0.1278,
+    name: "London",
+    alt: 0.08,
     size: 0.11
   },
   {
     lat: 48.8566,
     lng: 2.3522,
+    name: "Paris",
+    alt: 0.08,
     size: 0.13
   },
   {
     lat: -33.8651,
     lng: 151.2099,
+    name: "Sydney",
+    alt: 0.08,
     size: 0.09
   },
   {
     lat: -26.2041,
     lng: 28.0473,
+    name: "Johannesburg",
+    alt: 0.08,
     size: 0.08
   },
 ];

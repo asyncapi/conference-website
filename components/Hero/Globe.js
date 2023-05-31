@@ -98,6 +98,19 @@ const GlobeComponent = () => {
           ) {
             return "rgba(255,255,255, 1)";
           } else return "rgba(255,255,255, 0.7)";
+        })
+        .customLayerData(venues)
+        .customThreeObject(d => {
+          const marker = new THREE.Mesh(
+            new THREE.SphereGeometry(2),
+            new THREE.MeshBasicMaterial({ color: "#ffffff" })
+          );
+          marker.userData = d;
+
+          return marker;
+        })
+        .customThreeObjectUpdate((obj, d) => {
+          Object.assign(obj.position, Globe.getCoords(d.lat, d.lng, d.alt));
         });
 
       // Arc animations are followed after the globe enters the scene
@@ -117,16 +130,11 @@ const GlobeComponent = () => {
           .arcDashAnimateTime(1000)
           .arcsTransitionDuration(1000)
           .arcDashInitialGap((e) => e.order * 1)
-          .labelDotRadius(0.3)
-          .labelSize((e) => e.size)
-          .labelText("city")
-          .labelResolution(6)
-          .labelAltitude(0.01)
           .pointsData(venues)
           .pointColor(() => "#ffffff")
           .pointsMerge(true)
           .pointAltitude(0.07)
-          .pointRadius(0.05);
+          .pointRadius(0.25);
       }, 1000);
 
       Globe.rotateY(-Math.PI * (5 / 9));
