@@ -28,7 +28,8 @@ module.exports = {
       schBg1: "url('/img/scheduleArcLeft.svg')",
       gradientToRight: "linear-gradient(90deg, rgba(2,2,11,1) 0%, rgba(26,49,113,1) 51%, rgba(24,59,164,1) 100%)",
       buttonGradient: "linear-gradient(29deg, rgba(197,53,232,1) 23%, rgba(24,202,241,1) 80%)",
-      venueGradient: "linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%)"
+      venueGradient: "linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%)",
+      blackGradient: "linear-gradient(0deg, rgba(45,35,66,1) 0%, rgba(58,48,79,1) 97%)",
     },
     extend: {
       colors: {
@@ -58,6 +59,9 @@ module.exports = {
         "full-screen": "100vh",
         beforeHalf: "49%",
       },
+      borderImage: {
+        'gradient': 'linear-gradient(to right, red, yellow) 1',
+      },
     },
     screens: {
       xl: { max: "1279px" },
@@ -76,5 +80,10 @@ module.exports = {
       'secondary': ['Work Sans', 'monospace']
     }
   },
-  plugins: [],
+  variants: {
+    extend:{
+      display: ['group-focus']
+    },
+  },
+  plugins: [require('tailwindcss-gradients'),],
 };

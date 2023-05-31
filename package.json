@@ -26,6 +26,7 @@
     "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
     "slick-carousel": "^1.8.1",
+    "tailwindcss-gradients": "^3.0.0",
     "three": "^0.152.2",
     "three-globe": "^2.27.2"
   },

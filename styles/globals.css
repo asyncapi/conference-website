@@ -108,3 +108,8 @@ z-index: 3;
     height: auto;
   }
 }
+
+.li-gradient:hover {
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #2DCCFD 0%, #AD20E2 100%)1;
+}

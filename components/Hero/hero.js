@@ -40,14 +40,14 @@ const Hero = () => {
             </div>
             <div>
               <button className=" bg-buttonGradient text-white text-sm w-40 h-12 font-semibold rounded-sm py-2 px-4 mr-11">Buy Tickets</button>
-              <button className=" bg-buttonGradient text-white text-sm w-40 h-12 font-semibold rounded-sm py-2 px-4">OR Register</button>
+              {/* <button className=" bg-buttonGradient text-white text-sm w-40 h-12 font-semibold rounded-sm py-2 px-4">OR Register</button> */}
             </div>
           </div>
     
           {/* Right Side */}
           <div className="w-full lg:w-1/2 hidden lg:block">
             {/* Place your three.js code here to render the rotating globe */}
-            <GlobeComponent />
+            {/* <GlobeComponent /> */}
           </div>
 
         </div>
