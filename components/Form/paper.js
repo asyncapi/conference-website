@@ -130,7 +130,6 @@ function Paper() {
               transform: "scaleX(-1)",
             }}
           >
-            {/* <Pattern2 className="w-72 sm:w-12" /> */}
           </div>
         </div>
       </div>
