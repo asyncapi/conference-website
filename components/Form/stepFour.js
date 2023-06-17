@@ -26,7 +26,7 @@ function StepFour({ setStep, setForm, data }) {
           className="bg-tetiary-pink p-3 rounded-md text-white mt-3 float-right w-36"
           disabled={!data.additionalInfo && true}
         >
-          Next
+          Submit
         </button>
       </div>
     </form>
