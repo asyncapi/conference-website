@@ -33,15 +33,15 @@ export default function Home() {
       </div>
       <div>
         <div className="">
-        <h1 className="bg-text absolute -top-[500px] left-[650px] lg:left-[200px]">CO</h1>
+        <h1 className="bg-text absolute -top-[500px] left-[650px] lg:left-[200px] sm:z-[2]">CO</h1>
       </div>
       <div className="">
         <h1 className="bg-text absolute top-[300px] left-[285px] lg:left-[0px]">CONF</h1>
       </div>
       </div>
       <Navbar />
-      <div className='flex mt-[220px] lg:mt-[50px] sm:items-center lg:flex-col'>
-        <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] sm:w-[100%] z-[9]'>
+      <div className='flex mt-[220px] lg:mt-[50px] sm:items-center lg:flex-col z-[1]'>
+        <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] sm:w-[100%]'>
           <h1 className='text-5xl font-bold text-white'>AsyncAPI Conf</h1>
             <h1 className='text-5xl font-bold text-white'>on Tour 2023</h1>
             <p className="mt-10 text-lg">
