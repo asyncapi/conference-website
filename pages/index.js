@@ -33,15 +33,15 @@ export default function Home() {
       </div>
       <div>
         <div className="">
-        <h1 className="bg-text absolute -top-[500px] left-[650px] lg:left-[200px] sm:z-[2]">CO</h1>
+        <h1 className="bg-text absolute -top-[500px] left-[650px] lg:left-[200px] z-[2]">CO</h1>
       </div>
       <div className="">
         <h1 className="bg-text absolute top-[300px] left-[285px] lg:left-[0px]">CONF</h1>
       </div>
       </div>
       <Navbar />
-      <div className='flex mt-[220px] lg:mt-[50px] sm:items-center lg:flex-col z-[1]'>
-        <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] sm:w-[100%]'>
+      <div className='flex mt-[220px] lg:mt-[50px] sm:items-center lg:flex-col'>
+        <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] sm:w-[100%] z-[1]'>
           <h1 className='text-5xl font-bold text-white'>AsyncAPI Conf</h1>
             <h1 className='text-5xl font-bold text-white'>on Tour 2023</h1>
             <p className="mt-10 text-lg">
@@ -63,7 +63,7 @@ export default function Home() {
               <button className='mt-12 bg-white border border-black p-2 text-lg rounded-3xl'>September 20, 2023</button>
           </div>
         </div>
-        <div className='p-9 bg-tetiary-pink -mt-[250px] h-[250px] lg:ml-[350px] lg:mt-[0px] w-[390px] sm:hidden lg:w-[50%] mr-[5px]'>
+        <div className='p-9 bg-tetiary-pink -mt-[250px] h-[250px] lg:ml-[350px] z-[1] lg:mt-[0px] w-[390px] sm:hidden lg:w-[50%] mr-[5px]'>
         </div>
           <div className='p-9 bg-tetiary-pink  w-[390px] mr-[18px] lg:w-[70%] sm:w-[100%] text-lg leading-8 z-[9]'>
             AACoT London Edition will be hosted by IBM, one of the leading technology companies in the world.
