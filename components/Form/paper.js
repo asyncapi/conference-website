@@ -105,7 +105,7 @@ function Paper() {
                         {field.icon}
                       </div>
                       <div
-                        className={`${index === 4 && "hidden"}`}
+                        className={`${index === 3 && "hidden"}`}
                         style={{
                           height: "100%",
                           borderRight: `1px solid ${
