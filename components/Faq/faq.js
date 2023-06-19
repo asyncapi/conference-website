@@ -9,7 +9,7 @@ const faqs = [
 
     {
         q: 'I heard you are hosting events in multiple cities. Will I be able to attend in-person?',
-        a: "We are piloting a set of regional events this year in London, Madrid, and Banglore. Tickets to some of this events are very limited, and will be available when registration is opened later this summer. We'll make all of that information available on the AsyncAPI Conf website when ready!"
+        a: "We are piloting a set of regional events this year in London, Madrid, and Bengaluru. Tickets to some of these events are very limited and will be available when registration is opened later this summer. When ready, we'll make all of that information available on the AsyncAPI Conf website!"
     },
     {
         q: 'Who can submit a talk?',
@@ -28,7 +28,7 @@ const faqs = [
         a: 'No, this is an in-person event; all speakers must deliver their sessions in person.'
     },
     {
-        q: 'Can i get my expenses covered?',
+        q: 'Can I get my expenses covered?',
         a: 'We sponsor conference tickets to Speakers, TSC members, and AsyncAPI Ambassadors.'
     }
 ]

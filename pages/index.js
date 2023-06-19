@@ -4,7 +4,6 @@ import ReactGA from 'react-ga'
 import TagManager from 'react-gtm-module'
 import Navbar from '../components/Navbar/navbar';
 import Subscription from '../components/Form/subscription';
-import Paper from "../components/Form/paper";
 import Faq from "../components/Faq/faq";
 import Arrow from "../components/illustration/arrow";
 import Footer from "../components/Footer/footer";
@@ -49,7 +48,7 @@ export default function Home() {
               Get ready to join the ultimate celebration of cutting-edge technology and innovation with AsyncAPI Conf on Tour (AACoT)!
             </p>
           <div className='mt-[100px]'>
-            <p>GET NOTIFIED WHEN REGISTRATION OPENS</p>
+            <p>GET NOTIFIED ABOUT TICKETS AND CONFERENCE UPDATES</p>
             <div className='mt-8'>
               <Subscription />
             </div>
@@ -58,16 +57,18 @@ export default function Home() {
           </div>
           </div>
         </div>
-        <div className='p-9 bg-tetiary-pink w-[480px] lg:w-[50%] sm:w-[70%] h-[200px] sm:h-[auto] sm:ml-[0px] lg:ml-[100px] text-right lg:text-center z-[1]'>
+        <div className='p-9 bg-tetiary-pink w-[480px] lg:w-[50%] sm:w-[80%] h-[300px] sm:h-[auto] sm:ml-[0px] lg:ml-[100px] text-right lg:text-center z-[1]'>
           <p className='text-md'>LONDON EDITION In <br /> IBM UK LIMITED</p>
-          <button className='mt-12 bg-white border border-black p-2 text-lg rounded-3xl'>September 20, 2023</button>
+            <div>
+              <button className='mt-12 bg-white border border-black p-2 text-lg rounded-3xl'>September 20, 2023</button>
+          </div>
         </div>
         <div className='p-9 bg-tetiary-pink -mt-[250px] h-[250px] lg:ml-[350px] lg:mt-[0px] w-[390px] sm:hidden lg:w-[50%] mr-[5px]'>
         </div>
           <div className='p-9 bg-tetiary-pink  w-[390px] mr-[18px] lg:w-[70%] sm:w-[100%] text-lg leading-8 z-[9]'>
             AACoT London Edition will be hosted by IBM, one of the leading technology companies in the world.
             The conference will take place at IBM's state-of-the-art facilities in London, offering attendees a chance to connect with industry experts and fellow professionals while immersing themselves in the city's vibrant atmosphere.
-            <br />
+            <p className="text-lg mt-4 text-white">CFP opens from 20th, June - 28th, July </p>
             <div className="text-right mt-4">
               <a href="https://github.com/orgs/asyncapi/discussions/598"  target="_blank" rel="noreferrer">
                 <button className="border border-black rounded-lg p-1"><Arrow className='w-6' /></button>
@@ -81,9 +82,6 @@ export default function Home() {
           <Faq />
         </div>
         <div className="w-[100%] bg-overlay p-4 z-[9]"></div>
-      </div>
-        <div className="mt-10">
-          <Paper />
       </div>
       <Footer />
     </div>

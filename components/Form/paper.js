@@ -63,7 +63,7 @@ function Paper() {
         Submit your talk
       </h1>
       <p className="mt-2 text-fainted-white text-lg">
-        Fill up the form in other to help us make <br /> this event outstanding
+       Fill up the form to help us make <br /> this event outstanding
       </p>
       <div
         className="mt-5"
