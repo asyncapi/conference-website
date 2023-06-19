@@ -12,25 +12,23 @@ function StepTwo({ setStep, setForm, data }) {
        Please provide your session title and description
       </p>
       <div className="mt-3 border w-full border-solid border-y-fainted-gray divide-y" />
-          <div className="mt-10">
-               <div className="text-fainted-white text-lg">Session Title</div>
-              <input
+      <div className="mt-10">
+        <div className="text-fainted-white text-lg">Session Title</div>
+        <input
           required
           className="mt-3 w-full p-4 rounded-md bg-dark-paint text-white focus:outline-none"
           style={{
             border: "2px solid #E50E99",
           }}
-                  onChange={(e) => setForm({ ...data, title: e.target.value })}
-              />
-              <div className="text-fainted-white text-lg mt-4">Session Description</div>
-              <input
+          onChange={(e) => setForm({ ...data, title: e.target.value })} />
+        <div className="text-fainted-white text-lg mt-4">Session Description</div>
+        <textarea
           required
           className="mt-3 w-full p-4 rounded-md bg-dark-paint text-white focus:outline-none"
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, description: e.target.value })}
-              />
+          onChange={(e) => setForm({ ...data, description: e.target.value })} />
         <div className="float-right">
           <a
             className="mr-10 text-fainted-white cursor-pointer"

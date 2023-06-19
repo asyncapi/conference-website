@@ -81,7 +81,7 @@ function Paper() {
         >
           <div className="p-16 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
-              const index = i + 1;
+              const index = i ;
               return (
                 <div
                       key={field.title}

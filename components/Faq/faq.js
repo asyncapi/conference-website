@@ -3,14 +3,34 @@ import Plus from '../illustration/plus';
 
 const faqs = [
     {
+        q: 'What is AACoT?',
+        a: 'AsyncAPI Conf on Tour (AACoT) is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
+    },
+
+    {
         q: 'I heard you are hosting events in multiple cities. Will I be able to attend in-person?',
-        a: "The main event is the October 5th event, online and in San Francisco. We are also piloting small, regional events this year in New York City, Chicago, and London that will not be live streamed. Tickets to all in-person events are very limited, and will be available when registration is opened later this summer. You can also expect to see AsyncAPI community members hosting their own meet-ups and events alongside AsyncAPI Conf. We'll make all of that information available on the AsyncAPI Conf website when ready!"
+        a: "We are piloting a set of regional events this year in London, Madrid, and Banglore. Tickets to some of this events are very limited, and will be available when registration is opened later this summer. We'll make all of that information available on the AsyncAPI Conf website when ready!"
     },
     {
         q: 'Who can submit a talk?',
         a: "We're excited to have speakers from different parts of the globe sharing how they apply the AsyncAPI Specification in their practical use cases. We encourage proposals from all individuals, regardless of their expertise level, to promote a diverse content track that welcomes everyone."
+    },
+    {
+        q: "Talks we don't recommend",
+        a: 'Marketing/Sales - rather share your experience or use case using our tools or specification.'
+    },
+    {
+        q: 'Talks Review',
+        a: 'Reviews will be kept anonymous, and reviewers will not have access to speaker information such as name, gender or company, etc.'
+    },
+    {
+        q: 'Can I send a virtual talk?',
+        a: 'No, this is an in-person event; all speakers must deliver their sessions in person.'
+    },
+    {
+        q: 'Can i get my expenses covered?',
+        a: 'We sponsor conference tickets to Speakers, TSC members, and AsyncAPI Ambassadors.'
     }
-
 ]
 
 function Faq() {

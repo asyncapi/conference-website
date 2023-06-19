@@ -41,12 +41,13 @@ const options2= [
 ];
 
 function StepThree({ setStep, setForm, data }) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState({});
   useEffect(() => {
-    setForm({ ...data, Type: value });
+    setForm({ ...data, ...value});
   }, [value]);
+  console.log(data)
   return (
-    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 3)}>
+    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Session Info
       </h1>
@@ -59,14 +60,14 @@ function StepThree({ setStep, setForm, data }) {
         <Select
           options={options1}
           title="Select session format"
-          setValue={setValue}
+          setValue={(val) => setValue({...value, Format: val})}
           multi={false}
         />
         <div className="text-fainted-white text-lg mt-4 mb-4">Session Level</div>
         <Select
           options={options2}
           title="Select session level"
-          setValue={setValue}
+          setValue={(val) => setValue({...value, Level: val})}
           multi={false}
         />
         <div className="float-right">
@@ -78,7 +79,7 @@ function StepThree({ setStep, setForm, data }) {
           </a>
           <button
             type="submit"
-            disabled={!data.Type && true}
+            disabled={!data.Format || !data.Level && true}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
           >
             Next

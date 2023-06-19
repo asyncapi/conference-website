@@ -43,14 +43,17 @@ export default function Home() {
       <div className='flex mt-[220px] lg:mt-[50px] lg:flex-col'>
         <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] z-[9]'>
           <h1 className='text-5xl font-bold text-white'>AsyncAPI Conf</h1>
-          <h1 className='text-5xl font-bold text-white'>on Tour 2023</h1>
+            <h1 className='text-5xl font-bold text-white'>on Tour 2023</h1>
+            <p className="mt-10 text-lg">
+              Get ready to join the ultimate celebration of cutting-edge technology and innovation with AsyncAPI Conf on Tour (AACoT)!
+            </p>
           <div className='mt-[100px]'>
             <p>GET NOTIFIED WHEN REGISTRATION OPENS</p>
             <div className='mt-8'>
               <Subscription />
             </div>
-            <div className='mt-[30px] text-lg'>
-            For more information, check out our Privacy Policy and Terms of Service. You can unsubscribe at any time.
+            <div className='mt-[30px] text-md'>
+            For more information, check out our <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">Code of Conduct</a>. You can unsubscribe at any time.
           </div>
           </div>
         </div>
@@ -60,8 +63,10 @@ export default function Home() {
         </div>
         <div className='p-9 bg-tetiary-pink -mt-[250px] h-[250px] lg:ml-[350px] lg:mt-[0px] w-[390px] lg:w-[50%] mr-[5px]'>
         </div>
-          <div className='p-9 bg-tetiary-pink h-[260px] w-[390px] mr-[18px] lg:w-[70%] text-lg leading-8 z-[9]'>
-            The AsyncAPI Conf2023 on Tour is planned to take the online event to the next level by hosting physical events in five different locations across the globe.
+          <div className='p-9 bg-tetiary-pink  w-[390px] mr-[18px] lg:w-[70%] text-lg leading-8 z-[9]'>
+            AACoT London Edition will be hosted by IBM, one of the leading technology companies in the world.
+            The conference will take place at IBM's state-of-the-art facilities in London, offering attendees a chance to connect with industry experts and fellow professionals while immersing themselves in the city's vibrant atmosphere.
+            <br />
             <div className="text-right mt-4">
               <a href="https://github.com/orgs/asyncapi/discussions/598"  target="_blank" rel="noreferrer">
                 <button className="border border-black rounded-lg p-1"><Arrow className='w-6' /></button>
