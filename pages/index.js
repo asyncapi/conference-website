@@ -48,7 +48,7 @@ export default function Home() {
               Get ready to join the ultimate celebration of cutting-edge technology and innovation with AsyncAPI Conf on Tour (AACoT)!
             </p>
           <div className='mt-[100px]'>
-            <p>GET NOTIFIED ABOUT TICKETS AND CONFERENCE UPDATES</p>
+            <p>Stay informed about tickets availability and conference updates </p>
             <div className='mt-8'>
               <Subscription />
             </div>
