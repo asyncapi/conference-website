@@ -7,6 +7,7 @@ import Subscription from '../components/Form/subscription';
 import Faq from "../components/Faq/faq";
 import Arrow from "../components/illustration/arrow";
 import Footer from "../components/Footer/footer";
+import Paper from "../components/Form/paper";
 
 
 export default function Home() {
@@ -68,7 +69,6 @@ export default function Home() {
           <div className='p-9 bg-tetiary-pink  w-[390px] mr-[18px] lg:w-[70%] sm:w-[100%] text-lg leading-8 z-[9]'>
             AACoT London Edition will be hosted by IBM, one of the leading technology companies in the world.
             The conference will take place at IBM's state-of-the-art facilities in London, offering attendees a chance to connect with industry experts and fellow professionals while immersing themselves in the city's vibrant atmosphere.
-            <p className="text-lg mt-4 text-white">Call for Speakers opens from 20th, June 2023 - 28th, July 2023</p>
             <div className="text-right mt-4">
               <a href="https://github.com/orgs/asyncapi/discussions/598"  target="_blank" rel="noreferrer">
                 <button className="border border-black rounded-lg p-1"><Arrow className='w-6' /></button>
@@ -81,7 +81,10 @@ export default function Home() {
           <span className='text-gray-300'>FAQ</span>
           <Faq />
         </div>
-        <div className="w-[100%] bg-overlay p-4 z-[9]"></div>
+        <div className="w-[100%] bg-overlay p-4 z-[1]" />
+        <div className="bg-[#0F172A] z-[1]">
+          <Paper />
+        </div>
       </div>
       <Footer />
     </div>

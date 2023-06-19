@@ -20,7 +20,7 @@ function StepTwo({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, title: e.target.value })} />
+          onChange={(e) => setForm({ ...data, Title: e.target.value })} />
         <div className="text-fainted-white text-lg mt-4">Session Description</div>
         <textarea
           required
@@ -28,7 +28,7 @@ function StepTwo({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, description: e.target.value })} />
+          onChange={(e) => setForm({ ...data, Description: e.target.value })} />
         <div className="float-right">
           <a
             className="mr-10 text-fainted-white cursor-pointer"
@@ -38,7 +38,7 @@ function StepTwo({ setStep, setForm, data }) {
           </a>
           <button
             type="submit"
-            disabled={!data.description || !data.title && true}
+            disabled={!data.Description || !data.Title && true}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
           >
             Next

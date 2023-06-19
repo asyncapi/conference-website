@@ -1,9 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, {useState} from "react";
+import { toast } from "react-hot-toast";
+import axios from "axios";
+import ActivityLoader from "../illustration/activityLoader";
 
 function StepFour({ setStep, setForm, data }) {
+  const [submitting, setSubmitting] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    axios
+      .post(
+        "https://sheet.best/api/sheets/666a49d7-e284-48ff-a335-0030f20658f6",
+        data
+      )
+      .then((res) => {
+        setSubmitting(false);
+        if (res.status === 200) {
+          toast.success("Feedback submitted successfully!");
+          setDisabled(true);
+        } else {
+          toast.error("Ooops! Something went wrong");
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+        setSubmitting(false);
+        toast.error("Failed to submit feedback. Try again");
+      });
+  };
   return (
-    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 2)}>
+    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => onSubmit(e)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Additional Information
       </h1>
@@ -19,19 +47,27 @@ function StepFour({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, additionalInfo: e.target.value })}
+          onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
         />
         
         <div className="mt-6 text-fainted-white text-md">
           By clicking submit, this means you agree to follow the <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">AsyncAPI Initiative Code of Conduct</a>
         </div>
-        <button
-          type="submit"
-          className="bg-tetiary-pink p-3 rounded-md text-white mt-3 float-right w-36"
-          disabled={!data.additionalInfo && true}
-        >
-          Submit
-        </button>
+        <div className="float-right">
+          <a
+            className="mr-10 text-fainted-white cursor-pointer"
+            onClick={() => !disabled && setStep(null, 3)}
+          >
+            Back
+          </a>
+          <button
+            type="submit"
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
+            disabled={submitting || (!data.Email && true) || disabled}
+          >
+            {submitting ? <ActivityLoader /> : "Submit"}
+          </button>
+        </div>
       </div>
     </form>
   );

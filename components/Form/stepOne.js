@@ -19,7 +19,7 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, Name: e.target.value })}
+          onChange={(e) => setForm({ ...data, Fullname: e.target.value })}
         />
         <div className="text-fainted-white text-lg mt-5">Email address</div>
         <input
@@ -39,7 +39,7 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, Tagline: e.target.value })}
+          onChange={(e) => setForm({ ...data, Bio: e.target.value })}
         />
         <div className="text-fainted-white text-lg mt-5">LinkedIn Profile</div>
         <input
