@@ -4,7 +4,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className='container'>
       <div>
-        <Toaster />
+        <Toaster position="bottom-center" />
       <Component {...pageProps} />
       </div>
     </div>

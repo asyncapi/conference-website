@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import Confetti from "react-confetti";
 import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from './stepThree';
@@ -31,6 +32,9 @@ const fields = [
 
 function Paper() {
   const [step, setStep] = useState(1);
+  const confetiRef = useRef(null);
+  const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(null);
   const [formData, setFormData] = useState({});
   const onStepUpdate = (e, step) => {
     if (e) {
@@ -38,6 +42,10 @@ function Paper() {
     }
     setStep(step);
   };
+  useEffect(() => {
+    setHeight(confetiRef.current.clientHeight);
+    setWidth(confetiRef.current.clientWidth);
+  }, []);
   const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
   let view = stepOne
   if (step === 4) {
@@ -58,9 +66,21 @@ function Paper() {
       <StepFour setStep={onStepUpdate} setForm={setFormData} data={formData} />
     );
   }
+  if (step === "successful") {
+    setTimeout(() => {
+      setStep(null, 1)
+    }, 6000)
+    view = <div  className='flex items-center h-full'>
+      <div>
+        <h1 className='text-fainted-white text-4xl font-bold'>Hurray!!!</h1>
+          <h1 className='text-fainted-white text-4xl font-bold mt-6'>Your talk has been submitted successfully</h1>
+      </div>
+       <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
+    </div>
+  }
 
   return (
-    <div className="relative mt-10 sm:mt-0" id="forms">
+    <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
       <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
       </h1>
@@ -124,7 +144,7 @@ function Paper() {
           </div>
         </div>
         <div className="p-10 lg:p-1">
-          <p className="text-fainted-white">Step {step}/4</p>
+          <p className="text-fainted-white">{typeof(step) === 'number' && `Step ${step}/4`}</p>
           {view}
           <div
             className="absolute bottom-0 right-0 rotate-0 opacity-50 sm:hidden"

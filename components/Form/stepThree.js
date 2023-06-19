@@ -12,8 +12,8 @@ const options1 = [
     label: "Session(45mins)",
   },
     {
-    value: "Workshop",
-    label: "Workshop(1h)",
+    value: "Tutorial",
+    label: "Tutorial(1h)",
   },
   {
     value: "Keynote",

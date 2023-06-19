@@ -18,17 +18,14 @@ function StepFour({ setStep, setForm, data }) {
       .then((res) => {
         setSubmitting(false);
         if (res.status === 200) {
-          toast.success("Feedback submitted successfully!", {
-            duration: '4000'
-          });
           setDisabled(true);
-          setStep(e, 1)
+          setStep(e, 'successful')
         }
       })
       .catch((err) => {
         setSubmitting(false);
         toast.error("Failed to submit feedback. Try again", {
-            duration: '4000'
+            duration: '6000'
           });
       });
   };
@@ -44,7 +41,6 @@ function StepFour({ setStep, setForm, data }) {
       <div className="mt-10">
         <div className="text-fainted-white text-lg">Additional Information</div>
         <textarea
-          required
           className="mt-3 w-full p-4 rounded-md bg-dark-paint text-white focus:outline-none"
           style={{
             border: "2px solid #E50E99",
