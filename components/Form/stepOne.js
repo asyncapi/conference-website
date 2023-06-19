@@ -49,7 +49,7 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "2px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, Linkedin: e.target.value })}
+          onChange={(e) => setForm({ ...data, Social: e.target.value })}
         />
         <button
           type="submit"
