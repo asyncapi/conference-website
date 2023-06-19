@@ -16,6 +16,10 @@ const faqs = [
         a: "We're excited to have speakers from different parts of the globe sharing how they apply the AsyncAPI Specification in their practical use cases. We encourage proposals from all individuals, regardless of their expertise level, to promote a diverse content track that welcomes everyone."
     },
     {
+        q: 'When is the deadline to submit a talk?',
+        a: 'The deadline date for submitting a talk is on the 28th of July at 12pm UTC'
+    },
+    {
         q: "Talks we don't recommend",
         a: 'Marketing/Sales - rather share your experience or use case using our tools or specification.'
     },
