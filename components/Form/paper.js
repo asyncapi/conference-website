@@ -62,10 +62,10 @@ function Paper() {
   return (
     <div className="relative mt-10 sm:mt-0" id="forms">
       <h1 className="text-white font-bold text-5xl lg:text-3xl">
-        Submit your talk
+        Submit your talk!
       </h1>
       <p className="mt-2 text-fainted-white text-lg">
-        Fill up the form to help us make this event outstanding
+        Fill up the form to apply as a speaker for AACoT London Edition.
       </p>
       <div
         className="mt-5"

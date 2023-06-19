@@ -41,15 +41,16 @@ export default function Home() {
       </div>
       </div>
       <Navbar />
-      <div className='flex mt-[220px] lg:mt-[50px] sm:items-center lg:flex-col'>
+      <div className='flex mt-[150px] lg:mt-[50px] sm:items-center lg:flex-col'>
         <div className='p-9 bg-tetiary-pink w-[650px] lg:w-[80%] sm:w-[100%] z-[1]'>
           <h1 className='text-5xl font-bold text-white'>AsyncAPI Conf</h1>
             <h1 className='text-5xl font-bold text-white'>on Tour 2023</h1>
             <p className="mt-10 text-lg">
               Get ready to join the ultimate celebration of cutting-edge technology and innovation with AsyncAPI Conf on Tour (AACoT)!
             </p>
+            <p className="mt-4 text-lg">We are piloting a set of regional events this year in London, Madrid, Paris, and Bengaluru.</p>
           <div className='mt-[100px]'>
-            <p>Stay informed about tickets availability and conference updates </p>
+            <p>Stay informed about tickets availability and conference updates. </p>
             <div className='mt-8'>
               <Subscription />
             </div>
@@ -58,7 +59,7 @@ export default function Home() {
           </div>
           </div>
         </div>
-        <div className='p-9 bg-tetiary-pink w-[480px] lg:w-[50%] sm:w-[80%] h-[300px] sm:h-[auto] sm:ml-[0px] lg:ml-[100px] text-right lg:text-center z-[1]'>
+        <div className='p-9 bg-tetiary-pink w-[480px] lg:w-[50%] sm:w-[80%] h-[300px] sm:h-[auto] sm:ml-[0px] lg:ml-[100px] text-right lg:text-center z-[2]'>
           <p className='text-md'>LONDON EDITION In <br /> IBM UK LIMITED</p>
             <div>
               <button className='mt-12 bg-white border border-black p-2 text-lg rounded-3xl'>September 20, 2023</button>

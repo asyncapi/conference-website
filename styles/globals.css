@@ -35,6 +35,7 @@ background: #0F172A;
   flex-direction: column;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .container{

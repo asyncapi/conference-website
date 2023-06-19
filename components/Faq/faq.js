@@ -9,7 +9,7 @@ const faqs = [
 
     {
         q: 'I heard you are hosting events in multiple cities. Will I be able to attend in-person?',
-        a: "We are piloting a set of regional events this year in London, Madrid, and Bengaluru. Tickets to some of these events are very limited and will be available when registration is opened later this summer. When ready, we'll make all of that information available on the AsyncAPI Conf website!"
+        a: "We are piloting a set of regional events this year in London, Madrid, Paris, and Bengaluru. Tickets to some of these events are very limited and will be available when registration is opened later this summer. When ready, we'll make all of that information available on the AsyncAPI Conf website!"
     },
     {
         q: 'Who can submit a talk?',
