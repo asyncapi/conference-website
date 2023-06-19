@@ -35,7 +35,19 @@ background: #0F172A;
   flex-direction: column;
   display: flex;
   position: relative;
-  overflow: hidden;
+}
+
+.container{
+  padding-left: 1rem;
+  padding-right: 1rem;;
+}
+
+@media (min-width: 2000px){
+  .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
 
 .bg-overlay{
