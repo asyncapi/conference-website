@@ -20,8 +20,7 @@ function StepFour({ setStep, setForm, data }) {
         if (res.status === 200) {
           toast.success("Feedback submitted successfully!");
           setDisabled(true);
-        } else {
-          toast.error("Ooops! Something went wrong");
+          setStep(e, 1)
         }
       })
       .catch((err) => {
@@ -63,7 +62,7 @@ function StepFour({ setStep, setForm, data }) {
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
-            disabled={submitting || (!data.Email && true) || disabled}
+            disabled={submitting || (!data.AdditionalInfo && true) || disabled}
           >
             {submitting ? <ActivityLoader /> : "Submit"}
           </button>

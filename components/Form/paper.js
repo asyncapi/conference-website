@@ -38,9 +38,11 @@ function Paper() {
     }
     setStep(step);
   };
-  let view = (
-    <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
-  );
+  const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
+  let view = stepOne
+  if (step === 1) {
+    view = stepOne
+  }
   if (step === 2) {
     view = (
       <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />

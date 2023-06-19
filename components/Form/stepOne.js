@@ -54,7 +54,7 @@ function StepOne({ setStep, setForm, data }) {
         <button
           type="submit"
           className="bg-tetiary-pink p-3 rounded-md text-white mt-3 float-right w-36"
-          disabled={!data.Name && true}
+          disabled={!data.Fullname && true}
         >
           Next
         </button>
