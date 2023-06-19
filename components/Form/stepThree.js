@@ -13,7 +13,7 @@ const options1 = [
   },
     {
     value: "Workshop",
-    label: "Workshop(2h)",
+    label: "Workshop(1h)",
   },
   {
     value: "Keynote",

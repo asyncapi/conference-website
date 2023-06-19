@@ -41,7 +41,7 @@ function StepOne({ setStep, setForm, data }) {
           }}
           onChange={(e) => setForm({ ...data, Bio: e.target.value })}
         />
-        <div className="text-fainted-white text-lg mt-5">LinkedIn Profile</div>
+        <div className="text-fainted-white text-lg mt-5">Github/LinkedIn/Twitter</div>
         <input
           required
           type="url"

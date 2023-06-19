@@ -40,7 +40,7 @@ function Paper() {
   };
   const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
   let view = stepOne
-  if (step === 1) {
+  if (step === 4) {
     view = stepOne
   }
   if (step === 2) {

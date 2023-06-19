@@ -18,15 +18,18 @@ function StepFour({ setStep, setForm, data }) {
       .then((res) => {
         setSubmitting(false);
         if (res.status === 200) {
-          toast.success("Feedback submitted successfully!");
+          toast.success("Feedback submitted successfully!", {
+            duration: '4000'
+          });
           setDisabled(true);
           setStep(e, 1)
         }
       })
       .catch((err) => {
-        console.log(err)
         setSubmitting(false);
-        toast.error("Failed to submit feedback. Try again");
+        toast.error("Failed to submit feedback. Try again", {
+            duration: '4000'
+          });
       });
   };
   return (
@@ -62,7 +65,7 @@ function StepFour({ setStep, setForm, data }) {
           <button
             type="submit"
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36"
-            disabled={submitting || (!data.AdditionalInfo && true) || disabled}
+            disabled={submitting || disabled}
           >
             {submitting ? <ActivityLoader /> : "Submit"}
           </button>
