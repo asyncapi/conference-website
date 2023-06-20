@@ -1,15 +1,12 @@
 import '../styles/globals.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Footer from '../components/Footer/footer';
-import Navbar from '../components/Navbar/navbar';
-
+import { Toaster } from "react-hot-toast";
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <Navbar />
+    <div className='container'>
+      <div>
+        <Toaster position="bottom-center" />
       <Component {...pageProps} />
-      <Footer />
+      </div>
     </div>
   );
 }

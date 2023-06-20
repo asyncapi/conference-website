@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "generate:assets": "echo \"No assets to configure\"",
     "test": "echo \"No tests configured yet\"",
     "release": "echo \"No release to npm for this project\""
@@ -15,13 +16,14 @@
     "axios": "^0.27.2",
     "next": "12.1.6",
     "react": "18.1.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.1",
     "react-gtm-module": "^2.0.11",
     "react-hot-toast": "^2.2.0",
     "react-responsive": "^9.0.0",
     "react-scrollspy": "^3.4.3",
-    "react-select": "^5.3.2",
+    "react-select": "^5.7.3",
     "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
     "slick-carousel": "^1.8.1"

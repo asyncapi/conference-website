@@ -23,10 +23,6 @@ module.exports = {
         "2xl": "6rem",
       },
     },
-    backgroundImage: {
-      architectureCover: "url('/img/architecture.svg')",
-      schBg1: "url('/img/scheduleArcLeft.svg')",
-    },
     extend: {
       colors: {
         ...colors,
@@ -37,36 +33,15 @@ module.exports = {
         "dark-paint": "#C6BED9",
         "fainted-gray": "#151034",
         "tetiary-pink": "#E50E99",
-        "default-btn": "#A8A1B6"
-      },
-      height: {
-        72: "18rem",
-        80: "20rem",
-        88: "22rem",
-        96: "24rem",
-        100: "25rem",
-        104: "26rem",
-        108: "27rem",
-        112: "28rem",
-        116: "29rem",
-        120: "30rem",
-        130: "40rem",
-        "half-screen": "50vh",
-        "full-screen": "100vh",
-        beforeHalf: "49%",
       },
     },
     screens: {
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
 
-      lg: { min: "992px" },
+      lg: { max: "1118px" },
       // => @media (max-width: 1023px) { ... }
-
-      md: { max: "992px" },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: "639px" },
+      sm: { max: "590px" },
       // => @media (max-width: 639px) { ... }
     },
     fontFamily: {
