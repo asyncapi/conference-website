@@ -6,7 +6,7 @@ function Footer() {
           borderTop: "1px solid #333",
       }}>
           <div className='mt-2 text-lg text-gray-300 py-4'>
-              © 2023 AsyncAPI, Inc. All rights reserved
+            Copyright © AsyncAPI Project a Series of LF Projects, LLC
           </div>
       </div>
   )
