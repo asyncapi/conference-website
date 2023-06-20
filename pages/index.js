@@ -61,8 +61,8 @@ export default function Home() {
         </div>
         <div className='p-9 bg-tetiary-pink w-[480px] lg:w-[50%] sm:w-[80%] h-[300px] sm:h-[auto] sm:ml-[0px] lg:ml-[100px] text-right lg:text-center z-[2]'>
           <p className='text-md'>LONDON EDITION In <br /> IBM UK LIMITED</p>
-            <div>
-              <button className='mt-12 bg-white border border-black p-2 text-lg rounded-3xl'>September 20, 2023</button>
+            <div className='mt-12'>
+              <a className='bg-white border border-black p-2 text-lg rounded-3xl' href="https://calendar.google.com/calendar/u/0/r/week/2023/9/20?pli=1" target='_blank'>September 20, 2023</a>
           </div>
         </div>
         <div className='p-9 bg-tetiary-pink -mt-[250px] h-[250px] lg:ml-[350px] z-[1] lg:mt-[0px] w-[390px] sm:hidden lg:w-[50%] mr-[5px]'>
