@@ -26,7 +26,8 @@
     "react-select": "^5.7.3",
     "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tailwindcss-gradients": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
