@@ -71,7 +71,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className='bg-[#1B1130] pt-[160px] container flex flex-col items-center justify-center w-full'>
+				<div className='bg-[#1B1130] pt-[160px] container relative flex flex-col items-center justify-center w-full'>
 					<div className='text-center'>
 						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
 							Speakers
@@ -135,6 +135,9 @@ export default function Home() {
 					</div>
 				</div>
 				<Sponsors />
+				<div className='bg-[#1B1130]'>
+					hello
+				</div>
 			</div>
 		</div>
 	);
