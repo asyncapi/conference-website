@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import Head from "next/head";
 import ReactGA from 'react-ga'
 import TagManager from 'react-gtm-module'
@@ -6,9 +7,13 @@ import Navbar from '../components/Navbar/navbar';
 import Header from '../components/Header/header';
 import Venue from "../components/Venue/venue";
 import cities from "../config/city-lists.json";
+import speakers from '../config/speakers.json';
 import ReactSlider from "../components/Slider/slider";
+import Speaker from "../components/Speaker/speaker";
 
 export default function Home() {
+	const [city, setCity] = useState(speakers[0]);
+	const [speakersList, setSpeakersList] = useState(speakers[0].lists);
 	if (typeof window !== 'undefined') {
 		TagManager.initialize({ gtmId: 'GTM-MCT2H5G' });
 		ReactGA.initialize('UA-109278936-3');
@@ -54,12 +59,61 @@ export default function Home() {
 							locations across the globe.
 						</p>
 					</div>
-					<div className="w-full mt-[64px]">
+					<div className='w-full mt-[64px]'>
 						<ReactSlider>
-							{Array(6).fill().map((v) => {
-								return <Venue key={v} />;
-							})}
+							{Array(6)
+								.fill()
+								.map((v) => {
+									return <Venue key={v} />;
+								})}
 						</ReactSlider>
+					</div>
+				</div>
+
+				<div className='bg-[#1B1130] pt-[160px] container flex flex-col items-center justify-center w-full'>
+					<div className='text-center'>
+						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
+							Speakers
+						</h1>
+						<p className='text-[20px] text-gray mt-[20px]'>Meet the speakers</p>
+					</div>
+
+					<div className='mt-[64px] w-[792px] flex justify-between'>
+						{speakers.map((speaker) => {
+							return (
+								<div key={speaker.location}>
+									<button
+										onClick={() => {
+											setCity(speaker);
+											setSpeakersList(speaker.lists)
+										}}
+										className={`${
+											city.city === speaker.city
+												? 'gradient-bg'
+												: 'border border-gray'
+										} text-white w-[168px] h-[54px] rounded-md p-[8px]`}
+									>
+										{speaker.city}
+									</button>
+								</div>
+							);
+						})}
+					</div>
+
+					<div className='mt-[64px] pb-[181px] w-full grid grid-cols-3 gap-4'>
+						{Object.keys(speakers).length ? (
+							speakersList.map((speaker) => {
+								return (
+									<Speaker
+										key={speaker.name}
+										details={speaker}
+										location={city}
+									/>
+								);
+							})
+						) : (
+							<div>No speakers</div>
+						)}
 					</div>
 				</div>
 			</div>
