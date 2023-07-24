@@ -61,6 +61,11 @@ body {
    background-image: linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%);
 }
 
+.sponsor-bg{
+  background: linear-gradient(225deg, #AD20E2 9.35%, #2DCCFD 88.41%);
+  mix-blend-mode: normal;
+}
+
 .dropDown{
   box-shadow: 0px 59px 100px rgba(0, 0, 0, 0.25), 0px 44px 94px rgba(0, 0, 0, 0.15);
 }

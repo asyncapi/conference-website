@@ -10,6 +10,7 @@ import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import ReactSlider from '../components/Slider/slider';
 import Speaker from '../components/Speaker/speaker';
+import Sponsors from '../components/Sponsors/sponsors';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -85,7 +86,7 @@ export default function Home() {
 									<button
 										onClick={() => {
 											setCity(speaker);
-											console.log(speaker.lists)
+											console.log(speaker.lists);
 											setSpeakersList(speaker.lists);
 										}}
 										className={`${
@@ -125,14 +126,15 @@ export default function Home() {
 									start your journey by clicking the button below. Join us on
 									stage and share your valuable insights with our enthusiastic
 									audience!
-									</p>
-									<button className='mt-[80px] w-[244px] h-[54px] rounded-md border border-gray card-bg text-white text-[16px] px-8'>
-										Apply as a Speaker
-									</button>
+								</p>
+								<button className='mt-[80px] w-[244px] h-[54px] rounded-md border border-gray card-bg text-white text-[16px] px-8'>
+									Apply as a Speaker
+								</button>
 							</div>
 						)}
 					</div>
 				</div>
+				<Sponsors />
 			</div>
 		</div>
 	);
