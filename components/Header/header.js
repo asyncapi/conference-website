@@ -68,7 +68,7 @@ function Header() {
 							</h1>
 						</div>
 						<div className='w-[624px] text-center'>
-							<p className='mt-[16px] text-[20px] text-gray-400'>
+							<p className='mt-[16px] text-[20px] text-gray'>
 								Join us for the first-ever AsyncAPI Conference on Tour, bringing
 								the latest in async API technology to locations worldwide!
 							</p>

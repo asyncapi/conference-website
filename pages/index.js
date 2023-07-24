@@ -4,6 +4,9 @@ import ReactGA from 'react-ga'
 import TagManager from 'react-gtm-module'
 import Navbar from '../components/Navbar/navbar';
 import Header from '../components/Header/header';
+import Venue from "../components/Venue/venue";
+import cities from "../config/city-lists.json";
+import ReactSlider from "../components/Slider/slider";
 
 export default function Home() {
 	if (typeof window !== 'undefined') {
@@ -30,7 +33,7 @@ export default function Home() {
 						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
 							About AsyncAPI Conf 2023?
 						</h1>
-						<p className='text-[16px] text-gray mt-[20px] leading-[22px]'>
+						<p className='text-[18px] text-gray mt-[20px]'>
 							The AsyncAPI Conf2023 on Tour is planned to take the online event
 							to the next level by hosting physical events in five different
 							locations across the globe. Each location will feature its own
@@ -40,16 +43,23 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				<div className='gradient-bg container flex flex-col items-center'>
+				<div className='gradient-bg w-full container flex flex-col items-center'>
 					<div className='text-center py-[46px] w-[714px]'>
 						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
 							Venues
 						</h1>
-						<p className="text-gray text-[16px]">
+						<p className='text-gray text-[20px] mt-[12px]'>
 							The AsyncAPI Conf2023 on Tour is planned to take the online event
 							to the next level by hosting physical events in five different
 							locations across the globe.
 						</p>
+					</div>
+					<div className="w-full mt-[64px]">
+						<ReactSlider>
+							{Array(6).fill().map((v) => {
+								return <Venue key={v} />;
+							})}
+						</ReactSlider>
 					</div>
 				</div>
 			</div>
