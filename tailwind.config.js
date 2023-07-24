@@ -9,44 +9,39 @@ const dark = {
 };
 
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    container: {
-      padding: {
-        DEFAULT: "12rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-    },
-    extend: {
-      colors: {
-        ...colors,
-        dark: dark,
-        "fainted-white": "#797393",
-        "fainted-paint": "#ad7dfa",
-        "dark-gray": "#3A304F",
-        "dark-paint": "#C6BED9",
-        "fainted-gray": "#151034",
-        "tetiary-pink": "#E50E99",
-      },
-    },
-    screens: {
-      xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+	],
+	theme: {
+		container: {
+			padding: {
+				DEFAULT: '12rem',
+				sm: '2rem',
+				lg: '4rem',
+				xl: '5rem',
+				'2xl': '6rem',
+			},
+		},
+		extend: {
+			colors: {
+				...colors,
+				dark: dark,
+				'gray': '#D7DFE0',
+			},
+		},
+		screens: {
+			xl: { max: '1279px' },
+			// => @media (max-width: 1279px) { ... }
 
-      lg: { max: "1118px" },
-      // => @media (max-width: 1023px) { ... }
-      sm: { max: "590px" },
-      // => @media (max-width: 639px) { ... }
-    },
-    fontFamily: {
-      'secondary': ['Fira Code', 'monospace']
-    }
-  },
-  plugins: [],
+			lg: { max: '1118px' },
+			// => @media (max-width: 1023px) { ... }
+			sm: { max: '590px' },
+			// => @media (max-width: 639px) { ... }
+		},
+		fontFamily: {
+			secondary: ['Fira Code', 'monospace'],
+		},
+	},
+	plugins: [],
 };

@@ -57,7 +57,7 @@ function Header() {
 	const dateString = 'September 20, 2023';
 	const dateObj = new Date(dateString);
 	return (
-		<div className='overflow-hidden h-[55.7rem] relative'>
+		<div className='overflow-hidden h-[56.9rem] relative'>
 			<img src='/img/illustra.png' className='bg-01' />
 			<div className='container flex flex-col justify-between h-full'>
 				<div className='flex justify-center w-[full] mt-12'>
@@ -93,9 +93,7 @@ function Header() {
 				<div className='mr-[100px] globe-viz'>
 					<Globe
 						ref={globeEl}
-						controls={{
-							autoRotate: true,
-						}}
+						zoom={false}
 						htmlTransitionDuration={1000}
 						htmlElementsData={gData}
 						htmlElement={(d) => {
