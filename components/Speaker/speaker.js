@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Speaker({details, location}) {
+function Speaker({details, location, className}) {
   return (
-		<div className='w-[385px] text-center card-bg h-[525px] rounded-md p-[27px]'>
+		<div
+			className={`w-[385px] text-center card-bg h-[525px] rounded-md p-[27px] ${className}`}
+		>
 			<img
 				src={details.img}
 				alt={details.name}

@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
-import Head from "next/head";
-import ReactGA from 'react-ga'
-import TagManager from 'react-gtm-module'
+import { useState } from 'react';
+import Head from 'next/head';
+import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module';
 import Navbar from '../components/Navbar/navbar';
 import Header from '../components/Header/header';
-import Venue from "../components/Venue/venue";
-import cities from "../config/city-lists.json";
+import Venue from '../components/Venue/venue';
+import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
-import ReactSlider from "../components/Slider/slider";
-import Speaker from "../components/Speaker/speaker";
+import ReactSlider from '../components/Slider/slider';
+import Speaker from '../components/Speaker/speaker';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -85,7 +85,8 @@ export default function Home() {
 									<button
 										onClick={() => {
 											setCity(speaker);
-											setSpeakersList(speaker.lists)
+											console.log(speaker.lists)
+											setSpeakersList(speaker.lists);
 										}}
 										className={`${
 											city.city === speaker.city
@@ -100,19 +101,35 @@ export default function Home() {
 						})}
 					</div>
 
-					<div className='mt-[64px] pb-[181px] w-full grid grid-cols-3 gap-4'>
-						{Object.keys(speakers).length ? (
-							speakersList.map((speaker) => {
-								return (
-									<Speaker
-										key={speaker.name}
-										details={speaker}
-										location={city}
-									/>
-								);
-							})
+					<div className='mt-[64px] pb-[181px]'>
+						{Object.keys(speakersList).length > 0 ? (
+							<div className='w-full grid grid-cols-3 gap-6'>
+								{speakersList.map((speaker, i) => {
+									return (
+										<Speaker
+											key={i}
+											details={speaker}
+											location={city}
+											className='mt-10'
+										/>
+									);
+								})}
+							</div>
 						) : (
-							<div>No speakers</div>
+							<div className='w-[720px] mt-[140px] text-center'>
+								<h1 className='text-[40px] text-white font-bold'>
+									London Speakers Coming Soon - Stay Tuned!
+								</h1>
+								<p className='mt-[32px] text-[16px] text-gray'>
+									We are actively accepting speaker applications, and you can
+									start your journey by clicking the button below. Join us on
+									stage and share your valuable insights with our enthusiastic
+									audience!
+									</p>
+									<button className='mt-[80px] w-[244px] h-[54px] rounded-md border border-gray card-bg text-white text-[16px] px-8'>
+										Apply as a Speaker
+									</button>
+							</div>
 						)}
 					</div>
 				</div>
