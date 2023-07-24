@@ -12,6 +12,7 @@ import ReactSlider from '../components/Slider/slider';
 import Speaker from '../components/Speaker/speaker';
 import Sponsors from '../components/Sponsors/sponsors';
 import Subcription from '../components/Form/subcription';
+import Footer from '../components/Footer/footer';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -138,6 +139,9 @@ export default function Home() {
 				<Sponsors />
 				<div className=''>
 					<Subcription />
+				</div>
+				<div>
+					<Footer />
 				</div>
 			</div>
 		</div>
