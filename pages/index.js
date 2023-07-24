@@ -13,6 +13,7 @@ import Speaker from '../components/Speaker/speaker';
 import Sponsors from '../components/Sponsors/sponsors';
 import Subcription from '../components/Form/subcription';
 import Footer from '../components/Footer/footer';
+import About from '../components/About/about';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -34,23 +35,8 @@ export default function Home() {
 				<Navbar />
 				<Header />
 			</div>
+			<About />
 			<div>
-				<div className='bg-[#1B1130] pt-[160px] container flex items-center  justify-between w-full'>
-					<img src='/img/light.png' className='w-[663px]' />
-					<div className='w-[604px]'>
-						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
-							About AsyncAPI Conf 2023?
-						</h1>
-						<p className='text-[18px] text-gray mt-[20px]'>
-							The AsyncAPI Conf2023 on Tour is planned to take the online event
-							to the next level by hosting physical events in five different
-							locations across the globe. Each location will feature its own
-							keynote speakers, panels, and networking events, allowing
-							attendees to experience the conference in person while still
-							connecting with the larger global community.
-						</p>
-					</div>
-				</div>
 				<div className='gradient-bg w-full container flex flex-col items-center'>
 					<div className='text-center py-[46px] w-[714px]'>
 						<h1 className='text-[64px] font-bold text-white leading-[64px]'>

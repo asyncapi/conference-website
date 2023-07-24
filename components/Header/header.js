@@ -16,6 +16,7 @@ function Header() {
 		// Auto-rotate
 		globeEl.current.controls().autoRotate = true;
 		globeEl.current.controls().autoRotateSpeed = 1;
+		globeEl.current.controls().enableZoom = false;
 	}, []);
 
 	const gData = [...places].map((place) => {
@@ -35,19 +36,19 @@ function Header() {
 			return (
 				<div className='flex items-center w-[200px] justify-between'>
 					<div>
-						<h1 className='glitch text-[30px]'>{days}:</h1>
+						<h1 className='glitch text-white text-[30px]'>{days}:</h1>
 						{/* <p className='text-lg mt-[30px]'>Days</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-[30px]'>{hours}:</h1>
+						<h1 className='glitch text-white text-[30px]'>{hours}:</h1>
 						{/* <p className='text-lg mt-[30px]'>Hours</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-[30px]'>{minutes}:</h1>
+						<h1 className='glitch text-white text-[30px]'>{minutes}:</h1>
 						{/* <p className='text-lg mt-[30px]'>Minutes</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-[30px]'>{seconds}</h1>
+						<h1 className='glitch text-white text-[30px]'>{seconds}</h1>
 						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
@@ -57,7 +58,7 @@ function Header() {
 	const dateString = 'September 20, 2023';
 	const dateObj = new Date(dateString);
 	return (
-		<div className='overflow-hidden h-[56.9rem] relative'>
+		<div className='overflow-hidden h-[57rem] relative'>
 			<img src='/img/illustra.png' className='bg-01' />
 			<div className='container flex flex-col justify-between h-full'>
 				<div className='flex justify-center w-[full] mt-12'>
@@ -80,10 +81,14 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<div className='mt-20 flex items-center justify-between'>
+				<div className='mb-[20px] flex items-center justify-between'>
 					<div className='home-title'>
-						<span className='text-[25px] font-bold'>Madrid, Spain</span>
-						<span className='text-lg mt-[10px]'>de Madrid al Cielo</span>
+						<span className='text-[25px] text-white font-bold'>
+							Madrid, Spain
+						</span>
+						<span className='text-lg mt-[10px] text-gray'>
+							de Madrid al Cielo
+						</span>
 					</div>
 					<Countdown date={dateObj} daysInHours={false} renderer={renderer} />
 				</div>

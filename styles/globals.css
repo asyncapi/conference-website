@@ -107,6 +107,16 @@ mix-blend-mode: lighten;
   margin-top: -60%;
 }
 
+.bg-03{
+  margin-top: -75%;
+    position: absolute;
+    opacity: 0.2;
+    width: 100vw;
+    will-change: transform;
+    transform-style: preserve-3d;
+    vertical-align: middle;
+    display: inline-block;
+}
 
 .scene-container{
   margin-left: -510px !important;
