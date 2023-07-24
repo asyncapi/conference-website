@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import cities from '../../config/cities.json';
+import cityList from '../../config/city-lists.json';
 let Globe = () => null;
 import Countdown from 'react-countdown';
 
@@ -9,7 +10,7 @@ function Header() {
 	const [places, setPlaces] = useState(cities.features);
 	const markerSvg = `<svg viewBox="-4 0 36 36">
     <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-    <circle fill="black" cx="14" cy="14" r="7"></circle>
+    <circle fill="white" cx="14" cy="14" r="7"></circle>
   </svg>`;
 
 	useEffect(() => {
@@ -20,11 +21,19 @@ function Header() {
 	}, []);
 
 	const gData = [...places].map((place) => {
+		let color = null;
+		let size = null;
+		for (let i = 0; i < cityList.length; i++){
+			if (place.properties.name === cityList[i].name) {
+				color = '#5100ff';
+				size = 30
+			}
+		}
 		return {
 			lat: place.properties.latitude,
 			lng: place.properties.longitude,
-			size: 1 + Math.random() * 30,
-			color: 'white',
+			size: size ? size : 20,
+			color: color ? color : 'white',
 		};
 	});
 	const renderer = ({ days, hours, minutes, seconds, completed }) => {

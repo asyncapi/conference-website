@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
 import Head from 'next/head';
@@ -6,7 +7,6 @@ import TagManager from 'react-gtm-module';
 import Navbar from '../components/Navbar/navbar';
 import Header from '../components/Header/header';
 import Venue from '../components/Venue/venue';
-import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import ReactSlider from '../components/Slider/slider';
 import Speaker from '../components/Speaker/speaker';
@@ -31,7 +31,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='relative'>
-				<img src='/img/illustra.png' className='bg-01 bg-02' />
+				<img src='/img/illustra.png' alt="bg" className='bg-01 bg-02' />
 				<Navbar />
 				<Header />
 			</div>
