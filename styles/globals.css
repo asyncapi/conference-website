@@ -14,6 +14,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
+  background:#1B1130;
 }
 
 .countdown-text-gradient {
@@ -83,10 +84,15 @@ backdrop-filter: blur(10px);
 border-radius: 8px;
 }
 
+.subscription{
+  background: linear-gradient(119.66deg, rgba(255, 255, 255, 0.054) 6.74%, rgba(255, 255, 255, 0.018) 98.36%);
+box-shadow: 0px 33.2278px 16.6139px rgba(0, 0, 0, 0.05);
+backdrop-filter: blur(8.30696px);
+mix-blend-mode: lighten;
+}
 
 .bg-01 {
     position: absolute;
-    z-index: -1;
     width: 100vw;
     max-width: none;
     margin-top: 20%;
