@@ -7,14 +7,15 @@ import Hamburger from '../illustration/hamburger';
 import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 
+
 function Navbar() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	const [drop, setDrop] = useState(false);
 	const [show, setShow] = useState(null);
 	return (
-		<div className='container flex justify-center relative items-center'>
+		<div className='container flex justify-center items-center sticky top-0 backdrop-blur z-[99]'>
 			<div className='w-[1131px]'>
-				<div className='flex justify-between h-[61px] w-full items-center sticky top-0 backdrop-blur z-[99] bg-[rgba(36, 30, 49, 0.5)]'>
+				<div className='flex justify-between h-[75px] w-full items-center'>
 					<div className='flex items-center sm:justify-between text-white sm:w-full'>
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer w-[120px]'>

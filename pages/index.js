@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Head from 'next/head';
 import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
-import Navbar from '../components/Navbar/navbar';
 import Header from '../components/Header/header';
 import Venue from '../components/Venue/venue';
 import speakers from '../config/speakers.json';
