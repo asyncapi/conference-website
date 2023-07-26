@@ -78,29 +78,31 @@ export default function Home() {
 								/>
 							</div>
 						) : (
-							<div className='w-[792px] lg:w-full flex justify-between'>
-								{speakers.map((speaker) => {
-									return (
-										<div
-											key={speaker.location}
-											onClick={() => {
-												setCity(speaker);
-												setSpeakersList(speaker.lists);
-											}}
-										>
-											<Button
-												className={`w-[168px] ${
-													city.city === speaker.city
-														? 'gradient-bg'
-														: 'border border-gray'
-												}`}
-												overlay={true}
+							<div className='flex justify-center'>
+								<div className='w-[792px] lg:w-full flex justify-between'>
+									{speakers.map((speaker) => {
+										return (
+											<div
+												key={speaker.location}
+												onClick={() => {
+													setCity(speaker);
+													setSpeakersList(speaker.lists);
+												}}
 											>
-												{speaker.city}
-											</Button>
-										</div>
-									);
-								})}
+												<Button
+													className={`w-[168px] ${
+														city.city === speaker.city
+															? 'gradient-bg'
+															: 'border border-gray'
+													}`}
+													overlay={true}
+												>
+													{speaker.city}
+												</Button>
+											</div>
+										);
+									})}
+								</div>
 							</div>
 						)}
 					</div>

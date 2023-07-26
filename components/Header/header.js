@@ -6,8 +6,10 @@ import Countdown from 'react-countdown';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
+import { useMediaQuery } from 'react-responsive';
 
 function Header() {
+	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	if (typeof window !== 'undefined') Globe = require('react-globe.gl').default;
 	const globeEl = useRef();
 	const [places, setPlaces] = useState(cities.features);
@@ -26,10 +28,10 @@ function Header() {
 	const gData = [...places].map((place) => {
 		let color = null;
 		let size = null;
-		for (let i = 0; i < cityList.length; i++){
+		for (let i = 0; i < cityList.length; i++) {
 			if (place.properties.name === cityList[i].name) {
 				color = '#5100ff';
-				size = 30
+				size = 30;
 			}
 		}
 		return {
@@ -118,9 +120,12 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className='relative sm:hidden flex items-center justify-center' style={{
-				display: 'none'
-			}}>
+			<div
+				className='relative sm:hidden flex items-center justify-center'
+				style={{
+					display: isTablet && 'none',
+				}}
+			>
 				<div className='test-2'></div>
 				<div
 					className='globe-viz'

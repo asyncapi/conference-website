@@ -3,12 +3,12 @@ import React from 'react'
 function Speaker({details, location, className}) {
   return (
 		<div
-			className={`w-[385px] text-center card-bg h-[525px] rounded-md p-[27px] ${className}`}
+			className={`w-auto text-center card-bg h-auto rounded-md p-[27px] ${className}`}
 		>
 			<img
 				src={details.img}
 				alt={details.name}
-				className='rounded-[200px] w-[322px] h-[322px]'
+				className='rounded-[200px] w-auto h-auto'
 			/>
 			<div className='mt-[19px]'>
 				<h3 className='text-[23px] text-white'>{details.name}</h3>
