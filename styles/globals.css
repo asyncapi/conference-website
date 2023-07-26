@@ -44,6 +44,17 @@ body {
   }
 }
 
+/* .container{
+  max-width: 1400px;
+} */
+
+@media(max-width:992px){
+  .container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .slick-slide {
   margin-left: 5px;
   margin-right: 5px;
@@ -95,7 +106,7 @@ mix-blend-mode: lighten;
     position: absolute;
     width: 100vw;
     max-width: none;
-    margin-top: 20%;
+    top: 200px;
     will-change: transform;
     transform: translate3d(0%, 9.9964%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
@@ -103,8 +114,17 @@ mix-blend-mode: lighten;
     display: inline-block;
 }
 
-.bg-02{
-  margin-top: -60%;
+.test-bg{
+  background: linear-gradient(252.95deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.test-2{
+  background: #47bcee;
+  filter: blur(280px);
+  position: absolute;
+  bottom: 300px;
+  width: 50%;
+  height: 370px;
 }
 
 .bg-03{
@@ -118,10 +138,6 @@ mix-blend-mode: lighten;
     display: inline-block;
 }
 
-.scene-container{
-  margin-left: -510px !important;
-  margin-top: -150px;
-}
 
 .glitch {
   font-weight: bold;

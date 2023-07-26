@@ -69,64 +69,72 @@ function Header() {
 	return (
 		<div className='overflow-hidden h-[57rem] relative'>
 			<img src='/img/illustra.png' className='bg-01' />
-			<div className='container flex flex-col justify-between h-full'>
-				<div className='flex justify-center w-[full] mt-12'>
-					<div className='flex flex-col justify-center items-center w-full'>
-						<div className='w-[624px] text-center'>
-							<h1 className='text-[60px] countdown-text-gradient font-bold leading-[88px]'>
-								AsyncAPI Conf On Tour 2023
-							</h1>
-						</div>
-						<div className='w-[624px] text-center'>
-							<p className='mt-[16px] text-[20px] text-gray'>
-								Join us for the first-ever AsyncAPI Conference on Tour, bringing
-								the latest in async API technology to locations worldwide!
-							</p>
-						</div>
-						<div className='mt-[54px]'>
-							<button className='gradient-bg text-white w-[200px] h-[54px] rounded-md p-[8px]'>
-								Buy Tickets
-							</button>
+			<div className='container w-full flex items-center justify-center'>
+				<div className='w-[1131px]'>
+					<div className='flex justify-center w-[full] mt-12'>
+						<div className='flex flex-col justify-center items-center w-full'>
+							<div className='w-[624px] text-center'>
+								<h1 className='text-[60px] countdown-text-gradient font-bold leading-[88px]'>
+									AsyncAPI Conf On Tour 2023
+								</h1>
+							</div>
+							<div className='w-[624px] text-center'>
+								<p className='mt-[16px] text-[20px] text-gray'>
+									Join us for the first-ever AsyncAPI Conference on Tour,
+									bringing the latest in async API technology to locations
+									worldwide!
+								</p>
+							</div>
+							<div className='mt-[54px]'>
+								<button className='gradient-bg text-white w-[200px] h-[54px] rounded-md p-[8px]'>
+									Buy Tickets
+								</button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className='mb-[20px] flex items-center justify-between'>
-					<div className='home-title'>
-						<span className='text-[25px] text-white font-bold'>
-							Madrid, Spain
-						</span>
-						<span className='text-lg mt-[10px] text-gray'>
-							de Madrid al Cielo
-						</span>
+					<div className='mt-[400px] flex items-center justify-between'>
+						<div className='home-title'>
+							<span className='text-[25px] text-white font-bold'>
+								Madrid, Spain
+							</span>
+							<span className='text-lg mt-[10px] text-gray'>
+								de Madrid al Cielo
+							</span>
+						</div>
+						<Countdown date={dateObj} daysInHours={false} renderer={renderer} />
 					</div>
-					<Countdown date={dateObj} daysInHours={false} renderer={renderer} />
 				</div>
 			</div>
-			<div className='absolute bottom-[-300px] left-[500px] w-[700px] h-[700px] border rounded-[500px]'>
-				<div className='relative'></div>
-				<div className='mr-[100px] globe-viz'>
-					<Globe
-						ref={globeEl}
-						zoom={false}
-						htmlTransitionDuration={1000}
-						htmlElementsData={gData}
-						htmlElement={(d) => {
-							const el = document.createElement('div');
-							el.innerHTML = markerSvg;
-							el.style.color = d.color;
-							el.style.width = `${d.size}px`;
-							el.style['pointer-events'] = 'auto';
-							el.style.cursor = 'pointer';
-							el.onclick = () => console.info(d);
-							return el;
+				<div className='relative flex items-center justify-center'>
+					<div className='test-2'></div>
+					<div
+						className='globe-viz'
+						style={{
+							marginTop: '-400px',
 						}}
-						globeImageUrl='//unpkg.com/three-globe/example/img/earth-water.png'
-						backgroundColor='rgba(0,0,0,0)'
-						width='700px'
-						height='700px'
-					/>
+					>
+						<Globe
+							ref={globeEl}
+							zoom={false}
+							htmlTransitionDuration={1000}
+							htmlElementsData={gData}
+							htmlElement={(d) => {
+								const el = document.createElement('div');
+								el.innerHTML = markerSvg;
+								el.style.color = d.color;
+								el.style.width = `${d.size}px`;
+								el.style['pointer-events'] = 'auto';
+								el.style.cursor = 'pointer';
+								el.onclick = () => console.info(d);
+								return el;
+							}}
+							globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
+							backgroundColor='rgba(0,0,0,0)'
+							width='700px'
+							height='700px'
+						/>
+					</div>
 				</div>
-			</div>
 			<div></div>
 		</div>
 	);
