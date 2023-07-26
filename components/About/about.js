@@ -1,4 +1,6 @@
 import React from 'react'
+import Heading from '../Typography/heading';
+import Paragraph from '../Typography/paragraph';
 
 function About() {
     return (
@@ -15,17 +17,17 @@ function About() {
 							<img src='/img/hand.png' className='w-[663px]' />
 						</div>
 						<div className='w-[604px] lg:text-center'>
-							<h1 className='text-[64px] font-bold text-white leading-[64px]'>
+							<Heading className='text-white'>
 								About AsyncAPI Conf 2023?
-							</h1>
-							<p className='text-[18px] text-gray mt-[20px]'>
+							</Heading>
+							<Paragraph typeStyle='md' >
 								The AsyncAPI Conf2023 on Tour is planned to take the online
 								event to the next level by hosting physical events in five
 								different locations across the globe. Each location will feature
 								its own keynote speakers, panels, and networking events,
 								allowing attendees to experience the conference in person while
 								still connecting with the larger global community.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 				</div>

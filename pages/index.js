@@ -14,6 +14,9 @@ import Sponsors from '../components/Sponsors/sponsors';
 import Subcription from '../components/Form/subcription';
 import Footer from '../components/Footer/footer';
 import About from '../components/About/about';
+import Heading from '../components/Typography/heading';
+import Paragraph from '../components/Typography/paragraph';
+import Button from '../components/Buttons/button';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -37,14 +40,12 @@ export default function Home() {
 				<div className='gradient-bg w-full container flex flex-col justify-center items-center'>
 					<div className='w-[1310px] lg:w-full flex lg:py-20 flex-col items-center justify-center'>
 						<div className='text-center py-[46px] w-[714px]'>
-							<h1 className='text-[64px] font-bold text-white leading-[64px]'>
-								Venues
-							</h1>
-							<p className='text-gray text-[20px] mt-[12px]'>
+							<Heading className='text-white'>Venues</Heading>
+							<Paragraph className='mt-12'>
 								The AsyncAPI Conf2023 on Tour is planned to take the online
 								event to the next level by hosting physical events in five
 								different locations across the globe.
-							</p>
+							</Paragraph>
 						</div>
 						<div className='w-full mt-[64px]'>
 							<ReactSlider>
@@ -60,29 +61,30 @@ export default function Home() {
 
 				<div className='pt-[160px] lg:py-20 container relative flex flex-col items-center justify-center w-full'>
 					<div className='text-center'>
-						<h1 className='text-[64px] font-bold text-white leading-[64px]'>
-							Speakers
-						</h1>
-						<p className='text-[20px] text-gray mt-[20px]'>Meet the speakers</p>
+						<Heading className='text-white'>Speakers</Heading>
+						<Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
 					</div>
 
 					<div className='mt-[64px] w-[792px] lg:w-full flex justify-between'>
 						{speakers.map((speaker) => {
 							return (
-								<div key={speaker.location}>
-									<button
-										onClick={() => {
-											setCity(speaker);
-											setSpeakersList(speaker.lists);
-										}}
-										className={`${
+								<div
+									key={speaker.location}
+									onClick={() => {
+										setCity(speaker);
+										setSpeakersList(speaker.lists);
+									}}
+								>
+									<Button
+										className={`w-[168px] ${
 											city.city === speaker.city
 												? 'gradient-bg'
 												: 'border border-gray'
-										} text-white w-[168px] h-[54px] rounded-md p-[8px]`}
+										}`}
+										overlay={true}
 									>
 										{speaker.city}
-									</button>
+									</Button>
 								</div>
 							);
 						})}
@@ -113,9 +115,9 @@ export default function Home() {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</p>
-								<button className='mt-[80px] w-[244px] h-[54px] rounded-md border border-gray card-bg text-white text-[16px] px-8'>
+								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 									Apply as a Speaker
-								</button>
+								</Button>
 							</div>
 						)}
 					</div>

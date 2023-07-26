@@ -3,6 +3,9 @@ import cities from '../../config/cities.json';
 import cityList from '../../config/city-lists.json';
 let Globe = () => null;
 import Countdown from 'react-countdown';
+import Heading from '../Typography/heading';
+import Paragraph from '../Typography/paragraph';
+import Button from '../Buttons/button';
 
 function Header() {
 	if (typeof window !== 'undefined') Globe = require('react-globe.gl').default;
@@ -73,22 +76,24 @@ function Header() {
 				<div className='w-[1131px]'>
 					<div className='flex justify-center w-[full] mt-12'>
 						<div className='flex flex-col justify-center items-center w-full'>
-							<div className='w-[624px] text-center'>
-								<h1 className='text-[60px] countdown-text-gradient font-bold leading-[88px]'>
+							<div className='w-[624px] sm:w-full text-center'>
+								<Heading
+									className='countdown-text-gradient'
+									level='h1'
+									typeStyle='heading-lg'
+								>
 									AsyncAPI Conf On Tour 2023
-								</h1>
+								</Heading>
 							</div>
-							<div className='w-[624px] text-center'>
-								<p className='mt-[16px] text-[20px] text-gray'>
+							<div className='w-[624px] sm:w-full text-center'>
+								<Paragraph className='mt-[16px]'>
 									Join us for the first-ever AsyncAPI Conference on Tour,
 									bringing the latest in async API technology to locations
 									worldwide!
-								</p>
+								</Paragraph>
 							</div>
 							<div className='mt-[54px]'>
-								<button className='gradient-bg text-white w-[200px] h-[54px] rounded-md p-[8px]'>
-									Buy Tickets
-								</button>
+								<Button className='w-[200px]'>Buy Tickets</Button>
 							</div>
 						</div>
 					</div>
@@ -105,36 +110,36 @@ function Header() {
 					</div>
 				</div>
 			</div>
-				<div className='relative flex items-center justify-center'>
-					<div className='test-2'></div>
-					<div
-						className='globe-viz'
-						style={{
-							marginTop: '-400px',
+			<div className='relative flex items-center justify-center'>
+				<div className='test-2'></div>
+				<div
+					className='globe-viz'
+					style={{
+						marginTop: '-400px',
+					}}
+				>
+					<Globe
+						ref={globeEl}
+						zoom={false}
+						htmlTransitionDuration={1000}
+						htmlElementsData={gData}
+						htmlElement={(d) => {
+							const el = document.createElement('div');
+							el.innerHTML = markerSvg;
+							el.style.color = d.color;
+							el.style.width = `${d.size}px`;
+							el.style['pointer-events'] = 'auto';
+							el.style.cursor = 'pointer';
+							el.onclick = () => console.info(d);
+							return el;
 						}}
-					>
-						<Globe
-							ref={globeEl}
-							zoom={false}
-							htmlTransitionDuration={1000}
-							htmlElementsData={gData}
-							htmlElement={(d) => {
-								const el = document.createElement('div');
-								el.innerHTML = markerSvg;
-								el.style.color = d.color;
-								el.style.width = `${d.size}px`;
-								el.style['pointer-events'] = 'auto';
-								el.style.cursor = 'pointer';
-								el.onclick = () => console.info(d);
-								return el;
-							}}
-							globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
-							backgroundColor='rgba(0,0,0,0)'
-							width='700px'
-							height='700px'
-						/>
-					</div>
+						globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
+						backgroundColor='rgba(0,0,0,0)'
+						width='700px'
+						height='700px'
+					/>
 				</div>
+			</div>
 			<div></div>
 		</div>
 	);
