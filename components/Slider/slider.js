@@ -21,7 +21,6 @@ function ReactSlider({ children }) {
 		dots: true,
 		speed: 500,
 		slidesToShow: slides,
-		slidesToScroll: slides,
 		variableWidth: true,
 		arrows: false,
 		appendDots: (dots) => (

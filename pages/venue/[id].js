@@ -11,6 +11,7 @@ import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
 
+
 const tabs = [
 	{
 		title: 'Agenda',
@@ -24,27 +25,48 @@ const tabs = [
 	},
 ];
 
-function Venue() {
-    const isTablet = useMediaQuery({ maxWidth: '1118px' });
-    const [speakersList, setSpeakersList] = useState(speakers[0].lists);
+export async function getStaticProps({ params }) {
+    let res = {}
+    const data = cities.filter((p) => p.name === params.id);
+    res = data[0];
+    const getSpeakers = speakers.filter((s) => s.city === res?.name);
+    res.speakers = getSpeakers[0].lists;
+	return {
+		props: {
+			city: res,
+		},
+	};
+}
+
+export async function getStaticPaths() {
+	const paths = cities.map((city) => ({
+		params: { id: city.name },
+    }));
+	return {
+		paths,
+		fallback: false,
+	};
+}
+
+function Venue({ city }) {
+	const isTablet = useMediaQuery({ maxWidth: '1118px' });
+	const [speakersList, setSpeakersList] = useState(speakers[0].lists);
 	const [active, setActive] = useState(tabs[0].title);
 	return (
 		<div>
 			<div className='w-full h-[673px] bg-madrid bg-cover bg-center'>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[82px] flex flex-col items-center w-[659px]'>
-						<Heading className='text-white'>Madrid, Spain</Heading>
-						<Paragraph className='mt-[24px]'>
-							Join us in Madrid for AsyncAPI Conference and learn how to speak
-							fluent API! Let's taco 'bout messaging and have a fiesta you won't
-							forget!
-						</Paragraph>
+						<Heading className='text-white'>
+							{city.name}, {city.country}
+						</Heading>
+						<Paragraph className='mt-[24px]'>{city.description}</Paragraph>
 
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
-							Sngular Madrid, C. de Labastida, 1, 28034 Madrid, Spain
+							{city.address}
 						</Heading>
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
-							19th of October, 2023
+							{city.date}
 						</Heading>
 					</div>
 					<div className='kinda-dark py-[10px] w-full'>
@@ -93,18 +115,16 @@ function Venue() {
 				<Agenda />
 			</div>
 			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
-				<div className='mt-[64px] container pb-[181px]'>
-					<div className='flex flex-col justify-center items-center'>
-						<Heading className='text-[30px] text-white'>
-							Speakers
-						</Heading>
+				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
+					<div className=''>
+						<Heading className='text-[30px] text-white'>Speakers</Heading>
 						<Paragraph className='mt-[16px]'>
 							Meet Our Expert Speakers
 						</Paragraph>
 					</div>
-					{Object.keys(speakersList).length > 0 ? (
+					{Object.keys(city.speakers).length > 0 ? (
 						<div className='w-full mt-[64px] grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
-							{speakersList.map((speaker, i) => {
+							{city.speakers.map((speaker, i) => {
 								return (
 									<Speaker
 										key={i}
@@ -134,7 +154,7 @@ function Venue() {
 				</div>
 			</div>
 			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
-				<Sponsors imgs={['/img/sngular.png']} />
+				<Sponsors imgs={city.sponsors} />
 			</div>
 		</div>
 	);

@@ -5,23 +5,23 @@
 	},
 	{
 		"title": "Venue",
-		"ref": "/#",
+		"ref": "",
 		"subMenu": [
 			{
 				"title": "Bengaluru, India",
-				"ref": "/venue/india"
+				"ref": "/venue/Bengaluru"
 			},
 			{
 				"title": "Madrid, Spain",
-				"ref": "/venue/spain"
+				"ref": "/venue/Madrid"
 			},
 			{
 				"title": "Paris, France",
-				"ref": "/venue/france"
+				"ref": "/venue/Paris"
 			},
 			{
-				"title": "London, England",
-				"ref": "/venue/london"
+				"title": "London, UK",
+				"ref": "/venue/London"
 			}
 		]
 	},

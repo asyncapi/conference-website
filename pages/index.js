@@ -18,6 +18,7 @@ import Paragraph from '../components/Typography/paragraph';
 import Button from '../components/Buttons/button';
 import { useMediaQuery } from 'react-responsive';
 import Dropdown from '../components/Dropdown/dropdown';
+import cities from '../config/city-lists.json';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
@@ -50,10 +51,9 @@ export default function Home() {
 						</div>
 						<div className='w-full mt-[64px]'>
 							<ReactSlider>
-								{Array(6)
-									.fill()
-									.map((v) => {
-										return <Venue key={v} />;
+								{cities
+									.map((city) => {
+										return <Venue key={city.name} city={city} />;
 									})}
 							</ReactSlider>
 						</div>

@@ -24,30 +24,40 @@ function Navbar() {
 					</div>
 					{isTablet ? (
 						<div>
-							{drop ? <button onClick={() => setDrop(false)}>
-								<Cancel />
-							</button> : <button onClick={() => setDrop(true)}>
-								<Hamburger />
-							</button>}
+							{drop ? (
+								<button onClick={() => setDrop(false)}>
+									<Cancel />
+								</button>
+							) : (
+								<button onClick={() => setDrop(true)}>
+									<Hamburger />
+								</button>
+							)}
 						</div>
 					) : (
 						<div className='flex items-center'>
 							{links.map((link) => (
-								<Link href={link.ref} key={link.title}>
+								<div href={link.ref} key={link.title}>
 									<div
 										onClick={() =>
 											show === link.title ? setShow(null) : setShow(link.title)
 										}
 										className='text-[#F0F4F5] ml-16 text-[15px] cursor-pointer relative flex flex-col'
 									>
-										<div className='flex items-center'>
-											{link.title}{' '}
-											{link.subMenu && (
-												<Dropdown
-													className={`ml-2 transition-transform duration-700 ${
-														show === link.title ? 'rotate-180' : 'rotate-0'
-													}`}
-												/>
+										<div>
+											{link.subMenu ? (
+												<div className='flex items-center'>
+													{link.title}{' '}
+													{link.subMenu && (
+														<Dropdown
+															className={`ml-2 transition-transform duration-700 ${
+																show === link.title ? 'rotate-180' : 'rotate-0'
+															}`}
+														/>
+													)}
+												</div>
+											) : (
+												<Link href={link.ref}>{link.title}</Link>
 											)}
 										</div>
 										{show && show === link.title && link.subMenu && (
@@ -62,7 +72,7 @@ function Navbar() {
 											</div>
 										)}
 									</div>
-								</Link>
+								</div>
 							))}
 						</div>
 					)}
