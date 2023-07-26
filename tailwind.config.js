@@ -32,12 +32,8 @@ module.exports = {
 		},
 		screens: {
 			xl: { max: '1279px' },
-			// => @media (max-width: 1279px) { ... }
-
 			lg: { max: '1118px' },
-			// => @media (max-width: 1023px) { ... }
 			sm: { max: '590px' },
-			// => @media (max-width: 639px) { ... }
 		},
 		fontFamily: {
 			secondary: ['Fira Code', 'monospace'],

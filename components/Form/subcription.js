@@ -3,7 +3,7 @@ import React from 'react'
 function Subcription() {
   return (
 		<div className='mt-[106px] subscription container flex justify-center'>
-			<div className='w-[1024px] h-[253px] flex flex-col items-center mt-[106px]'>
+			<div className='w-[1024px] h-[253px] lg:w-full flex flex-col items-center mt-[106px]'>
 				<h3 className='text-[32px] text-white'>
 					Subscribe for AACoT’23 updates!
 				</h3>
