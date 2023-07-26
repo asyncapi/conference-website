@@ -77,7 +77,7 @@ function Header() {
 			);
 		}
 	};
-	const dateString = 'September 20, 2023';
+	const dateString = 'September 26, 2023';
 	const dateObj = new Date(dateString);
 	return (
 		<div className='overflow-hidden h-[57rem] lg:h-[auto] relative'>
@@ -110,10 +110,7 @@ function Header() {
 					<div className='mt-[400px] sm:mt-[150px] flex items-center justify-between'>
 						<div className='home-title'>
 							<span className='text-[25px] sm:text-[18px] text-white font-bold'>
-								Madrid, Spain
-							</span>
-							<span className='text-lg mt-[10px] sm:text-sm text-gray'>
-								de Madrid al Cielo
+								London, UK
 							</span>
 						</div>
 						<Countdown date={dateObj} daysInHours={false} renderer={renderer} />
