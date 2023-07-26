@@ -77,6 +77,9 @@ body {
     background: linear-gradient(225deg, #AD20E2 9.35%, #2DCCFD 88.41%);
 }
 
+.kinda-dark{
+  background: rgba(0, 0, 0, 0.75)
+}
 
 .sponsor-bg{
   background: linear-gradient(225deg, #AD20E2 9.35%, #2DCCFD 88.41%);

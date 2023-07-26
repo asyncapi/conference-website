@@ -3,7 +3,7 @@ import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 
-function Sponsors() {
+function Sponsors({imgs}) {
   return (
 		<div className='sponsor-bg container text-center'>
 			<div className='py-[80px] flex flex-col items-center'>
@@ -13,9 +13,8 @@ function Sponsors() {
 						hosting us and sponsoring our event is truly exceptional. We
 						appreciate you!</Paragraph>
 				</div>
-				<div className='flex justify-between mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
-					<img src='/img/sngular.png' alt='sngular' />
-					<img src='/img/IBM.png' alt='sngular' />
+				<div className='flex justify-center mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
+					{imgs && imgs.map((img) => <img key={img} src={img} alt={img} />)}
 				</div>
 			</div>
 		</div>
@@ -25,3 +24,5 @@ function Sponsors() {
 export default Sponsors
 
 
+{/* <img src='/img/sngular.png' alt='sngular' />
+					<img src='/img/IBM.png' alt='sngular' /> */}

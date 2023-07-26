@@ -9,19 +9,19 @@
 		"subMenu": [
 			{
 				"title": "Bengaluru, India",
-				"ref": "/india"
+				"ref": "/venue/india"
 			},
 			{
 				"title": "Madrid, Spain",
-				"ref": "/spain"
+				"ref": "/venue/spain"
 			},
 			{
 				"title": "Paris, France",
-				"ref": "/france"
+				"ref": "/venue/france"
 			},
 			{
 				"title": "London, England",
-				"ref": "/london"
+				"ref": "/venue/london"
 			}
 		]
 	},

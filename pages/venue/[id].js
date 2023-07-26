@@ -1,0 +1,143 @@
+/* eslint-disable react/no-unescaped-entities */
+import React, { useState } from 'react';
+import cities from '../../config/city-lists.json';
+import Dropdown from '../../components/illustration/dropdown';
+import Button from '../../components/Buttons/button';
+import { useMediaQuery } from 'react-responsive';
+import Heading from '../../components/Typography/heading';
+import Paragraph from '../../components/Typography/paragraph';
+import Agenda from '../../components/Agenda/agenda';
+import Speaker from '../../components/Speaker/speaker';
+import speakers from '../../config/speakers.json';
+import Sponsors from '../../components/Sponsors/sponsors';
+
+const tabs = [
+	{
+		title: 'Agenda',
+	},
+
+	{
+		title: 'Speakers',
+	},
+	{
+		title: 'Sponsors',
+	},
+];
+
+function Venue() {
+    const isTablet = useMediaQuery({ maxWidth: '1118px' });
+    const [speakersList, setSpeakersList] = useState(speakers[0].lists);
+	const [active, setActive] = useState(tabs[0].title);
+	return (
+		<div>
+			<div className='w-full h-[673px] bg-madrid bg-cover bg-center'>
+				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
+					<div className='mt-[82px] flex flex-col items-center w-[659px]'>
+						<Heading className='text-white'>Madrid, Spain</Heading>
+						<Paragraph className='mt-[24px]'>
+							Join us in Madrid for AsyncAPI Conference and learn how to speak
+							fluent API! Let's taco 'bout messaging and have a fiesta you won't
+							forget!
+						</Paragraph>
+
+						<Heading typeStyle='lg' className='text-white mt-[24px]'>
+							Sngular Madrid, C. de Labastida, 1, 28034 Madrid, Spain
+						</Heading>
+						<Heading typeStyle='lg' className='text-white mt-[24px]'>
+							19th of October, 2023
+						</Heading>
+					</div>
+					<div className='kinda-dark py-[10px] w-full'>
+						<div>
+							{isTablet ? (
+								<div className='w-full'>
+									<Dropdown
+										active={city.city}
+										items={speakers}
+										setOptions={setCity}
+										setOptions2={setSpeakersList}
+									/>
+								</div>
+							) : (
+								<div className='flex justify-center'>
+									<div className='w-[600px] lg:w-full flex justify-between'>
+										{tabs.map((tab) => {
+											return (
+												<div
+													key={tab.title}
+													onClick={() => {
+														setActive(tab.title);
+													}}
+												>
+													<Button
+														className={`w-[154px] h-[48px] ${
+															active === tab.title
+																? 'card-bg'
+																: 'border border-gray'
+														}`}
+														overlay={true}
+													>
+														{tab.title}
+													</Button>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							)}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className='border border border-x-0 border-b-0 border-t-[#333] py-28 '>
+				<Agenda />
+			</div>
+			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
+				<div className='mt-[64px] container pb-[181px]'>
+					<div className='flex flex-col justify-center items-center'>
+						<Heading className='text-[30px] text-white'>
+							Speakers
+						</Heading>
+						<Paragraph className='mt-[16px]'>
+							Meet Our Expert Speakers
+						</Paragraph>
+					</div>
+					{Object.keys(speakersList).length > 0 ? (
+						<div className='w-full mt-[64px] grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
+							{speakersList.map((speaker, i) => {
+								return (
+									<Speaker
+										key={i}
+										details={speaker}
+										// location={city}
+										className='mt-10'
+									/>
+								);
+							})}
+						</div>
+					) : (
+						<div className='w-[720px] lg:w-full mt-[140px] text-center'>
+							<Heading className='text-white'>
+								Speakers Coming Soon - Stay Tuned!
+							</Heading>
+							<Paragraph className='mt-12'>
+								We are actively accepting speaker applications, and you can
+								start your journey by clicking the button below. Join us on
+								stage and share your valuable insights with our enthusiastic
+								audience!
+							</Paragraph>
+							<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+								Apply as a Speaker
+							</Button>
+						</div>
+					)}
+				</div>
+			</div>
+			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
+				<Sponsors imgs={['/img/sngular.png']} />
+			</div>
+		</div>
+	);
+}
+
+export default Venue;
