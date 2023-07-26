@@ -37,8 +37,10 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Header />
-			<About />
-			<div>
+			<div id='about'>
+				<About />
+			</div>
+			<div id='venues'>
 				<div className='gradient-bg w-full container flex flex-col justify-center items-center'>
 					<div className='w-[1310px] lg:w-full flex lg:py-20 flex-col items-center justify-center'>
 						<div className='text-center py-[46px] w-[714px] lg:w-full'>
@@ -51,16 +53,18 @@ export default function Home() {
 						</div>
 						<div className='w-full mt-[64px]'>
 							<ReactSlider>
-								{cities
-									.map((city) => {
-										return <Venue key={city.name} city={city} />;
-									})}
+								{cities.map((city) => {
+									return <Venue key={city.name} city={city} />;
+								})}
 							</ReactSlider>
 						</div>
 					</div>
 				</div>
 
-				<div className='pt-[160px] lg:py-20 container relative flex flex-col items-center justify-center w-full'>
+				<div
+					id='speakers'
+					className='pt-[160px] lg:py-20 container relative flex flex-col items-center justify-center w-full'
+				>
 					<div className='text-center'>
 						<Heading className='text-white'>Speakers</Heading>
 						<Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
@@ -137,7 +141,9 @@ export default function Home() {
 						)}
 					</div>
 				</div>
-				<Sponsors imgs={['/img/sngular.png', '/img/IBM.png']} />
+				<div id='sponsors'>
+					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png']} />
+				</div>
 				<div className=''>
 					<Subcription />
 				</div>
