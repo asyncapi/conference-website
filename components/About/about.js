@@ -6,7 +6,7 @@ function About() {
     return (
 			<div className='relative overflow-hidden h-[100vh] lg:h-full'>
 				<img src='/img/sun.png' className='bg-03' />
-				<div className='pt-[160px] lg:p-20 container flex items-center justify-center w-full'>
+				<div className='pt-[160px] lg:py-[100px] container flex items-center justify-center w-full'>
 					<div className='w-[1310px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
 						<div
 							className='w-[650px] h-[650px] lg:w-[350px] lg:h-[350px] lg:mt-10 border p-10 card-bg'

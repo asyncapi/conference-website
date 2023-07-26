@@ -46,21 +46,29 @@ function Header() {
 		} else {
 			// Render a countdown
 			return (
-				<div className='flex items-center w-[200px] justify-between'>
+				<div className='flex items-center  w-[200px] sm:w-[100px] justify-between'>
 					<div>
-						<h1 className='glitch text-white text-[30px]'>{days}:</h1>
+						<h1 className='glitch text-white text-[30px] sm:text-[18px]'>
+							{days}:
+						</h1>
 						{/* <p className='text-lg mt-[30px]'>Days</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-white text-[30px]'>{hours}:</h1>
+						<h1 className='glitch text-white text-[30px] sm:text-[18px]'>
+							{hours}:
+						</h1>
 						{/* <p className='text-lg mt-[30px]'>Hours</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-white text-[30px]'>{minutes}:</h1>
+						<h1 className='glitch text-white text-[30px] sm:text-[18px]'>
+							{minutes}:
+						</h1>
 						{/* <p className='text-lg mt-[30px]'>Minutes</p> */}
 					</div>
 					<div>
-						<h1 className='glitch text-white text-[30px]'>{seconds}</h1>
+						<h1 className='glitch text-white text-[30px] sm:text-[18px]'>
+							{seconds}
+						</h1>
 						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
@@ -70,11 +78,11 @@ function Header() {
 	const dateString = 'September 20, 2023';
 	const dateObj = new Date(dateString);
 	return (
-		<div className='overflow-hidden h-[57rem] relative'>
+		<div className='overflow-hidden h-[57rem] lg:h-[auto] relative'>
 			<img src='/img/illustra.png' className='bg-01' />
 			<div className='container w-full flex items-center justify-center'>
-				<div className='w-[1131px]'>
-					<div className='flex justify-center w-[full] mt-12'>
+				<div className='w-[1131px] pb-8'>
+					<div className='flex justify-center w-full mt-12'>
 						<div className='flex flex-col justify-center items-center w-full'>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Heading
@@ -97,12 +105,12 @@ function Header() {
 							</div>
 						</div>
 					</div>
-					<div className='mt-[400px] flex items-center justify-between'>
+					<div className='mt-[400px] sm:mt-[150px] flex items-center justify-between'>
 						<div className='home-title'>
-							<span className='text-[25px] text-white font-bold'>
+							<span className='text-[25px] sm:text-[18px] text-white font-bold'>
 								Madrid, Spain
 							</span>
-							<span className='text-lg mt-[10px] text-gray'>
+							<span className='text-lg mt-[10px] sm:text-sm text-gray'>
 								de Madrid al Cielo
 							</span>
 						</div>
@@ -110,7 +118,9 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className='relative flex items-center justify-center'>
+			<div className='relative sm:hidden flex items-center justify-center' style={{
+				display: 'none'
+			}}>
 				<div className='test-2'></div>
 				<div
 					className='globe-viz'
