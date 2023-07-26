@@ -124,7 +124,7 @@ export default function Home() {
 						) : (
 							<div className='w-[720px] lg:w-full mt-[140px] text-center'>
 								<Heading className='text-white'>
-									London Speakers Coming Soon - Stay Tuned!
+									{city.city} Speakers Coming Soon - Stay Tuned!
 								</Heading>
 								<Paragraph className='mt-12'>
 									We are actively accepting speaker applications, and you can

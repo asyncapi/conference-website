@@ -4,24 +4,39 @@
 		"city": "Madrid",
 		"lists": [
 			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613"
+				"name": "Fran Méndez",
+				"title": "Founder of the AsyncAPI Initiative",
+				"img": "https://sessionize.com/image/2956-200o200o2-Mb9nauAS5oiS9MGnoRSeJW.jpg"
 			},
 			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613"
+				"name": "Abel Gómez",
+				"title": "Internet Interdisciplinary Institute (IN3). Universitat Oberta de Catalunya (UOC)",
+				"img": "https://sessionize.com/image/89de-200o200o2-NKt48A5ot62pByRM69iPw7.jpg"
 			},
 			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613"
+				"name": "Cynthia Peter",
+				"title": "Technical Writer",
+				"img": "https://sessionize.com/image/d32d-200o200o2-JCmP3viPs7gfVoh3VfT5vV.jpg"
 			},
 			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613"
+				"name": "Ivan Garcia Sainz-Aja",
+				"title": "Sr Software Engineer at Sngular",
+				"img": "https://sessionize.com/image/227b-200o200o2-s17N2LWbP5drYrKrhfoK7t.jpg"
+			},
+			{
+				"name": "Iván del Viejo",
+				"title": "Sngular, Business Analyst",
+				"img": "https://cache.sessionize.com/image/2d8b-200o200o2-44e72516-1cda-4fe8-ba56-21792dc5ee39.jpg"
+			},
+			{
+				"name": "Alejandra Quetzalli",
+				"title": "Author & Lead Documentation Engineer",
+				"img": "https://cache.sessionize.com/image/6025-200o200o2-DqDUFbrp2qMozbpyx1T5rZ.JPG"
+			},
+			{
+				"name": "Fawaz Ghali",
+				"title": "Hazelcast, Principal Data Science Architect and Head of Developer Relations",
+				"img": "https://sessionize.com/image/3405-200o200o2-N7uKxHJji5AywKmqaTbC3G.jpg"
 			}
 		]
 	},
@@ -33,23 +48,11 @@
 	{
 		"city": "Paris",
 		"location": "Paris, France",
-		"lists": [
-			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613?v=4?s=100"
-			}
-		]
+		"lists": []
 	},
 	{
 		"city": "Bengaluru",
 		"location": "Bengaluru, India",
-		"lists": [
-			{
-				"name": "Aishat Muibudeen",
-				"title": "UI/UX Designer, AsyncAPI",
-				"img": "https://avatars.githubusercontent.com/u/105395613?v=4?s=100"
-			}
-		]
+		"lists": []
 	}
 ]

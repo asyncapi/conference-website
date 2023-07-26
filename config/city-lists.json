@@ -9,28 +9,28 @@
 	{
 		"name": "Madrid",
 		"country": "Spain",
-		"date": "September, 26",
+		"date": "October, 26",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "/img/london.jpeg"
 	},
 	{
 		"name": "Bangalore",
 		"country": "India",
-		"date": "September, 26",
+		"date": "TBH",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "/img/london.jpeg"
 	},
 	{
 		"name": "Paris",
 		"country": "France",
-		"date": "September, 26",
+		"date": "TBH",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "/img/london.jpeg"
 	},
 	{
 		"name": "Melbourne",
 		"country": "Australia",
-		"date": "September, 26",
+		"date": "TBH",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "/img/london.jpeg"
 	}
