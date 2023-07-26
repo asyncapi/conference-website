@@ -54,9 +54,9 @@ function Venue({ city }) {
 	const [active, setActive] = useState(tabs[0].title);
 	return (
 		<div>
-			<div className='w-full h-[673px] bg-madrid bg-cover bg-center'>
+			<div className='w-full h-[673px] sm:h-[auto] bg-madrid bg-cover bg-center'>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
-					<div className='mt-[82px] flex flex-col items-center w-[659px]'>
+					<div className='mt-[82px] flex flex-col items-center w-[659px] sm:w-full sm:text-center'>
 						<Heading className='text-white'>
 							{city.name}, {city.country}
 						</Heading>
@@ -70,43 +70,32 @@ function Venue({ city }) {
 						</Heading>
 					</div>
 					<div className='kinda-dark py-[10px] w-full'>
-						<div>
-							{isTablet ? (
-								<div className='w-full'>
-									<Dropdown
-										active={city.city}
-										items={speakers}
-										setOptions={setCity}
-										setOptions2={setSpeakersList}
-									/>
-								</div>
-							) : (
-								<div className='flex justify-center'>
-									<div className='w-[600px] lg:w-full flex justify-between'>
-										{tabs.map((tab) => {
-											return (
-												<div
-													key={tab.title}
-													onClick={() => {
-														setActive(tab.title);
-													}}
+						<div className='sm:hidden container'>
+							<div className='flex justify-center'>
+								<div className='w-[600px] lg:w-full flex justify-between'>
+									{tabs.map((tab) => {
+										return (
+											<div
+												key={tab.title}
+												onClick={() => {
+													setActive(tab.title);
+												}}
+											>
+												<Button
+													className={`w-[154px] h-[48px] ${
+														active === tab.title
+															? 'card-bg'
+															: 'border border-gray'
+													}`}
+													overlay={true}
 												>
-													<Button
-														className={`w-[154px] h-[48px] ${
-															active === tab.title
-																? 'card-bg'
-																: 'border border-gray'
-														}`}
-														overlay={true}
-													>
-														{tab.title}
-													</Button>
-												</div>
-											);
-										})}
-									</div>
+													{tab.title}
+												</Button>
+											</div>
+										);
+									})}
 								</div>
-							)}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -116,7 +105,7 @@ function Venue({ city }) {
 			</div>
 			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
 				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
-					<div className=''>
+					<div className='text-center'>
 						<Heading className='text-[30px] text-white'>Speakers</Heading>
 						<Paragraph className='mt-[16px]'>
 							Meet Our Expert Speakers
