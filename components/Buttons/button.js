@@ -1,8 +1,9 @@
 import React from 'react'
 
-function Button({className, children, overlay}) {
+function Button({className, children, overlay, onClick}) {
   return (
-		<button
+	  <button
+		  onClick={onClick}
 			className={`${overlay ? '' : 'gradient-bg'} text-white h-[54px] rounded-md p-[8px] ${className}`}
       >{children}</button>
 	);

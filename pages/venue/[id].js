@@ -1,16 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import cities from '../../config/city-lists.json';
-import Dropdown from '../../components/illustration/dropdown';
 import Button from '../../components/Buttons/button';
-import { useMediaQuery } from 'react-responsive';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
 import Agenda from '../../components/Agenda/agenda';
 import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-
+import { useRouter } from 'next/router';
 
 const tabs = [
 	{
@@ -26,11 +24,11 @@ const tabs = [
 ];
 
 export async function getStaticProps({ params }) {
-    let res = {}
-    const data = cities.filter((p) => p.name === params.id);
-    res = data[0];
-    const getSpeakers = speakers.filter((s) => s.city === res?.name);
-    res.speakers = getSpeakers[0].lists;
+	let res = {};
+	const data = cities.filter((p) => p.name === params.id);
+	res = data[0];
+	const getSpeakers = speakers.filter((s) => s.city === res?.name);
+	res.speakers = getSpeakers[0].lists;
 	return {
 		props: {
 			city: res,
@@ -41,7 +39,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
 	const paths = cities.map((city) => ({
 		params: { id: city.name },
-    }));
+	}));
 	return {
 		paths,
 		fallback: false,
@@ -49,8 +47,7 @@ export async function getStaticPaths() {
 }
 
 function Venue({ city }) {
-	const isTablet = useMediaQuery({ maxWidth: '1118px' });
-	const [speakersList, setSpeakersList] = useState(speakers[0].lists);
+	const router = useRouter();
 	const [active, setActive] = useState(tabs[0].title);
 	return (
 		<div>
@@ -82,6 +79,9 @@ function Venue({ city }) {
 												}}
 											>
 												<Button
+													onClick={() =>
+														router.push(`#${tab.title.toLowerCase()}`)
+													}
 													className={`w-[154px] h-[48px] ${
 														active === tab.title
 															? 'card-bg'
@@ -100,10 +100,16 @@ function Venue({ city }) {
 					</div>
 				</div>
 			</div>
-			<div className='border border border-x-0 border-b-0 border-t-[#333] py-28 '>
+			<div
+				id='agenda'
+				className='border border border-x-0 border-b-0 border-t-[#333] py-28 '
+			>
 				<Agenda />
 			</div>
-			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
+			<div
+				id='speakers'
+				className='border border border-x-0 border-b-0 border-[#333] py-28'
+			>
 				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
 					<div className='text-center'>
 						<Heading className='text-[30px] text-white'>Speakers</Heading>
@@ -142,7 +148,10 @@ function Venue({ city }) {
 					)}
 				</div>
 			</div>
-			<div className='border border border-x-0 border-b-0 border-[#333] py-28'>
+			<div
+				id='sponsors'
+				className='border border border-x-0 border-b-0 border-[#333] py-28'
+			>
 				<Sponsors imgs={city.sponsors} />
 			</div>
 		</div>
