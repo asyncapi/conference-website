@@ -16,11 +16,11 @@ function About() {
 						>
 							<img src='/img/hand.png' className='w-[663px]' />
 						</div>
-						<div className='w-[604px] lg:text-center'>
+						<div className='w-[604px] lg:w-full lg:text-center'>
 							<Heading className='text-white'>
 								About AsyncAPI Conf 2023?
 							</Heading>
-							<Paragraph typeStyle='md' >
+							<Paragraph typeStyle='md' className="lg:mt-10" >
 								The AsyncAPI Conf2023 on Tour is planned to take the online
 								event to the next level by hosting physical events in five
 								different locations across the globe. Each location will feature

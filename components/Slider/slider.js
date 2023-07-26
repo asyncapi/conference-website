@@ -3,18 +3,26 @@ import Arrow from '../illustration/arrow';
 import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-function ReactSlider({children}) {
-	const isDesktop = useMediaQuery({ minWidth: '1224px' });
+function ReactSlider({ children }) {
+	const isDesktop = useMediaQuery({ minWidth: '1279px' });
 	const isTablet = useMediaQuery({ maxWidth: '1224px' });
-	const isMobile = useMediaQuery({ maxWidth: '500px' });
-	const [slides, setSlides] = useState(2);
+	const [slides, setSlides] = useState(3);
+
+	useEffect(() => {
+		if (isDesktop) {
+			setSlides(2);
+		}
+		if (isTablet) {
+			setSlides(1);
+		}
+	}, [isTablet]);
 	const slider = useRef(null);
 	const settings = {
 		dots: true,
 		speed: 500,
 		slidesToShow: slides,
-        slidesToScroll: 2,
-        variableWidth: true,
+		slidesToScroll: slides,
+		variableWidth: true,
 		arrows: false,
 		appendDots: (dots) => (
 			<div

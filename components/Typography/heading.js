@@ -9,7 +9,7 @@ export default function Heading({
 	const Tag = `${level}`;
 	switch (typeStyle) {
 		case 'heading-lg':
-			classNames = `font-heading text-heading-md font-bold text-[60px] tracking-heading sm:text-[40px] ${
+			classNames = `font-heading text-heading-md font-bold text-[60px] tracking-heading sm:text-[30px] lg:text-[40px] ${
 				className || ''
 			}`;
 			break;

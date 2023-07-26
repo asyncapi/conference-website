@@ -17,9 +17,12 @@ import About from '../components/About/about';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Button from '../components/Buttons/button';
+import { useMediaQuery } from 'react-responsive';
+import Dropdown from '../components/Dropdown/dropdown';
 
 export default function Home() {
 	const [city, setCity] = useState(speakers[0]);
+	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	const [speakersList, setSpeakersList] = useState(speakers[0].lists);
 	if (typeof window !== 'undefined') {
 		TagManager.initialize({ gtmId: 'GTM-MCT2H5G' });
@@ -39,7 +42,7 @@ export default function Home() {
 			<div>
 				<div className='gradient-bg w-full container flex flex-col justify-center items-center'>
 					<div className='w-[1310px] lg:w-full flex lg:py-20 flex-col items-center justify-center'>
-						<div className='text-center py-[46px] w-[714px]'>
+						<div className='text-center py-[46px] w-[714px] lg:w-full'>
 							<Heading className='text-white'>Venues</Heading>
 							<Paragraph className='mt-12'>
 								The AsyncAPI Conf2023 on Tour is planned to take the online
@@ -64,35 +67,47 @@ export default function Home() {
 						<Heading className='text-white'>Speakers</Heading>
 						<Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
 					</div>
-
-					<div className='mt-[64px] w-[792px] lg:w-full flex justify-between'>
-						{speakers.map((speaker) => {
-							return (
-								<div
-									key={speaker.location}
-									onClick={() => {
-										setCity(speaker);
-										setSpeakersList(speaker.lists);
-									}}
-								>
-									<Button
-										className={`w-[168px] ${
-											city.city === speaker.city
-												? 'gradient-bg'
-												: 'border border-gray'
-										}`}
-										overlay={true}
-									>
-										{speaker.city}
-									</Button>
-								</div>
-							);
-						})}
+					<div className='mt-[64px] w-full '>
+						{isTablet ? (
+							<div className='w-full'>
+								<Dropdown
+									active={city.city}
+									items={speakers}
+									setOptions={setCity}
+									setOptions2={setSpeakersList}
+								/>
+							</div>
+						) : (
+							<div className='w-[792px] lg:w-full flex justify-between'>
+								{speakers.map((speaker) => {
+									return (
+										<div
+											key={speaker.location}
+											onClick={() => {
+												setCity(speaker);
+												setSpeakersList(speaker.lists);
+											}}
+										>
+											<Button
+												className={`w-[168px] ${
+													city.city === speaker.city
+														? 'gradient-bg'
+														: 'border border-gray'
+												}`}
+												overlay={true}
+											>
+												{speaker.city}
+											</Button>
+										</div>
+									);
+								})}
+							</div>
+						)}
 					</div>
 
 					<div className='mt-[64px] pb-[181px]'>
 						{Object.keys(speakersList).length > 0 ? (
-							<div className='w-full grid grid-cols-3 lg:grid-cols-2 gap-24'>
+							<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
 								{speakersList.map((speaker, i) => {
 									return (
 										<Speaker
@@ -105,16 +120,16 @@ export default function Home() {
 								})}
 							</div>
 						) : (
-							<div className='w-[720px] mt-[140px] text-center'>
-								<h1 className='text-[40px] text-white font-bold'>
+							<div className='w-[720px] lg:w-full mt-[140px] text-center'>
+								<Heading className='text-white'>
 									London Speakers Coming Soon - Stay Tuned!
-								</h1>
-								<p className='mt-[32px] text-[16px] text-gray'>
+								</Heading>
+								<Paragraph className='mt-12'>
 									We are actively accepting speaker applications, and you can
 									start your journey by clicking the button below. Join us on
 									stage and share your valuable insights with our enthusiastic
 									audience!
-								</p>
+								</Paragraph>
 								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 									Apply as a Speaker
 								</Button>

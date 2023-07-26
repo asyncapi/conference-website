@@ -123,6 +123,7 @@ mix-blend-mode: lighten;
   background: linear-gradient(252.95deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+
 .test-2{
   background: #47bcee;
   filter: blur(280px);
