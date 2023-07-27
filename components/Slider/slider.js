@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 function ReactSlider({ children }) {
 	const isDesktop = useMediaQuery({ minWidth: '1279px' });
 	const isTablet = useMediaQuery({ maxWidth: '1224px' });
-	const [slides, setSlides] = useState(3);
+	const [slides, setSlides] = useState(2);
 
 	useEffect(() => {
 		if (isTablet) {
@@ -17,7 +17,7 @@ function ReactSlider({ children }) {
 	const settings = {
 		dots: true,
 		speed: 500,
-		slidesToShow: 2,
+		slidesToShow: slides,
 		slidesToScroll: 2,
 		variableWidth: true,
 		arrows: false,
