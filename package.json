@@ -17,20 +17,15 @@
     "d3": "^7.8.5",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-confetti": "^6.1.0",
     "react-countdown": "^2.3.5",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.1",
     "react-globe.gl": "^2.24.2",
     "react-gtm-module": "^2.0.11",
-    "react-hot-toast": "^2.2.0",
     "react-responsive": "^9.0.0",
-    "react-scrollspy": "^3.4.3",
-    "react-select": "^5.7.3",
     "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
-    "slick-carousel": "^1.8.1",
-    "tailwindcss-gradients": "^3.0.0"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
