@@ -9,7 +9,7 @@
 		"subMenu": [
 			{
 				"title": "Bengaluru, India",
-				"ref": "/venue/Bengaluru"
+				"ref": "/venue/Bangalore"
 			},
 			{
 				"title": "Madrid, Spain",
@@ -20,8 +20,8 @@
 				"ref": "/venue/Paris"
 			},
 			{
-				"title": "London, UK",
-				"ref": "/venue/London"
+				"title": "Melbourne, Australia",
+				"ref": "/venue/Melbourne"
 			}
 		]
 	},
