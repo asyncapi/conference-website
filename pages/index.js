@@ -81,7 +81,7 @@ export default function Home() {
 								</div>
 							) : (
 								<div className='flex justify-center'>
-									<div className='w-[792px] lg:w-full flex justify-between'>
+									<div className='w-[1000px] lg:w-full flex justify-between'>
 										{speakers.map((speaker) => {
 											return (
 												<div
@@ -124,19 +124,21 @@ export default function Home() {
 									})}
 								</div>
 							) : (
-								<div className='w-[720px] lg:w-full mt-[140px] text-center'>
-									<Heading className='text-white'>
-										{city.city} Speakers Coming Soon - Stay Tuned!
-									</Heading>
-									<Paragraph className='mt-12'>
-										We are actively accepting speaker applications, and you can
-										start your journey by clicking the button below. Join us on
-										stage and share your valuable insights with our enthusiastic
-										audience!
-									</Paragraph>
-									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-										Apply as a Speaker
-									</Button>
+								<div className='mt-[140px] flex items-center justify-center text-center'>
+									<div className='w-[720px] lg:w-full'>
+										<Heading className='text-white'>
+											{city.city} Speakers Coming Soon - Stay Tuned!
+										</Heading>
+										<Paragraph className='mt-12'>
+											We are actively accepting speaker applications, and you
+											can start your journey by clicking the button below. Join
+											us on stage and share your valuable insights with our
+											enthusiastic audience!
+										</Paragraph>
+										<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+											Apply as a Speaker
+										</Button>
+									</div>
 								</div>
 							)}
 						</div>
