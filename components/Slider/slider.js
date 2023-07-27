@@ -9,9 +9,6 @@ function ReactSlider({ children }) {
 	const [slides, setSlides] = useState(3);
 
 	useEffect(() => {
-		if (isDesktop) {
-			setSlides(2);
-		}
 		if (isTablet) {
 			setSlides(1);
 		}
@@ -20,7 +17,8 @@ function ReactSlider({ children }) {
 	const settings = {
 		dots: true,
 		speed: 500,
-		slidesToShow: slides,
+		slidesToShow: 2,
+		slidesToScroll: 2,
 		variableWidth: true,
 		arrows: false,
 		appendDots: (dots) => (
