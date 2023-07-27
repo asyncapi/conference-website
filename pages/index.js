@@ -41,7 +41,7 @@ export default function Home() {
 			</div>
 			<div id='venues'>
 				<div className='gradient-bg w-full container flex flex-col justify-center items-center'>
-					<div className='w-[1310px] lg:w-full flex lg:py-20 flex-col items-center justify-center'>
+					<div className='w-[1130px] lg:w-full flex lg:py-20 flex-col items-center justify-center'>
 						<div className='text-center py-[46px] w-[714px] lg:w-full'>
 							<Heading className='text-white'>Venues</Heading>
 							<Paragraph className='mt-12'>
@@ -62,82 +62,84 @@ export default function Home() {
 
 				<div
 					id='speakers'
-					className='pt-[160px] lg:py-20 container relative flex flex-col items-center justify-center w-full'
+					className='pt-[160px] container relative flex flex-col items-center justify-center'
 				>
-					<div className='text-center'>
-						<Heading className='text-white'>Speakers</Heading>
-						<Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
-					</div>
-					<div className='mt-[64px] w-full '>
-						{isTablet ? (
-							<div className='w-full'>
-								<Dropdown
-									active={city.city}
-									items={speakers}
-									setOptions={setCity}
-									setOptions2={setSpeakersList}
-								/>
-							</div>
-						) : (
-							<div className='flex justify-center'>
-								<div className='w-[792px] lg:w-full flex justify-between'>
-									{speakers.map((speaker) => {
-										return (
-											<div
-												key={speaker.location}
-												onClick={() => {
-													setCity(speaker);
-													setSpeakersList(speaker.lists);
-												}}
-											>
-												<Button
-													className={`w-[168px] ${
-														city.city === speaker.city
-															? 'gradient-bg'
-															: 'border border-gray'
-													}`}
-													overlay={true}
+					<div className='lg:py-20 w-[1130px] lg:w-full'>
+						<div className='text-center'>
+							<Heading className='text-white'>Speakers</Heading>
+							<Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
+						</div>
+						<div className='mt-[64px] '>
+							{isTablet ? (
+								<div className='w-full'>
+									<Dropdown
+										active={city.city}
+										items={speakers}
+										setOptions={setCity}
+										setOptions2={setSpeakersList}
+									/>
+								</div>
+							) : (
+								<div className='flex justify-center'>
+									<div className='w-[792px] lg:w-full flex justify-between'>
+										{speakers.map((speaker) => {
+											return (
+												<div
+													key={speaker.location}
+													onClick={() => {
+														setCity(speaker);
+														setSpeakersList(speaker.lists);
+													}}
 												>
-													{speaker.city}
-												</Button>
-											</div>
+													<Button
+														className={`w-[168px] ${
+															city.city === speaker.city
+																? 'gradient-bg'
+																: 'border border-gray'
+														}`}
+														overlay={true}
+													>
+														{speaker.city}
+													</Button>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							)}
+						</div>
+
+						<div className='mt-[64px] pb-[181px]'>
+							{Object.keys(speakersList).length > 0 ? (
+								<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
+									{speakersList.map((speaker, i) => {
+										return (
+											<Speaker
+												key={i}
+												details={speaker}
+												location={city}
+												className='mt-10'
+											/>
 										);
 									})}
 								</div>
-							</div>
-						)}
-					</div>
-
-					<div className='mt-[64px] pb-[181px]'>
-						{Object.keys(speakersList).length > 0 ? (
-							<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
-								{speakersList.map((speaker, i) => {
-									return (
-										<Speaker
-											key={i}
-											details={speaker}
-											location={city}
-											className='mt-10'
-										/>
-									);
-								})}
-							</div>
-						) : (
-							<div className='w-[720px] lg:w-full mt-[140px] text-center'>
-								<Heading className='text-white'>
-									{city.city} Speakers Coming Soon - Stay Tuned!
-								</Heading>
-								<Paragraph className='mt-12'>
-									We are actively accepting speaker applications, and you can
-									start your journey by clicking the button below. Join us on
-									stage and share your valuable insights with our enthusiastic
-									audience!
-								</Paragraph>
-								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-									Apply as a Speaker
-								</Button>
-							</div>
-						)}
+							) : (
+								<div className='w-[720px] lg:w-full mt-[140px] text-center'>
+									<Heading className='text-white'>
+										{city.city} Speakers Coming Soon - Stay Tuned!
+									</Heading>
+									<Paragraph className='mt-12'>
+										We are actively accepting speaker applications, and you can
+										start your journey by clicking the button below. Join us on
+										stage and share your valuable insights with our enthusiastic
+										audience!
+									</Paragraph>
+									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+										Apply as a Speaker
+									</Button>
+								</div>
+							)}
+						</div>
 					</div>
 				</div>
 				<div id='sponsors'>

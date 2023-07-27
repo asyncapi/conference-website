@@ -102,50 +102,54 @@ function Venue({ city }) {
 			</div>
 			<div
 				id='agenda'
-				className='border border border-x-0 border-b-0 border-t-[#333] py-28 '
+				className='border border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
-				<Agenda />
+				<div className='w-[1130px] lg:w-full'>
+					<Agenda />
+				</div>
 			</div>
 			<div
 				id='speakers'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
 				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
-					<div className='text-center'>
-						<Heading className='text-[30px] text-white'>Speakers</Heading>
-						<Paragraph className='mt-[16px]'>
-							Meet Our Expert Speakers
-						</Paragraph>
-					</div>
-					{Object.keys(city.speakers).length > 0 ? (
-						<div className='w-full mt-[64px] grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
-							{city.speakers.map((speaker, i) => {
-								return (
-									<Speaker
-										key={i}
-										details={speaker}
-										// location={city}
-										className='mt-10'
-									/>
-								);
-							})}
-						</div>
-					) : (
-						<div className='w-[720px] lg:w-full mt-[140px] text-center'>
-							<Heading className='text-white'>
-								Speakers Coming Soon - Stay Tuned!
-							</Heading>
-							<Paragraph className='mt-12'>
-								We are actively accepting speaker applications, and you can
-								start your journey by clicking the button below. Join us on
-								stage and share your valuable insights with our enthusiastic
-								audience!
+					<div className='w-[1130px] lg:w-full'>
+						<div className='text-center'>
+							<Heading className='text-[30px] text-white'>Speakers</Heading>
+							<Paragraph className='mt-[16px]'>
+								Meet Our Expert Speakers
 							</Paragraph>
-							<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-								Apply as a Speaker
-							</Button>
 						</div>
-					)}
+						{Object.keys(city.speakers).length > 0 ? (
+							<div className='w-full mt-[64px] grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
+								{city.speakers.map((speaker, i) => {
+									return (
+										<Speaker
+											key={i}
+											details={speaker}
+											// location={city}
+											className='mt-10'
+										/>
+									);
+								})}
+							</div>
+						) : (
+							<div className='w-[720px] lg:w-full mt-[140px] text-center'>
+								<Heading className='text-white'>
+									Speakers Coming Soon - Stay Tuned!
+								</Heading>
+								<Paragraph className='mt-12'>
+									We are actively accepting speaker applications, and you can
+									start your journey by clicking the button below. Join us on
+									stage and share your valuable insights with our enthusiastic
+									audience!
+								</Paragraph>
+								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+									Apply as a Speaker
+								</Button>
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
 			<div
