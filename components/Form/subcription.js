@@ -7,14 +7,23 @@ function Subcription() {
 				<h3 className='text-[32px] text-white lg:text-center'>
 					Subscribe for AACoT’23 updates!
 				</h3>
-				<form className='mt-[32px] flex items-center lg:flex-col lg:w-full'>
+				<form
+					name='form 1'
+					method='POST'
+					data-netlify='true'
+					className='mt-[32px] flex items-center lg:flex-col lg:w-full'
+				>
+					<input type='hidden' name='form-name' value='form 1' />
 					<input
 						className='w-[728px] lg:w-full h-[84px] py-[8px] px-[16px] rounded-l-lg lg:rounded'
 						placeholder='Email Address'
 						type='email'
 					/>
 
-					<button className='w-[299px] lg:w-full bg-[#875AE2] h-[84px] text-[24px] text-white rounded-r-lg lg:rounded lg:mt-6'>
+					<button
+						type='submit'
+						className='w-[299px] lg:w-full bg-[#875AE2] h-[84px] text-[24px] text-white rounded-r-lg lg:rounded lg:mt-6'
+					>
 						Subscribe
 					</button>
 				</form>
