@@ -18,7 +18,7 @@ function About() {
 						</div>
 						<div className='w-[604px] ml-10 lg:w-full lg:text-center'>
 							<Heading className='text-white'>
-								About AsyncAPI Conf 2023?
+								About AsyncAPI Conf on Tour 2023?
 							</Heading>
 							<Paragraph typeStyle='md' className="lg:mt-10" >
 								The AsyncAPI Conf2023 on Tour is planned to take the online
