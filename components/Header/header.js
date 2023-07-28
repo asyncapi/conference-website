@@ -98,7 +98,7 @@ function Header() {
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]'>
 									Join us for the first-ever AsyncAPI Conference on Tour,
-									bringing the latest in async API technology to locations
+									bringing the latest in Async API technology to locations
 									worldwide!
 								</Paragraph>
 							</div>
