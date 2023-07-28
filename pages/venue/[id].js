@@ -113,7 +113,7 @@ function Venue({ city }) {
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
 				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
-					<div className='w-[1130px] lg:w-full'>
+					<div className='w-[1130px] flex flex-col items-center lg:w-full'>
 						<div className='text-center'>
 							<Heading className='text-[30px] text-white'>Speakers</Heading>
 							<Paragraph className='mt-[16px]'>

@@ -54,10 +54,5 @@
 		"city": "Bangalore",
 		"location": "Bangalore, India",
 		"lists": []
-	},
-	{
-		"city": "Melbourne",
-		"location": "Melbourne, Australia",
-		"lists": []
 	}
 ]
