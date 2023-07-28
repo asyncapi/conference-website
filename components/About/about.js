@@ -21,7 +21,7 @@ function About() {
 								About AsyncAPI Conf on Tour 2023?
 							</Heading>
 							<Paragraph typeStyle='md' className="lg:mt-10" >
-								The AsyncAPI Conf2023 on Tour is planned to take the online
+								The AsyncAPI Conf on Tour 2023 is planned to take the online
 								event to the next level by hosting physical events in five
 								different locations across the globe. Each location will feature
 								its own keynote speakers, panels, and networking events,
