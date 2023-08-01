@@ -110,7 +110,15 @@ export default function Home() {
 						</div>
 
 						<div className='mt-[64px] pb-[181px]'>
-							{Object.keys(speakersList).length > 0 ? (
+							{typeof speakersList === 'string' ? (
+								<div className='mt-[140px] flex items-center justify-center text-center'>
+									<div className='w-[720px] lg:w-full'>
+										<Heading className='text-white'>
+											{city.city} Speakers To Be Announced Soon - Stay Tuned!
+										</Heading>
+									</div>
+								</div>
+							) : Object.keys(speakersList).length > 0 ? (
 								<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
 									{speakersList.map((speaker, i) => {
 										return (

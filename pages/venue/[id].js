@@ -120,7 +120,15 @@ function Venue({ city }) {
 								Meet Our Expert Speakers
 							</Paragraph>
 						</div>
-						{Object.keys(city.speakers).length > 0 ? (
+						{typeof city.speakers === 'string' ? (
+							<div className='mt-[140px] flex items-center justify-center text-center'>
+								<div className='w-[720px] lg:w-full'>
+									<Heading typeStyle='lg' className='text-white text-[30px]'>
+										Speakers To Be Announced Soon - Stay Tuned!
+									</Heading>
+								</div>
+							</div>
+						) : Object.keys(city.speakers).length > 0 ? (
 							<div className='w-full mt-[64px] grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
 								{city.speakers.map((speaker, i) => {
 									return (

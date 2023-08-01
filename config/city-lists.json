@@ -2,7 +2,7 @@
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 26, 2023",
+		"date": "September 20, 2023",
 		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "/img/london.jpeg",
 		"address": "IBM UK Limited 20 York Road London SE1 7ND",
@@ -11,7 +11,7 @@
 	{
 		"name": "Madrid",
 		"country": "Spain",
-		"date": "October 26, 2023",
+		"date": "October 18-19, 2023",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco 'bout messaging and have a fiesta you won't forget!",
 		"img": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
 		"address": "Sngular Madrid, C. de Labastida, 1, 28034 Madrid, Spain",

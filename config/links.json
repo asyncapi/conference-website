@@ -12,16 +12,16 @@
 				"ref": "/venue/Bangalore"
 			},
 			{
+				"title": "London, UK",
+				"ref": "/venue/London"
+			},
+			{
 				"title": "Madrid, Spain",
 				"ref": "/venue/Madrid"
 			},
 			{
 				"title": "Paris, France",
 				"ref": "/venue/Paris"
-			},
-			{
-				"title": "Melbourne, Australia",
-				"ref": "/venue/Melbourne"
 			}
 		]
 	},
