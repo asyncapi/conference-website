@@ -10,7 +10,9 @@ function Subcription() {
 
 				<form
 					action='asyncapi-website.netlify.app'
+					name='form 1'
 					method='POST'
+					data-netlify='true'
 					className='mt-[32px] flex items-center lg:flex-col lg:w-full'
 				>
 					<input type='hidden' name='form-name' value='form 1' />
