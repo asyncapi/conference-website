@@ -9,7 +9,6 @@ function Subcription() {
 				</h3>
 
 				<form
-					action='asyncapi-website.netlify.app'
 					name='form 1'
 					method='POST'
 					data-netlify='true'
