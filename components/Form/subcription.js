@@ -7,29 +7,14 @@ function Subcription() {
 				<h3 className='text-[32px] text-white lg:text-center'>
 					Subscribe for AACoT’23 updates!
 				</h3>
-
-				<form
-					name='form 1'
-					method='POST'
-					data-netlify='true'
-					className='mt-[32px] flex items-center lg:flex-col lg:w-full'
-				>
-					<input type='hidden' name='form-name' value='form 1' />
-					<input type='text' name='name' placeholder='Name' />
-					<input
-						className='w-[728px] lg:w-full h-[84px] py-[8px] px-[16px] rounded-l-lg lg:rounded'
-						placeholder='Email Address'
-						type='email'
-						name='email'
-					/>
-
+				<a href='https://www.asyncapi.com/newsletter' target='_blank' rel="noreferrer">
 					<button
 						type='submit'
-						className='w-[299px] lg:w-full bg-[#875AE2] h-[84px] text-[24px] text-white rounded-r-lg lg:rounded lg:mt-6'
+						className='w-[299px] lg:w-full bg-[#875AE2] h-[84px] mt-[40px] text-[24px] text-white rounded-lg lg:mt-6'
 					>
 						Subscribe
 					</button>
-				</form>
+				</a>
 			</div>
 		</div>
 	);

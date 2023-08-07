@@ -4,19 +4,19 @@ import Paragraph from '../Typography/paragraph';
 
 function About() {
     return (
-			<div className='relative overflow-hidden h-[100vh] lg:h-full'>
+			<div className='relative overflow-hidden h-[900px] lg:h-full'>
 				<img src='/img/sun.png' className='bg-03' />
 				<div className='pt-[160px] lg:py-[100px] container flex items-center justify-center w-full'>
 					<div className='w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
 						<div
-							className='w-[600px] h-[550px] lg:w-[350px] lg:h-[350px] lg:mt-10 border p-10 card-bg'
+							className='w-[500px] h-[500px] lg:w-[350px] lg:h-[350px] lg:mt-10 border p-10 card-bg'
 							style={{
 								borderRadius: '100%',
 							}}
 						>
-							<img src='/img/hand.png' className='w-[663px]' />
+							<img src='/img/hand.png' className='w-[660px]' />
 						</div>
-						<div className='w-[604px] ml-10 lg:w-full lg:text-center'>
+						<div className='w-[600px] ml-10 lg:w-full lg:text-center'>
 							<Heading className='text-white'>
 								About AsyncAPI Conf on Tour 2023?
 							</Heading>

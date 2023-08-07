@@ -103,7 +103,9 @@ function Header() {
 								</Paragraph>
 							</div>
 							<div className='mt-[54px]'>
-								<Button className='w-[200px]'>Buy Tickets</Button>
+								<a href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1' target='_blank' rel="noreferrer">
+									<Button className='w-[200px]'>Get your Tickets</Button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -127,7 +129,7 @@ function Header() {
 				<div
 					className='globe-viz'
 					style={{
-						marginTop: '-400px',
+						marginTop: '-500px',
 					}}
 				>
 					<Globe

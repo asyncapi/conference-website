@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
@@ -20,14 +20,24 @@ import Dropdown from '../components/Dropdown/dropdown';
 import cities from '../config/city-lists.json';
 
 export default function Home() {
-	const [city, setCity] = useState(speakers[0]);
+	const [city, setCity] = useState("");
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
-	const [speakersList, setSpeakersList] = useState(speakers[0].lists);
+	const [speakersList, setSpeakersList] = useState([]);
 	if (typeof window !== 'undefined') {
 		TagManager.initialize({ gtmId: 'GTM-MCT2H5G' });
 		ReactGA.initialize('UA-109278936-3');
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
+	useEffect(() => {
+		const newArr = []
+		speakers.map((speaker) => {
+			if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
+				console.log(speaker);
+				newArr.push(...speaker.lists)
+			}
+		});
+		setSpeakersList(newArr)
+	},[])
 	return (
 		<div>
 			<Head>
