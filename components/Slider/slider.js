@@ -18,6 +18,7 @@ function ReactSlider({ children }) {
 		dots: true,
 		speed: 500,
 		slidesToShow: slides,
+		infinite: true,
 		slidesToScroll: slides,
 		variableWidth: isMobile ? false : true,
 		arrows: false,
