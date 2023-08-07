@@ -16,7 +16,7 @@ function About() {
 						>
 							<img src='/img/hand.png' className='w-[660px]' />
 						</div>
-						<div className='w-[600px] ml-10 lg:w-full lg:text-center'>
+						<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 							<Heading className='text-white'>
 								About AsyncAPI Conf on Tour 2023?
 							</Heading>

@@ -53,7 +53,7 @@ function Venue({ city }) {
 		<div>
 			<div className='w-full h-[673px] sm:h-[auto] bg-madrid bg-cover bg-center'>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
-					<div className='mt-[82px] flex flex-col items-center w-[659px] sm:w-full sm:text-center'>
+					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] sm:w-full sm:text-center'>
 						<Heading className='text-white'>
 							{city.name}, {city.country}
 						</Heading>

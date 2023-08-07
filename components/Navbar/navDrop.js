@@ -6,7 +6,7 @@ import Dropdown from '../illustration/dropdown';
 function NavDrop() {
     const [show, setShow] = useState(null);
   return (
-		<div className='absolute top-16 w-full bg-[#1B1130]'>
+		<div className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
 			<div className='flex flex-col p-4 pb-8 w-full'>
 				{links.map((link) => {
 					return (

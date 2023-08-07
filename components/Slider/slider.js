@@ -5,20 +5,21 @@ import { useMediaQuery } from 'react-responsive';
 
 function ReactSlider({ children }) {
 	const isTablet = useMediaQuery({ maxWidth: '1224px' });
+	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	const [slides, setSlides] = useState(2);
 
 	useEffect(() => {
-		if (isTablet) {
+		if (isMobile) {
 			setSlides(1);
 		}
-	}, [isTablet]);
+	}, [isMobile]);
 	const slider = useRef(null);
 	const settings = {
 		dots: true,
 		speed: 500,
 		slidesToShow: slides,
-		slidesToScroll: 2,
-		variableWidth: true,
+		slidesToScroll: slides,
+		variableWidth: isMobile ? false : true,
 		arrows: false,
 		appendDots: (dots) => (
 			<div

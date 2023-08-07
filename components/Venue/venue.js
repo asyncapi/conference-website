@@ -5,8 +5,8 @@ import Paragraph from '../Typography/paragraph';
 
 function Venue({ className, city }) {
 	return (
-		<div className={`w-[500px] sm:w-[400px] ${className}`}>
-			<div className='w-[450px] sm:w-[400px] sm:h-[320px] card-bg flex items-center justify-center p-10'>
+		<div className={`w-[500px] sm:w-auto ${className}`}>
+			<div className='w-[450px] sm:w-auto sm:h-[320px] card-bg flex items-center justify-center p-10'>
 				<img src={city.img} className='sm:w-[350px] h-[250px] rounded-lg' />
 			</div>
 

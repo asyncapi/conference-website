@@ -18,7 +18,7 @@ function Sponsors({imgs}) {
 				<div className='flex justify-center mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
 					{imgs &&
 						imgs.map((img) => (
-							<div key={img} className='w-[300px] flex items-center'>
+							<div key={img} className='w-[300px] flex items-center sm:mt-6'>
 								<img src={img} alt={img} className='' />
 							</div>
 						))}
