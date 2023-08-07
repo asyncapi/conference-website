@@ -127,8 +127,11 @@ mix-blend-mode: lighten;
   background: linear-gradient(252.95deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+.globe-viz{
+  
+}
 
-.test-2{
+.globe-overlay{
   background: #47bcee;
   filter: blur(280px);
   position: absolute;
