@@ -10,7 +10,7 @@ import speakers from '../config/speakers.json';
 import ReactSlider from '../components/Slider/slider';
 import Speaker from '../components/Speaker/speaker';
 import Sponsors from '../components/Sponsors/sponsors';
-import Subcription from '../components/Form/subcription';
+import Subcription from '../components/Form/subscription';
 import About from '../components/About/about';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
