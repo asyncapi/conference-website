@@ -77,7 +77,7 @@ function Navbar() {
 							))}
 						</div>
 					)}
-					{isTablet && drop && <NavDrop />}
+					{isTablet && drop && <NavDrop setDrop={setDrop} />}
 				</div>
 			</div>
 		</div>

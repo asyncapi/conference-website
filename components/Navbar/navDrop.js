@@ -3,7 +3,7 @@ import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
-function NavDrop() {
+function NavDrop({setDrop}) {
     const [show, setShow] = useState(null);
   return (
 		<div className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
@@ -31,14 +31,21 @@ function NavDrop() {
 											<div className='flex flex-col py-6 w-full'>
 												{link.subMenu.map((sub) => (
 													<Link href={sub.ref} key={sub.ref}>
-														<div className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'>{sub.title}</div>
+														<div
+															onClick={() => setDrop(false)}
+															className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'
+														>
+															{sub.title}
+														</div>
 													</Link>
 												))}
 											</div>
 										)}
 									</div>
 								) : (
-									<div className='text-white'>{link.title}</div>
+									<div className='text-white' onClick={() => setDrop(false)}>
+										{link.title}
+									</div>
 								)}
 							</div>
 						</Link>

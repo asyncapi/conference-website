@@ -32,7 +32,6 @@ export default function Home() {
 		const newArr = []
 		speakers.map((speaker) => {
 			if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
-				console.log(speaker);
 				newArr.push(...speaker.lists)
 			}
 		});
