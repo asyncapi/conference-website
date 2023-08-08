@@ -14,7 +14,7 @@ function Venue({ className, city }) {
 
 				<div className='mt-[24px] w-[450px] sm:w-full'>
 					<p className='text-[#47BCEE] text-[24px] py-[8px]'>{city.date}</p>
-					<Heading typeStyle='lg' className='text-[#47BCEE] text-[30px]'>
+					<Heading typeStyle='lg' className='text-white text-[30px]'>
 						{city.name}, {city.country}
 					</Heading>
 					<Paragraph className='pt-[16px] pb-[8px]'>
