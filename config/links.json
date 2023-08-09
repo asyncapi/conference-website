@@ -1,0 +1,39 @@
+[
+	{
+		"title": "About",
+		"ref": "/#about"
+	},
+	{
+		"title": "Venue",
+		"ref": "",
+		"subMenu": [
+			{
+				"title": "Bengaluru, India",
+				"ref": "/venue/Bangalore"
+			},
+			{
+				"title": "London, UK",
+				"ref": "/venue/London"
+			},
+			{
+				"title": "Madrid, Spain",
+				"ref": "/venue/Madrid"
+			},
+			{
+				"title": "Paris, France",
+				"ref": "/venue/Paris"
+			}
+		]
+	},
+	{
+		"title": "Speakers",
+		"ref": "/#speakers"
+	},
+	{
+		"title": "Sponsors",
+		"ref": "/#sponsors"
+	}
+]
+
+
+    
