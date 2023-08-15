@@ -23,7 +23,8 @@
 		"date": "November 30, 2023",
 		"description": "Join us in Bengaluru for the AsyncAPI Conference and decode the language of APIs! Let's crack the language of APIs and ignite a tech revolution with some spice you'll remember!",
 		"img": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2454&q=80",
-		"address": "310, 6th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038, India"
+		"address": "310, 6th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038, India",
+		"sponsors": ["/img/postman.png"]
 	},
 	{
 		"name": "Paris",
