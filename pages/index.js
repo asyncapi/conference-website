@@ -162,7 +162,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div id='sponsors'>
-					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png']} />
+					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png', '/img/postman.png']} />
 				</div>
 				<div className=''>
 					<Subcription />
