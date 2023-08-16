@@ -51,9 +51,8 @@ function Navbar() {
 													{link.title}{' '}
 													{link.subMenu && (
 														<Dropdown
-															className={`ml-2 transition-transform duration-700 ${
-																show === link.title ? 'rotate-180' : 'rotate-0'
-															}`}
+															className={`ml-2 transition-transform duration-700 ${show === link.title ? 'rotate-180' : 'rotate-0'
+																}`}
 														/>
 													)}
 												</div>
@@ -62,10 +61,10 @@ function Navbar() {
 											)}
 										</div>
 										{show && show === link.title && link.subMenu && (
-											<div className='absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg pl-2 pt-1 flex flex-col'>
+											<div className='absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg pl-2 pt-1 flex flex-col justify-center space-y-0'>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
-														<div className='h-[32px] text-[14px]'>
+														<div className='h-[32px] text-[16px]'>
 															{subL.title}
 														</div>
 													</Link>
