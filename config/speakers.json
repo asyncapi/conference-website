@@ -43,7 +43,34 @@
 	{
 		"location": "London, United Kingdom",
 		"city": "London",
-		"lists": "TBA"
+		"lists": [
+
+			{
+				"name": "Adrian Runte",
+				"title": "Multi-time Founder, CTO and CIO",
+				"img": "https://vscode.dev/github/thulieblack/conference-website/blob/speaker-prof/public/speaker-profiles/Adrian%20Runte.jpg"
+			},
+
+			{
+				"name": "Marjukka Niinioja",
+				"title": "Business & Technical Consultantand Co-author of API Economy 101",
+				"img": "\public\speaker-profiles\Marjukka Niinioja.jpg"
+				
+			},
+
+			{
+				"name": "Mete Atamel",
+				"title": "Software Engineer and Developer Advocate",
+				"img": "https://atamel.dev/img/mete-512.jpg"
+			},
+			{
+				"name": "Aishat Muibudeen",
+				"title": "User Experience Researcher and Designer",
+				"img": "\public\speaker-profiles\Aishat Muibuedeen.jpg"
+			}
+
+
+		]
 	},
 	{
 		"city": "Paris",
