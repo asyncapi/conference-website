@@ -46,9 +46,10 @@
 		"lists": [
 
 			{
-				"name": "Adrian Runte",
-				"title": "Multi-time Founder, CTO and CIO",
-				"img": "https://user-images.githubusercontent.com/66913810/261285775-b3069bdc-2889-4a3a-82d1-52806a454962.jpg"
+				"name": "Dale Lane",
+				"title": "Chief Architect and Senior Technical Staff Member at IBM Event Automation",
+				"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+				
 			},
 
 			{
@@ -56,12 +57,6 @@
 				"title": "Business & Technical Consultant and Co-author of API Economy 101",
 				"img": "https://user-images.githubusercontent.com/66913810/261286046-4985401c-f5b8-44e0-ae0a-f4d35b3aca25.jpg"
 				
-			},
-
-			{
-				"name": "Mete Atamel",
-				"title": "Software Engineer and Developer Advocate",
-				"img": "https://atamel.dev/img/mete-512.jpg"
 			},
 			{
 				"name": "Aishat Muibudeen",
@@ -76,10 +71,16 @@
 			},
 
 			{
-				"name": "Dale Lane",
-				"title": "Chief Architect and Senior Technical Staff Member at IBM Event Automation",
-				"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+				"name": "Adrian Runte",
+				"title": "Multi-time Founder, CTO and CIO",
+				"img": "https://user-images.githubusercontent.com/66913810/261285775-b3069bdc-2889-4a3a-82d1-52806a454962.jpg"
 				
+			},
+
+			{
+				"name": "Mete Atamel",
+				"title": "Software Engineer and Developer Advocate",
+				"img": "https://atamel.dev/img/mete-512.jpg"
 			},
 
 			{
