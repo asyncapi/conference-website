@@ -38,7 +38,67 @@
 	{
 		"location": "London, United Kingdom",
 		"city": "London",
-		"lists": "TBA"
+		"lists": [
+
+			{
+				"name": "Dale Lane",
+				"title": "Chief Architect and Senior Technical Staff Member at IBM Event Automation",
+				"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+				
+			},
+
+			{
+				"name": "Marjukka Niinioja",
+				"title": "Business & Technical Consultant and Co-author of API Economy 101",
+				"img": "https://user-images.githubusercontent.com/66913810/261286046-4985401c-f5b8-44e0-ae0a-f4d35b3aca25.jpg"
+				
+			},
+			{
+				"name": "Aishat Muibudeen",
+				"title": "User Experience Researcher and Designer at AsyncAPI Initiative",
+				"img": "https://user-images.githubusercontent.com/66913810/261285970-c01a211f-5f7f-43f3-b047-2e8c10eb219f.jpg"
+				
+			},
+			{
+				"name": "Sergio Moya",
+				"title": "Lead Software Engineer at Postman (AsyncAPI Initiative)",
+				"img": "https://user-images.githubusercontent.com/66913810/261602484-9eb2aada-1209-4e62-a470-a8788b7430d1.png"
+			},
+
+			{
+				"name": "Adrian Runte",
+				"title": "Multi-time Founder, CTO and CIO",
+				"img": "https://user-images.githubusercontent.com/66913810/261285775-b3069bdc-2889-4a3a-82d1-52806a454962.jpg"
+				
+			},
+
+			{
+				"name": "Mete Atamel",
+				"title": "Software Engineer and Developer Advocate",
+				"img": "https://atamel.dev/img/mete-512.jpg"
+			},
+
+			{
+				"name": "Lorna Jane",
+				"title": "Developer Experience at Redocly",
+				"img": "https://lornajane.net/wp-content/uploads/2011/08/IMG_9410-smaller.jpg"
+			},
+
+			{
+				"name": "Artur Ciocanu",
+				"title": "Senior Computer Scientist at Adobe",
+				"img": "https://user-images.githubusercontent.com/66913810/262294782-32d6cf14-3e7b-4b68-b8a6-82de97166c7d.jpg"
+				
+			},
+
+			{
+				"name": "Swen-Helge Huber",
+				"title": "Senior Director, Office of the CTO at Solace",
+				"img": "https://user-images.githubusercontent.com/66913810/262295277-4cab51aa-e336-4f13-9e63-6eea20ad411a.png"
+			}
+
+
+		]
 	},
 	{
 		"city": "Paris",
