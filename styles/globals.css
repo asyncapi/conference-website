@@ -265,3 +265,20 @@ mix-blend-mode: lighten;
     0% {transform: translateX(0)}
     100% {transform: translateX(200%)}
 }
+
+/* Map styles */
+.leaflet-container {
+  height: 44rem;
+}
+
+.request-popup .leaflet-popup-content-wrapper {
+  background-image: linear-gradient(225deg, #2dccfd 0%, #ad20e2 100%);
+  border-radius: 0.5rem;
+  width: 17.5rem;
+  box-sizing: border-box;
+  padding: 0rem;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
