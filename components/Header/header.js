@@ -82,9 +82,9 @@ function Header() {
 						<div className='flex flex-col justify-center items-center w-full'>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Heading
-									className='countdown-text-gradient'
+									className='countdown-text-gradient text-7xl tracking-[-3px] font-extrabold'
 									level='h1'
-									typeStyle='heading-lg'
+									typeStyle='heading'
 								>
 									AsyncAPI Conf On Tour 2023
 								</Heading>
