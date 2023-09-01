@@ -9,7 +9,7 @@ function Speaker({details, location, className}) {
 				<img
 					src={details.img}
 					alt={details.name}
-					className='rounded-[200px] w-full h-full object-cover'
+					className='rounded-full w-full h-full object-cover'
 				/>
 			</div>
 			<div className='mt-[19px]'>
