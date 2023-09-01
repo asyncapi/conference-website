@@ -63,8 +63,8 @@
 			},
 			{
 				"time": "11:30 AM BST - 12:00 PM BST",
-				"session": "AsyncAPI and The Battles It Must Win",
-				"speaker": 9,
+				"session": "AsyncAPI Standards And Governance",
+				"speaker": 6,
 				"type": "Keynote Speaker"
 			},
 			{
@@ -86,8 +86,8 @@
 			},
 			{
 				"time": "2:00 PM BST - 2:30 PM BST",
-				"session": "AsyncAPI Standards And Governance",
-				"speaker": 6,
+				"session": "AsyncAPI and The Battles It Must Win",
+				"speaker": 9,
 				"type": "Keynote Speaker"
 			},
 			{
