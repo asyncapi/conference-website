@@ -21,7 +21,7 @@ function Agenda({ city }) {
 		  </div>
 		  {city.agenda && <div className='mt-[40px]'>
 			  <Heading
-				  className='countdown-text-gradient text-2xl'
+				  className='countdown-text-gradient'
 				  level='h3'>
 				  {city.date}
 			  </Heading>
