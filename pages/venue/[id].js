@@ -66,6 +66,17 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
+						{city.ticket === "" ? null :
+                        <div className='m-[30px]'>
+                            <a
+                                href={city.ticket}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <Button className='w-[200px]'>Get your Tickets</Button>
+                            </a>
+                        </div>
+                        }
 					</div>
 					<div className='kinda-dark py-[10px] w-full'>
 						<div className='sm:hidden container'>
