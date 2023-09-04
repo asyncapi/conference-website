@@ -11,7 +11,7 @@ function Agenda({ city }) {
 				Agenda
 			</Heading>
 			<Paragraph className='mt-[16px] text-center'>
-				The conference will commence at 8:00am BST (UTC+1)
+				The conference will commence at 9:00am BST (UTC+1)
 			  </Paragraph>
 			  {!city.agenda && <div className='w-[720px] lg:w-full mt-[140px] text-center'>
 				<Heading typeStyle='lg' className='text-white text-[30px]'>
