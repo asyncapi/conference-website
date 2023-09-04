@@ -29,7 +29,6 @@ export async function getStaticProps({ params }) {
 	res = data[0];
 	const getSpeakers = speakers.filter((s) => s.city === res?.name);
 	res.speakers = getSpeakers[0].lists;
-	res.agenda = getSpeakers[0].agenda || null;
 	return {
 		props: {
 			city: res,
@@ -106,7 +105,7 @@ function Venue({ city }) {
 				className='border border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
 				<div className='w-[1130px] lg:w-full'>
-					<Agenda city={city} />
+					<Agenda />
 				</div>
 			</div>
 			<div
