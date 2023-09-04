@@ -92,13 +92,13 @@ function Header() {
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]'>
 									Join us for the first-ever AsyncAPI Conference on Tour,
-									bringing the latest in Async API technology to locations
+									bringing the latest in AsyncAPI technology to locations
 									worldwide!
 								</Paragraph>
 							</div>
 							<div className='mt-[54px]'>
 								<a
-									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
+									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313'
 									target='_blank'
 									rel='noreferrer'
 								>
