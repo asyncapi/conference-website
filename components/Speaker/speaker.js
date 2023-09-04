@@ -3,13 +3,13 @@ import React from 'react'
 function Speaker({details, location, className}) {
   return (
 		<div
-			className={`w-auto text-center flex flex-col items-center card-bg h-auto rounded-md p-[27px] ${className}`}
+			className={`w-auto text-center card-bg h-auto rounded-md p-[27px] ${className}`}
 		>
-			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px]'>
+			<div className=''>
 				<img
 					src={details.img}
 					alt={details.name}
-					className='rounded-full w-full h-full object-cover'
+					className='rounded-[200px] h-[356px] w-[356px] object-cover'
 				/>
 			</div>
 			<div className='mt-[19px]'>
