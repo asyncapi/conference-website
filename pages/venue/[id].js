@@ -78,38 +78,6 @@ function Venue({ city }) {
                         </div>
                         }
 					</div>
-					<div className='kinda-dark py-[10px] w-full'>
-						<div className='sm:hidden container'>
-							<div className='flex justify-center'>
-								<div className='w-[600px] lg:w-full flex justify-between'>
-									{tabs.map((tab) => {
-										return (
-											<div
-												key={tab.title}
-												onClick={() => {
-													setActive(tab.title);
-												}}
-											>
-												<Button
-													onClick={() =>
-														router.push(`#${tab.title.toLowerCase()}`)
-													}
-													className={`w-[154px] h-[48px] ${
-														active === tab.title
-															? 'card-bg'
-															: 'border border-gray'
-													}`}
-													overlay={true}
-												>
-													{tab.title}
-												</Button>
-											</div>
-										);
-									})}
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div
