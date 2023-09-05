@@ -73,7 +73,7 @@ function Venue({ city }) {
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <Button className='w-[200px]'>Get your Tickets</Button>
+                                <button className='w-[200px] text-white border rounded py-[10px]'>Get your Tickets</button>
                             </a>
                         </div>
                         }
