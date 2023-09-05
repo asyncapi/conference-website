@@ -82,7 +82,7 @@ function Header() {
 						<div className='flex flex-col justify-center items-center w-full'>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Heading
-									className='countdown-text-gradient text-7xl tracking-[-3px] font-extrabold'
+									className='countdown-text-gradient text-7xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold'
 									level='h1'
 									typeStyle='heading'
 								>
