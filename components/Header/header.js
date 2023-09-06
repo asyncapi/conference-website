@@ -96,7 +96,7 @@ function Header() {
 									worldwide!
 								</Paragraph>
 							</div>
-							<div className='mt-[54px]'>
+							<div className='mt-[54px] relative flex items-center justify-center'>
 								<a
 									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313'
 									target='_blank'
