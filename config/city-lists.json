@@ -9,8 +9,10 @@
 		"sponsors": [
 			"/img/IBM.png"
 		],
-		"ticket": "https://docs.google.com/forms/d/e/1FAIpQLSdKxKvHGqmCmFJ7ldJJcAJNnmuie057vYrEh219gCXRDMZU5g/viewform",
-		"buttonText":"Tickets Form"
+		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
+		"freeTicket":"https://docs.google.com/forms/d/e/1FAIpQLSdKxKvHGqmCmFJ7ldJJcAJNnmuie057vYrEh219gCXRDMZU5g/viewform",
+		"buttonText":"Get your Tickets",
+		"freeTicketTxt":"Tickets Form"
 	},
 	{
 		"name": "Madrid",
@@ -22,8 +24,10 @@
 		"sponsors": [
 			"/img/sngular.png"
 		],
-		"ticket": "https://docs.google.com/forms/d/e/1FAIpQLSdwqi27LpsIi8tKQoQBcUWDUJZi0be0cHpWnDtWhhHVn00hFA/viewform",
-		"buttonText":"Tickets Form"
+		"ticket": "",
+		"freeTicket":"https://docs.google.com/forms/d/e/1FAIpQLSdwqi27LpsIi8tKQoQBcUWDUJZi0be0cHpWnDtWhhHVn00hFA/viewform",
+		"buttonText":"Get your Tickets",
+		"freeTicketTxt":"Tickets Form"
 	},
 	{
 		"name": "Bangalore",
@@ -36,7 +40,9 @@
 			"/img/postman.png"
 		],
 		"ticket": "",
-		"buttonText":"Get your Tickets"
+		"freeTicket":"",
+		"buttonText":"Get your Tickets",
+		"freeTicketTxt":"Tickets Form"
 	},
 	{
 		"name": "Paris",
@@ -46,6 +52,8 @@
 		"img": "https://images.unsplash.com/photo-1508050919630-b135583b29ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2306&q=80",
 		"address": "TBA",
 		"ticket": "",
-		"buttonText":"Get your Tickets"
+		"freeTicket":"",
+		"buttonText":"Get your Tickets",
+		"freeTicketTxt":"Tickets Form"
 	}
 ]
