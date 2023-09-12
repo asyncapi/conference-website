@@ -1,5 +1,10 @@
 [
 	{
+		"location": "",
+		"city": "All",
+		"lists": []
+	},
+	{
 		"location": "Madrid, Spain",
 		"city": "Madrid",
 		"lists": [

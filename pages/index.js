@@ -28,15 +28,16 @@ export default function Home() {
 		ReactGA.initialize('UA-109278936-3');
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
+	speakers[0].lists = [];
+	speakers.map((speaker) => {
+		if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
+			speakers[0].lists.push(...speaker.lists);
+		}
+	});
 	useEffect(() => {
-		const newArr = []
-		speakers.map((speaker) => {
-			if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
-				newArr.push(...speaker.lists)
-			}
-		});
-		setSpeakersList(newArr)
-	},[])
+		setCity(speakers[0]);
+		setSpeakersList(speakers[0].lists);
+	},[]);
 	return (
 		<div>
 			<Head>
@@ -90,7 +91,7 @@ export default function Home() {
 								</div>
 							) : (
 								<div className='flex justify-center'>
-									<div className='w-[720px] lg:w-full flex justify-between'>
+									<div className='lg:w-full flex justify-between'>
 										{speakers.map((speaker) => {
 											return (
 												<div
