@@ -66,21 +66,13 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-						{city.ticket === "" && city.freeTicket === "" ? null : (
 							<div className='m-[30px]'>
 								{city.ticket !== "" && (
 									<a href={city.ticket} target='_blank' rel='noreferrer'>
 										<Button className="px-8 m-2">{city.buttonText}</Button>
 									</a>
 								)}
-								{city.freeTicket !== "" && (
-									<a href={city.freeTicket} target='_blank' rel='noreferrer'>
-										<Button className="px-8 m-2">{city.freeTicketTxt}</Button>
-									</a>
-								)}
 							</div>
-						)}
-
 					</div>
 				</div>
 			</div>
