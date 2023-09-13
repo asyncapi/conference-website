@@ -154,8 +154,7 @@ function Venue({ city }) {
 									audience!
 								</Paragraph>
 								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-									Apply as a Speaker - 
-									Opening Soon!
+									Apply as a Speaker
 								</Button>
 							</div>
 						)}
