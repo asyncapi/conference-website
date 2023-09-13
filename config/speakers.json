@@ -72,27 +72,27 @@
 			},
 			{
 				"time": "10:30 AM BST - 11:00 AM BST",
-				"session": "Simplifying The Message-Based API Ecosystem Using Async API",
-				"speaker": 12,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "11:00 AM BST - 11:30 AM BST",
 				"session": "Open Standards For Building Event-Driven Applications In The Cloud",
 				"speaker": 5,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "11:30 AM BST - 12:00 PM BST",
+				"time": "11:00 AM BST - 11:30 AM BST",
 				"session": "AsyncAPI Standards And Governance",
 				"speaker": 6,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:30 AM BST - 12:00 PM BST",
+				"session": "Event & Unified API Management - Self-Service Access To Events Using AsyncAPI",
+				"speaker": 8,
 				"type": "Keynote Speaker"
 			},
 			{
 				"time": "12:00 PM BST - 12:30 PM BST",
-				"session": "Event & Unified API Management - Self-Service Access To Events Using AsyncAPI",
-				"speaker": 8,
-				"type": "Keynote Speaker"
+				"session": "Full-Stack AsyncAPI",
+				"speaker": 4,
+				"type": "Technical Talk"
 			},
 			{
 				"time": "12:30 PM BST - 1:30 PM BST",
@@ -101,21 +101,21 @@
 			},
 			{
 				"time": "1:30 PM BST - 2:00 PM BST",
-				"session": "Full-Stack AsyncAPI",
-				"speaker": 4,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "2:00 PM BST - 2:30 PM BST",
 				"session": "AsyncAPI and The Battles It Must Win",
 				"speaker": 9,
 				"type": "Keynote Speaker"
 			},
 			{
-				"time": "2:30 PM BST - 3:00 PM BST",
+				"time": "2:00 PM BST - 2:30 PM BST",
 				"session": "API Management For An Asynchronous World",
 				"speaker": 1,
 				"type": "Technical Talk"
+			},
+			{
+				"time": "2:30 PM BST - 3:00 PM BST",
+				"session": "AsyncAPI v3: Unleashing the Power of Asynchronous APIs Design",
+				"speaker": 3,
+				"type": "Keynote Speaker"
 			},
 			{
 				"time": "3:00 PM BST - 3:20 PM BST",
@@ -124,30 +124,24 @@
 			},
 			{
 				"time": "3:20 PM BST - 3:50 PM BST",
-				"session": "AsyncAPI v3: Unleashing the Power of Asynchronous APIs Design",
-				"speaker": 3,
-				"type": "Keynote Speaker"
-			},
-			{
-				"time": "3:50 PM BST - 4:25 PM BST",
 				"session": "Navigating AsyncAPI Design with APIOps Cycles: A Practical Approach to Collaborative Planning",
 				"speaker": 2,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "4:25 PM BST - 4:55 PM BST",
+				"time": "3:50 PM BST - 4:25 PM BST",
 				"session": "AsyncAPI and Modelina: Enforce Contracts And Reduce Boilerplate",
 				"speaker": 7,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "4:55 PM BST - 5:30 PM BST",
+				"time": "4:25 PM BST - 5:10 PM BST",
 				"session": "Bridging the Gap between Design and Runtime in EDA with AsyncAPI and CI/CD",
 				"speaker": 11,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "5:30 PM BST - 5:35 PM BST",
+				"time": "5:10 PM BST - 5:15 PM BST",
 				"session": "Inside-out or Outside-in",
 				"speaker": 1,
 				"type": "Keynote Speaker"
