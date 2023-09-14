@@ -54,8 +54,8 @@ export default function Home() {
 						<div className='text-center py-[46px] w-[714px] lg:w-full'>
 							<Heading className='text-white'>Venues</Heading>
 							<Paragraph className='mt-12'>
-								The AsyncAPI Conf2023 on Tour is planned to take the online
-								event to the next level by hosting physical events in five
+								The AsyncAPI Conf on Tour 2023 is planned to take the online
+								event to the next level by hosting physical events in four
 								different locations across the globe.
 							</Paragraph>
 						</div>
