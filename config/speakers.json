@@ -50,7 +50,7 @@
 			{
 				"time": "1:30 PM CEST - 1:40 PM CEST",
 				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 0,
+				"speaker": 13,
 				"type": "Experts Panel"
 			},
 			{
@@ -173,6 +173,11 @@
 				"name": "Alexis Sánchez",
 				"title": "Director of Engineering at EVA Global",
 				"img": "https://sessionize.com/image/d085-200o200o2-ftqATrJmz6uTR8xpFbByVz.jpg"
+			},
+			{
+				"name": "Benjamín Granados",
+				"title": "Experts Panel Moderator",
+				"img": "https://twitter.com/benjagm/photo"
 			}
 		]
 	},
