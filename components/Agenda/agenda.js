@@ -10,12 +10,9 @@ function Agenda({ city }) {
 			  <Heading className='text-[30px] text-white'>
 				Agenda
 			</Heading>
-			<Paragraph className='mt-[16px] text-center'>
-				The conference will commence at 9:00am BST (UTC+1)
-			  </Paragraph>
 			  {!city.agenda && <div className='w-[720px] lg:w-full mt-[140px] text-center'>
 				<Heading typeStyle='lg' className='text-white text-[30px]'>
-					Agendas Coming Soon - Stay Tuned!
+					Agenda Coming Soon - Stay Tuned!
 				</Heading>
           </div>}
 		  </div>

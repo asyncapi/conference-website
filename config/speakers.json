@@ -2,6 +2,117 @@
 	{
 		"location": "Madrid, Spain",
 		"city": "Madrid",
+		"agenda": [
+			{
+				"time": "8:30 AM CEST - 9:30 AM CEST",
+				"type": "Registration"
+			},
+			{
+				"time": "9:30 AM CEST - 10:00 AM CEST",
+				"type": "Welcome Speech",
+				"speaker": 4
+			},
+			{
+				"time": "10:00 AM CEST - 10:30 AM CEST",
+				"session": "Everything You Wish To Know About The AsyncAPI Community",
+				"speaker": 11,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "10:30 AM CEST - 11:00 AM CEST",
+				"session": "AsyncAPI v3: Unleashing The Power of Asynchronous APIs Design",
+				"speaker": 9,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:00 AM CEST - 11:30 AM CEST",
+				"session": "Embracing uncertainties: My Journey as an Open Source Contributor",
+				"speaker": 3,
+				"type": "Community Talk"
+			},
+			{
+				"time": "11:30 AM CEST - 12:00 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "12:00 PM CEST - 12:30 PM CEST",
+				"session": "From Side-Project To Industry standard",
+				"speaker": 1,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "12:30 PM CEST - 1:30 PM CEST",
+				"session": "Event-Driven API Management - Increase Reusability With AsyncAPI",
+				"speaker": 8,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "1:30 PM CEST - 1:40 PM CEST",
+				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
+				"speaker": 0,
+				"type": "Experts Panel"
+			},
+			{
+				"time": "2:00 PM CEST - 3:30 PM CEST",
+				"session": "",
+				"type": "Catering and Lunch"
+			},
+			{
+				"time": "3:30 PM CEST - 4:00 PM CEST",
+				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
+				"speaker": 5,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "4:00 PM CEST - 4:30 PM CEST",
+				"session": "Kloadgen: An Empty Kafka is a Sad Kafka",
+				"speaker": 10,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "4:30 PM CEST - 5:00 PM CEST",
+				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
+				"speaker": 6,
+				"type": "Community Talk"
+			},
+			{
+				"time": "5:00 PM CEST - 5:30 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "5:30 PM CEST - 6:00 PM CEST",
+				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques: ...",
+				"speaker": 2,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "6:00 PM CEST - 6:30 PM CEST",
+				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
+				"speaker": 7,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "6:30 PM CEST - 7:00 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "7:00 PM CEST - 7:30 PM CEST",
+				"session": "The Power of Real-Time Data: AsyncAPI and its Impact on Electric Vehicles",
+				"speaker": 12,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "7:30 PM CEST - 8:00 PM CEST",
+				"session": "Code Generation For Enterprise Integration Patterns With AsyncAPI and ZenWave SDK",
+				"speaker": 4,
+				"type": "Technical Talk"
+			}
+			
+			
+		],
 		"lists": [
 			{
 				"name": "Fran Méndez",
@@ -52,8 +163,17 @@
 				"name": "Jose E. García",
 				"title": "Principal Software Engineer at Corunet by Sngular",
 				"img": "https://sessionize.com/image/8a0e-200o200o2-X9CBBifXtTYT6v2cTbp2Ue.png"
+			},
+			{
+				"name": "Lukasz Gornicki",
+				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
+				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
+			},
+			{
+				"name": "Alexis Sánchez",
+				"title": "Director of Engineering at EVA Global",
+				"img": "https://sessionize.com/image/d085-200o200o2-ftqATrJmz6uTR8xpFbByVz.jpg"
 			}
-
 		]
 	},
 	{
