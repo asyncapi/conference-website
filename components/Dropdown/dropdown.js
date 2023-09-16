@@ -58,7 +58,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
+										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg ${item.city === active? 'active-bg' : ''}`}
 										role='menuitem'
 										tabindex='-1'
 										id='menu-item-0'
