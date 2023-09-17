@@ -133,9 +133,15 @@ function Venue({ city }) {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</Paragraph>
+								<a
+										href=''
+										target='_blank'
+										rel='noreferrer'
+										>
 								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 									Apply as a Speaker
 								</Button>
+								</a>
 							</div>
 						)}
 					</div>

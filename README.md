@@ -1,6 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## What is AACoT?
+AsyncAPI Conf on Tour (AACoT) is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.
+
+## Overview
+This repository contains the sources of AsyncAPI Conference website:
+
+- It's powered by [Next.js](https://nextjs.org/),
+- It uses [Tailwind](https://tailwindcss.com/) CSS framework,
+- It's build and deployed with [Netlify](https://www.netlify.com/).
+
+## Requirements
+Use the following tools to set up the project:
+
+- Node.js v16.0.0+
+- npm v7.10.0+
+
+## Run locally
 
 
 First, fork the repository and clone it.
