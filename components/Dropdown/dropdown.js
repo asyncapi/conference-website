@@ -7,7 +7,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 rounded-md shadow-sm border border-gray card-bg hover:bg-gray-50'
+					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 rounded-md shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
@@ -58,7 +58,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg ${item.city === active? 'active-bg' : ''}`}
+										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
 										role='menuitem'
 										tabindex='-1'
 										id='menu-item-0'
