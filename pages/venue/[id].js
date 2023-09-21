@@ -134,7 +134,6 @@ function Venue({ city }) {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</Paragraph>
-								console.log(city);
 								<a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null}>	
 									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 										Apply as a Speaker
