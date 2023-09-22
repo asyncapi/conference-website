@@ -152,7 +152,7 @@ export default function Home() {
 											us on stage and share your valuable insights with our
 											enthusiastic audience!
 										</Paragraph>
-										<a href='https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx'>
+										<a href='https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' target="_blank">
 											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 												Apply as a Speaker
 											</Button>
