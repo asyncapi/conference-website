@@ -67,7 +67,6 @@ function Header() {
 								el.style.width = `${d.size}px`;
 								el.style['pointer-events'] = 'auto';
 								el.style.cursor = 'pointer';
-								el.onclick = () => console.info(d);
 								return el;
 							}}
 							globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
