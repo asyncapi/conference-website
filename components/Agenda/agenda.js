@@ -3,7 +3,6 @@ import Heading from '../Typography/heading'
 import Paragraph from '../Typography/paragraph'
 
 function Agenda({ city }) {
-	console.log(city)
   return (
 	  <div className=''>
 		  <div className='flex flex-col justify-center items-center'>
@@ -53,7 +52,25 @@ function Agenda({ city }) {
 									  {city.speakers[talk.speaker-1].title}
 								  </Paragraph>
 							  </div>
-						  </div> : <div></div>}
+							  </div> : <div></div>}
+							  {talk.speaker && typeof talk.speaker === 'object' && <div className='flex flex-col'>
+								  {talk.speaker.map((speak, i) => <div key={i} className='mt-6'>
+										  <div className='flex items-center lg:mt-4'>
+										  <div className='w-[94px] h-[94px]'>
+											  <img src={city.speakers[speak - 1].img} alt={city.speakers[speak - 1].name} className='object-cover rounded-full  w-full h-full' />
+										  </div>
+										  <div className='ml-4 w-[300px] sm:w-[250px]'>
+								  <Heading typeStyle='heading-sm-semibold' className='text-white'>
+									  {city.speakers[speak-1].name}
+								  </Heading>
+								  <Paragraph typeStyle='body-sm' className="mt-2">
+									  {city.speakers[speak-1].title}
+								  </Paragraph>
+							  </div>
+							  </div>
+									  </div> )
+							  }
+							  </div>}
 						  </div>
 					  </div>
 				})}
