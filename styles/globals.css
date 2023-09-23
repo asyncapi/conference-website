@@ -273,7 +273,7 @@ mix-blend-mode: lighten;
 
 /* Map styles */
 .leaflet-container {
-  height: 44rem;
+  height: 22rem;
 }
 
 .request-popup .leaflet-popup-content-wrapper {
