@@ -67,6 +67,7 @@ function Venue({ city }) {
             </Heading>
             <Paragraph className="mt-[24px]">{city.description}</Paragraph>
 
+
             <Heading typeStyle="lg" className="text-white mt-[24px]">
               {city.address}
             </Heading>

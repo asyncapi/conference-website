@@ -67,7 +67,6 @@ function Header() {
 								el.style.width = `${d.size}px`;
 								el.style['pointer-events'] = 'auto';
 								el.style.cursor = 'pointer';
-								el.onclick = () => console.info(d);
 								return el;
 							}}
 							globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
@@ -82,9 +81,9 @@ function Header() {
 						<div className='flex flex-col justify-center items-center w-full'>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Heading
-									className='countdown-text-gradient'
+									className='countdown-text-gradient text-7xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold'
 									level='h1'
-									typeStyle='heading-lg'
+									typeStyle='heading'
 								>
 									AsyncAPI Conf On Tour 2023
 								</Heading>
@@ -92,13 +91,13 @@ function Header() {
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]'>
 									Join us for the first-ever AsyncAPI Conference on Tour,
-									bringing the latest in Async API technology to locations
+									bringing the latest in AsyncAPI technology to locations
 									worldwide!
 								</Paragraph>
 							</div>
-							<div className='mt-[54px]'>
+							<div className='mt-[54px] relative flex items-center justify-center'>
 								<a
-									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
+									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313'
 									target='_blank'
 									rel='noreferrer'
 								>
