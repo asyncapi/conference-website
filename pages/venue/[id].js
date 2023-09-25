@@ -186,6 +186,8 @@ function Venue({ city }) {
       </div>
     </div>
   );
+
+	
 }
 
 export default Venue;
