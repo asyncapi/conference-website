@@ -50,6 +50,7 @@ export async function getStaticPaths() {
 function Venue({ city }) {
 	const router = useRouter();
 	const [active, setActive] = useState(tabs[0].title);
+	console.log(city.name);
 	return (
 		<div>
 			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
@@ -133,9 +134,11 @@ function Venue({ city }) {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</Paragraph>
-								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-									Apply as a Speaker
-								</Button>
+								<a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null} target="_blank" rel="noopener noreferrer">	
+									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+										Apply as a Speaker
+									</Button>
+								</a>
 							</div>
 						)}
 					</div>
