@@ -4,7 +4,7 @@ import Countdown from 'react-countdown';
 const dates = [
 	{
 		name: 'London, UK',
-		date: 'September 26, 2023',
+		date: 'September 20, 2023',
 	},
 	{
 		name: 'Madrid, Spain',
@@ -44,7 +44,21 @@ function Countdowns() {
 	const renderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
 			// Render a completed state
-			return '';
+			return <div
+					className='home-title flex items-center  w-[200px] sm:w-[100px] justify-between'
+					ref={dateRef}
+			>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div>
+						<span className='glitch text-white text-[30px] sm:text-[18px]'>
+							Ended
+						</span>
+						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
+					</div>
+				</div>
 		} else {
 			// Render a countdown
 			return (

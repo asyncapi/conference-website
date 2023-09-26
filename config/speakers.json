@@ -1,5 +1,10 @@
 [
 	{
+		"location": "",
+		"city": "All",
+		"lists": []
+	},
+	{
 		"location": "Madrid, Spain",
 		"city": "Madrid",
 		"agenda": [
@@ -309,7 +314,7 @@
 			},
 
 			{
-				"name": "Lorna Jane",
+				"name": "Lorna Mitchell",
 				"title": "Developer Experience at Redocly",
 				"img": "https://lornajane.net/wp-content/uploads/2011/08/IMG_9410-smaller.jpg"
 			},
