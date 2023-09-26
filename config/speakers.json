@@ -61,7 +61,7 @@
 			{
 				"time": "3:30 PM CEST - 4:00 PM CEST",
 				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
-				"speaker": 5,
+				"speaker": [5,4],
 				"type": "Technical Talk"
 			},
 			{
