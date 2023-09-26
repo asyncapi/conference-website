@@ -18,6 +18,7 @@ import Button from '../components/Buttons/button';
 import { useMediaQuery } from 'react-responsive';
 import Dropdown from '../components/Dropdown/dropdown';
 import cities from '../config/city-lists.json';
+import Link from 'next/link';
 
 export default function Home() {
 	const [city, setCity] = useState("");
@@ -152,12 +153,14 @@ export default function Home() {
 											can start your journey by clicking the button below. Join
 											us on stage and share your valuable insights with our
 											enthusiastic audience!
-										</Paragraph>
-										<a href='https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' target="_blank" rel="noopener noreferrer">
-											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-												Apply as a Speaker
-											</Button>
-										</a>
+												</Paragraph>
+												<Link href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
+													<a target={city.city === 'Paris' && '_blank'}>
+														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+															Apply as a Speaker
+														</Button>
+													</a>
+												</Link>
 									</div>
 								</div>
 							)}

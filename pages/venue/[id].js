@@ -87,7 +87,7 @@ function Venue({ city }) {
 					<Agenda city={city} />
 				</div>
 			</div>
-			{city.name === 'Bangalore' ? <div className='container border border border-x-0 border-b-0 border-[#333] py-28'>
+			{city.name === 'Bangalore' ? <div id='speakers' className='container border border border-x-0 border-b-0 border-[#333] py-28'>
 				<Paper />
 			</div> : <div
 				id='speakers'

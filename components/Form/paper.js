@@ -67,13 +67,9 @@ function Paper() {
     );
   }
   if (step === "successful") {
-    setTimeout(() => {
-      setStep(null, 1)
-    }, 6000)
     view = <div  className='flex items-center h-full'>
       <div>
-        <h1 className='text-fainted-white text-4xl font-bold'>Hurray!!!</h1>
-          <h1 className='text-fainted-white text-4xl font-bold mt-6'>Your talk has been submitted successfully</h1>
+          <h1 className='text-2xl text-white font-bold mt-6'>Your talk have been submitted successfully</h1>
       </div>
        <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
     </div>
@@ -103,7 +99,7 @@ function Paper() {
         >
           <div className="p-6 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
-              const index = i ;
+              const index = i + 1 ;
               return (
                 <div
                       key={field.title}
@@ -111,7 +107,7 @@ function Paper() {
                 >
                   <div className="flex justify-between">
                     <div className="md:hidden">
-                      <h3 className="text-white font-bold text-lg">
+                      <h3 className={`text-white font-bold text-lg ${index <= step && "text-[#E50E99]"}`}>
                         {field.title}
                       </h3>
                       <p className="text-dark-600">{field.description}</p>
