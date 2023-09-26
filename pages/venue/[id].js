@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import cities from '../../config/city-lists.json';
 import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
@@ -8,7 +8,7 @@ import Agenda from '../../components/Agenda/agenda';
 import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-import { useRouter } from 'next/router';
+import Paper from '../../components/Form/paper';
 
 const tabs = [
 	{
@@ -48,9 +48,6 @@ export async function getStaticPaths() {
 }
 
 function Venue({ city }) {
-	const router = useRouter();
-	const [active, setActive] = useState(tabs[0].title);
-	console.log(city.name);
 	return (
 		<div>
 			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
@@ -90,7 +87,9 @@ function Venue({ city }) {
 					<Agenda city={city} />
 				</div>
 			</div>
-			<div
+			{city.name === 'Bangalore' ? <div className='container border border border-x-0 border-b-0 border-[#333] py-28'>
+				<Paper />
+			</div> : <div
 				id='speakers'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
@@ -143,7 +142,7 @@ function Venue({ city }) {
 						)}
 					</div>
 				</div>
-			</div>
+			</div>}
 			<div
 				id='sponsors'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Confetti from "react-confetti";
-import StepOne from "../../components/Form/Cfp/stepOne";
-import StepTwo from "../../components/Form/Cfp/stepTwo";
-import StepThree from '../../components/Form/Cfp/stepThree';
-import StepFour from '../../components/Form/Cfp/stepFour';
+import StepOne from "./Cfp/stepOne";
+import StepTwo from "./Cfp/stepTwo";
+import StepThree from './Cfp/stepThree';
+import StepFour from './Cfp/stepFour';
 
 const fields = [
   {
@@ -80,14 +80,13 @@ function Paper() {
   }
 
     return (
-        <div className='container'>
-            <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
-                <h1 className="text-white font-bold text-5xl lg:text-3xl">
+        <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
+            <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
-      </h1>
-      <p className="mt-2 text-dark-500 text-lg">
-        Fill up the form to apply as a speaker for AACoT London Edition.
-      </p>
+            </h1>
+            <p className="mt-2 text-dark-500 text-lg">
+                We are actively accepting speaker applications, <br /> Fill up the form to apply as a speaker.
+            </p>
       <div
         className="mt-5"
         style={{
@@ -124,7 +123,7 @@ function Paper() {
           </div>
         </div>
         <div className="p-10 lg:p-1">
-          <p className="text-fainted-white">{typeof(step) === 'number' && `Step ${step}/4`}</p>
+          <p className="text-dark-400">{typeof(step) === 'number' && `Step ${step}/4`}</p>
           {view}
           <div
             className="absolute bottom-0 right-0 rotate-0 opacity-50 sm:hidden"
@@ -134,7 +133,6 @@ function Paper() {
           >
           </div>
         </div>
-      </div>
       </div>
       </div>
   )
