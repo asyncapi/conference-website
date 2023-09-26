@@ -9,7 +9,7 @@ function Venue({ className, city }) {
 		<Link href={`/venue/${city.name}`}>
 			<div className={`w-[500px] cursor-pointer sm:w-auto ${className}`}>
 				<div className='w-[450px] sm:w-auto sm:h-[320px] card-bg flex items-center justify-center p-10'>
-					<img src={city.img} className='sm:w-[350px] h-[250px] rounded-lg' />
+					<img src={city.img} className='sm:w-[350px] h-[250px] rounded-lg hoverEffect' />
 				</div>
 
 				<div className='mt-[24px] w-[450px] sm:w-full'>
