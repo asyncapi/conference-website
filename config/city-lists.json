@@ -47,10 +47,13 @@
 	{
 		"name": "Paris",
 		"country": "France",
-		"date": "TBA",
-		"description": "Join us in Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
+		"date": "December 6-8, 2023",
+		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://images.unsplash.com/photo-1508050919630-b135583b29ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2306&q=80",
-		"address": "TBA",
+		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
+		"sponsors": [
+			"/img/apidays.png"
+		],
 		"ticket": "",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
