@@ -64,7 +64,7 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-						<div className='m-[30px]'>
+						{city.ended ? "" : <div className='m-[30px]'>
 							{city.ticket !== "" && (
 								<a href={city.ticket} target='_blank' rel='noreferrer'>
 									<Button className="px-8 m-2">{city.buttonText}</Button>
@@ -75,7 +75,7 @@ function Venue({ city }) {
 									<Button className="px-8 m-2">{city.freeTicketText}</Button>
 								</a>
 							)}
-						</div>
+						</div>}
 					</div>
 				</div>
 			</div>
