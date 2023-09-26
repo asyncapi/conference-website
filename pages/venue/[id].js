@@ -50,6 +50,7 @@ export async function getStaticPaths() {
 function Venue({ city }) {
 	const router = useRouter();
 	const [active, setActive] = useState(tabs[0].title);
+	console.log(city.name);
 	return (
 		<div>
 			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
@@ -66,37 +67,17 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-					</div>
-					<div className='kinda-dark py-[10px] w-full'>
-						<div className='sm:hidden container'>
-							<div className='flex justify-center'>
-								<div className='w-[600px] lg:w-full flex justify-between'>
-									{tabs.map((tab) => {
-										return (
-											<div
-												key={tab.title}
-												onClick={() => {
-													setActive(tab.title);
-												}}
-											>
-												<Button
-													onClick={() =>
-														router.push(`#${tab.title.toLowerCase()}`)
-													}
-													className={`w-[154px] h-[48px] ${
-														active === tab.title
-															? 'card-bg'
-															: 'border border-gray'
-													}`}
-													overlay={true}
-												>
-													{tab.title}
-												</Button>
-											</div>
-										);
-									})}
-								</div>
-							</div>
+						<div className='m-[30px]'>
+							{city.ticket !== "" && (
+								<a href={city.ticket} target='_blank' rel='noreferrer'>
+									<Button className="px-8 m-2">{city.buttonText}</Button>
+								</a>
+							)}
+							{city.freeTickets !== "" && (
+								<a href={city.freeTickets} target='_blank' rel='noreferrer'>
+									<Button className="px-8 m-2">{city.freeTicketText}</Button>
+								</a>
+							)}
 						</div>
 					</div>
 				</div>
@@ -153,9 +134,11 @@ function Venue({ city }) {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</Paragraph>
-								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-									Apply as a Speaker
-								</Button>
+								<a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null} target="_blank" rel="noopener noreferrer">	
+									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+										Apply as a Speaker
+									</Button>
+								</a>
 							</div>
 						)}
 					</div>
