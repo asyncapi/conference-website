@@ -83,6 +83,9 @@ function Paper() {
             <p className="mt-2 text-dark-500 text-lg">
                 We are actively accepting speaker applications, <br /> Fill up the form to apply as a speaker.
             </p>
+            <p className="mt-8 text-dark-500 text-sm">
+               P.S. We do not offer travel scholarships or financial support.
+            </p>
       <div
         className="mt-5"
         style={{

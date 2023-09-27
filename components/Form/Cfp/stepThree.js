@@ -44,8 +44,9 @@ function StepThree({ setStep, setForm, data }) {
         Session Info
       </h1>
       <p className="mt-3 text-dark-600">
-       Please provide your session title and description
-      </p>
+              Please provide your session title and description.
+          </p>
+          <p className="mt-4 text-sm text-dark-600">The sessions are expected to feature in-person presentations.</p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
           <div className="mt-10">
         <div className="text-dark-600 text-lg mb-4">Session Format</div>
