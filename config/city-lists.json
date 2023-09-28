@@ -11,6 +11,7 @@
 		],
 		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
 		"freeTickets":"",
+		"ended": true,
 		"freeTicketText":"Grab Free Tickets",
 		"buttonText":"Get your Tickets"
 	},
