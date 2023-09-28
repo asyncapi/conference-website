@@ -59,7 +59,9 @@ function Venue({ city }) {
 						<Paragraph className='mt-[24px]'>{city.description}</Paragraph>
 
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
+							<a href={`http://maps.google.com/?q=${city.address}`} target='_blank'>
 							{city.address}
+							</a>
 						</Heading>
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
