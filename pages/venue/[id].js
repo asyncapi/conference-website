@@ -12,6 +12,7 @@ import speakers from "../../config/speakers.json";
 import Sponsors from "../../components/Sponsors/sponsors";
 import { useRouter } from "next/router";
 
+
 const tabs = [
   {
     title: "Agenda",
@@ -186,8 +187,6 @@ function Venue({ city }) {
       </div>
     </div>
   );
-
-	
 }
 
 export default Venue;
