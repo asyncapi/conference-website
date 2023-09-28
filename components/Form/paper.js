@@ -81,11 +81,14 @@ function Paper() {
         Submit your talk!
             </h1>
             <p className="mt-2 text-dark-500 text-lg">
-                We are actively accepting speaker applications, <br /> Fill up the form to apply as a speaker.
-            </p>
-            <p className="mt-8 text-dark-500 text-sm">
+          We are actively accepting speaker applications, <br /> Fill up the form to apply as a speaker.
+        </p>
+        <div className='flex mt-8 justify-between sm:flex-col items-center sm:items-start text-dark-500 text-sm'>
+          <p>
                P.S. We do not offer travel scholarships or financial support.
-            </p>
+          </p>
+          <p className='sm:mt-4'>Application closes on Oct 12</p>
+        </div>
       <div
         className="mt-5"
         style={{
@@ -121,7 +124,7 @@ function Paper() {
             })}
           </div>
         </div>
-        <div className="p-10 lg:p-1">
+        <div className="p-10 p-6">
           <p className="text-dark-400">{typeof(step) === 'number' && `Step ${step}/4`}</p>
           {view}
           <div
