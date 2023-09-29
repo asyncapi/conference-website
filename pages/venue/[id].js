@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import cities from '../../config/city-lists.json';
+import citiess from "..//../config/cities.json";
 import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
 import Agenda from '../../components/Agenda/agenda';
+import Map from "../../components/Map";
 import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
@@ -30,6 +32,12 @@ export async function getStaticProps({ params }) {
 	const getSpeakers = speakers.filter((s) => s.city === res?.name);
 	res.speakers = getSpeakers[0].lists;
 	res.agenda = getSpeakers[0].agenda || null;
+	const getCoordinates = citiess.features.filter(
+    (c) => c.properties.name === params.id
+  	);
+
+	res.longitude = getCoordinates[0].properties.longitude;
+	res.latitude = getCoordinates[0].properties.latitude;
 	return {
 		props: {
 			city: res,
@@ -148,6 +156,14 @@ function Venue({ city }) {
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
 				<Sponsors imgs={city.sponsors} />
+			</div>
+			<div id='map'>
+				<Map key={city.name} 
+					latitude={city.latitude} 
+					longitude={city.longitude} 
+					address={city.address} 
+					date={city.date}
+				/>
 			</div>
 		</div>
 	);

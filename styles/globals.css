@@ -277,3 +277,21 @@ mix-blend-mode: lighten;
 .hoverEffect:hover {
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
+
+/* Map styles */
+.leaflet-container {
+  height: 25rem;
+}
+
+.request-popup .leaflet-popup-content-wrapper {
+  background-image: linear-gradient(225deg, #2dccfd 0%, #ad20e2 100%);
+  border-radius: 0.5rem;
+  width: 17.5rem;
+  box-sizing: border-box;
+  padding: 0rem;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+
+}

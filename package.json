@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "d3": "^7.8.5",
+    "leaflet": "^1.9.4",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-confetti": "^6.1.0",
@@ -24,6 +25,7 @@
     "react-globe.gl": "^2.24.2",
     "react-gtm-module": "^2.0.11",
     "react-hot-toast": "^2.4.1",
+    "react-leaflet": "^4.2.1",
     "react-responsive": "^9.0.0",
     "react-select": "^5.7.5",
     "react-slick": "^0.29.0",
