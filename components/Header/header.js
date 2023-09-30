@@ -101,7 +101,7 @@ function Header() {
 									target='_blank'
 									rel='noreferrer'
 								>
-									<Button className='w-[200px]'>Get Free Tickets</Button>
+									<Button className='w-[300px]'><b>Get Free Tickets</b> <br/> Madrid</Button>
 								</a>
 							</div>
 						</div>
