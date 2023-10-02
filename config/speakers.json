@@ -47,13 +47,13 @@
 				"type": "Keynote Speaker"
 			},
 			{
-				"time": "12:30 PM CEST - 1:30 PM CEST",
+				"time": "12:30 PM CEST - 13:00 PM CEST",
 				"session": "Event-Driven API Management - Increase Reusability With AsyncAPI",
 				"speaker": 8,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "1:30 PM CEST - 1:40 PM CEST",
+				"time": "13:0 PM CEST - 14:00 PM CEST",
 				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
 				"speaker": 13,
 				"type": "Experts Panel"
