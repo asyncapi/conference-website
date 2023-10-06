@@ -46,8 +46,8 @@ const Map = ({ latitude, longitude, address, date, place }) => {
       />
       <Marker position={center} icon={customIcon}>
         <Popup className="request-popup">
-          <div className="">
-            <div className="flex gap-2">
+          <div className="flex flex-col justify-center">
+            <div className="flex gap-2 ">
               <Image src={location} width={30} height={30} alt="location" />
               <Paragraph
                 typeStyle="body-md"
@@ -57,7 +57,7 @@ const Map = ({ latitude, longitude, address, date, place }) => {
                 {address}
               </Paragraph>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 -mt-8 ">
               <Image src={calender} width={20} height={20} alt="location" />
               <Paragraph
                 typeStyle="body-md"

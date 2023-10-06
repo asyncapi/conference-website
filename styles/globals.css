@@ -284,7 +284,7 @@ mix-blend-mode: lighten;
 }
 
 .request-popup .leaflet-popup-content-wrapper {
-  background-image: linear-gradient(225deg, #2dccfd 0%, #ad20e2 100%);
+  background-image: linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%);
   border-radius: 0.5rem;
   width: 17.5rem;
   box-sizing: border-box;
