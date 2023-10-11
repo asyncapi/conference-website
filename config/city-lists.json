@@ -25,10 +25,10 @@
 		"sponsors": [
 			"/img/sngular.png"
 		],
-		"ticket": "https://www.eventbrite.es/e/entradas-asyncapi-conf-on-tour-2023-735378636297",
-		"freeTickets":"",
+		"ticket": "",
+		"freeTickets":"https://docs.google.com/forms/d/e/1FAIpQLSdwqi27LpsIi8tKQoQBcUWDUJZi0be0cHpWnDtWhhHVn00hFA/viewform",
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Register"
+		"buttonText":"Get your Tickets"
 	},
 	{
 		"name": "Bangalore",
@@ -40,7 +40,7 @@
 		"sponsors": [
 			"/img/postman.png"
 		],
-		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-66187",
+		"ticket": "",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
 		"buttonText":"Get your Tickets"
