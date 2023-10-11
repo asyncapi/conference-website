@@ -55,7 +55,7 @@
 			{
 				"time": "13:00 PM CEST - 14:00 PM CEST",
 				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 13,
+				"speaker": 12,
 				"type": "Experts Panel"
 			},
 			{
@@ -89,13 +89,13 @@
 			{
 				"time": "5:30 PM CEST - 6:00 PM CEST",
 				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
-				"speaker": 7,
+				"speaker": 6,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "6:00 PM CEST - 6:30 PM CEST",
 				"session": "The Power of Real-Time Data: AsyncAPI and its Impact on Electric Vehicles",
-				"speaker": 12,
+				"speaker": 11,
 				"type": "Technical Talk"
 			},
 			{
