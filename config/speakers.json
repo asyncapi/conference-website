@@ -20,13 +20,13 @@
 			{
 				"time": "10:00 AM CEST - 10:30 AM CEST",
 				"session": "Everything You Wish To Know About The AsyncAPI Community",
-				"speaker": 11,
+				"speaker": 10,
 				"type": "Keynote Speaker"
 			},
 			{
 				"time": "10:30 AM CEST - 11:00 AM CEST",
 				"session": "AsyncAPI v3: Unleashing The Power of Asynchronous APIs Design",
-				"speaker": 9,
+				"speaker": 8,
 				"type": "Technical Talk"
 			},
 			{
@@ -72,7 +72,7 @@
 			{
 				"time": "4:00 PM CEST - 4:30 PM CEST",
 				"session": "Kloadgen: An Empty Kafka is a Sad Kafka",
-				"speaker": 10,
+				"speaker": 9,
 				"type": "Technical Talk"
 			},
 			{
