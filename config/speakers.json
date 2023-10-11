@@ -337,13 +337,13 @@
 		]
 	},
 	{
-		"city": "Paris",
-		"location": "Paris, France",
+		"city": "Bangalore",
+		"location": "Bangalore, India",
 		"lists": []
 	},
 	{
-		"city": "Bangalore",
-		"location": "Bangalore, India",
+		"city": "Paris",
+		"location": "Paris, France",
 		"lists": []
 	}
 ]
