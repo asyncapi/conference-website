@@ -29,12 +29,11 @@ function Countdowns() {
 			dateRef.current.classList.add('home-title');
 			setSelectedIndex((prevIndex) => (prevIndex + 1) % dates.length);
 			setTimeout(() => {
-				if(locationRef.current) {
+				if(locationRef?.current) {
 					locationRef.current.classList.remove('home-title');
 					locationRef.current.classList.add('hidden');
 				}
-				
-				if(dateRef.current) {
+				if(dateRef?.current) {
 					dateRef.current.classList.remove('home-title');
 					dateRef.current.classList.add('hidden');
 				}
