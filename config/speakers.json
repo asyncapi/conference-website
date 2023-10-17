@@ -76,32 +76,27 @@
 				"type": "Technical Talk"
 			},
 			{
+				"time": "4:30 PM CEST - 5:00 PM CEST",
+				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
+				"speaker": 13,
+				"type": "Community Talk"
+			},
+			{
 				"time": "5:00 PM CEST - 5:30 PM CEST",
 				"session": "",
 				"type": "Break"
 			},
 			{
-				"time": "4:30 PM CEST - 5:00 PM CEST",
+				"time": "5:30 PM CEST - 6:00 PM CEST",
 				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
 				"speaker": 2,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "5:30 PM CEST - 6:00 PM CEST",
+				"time": "6:00 PM CEST - 6:30 PM CEST",
 				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
 				"speaker": 6,
 				"type": "Technical Talk"
-			},
-			{
-				"time": "5:00 PM CEST - 5:30 PM CEST",
-				"session": "",
-				"type": "Break"
-			},
-			{
-				"time": "6:00 PM CEST - 6:30 PM CEST",
-				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
-				"speaker": 13,
-				"type": "Community Talk"
 			},
 			{
 				"time": "6:30 PM CEST - 7:00 PM CEST",
