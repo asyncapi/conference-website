@@ -76,15 +76,15 @@
 				"type": "Technical Talk"
 			},
 			{
+				"time": "5:00 PM CEST - 5:30 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
 				"time": "4:30 PM CEST - 5:00 PM CEST",
 				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
 				"speaker": 2,
 				"type": "Technical Talk"
-			},
-			{
-				"time": "5:00 PM CEST - 5:30 PM CEST",
-				"session": "",
-				"type": "Break"
 			},
 			{
 				"time": "5:30 PM CEST - 6:00 PM CEST",
@@ -93,10 +93,15 @@
 				"type": "Technical Talk"
 			},
 			{
+				"time": "5:00 PM CEST - 5:30 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
 				"time": "6:00 PM CEST - 6:30 PM CEST",
-				"session": "The Power of Real-Time Data: AsyncAPI and its Impact on Electric Vehicles",
-				"speaker": 11,
-				"type": "Technical Talk"
+				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
+				"speaker": 13,
+				"type": "Community Talk"
 			},
 			{
 				"time": "6:30 PM CEST - 7:00 PM CEST",
@@ -167,6 +172,11 @@
 				"name": "Benjamín Granados",
 				"title": "Experts Panel Moderator",
 				"img": "https://user-images.githubusercontent.com/66913810/268240922-66bfeb96-7d2d-4ece-aae2-c92454f3affc.png"
+			},
+			{
+				"name": "Alejandra Quetzalli",
+				"title": "Author & Lead Documentation Engineer",
+				"img": "https://cache.sessionize.com/image/6025-200o200o2-DqDUFbrp2qMozbpyx1T5rZ.JPG"
 			}
 		]
 	},
