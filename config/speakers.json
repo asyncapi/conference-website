@@ -55,7 +55,7 @@
 			{
 				"time": "13:00 PM CEST - 14:00 PM CEST",
 				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 12,
+				"speaker": 11,
 				"type": "Experts Panel"
 			},
 			{
@@ -78,7 +78,7 @@
 			{
 				"time": "4:30 PM CEST - 5:00 PM CEST",
 				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
-				"speaker": 13,
+				"speaker": 12,
 				"type": "Community Talk"
 			},
 			{
@@ -157,11 +157,6 @@
 				"name": "Lukasz Gornicki",
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
 				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
-			},
-			{
-				"name": "Alexis Sánchez",
-				"title": "Director of Engineering at EVA Global",
-				"img": "https://sessionize.com/image/d085-200o200o2-ftqATrJmz6uTR8xpFbByVz.jpg"
 			},
 			{
 				"name": "Benjamín Granados",
