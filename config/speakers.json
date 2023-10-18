@@ -53,20 +53,20 @@
 				"type": "Technical Talk"
 			},
 			{
-				"time": "13:00 PM CEST - 14:00 PM CEST",
-				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 11,
-				"type": "Experts Panel"
+				"time": "13:00 PM CEST - 13:30 PM CEST",
+				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
+				"speaker": [5,4],
+				"type": "Technical Talk"
 			},
 			{
-				"time": "2:00 PM CEST - 3:30 PM CEST",
+				"time": "13:30 PM CEST - 3:30 PM CEST",
 				"session": "",
 				"type": "Catering and Lunch"
 			},
 			{
-				"time": "3:30 PM CEST - 4:00 PM CEST",
-				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
-				"speaker": [5,4],
+				"time": "15:30 PM CEST - 4:00 PM CEST",
+				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
+				"speaker": 2,
 				"type": "Technical Talk"
 			},
 			{
@@ -85,12 +85,6 @@
 				"time": "5:00 PM CEST - 5:30 PM CEST",
 				"session": "",
 				"type": "Break"
-			},
-			{
-				"time": "5:30 PM CEST - 6:00 PM CEST",
-				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
-				"speaker": 2,
-				"type": "Technical Talk"
 			},
 			{
 				"time": "6:00 PM CEST - 6:30 PM CEST",
