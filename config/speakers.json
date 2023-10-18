@@ -53,20 +53,20 @@
 				"type": "Technical Talk"
 			},
 			{
-				"time": "13:00 PM CEST - 14:00 PM CEST",
-				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 12,
-				"type": "Experts Panel"
+				"time": "13:00 PM CEST - 13:30 PM CEST",
+				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
+				"speaker": [5,4],
+				"type": "Technical Talk"
 			},
 			{
-				"time": "2:00 PM CEST - 3:30 PM CEST",
+				"time": "13:30 PM CEST - 3:30 PM CEST",
 				"session": "",
 				"type": "Catering and Lunch"
 			},
 			{
-				"time": "3:30 PM CEST - 4:00 PM CEST",
-				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
-				"speaker": [5,4],
+				"time": "15:30 PM CEST - 4:00 PM CEST",
+				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
+				"speaker": 2,
 				"type": "Technical Talk"
 			},
 			{
@@ -77,9 +77,9 @@
 			},
 			{
 				"time": "4:30 PM CEST - 5:00 PM CEST",
-				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
-				"speaker": 2,
-				"type": "Technical Talk"
+				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
+				"speaker": 12,
+				"type": "Community Talk"
 			},
 			{
 				"time": "5:00 PM CEST - 5:30 PM CEST",
@@ -87,15 +87,9 @@
 				"type": "Break"
 			},
 			{
-				"time": "5:30 PM CEST - 6:00 PM CEST",
+				"time": "6:00 PM CEST - 6:30 PM CEST",
 				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
 				"speaker": 6,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "6:00 PM CEST - 6:30 PM CEST",
-				"session": "The Power of Real-Time Data: AsyncAPI and its Impact on Electric Vehicles",
-				"speaker": 11,
 				"type": "Technical Talk"
 			},
 			{
@@ -159,14 +153,14 @@
 				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
 			},
 			{
-				"name": "Alexis Sánchez",
-				"title": "Director of Engineering at EVA Global",
-				"img": "https://sessionize.com/image/d085-200o200o2-ftqATrJmz6uTR8xpFbByVz.jpg"
-			},
-			{
 				"name": "Benjamín Granados",
 				"title": "Experts Panel Moderator",
 				"img": "https://user-images.githubusercontent.com/66913810/268240922-66bfeb96-7d2d-4ece-aae2-c92454f3affc.png"
+			},
+			{
+				"name": "Alejandra Quetzalli",
+				"title": "Author & Lead Documentation Engineer",
+				"img": "https://cache.sessionize.com/image/6025-200o200o2-DqDUFbrp2qMozbpyx1T5rZ.JPG"
 			}
 		]
 	},
