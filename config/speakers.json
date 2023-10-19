@@ -20,13 +20,13 @@
 			{
 				"time": "10:00 AM CEST - 10:30 AM CEST",
 				"session": "Everything You Wish To Know About The AsyncAPI Community",
-				"speaker": 11,
+				"speaker": 10,
 				"type": "Keynote Speaker"
 			},
 			{
 				"time": "10:30 AM CEST - 11:00 AM CEST",
 				"session": "AsyncAPI v3: Unleashing The Power of Asynchronous APIs Design",
-				"speaker": 9,
+				"speaker": 8,
 				"type": "Technical Talk"
 			},
 			{
@@ -49,36 +49,36 @@
 			{
 				"time": "12:30 PM CEST - 13:00 PM CEST",
 				"session": "Event-Driven API Management - Increase Reusability With AsyncAPI",
-				"speaker": 8,
+				"speaker": 7,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "13:00 PM CEST - 14:00 PM CEST",
-				"session": "AsyncAPI v3 and The Future of Event-Driven Architectures",
-				"speaker": 13,
-				"type": "Experts Panel"
-			},
-			{
-				"time": "2:00 PM CEST - 3:30 PM CEST",
-				"session": "",
-				"type": "Catering and Lunch"
-			},
-			{
-				"time": "3:30 PM CEST - 4:00 PM CEST",
+				"time": "13:00 PM CEST - 13:30 PM CEST",
 				"session": "Practical Event-Storming with AsyncAPI v3 and ZenWave SDK",
 				"speaker": [5,4],
 				"type": "Technical Talk"
 			},
 			{
+				"time": "13:30 PM CEST - 3:30 PM CEST",
+				"session": "",
+				"type": "Catering and Lunch"
+			},
+			{
+				"time": "15:30 PM CEST - 4:00 PM CEST",
+				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
+				"speaker": 2,
+				"type": "Technical Talk"
+			},
+			{
 				"time": "4:00 PM CEST - 4:30 PM CEST",
 				"session": "Kloadgen: An Empty Kafka is a Sad Kafka",
-				"speaker": 10,
+				"speaker": 9,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "4:30 PM CEST - 5:00 PM CEST",
 				"session": "The Power of Ecosystem Thinking in Cultivating the AsyncAPI Documentation Community",
-				"speaker": 6,
+				"speaker": 12,
 				"type": "Community Talk"
 			},
 			{
@@ -87,30 +87,13 @@
 				"type": "Break"
 			},
 			{
-				"time": "5:30 PM CEST - 6:00 PM CEST",
-				"session": "Leveraging AsyncAPI To Detect Anomalies In Smart Ports Platforms Using Model-Driven Techniques",
-				"speaker": 2,
-				"type": "Technical Talk"
-			},
-			{
 				"time": "6:00 PM CEST - 6:30 PM CEST",
 				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
-				"speaker": 7,
+				"speaker": 6,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "6:30 PM CEST - 7:00 PM CEST",
-				"session": "",
-				"type": "Break"
-			},
-			{
-				"time": "7:00 PM CEST - 7:30 PM CEST",
-				"session": "The Power of Real-Time Data: AsyncAPI and its Impact on Electric Vehicles",
-				"speaker": 12,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "7:30 PM CEST - 8:00 PM CEST",
 				"session": "Code Generation For Enterprise Integration Patterns With AsyncAPI and ZenWave SDK",
 				"speaker": 4,
 				"type": "Technical Talk"
@@ -145,11 +128,6 @@
 				"img": "https://cache.sessionize.com/image/2d8b-200o200o2-44e72516-1cda-4fe8-ba56-21792dc5ee39.jpg"
 			},
 			{
-				"name": "Alejandra Quetzalli",
-				"title": "Author & Lead Documentation Engineer",
-				"img": "https://cache.sessionize.com/image/6025-200o200o2-DqDUFbrp2qMozbpyx1T5rZ.JPG"
-			},
-			{
 				"name": "Jeff Pollock",
 				"title": "Vice President of Products at Oracle",
 				"img": "https://sessionize.com/image/fe4c-200o200o2-R8RctGhHK1d3QgpvzzWJux.jpg"
@@ -175,14 +153,14 @@
 				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
 			},
 			{
-				"name": "Alexis Sánchez",
-				"title": "Director of Engineering at EVA Global",
-				"img": "https://sessionize.com/image/d085-200o200o2-ftqATrJmz6uTR8xpFbByVz.jpg"
-			},
-			{
 				"name": "Benjamín Granados",
 				"title": "Experts Panel Moderator",
 				"img": "https://user-images.githubusercontent.com/66913810/268240922-66bfeb96-7d2d-4ece-aae2-c92454f3affc.png"
+			},
+			{
+				"name": "Alejandra Quetzalli",
+				"title": "Author & Lead Documentation Engineer",
+				"img": "https://cache.sessionize.com/image/6025-200o200o2-DqDUFbrp2qMozbpyx1T5rZ.JPG"
 			}
 		]
 	},
@@ -343,7 +321,7 @@
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
 				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
 			},
-				{
+			{
 				"name": "Hari Rangarajan",
 				"title": "Developer Advocate at Solace",
 				"img": "https://user-images.githubusercontent.com/66913810/264054920-0bafd0b1-ee83-416f-b64e-3ff10f7582ba.jpg"
@@ -353,13 +331,13 @@
 		]
 	},
 	{
-		"city": "Paris",
-		"location": "Paris, France",
+		"city": "Bangalore",
+		"location": "Bangalore, India",
 		"lists": []
 	},
 	{
-		"city": "Bangalore",
-		"location": "Bangalore, India",
+		"city": "Paris",
+		"location": "Paris, France",
 		"lists": []
 	}
 ]

@@ -87,7 +87,7 @@ function Paper() {
           <p>
                P.S. We do not offer travel scholarships or financial support.
           </p>
-          <p className='sm:mt-4'>Application closes on Oct 12</p>
+          <p className='sm:mt-4'>Application closes on Oct 19</p>
         </div>
       <div
         className="mt-5"
