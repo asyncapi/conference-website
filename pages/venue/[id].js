@@ -8,20 +8,6 @@ import Agenda from '../../components/Agenda/agenda';
 import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-import Paper from '../../components/Form/paper';
-
-const tabs = [
-	{
-		title: 'Agenda',
-	},
-
-	{
-		title: 'Speakers',
-	},
-	{
-		title: 'Sponsors',
-	},
-];
 
 export async function getStaticProps({ params }) {
 	let res = {};
@@ -87,9 +73,7 @@ function Venue({ city }) {
 					<Agenda city={city} />
 				</div>
 			</div>
-			{city.name === 'Bangalore' ? <div id='speakers' className='container border border border-x-0 border-b-0 border-[#333] py-28'>
-				<Paper />
-			</div> : <div
+			 <div
 				id='speakers'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
@@ -142,7 +126,7 @@ function Venue({ city }) {
 						)}
 					</div>
 				</div>
-			</div>}
+			</div>
 			<div
 				id='sponsors'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
