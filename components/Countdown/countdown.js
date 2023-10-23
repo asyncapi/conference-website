@@ -14,6 +14,10 @@ const dates = [
 		name: 'Bangalore, India',
 		date: 'November 30, 2023',
 	},
+	{
+		name: 'Paris, France',
+		date: 'December 6, 2023',
+	},
 ];
 
 function Countdowns() {
@@ -60,7 +64,6 @@ function Countdowns() {
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							Ended
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
 		} else {
@@ -74,25 +77,21 @@ function Countdowns() {
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{days}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Days</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{hours}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Hours</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{minutes}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Minutes</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{seconds}
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
 			);
