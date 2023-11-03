@@ -406,16 +406,102 @@
 				"title": "Senior Platform Engineer at Postman",
 				"img": "https://user-images.githubusercontent.com/66913810/279640678-6ef459b4-89c1-48e8-9f4f-505d5cd54d98.jpg"
 				
-			},
-			{
-				"name": "Joy Almeida",
-				"title": " Analyst at Barclays",
-				"img": "https://user-images.githubusercontent.com/66913810/279641278-abce00f3-692e-4c24-97da-04a7203bab96.jpg"
-				
 			}
 
 		],
-		"agenda": []
+		"agenda": [
+			{
+				"time": "9:00 AM IST - 10:00 AM IST",
+				"type": "Registration"
+			},
+			{
+				"time": "10:00 AM IST - 10:30 AM IST",
+				"session": "Everything You Wish To Know About The AsyncAPI Community",
+				"speaker": 1,
+				"type": "Community Talk"
+			},
+			{
+				"time": "10:30 AM IST - 11:00 AM IST",
+				"session": "Request-Reply Messaging Patterns: Real-World Use Cases with AsyncAPI 3.0",
+				"speaker": 2,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:00 AM IST - 11:30 AM IST",
+				"session": "Kafka and JMS Mocking with AsyncAPI using Specmatic",
+				"speaker": 3,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "11:30 AM IST - 12:00 PM IST",
+				"session": "Effortlessly Generating Docs with AsyncAPI",
+				"speaker": 4,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "12:00 PM IST - 12:30 PM IST",
+				"session": "Bridging the Gap between Design and Runtime in EDA with AsyncAPI and CI/CD",
+				"speaker": 5,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "12:30 PM IST - 1:30 PM IST",
+				"session": "",
+				"type": "Lunch"
+			},
+			{
+				"time": "1:30 PM IST - 2:00 PM IST",
+				"session": "AsyncAPI - Why? How? What?",
+				"speaker": 6,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "2:00 PM IST - 2:30 PM IST",
+				"session": "Apache Kafka + MQTT = A Powerpack combination for end-to-end testing",
+				"speaker": 7,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "2:30 PM IST - 3:00 PM IST",
+				"session": "Dynamic API Delivery with Zilla: Unleashing the Power of AsyncAPI in Event-Driven Architectures",
+				"speaker": 8,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "3:00 PM IST - 3:30 PM IST",
+				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
+				"speaker": 9,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "3:30 PM IST - 4:00 PM IST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "4:00 PM IST - 4:30 PM IST",
+				"session": "Elevating Event-Driven Architecture: Boost your delivery with AsyncAPI and Microcks",
+				"speaker": 10,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "4:30 PM IST - 5:00 PM IST",
+				"session": "Writing Sustainable AsyncAPI Generator Templates ",
+				"speaker": 11,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "5:00 PM IST - 5:30 PM IST",
+				"session": "Turbocharging your Developer Ecosystem with Events Powered by SNS/SQS, Serverless, and AsyncAPI",
+				"speaker": 12,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "5:30 PM IST - 5:45 PM IST",
+				"session": "",
+				"type": "Closing Remarks"
+			}
+		]
 	},
 	{
 		"city": "Paris",
