@@ -426,20 +426,20 @@
 			},
 			{
 				"time": "10:30 AM IST - 11:00 AM IST",
-				"session": "Request-Reply Messaging Patterns: Real-World Use Cases with AsyncAPI 3.0",
-				"speaker": 2,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "11:00 AM IST - 11:30 AM IST",
 				"session": "Kafka and JMS Mocking with AsyncAPI using Specmatic",
 				"speaker": 3,
 				"type": "Keynote Speaker"
 			},
 			{
-				"time": "11:30 AM IST - 12:00 PM IST",
+				"time": "11:00 AM IST - 11:30 PM IST",
 				"session": "Effortlessly Generating Docs with AsyncAPI",
 				"speaker": 4,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:30 AM IST - 12:00 AM IST",
+				"session": "Request-Reply Messaging Patterns: Real-World Use Cases with AsyncAPI 3.0",
+				"speaker": 2,
 				"type": "Technical Talk"
 			},
 			{
