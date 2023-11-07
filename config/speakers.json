@@ -411,8 +411,12 @@
 		],
 		"agenda": [
 			{
-				"time": "9:00 AM IST - 10:00 AM IST",
+				"time": "8:30 AM IST - 9:30 AM IST",
 				"type": "Registration"
+			},
+			{
+				"time": "9:30 AM IST - 10:00 AM IST",
+				"type": "Welcome Speech"
 			},
 			{
 				"time": "10:00 AM IST - 10:30 AM IST",
@@ -451,7 +455,7 @@
 			},
 			{
 				"time": "1:30 PM IST - 2:00 PM IST",
-				"session": "AsyncAPI - What, Why, and How?",
+				"session": "AsyncAPI - What, Why and How?",
 				"speaker": 6,
 				"type": "Keynote Speaker"
 			},
