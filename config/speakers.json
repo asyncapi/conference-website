@@ -406,6 +406,11 @@
 				"title": "Senior Platform Engineer at Postman",
 				"img": "https://user-images.githubusercontent.com/66913810/279640678-6ef459b4-89c1-48e8-9f4f-505d5cd54d98.jpg"
 				
+			},	{
+				"name": "Abhishek Sivakumar",
+				"title": "Software Engineer II at Postman",
+				"img": "https://user-images.githubusercontent.com/66913810/281025435-d4be0bf7-e58b-4761-b4ca-5d0f2e66ef39.jpg"
+				
 			}
 
 		],
@@ -497,7 +502,7 @@
 			{
 				"time": "5:00 PM IST - 5:30 PM IST",
 				"session": "Turbocharging your Developer Ecosystem with Events Powered by SNS/SQS, Serverless, and AsyncAPI",
-				"speaker": 12,
+				"speaker": [12,13],
 				"type": "Technical Talk"
 			},
 			{
