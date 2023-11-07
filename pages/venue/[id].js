@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import cities from '../../config/city-lists.json';
 import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
@@ -8,20 +8,6 @@ import Agenda from '../../components/Agenda/agenda';
 import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-import { useRouter } from 'next/router';
-
-const tabs = [
-	{
-		title: 'Agenda',
-	},
-
-	{
-		title: 'Speakers',
-	},
-	{
-		title: 'Sponsors',
-	},
-];
 
 export async function getStaticProps({ params }) {
 	let res = {};
@@ -48,8 +34,6 @@ export async function getStaticPaths() {
 }
 
 function Venue({ city }) {
-	const router = useRouter();
-	const [active, setActive] = useState(tabs[0].title);
 	return (
 		<div>
 			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
@@ -66,7 +50,7 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-						<div className='m-[30px]'>
+						{city.ended ? "" : <div className='m-[30px]'>
 							{city.ticket !== "" && (
 								<a href={city.ticket} target='_blank' rel='noreferrer'>
 									<Button className="px-8 m-2">{city.buttonText}</Button>
@@ -77,7 +61,7 @@ function Venue({ city }) {
 									<Button className="px-8 m-2">{city.freeTicketText}</Button>
 								</a>
 							)}
-						</div>
+						</div>}
 					</div>
 				</div>
 			</div>
@@ -89,7 +73,7 @@ function Venue({ city }) {
 					<Agenda city={city} />
 				</div>
 			</div>
-			<div
+			 <div
 				id='speakers'
 				className='border border border-x-0 border-b-0 border-[#333] py-28'
 			>
@@ -133,14 +117,10 @@ function Venue({ city }) {
 									stage and share your valuable insights with our enthusiastic
 									audience!
 								</Paragraph>
-								<a
-										href=''
-										target='_blank'
-										rel='noreferrer'
-										>
-								<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-									Apply as a Speaker
-								</Button>
+								<a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null} target="_blank" rel="noopener noreferrer">	
+									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+										Apply as a Speaker
+									</Button>
 								</a>
 							</div>
 						)}

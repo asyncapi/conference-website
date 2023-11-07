@@ -18,6 +18,7 @@ import Button from '../components/Buttons/button';
 import { useMediaQuery } from 'react-responsive';
 import Dropdown from '../components/Dropdown/dropdown';
 import cities from '../config/city-lists.json';
+import Link from 'next/link';
 
 export default function Home() {
 	const [city, setCity] = useState("");
@@ -28,15 +29,16 @@ export default function Home() {
 		ReactGA.initialize('UA-109278936-3');
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
+	speakers[0].lists = [];
+	speakers.map((speaker) => {
+		if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
+			speakers[0].lists.push(...speaker.lists);
+		}
+	});
 	useEffect(() => {
-		const newArr = []
-		speakers.map((speaker) => {
-			if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
-				newArr.push(...speaker.lists)
-			}
-		});
-		setSpeakersList(newArr)
-	},[])
+		setCity(speakers[0]);
+		setSpeakersList(speakers[0].lists);
+	},[]);
 	return (
 		<div>
 			<Head>
@@ -54,8 +56,8 @@ export default function Home() {
 						<div className='text-center py-[46px] w-[714px] lg:w-full'>
 							<Heading className='text-white'>Venues</Heading>
 							<Paragraph className='mt-12'>
-								The AsyncAPI Conf2023 on Tour is planned to take the online
-								event to the next level by hosting physical events in five
+								The AsyncAPI Conf on Tour 2023 is planned to take the online
+								event to the next level by hosting physical events in four
 								different locations across the globe.
 							</Paragraph>
 						</div>
@@ -90,7 +92,7 @@ export default function Home() {
 								</div>
 							) : (
 								<div className='flex justify-center'>
-									<div className='w-[720px] lg:w-full flex justify-between'>
+									<div className='w-[900px] lg:w-full flex justify-between'>
 										{speakers.map((speaker) => {
 											return (
 												<div
@@ -151,10 +153,14 @@ export default function Home() {
 											can start your journey by clicking the button below. Join
 											us on stage and share your valuable insights with our
 											enthusiastic audience!
-										</Paragraph>
-										<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-											Apply as a Speaker
-										</Button>
+												</Paragraph>
+												<Link href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
+													<a target={city.city === 'Paris' && '_blank'}>
+														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+															Apply as a Speaker
+														</Button>
+													</a>
+												</Link>
 									</div>
 								</div>
 							)}
@@ -162,7 +168,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div id='sponsors'>
-					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png', '/img/postman.png']} />
+					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png', '/img/postman.png', '/img/apidays.png']} />
 				</div>
 				<div className=''>
 					<Subcription />
