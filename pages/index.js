@@ -154,7 +154,7 @@ export default function Home() {
 											us on stage and share your valuable insights with our
 											enthusiastic audience!
 												</Paragraph>
-												<Link legacyBehavior href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
+												<Link href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
 													<a target={city.city === 'Paris' && '_blank'}>
 														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 															Apply as a Speaker
