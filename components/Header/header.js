@@ -97,11 +97,11 @@ function Header() {
 							</div>
 							<div className='mt-[54px] relative flex items-center justify-center'>
 								<a
-									href='https://www.eventbrite.com/e/entradas-asyncapi-conf-on-tour-2023-735378636297?aff=ebdssbdestsearch&keep_tld=1'
+									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-66187'
 									target='_blank'
 									rel='noreferrer'
 								>
-									<Button className='w-[200px]'>Register for Madrid</Button>
+									<Button className='w-[200px]'>Get Bangalore Ticket</Button>
 								</a>
 							</div>
 						</div>

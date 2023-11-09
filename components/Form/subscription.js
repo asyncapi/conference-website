@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Buttons/button';
 
 function Subcription() {
 	return (
@@ -8,12 +9,13 @@ function Subcription() {
 					Subscribe for AACoT’23 updates!
 				</h3>
 				<a href='https://www.asyncapi.com/newsletter' target='_blank' rel="noreferrer" className='sm:w-full'>
-					<button
-						type='submit'
-						className='w-[299px] lg:w-full bg-[#875AE2] h-[84px] mt-[40px] text-[24px] text-white rounded-lg lg:mt-6'
-					>
-						Subscribe
-					</button>
+				<Button
+					type='submit'
+					className='w-full md:w-[200px] mt-8 px-10' 
+				>
+					Subscribe
+				</Button>
+
 				</a>
 			</div>
 		</div>
