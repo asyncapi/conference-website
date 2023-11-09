@@ -342,12 +342,27 @@
 			{
 				"name": "Lukasz Gornicki",
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2458/conversions/82981197-45c9-48ad-8bf8-b7c9d2ba55ce-square.jpg"
 			},
 			{
 				"name": "Hari Rangarajan",
 				"title": "Developer Advocate at Solace",
 				"img": "https://user-images.githubusercontent.com/66913810/264054920-0bafd0b1-ee83-416f-b64e-3ff10f7582ba.jpg"
+			},
+			{
+				"name": "Alex Drag",
+				"title": "Sr. Director of Product Marketing & Product Evangelist at Gravitee",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2062/conversions/7e3232c3-d0e0-4cd1-bc35-e22c701f5562-square.jpg"
+			},
+			{
+				"name": "Dr. João Dias",
+				"title": "Software Engineer at Kuehne+Nagel",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2461/conversions/6a8ec984-ebc7-444d-9257-4860bed7e1cb-square.jpg"
+			},
+			{
+				"name": "Rui Eusébio",
+				"title": "Senior Software Architect at Kuehne+Nagel",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2462/conversions/aa606e8b-09cd-406c-b89a-2818850ebd60-square.jpg"
 			},
 			{
 				"name": "Manuel Ottlik",
@@ -360,9 +375,29 @@
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2442/conversions/4ea7dbeb-9cae-4657-9292-a8f25725fa50-square.jpg"
 			},
 			{
+				"name": "Hugo Guerrero",
+				"title": "Chief Software Architect, APIs & Integration Developer Advocate at Red Hat",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/648/conversions/0d366eb0-5a31-47d9-b3e5-33f406f31055-square.jpg"
+			},
+			{
+				"name": "Julien Testut",
+				"title": "Senior Principal Product Manager at Oracle",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2452/conversions/c2015d0d-56fa-4058-ba9e-73916f9a78f8-square.jpg"
+			},
+			{
 				"name": "José Haro Peralta",
 				"title": "Founder, Author, Instructor at microapis.io",
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2134/conversions/825ceeae-7b98-4855-92aa-6e77dacb6d8e-square.jpg"
+			},
+			{
+				"name": "Julien Jakubowski",
+				"title": "Developer Advocate at StreamNative",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2456/conversions/66ed3685-0341-4103-b7cf-d4bbc6ddf590-square.jpg"
+			},
+			{
+				"name": "Benjamin Coenen",
+				"title": "Sr Staff Software Engineer, Apollo GraphQL",
+				"img": "https://user-images.githubusercontent.com/66913810/264054920-0bafd0b1-ee83-416f-b64e-3ff10f7582ba.jpg"
 			},
 			{
 				"name": "Alexander Günsche",
