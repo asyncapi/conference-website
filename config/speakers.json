@@ -533,7 +533,7 @@
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2062/conversions/7e3232c3-d0e0-4cd1-bc35-e22c701f5562-square.jpg"
 			},
 			{
-				"name": "Dr. João Dias",
+				"name": "João Dias",
 				"title": "Software Engineer at Kuehne+Nagel",
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2461/conversions/6a8ec984-ebc7-444d-9257-4860bed7e1cb-square.jpg"
 			},
@@ -571,6 +571,11 @@
 				"name": "Julien Jakubowski",
 				"title": "Developer Advocate at StreamNative",
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2456/conversions/66ed3685-0341-4103-b7cf-d4bbc6ddf590-square.jpg"
+			},
+			{
+				"name": "Benjamin Coenen",
+				"title": "Rust Sr Staff Software Engineer at Apollo GraphQL",
+				"img": "https://user-images.githubusercontent.com/66913810/264054920-0bafd0b1-ee83-416f-b64e-3ff10f7582ba.jpg"
 			},
 			{
 				"name": "Alexander Günsche",
