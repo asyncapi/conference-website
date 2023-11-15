@@ -35,6 +35,11 @@ export default function Home() {
 			speakers[0].lists.push(...speaker.lists);
 		}
 	});
+	const list = speakers[0].lists.filter((obj, index) => {
+		return index === speakers[0].lists.findIndex(o => obj.name=== o.name);
+	});
+	speakers[0].lists =[...list];
+	
 	useEffect(() => {
 		setCity(speakers[0]);
 		setSpeakersList(speakers[0].lists);
