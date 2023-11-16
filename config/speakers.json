@@ -660,7 +660,7 @@
 			},
 			{
 				"time": "2:55 PM CEST - 3:20 PM CEST",
-				"session": "Life of an event: Visibility and Tracing in Event-Driven Architectures",
+				"session": "Leverage API Observability: Improving Governance, Security and Operations",
 				"speaker": 10,
 				"type": "Technical Talk"
 			},
@@ -672,25 +672,25 @@
 			{
 				"time": "3:50 PM CEST - 4:15 PM CEST",
 				"session": "Apache Pulsar: Finally an Alternative to Kafka?",
-				"speaker": 10,
+				"speaker": 11,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "4:15 PM CEST - 4:40 PM CEST",
 				"session": "Federated GraphQL Subscriptions For Real-Time Applications",
-				"speaker": 11,
+				"speaker": 12,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "4:40 PM CEST - 5:05 PM CEST",
 				"session": "Harnessing Real-Time GraphQL Subscriptions with WSO2 API Manager",
-				"speaker": 12,
+				"speaker": 13,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "5:05 PM CEST - 5:30 PM CEST",
 				"session": "Interface Contracts in Event-Driven Micro-Frontend Architectures",
-				"speaker": 13,
+				"speaker": 14,
 				"type": "Technical Talk"
 			}
 		]
