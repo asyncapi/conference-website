@@ -418,7 +418,7 @@
 		"agenda": [
 			{
 				"time": "8:30 AM IST - 9:30 AM IST",
-				"type": "Registration"
+				"type": "Registration + Breakfast"
 			},
 			{
 				"time": "9:30 AM IST - 10:00 AM IST",
@@ -592,7 +592,7 @@
 		"agenda": [
 			{
 				"time": "8:30 AM CEST - 9:00 AM CEST",
-				"type": "Registration + Breakfast"
+				"type": "Registration"
 			},
 			{
 				"time": "9:05 AM CEST - 9:30 AM CEST",
