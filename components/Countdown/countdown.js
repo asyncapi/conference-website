@@ -14,6 +14,10 @@ const dates = [
 		name: 'Bangalore, India',
 		date: 'November 30, 2023',
 	},
+	{
+		name: 'Paris, France',
+		date: 'December 6, 2023',
+	},
 ];
 
 function Countdowns() {
@@ -29,10 +33,14 @@ function Countdowns() {
 			dateRef.current.classList.add('home-title');
 			setSelectedIndex((prevIndex) => (prevIndex + 1) % dates.length);
 			setTimeout(() => {
-				locationRef.current.classList.remove('home-title');
-				locationRef.current.classList.add('hidden');
-				dateRef.current.classList.remove('home-title');
-				dateRef.current.classList.add('hidden');
+				if(locationRef?.current) {
+					locationRef.current.classList.remove('home-title');
+					locationRef.current.classList.add('hidden');
+				}
+				if(dateRef?.current) {
+					dateRef.current.classList.remove('home-title');
+					dateRef.current.classList.add('hidden');
+				}
 			}, 9900); // Element stays visible for 800 milliseconds
 		}, 10000); // Toggle visibility every 1500 milliseconds
 
@@ -56,7 +64,6 @@ function Countdowns() {
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							Ended
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
 		} else {
@@ -70,25 +77,21 @@ function Countdowns() {
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{days}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Days</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{hours}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Hours</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{minutes}:
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Minutes</p> */}
 					</div>
 					<div>
 						<span className='glitch text-white text-[30px] sm:text-[18px]'>
 							{seconds}
 						</span>
-						{/* <p className='text-lg mt-[30px]'>Seconds</p> */}
 					</div>
 				</div>
 			);

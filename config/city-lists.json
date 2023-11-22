@@ -25,10 +25,10 @@
 		"sponsors": [
 			"/img/sngular.png"
 		],
-		"ticket": "https://www.eventbrite.es/e/entradas-asyncapi-conf-on-tour-2023-735378636297",
+		"ticket": "https://www.youtube.com/watch?v=FN5eR1Zqh9c",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Register"
+		"buttonText":"See Recordings"
 	},
 	{
 		"name": "Bangalore",
@@ -55,9 +55,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "",
+		"ticket": "https://ticket.apidays.global/event/apidays-paris-2023/8a1f3904-e2be-4c69-a880-37d2ddf1027d/cart?coupon=ASYNCAPICONF23",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Get your Tickets"
+		"buttonText":"Grab Free Tickets"
 	}
 ]

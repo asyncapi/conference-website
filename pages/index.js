@@ -35,6 +35,11 @@ export default function Home() {
 			speakers[0].lists.push(...speaker.lists);
 		}
 	});
+	const list = speakers[0].lists.filter((obj, index) => {
+		return index === speakers[0].lists.findIndex(o => obj.name=== o.name);
+	});
+	speakers[0].lists =[...list];
+	
 	useEffect(() => {
 		setCity(speakers[0]);
 		setSpeakersList(speakers[0].lists);
@@ -154,7 +159,7 @@ export default function Home() {
 											us on stage and share your valuable insights with our
 											enthusiastic audience!
 												</Paragraph>
-												<Link href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
+												<Link legacyBehavior href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
 													<a target={city.city === 'Paris' && '_blank'}>
 														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 															Apply as a Speaker
