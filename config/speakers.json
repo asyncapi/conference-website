@@ -418,7 +418,7 @@
 		"agenda": [
 			{
 				"time": "8:30 AM IST - 9:30 AM IST",
-				"type": "Registration"
+				"type": "Registration + Breakfast"
 			},
 			{
 				"time": "9:30 AM IST - 10:00 AM IST",
@@ -578,11 +578,126 @@
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2463/conversions/7749cce5-2699-47b9-aef8-6269ab8a823d-square.jpg"
 			},
 			{
+				"name": "Dushani Wellappili",
+				"title": "Associate Technical Lead at WSO2",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2491/conversions/c7f7f081-24c2-4e99-9cfe-b5c767cbf96c-square.jpg"
+			},
+			{
 				"name": "Alexander Günsche",
 				"title": "Senior Solutions Architect at Amazon Web Services",
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2382/conversions/c5612dad-fb54-46e9-8472-d6f579c43b5e-square.jpg"
 			}
 
+		],
+		"agenda": [
+			{
+				"time": "8:30 AM CEST - 9:00 AM CEST",
+				"type": "Registration"
+			},
+			{
+				"time": "9:05 AM CEST - 9:30 AM CEST",
+				"session": "Everything You Wish To Know About The AsyncAPI Community",
+				"speaker": 1,
+				"type": "Community Talk"
+			},
+			{
+				"time": "9:30 AM CEST - 9:55 AM CEST",
+				"session": "Event-driven Architecture and REST-APIs: It’s not a competition",
+				"speaker": 6,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "9:55 AM CEST - 10:20 PM CEST",
+				"session": "Syncing Design & Runtime: EDA's Future with AsyncAPI & Agile CI/CD",
+				"speaker": 2,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "10:20 AM CEST - 10:50 AM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "10:50 PM CEST - 11:15 AM CEST",
+				"session": "Using APIs to Maximize Real-Time Data and Streaming ROI",
+				"speaker": 3,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:15 AM CEST - 11:40 AM CEST",
+				"session": "How TransferGo Uses AsyncAPI To Improve Developer Experience",
+				"speaker": 7,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "11:40 AM CEST - 12:30 PM CEST",
+				"session": "AsyncAPI For Platform Self-Service: A GitOps Tale",
+				"speaker": [4,5],
+				"type": "Technical Talk"
+			},
+			{
+				"time": "12:30 PM CEST - 1:40 PM CEST",
+				"session": "",
+				"type": "Lunch"
+			},
+			{
+				"time": "1:40 PM CEST - 2:05 PM CEST",
+				"session": "Elevating Event-Driven World: A Deep Dive into AsyncAPI v3",
+				"speaker": 1,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "2:05 PM CEST - 2:30 PM CEST",
+				"session": "Boosting Event-Driven Development with AsyncAPI and Microcks",
+				"speaker": 8,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "2:30 PM CEST - 2:55 PM CEST",
+				"session": "Productizing AsyncAPI for Data Replication and Changed Data Capture",
+				"speaker": 9,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "2:55 PM CEST - 3:20 PM CEST",
+				"session": "Leverage API Observability: Improving Governance, Security and Operations",
+				"speaker": 10,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "3:20 PM CEST - 3:50 PM CEST",
+				"session": "",
+				"type": "Break"
+			},
+			{
+				"time": "3:50 PM CEST - 4:15 PM CEST",
+				"session": "Apache Pulsar: Finally an Alternative to Kafka?",
+				"speaker": 11,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "4:15 PM CEST - 4:40 PM CEST",
+				"session": "Federated GraphQL Subscriptions For Real-Time Applications",
+				"speaker": 12,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "4:40 PM CEST - 5:05 PM CEST",
+				"session": "Harnessing Real-Time GraphQL Subscriptions with WSO2 API Manager",
+				"speaker": 13,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "5:05 PM CEST - 5:30 PM CEST",
+				"session": "Interface Contracts in Event-Driven Micro-Frontend Architectures",
+				"speaker": 14,
+				"type": "Technical Talk"
+			},
+			{
+				"time": "5:30 PM CEST - 5:55 PM CEST",
+				"session": "",
+				"type": "Closing Remarks"
+			}
 		]
 	}
 ]
