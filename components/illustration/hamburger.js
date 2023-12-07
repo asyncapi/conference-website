@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{forwardRef} from 'react'
 
-function Hamburger({className}) {
+const Hamburger = forwardRef((props, ref)=> {
+	const {className} = props;
     return (
-			<svg
+			<svg ref ={ref}
 				width='30px'
 				height='30px'
 				viewBox='0 0 24 24'
@@ -40,6 +41,6 @@ function Hamburger({className}) {
 				</g>
 			</svg>
 		);
-}
+})
 
 export default Hamburger

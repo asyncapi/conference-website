@@ -1,9 +1,11 @@
-import React,{useState} from 'react';
+import React,{useState,forwardRef} from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
-function NavDrop({setDrop}) {
+
+const NavDrop = forwardRef((props, ref)=> {
+	const {setDrop}=props;
     const [show, setShow] = useState(null);
   return (
 		<div className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
@@ -54,6 +56,6 @@ function NavDrop({setDrop}) {
 			</div>
 		</div>
 	);
-}
+})
 
-export default NavDrop
+export default NavDrop;
