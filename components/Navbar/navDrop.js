@@ -57,5 +57,6 @@ const NavDrop = forwardRef((props, ref)=> {
 		</div>
 	);
 })
+NavDrop.displayName = 'NavDrop';
 
 export default NavDrop;

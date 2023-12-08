@@ -42,5 +42,6 @@ const Hamburger = forwardRef((props, ref)=> {
 			</svg>
 		);
 })
+Hamburger.displayName = 'Hamburger';
 
 export default Hamburger
