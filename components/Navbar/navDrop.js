@@ -1,12 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,forwardRef} from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
-function NavDrop({setDrop}) {
+
+const NavDrop = forwardRef((props, ref)=> {
+	const {setDrop}=props;
     const [show, setShow] = useState(null);
   return (
-		<div className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
+		<div  ref ={ref} className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
 			<div className='flex flex-col p-4 pb-8 w-full'>
 				{links.map((link) => {
 					return (
@@ -54,6 +56,7 @@ function NavDrop({setDrop}) {
 			</div>
 		</div>
 	);
-}
+})
+NavDrop.displayName = 'NavDrop';
 
-export default NavDrop
+export default NavDrop;
