@@ -366,12 +366,6 @@
 				
 			},
 			{
-				"name": "Lukasz Gornicki",
-				"title": "Developer Relations Manager at Postman and Executive Director at AsyncAPI Initiative",
-				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
-				
-			},
-			{
 				"name": "Ruchi Pakhle",
 				"title": "Associate Software Engineer at Red Hat",
 				"img": "https://user-images.githubusercontent.com/66913810/279596979-841baeee-6e5e-4585-b490-32f921a40fd6.jpg"
@@ -461,53 +455,47 @@
 			},
 			{
 				"time": "1:30 PM IST - 2:00 PM IST",
-				"session": "AsyncAPI - What, Why and How?",
+				"session": "Apache Kafka + MQTT = A Powerpack combination for end-to-end testing",
 				"speaker": 6,
-				"type": "Keynote Speaker"
+				"type": "Technical Talk"
 			},
 			{
 				"time": "2:00 PM IST - 2:30 PM IST",
-				"session": "Apache Kafka + MQTT = A Powerpack combination for end-to-end testing",
+				"session": "Dynamic API Delivery with Zilla: Unleashing the Power of AsyncAPI in Event-Driven Architectures",
 				"speaker": 7,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "2:30 PM IST - 3:00 PM IST",
-				"session": "Dynamic API Delivery with Zilla: Unleashing the Power of AsyncAPI in Event-Driven Architectures",
+				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
 				"speaker": 8,
 				"type": "Technical Talk"
 			},
 			{
 				"time": "3:00 PM IST - 3:30 PM IST",
-				"session": "Case Study Productizing AsyncAPI for Data Replication, Changed Data Capture",
-				"speaker": 9,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "3:30 PM IST - 4:00 PM IST",
 				"session": "",
 				"type": "Break"
 			},
 			{
-				"time": "4:00 PM IST - 4:30 PM IST",
+				"time": "3:30 PM IST - 4:00 PM IST",
 				"session": "Elevating Event-Driven Architecture: Boost your delivery with AsyncAPI and Microcks",
-				"speaker": 10,
+				"speaker": 9,
 				"type": "Keynote Speaker"
 			},
 			{
-				"time": "4:30 PM IST - 5:00 PM IST",
+				"time": "4:00 PM IST - 4:30 PM IST",
 				"session": "Writing Sustainable AsyncAPI Generator Templates",
-				"speaker": 11,
+				"speaker": 10,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "5:00 PM IST - 5:30 PM IST",
+				"time": "4:30 PM IST - 5:00 PM IST",
 				"session": "Turbocharging your Developer Ecosystem with Events Powered by SNS/SQS, Serverless, and AsyncAPI",
-				"speaker": [12,13],
+				"speaker": [11,12],
 				"type": "Technical Talk"
 			},
 			{
-				"time": "5:30 PM IST - 5:45 PM IST",
+				"time": "5:00 PM IST - 5:15 PM IST",
 				"session": "",
 				"type": "Closing Remarks"
 			}
@@ -528,9 +516,9 @@
 				"img": "https://user-images.githubusercontent.com/66913810/264054920-0bafd0b1-ee83-416f-b64e-3ff10f7582ba.jpg"
 			},
 			{
-				"name": "Alex Drag",
-				"title": "Sr. Director of Product Marketing & Product Evangelist at Gravitee",
-				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2062/conversions/7e3232c3-d0e0-4cd1-bc35-e22c701f5562-square.jpg"
+				"name": "David Brassely",
+				"title": "Chief Technology Officer at Gravitee",
+				"img": "https://apidays.s3.fr-par.scw.cloud/medias/708/conversions/927ceb62-ebea-4b6f-b9de-f53b0a113457-square.jpg"
 			},
 			{
 				"name": "João Dias",
