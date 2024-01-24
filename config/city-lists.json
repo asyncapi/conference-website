@@ -3,6 +3,7 @@
 		"name": "London",
 		"country": "UK",
 		"date": "September 20, 2023",
+		"recordedTalk":null,
 		"description": "Join us in London for the AsyncAPI Conference and unlock the API of opportunities! Let's bridge the messaging gap and create a tech buzz you will want to experience!",
 		"img": "/img/london.jpeg",
 		"address": "IBM UK Limited 20 York Road London SE1 7ND",
@@ -18,6 +19,7 @@
 	{
 		"name": "Madrid",
 		"country": "Spain",
+		"recordedTalk":"https://www.youtube.com/playlist?list=PLbi1gRlP7pihD-7XYb6c9wcTdkavDzF3_",
 		"date": "October 19, 2023",
 		"description": "Join us in Madrid for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
 		"img": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
@@ -33,6 +35,7 @@
 	{
 		"name": "Bangalore",
 		"country": "India",
+		"recordedTalk":"https://www.youtube.com/playlist?list=PLbi1gRlP7pijVocLZS7FeWKA4NBzJa7_Z",
 		"date": "November 30, 2023",
 		"description": "Join us in Bengaluru for the AsyncAPI Conference and decode the language of APIs! Let's crack the language of APIs and ignite a tech revolution with some spice you'll remember!",
 		"img": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2454&q=80",
@@ -48,6 +51,7 @@
 	{
 		"name": "Paris",
 		"country": "France",
+		"recordedTalk":null,
 		"date": "December 6-8, 2023",
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://images.unsplash.com/photo-1508050919630-b135583b29ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2306&q=80",

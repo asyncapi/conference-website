@@ -7,8 +7,8 @@ import cities from '../../config/city-lists.json';
 import speakers from '../../config/speakers.json';
 import Venue from '../../components/Venue/venue';
 import Head from 'next/head';
-import Header from '../../components/Header/header';
 import About from '../../components/About/about';
+
 const extractYear = (dateString) => {
     return dateString.split(' ').pop();
 }
