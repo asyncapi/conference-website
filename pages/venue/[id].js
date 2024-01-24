@@ -75,7 +75,7 @@ function Venue({ city }) {
 			</div>
 			 <div
 				id='speakers'
-				className='border border border-x-0 border-b-0 border-[#333] py-28'
+				className='border border-x-0 border-b-0 border-[#333] py-28'
 			>
 				<div className='mt-[64px] container flex flex-col justify-center items-center pb-[181px]'>
 					<div className='w-[1130px] flex flex-col items-center lg:w-full'>

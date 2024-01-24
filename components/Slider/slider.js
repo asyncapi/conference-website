@@ -3,7 +3,7 @@ import Arrow from '../illustration/arrow';
 import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-function ReactSlider({ children }) {
+function ReactSlider({ children, isAutoPlay }) {
 	const isTablet = useMediaQuery({ maxWidth: '1224px' });
 	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	const [slides, setSlides] = useState(2);
@@ -19,6 +19,7 @@ function ReactSlider({ children }) {
 		speed: 500,
 		slidesToShow: slides,
 		infinite: true,
+		autoplay:isAutoPlay,
 		slidesToScroll: slides,
 		variableWidth: isMobile ? false : true,
 		arrows: false,

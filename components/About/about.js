@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 
-function About() {
+function About({year='2023', isEnded=false }) {
     return (
 			<div className='relative overflow-hidden h-[900px] lg:h-full'>
 				<img src='/img/sun.png' className='bg-03' />
@@ -18,12 +18,12 @@ function About() {
 						</div>
 						<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 							<Heading className='text-white'>
-								About AsyncAPI Conf on Tour 2023?
+								About AsyncAPI Conf on Tour {year}?
 							</Heading>
 							<Paragraph typeStyle='md' className="lg:mt-10" >
-								The AsyncAPI Conf on Tour 2023 is planned to take the online
+								The AsyncAPI Conf on Tour {year} {isEnded?'took ':'is planned to take '} the online
 								event to the next level by hosting physical events in four
-								different locations across the globe. Each location will feature
+								different locations across the globe. Each location {isEnded?'featured ':'will feature '}
 								its own keynote speakers, panels, and networking events,
 								allowing attendees to experience the conference in person while
 								still connecting with the larger global community.
