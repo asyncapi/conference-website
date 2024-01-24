@@ -32,6 +32,16 @@
 	{
 		"title": "Sponsors",
 		"ref": "/#sponsors"
+	},
+	{
+		"title":"Past editions",
+		"ref":"",
+		"subMenu": [
+			{
+				"title": "2023",
+				"ref": "/editions/2023"
+			}
+		]
 	}
 ]
 
