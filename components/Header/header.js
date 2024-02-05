@@ -85,14 +85,13 @@ function Header() {
 									level='h1'
 									typeStyle='heading'
 								>
-									AsyncAPI Conf On Tour 2023
+									AsyncAPI Conf On Tour 2024
 								</Heading>
 							</div>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]'>
-									Join us for the first-ever AsyncAPI Conference on Tour,
-									bringing the latest in AsyncAPI technology to locations
-									worldwide!
+								Embark on a journey of discovery with us as we bring you the latest in AsyncAPI technology through the AsyncAPI Conference on Tour, 
+								spanning across the globe!
 								</Paragraph>
 							</div>
 							<div className='mt-[54px] relative flex items-center justify-center'>

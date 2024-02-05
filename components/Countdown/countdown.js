@@ -3,20 +3,16 @@ import Countdown from 'react-countdown';
 
 const dates = [
 	{
+		name: 'Helsinki, Finland',
+		date: 'May 28, 2024',
+	},
+	{
 		name: 'London, UK',
-		date: 'September 20, 2023',
-	},
-	{
-		name: 'Madrid, Spain',
-		date: 'October 19, 2023',
-	},
-	{
-		name: 'Bangalore, India',
-		date: 'November 30, 2023',
+		date: 'September 17, 2024',
 	},
 	{
 		name: 'Paris, France',
-		date: 'December 6, 2023',
+		date: 'December 3, 2024',
 	},
 ];
 

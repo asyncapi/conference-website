@@ -18,11 +18,11 @@ function About() {
 						</div>
 						<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 							<Heading className='text-white'>
-								About AsyncAPI Conf on Tour 2023?
+								About AsyncAPI Conf on Tour?
 							</Heading>
 							<Paragraph typeStyle='md' className="lg:mt-10" >
-								The AsyncAPI Conf on Tour 2023 is planned to take the online
-								event to the next level by hosting physical events in four
+								The AsyncAPI Conf on Tour is planned to take the online
+								event to the next level by hosting physical events in
 								different locations across the globe. Each location will feature
 								its own keynote speakers, panels, and networking events,
 								allowing attendees to experience the conference in person while
