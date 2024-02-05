@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useRef} from 'react';
 import links from '../../config/links.json';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
@@ -13,6 +13,8 @@ function Navbar() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	const [drop, setDrop] = useState(false);
 	const [show, setShow] = useState(null);
+	const menuRef = useRef(null);
+	const svg = useRef(null);
 	function handleClosing(event) {
 		if (show && !event.target.closest('.subMenu')) {
 			setShow(false);
@@ -21,6 +23,21 @@ function Navbar() {
 	useEffect(() => {
 		document.addEventListener('mousedown', handleClosing);
 	}, [show]);
+
+	const handleCloseMenu = (event) => {
+		if (menuRef .current && !menuRef .current.contains(event.target)) {
+			setDrop(false);
+		  }if(svg.current&&event.target==svg.current){
+			setDrop(true);
+		  }
+	};
+  
+	useEffect(() => {
+	  document.addEventListener('click', handleCloseMenu);
+	  return () => {
+		document.removeEventListener('click', handleCloseMenu);
+	  };
+	}, [menuRef]);
 	return (
 		<div className='container flex justify-center items-center sticky top-0 backdrop-blur z-[99]'>
 			<div className='w-[1131px]'>
@@ -35,12 +52,12 @@ function Navbar() {
 					{isTablet ? (
 						<div>
 							{drop ? (
-								<button onClick={() => setDrop(false)}>
+								<button>
 									<Cancel />
 								</button>
 							) : (
-								<button onClick={() => setDrop(true)}>
-									<Hamburger />
+								<button>
+									<Hamburger  ref={svg}/>
 								</button>
 							)}
 						</div>
@@ -85,7 +102,7 @@ function Navbar() {
 							))}
 						</div>
 					)}
-					{isTablet && drop && <NavDrop setDrop={setDrop} />}
+					{isTablet && drop && <NavDrop setDrop={setDrop}  ref={menuRef} />}
 				</div>
 			</div>
 		</div>

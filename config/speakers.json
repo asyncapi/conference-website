@@ -566,11 +566,6 @@
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2463/conversions/7749cce5-2699-47b9-aef8-6269ab8a823d-square.jpg"
 			},
 			{
-				"name": "Dushani Wellappili",
-				"title": "Associate Technical Lead at WSO2",
-				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2491/conversions/c7f7f081-24c2-4e99-9cfe-b5c767cbf96c-square.jpg"
-			},
-			{
 				"name": "Alexander Günsche",
 				"title": "Senior Solutions Architect at Amazon Web Services",
 				"img": "https://apidays.s3.fr-par.scw.cloud/medias/2382/conversions/c5612dad-fb54-46e9-8472-d6f579c43b5e-square.jpg"
@@ -607,7 +602,7 @@
 			},
 			{
 				"time": "10:50 PM CEST - 11:15 AM CEST",
-				"session": "Using APIs to Maximize Real-Time Data and Streaming ROI",
+				"session": "A Guide To The Event-Native World of Open Standards: AsyncAPI, CloudEvents, Shared Signals & Events",
 				"speaker": 3,
 				"type": "Technical Talk"
 			},
@@ -671,18 +666,12 @@
 			},
 			{
 				"time": "4:40 PM CEST - 5:05 PM CEST",
-				"session": "Harnessing Real-Time GraphQL Subscriptions with WSO2 API Manager",
+				"session": "Interface Contracts in Event-Driven Micro-Frontend Architectures",
 				"speaker": 13,
 				"type": "Technical Talk"
 			},
 			{
-				"time": "5:05 PM CEST - 5:30 PM CEST",
-				"session": "Interface Contracts in Event-Driven Micro-Frontend Architectures",
-				"speaker": 14,
-				"type": "Technical Talk"
-			},
-			{
-				"time": "5:30 PM CEST - 5:55 PM CEST",
+				"time": "5:05 PM CEST - 5:15 PM CEST",
 				"session": "",
 				"type": "Closing Remarks"
 			}
