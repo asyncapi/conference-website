@@ -141,53 +141,6 @@
 				"type": "Point",
 				"coordinates": [2.331389, 48.868639]
 			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"scalerank": 1,
-				"natscale": 300,
-				"labelrank": 3,
-				"featurecla": "Admin-0 capital",
-				"name": "Madrid",
-				"namepar": null,
-				"namealt": null,
-				"diffascii": 0,
-				"nameascii": "Madrid",
-				"adm0cap": 1,
-				"capalt": null,
-				"capin": null,
-				"worldcity": 1,
-				"megacity": 1,
-				"sov0name": "Kingdom of Spain",
-				"sov_a3": "ESP",
-				"adm0name": "Spain",
-				"adm0_a3": "ESP",
-				"adm1name": "Comunidad de Madrid",
-				"iso_a2": "ES",
-				"note": null,
-				"latitude": 40.4000262645,
-				"longitude": -3.683351686,
-				"changed": 0,
-				"namediff": 0,
-				"diffnote": null,
-				"pop_max": 5567000,
-				"pop_min": 50437,
-				"pop_other": 3673427,
-				"rank_max": 13,
-				"rank_min": 8,
-				"geonameid": 3117735,
-				"meganame": "Madrid",
-				"ls_name": "Madrid",
-				"ls_match": 1,
-				"checkme": 0,
-				"min_zoom": 3
-			},
-			"bbox": [-3.685298, 40.401972, -3.685298, 40.401972],
-			"geometry": {
-				"type": "Point",
-				"coordinates": [-3.685298, 40.401972]
-			}
 		}
 	],
   "bbox": [
