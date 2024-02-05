@@ -112,16 +112,13 @@ function Venue({ city }) {
 									Speakers Coming Soon - Stay Tuned!
 								</Heading>
 								<Paragraph className='mt-12'>
-									We are actively accepting speaker applications, and you can
-									start your journey by clicking the button below. Join us on
-									stage and share your valuable insights with our enthusiastic
-									audience!
+								Call For Speakers will be announced soon! Get ready and prepare to share your expertise with the community.
 								</Paragraph>
-								<a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null} target="_blank" rel="noopener noreferrer">	
+								{/* <a href={city.name === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : null} target="_blank" rel="noopener noreferrer">	
 									<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 										Apply as a Speaker
 									</Button>
-								</a>
+								</a> */}
 							</div>
 						)}
 					</div>

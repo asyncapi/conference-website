@@ -61,8 +61,8 @@ export default function Home() {
 						<div className='text-center py-[46px] w-[714px] lg:w-full'>
 							<Heading className='text-white'>Venues</Heading>
 							<Paragraph className='mt-12'>
-								The AsyncAPI Conf on Tour 2023 is planned to take the online
-								event to the next level by hosting physical events in four
+								The AsyncAPI Conf on Tour is planned to take the online
+								event to the next level by hosting physical events in
 								different locations across the globe.
 							</Paragraph>
 						</div>
@@ -154,18 +154,14 @@ export default function Home() {
 											{city.city} Speakers Coming Soon - Stay Tuned!
 										</Heading>
 										<Paragraph className='mt-12'>
-											We are actively accepting speaker applications, and you
-											can start your journey by clicking the button below. Join
-											us on stage and share your valuable insights with our
-											enthusiastic audience!
+											Call For Speakers will be announced soon! Get ready and prepare to share your expertise with the community.
 												</Paragraph>
-												<Link legacyBehavior href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
+												{/* <Link legacyBehavior href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
 													<a target={city.city === 'Paris' && '_blank'}>
 														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-															Apply as a Speaker
 														</Button>
 													</a>
-												</Link>
+												</Link> */}
 									</div>
 								</div>
 							)}
@@ -173,7 +169,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div id='sponsors'>
-					<Sponsors imgs={['/img/sngular.png', '/img/IBM.png', '/img/postman.png', '/img/apidays.png']} />
+					<Sponsors imgs={['/img/apidays.png']} />
 				</div>
 				<div className=''>
 					<Subcription />
