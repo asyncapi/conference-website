@@ -35,23 +35,19 @@
 		"subMenu": [
 			{
 				"title": "2023",
-				"ref": "https://conference.2023.asyncapi.com/",
-				"target": "_blank"
+				"ref": "https://conference.2023.asyncapi.com/"
 			},
 			{
 				"title": "2022",
-				"ref": "https://conference.2022.asyncapi.com/",
-				"target": "_blank"
+				"ref": "https://conference.2022.asyncapi.com/"
 			},
 			{
 				"title": "2021",
-				"ref": "https://conference.2021.asyncapi.com/",
-				"target": "_blank"
+				"ref": "https://conference.2021.asyncapi.com/"
 			},
 			{
 				"title": "2020",
-				"ref": "https://conference.2020.asyncapi.com/",
-				"target": "_blank"
+				"ref": "https://conference.2020.asyncapi.com/"
 			}
 		]
 	}	
