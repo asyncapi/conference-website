@@ -49,8 +49,7 @@ function Header() {
 				<div
 					className='absolute sm:hidden flex items-center justify-center'
 					style={{
-						display: isTablet && 'none',
-						top: '300px',
+						top: '350px',
 					}}
 				>
 					<div className='globe-overlay'></div>
