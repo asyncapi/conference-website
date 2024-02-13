@@ -21,7 +21,8 @@
 				"time": "10:00 AM CEST - 10:30 AM CEST",
 				"session": "Everything You Wish To Know About The AsyncAPI Community",
 				"speaker": 10,
-				"type": "Keynote Speaker"
+				"type": "Keynote Speaker",
+				"presentation_link": "https://example.com/asyncapi-v3-presentation"
 			},
 			{
 				"time": "10:30 AM CEST - 11:00 AM CEST",

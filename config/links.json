@@ -32,7 +32,39 @@
 	{
 		"title": "Sponsors",
 		"ref": "/#sponsors"
-	}
+	},
+	{
+		"title":"Resources Hub",
+		"ref":"",
+		"subMenu": [
+
+            {
+                "title": "AACoT'23 Report",
+                "ref": "https://www.asyncapi.com/blog/conference-2023",
+                "target": "_blank"
+            },
+            {
+                "title": "Bangalore Videos",
+                "ref": "https://www.youtube.com/playlist?list=PLbi1gRlP7pijVocLZS7FeWKA4NBzJa7_Z",
+                "target": "_blank"
+            },
+            {
+                "title": "Paris Slides",
+                "ref": "https://drive.google.com/drive/folders/1vH1Qbpn8GKLdCXlZ3wZ8sYcz6kfIR2Hj?usp=sharing",
+                "target": "_blank"
+            },
+            {
+                "title": "Madrid Videos",
+                "ref": "https://www.youtube.com/watch?v=FN5eR1Zqh9cm/",
+                "target": "_blank"
+            },
+            {
+                "title": "London Slides",
+                "ref": "https://drive.google.com/drive/folders/1PpHiuyfkcTvbpd7x-QcF2s54R6dG26aK?usp=sharing",
+                "target": "_blank"
+            }
+	]
+}
 ]
 
 
