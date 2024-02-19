@@ -95,9 +95,9 @@ function Header() {
 							</div>
 							<div className='mt-[56px] relative flex items-center justify-center'>
 								<a
-									href='/venue/Helsinki'
-									/*target='_blank'
-									rel='noreferrer'*/
+									href='https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx'
+									target='_blank'
+									rel='noreferrer'
 								>
 									<Button className='w-[250px]'>Apply to Speak in Helsinki</Button>
 								</a>
