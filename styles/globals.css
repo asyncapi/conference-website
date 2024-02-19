@@ -15,6 +15,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background:#1B1130;
 }
 
 .countdown-text-gradient {
@@ -106,7 +107,7 @@ backdrop-filter: blur(10px); */
 /* Note: backdrop-filter has minimal browser support */
 background-position: center;
 background-size: cover ;
-background-color: red;
+background-color: rgba(228, 228, 228, 0.046);
 opacity: 1;
 border-radius: 30px;
 }

@@ -19,9 +19,10 @@ function Footer() {
     },
   ];
   return (
-    <div className="w-full flex justify-between items-center container">
+    <div className="container">
+          <div className="w-full flex justify-between items-center p-4">
             <img src="/img/logo.png" className="w-[150px]" />
-      <div className="mt-2 text-[14px] text-gray py-4 underline">
+      <div className="mt-2 text-[14px] text-gray underline">
         <a
         href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
         target="_blank"
@@ -56,6 +57,7 @@ function Footer() {
             </div>
           </div>
         </div>
+    </div>
     </div>
   );
 }
