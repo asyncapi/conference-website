@@ -6,6 +6,7 @@
 		"description": "Join us in Helsinki for the AsyncAPI Conference and unlock the API of opportunities! Let's bridge the messaging gap and create a tech buzz you will want to experience!",
 		"img": "/img/finland.webp",
 		"address": "Pikku-Finlandia, Helsinki, Karamzininranta 4, 00100 Helsinki, Finland",
+		"map": "https://maps.app.goo.gl/UpdEp188m5YNEAEo9",
 		"sponsors": [
 			"/img/apidays.png"
 		],
@@ -22,6 +23,7 @@
 		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
+		"map": "https://maps.app.goo.gl/b2Vb5H2mM41F9nQA6",
 		"sponsors": [
 			"/img/apidays.png"
 		],
@@ -38,6 +40,7 @@
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
+		"map": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",
 		"sponsors": [
 			"/img/apidays.png"
 		],

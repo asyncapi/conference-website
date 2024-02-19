@@ -1,17 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Heading from '../Typography/heading';
-import Paragraph from '../Typography/paragraph';
-import Link from 'next/link';
 
 function Venue({ className, city }) {
 	return (
 		<div>
-				<div cla style={{'--image-url': `url(${city.img})`}} 
+				<div style={{'--image-url': `url(${city.img})`}} 
 				 className='relative w-[300px] h-[400px] sm:w-auto sm:h-[320px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 					<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex justify-end'>
-						<a href='https://dribbble.com/' target='_blank' className='w-8 h-8 bg-white rounded-xl flex items-center justify-center' rel="noreferrer">
+						<a href={city.map} target='_blank' className='w-8 h-8 bg-white rounded-xl flex items-center justify-center' rel="noreferrer">
 						<img src='/img/mapIcon.svg' className='w-6' />
 						</a>
 					</div>

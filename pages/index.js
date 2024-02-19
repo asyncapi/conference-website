@@ -53,6 +53,12 @@ export default function Home() {
 			</Head>
 			<img src='/img/illustra.png' className='bg-01' />
 			<Header />
+			<div id='about'>
+				<About />
+			</div>
+			<div id='sponsors'>
+				<Sponsors imgs={['/img/apidays.png']} />
+			</div>
 			{/* <div id='about'>
 				<About />
 			</div>
