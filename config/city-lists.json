@@ -3,17 +3,16 @@
 		"name": "Helsinki",
 		"country": "Finland",
 		"date": "May 28-29 2024",
-		"description": "Join us in Helsinki for the AsyncAPI Conference and unlock the API of opportunities! Let's bridge the messaging gap and create a tech buzz you will want to experience!",
+		"description": "Join us in Helsinki for the AsyncAPI Conference, where we will explore all things AsyncAPI and connect physical and digital worlds. Get excited as we delve into sustainable APIs for the Era of AI, data platforms, and Quantum Computing!.",
 		"img": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"address": "Pikku-Finlandia, Helsinki, Karamzininranta 4, 00100 Helsinki, Finland",
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
+		"ticket": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"freeTickets":"",
-		"ended": true,
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Get your Tickets"
+		"buttonText":"Submit Your Proposal"
 	},
 	{
 		"name": "London",

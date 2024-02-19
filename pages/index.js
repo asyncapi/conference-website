@@ -151,17 +151,22 @@ export default function Home() {
 								<div className='mt-[140px] flex items-center justify-center text-center'>
 									<div className='w-[720px] lg:w-full'>
 										<Heading className='text-white'>
-											{city.city} Speakers Coming Soon - Stay Tuned!
+											{/*city.city*/} 
+											Call for Speakers Now Open!
 										</Heading>
 										<Paragraph className='mt-12'>
-											Call For Speakers will be announced soon! Get ready and prepare to share your expertise with the community.
+											Get excited as we delve into sustainable APIs for the Era of AI, data platforms, and Quantum Computing. Get ready and come share your expertise with the community.
 												</Paragraph>
-												{/* <Link legacyBehavior href={city.city === 'Paris' ? 'https://apidays.typeform.com/to/ILJeAaV8#event_name=xxxxx' : '/venue/Bangalore#speakers'}>
-													<a target={city.city === 'Paris' && '_blank'}>
+												<Paragraph className='mt-6'>
+													We are currently not offering any travel funding or sponsorship support!
+												</Paragraph>
+												<Link legacyBehavior href={city.city === 'Helsinki' ? 'https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx' : '/venue/Helsinki'}>
+													<a target={city.city === 'Helsinki' && '_blank'}>
 														<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+															Apply to Speak in Helsinki
 														</Button>
 													</a>
-												</Link> */}
+												</Link>
 									</div>
 								</div>
 							)}
