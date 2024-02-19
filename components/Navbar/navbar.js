@@ -39,7 +39,7 @@ function Navbar() {
 	  };
 	}, [menuRef]);
 	return (
-		<div className='flex justify-center items-center sticky top-0 z-[99]'>
+		<div className='flex justify-center items-center sticky top-0 z-[99] text-white'>
 			<div className='w-[1131px]'>
 				<div className='flex justify-between h-[75px] w-full items-center'>
 					<div className='flex items-center sm:justify-between sm:w-full'>
@@ -77,7 +77,7 @@ function Navbar() {
 													{link.title}{' '}
 													{link.subMenu && (
 														<Dropdown
-														color="black"
+														color="white"
 														className={`ml-2 transition-transform duration-700 ${show === link.title ? 'rotate-180' : 'rotate-0'
 													}`}
 														/>

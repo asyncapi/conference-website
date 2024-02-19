@@ -18,7 +18,7 @@ function Header() {
 						<div className='flex flex-col justify-center items-center w-full'>
 							<div className='sm:w-full text-center'>
 								<Heading
-									className='text-6xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold'
+									className='text-6xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient'
 									level='h1'
 									typeStyle='heading'
 								>
@@ -26,7 +26,7 @@ function Header() {
 								</Heading>
 							</div>
 							<div className='w-[624px] sm:w-full text-center'>
-								<Paragraph className='mt-[16px]'>
+								<Paragraph className='mt-[16px]' textColor='text-gray-200'>
 								Join us for the AsyncAPI Conference on Tour,
 								bringing the latest in AsyncAPI technology to locations worldwide!
 								</Paragraph>
