@@ -52,7 +52,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Header />
-			<div id='about'>
+			{/* <div id='about'>
 				<About />
 			</div>
 			<div id='venues'>
@@ -178,7 +178,7 @@ export default function Home() {
 				<div className=''>
 					<Subcription />
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
