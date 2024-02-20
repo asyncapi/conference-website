@@ -7,15 +7,14 @@ function About() {
     return (
 		<div className='p-24 container flex items-center justify-center w-full'>
 			<div className='w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
-				<div style={{'--image-url': `url('/img/about.jpeg')`, borderRadius: "40px"}} className='bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px]' >
-
+				<div style={{'--image-url': `url('/img/about.jpeg')`}} className='lg:mt-10 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[300px] sm:h-[400px] rounded-[30px]' >
 			</div>
 				<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
-				<div className='flex items-center'>
+				<div className='flex items-center lg:justify-center'>
 					<div className='w-[40px] h-[3px] bg-blue-400' />
-						<div className='ml-4 text-xl text-white font-semi-bold'>About The Event</div>
-						</div>
-					<Heading typeStyle='heading-md' className='text-gradient'>
+						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>About The Event</div>
+					</div>
+					<Heading typeStyle='heading-md' className='text-gradient lg:mt-10'>
 					AACoT'24
 					</Heading>
 					<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
@@ -26,7 +25,7 @@ function About() {
 					the project.
 					</Paragraph>
 					<div className='mt-10'>
-						<Button className="border border-secondary-100 text-red">Become a sponsor now</Button>
+						<Button>Become a sponsor now</Button>
 					</div>
 				</div>
 			</div>
