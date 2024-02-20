@@ -8,8 +8,6 @@ import { useMediaQuery } from 'react-responsive';
 import Venue from '../Venue/venue';
 
 function Header() {
-	const isTablet = useMediaQuery({ maxWidth: '1118px' });
-
 	return (
 		<div className='h-[100vh] relative'>
 			<div className='container w-full flex items-center justify-center'>

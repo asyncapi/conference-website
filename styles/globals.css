@@ -120,7 +120,7 @@ mix-blend-mode: lighten;
 }
 
 
-.bg-01 {
+.color-effect {
     position: absolute;
     width: 100vw;
     max-width: none;
@@ -132,8 +132,11 @@ mix-blend-mode: lighten;
     display: inline-block;
 }
 
-
-
+@media (max-width: 780px) {
+  .color-effect{
+    bottom: 700px;
+  }
+}
 
 /* title styles */
 .home-title span{
