@@ -53,7 +53,7 @@ export default function Home() {
 			</Head>
 			<img src='/img/illustra.png' className='color-effect' />
 			<Header />
-			<div id='about'>
+			<div id='about' className='mt-20'>
 				<About />
 			</div>
 			<div id='sponsors'>

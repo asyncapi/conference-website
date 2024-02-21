@@ -4,16 +4,17 @@ import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import ReactSlider from '../Slider/slider';
 import cities from '../../config/city-lists.json';
-import { useMediaQuery } from 'react-responsive';
 import Venue from '../Venue/venue';
+import Announcement from '../announcement';
 
 function Header() {
 	return (
-		<div className='h-[100vh] relative'>
+		<div className='relative'>
 			<div className='container w-full flex items-center justify-center'>
 				<div className=''>
-					<div className='flex justify-center w-full mt-36'>
+					<div className='flex justify-center w-full mt-32'>
 						<div className='flex flex-col justify-center items-center w-full'>
+						<div className='my-10'><Announcement /></div>
 							<div className='sm:w-full text-center'>
 								<Heading
 									className='text-6xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient'
@@ -31,11 +32,11 @@ function Header() {
 							</div>
 							<div className='mt-[54px] relative flex items-center justify-center'>
 								<a
-									href='https://ticket.apidays.global/event/apidays-paris-2023/8a1f3904-e2be-4c69-a880-37d2ddf1027d/cart?coupon=ASYNCAPICONF23'
+									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
 									target='_blank'
 									rel='noreferrer'
 								>
-									<Button className='w-[200px]'>Get Started</Button>
+									<Button className='w-[250px]'>Register now</Button>
 								</a>
 							</div>
 						</div>

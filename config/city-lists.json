@@ -11,10 +11,9 @@
 			"/img/apidays.png"
 		],
 		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
-		"freeTickets":"",
-		"ended": true,
-		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Get your Tickets"
+		"isFree": true,
+		"ended": false,
+		"cfp": true
 	},
 	{
 		"name": "London",
@@ -28,10 +27,9 @@
 			"/img/apidays.png"
 		],
 		"ticket": "https://www.youtube.com/watch?v=FN5eR1Zqh9c",
-		"freeTickets":"",
-		"ended": true,
-		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"See Recordings"
+		"isFree": true,
+		"ended": false,
+		"cfp": false
 	},
 	{
 		"name": "Paris",
@@ -45,9 +43,8 @@
 			"/img/apidays.png"
 		],
 		"ticket": "https://ticket.apidays.global/event/apidays-paris-2023/8a1f3904-e2be-4c69-a880-37d2ddf1027d/cart?coupon=ASYNCAPICONF23",
-		"freeTickets":"",
-		"ended": true,
-		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Grab Free Tickets"
+		"isFree": true,
+		"ended": false,
+		"cfp": false
 	}
 ]

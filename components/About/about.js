@@ -7,7 +7,7 @@ function About() {
     return (
 		<div className='p-24 container flex items-center justify-center w-full'>
 			<div className='w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
-				<div style={{'--image-url': `url('/img/about.jpeg')`}} className='lg:mt-10 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[300px] sm:h-[400px] rounded-[30px]' >
+				<div style={{'--image-url': `url('/img/about.jpeg')`}} className='lg:mt-16 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]' >
 			</div>
 				<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 				<div className='flex items-center lg:justify-center'>
@@ -25,8 +25,14 @@ function About() {
 					the project.
 					</Paragraph>
 					<div className='mt-10'>
-						<Button>Become a sponsor now</Button>
-					</div>
+						<a
+						href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
+						target='_blank'
+						rel='noreferrer'
+						>
+							<Button className='w-[250px]'>Become a sponsor now</Button>
+						</a>
+				</div>
 				</div>
 			</div>
 		</div>
