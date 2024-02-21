@@ -13,7 +13,7 @@
 		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
 		"isFree": true,
 		"ended": false,
-		"cfp": true
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
 	},
 	{
 		"name": "London",
