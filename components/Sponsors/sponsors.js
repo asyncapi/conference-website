@@ -12,7 +12,7 @@ function Sponsors({imgs}) {
 					<Paragraph className='mt-[40px]' textColor='text-white'>
 						Elevating the future of APIs. Our valued partners and sponsors play
 						a pivotal role in bringing our vision to life. With their support, we 
-						orchestrate an unforgettable api celebration.
+						orchestrate an unforgettable celebration.
 					</Paragraph>
 				</div>
 				<div className='flex justify-center mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>

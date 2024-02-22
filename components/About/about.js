@@ -25,13 +25,19 @@ function About() {
 					integrate new members into the community and expand their knowledge about
 					the project.
 					</Paragraph>
-					<div className='mt-10'>
+					<Paragraph  typeStyle='body-lg' className="mt-6" textColor='text-gray-200'>
+					We are currently looking for sponsors, for more details please read our Sponsorship Prospectus.
+					</Paragraph>
+					<div className='mt-10 flex'>
 						<a
 						href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
 						target='_blank'
 						rel='noreferrer'
 						>
-							<Button className='w-[250px]'>Become a sponsor now</Button>
+							<Button className='w-[200px]'>Become a sponsor now</Button>
+						</a>
+						<a href='https://drive.google.com/file/d/15rQ7cp-LLmxSCcAb2aBFitgJkGhYXBrd/view' target='_blank' rel="noreferrer">
+						<Button overlay={true} className='w-[200px] ml-4 border'>Sponsorship prospectus</Button>
 						</a>
 				</div>
 				</div>

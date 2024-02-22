@@ -8,7 +8,7 @@ function Venue({ className, city }) {
 			className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex justify-between items-center'>
-						<div><div className={`border text-white text-xs rounded-lg p-1 text-center mt-2 font-bold ${city.cfp ? 'block': 'hidden' }`}>cfp is open</div></div>
+						<div><div className={`border text-white text-md rounded-lg p-1 text-center mt-2 ${city.cfp ? 'block': 'hidden' }`}>cfp is open</div></div>
 						<a href={city.map} target='_blank' className='w-8 h-8 bg-white rounded-xl flex items-center justify-center' rel="noreferrer">
 						<img src='/img/mapIcon.svg' className='w-6' />
 						</a>

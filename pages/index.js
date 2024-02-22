@@ -12,7 +12,6 @@ import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 
 export default function Home() {
-	const [city, setCity] = useState("");
 	return (
 		<div>
 			<Head>
