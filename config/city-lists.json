@@ -9,11 +9,10 @@
 		"sponsors": [
 			"/img/IBM.png"
 		],
-		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
+		"ticket": "https://drive.google.com/drive/folders/1PpHiuyfkcTvbpd7x-QcF2s54R6dG26aK?usp=sharing",
 		"freeTickets":"",
-		"ended": true,
-		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Get your Tickets"
+		"freeTicketText":"See Speaker Slides",
+		"buttonText":"See Speaker Slides"
 	},
 	{
 		"name": "Madrid",
@@ -25,10 +24,10 @@
 		"sponsors": [
 			"/img/sngular.png"
 		],
-		"ticket": "https://www.youtube.com/watch?v=FN5eR1Zqh9c",
+		"ticket": "https://www.youtube.com/playlist?list=PLbi1gRlP7pihD-7XYb6c9wcTdkavDzF3_",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"See Recordings"
+		"buttonText":"See Live Recordings"
 	},
 	{
 		"name": "Bangalore",
@@ -40,10 +39,10 @@
 		"sponsors": [
 			"/img/postman.png"
 		],
-		"ticket": "https://www.youtube.com/watch?v=g6CPg77Lf5Q&t=10786s",
+		"ticket": "https://www.youtube.com/playlist?list=PLbi1gRlP7pijVocLZS7FeWKA4NBzJa7_Z",
 		"freeTickets":"",
 		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Watch Live Recording"
+		"buttonText":"Watch Live Recordings"
 	},
 	{
 		"name": "Paris",
@@ -55,9 +54,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://ticket.apidays.global/event/apidays-paris-2023/8a1f3904-e2be-4c69-a880-37d2ddf1027d/cart?coupon=ASYNCAPICONF23",
+		"ticket": "https://drive.google.com/drive/folders/1vH1Qbpn8GKLdCXlZ3wZ8sYcz6kfIR2Hj?usp=sharing",
 		"freeTickets":"",
-		"freeTicketText":"Grab Free Tickets",
-		"buttonText":"Grab Free Tickets"
+		"freeTicketText":"See Speaker Slides",
+		"buttonText":"See Speaker Slides"
 	}
 ]
