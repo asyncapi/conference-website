@@ -6,6 +6,7 @@ import ReactSlider from '../Slider/slider';
 import cities from '../../config/city-lists.json';
 import Venue from '../Venue/venue';
 import Announcement from '../announcement';
+import Link from 'next/link';
 
 function Header() {
 	return (
@@ -31,13 +32,11 @@ function Header() {
 								</Paragraph>
 							</div>
 							<div className='mt-[54px] relative flex items-center justify-center'>
-								<a
-									href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
-									target='_blank'
-									rel='noreferrer'
+								<Link
+									href='#register'
 								>
 									<Button className='w-[250px]'>Register now</Button>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

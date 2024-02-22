@@ -4,8 +4,6 @@ import cities from '../../config/city-lists.json';
 import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
-import Agenda from '../../components/Agenda/agenda';
-import Speaker from '../../components/Speaker/speaker';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
 
