@@ -46,7 +46,7 @@ function Header() {
 			<div className='mt-24'>
 				<ReactSlider>
 					{cities.map((city) => {
-						return <Venue key={city.name} city={city} />;
+						return <Venue key={city.name} city={city}/>;
 					})}
 				</ReactSlider>
 			</div>

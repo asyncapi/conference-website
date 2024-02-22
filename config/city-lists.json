@@ -10,7 +10,7 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1/contribute/aacot-london-edition-61313",
+		"ticket": false,
 		"isFree": true,
 		"ended": false,
 		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
@@ -26,7 +26,7 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://www.youtube.com/watch?v=FN5eR1Zqh9c",
+		"ticket": false,
 		"isFree": true,
 		"ended": false,
 		"cfp": false
@@ -42,7 +42,7 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://ticket.apidays.global/event/apidays-paris-2023/8a1f3904-e2be-4c69-a880-37d2ddf1027d/cart?coupon=ASYNCAPICONF23",
+		"ticket": false,
 		"isFree": true,
 		"ended": false,
 		"cfp": false
