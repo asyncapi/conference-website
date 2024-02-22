@@ -50,7 +50,7 @@ function Header() {
 					className='absolute sm:hidden flex items-center justify-center'
 					style={{
 						display: isTablet && 'none',
-						top: '400px',
+						top: '200px',
 					}}
 				>
 					<div className='globe-overlay'></div>
@@ -69,7 +69,7 @@ function Header() {
 								el.style.cursor = 'pointer';
 								return el;
 							}}
-							globeImageUrl='https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/clouds/clouds.png'
+							globeImageUrl='//unpkg.com/three-globe/example/img/earth-blue-marble.jpg'
 							backgroundColor='rgba(0,0,0,0)'
 							width='700px'
 							height='700px'
