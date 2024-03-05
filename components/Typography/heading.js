@@ -14,7 +14,7 @@ export default function Heading({
 			}`;
 			break;
 		case 'heading-md':
-			classNames = `font-heading text-heading-md font-bold tracking-heading ${
+			classNames = `font-heading text-heading-md font-bold text-[40px] tracking-heading ${
 				className || ''
 			}`;
 			break;
