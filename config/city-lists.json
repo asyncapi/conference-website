@@ -29,7 +29,7 @@
 		"ticket": false,
 		"isFree": true,
 		"ended": false,
-		"cfp": false
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
 	},
 	{
 		"name": "Paris",
@@ -45,6 +45,6 @@
 		"ticket": false,
 		"isFree": true,
 		"ended": false,
-		"cfp": false
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
 	}
 ]
