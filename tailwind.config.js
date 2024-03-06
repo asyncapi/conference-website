@@ -30,7 +30,6 @@ module.exports = {
 			colors: {
 				...colors,
 				dark: dark,
-				'gray': '#D7DFE0',
 			},
 		},
 		screens: {

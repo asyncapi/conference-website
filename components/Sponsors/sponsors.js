@@ -7,12 +7,12 @@ function Sponsors({imgs}) {
   return (
 		<div className='sponsor-bg container text-center'>
 			<div className='py-[80px] flex flex-col items-center'>
-				<Heading className='text-white'>Event and Host Sponsor</Heading>
+				<Heading typeStyle='heading-md' className='text-white'>Event and Host Sponsor</Heading>
 				<div className='w-[718px] sm:w-full'>
-					<Paragraph className='mt-[40px]'>
-						A special thank you to our Event Host and Sponsor. Your kindness in
-						hosting us and sponsoring our event is truly exceptional. We
-						appreciate you!
+					<Paragraph className='mt-[40px]' textColor='text-white'>
+						Elevating the future of APIs. Our valued partners and sponsors play
+						a pivotal role in bringing our vision to life. With their support, we 
+						orchestrate an unforgettable celebration.
 					</Paragraph>
 				</div>
 				<div className='flex justify-center mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>

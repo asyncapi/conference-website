@@ -1,37 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import Heading from '../Typography/heading';
-import Paragraph from '../Typography/paragraph';
-import Link from 'next/link';
-import Image from 'next/image'
-function Venue({ className, city }) {
-	return (
-		<div className={`w-[500px] cursor-pointer sm:w-auto min-h-[650px] ${className}`}>
-			<Link href={`/venue/${city.name}`} className=''>
-				<div className='w-[450px] sm:w-auto sm:h-[320px] card-bg flex items-center justify-center p-10'>
-					<img src={city.img} className='sm:w-[350px] h-[250px] rounded-lg hoverEffect' />
-				</div>
-			</Link>
+import React from "react";
 
-			<div className='mt-[24px] w-[450px] sm:w-full'>
-				<p className='text-[#47BCEE] text-[24px] py-[8px]'>{city.date}</p>
-				<Heading typeStyle='lg' className='text-white text-[30px]'>
-					{city.name}, {city.country}
-				</Heading>
-				<div className='flex flex-col justify-between items-baseline'>
-					<Paragraph className='pt-[16px] h-full pb-[8px]'>
-						{city.description}
-					</Paragraph>
-					{city.recordedTalk
-						? <div className='p-2 mt-auto absolute bottom-0 flex items-center justify-between w-[170px] bg-black text-white shadow-sm leading-6 px-4 rounded-lg font-semibold'>
-							<Image src={require('../../public/img/yt-icon.webp')} alt='youtube icon' width={20} height={20} />
-							<a rel="noreferrer" target='_blank' href={city.recordedTalk} >Recorded Talk</a>
-						</div>
-						: null}
-				</div>
-			</div>
-		</div>
-	);
+function Venue({ className, city }) {
+  return (
+    <div>
+      <div
+        style={{ "--image-url": `url(${city.img})` }}
+        className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer"
+      >
+        <div className="flex justify-between flex-col w-full h-full">
+          <div className="flex justify-between items-center">
+            <div>
+              <div
+                className={`border text-white text-md rounded-lg p-1 text-center mt-2 ${
+                  city.cfp ? "block" : "hidden"
+                }`}
+              >
+                cfp is open
+              </div>
+            </div>
+            <a
+              href={city.map}
+              target="_blank"
+              className="w-8 h-8 bg-white rounded-xl flex items-center justify-center"
+              rel="noreferrer"
+            >
+              <img src="/img/mapIcon.svg" className="w-6" />
+            </a>
+          </div>
+          <div></div>
+          <div className="text-white">
+            <div>
+              <span className="text-lg font-bold">
+                {city.country}, {city.name}
+              </span>
+            </div>
+            <div className="flex items-center justify-between w-full">
+              <div className="border border-gray-400 rounded-lg p-1 text-center mt-2">
+                {city.date}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Venue;
