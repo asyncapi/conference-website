@@ -5,7 +5,7 @@ import Paragraph from "../Typography/paragraph";
 import Button from "../Buttons/button";
 import { CommonUtils } from "../../utils/common-utils";
 
-function About({ year = CommonUtils.getCurrentYear(), isEnded = false }) {
+function About({ year = CommonUtils.getCurrentYear2Digit(), isEnded = false }) {
   return (
     <div className="p-24 container flex items-center justify-center w-full">
       <div className="w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between">

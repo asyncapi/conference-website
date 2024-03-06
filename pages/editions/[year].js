@@ -8,18 +8,17 @@ import speakers from '../../config/speakers.json';
 import Venue from '../../components/Venue/venue';
 import Head from 'next/head';
 import About from '../../components/About/about';
+import { CommonUtils } from '../../utils/common-utils';
 
-const extractYear = (dateString) => {
-    return dateString.split(' ').pop();
-}
+
 export async function getStaticProps({ params }) {
     let res = [];
     let yearEvents = [];
-    const data = cities.filter((p) => extractYear(p.date) === params.year);
+    const data = cities.filter((p) => CommonUtils.extractYear(p.date) === params.year);
     yearEvents = data;
     for (let i = 0; i < yearEvents.length; i++) {
         let yearIter = yearEvents[i];
-        const getSpeakers = speakers.filter((s) => s.city === yearIter?.name);
+        const getSpeakers = speakers.filter((s) => s.city === yearIter?.name && s.year===CommonUtils.extractYear(yearIter.date));
         yearIter.speakers = getSpeakers[0].lists;
         res.push(yearIter);
     }
@@ -33,7 +32,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     const paths = cities.map((city) => ({
-        params: { year: extractYear(city.date) },
+        params: { year: CommonUtils.extractYear(city.date) },
     }));
     return {
         paths,
@@ -82,7 +81,7 @@ const Edition = (props) => {
             <div className='lg:py-20 w-[1130px] lg:w-full'>
                 <div className='text-center'>
                     <Heading className='text-white'>Speakers</Heading>
-                    <Paragraph className='mt-[20px]'>Meet the speakers</Paragraph>
+                    <Paragraph className='mt-[20px] text-white'>Meet the speakers</Paragraph>
                 </div>
 
                 <div className='my-10'>

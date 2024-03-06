@@ -10,6 +10,7 @@ import About from '../components/About/about';
 import TicketCards from '../components/Cards/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
+import { CommonUtils } from '../utils/common-utils';
 
 export default function Home() {
 	return (
@@ -39,7 +40,7 @@ export default function Home() {
 			</Paragraph>
 			</div>
 			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
-				{cities.map((city) => <TicketCards key={city.name} city={city} className='lg:mt-10' />)}
+				{cities.filter(item=>CommonUtils.extractYear(item.date)===CommonUtils.getCurrentYearFull()).map((city) => <TicketCards key={city.name} city={city} className='lg:mt-10' />)}
 			</div>
 			</div>
 			</div>
