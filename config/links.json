@@ -30,11 +30,11 @@
 		"ref": "/#sponsors"
 	},
 	{
-		"title":"Past editions",
+		"title":"Past Editions",
 		"ref":"",
 		"subMenu": [
 			{
-				"title": "2023",
+				"title": "AACoT'23",
 				"ref": "/editions/2023"
 			}
 		]

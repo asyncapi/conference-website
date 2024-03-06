@@ -13,7 +13,7 @@ function Speaker({details, location, className}) {
 				/>
 			</div>
 			<div className='mt-[19px]'>
-				<h3 className='text-[23px] text-white'>{details.name}</h3>
+				<h3 className='text-[23px] font-semibold tracking-wider text-white'>{details.name}</h3>
 				<div
 					className={`flex flex-col ${
 						location && 'min-h-[150px]'
@@ -21,7 +21,7 @@ function Speaker({details, location, className}) {
 				>
 					<div>
 						{' '}
-						<p className='mt-[6.6px] text-[20px] text-gray'>{details.title}</p>
+						<p className='mt-[6.6px] text-[20px] text-white'>{details.title}</p>
 					</div>
 					<div>
 						<p className='mt-[6.6px] text-[20px] text-gray'>

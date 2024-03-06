@@ -3,8 +3,9 @@ import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
 import Button from "../Buttons/button";
+import { CommonUtils } from "../../utils/common-utils";
 
-function About({ year = "2023", isEnded = false }) {
+function About({ year = CommonUtils.getCurrentYear(), isEnded = false }) {
   return (
     <div className="p-24 container flex items-center justify-center w-full">
       <div className="w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between">
@@ -20,7 +21,7 @@ function About({ year = "2023", isEnded = false }) {
             </div>
           </div>
           <Heading typeStyle="heading-md" className="text-gradient lg:mt-10">
-            AACoT'24
+            AACoT'{year}
           </Heading>
           <Paragraph
             typeStyle="body-lg"
@@ -33,14 +34,14 @@ function About({ year = "2023", isEnded = false }) {
             and new members. We plan to integrate new members into the community
             and expand their knowledge about the project.
           </Paragraph>
-          <Paragraph
+          {!isEnded?<Paragraph
             typeStyle="body-lg"
             className="mt-6"
             textColor="text-gray-200"
           >
             We are currently looking for sponsors, for more details please read
             our Sponsorship Prospectus.
-          </Paragraph>
+          </Paragraph>:null}
           <div className="mt-10 flex">
             <a
               href="https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1"
