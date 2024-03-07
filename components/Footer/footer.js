@@ -21,13 +21,13 @@ function Footer() {
   return (
     <div className="container">
           <div className="w-full flex justify-between items-center p-4">
-            <img src="/img/logo.png" className="w-[150px]" />
+            <img src="/img/logo.png" alt="company logo" className="w-[150px]" />
       <div className="mt-2 text-[14px] text-gray underline">
         <a
         href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
         target="_blank"
         rel="noreferrer"
-        className="hover:text-sky-500 duration-200 ease-in-out"
+        className="hover:text-sky-500 text-white duration-200 ease-in-out"
         >
               Code of Conduct
             </a>
