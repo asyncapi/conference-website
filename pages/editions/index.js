@@ -8,7 +8,7 @@ const PastEditions = () => {
             <div className='my-[70px]'>
                 <p className='text-center text-white tracking-[13px]'>HERE COMES THE</p>
                 <h1 className='text-8xl sm:text-6xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold'>
-                    Past Editions of AACoT
+                    Past Editions of AsyncAPI Conf
                 </h1>
             </div>
 
