@@ -13,7 +13,7 @@ function Venue({ className, city }) {
                     <div className="flex justify-between items-center">
                         <div>
                             <div
-                                className={`border text-white text-md rounded-lg p-1 text-center mt-2 ${
+                                className={`bg-slate-600 border text-white text-md rounded-lg p-1 text-center mt-2 ${
                                     city.cfp ? 'block' : 'hidden'
                                 }`}
                             >
@@ -30,15 +30,15 @@ function Venue({ className, city }) {
                         </a>
                     </div>
                     <div></div>
-                    <div className="text-white">
+                    <div className="text-white pb-4">
                         <div>
                             <span className="text-lg font-bold">
                                 {city.country}, {city.name}
                             </span>
                         </div>
-                        <div className="flex items-center justify-between w-full">
-                            <div className="border border-gray-400 rounded-lg p-1 text-center mt-2">
-                                {city.date}
+                        <div className="flex items-center justify-between w-full ">
+                            <div className="border border-gray-400 rounded-[22px] p-1 text-center mt-2 bg-[#EDEEFD] text-blue">
+                                <span className='text-blue-600'>{city.date}</span>
                             </div>
                         </div>
                     </div>
