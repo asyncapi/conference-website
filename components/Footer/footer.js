@@ -35,7 +35,7 @@ function Footer() {
       <div>
       </div>
         <div className="flex items-center justify-between sm:flex-col sm:items-start">
-          <div className="flex flex-col justify-between items-start gap-2 w-[284px] sm:mt-6">
+          <div className="flex flex-col justify-between items-start gap-2 w-[284px]">
             <div className="flex justify-between items-center gap-3">
               {socials.map((social, index) => {
                 return (
