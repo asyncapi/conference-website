@@ -3,7 +3,7 @@ import {ExternalLink} from 'lucide-react'
 const PastEditonCard = ({ url }) => {
     let year = url.split('.')[1]
     return (
-        <div className='p-4 w-1/3 sm:w-11/12 border-2 border-b-[5px] border-b-white border-violet-800 rounded-xl bg-violet-900'>
+        <div className='p-4 w-1/3 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 sm:w-11/12 border-2 border-b-[5px] border-b-white border-violet-800 rounded-xl bg-violet-900'>
             <div className='flex items-center flex-wrap justify-between'>
                 <h1 className='text-2xl text-white font-semibold'>{year}</h1>
                 <div>
