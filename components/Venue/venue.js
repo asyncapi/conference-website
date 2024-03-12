@@ -8,7 +8,7 @@ function Venue({ className, city }) {
                 style={{ '--image-url': `url(${city.img})` }}
                 className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer"
             >
-                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
                 <div className="relative flex justify-between flex-col w-full h-full">
                     <div className="flex justify-between items-center">
                         <div>
