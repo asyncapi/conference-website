@@ -43,7 +43,9 @@ function Venue({ city }) {
 						<Paragraph className='mt-[24px]' textColor='text-white'>{city.description}</Paragraph>
 
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
-							{city.address}
+							<a href={city.map} target='_blank' rel="noreferrer">
+    							{city.address}
+  							</a>
 						</Heading>
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
