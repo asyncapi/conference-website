@@ -4,13 +4,13 @@ import React from 'react';
 function Venue({ className, city }) {
 	return (
 		<div>
-			<div style={{'--image-url': `url(${city.img})`}} 
-			className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
+			<div style={{ '--image-url': `url(${city.img})` }}
+				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex justify-between items-center'>
-						<div><div className={`border text-white text-md rounded-lg p-1 text-center mt-2 ${city.cfp ? 'block': 'hidden' }`}>cfp is open</div></div>
+						<div><div className={`rounded-full px-2 py-1 backdrop-blur-sm backdrop-grayscale drop-shadow-2xl text-white text-md text-sm text-center mt-2 ${city.cfp ? 'block' : 'hidden'}`}>cfp is open</div></div>
 						<a href={city.map} target='_blank' className='w-8 h-8 bg-white rounded-xl flex items-center justify-center' rel="noreferrer">
-						<img src='/img/mapIcon.svg' className='w-6' />
+							<img src='/img/mapIcon.svg' className='w-6' />
 						</a>
 					</div>
 					<div></div>
@@ -19,11 +19,11 @@ function Venue({ className, city }) {
 							<span className='text-lg font-bold'>{city.country}, {city.name}</span>
 						</div>
 						<div className='flex items-center justify-between w-full'>
-						<div className='border border-gray-400 rounded-lg p-1 text-center mt-2'>{city.date}</div>
+							<div className='bg-[#EDEEFD] border-[0.5px] border-[#05128A] rounded-full px-2 py-1 text-[#05128A] text-sm text-center mt-2'>{city.date}</div>
 						</div>
 					</div>
-					</div>
 				</div>
+			</div>
 		</div>
 	);
 }
