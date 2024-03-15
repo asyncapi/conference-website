@@ -12,7 +12,7 @@ function Venue({ className, city }) {
 						<div><div className={`border text-white text-md rounded-lg p-1 text-center mt-2 ${city.cfp ? 'block': 'hidden' }`}>cfp is open</div></div>
 						<button onClick={(e) => {
 							e.preventDefault()
-							window.open(city.map, '_blank')
+							window.open(city.map, '_blank', 'noopener')
 						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center'>
 							<img src='/img/mapIcon.svg' className='w-6' />
 						</button>
