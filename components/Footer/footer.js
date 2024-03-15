@@ -20,9 +20,9 @@ function Footer() {
   ];
   return (
     <div className="container">
-          <div className="w-full flex justify-between items-center p-4">
+          <div className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3">
             <img src="/img/logo.png" className="w-[150px]" />
-      <div className="mt-2 text-[14px] text-gray underline">
+      <div className="mt-2 text-[14px] text-gray-100 underline">
         <a
         href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
         target="_blank"
@@ -35,7 +35,7 @@ function Footer() {
       <div>
       </div>
         <div className="flex items-center justify-between sm:flex-col sm:items-start">
-          <div className="flex flex-col justify-between items-start gap-2 w-[284px] sm:mt-6">
+          <div className="flex flex-col justify-between items-start gap-2 w-[284px] sm:items-center">
             <div className="flex justify-between items-center gap-3">
               {socials.map((social, index) => {
                 return (
