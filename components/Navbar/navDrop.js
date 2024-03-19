@@ -8,8 +8,8 @@ const NavDrop = forwardRef((props, ref)=> {
 	const {setDrop}=props;
     const [show, setShow] = useState(null);
   return (
-		<div  ref ={ref} className='absolute ml-[-16px] top-16 w-full bg-[#1B1130]'>
-			<div className='flex flex-col p-4 pb-8 w-full'>
+		<div  ref ={ref} className='absolute ml-[-20px] top-16 w-full bg-[#1B1130]'>
+			<div className='flex flex-col p-5 pb-8 w-full'>
 				{links.map((link) => {
 					return (
 						<Link href={link.ref} key={link.title}>
