@@ -7,12 +7,13 @@ const PastEditions = () => {
             <title>Past Editions | AACoT</title>
             <div className='my-[70px]'>
                 <p className='text-center text-white tracking-[13px]'>HERE COMES THE</p>
-                <h1 className='text-8xl sm:text-6xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold'>
-                    Past Editions of AsyncAPI Conf
+                <h1 className='text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold'>
+                    Past Editions of
                 </h1>
+                <h1 className='text-5xl sm:text-4xl px-10 py-4 rounded-full bg-violet-700 text-white my-4 text-center w-fit mx-auto font-bold'>AsyncAPI Conf</h1>
             </div>
 
-            <div className='my-10 flex gap-10 items-center justify-around flex-wrap'>
+            <div className='w-3/4 sm:w-10/12 my-10 mx-auto grid grid-cols-2 sm:grid-cols-1 gap-[60px]'>
                 {
                     pastEditionsArchiveLinks.map((item, index) => {
                         return <PastEditonCard key={index} url={item} />
