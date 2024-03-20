@@ -8,12 +8,12 @@ function Venue({ className, city }) {
 			<div style={{'--image-url': `url(${city.img})`}}
 				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 				<div className='flex justify-between flex-col w-full h-full'>
-					<div className={`flex ${city.cfp ? 'justify-between' : 'justify-end'} items-center`}>
-						{city.cfp? <div><div className='border text-white text-md rounded-lg p-1 text-center mt-2'>cfp is open</div></div> :null}
+					<div className='flex items-center'>
+						{city.cfp? <div className='border text-white text-md rounded-lg p-1 text-center mt-2'>cfp is open</div> :null}
 						<button onClick={(e) => {
 							e.preventDefault()
 							window.open(city.map, '_blank', 'noopener')
-						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center'>
+						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
 							<img src='/img/mapIcon.svg' className='w-6' />
 						</button>
 					</div>
