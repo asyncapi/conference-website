@@ -6,7 +6,6 @@ const PastEditions = () => {
         <div >
             <title>Past Editions | AACoT</title>
             <div className='my-[70px]'>
-                <p className='text-center text-white tracking-[13px]'>HERE COMES THE</p>
                 <h1 className='text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold'>
                     Past Editions of
                 </h1>
