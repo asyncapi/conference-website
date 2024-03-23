@@ -1,0 +1,37 @@
+{
+    "faqs": [
+      {
+        "question": "When and where is the event taking place?",
+        "answer": "The event will take place on [date] at [location]."
+      },
+      {
+        "question": "How can I register for the event?",
+        "answer": "You can register for the event by visiting our website and filling out the registration form. Alternatively, you can register in person on the day of the event."
+      },
+      {
+        "question": "Is there a registration fee?",
+        "answer": "Yes, there is a registration fee of [amount]."
+      },
+      {
+        "question": "What is included in the registration fee?",
+        "answer": "The registration fee includes access to all event sessions, workshops, networking opportunities, and meals."
+      },
+      {
+        "question": "Can I cancel my registration?",
+        "answer": "Yes, you can cancel your registration up to [number] days before the event for a full refund. After that, refunds will not be issued."
+      },
+      {
+        "question": "Will there be parking available at the venue?",
+        "answer": "Yes, there will be parking available at the venue. Additional details about parking will be provided closer to the event date."
+      },
+      {
+        "question": "Are there accommodations available for out-of-town attendees?",
+        "answer": "Yes, we have negotiated special rates with nearby hotels for event attendees. Information on how to book accommodations will be provided upon registration."
+      },
+      {
+        "question": "Can I bring a guest to the event?",
+        "answer": "Guests are welcome to attend certain portions of the event, but they must register separately and pay the registration fee."
+      }
+    ]
+  }
+  
