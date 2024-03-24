@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
- function isEventEnded(date){
+export function isEventEnded(date){
 	const eventDate = date.split(" ");
 	const month = eventDate[0];
 	const year = eventDate[eventDate.length-1];
@@ -41,4 +41,3 @@ function Venue({ className, city }) {
 }
 
 export default Venue;
-export {isEventEnded}
