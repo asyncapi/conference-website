@@ -10,6 +10,44 @@ import About from '../components/About/about';
 import TicketCards from '../components/Cards/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
+import MasonryGallery from '../components/Gallery/gallery';
+
+const images = [
+    
+	{
+		src: "https://source.unsplash.com/rxpThOwuVgE/800x599",
+		alt: "1"
+	},
+    {
+      src: "https://source.unsplash.com/73_kRzs9sqo/800x799",
+      alt: "2"
+    },
+    {
+      src: "https://source.unsplash.com/bzdhc5b3Bxs/600x799",
+      alt: "3"
+    },
+    {
+      src: "https://source.unsplash.com/w_zE6qlkQKA/600x799",
+      alt: "4"
+    },
+    {
+      src: "https://source.unsplash.com/MxVkWPiJALs/600x799",
+     alt: "5"
+    },
+    
+    {
+      src: "https://source.unsplash.com/DOu3JJ3eLQc/600x799",
+      alt: "6"
+    },
+    {
+      src: "https://source.unsplash.com/cw-cj_nFa14/800x599",
+      alt: "7"
+    },
+	{
+		src: "https://source.unsplash.com/UCbMZ0S-w28/800x799",
+		alt: "8"
+	},
+  ];
 
 export default function Home() {
 	return (
@@ -45,6 +83,9 @@ export default function Home() {
 			</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
+			</div>
+			<div id="gallery" className='mt-20 mx-20'>
+				<MasonryGallery  images={images}/>
 			</div>
 		</div>
 	);
