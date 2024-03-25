@@ -25,7 +25,7 @@ const images = [
     { src: "/img/3.jpeg", alt: "3" },
     { src: "/img/4.jpeg", alt: "4", },
     { src: "/img/5.jpeg", alt: "5", },
-    { src: "/img/7.jpeg", alt: "7", },
+    { src: "/img/6.jpeg", alt: "6", },
    
 ]
 
