@@ -10,6 +10,7 @@ import About from '../components/About/about';
 import TicketCards from '../components/Cards/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
+import Gallery from '../components/Gallery/gallery';
 
 export default function Home() {
 	return (
@@ -45,6 +46,9 @@ export default function Home() {
 			</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
+			</div>
+			<div id='gallery' className='mt-20'>
+				<Gallery />
 			</div>
 		</div>
 	);

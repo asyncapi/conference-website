@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^1.6.0",
     "d3": "^7.8.5",
+    "lightgallery": "^2.7.2",
     "next": "^12.0.0",
     "react": "^17.0.2",
     "react-confetti": "^6.1.0",
