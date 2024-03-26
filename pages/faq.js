@@ -1,3 +1,4 @@
+// pages/faq.js
 import FaqPage from '../components/FAQ/faq';
 
 const Faq = () => {
