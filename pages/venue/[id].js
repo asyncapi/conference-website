@@ -6,6 +6,7 @@ import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
+import { isEventEnded } from '../../components/Venue/venue';
 
 export async function getStaticProps({ params }) {
 	let res = {};
@@ -32,29 +33,34 @@ export async function getStaticPaths() {
 }
 
 function Venue({ city }) {
+	
+	const eventEnded = isEventEnded(city.date);
+	const textColor = eventEnded ? "text-gray-400": "text-white";
+
 	return (
 		<div>
 			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
-						<Heading className='text-white'>
+						<Heading className={textColor}>
 							{city.name}, {city.country}
 						</Heading>
-						<Paragraph className='mt-[24px]' textColor='text-white'>{city.description}</Paragraph>
+						{eventEnded && <p className='text-xs text-white border border-white py-1 px-2'>ENDED</p>}
+						<Paragraph className='mt-[24px]' textColor={textColor}>{city.description}</Paragraph>
 
-						<Heading typeStyle='lg' className='text-white mt-[24px] hover:underline'>
+						<Heading typeStyle='lg' className={`${textColor} mt-[24px] hover:underline`}>
 							<a href={city.map} target='_blank' rel="noreferrer">
     							{city.address}
   							</a>
 						</Heading>
-						<Heading typeStyle='lg' className='text-white mt-[24px]'>
+						<Heading typeStyle='lg' className={`${textColor} mt-[24px]`}>
 							{city.date}
 						</Heading>
 						{city.ended ? "" : <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Register for free" : "Register now"}</Button>
 						</a>}
-						{city.cfp && <a href={city.cfp} target='_blank' rel='noreferrer'>
+						{(!eventEnded && city.cfp) && <a href={city.cfp} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
 						</a>}
 						</div>}
