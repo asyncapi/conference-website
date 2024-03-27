@@ -28,6 +28,10 @@
 	{
 		"title": "Sponsors",
 		"ref": "/#sponsors"
+	},
+	{
+		"title":"Past Editions",
+		"ref":"/editions"
 	}
 ]
 
