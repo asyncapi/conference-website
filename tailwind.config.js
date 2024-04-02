@@ -1,3 +1,4 @@
+const colors = require("tailwindcss/colors");
 
 const dark = {
   300: "#E8E2F4",
@@ -27,6 +28,7 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+				...colors,
 				dark: dark,
 			},
 		},
