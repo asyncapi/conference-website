@@ -8,16 +8,12 @@
 		"ref": "",
 		"subMenu": [
 			{
-				"title": "Bengaluru, India",
-				"ref": "/venue/Bangalore"
+				"title": "Helsinki, Finland",
+				"ref": "/venue/Helsinki"
 			},
 			{
 				"title": "London, UK",
 				"ref": "/venue/London"
-			},
-			{
-				"title": "Madrid, Spain",
-				"ref": "/venue/Madrid"
 			},
 			{
 				"title": "Paris, France",
@@ -32,6 +28,10 @@
 	{
 		"title": "Sponsors",
 		"ref": "/#sponsors"
+	},
+	{
+		"title":"Past Editions",
+		"ref":"/editions"
 	}
 ]
 

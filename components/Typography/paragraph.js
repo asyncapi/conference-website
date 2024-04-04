@@ -1,6 +1,6 @@
 export default function Paragraph({
 	typeStyle = 'body-lg',
-	textColor = 'text-gray',
+	textColor = 'text-gray-800',
 	fontWeight,
 	className,
 	children,
