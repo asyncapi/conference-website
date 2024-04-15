@@ -10,7 +10,7 @@ import About from '../components/About/about';
 import TicketCards from '../components/Cards/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
-
+import Subcription from '../components/Form/subscription';
 export default function Home() {
 	return (
 		<div>
@@ -33,7 +33,7 @@ export default function Home() {
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Tickets Sale [Coming Soon]
 			</Heading>
-			<div className='w-[718px] sm:w-full text-center'>
+			<div className='max-w-3xl sm:w-full text-center'>
 			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
 			Experience the Future of Asynchronous Communication: Tickets for Sale for the AsyncAPI Conference on Tour!
 			</Paragraph>
@@ -45,6 +45,9 @@ export default function Home() {
 			</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
+			</div>
+			<div className='-mt-5'>
+			<Subcription/>
 			</div>
 		</div>
 	);
