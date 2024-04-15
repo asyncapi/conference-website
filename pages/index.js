@@ -33,7 +33,7 @@ export default function Home() {
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Tickets Sale [Coming Soon]
 			</Heading>
-			<div className='w-[718px] sm:w-full text-center'>
+			<div className='max-w-3xl sm:w-full text-center'>
 			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
 			Experience the Future of Asynchronous Communication: Tickets for Sale for the AsyncAPI Conference on Tour!
 			</Paragraph>
