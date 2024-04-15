@@ -8,7 +8,7 @@ function Sponsors({imgs}) {
 		<div className='sponsor-bg container text-center'>
 			<div className='py-[80px] flex flex-col items-center'>
 				<Heading typeStyle='heading-md' className='text-white'>Event and Host Sponsor</Heading>
-				<div className='w-[718px] sm:w-full'>
+				<div className='max-w-3xl sm:w-full'>
 					<Paragraph className='mt-[40px]' textColor='text-white'>
 						Elevating the future of APIs. Our valued partners and sponsors play
 						a pivotal role in bringing our vision to life. With their support, we 
