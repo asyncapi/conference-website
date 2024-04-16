@@ -1,4 +1,3 @@
-
 const dark = {
   300: "#E8E2F4",
   400: "#C6BED9",
@@ -31,9 +30,9 @@ module.exports = {
 			},
 		},
 		screens: {
-			xl: { max: '1279px' },
-			lg: { max: '1118px' },
-			sm: { max: '590px' },
+			xl: '1279px' ,
+			lg: '1118px',
+			sm: '590px',
 		},
 		fontFamily: {
 			secondary: ['Fira Code', 'monospace'],
