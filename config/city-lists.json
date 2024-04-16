@@ -12,8 +12,7 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+		"ended": false
 	},
 	{
 		"name": "London",
