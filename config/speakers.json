@@ -25,6 +25,12 @@
 				"session": "AsyncAPI In Production - The True Potential",
 				"speaker": 2,
 				"type": "Keynote Speaker"
+			},
+			{
+				"time": "03:05 PM CEST - 03:30 PM CEST",
+				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+				"speaker": 1,
+				"type": "Technical Speaker"
 			}
 		],
 		"lists": [
