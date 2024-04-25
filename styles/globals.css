@@ -109,6 +109,7 @@ background-position: center;
 background-size: cover ;
 background-color: rgba(228, 228, 228, 0.046);
 opacity: 1;
+border-radius: 30px;
 }
 
 .card{
