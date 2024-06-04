@@ -18,7 +18,7 @@ function Agenda({ city }) {
 		  {city.agenda && <div className='mt-[40px]'>
 			  <Heading
 				  typeStyle='heading-md'
-				  className='countdown-text-gradient text-2xl'
+				  className='text-gradient text-2xl'
 				  level='h3'>
 				  {city.date}
 			  </Heading>
@@ -29,7 +29,7 @@ function Agenda({ city }) {
 							  {talk.time}
 						  </Paragraph>
 						  <div className='flex justify-between lg:flex-col w-[75%] lg:w-full'>
-							  <div className='w-[50%] lg:w-full'>
+							<div className='w-[50%] lg:w-full'>
 							  <Paragraph typeStyle='body-sm' className=''>
 								  {talk.type}
 							  </Paragraph>
@@ -65,7 +65,7 @@ function Agenda({ city }) {
 								  </Paragraph>
 							  </div>
 							  </div>
-									  </div> )
+							</div> )
 							  }
 							  </div>}
 						  </div>
