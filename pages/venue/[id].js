@@ -7,6 +7,7 @@ import Paragraph from '../../components/Typography/paragraph';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
 import { isEventEnded } from '../../components/Venue/venue';
+import Agenda from '../../components/Agenda/agenda';
 
 export async function getStaticProps({ params }) {
 	let res = {};
@@ -65,6 +66,14 @@ function Venue({ city }) {
 						</a>}
 						</div>}
 					</div>
+				</div>
+			</div>
+			<div
+				id='agenda'
+				className='border border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
+			>
+				<div className='w-[1130px] lg:w-full'>
+					<Agenda city={city} />
 				</div>
 			</div>
 			<div
