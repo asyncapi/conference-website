@@ -23,6 +23,10 @@ function Sponsors({imgs}) {
 							</div>
 						))}
 				</div>
+				<div className=' flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold'>
+					<p>Finacial Sponsor</p>
+					<img src="/img/graviteeio.png" alt='financial sponsor' width={300} />
+				</div>
 			</div>
 		</div>
 	);
