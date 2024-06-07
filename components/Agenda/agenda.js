@@ -11,7 +11,7 @@ function Agenda({ city }) {
 				Agenda 
 			</Heading>
 			{city.resource && 
-						<a className=' text-white underline hover:text-neutral-300 transition' href={city.resource} target="_blank">Speaker Slides Resources</a>
+						<a className=' text-white underline hover:text-neutral-300 transition' rel="noreferrer" href={city.resource} target="_blank">Speaker Slides Resources</a>
 }
 
 			  {!city.agenda && <div className='w-[720px] lg:w-full mt-[140px] text-center'>
