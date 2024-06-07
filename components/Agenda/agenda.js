@@ -10,10 +10,6 @@ function Agenda({ city }) {
 			  <Heading className='text-[30px] text-white'>
 				Agenda 
 			</Heading>
-			{city.resource && 
-						<a className=' text-white underline hover:text-neutral-300 transition' rel="noreferrer" href={city.resource} target="_blank">Speaker Slides Resources</a>
-}
-
 			  {!city.agenda && <div className='w-[720px] lg:w-full mt-[140px] text-center'>
 				<Heading typeStyle='lg' className='text-white text-[30px]'>
 					Agenda Coming Soon - Stay Tuned!
