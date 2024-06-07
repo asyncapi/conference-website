@@ -2,6 +2,7 @@
 	{
 		"name": "Helsinki",
 		"country": "Finland",
+		"resource":"https://drive.google.com/drive/folders/1nY7dZF8WFXZ3r2rCWJDDoT2C_GMfQJMV?usp=drive_link",
 		"date": "May 29 2024",
 		"description": "Join us in Helsinki for the AsyncAPI Conference, where we will explore all things AsyncAPI and connect physical and digital worlds. Get excited as we delve into sustainable APIs for the Era of AI, Data Platforms, and Quantum Computing!.",
 		"img": "/img/finland.webp",
