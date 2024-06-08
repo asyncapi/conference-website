@@ -37,6 +37,8 @@ module.exports = {
 		},
 		fontFamily: {
 			secondary: ['Fira Code', 'monospace'],
+			workSans: ['Work Sans', 'monospace'],
+
 		},
 	},
 	plugins: [],
