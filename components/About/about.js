@@ -36,7 +36,7 @@ function About() {
 						>
 							<Button className='w-[200px]'>Become a sponsor now</Button>
 						</a>
-						<a href='https://drive.google.com/file/d/15rQ7cp-LLmxSCcAb2aBFitgJkGhYXBrd/view' target='_blank' rel="noreferrer">
+						<a href='/pdf/conf-2024.pdf' download= {`conf ${new Date().getFullYear()}.pdf`} >
 						<Button overlay={true} className='w-[200px] border'>Sponsorship prospectus</Button>
 						</a>
 				</div>
