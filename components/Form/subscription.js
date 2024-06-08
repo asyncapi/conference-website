@@ -8,7 +8,7 @@ function Subcription() {
 				<h3 className='text-[32px] text-white lg:text-center'>
 					Subscribe for AACoT’24 updates!
 				</h3>
-				<a href='https://www.asyncapi.com/newsletter' target='_blank' rel="noreferrer" className='sm:w-full'>
+				<a href='https://www.asyncapi.com/newsletter' target='_blank' rel="noreferrer" className='sm:w-full' data-test='subscribe-button'>
 				<Button
 					type='submit'
 					className='w-full md:w-[200px] mt-8 px-10' 

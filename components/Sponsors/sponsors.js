@@ -5,7 +5,7 @@ import Paragraph from '../Typography/paragraph';
 
 function Sponsors({imgs}) {
   return (
-		<div className='sponsor-bg container text-center'>
+		<div className='sponsor-bg container text-center' data-test="sponsor-component">
 			<div className='py-[80px] flex flex-col items-center'>
 				<Heading typeStyle='heading-md' className='text-white'>Event and Host Sponsor</Heading>
 				<div className='max-w-3xl sm:w-full'>

@@ -10,7 +10,8 @@
     "export": "next export",
     "generate:assets": "echo \"No assets to configure\"",
     "test": "echo \"No tests configured yet\"",
-    "release": "echo \"No release to npm for this project\""
+    "release": "echo \"No release to npm for this project\"",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "axios": "^1.6.0",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "cypress": "^13.11.0",
     "eslint": "8.15.0",
     "eslint-config-next": "13.1.1",
     "postcss": "^8.4.31",
