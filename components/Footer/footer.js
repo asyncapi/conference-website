@@ -21,22 +21,21 @@ function Footer() {
   return (
     <div className="container">
       <div className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3">
-            <img src="/img/logo.png" alt="company logo" className="w-[150px]" />
-            <div className="sm:hidden"> 
-              {/* This div helps keep the text centered */}
-            </div>
-      <div className="mt-2 text-[14px] text-gray-100 underline">
-        <a
-        href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-sky-500 text-white duration-200 ease-in-out"
-        >
-              Code of Conduct
-            </a>
-          </div>
-      <div>
-      </div>
+        <img src="/img/logo.png" alt="company logo" className="w-[150px]" />
+        <div className="sm:hidden">
+          {/* This div helps keep the text centered */}
+        </div>
+        <div className="mt-2 text-[14px] text-gray-100 underline">
+          <a
+            href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-sky-500 text-white duration-200 ease-in-out"
+          >
+            Code of Conduct
+          </a>
+        </div>
+        <div></div>
         <div className="flex items-center justify-between sm:flex-col sm:items-start">
           <div className="flex flex-col justify-between items-start gap-2 sm:items-center">
             <div className="flex justify-between items-center gap-3">
@@ -60,7 +59,7 @@ function Footer() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </div>
   );
 }

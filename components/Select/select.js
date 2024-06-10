@@ -41,7 +41,7 @@ function Dropdown({ options, title, setValue, multi }) {
       selectedOption.map((option) => {
         newValue.push(option.value);
       });
-      setValue(newValue)
+      setValue(newValue);
     } else {
       setValue(selectedOption.value);
     }

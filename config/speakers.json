@@ -1,66 +1,66 @@
 [
-	{
-		"location": "",
-		"city": "All",
-		"lists": []
-	},
-	{
-		"location": "Helsinki, Finland",
-		"city": "Helsinki",
-		"agenda": [
-			{
-				"time": "01:50 PM CEST - 02:15 PM CEST",
-				"session": "Getting Started With Event Driven Architecture & AsyncAPI",
-				"speaker": 1,
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "02:15 PM CEST - 02:40 PM CEST",
-				"session": "Navigating The Jungle of The AsyncAPI Ecosystem",
-				"speaker": 2,
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "02:40 PM CEST - 03:05 PM CEST",
-				"session": "AsyncAPI In Production - The True Potential",
-				"speaker": 3,
-				"type": "Keynote Speaker"
-			},
-			{
-				"time": "03:05 PM CEST - 03:30 PM CEST",
-				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
-				"speaker": 1,
-				"type": "Technical Speaker"
-			}
-		],
-		"lists": [
-			{
-				"name": "Hugo Guerrero",
-				"title": "Developer Advocate at Redhat",
-				"img": "https://avatars.githubusercontent.com/u/1001939?v=4"
-			},
-			{
-				"name": "Jonas Lagoni",
-				"title": "Lead Software Engineer at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1507770710789402630/w4IZfLUZ_400x400.jpg"
-			},
-			{
-				"name": "Lukasz Gornicki",
-				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
-			}
-		]
-	},
-	{
-		"location": "London, United Kingdom",
-		"city": "London",
-		"agenda": null,
-		"lists": []
-	},
-	{
-		"city": "Paris",
-		"location": "Paris, France",
-		"lists": [],
-		"agenda": null
-	}
+  {
+    "location": "",
+    "city": "All",
+    "lists": []
+  },
+  {
+    "location": "Helsinki, Finland",
+    "city": "Helsinki",
+    "agenda": [
+      {
+        "time": "01:50 PM CEST - 02:15 PM CEST",
+        "session": "Getting Started With Event Driven Architecture & AsyncAPI",
+        "speaker": 1,
+        "type": "Technical Speaker"
+      },
+      {
+        "time": "02:15 PM CEST - 02:40 PM CEST",
+        "session": "Navigating The Jungle of The AsyncAPI Ecosystem",
+        "speaker": 2,
+        "type": "Technical Speaker"
+      },
+      {
+        "time": "02:40 PM CEST - 03:05 PM CEST",
+        "session": "AsyncAPI In Production - The True Potential",
+        "speaker": 3,
+        "type": "Keynote Speaker"
+      },
+      {
+        "time": "03:05 PM CEST - 03:30 PM CEST",
+        "session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+        "speaker": 1,
+        "type": "Technical Speaker"
+      }
+    ],
+    "lists": [
+      {
+        "name": "Hugo Guerrero",
+        "title": "Developer Advocate at Redhat",
+        "img": "https://avatars.githubusercontent.com/u/1001939?v=4"
+      },
+      {
+        "name": "Jonas Lagoni",
+        "title": "Lead Software Engineer at Postman",
+        "img": "https://pbs.twimg.com/profile_images/1507770710789402630/w4IZfLUZ_400x400.jpg"
+      },
+      {
+        "name": "Lukasz Gornicki",
+        "title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
+        "img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
+      }
+    ]
+  },
+  {
+    "location": "London, United Kingdom",
+    "city": "London",
+    "agenda": null,
+    "lists": []
+  },
+  {
+    "city": "Paris",
+    "location": "Paris, France",
+    "lists": [],
+    "agenda": null
+  }
 ]
