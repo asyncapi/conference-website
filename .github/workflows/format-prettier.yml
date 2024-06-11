@@ -28,4 +28,4 @@ jobs:
       # Prettier must be in `package.json`
       - name: Run linters
         working-directory: ./
-        run : npm run fromat:check
+        run : npm run format:check
