@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve ./out/",
     "lint": "next lint",
-    "export": "next export",
+    "export": "next build",
     "generate:assets": "echo \"No assets to configure\"",
     "test": "echo \"No tests configured yet\"",
     "release": "echo \"No release to npm for this project\""
