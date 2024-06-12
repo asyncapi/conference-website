@@ -4,9 +4,8 @@
     X-Frame-Options = "ALLOW-FROM https://www.youtube.com/"
 
 [build]
-  command = "npm run build && npm run export"
-  publish = "out"
+  command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "16.13.2"
-  NPM_VERSION = "8.1.2"
+  NODE_VERSION = "18.20.3"
+  NPM_VERSION = "10.7.0"
