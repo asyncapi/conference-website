@@ -7,7 +7,7 @@ function Speaker({details, location, className}) {
 			className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
 		>
 			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px]'>
-				<Image src={details.img} alt={details.name} height={'100%'} width={'100%'} className='rounded-full w-full h-full object-cover' />
+				<Image src={details.img} alt={details.name} width={0} height={0} sizes='100vw' className='rounded-full object-cover' />
 			</div>
 			<div className='mt-[19px]'>
 				<h3 className='text-[23px] text-white'>{details.name}</h3>
