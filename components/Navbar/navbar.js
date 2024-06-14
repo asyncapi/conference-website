@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
-import { useState,useEffect,useRef} from 'react';
+import { useState,useEffect,useRef, useCallback} from 'react';
 import links from '../../config/links.json';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
 import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
+import Image from 'next/image';
 
 
 
@@ -15,14 +16,14 @@ function Navbar() {
 	const [show, setShow] = useState(null);
 	const menuRef = useRef(null);
 	const svg = useRef(null);
-	function handleClosing(event) {
-		if (show && !event.target.closest('.subMenu')) {
-			setShow(false);
-		}
-	}
+    const handleClosing = useCallback((event) => {
+        if (show && !event.target.closest('.subMenu')) {
+            setShow(false);
+        }
+    }, [show]);
 	useEffect(() => {
 		document.addEventListener('mousedown', handleClosing);
-	}, [show]);
+	}, [handleClosing, show]);
 
 	const handleCloseMenu = (event) => {
 		if (menuRef .current && !menuRef .current.contains(event.target)) {
@@ -44,8 +45,8 @@ function Navbar() {
 				<div className='p-5 flex justify-between h-[75px] w-full items-center'>
 					<div className='flex items-center sm:justify-between sm:w-full'>
 						<Link href='/'>
-							<div className='flex items-center cursor-pointer w-[120px]'>
-								<img src='/img/logo.png' alt='conference logo' />
+							<div className='flex items-center cursor-pointer'>
+								<Image src='/img/logo.png' alt='conference logo' width={120} height={33} />
 							</div>
 						</Link>
 					</div>

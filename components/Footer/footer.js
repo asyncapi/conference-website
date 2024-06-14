@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 function Footer() {
   const socials = [
@@ -21,7 +22,7 @@ function Footer() {
   return (
     <div className="container">
       <div className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3">
-            <img src="/img/logo.png" alt="company logo" className="w-[150px]" />
+            <Image src="/img/logo.png" alt="company logo" width={150} height={42} />
             <div className="sm:hidden"> 
               {/* This div helps keep the text centered */}
             </div>
@@ -49,11 +50,7 @@ function Footer() {
                     rel="noreferrer"
                     className="w-12 h-12 rounded-lg border-[1.5px] border-[#556061] flex items-center justify-center hover:border-[#AD20E2] duration-150 ease-in-out"
                   >
-                    <img
-                      src={social.imgUrl}
-                      alt={social.name}
-                      className="w-8 h-8"
-                    />
+                    <Image src={social.imgUrl} alt={social.name} height={32} width={32} />
                   </a>
                 );
               })}
