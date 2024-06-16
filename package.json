@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npm start",
+    "start": "npx serve ./out/",
     "lint": "next lint",
     "export": "next build",
     "generate:assets": "echo \"No assets to configure\"",
