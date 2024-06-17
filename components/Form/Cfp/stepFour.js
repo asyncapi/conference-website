@@ -13,7 +13,7 @@ function StepFour({ setStep, setForm, data }) {
     setSubmitting(true);
     axios
       .post(
-        "https://sheet.best/api/sheets/91aebdc6-66cb-46c2-9c7b-4cdfc7541b56",
+        "/api/speakers/register",
         data
       )
       .then((res) => {

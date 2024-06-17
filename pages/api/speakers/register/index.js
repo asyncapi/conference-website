@@ -18,13 +18,15 @@ export default async function handler(req, res) {
         auth: client
     });
 
+    console.log(req.body);
     let a = await googleSheets.spreadsheets.values.append({
         auth: authClient,
         spreadsheetId: process.env.SHEET_ID,
         range: 'Sheet1',
         valueInputOption: 'USER_ENTERED',
         resource: {
-            values: [req.body]
+            values: [[req.body.Fullname,req.body.Email,req.body.Bio,req.body.Social,req.body.Title,
+                req.body.Description,req.body.Level,req.body.Format,req.body.AdditionalInfo]]
         }
     });
 
@@ -47,8 +49,7 @@ export default async function handler(req, res) {
             html: "<b>Hello world?</b>", // html body
         });
 
-        console.log("Message sent: %s", info.messageId);
-        // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+        // console.log("Message sent: %s", info.messageId);
 
 
 
