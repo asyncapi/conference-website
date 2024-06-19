@@ -3,7 +3,7 @@ import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
-
+import Image from 'next/image';
 function About() {
     return (
 		<div className='p-24 container flex items-center justify-center w-full'>
@@ -37,7 +37,16 @@ function About() {
 							<Button className='w-[200px]'>Become a sponsor now</Button>
 						</a>
 						<a href='/pdf/conf-2024.pdf' download= {`conf ${new Date().getFullYear()}.pdf`} >
-						<Button overlay={true} className='w-[200px] border'>Sponsorship prospectus</Button>
+						<Button overlay={true} className='w-[240px] border'>
+						<div className='flex gap-2 justify-center'>
+						<div>
+							<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain'/>
+						</div>
+						<div>
+							Sponsorship prospectus
+						</div>
+						</div>
+							</Button>
 						</a>
 				</div>
 				</div>
