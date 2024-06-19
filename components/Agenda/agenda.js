@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../Typography/heading'
 import Paragraph from '../Typography/paragraph'
+import Image from 'next/image'
 
 function Agenda({ city }) {
   return (
@@ -39,7 +40,7 @@ function Agenda({ city }) {
 						  </div>
 						  {talk.speaker && typeof talk.speaker === 'number' ? <div className='flex items-center lg:mt-4'>
 							  <div className='w-[94px] h-[94px]'>
-								  <img src={city.speakers[talk.speaker - 1].img} alt={city.speakers[talk.speaker -1].name} className='object-cover rounded-full  w-full h-full'/>
+								  <Image src={city.speakers[talk.speaker - 1].img} alt={city.speakers[talk.speaker -1].name} className='object-cover rounded-full' height={'100%'} width={'100%'} />
 							  </div>
 							  <div className='ml-4 w-[300px] sm:w-[250px]'>
 								  <Heading typeStyle='heading-sm-semibold' className='text-white'>
@@ -54,7 +55,7 @@ function Agenda({ city }) {
 								  {talk.speaker.map((speak, i) => <div key={i} className='mt-6'>
 										  <div className='flex items-center lg:mt-4'>
 										  <div className='w-[94px] h-[94px]'>
-											  <img src={city.speakers[speak - 1].img} alt={city.speakers[speak - 1].name} className='object-cover rounded-full  w-full h-full' />
+											  <Image src={city.speakers[speak - 1].img} alt={city.speakers[speak - 1].name} className='object-cover rounded-full' height={'100%'} width={'100%'} />
 										  </div>
 										  <div className='ml-4 w-[300px] sm:w-[250px]'>
 								  <Heading typeStyle='heading-sm-semibold' className='text-white'>
