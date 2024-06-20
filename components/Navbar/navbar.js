@@ -88,12 +88,19 @@ function Navbar() {
 											)}
 										</div>
 										{show && show === link.title && link.subMenu && (
-											<div className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg pl-2 pt-1 flex flex-col justify-center space-y-0'>
+											<div className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
-														<div className='h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
+														{link.subMenu.length === 1 ? (
+															<div className='h-[32px] flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
+																{subL.title}
+															</div>
+														) : (
+															<div className='h-[32px]  text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
 															{subL.title}
 														</div>
+														)}
+														
 													</Link>
 												))}
 											</div>
