@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Venue({ className, city }) {
 	return (
@@ -14,7 +15,7 @@ function Venue({ className, city }) {
 							e.preventDefault()
 							window.open(city.map, '_blank', 'noopener')
 						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
-							<img src='/img/mapIcon.svg' className='w-6' />
+							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
 						</button>
 					</div>
 					<div></div>
