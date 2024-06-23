@@ -36,8 +36,8 @@ const options2 = [
 function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState({});
   useEffect(() => {
-    setForm({ ...data, ...value });
-  }, [value]);
+    setForm({ ...data, ...value});
+  }, [data, setForm, value]); 
   return (
     <form
       className="mt-3 w-[30rem] lg:w-[auto]"

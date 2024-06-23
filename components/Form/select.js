@@ -45,7 +45,7 @@ function Dropdown({ options, title, setValue, multi }) {
     } else {
       setValue(selectedOption.value);
     }
-  }, [selectedOption]);
+  }, [multi, selectedOption, setValue]);
   return (
     <div className="relative inline-block w-full">
       <Select
