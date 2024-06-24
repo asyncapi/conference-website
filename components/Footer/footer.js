@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
 function Footer() {
   const socials = [
@@ -22,7 +23,9 @@ function Footer() {
   return (
     <div className="container">
       <div className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3">
-            <Image src="/img/logo.png" alt="company logo" width={150} height={42} />
+          <Link href='/'>
+            <Image className="cursor-pointer" src="/img/logo.png" alt="company logo" width={150} height={42} />
+          </Link>
             <div className="sm:hidden"> 
               {/* This div helps keep the text centered */}
             </div>
