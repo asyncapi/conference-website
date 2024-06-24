@@ -7,7 +7,7 @@ function Sponsors({imgs}) {
   return (
 		<div className='sponsor-bg container text-center' data-test="sponsor-component">
 			<div className='py-[80px] flex flex-col items-center'>
-				<Heading typeStyle='heading-md' className='text-white'>Event and Host Sponsor</Heading>
+
 				<div className='max-w-3xl sm:w-full'>
 					<Paragraph className='mt-[40px]' textColor='text-white'>
 						Elevating the future of APIs. Our valued partners and sponsors play
@@ -15,13 +15,19 @@ function Sponsors({imgs}) {
 						orchestrate an unforgettable celebration.
 					</Paragraph>
 				</div>
-				<div className='flex justify-center mt-[40px] w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
+				<Heading typeStyle='heading-md' className='text-white mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
+				<div className='flex justify-center  w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
 					{imgs &&
 						imgs.map((img) => (
-							<div key={img} className='w-[300px] flex items-center sm:mt-6'>
+							<div key={img} className='w-[300px] h-[150px] flex items-center'>
 								<img src={img} alt={img} className='' />
 							</div>
 						))}
+				</div>
+				<div className=' flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold'>
+				<Heading typeStyle='heading-md' className='text-white mb-12 sm:text-2xl'>Financial Sponsor</Heading>
+					
+					<img src="/img/graviteeio.svg"  alt='financial sponsor' width={250} />
 				</div>
 			</div>
 		</div>
