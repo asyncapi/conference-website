@@ -10,7 +10,9 @@
     "export": "next export",
     "generate:assets": "echo \"No assets to configure\"",
     "test": "echo \"No tests configured yet\"",
-    "release": "echo \"No release to npm for this project\""
+    "release": "echo \"No release to npm for this project\"",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "axios": "^1.6.0",
@@ -36,6 +38,7 @@
     "eslint": "8.15.0",
     "eslint-config-next": "13.1.1",
     "postcss": "^8.4.31",
+    "prettier": "3.3.1",
     "tailwindcss": "^3.0.24"
   }
 }

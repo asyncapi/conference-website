@@ -1,39 +1,36 @@
 [
-	{
-		"title": "About",
-		"ref": "/#about"
-	},
-	{
-		"title": "Venue",
-		"ref": "",
-		"subMenu": [
-			{
-				"title": "Helsinki, Finland",
-				"ref": "/venue/Helsinki"
-			},
-			{
-				"title": "London, UK",
-				"ref": "/venue/London"
-			},
-			{
-				"title": "Paris, France",
-				"ref": "/venue/Paris"
-			}
-		]
-	},
-	{
-		"title": "Speakers",
-		"ref": "/#speakers"
-	},
-	{
-		"title": "Sponsors",
-		"ref": "/#sponsors"
-	},
-	{
-		"title":"Past Editions",
-		"ref":"/editions"
-	}
+  {
+    "title": "About",
+    "ref": "/#about"
+  },
+  {
+    "title": "Venue",
+    "ref": "",
+    "subMenu": [
+      {
+        "title": "Helsinki, Finland",
+        "ref": "/venue/Helsinki"
+      },
+      {
+        "title": "London, UK",
+        "ref": "/venue/London"
+      },
+      {
+        "title": "Paris, France",
+        "ref": "/venue/Paris"
+      }
+    ]
+  },
+  {
+    "title": "Speakers",
+    "ref": "/#speakers"
+  },
+  {
+    "title": "Sponsors",
+    "ref": "/#sponsors"
+  },
+  {
+    "title": "Past Editions",
+    "ref": "/editions"
+  }
 ]
-
-
-    

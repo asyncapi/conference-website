@@ -4,7 +4,10 @@ import Button from "../../Buttons/button";
 
 function StepOne({ setStep, setForm, data }) {
   return (
-    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 2)}>
+    <form
+      className="mt-3 w-[30rem] lg:w-[auto]"
+      onSubmit={(e) => setStep(e, 2)}
+    >
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Let's start with your name
       </h1>
@@ -32,7 +35,7 @@ function StepOne({ setStep, setForm, data }) {
           }}
           onChange={(e) => setForm({ ...data, Email: e.target.value })}
         />
-         <div className="text-dark-600 text-lg mt-5">Bio</div>
+        <div className="text-dark-600 text-lg mt-5">Bio</div>
         <textarea
           required
           type="text"
@@ -42,7 +45,9 @@ function StepOne({ setStep, setForm, data }) {
           }}
           onChange={(e) => setForm({ ...data, Bio: e.target.value })}
         />
-        <div className="text-dark-600 text-lg mt-5">Github/LinkedIn/Twitter</div>
+        <div className="text-dark-600 text-lg mt-5">
+          Github/LinkedIn/Twitter
+        </div>
         <input
           required
           type="url"
@@ -50,11 +55,15 @@ function StepOne({ setStep, setForm, data }) {
           style={{
             border: "1px solid #E50E99",
           }}
-                  onChange={(e) => setForm({ ...data, Social: e.target.value })}
+          onChange={(e) => setForm({ ...data, Social: e.target.value })}
         />
-        <Button type="submit"
+        <Button
+          type="submit"
           className="bg-tetiary-pink p-3 rounded-md text-white mt-3 float-right w-36"
-          disabled={!data.Fullname && true}>Next</Button>
+          disabled={!data.Fullname && true}
+        >
+          Next
+        </Button>
       </div>
     </form>
   );

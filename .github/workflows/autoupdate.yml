@@ -12,11 +12,11 @@ name: autoupdate
 
 on:
   push:
-    branches-ignore:  
-      - 'version-bump/**'
-      - 'dependabot/**'
-      - 'bot/**'
-      - 'all-contributors/**'
+    branches-ignore:
+      - "version-bump/**"
+      - "dependabot/**"
+      - "bot/**"
+      - "all-contributors/**"
 
 jobs:
   autoupdate-for-bot:
@@ -27,7 +27,7 @@ jobs:
       - name: Autoupdating
         uses: docker://chinthakagodawita/autoupdate-action:v1
         env:
-          GITHUB_TOKEN: '${{ secrets.GH_TOKEN_BOT_EVE }}'
+          GITHUB_TOKEN: "${{ secrets.GH_TOKEN_BOT_EVE }}"
           PR_FILTER: "labelled"
           PR_LABELS: "autoupdate"
           PR_READY_STATE: "ready_for_review"
