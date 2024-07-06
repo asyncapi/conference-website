@@ -9,17 +9,11 @@ function Subscription() {
 					Subscribe for AACoT’24 updates!
 				</h3>
 				<a href='https://www.asyncapi.com/newsletter' target='_blank' rel="noreferrer" className='sm:w-full'>
-				<Button
-						type='submit'
-						className='w-full md:w-[200px] mt-8 px-10'
-					>
-						Subscribe
-					</Button>
-
+				<Button type='submit' className='w-full md:w-[200px] mt-8 px-10'>
+					Subscribe
+				</Button>
 				</a>
 			</div>
 		</div>
 	);
 }
-
-export default Subscription;
