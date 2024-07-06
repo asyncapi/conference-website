@@ -176,7 +176,7 @@ export default function Home() {
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
 			</div>
-			<div className='-mt-5'>
+			<div className='mt-5'>
 			<Subcription/>
 			</div>
 		</div>
