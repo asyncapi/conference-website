@@ -34,7 +34,7 @@ function Venue({ className, city }) {
 							<span className='text-lg font-bold'>{city.country}, {city.name}</span>
 						</div>
 						<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center mt-2'>{city.date}</div>
-						<span className='text-xs text-white'> - {eventEnded ? "ENDED" : "UPCOMING"}</span>
+						<span className='text-xs text-white'> - {eventEnded ? "ENDED" : ""}</span>
 					</div>
 				</div>
 			</div>
