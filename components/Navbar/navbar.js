@@ -8,19 +8,21 @@ import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
 
-
-
 function Navbar() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	const [drop, setDrop] = useState(false);
 	const [show, setShow] = useState(null);
+	const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
 	const menuRef = useRef(null);
 	const svg = useRef(null);
+	let closeTimeout = useRef(null);  
+
 	const handleClosing = useCallback((event) => {
 		if (show && !event.target.closest('.subMenu')) {
 			setShow(null);
 		}
 	}, [show]);
+
 	useEffect(() => {
 		document.addEventListener('mousedown', handleClosing);
 		return () => {
@@ -44,10 +46,25 @@ function Navbar() {
 	}, [menuRef]);
 
 	const handleMouseEnter = (title) => {
+		clearTimeout(closeTimeout.current);
 		setShow(title);
 	};
 
 	const handleMouseLeave = () => {
+		closeTimeout.current = setTimeout(() => {
+			if (!isSubMenuHovered) {
+				setShow(null);
+			}
+		}, 300);  
+	};
+
+	const handleSubMenuEnter = () => {
+		clearTimeout(closeTimeout.current);
+		setIsSubMenuHovered(true);
+	};
+
+	const handleSubMenuLeave = () => {
+		setIsSubMenuHovered(false);
 		setShow(null);
 	};
 
@@ -100,7 +117,11 @@ function Navbar() {
 											)}
 										</div>
 										{show === link.title && link.subMenu && (
-											<div className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'>
+											<div
+												className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
+												onMouseEnter={handleSubMenuEnter}
+												onMouseLeave={handleSubMenuLeave}
+											>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
 														{link.subMenu.length === 1 ? (
