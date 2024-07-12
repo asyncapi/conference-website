@@ -160,6 +160,7 @@ export default function Home() {
 				<div className='w-[40px] h-[3px] bg-blue-400' />
 				<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>Tickets</div>
 			</div>
+			<div data-test="ticket-section">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Tickets Sale [Coming Soon]
 			</Heading>
@@ -170,6 +171,7 @@ export default function Home() {
 			</div>
 			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
 				{cities.map((city) => <TicketCards key={city.name} city={city} className='lg:mt-10' />)}
+			</div>
 			</div>
 			</div>
 			</div>
