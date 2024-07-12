@@ -80,7 +80,7 @@ export default function CallForSpeakers() {
 
       </div> {/* content div end */}
         <div className="flex justify-center my-14 lg:my-2 mb-20 lg:mb-14">
-      <Button className="font-semibold">Submit Request</Button>
+      <Button className="font-semibold w-96">Submit Request</Button>
         </div>
       </div>
         
