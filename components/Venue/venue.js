@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Venue({ className, city }) {
 	return (
 		<Link href={`/venue/${city.name}`}>
 			<div style={{'--image-url': `url(${city.img})`}}
-				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
+				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex items-center'>
 						{city.cfp? <div className='border text-white text-md rounded-lg p-1 text-center mt-2'>cfp is open</div> :null}
@@ -14,7 +15,7 @@ function Venue({ className, city }) {
 							e.preventDefault()
 							window.open(city.map, '_blank', 'noopener')
 						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
-							<img src='/img/mapIcon.svg' className='w-6' />
+							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
 						</button>
 					</div>
 					<div></div>
