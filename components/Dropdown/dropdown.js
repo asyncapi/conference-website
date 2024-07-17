@@ -7,15 +7,15 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
+					className='flex text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
-					onClick={() => setShow(true)}
+					onClick={() => setShow((value)=> !value )}
 				>
 					<div>{active}</div>
 					<svg
-						className='-mr-1 h-5 w-5 text-gray-400'
+						className='-mr-1 h-5 w-5 text-white my-auto'
 						viewBox='0 0 20 20'
 						fill='currentColor'
 						aria-hidden='true'
@@ -41,7 +41,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
   --> */}
 			{show && (
 				<div
-					className='w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
+					className='w-full  absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#1B1130] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
 					role='menu'
 					aria-orientation='vertical'
 					aria-labelledby='menu-button'
@@ -58,7 +58,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
+										className={`text-white block p-4 text-md cursor-pointer navbg`}
 										role='menuitem'
 										tabindex='-1'
 										id='menu-item-0'
