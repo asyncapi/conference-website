@@ -1,1 +1,8 @@
-**
+.next
+node_modules
+.nvmrc
+CODE_OF_CONDUCT.md
+CODEOWNERS
+CONTRIBUTING.md
+README.md
+.github

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import Confetti from "react-confetti";
 import StepOne from "./Cfp/stepOne";
 import StepTwo from "./Cfp/stepTwo";
-import StepThree from './Cfp/stepThree';
-import StepFour from './Cfp/stepFour';
+import StepThree from "./Cfp/stepThree";
+import StepFour from "./Cfp/stepFour";
 
 const fields = [
   {
@@ -28,8 +28,6 @@ const fields = [
   },
 ];
 
-
-
 function Paper() {
   const [step, setStep] = useState(1);
   const confetiRef = useRef(null);
@@ -46,10 +44,12 @@ function Paper() {
     setHeight(confetiRef.current.clientHeight);
     setWidth(confetiRef.current.clientWidth);
   }, []);
-  const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
-  let view = stepOne
+  const stepOne = (
+    <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
+  );
+  let view = stepOne;
   if (step === 4) {
-    view = stepOne
+    view = stepOne;
   }
   if (step === 2) {
     view = (
@@ -67,28 +67,36 @@ function Paper() {
     );
   }
   if (step === "successful") {
-    view = <div  className='flex items-center h-full'>
-      <div>
-          <h1 className='text-2xl text-white font-bold mt-6'>Your talk have been submitted successfully</h1>
+    view = (
+      <div className="flex items-center h-full">
+        <div>
+          <h1 className="text-2xl text-white font-bold mt-6">
+            Your talk have been submitted successfully
+          </h1>
+        </div>
+        <Confetti
+          numberOfPieces={50}
+          width={width}
+          height={height}
+          tweenDuration={40}
+        />
       </div>
-       <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
-    </div>
+    );
   }
 
-    return (
-        <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
-            <h1 className="text-white font-bold text-5xl lg:text-3xl">
+  return (
+    <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
+      <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
-            </h1>
-            <p className="mt-2 text-dark-500 text-lg">
-          We are actively accepting speaker applications, <br /> Fill up the form to apply as a speaker.
-        </p>
-        <div className='flex mt-8 justify-between sm:flex-col items-center sm:items-start text-dark-500 text-sm'>
-          <p>
-               P.S. We do not offer travel scholarships or financial support.
-          </p>
-          <p className='sm:mt-4'>Application closes on Oct 19</p>
-        </div>
+      </h1>
+      <p className="mt-2 text-dark-500 text-lg">
+        We are actively accepting speaker applications, <br /> Fill up the form
+        to apply as a speaker.
+      </p>
+      <div className="flex mt-8 justify-between sm:flex-col items-center sm:items-start text-dark-500 text-sm">
+        <p>P.S. We do not offer travel scholarships or financial support.</p>
+        <p className="sm:mt-4">Application closes on Oct 19</p>
+      </div>
       <div
         className="mt-5"
         style={{
@@ -105,15 +113,14 @@ function Paper() {
         >
           <div className="p-6 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
-              const index = i + 1 ;
+              const index = i + 1;
               return (
-                <div
-                      key={field.title}
-                      className='h-[100px]'
-                >
+                <div key={field.title} className="h-[100px]">
                   <div className="flex justify-between">
                     <div className="md:hidden">
-                      <h3 className={`text-white font-bold text-lg ${index <= step && "text-[#E50E99]"}`}>
+                      <h3
+                        className={`text-white font-bold text-lg ${index <= step && "text-[#E50E99]"}`}
+                      >
                         {field.title}
                       </h3>
                       <p className="text-dark-600">{field.description}</p>
@@ -125,19 +132,20 @@ function Paper() {
           </div>
         </div>
         <div className="p-10 p-6">
-          <p className="text-dark-400">{typeof(step) === 'number' && `Step ${step}/4`}</p>
+          <p className="text-dark-400">
+            {typeof step === "number" && `Step ${step}/4`}
+          </p>
           {view}
           <div
             className="absolute bottom-0 right-0 rotate-0 opacity-50 sm:hidden"
             style={{
               transform: "scaleX(-1)",
             }}
-          >
-          </div>
+          ></div>
         </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }
 
-export default Paper
+export default Paper;
