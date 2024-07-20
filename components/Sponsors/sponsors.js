@@ -2,6 +2,7 @@
 import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
+import Image from 'next/image';
 
 function Sponsors({imgs}) {
   return (
@@ -20,14 +21,13 @@ function Sponsors({imgs}) {
 					{imgs &&
 						imgs.map((img) => (
 							<div key={img} className='w-[300px] h-[150px] flex items-center'>
-								<img src={img} alt={img} className='' />
+								<Image src={img} alt={img} height={210} width={300}/>
 							</div>
 						))}
 				</div>
 				<div className=' flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold'>
 				<Heading typeStyle='heading-md' className='text-white mb-12 sm:text-2xl'>Financial Sponsor</Heading>
-					
-					<img src="/img/graviteeio.svg"  alt='financial sponsor' width={250} />
+					<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />
 				</div>
 			</div>
 		</div>

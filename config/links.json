@@ -32,7 +32,21 @@
 	{
 		"title":"Past Editions",
 		"ref":"/editions"
-	}
+	},
+	{
+		"title":"Resources Hub",
+		"ref":"",
+		"subMenu": [
+
+            {
+                "title": "Helsinki Slides",
+                "ref": "https://drive.google.com/drive/folders/1nY7dZF8WFXZ3r2rCWJDDoT2C_GMfQJMV?usp=drive_link",
+                "target": "_blank"
+            }
+            
+	]
+}
+
 ]
 
 
