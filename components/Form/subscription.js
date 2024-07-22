@@ -17,3 +17,4 @@ function Subscription() {
 		</div>
 	);
 }
+export default Subscription
