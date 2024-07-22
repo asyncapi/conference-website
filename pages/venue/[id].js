@@ -70,7 +70,7 @@ function Venue({ city }) {
 			</div>
 			<div
 				id='agenda'
-				className='border border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
+				className='border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
 				<div className='w-[1130px] lg:w-full'>
 					<Agenda city={city} />
