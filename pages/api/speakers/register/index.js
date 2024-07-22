@@ -18,7 +18,6 @@ export default async function handler(req, res) {
         auth: client
     });
 
-    console.log(req.body);
     let a = await googleSheets.spreadsheets.values.append({
         auth: authClient,
         spreadsheetId: process.env.SHEET_ID,
@@ -43,15 +42,11 @@ export default async function handler(req, res) {
         });
 
         const info = await transporter.sendMail({
-            to: process.env.SENDER_MAIL, // list of receivers
+            to: req.body.Email, // list of receivers
             subject: "Hello ✔", // Subject line
             text: "Hello world?", // plain text body
             html: "<b>Hello world?</b>", // html body
         });
-
-        // console.log("Message sent: %s", info.messageId);
-
-
 
 
     res.json(a);

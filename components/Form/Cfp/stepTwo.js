@@ -30,7 +30,7 @@ function StepTwo({ setStep, setForm, data }) {
             border: "1px solid #E50E99",
           }}
           onChange={(e) => setForm({ ...data, Description: e.target.value })} />
-        <div className="float-right">
+        <div className="float-right mt-3">
           <a
             className="mr-10 text-dark-600 cursor-pointer"
             onClick={() => setStep(null, 1)}

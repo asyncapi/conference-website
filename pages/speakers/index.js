@@ -1,14 +1,15 @@
 import CFSBanner from "../../components/Speaker/banner";
 import EventDetails from "../../components/Speaker/eventDetails";
 import Button from "../../components/Buttons/button";
+import Link from "next/link";
 export default function CallForSpeakers() {
   return (
     <div className="text-white mt-1">
       <CFSBanner />
-      <div className="px-10 py-12">
+      <div className="px-20 py-12">
             <div>
 
-            <h2 className="text-2xl font-bold mb-8 ">Hello! Thank you for your interest in speaking at AACOoT&apos;24 in London</h2>
+            <h2 className="text-2xl font-bold mb-8 ">Hello! Thank you for your interest in speaking at AACOoT&apos;24 in Paris</h2>
             <div className="text-lg mb-4 lg:text-base">
             Get ready to be part of the ultimate celebration of cutting-edge technology and innovation with AsyncAPI Conf on Tour (AACoT)! 
             Embark on a thrilling journey across the globe as we host a series of micro-conferences that will ignite your curiosity and fuel your passion. Join the brightest minds, passionate enthusiasts, and a vibrant community of experts and developers who are eager to share knowledge, explore the latest developments, and push the boundaries of what&#39;s possible. With insightful talks and interactive workshops, AACoT is your gateway to elevate your skills and unlock your full potential in the world of technology. Don&#39;t miss this one-of-a-kind event where you can learn, collaborate, and embrace the endless possibilities.
@@ -80,7 +81,9 @@ export default function CallForSpeakers() {
 
       </div> {/* content div end */}
         <div className="flex justify-center my-14 lg:my-2 mb-20 lg:mb-14">
-      <Button className="font-semibold w-96">Submit Request</Button>
+          <Link href="/speakers/register">
+      <Button className="font-semibold w-96 lg:w-44">Submit Request</Button>
+          </Link>
         </div>
       </div>
         

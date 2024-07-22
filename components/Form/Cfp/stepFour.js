@@ -52,7 +52,7 @@ function StepFour({ setStep, setForm, data }) {
         <div className="mt-6 text-dark-600 text-md">
           By clicking submit, this means you agree to follow the <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">AsyncAPI Initiative Code of Conduct</a>
         </div>
-        <div className="float-right">
+        <div className="float-right mt-3">
           <a
             className="mr-10 text-dark-600 cursor-pointer"
             onClick={() => !disabled && setStep(null, 3)}

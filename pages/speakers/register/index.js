@@ -6,8 +6,3 @@ export default function SpeakersForm(){
         <Paper />
     </div>)
 }
-
-
-// https://www.apidays.global/speakingguidelines/
-
-// https://www.apidays.global/code-of-conduct/
