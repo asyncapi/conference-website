@@ -55,7 +55,7 @@ function Venue({ city }) {
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Register for free" : "Register now"}</Button>
 						</a>}
-						{city.cfp && <a href="/speakers/register"target='_blank' rel='noreferrer'>
+						{city.cfp && <a href="/venue/online"target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
 						</a>}
 						</div>}
