@@ -1,6 +1,6 @@
-import CFSBanner from "../../components/Speaker/banner";
-import EventDetails from "../../components/Speaker/eventDetails";
-import Button from "../../components/Buttons/button";
+import CFSBanner from "../../../components/Speaker/banner";
+import EventDetails from "../../../components/Speaker/eventDetails";
+import Button from "../../../components/Buttons/button";
 import Link from "next/link";
 export default function CallForSpeakers() {
   return (
@@ -81,7 +81,7 @@ export default function CallForSpeakers() {
 
       </div> {/* content div end */}
         <div className="flex justify-center my-14 lg:my-2 mb-20 lg:mb-14">
-          <Link href="/speakers/register">
+          <Link href="/venue/online/register">
       <Button className="font-semibold w-96 lg:w-44">Submit Request</Button>
           </Link>
         </div>

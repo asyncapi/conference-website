@@ -1,4 +1,4 @@
-import Paper from '../../../components/Form/paper';
+import Paper from '../../../../components/Form/paper';
 
 
 export default function SpeakersForm(){
