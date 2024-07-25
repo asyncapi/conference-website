@@ -18,7 +18,7 @@ export default function CFSBanner() {
           Call For Speakers
         </h1>
         <h1 className='text-green-500  lg:text-xl text-3xl'>
-          Paris Edition
+          Online Edition
         </h1>
       </div>
     </div>
