@@ -54,7 +54,44 @@
 	{
 		"location": "London, United Kingdom",
 		"city": "London",
-		"agenda": null,
+		"agenda": [
+			{
+				"time": "03:30 PM BST - 03:50 PM BST",
+				"session": "Topic Characteristics: What Do You Need To Know In Advance",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "03:50 PM BST - 04:15 PM BST",
+				"session": "Harmonizing Asynchronous Systems: NATS, CloudEvents and AsyncAPI",
+				"speaker": 3,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "04:15 PM BST - 04:40 PM BST",
+				"session": "Better AsyncAPI Governance",
+				"speaker": 2,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "04:40 PM BST - 05:05 PM BST",
+				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
+				"speaker": 4,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "05:05 PM BST - 05:30 PM BST",
+				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+				"speaker": 5,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "05:30 PM CEST - 05:55 PM CEST",
+				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
+				"speaker": 6,
+				"type": "Technical Speaker"
+			}
+		],
 		"lists": [			{
 			"name": "Dale Lane",
 			"title": "Chief Architect at IBM",
