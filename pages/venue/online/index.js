@@ -2,6 +2,7 @@ import CFSBanner from "../../../components/Speaker/banner";
 import EventDetails from "../../../components/Speaker/eventDetails";
 import Button from "../../../components/Buttons/button";
 import Link from "next/link";
+import CFPdata from "../../../config/cfp-data.json"
 export default function CallForSpeakers() {
   return (
     <div className="text-white mt-1">
@@ -24,7 +25,7 @@ export default function CallForSpeakers() {
         <div>
 
             <h2 className="text-2xl font-bold mb-8">Event Details & Ticket Information</h2>
-            <EventDetails EventStartDate="18th Sep 2024" EventEndDate="19th Sep 2024" EventLocation="Sngular Madrid, C. de Labastida, 128034 Madrid, Spain" CallStartDate="5th Jun 2024" CallEndDate="5th Jun 2024" />
+            <EventDetails EventStartDate={CFPdata.EventStartDate} EventEndDate={CFPdata.EventEndDate} EventLocation={CFPdata.EventLocation} CallStartDate={CFPdata.CallStartDate} CallEndDate={CFPdata.CallEndDate} />
         </div>
 
         <div>

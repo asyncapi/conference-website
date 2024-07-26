@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import CFPdata from "../../config/cfp-data.json"
 export default function CFSBanner() {
   return (
     <div className='relative bg-black'>
@@ -18,7 +18,7 @@ export default function CFSBanner() {
           Call For Speakers
         </h1>
         <h1 className='text-green-500  lg:text-xl text-3xl'>
-          Online Edition
+          {CFPdata.Edition}
         </h1>
       </div>
     </div>
