@@ -10,7 +10,7 @@ export default function CallForSpeakers() {
       <div className="px-20 py-12">
             <div>
 
-            <h2 className="text-2xl font-bold mb-8 ">Hello! Thank you for your interest in speaking at AACoT'24 Online Edition</h2>
+            <h2 className="text-2xl font-bold mb-8 ">Hello! Thank you for your interest in speaking at AACoT&apos;24 Online Edition</h2>
             <div className="text-lg mb-4 lg:text-base">
              The AsyncAPI Conf on Tour is an official event created by the AsyncAPI Initiative. This conference is aimed primarily at the community to share and exchange experiences between existing users and new members. We aim to integrate new members into the community and expand their knowledge about the project.
             </div>
@@ -34,7 +34,7 @@ export default function CallForSpeakers() {
             <div className="mb-4">
             <div className="text-lg">Who can submit a talk</div>
             <ul className="list-disc flex gap-0 flex-col px-10">
-                <li className="text-sm pr-14 lg:pr-0">We're excited to have speakers from different parts of the globe sharing how they apply the AsyncAPI Specification in their practical use cases.</li>
+                <li className="text-sm pr-14 lg:pr-0">We&apos;re excited to have speakers from different parts of the globe sharing how they apply the AsyncAPI Specification in their practical use cases.</li>
                 <li className="text-sm pr-14 lg:pr-0">We encourage proposals from all individuals, regardless of their expertise level, to promote a diverse content track that welcomes everyone.</li>
             </ul>
             </div>
