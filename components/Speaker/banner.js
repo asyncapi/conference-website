@@ -17,7 +17,7 @@ export default function CFSBanner() {
         <h1 className='text-6xl lg:text-3xl  font-workSans font-bold text-white'>
           Call For Speakers
         </h1>
-        <h1 className='text-green-500  lg:text-xl text-3xl'>
+        <h1 className='text-green-500 lg:text-xl text-3xl'>
           {CFPdata.Edition}
         </h1>
       </div>
