@@ -43,10 +43,14 @@ export default function EventDetails(props) {
               <Image src="/img/Location.png" alt="Location Icon" width={20} height={20} layout="fixed" className="w-6 h-6" />
               <span className="font-bold">Location</span>
             </div>
-            <div className="text-lg lg:text-base">{props.EventLocation}</div>
+            <div className="text-lg lg:text-base">{props.EventLocation}            
+            <a href="https://www.youtube.com/@AsyncAPI" className="text-blue-400 underline" target="_blank" rel="noopener noreferrer">
+            AsyncAPI YouTube
+              </a>
+            </div>
         </div>
 
-        <div className="space-y-4">
+        {/*<div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image src="/img/Globe.png" alt="Ticket Icon" width={20} height={20} layout="fixed" className="w-6 h-6" />
               <span className="font-bold">Buy Tickets</span>
@@ -56,8 +60,7 @@ export default function EventDetails(props) {
                 opencollective.com/asyncapi/events/asyncapi
               </a>
             </div>
-          </div>
+          </div>*/}
       </div>
     );
   }
-  
