@@ -10,7 +10,7 @@ import About from '../components/About/about';
 import TicketCards from '../components/Cards/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
-import Subcription from '../components/Form/subscription';
+import Subscription from '../components/Form/subscription';
 import Speaker from '../components/Speaker/speaker';
 import speakers from '../config/speakers.json';
 import Link from 'next/link';
@@ -176,8 +176,8 @@ export default function Home() {
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
 			</div>
-			<div className='-mt-5'>
-			<Subcription/>
+			<div className='mt-5'>
+			<Subscription/>
 			</div>
 		</div>
 	);

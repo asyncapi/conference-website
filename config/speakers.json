@@ -108,14 +108,16 @@
 			"img": "https://user-images.githubusercontent.com/66913810/262294782-32d6cf14-3e7b-4b68-b8a6-82de97166c7d.jpg"
 		},
 		{
-			"name": "Edgaras Petovradžius",
-			"title": "Senior Platform Engineer at The LEGO Group ",
-			"img": "https://pulsar-summit.org/uploads/images/Edgaras-Petovradzius.jpeg"
-		},		{
+			"name": "Eduardo Maldonado Fonseca Silva ",
+			"title": "Senior DevOps Engineer at The LEGO Group ",
+			"img": "/img/Eduardo.jpeg"
+		},
+		{
 			"name": "Laurent Broudoux",
 			"title": "Co-founder of Microcks",
 			"img": "https://user-images.githubusercontent.com/66913810/279639901-07c64c42-deee-4520-b36f-92a8141b9dcb.jpg"
-		},		{
+		},		
+		{
 			"name": "Sho Kaneko",
 			"title": "Founder of Repoch",
 			"img": "https://pbs.twimg.com/profile_images/1680155599227502594/14ASdMcD_400x400.jpg"
