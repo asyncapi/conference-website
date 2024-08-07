@@ -13,10 +13,13 @@
     "release": "echo \"No release to npm for this project\""
   },
   "dependencies": {
+    "@googleapis/sheets": "^7.0.0",
     "axios": "^1.6.0",
     "d3": "^7.8.5",
     "lucide-react": "^0.350.0",
+    "net": "^1.0.2",
     "next": "^12.0.0",
+    "nodemailer": "^6.9.13",
     "react": "^17.0.2",
     "react-confetti": "^6.1.0",
     "react-countdown": "^2.3.5",

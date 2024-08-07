@@ -16,6 +16,10 @@
 				"ref": "/venue/London"
 			},
 			{
+				"title": "Online",
+				"ref": "/venue/online"
+			},
+			{
 				"title": "Paris, France",
 				"ref": "/venue/Paris"
 			}

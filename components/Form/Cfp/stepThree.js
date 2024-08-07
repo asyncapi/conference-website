@@ -37,7 +37,7 @@ function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState({});
   useEffect(() => {
     setForm({ ...data, ...value});
-  }, [data, setForm, value]); 
+  }, [value]); 
   return (
     <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
@@ -63,7 +63,7 @@ function StepThree({ setStep, setForm, data }) {
           setValue={(val) => setValue({...value, Level: val})}
           multi={false}
         />
-        <div className="float-right">
+        <div className="float-right mt-3">
         <a
             className="mr-10 text-dark-600 cursor-pointer"
             onClick={() => setStep(null, 1)}
