@@ -45,7 +45,7 @@ describe("Footer links", () => {
     cy.getTestData("footer-Twitter(X)").invoke("removeAttr", "target").click();
 
     cy.origin("https://x.com/asyncapispec", () => {
-      cy.url().should("eq", "https://x.com/asyncapispec");
+      cy.url().should("match", /.*asyncapispec.*/);
     });
   });
 

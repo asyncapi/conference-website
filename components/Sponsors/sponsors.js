@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function Sponsors({imgs}) {
   return (
-		<div className='sponsor-bg container text-center' data-test="sponsor-component">
+		<div className='sponsor-bg container text-center' data-test="sponsor-section">
 			<div className='py-[80px] flex flex-col items-center'>
 
 				<div className='max-w-3xl sm:w-full'>

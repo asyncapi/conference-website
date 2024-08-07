@@ -30,7 +30,7 @@ describe("Landing Page Tests", () => {
   });
 
   it("Should contain Sponsor component", () => {
-    cy.getTestData("sponsor-component").should("be.visible");
+    cy.getTestData("sponsor-section").should("be.visible");
   });
 
   it("Subscribe Button is functional", () => {

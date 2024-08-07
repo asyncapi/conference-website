@@ -72,7 +72,7 @@ function Navbar() {
 		<div className='flex justify-center items-center sticky top-0 z-[99] text-white'>
 			<div className='w-[1131px]'>
 				<div className='p-5 flex justify-between h-[75px] w-full items-center'>
-					<div className='flex items-center sm:justify-between sm:w-full'>
+					<div className='flex items-center sm:justify-between sm:w-full' data-test="nav-Home">
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer'>
 								<Image src='/img/logo.png' alt='conference logo' width={120} height={33} />
@@ -113,16 +113,18 @@ function Navbar() {
 													)}
 												</div>
 											) : (
-												<Link href={link.ref}>{link.title}</Link>
+												<div data-test={`nav-${link.title}`}>
+												<Link href={link.ref} >{link.title}</Link>
+												</div>
 											)}
 										</div>
 										{show === link.title && link.subMenu && (
-											<div
+											<div data-test={`nav-${link.title}`}
 												className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
 												onMouseEnter={handleSubMenuEnter}
-												onMouseLeave={handleSubMenuLeave}
-											>
-												{link.subMenu.map((subL) => (
+												onMouseLeave={handleSubMenuLeave}>
+												{link.subMenu.map((subL,i) => (
+													
 													<Link href={subL.ref} key={subL.title}>
 														{link.subMenu.length === 1 ? (
 															<div className='h-[32px] flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
@@ -134,6 +136,7 @@ function Navbar() {
 															</div>
 														)}
 													</Link>
+													
 												))}
 											</div>
 										)}
