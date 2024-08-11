@@ -45,7 +45,7 @@ function Paper() {
   useEffect(() => {
     setHeight(confetiRef.current.clientHeight);
     setWidth(confetiRef.current.clientWidth);
-    console.log(step)
+
   }, []);
   const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
   let view = stepOne
@@ -77,7 +77,7 @@ function Paper() {
   }
 
     return (
-        <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
+        <div className="relative mt-10 w-[70%] sm:mt-0" id="forms" ref={confetiRef}>
             <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
             </h1>
@@ -104,14 +104,14 @@ function Paper() {
             minHeight: "50vh",
           }}
         >
-          <div className="p-6 lg:p-0 lg:py-2 lg:pr-4 mt-12">
+          <div className="p-6 pr-14 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
               console.log(step)
               const index = i + 1 ;
               return (
                 <div
                       key={field.title}
-                      className='h-[100px]'
+                      className='h-[100px] w-full'
                 >
                   <div className="flex justify-between">
                     <div className="md:hidden">
@@ -126,7 +126,7 @@ function Paper() {
             })}
           </div>
         </div>
-        <div className="p-10">
+        <div className="p-10 ml-24 lg:ml-0">
           <p className="text-dark-400">{typeof(step) === 'number' && `Step ${step}/4`}</p>
           {view}
           <div
