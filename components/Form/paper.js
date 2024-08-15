@@ -4,7 +4,7 @@ import StepOne from "./Cfp/stepOne";
 import StepTwo from "./Cfp/stepTwo";
 import StepThree from './Cfp/stepThree';
 import StepFour from './Cfp/stepFour';
-
+import cfpData from "../../config/cfp-data.json"
 const fields = [
   {
     title: "Your Information",
@@ -77,7 +77,8 @@ function Paper() {
   }
 
     return (
-        <div className="relative mt-10 w-[70%] sm:mt-0" id="forms" ref={confetiRef}>
+        <div className="relative mt-10 w-[70%] lg:w-[90%] sm:mt-0" id="forms" ref={confetiRef}>
+          <div className='lg:px-6 mt-5'>
             <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
             </h1>
@@ -88,7 +89,8 @@ function Paper() {
           <p>
                P.S. We do not offer travel scholarships or financial support.
           </p>
-          <p className='sm:mt-4'>Application closes on Oct 19</p>
+          <p className='sm:mt-4'>Application closes on {cfpData.CallEndDate}</p>
+        </div>
         </div>
       <div
         className="mt-5"
@@ -106,7 +108,6 @@ function Paper() {
         >
           <div className="p-6 pr-14 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
-              console.log(step)
               const index = i + 1 ;
               return (
                 <div

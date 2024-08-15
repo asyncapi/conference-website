@@ -63,21 +63,21 @@ function StepThree({ setStep, setForm, data }) {
           setValue={(val) => setValue({...value, Level: val})}
           multi={false}
         />
-        <div className="float-right mt-3">
-        <a
-            className="mr-10 text-dark-600 cursor-pointer"
-            onClick={() => setStep(null, 1)}
+        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
+          <a
+            className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
+            onClick={() => setStep(null, 2)}
           >
             Back
-                  </a>
-                  <Button
-                    type="submit"
-                    disabled={!data.Format || !data.Level && true}
-                    className="p-3 rounded-md mt-3 w-36">
-                      Next
-                  </Button>
+          </a>
+          <Button
+            type="submit"
+            disabled={!data.Description || !data.Title && true}
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5">
+            Next
+            </Button>
         </div>
-      </div>
+        </div>
     </form>
   );
 }
