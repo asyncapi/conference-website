@@ -45,7 +45,7 @@ export default async function handler(req, res) {
         const info = await transporter.sendMail({
             to: req.body.Email, // list of receivers
             subject: "Confirmation for registeration of your talk with AsyncAPI!", // Subject line
-            html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p><br> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
+            html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
         });
 
 
