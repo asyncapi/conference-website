@@ -2,6 +2,7 @@
 
 import { auth, sheets } from '@googleapis/sheets'
 import nodemailer from "nodemailer"
+import path from "path"
 export default async function handler(req, res) {
 
     const authClient = new auth.GoogleAuth({
@@ -43,9 +44,8 @@ export default async function handler(req, res) {
 
         const info = await transporter.sendMail({
             to: req.body.Email, // list of receivers
-            subject: "Hello ✔", // Subject line
-            text: "Hello world?", // plain text body
-            html: "<b>Hello world?</b>", // html body
+            subject: "Confirmation for registeration of your talk with AsyncAPI!", // Subject line
+            html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p><br> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
         });
 
 

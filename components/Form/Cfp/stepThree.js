@@ -5,10 +5,6 @@ import Button from "../../Buttons/button";
 
 const options1 = [
   {
-    value: "Lightning talk",
-    label: "Lightning talk(5mins)",
-  },
-  {
     value: "Session",
     label: "Session(20 - 25mins)",
   }
