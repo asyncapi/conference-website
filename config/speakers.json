@@ -56,37 +56,48 @@
 		"city": "London",
 		"agenda": [
 			{
-				"time": "3:30 PM BST - 3:50 PM BST",
+				"time": "1:50 PM BST - 2:15 PM BST",
+				"session": "The State of AsyncAPI Initiative",
+				"speaker": 7,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "2:15 PM BST - 2:40 PM BST",
 				"session": "Topic Characteristics: What Do You Need To Know In Advance",
 				"speaker": 1,
 				"type": "Technical Speaker"
 			},
 			{
-				"time": "3:50 PM BST - 4:15 PM BST",
+				"time": "2:40 PM BST - 3:05 PM BST",
 				"session": "Harmonizing Asynchronous Systems: NATS, CloudEvents and AsyncAPI",
 				"speaker": 3,
 				"type": "Technical Speaker"
 			},
 			{
-				"time": "4:15 PM BST - 4:40 PM BST",
+				"time": "3:05 PM BST - 3:30 PM BST",
 				"session": "Better AsyncAPI Governance",
 				"speaker": 2,
 				"type": "Technical Speaker"
 			},
 			{
-				"time": "4:40 PM BST - 5:05 PM BST",
+				"time": "3:30 PM BST - 3:50 PM BST",
+				"session": "",
+				"type": "Break/Networking"
+			},
+			{
+				"time": "3:50 PM BST - 4:15 PM BST",
 				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
 				"speaker": 4,
 				"type": "Technical Speaker"
 			},
 			{
-				"time": "5:05 PM BST - 5:30 PM BST",
+				"time": "4:15 PM BST - 4:40 PM BST",
 				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
 				"speaker": 5,
 				"type": "Technical Speaker"
 			},
 			{
-				"time": "5:30 PM BST - 5:55 PM BST",
+				"time": "4:40 PM BST - 5:05 PM BST",
 				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
 				"speaker": 6,
 				"type": "Technical Speaker"
@@ -121,6 +132,11 @@
 			"name": "Sho Kaneko",
 			"title": "Founder of Repoch",
 			"img": "https://pbs.twimg.com/profile_images/1680155599227502594/14ASdMcD_400x400.jpg"
+		},
+		{
+			"name": "Thulisile Sibanda",
+			"title": "Community Manager at AsyncAPI Initiative",
+			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2964/3f41ea5b-34ea-496e-a0f0-c17296d1d032.jpg"
 		}]
 	},
 	{
