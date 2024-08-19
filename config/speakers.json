@@ -98,6 +98,12 @@
 			},
 			{
 				"time": "4:40 PM BST - 5:05 PM BST",
+				"session": "Deploying WebSockets with AsyncAPI and Architecture as Code",
+				"speaker": [8,9],
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "5:05 PM BST - 5:30 PM BST",
 				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
 				"speaker": 6,
 				"type": "Technical Speaker"
@@ -137,6 +143,16 @@
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
 			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2964/3f41ea5b-34ea-496e-a0f0-c17296d1d032.jpg"
+		},
+		{
+			"name": "James Gough",
+			"title": "Distinguished Engineer at Morgan Stanley",
+			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2201/conversions/6d4f5dcd-52e6-41f8-8862-7ca096bb6b47-square.jpg"
+		},
+		{
+			"name": "Will Osbourne",
+			"title": "Technology Associate at Morgan Stanley",
+			"img": ""
 		}]
 	},
 	{
