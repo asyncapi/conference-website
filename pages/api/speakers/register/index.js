@@ -2,7 +2,6 @@
 
 import { auth, sheets } from '@googleapis/sheets'
 import nodemailer from "nodemailer"
-import path from "path"
 export default async function handler(req, res) {
 
     const authClient = new auth.GoogleAuth({
