@@ -35,7 +35,7 @@ function Header() {
 								<Link
 									href='#tickets'
 								>
-									<Button className='w-[250px]'>Register now</Button>
+									<Button className='w-[250px]'>Register Now</Button>
 								</Link>
 							</div>
 						</div>
