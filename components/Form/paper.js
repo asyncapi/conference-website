@@ -112,10 +112,10 @@ function Paper() {
               return (
                 <div
                       key={field.title}
-                      className='h-[100px] w-full'
+                      className=' w-full'
                 >
                   <div className="flex justify-between">
-                    <div className="md:hidden">
+                    <div className="sm:hidden my-4">
                       <h3 className={`font-bold text-lg ${(index <= step && "text-[#E50E99]") || ("text-white")}`}>
                         {field.title}
                       </h3>
