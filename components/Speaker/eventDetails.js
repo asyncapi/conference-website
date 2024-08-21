@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function EventDetails(props) {
     return (
       <div className="grid grid-cols-2 lg:grid-cols-1 gap-9 mb-14 lg:mb-10">
-        <div className="flex gap-20">
+        {/* <div className="flex gap-20">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image src="/img/Calender.png" alt="Calendar Icon" width={20} height={20} layout="fixed"  className="w-6 h-6" />
@@ -19,7 +19,7 @@ export default function EventDetails(props) {
             <div className="text-lg lg:text-base">{props.EventEndDate}</div>
           </div>
           
-        </div>
+        </div> */}
         <div className="flex gap-20">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">

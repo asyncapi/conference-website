@@ -6,5 +6,8 @@
     "Edition": "Online Edition",
     "sponsors":[
         "/img/apidays.png"
-    ]
+    ],
+    "ended": false,
+    "agenda":null
+
 }

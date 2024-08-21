@@ -35,12 +35,16 @@ export async function getStaticPaths() {
 function Venue({ city }) {
 	return (
 		<div>
-			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
+			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
+						{city.name=='Online'?<Heading className='text-white'>
+							{city.name} {city.country}
+						</Heading>:
 						<Heading className='text-white'>
-							{city.name}, {city.country}
-						</Heading>
+						{city.name}, {city.country}
+					</Heading>}
+						
 						<Paragraph className='mt-[24px]' textColor='text-white'>{city.description}</Paragraph>
 
 						<Heading typeStyle='lg' className='text-white mt-[24px] hover:underline'>
@@ -55,7 +59,7 @@ function Venue({ city }) {
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Register for free" : "Register now"}</Button>
 						</a>}
-						{city.cfp && <a href="/venue/online"target='_blank' rel='noreferrer'>
+						{<a href={city.cfp?city.cfp:"/venue/online/register"}target={city.name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
 						</a>}
 						</div>}
