@@ -17,7 +17,7 @@
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 18-19, 2024",
+		"date": "September 18, 2024",
 		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",

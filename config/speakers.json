@@ -54,8 +54,106 @@
 	{
 		"location": "London, United Kingdom",
 		"city": "London",
-		"agenda": null,
-		"lists": []
+		"agenda": [
+			{
+				"time": "1:50 PM BST - 2:15 PM BST",
+				"session": "The State of AsyncAPI Initiative",
+				"speaker": 7,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "2:15 PM BST - 2:40 PM BST",
+				"session": "Topic Characteristics: What Do You Need To Know In Advance",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "2:40 PM BST - 3:05 PM BST",
+				"session": "Harmonizing Asynchronous Systems: NATS, CloudEvents and AsyncAPI",
+				"speaker": 3,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "3:05 PM BST - 3:30 PM BST",
+				"session": "Better AsyncAPI Governance",
+				"speaker": 2,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "3:30 PM BST - 3:50 PM BST",
+				"session": "",
+				"type": "Break/Networking"
+			},
+			{
+				"time": "3:50 PM BST - 4:15 PM BST",
+				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
+				"speaker": 4,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "4:15 PM BST - 4:40 PM BST",
+				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+				"speaker": 5,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "4:40 PM BST - 5:05 PM BST",
+				"session": "Deploying WebSockets with AsyncAPI and Architecture as Code",
+				"speaker": [8,9],
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "5:05 PM BST - 5:30 PM BST",
+				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
+				"speaker": 6,
+				"type": "Technical Speaker"
+			}
+		],
+		"lists": [			{
+			"name": "Dale Lane",
+			"title": "Chief Architect at IBM",
+			"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+		},
+		{
+			"name": "Lorna Mitchell",
+			"title": "VP of Developer Experience at Redocly",
+			"img": "https://lornajane.net/wp-content/uploads/2011/08/IMG_9410-smaller.jpg"
+		},
+		{
+			"name": "Artur Ciocanu",
+			"title": "Senior Computer Scientist at Adobe",
+			"img": "https://user-images.githubusercontent.com/66913810/262294782-32d6cf14-3e7b-4b68-b8a6-82de97166c7d.jpg"
+		},
+		{
+			"name": "Eduardo Maldonado Fonseca Silva ",
+			"title": "Senior DevOps Engineer at The LEGO Group ",
+			"img": "/img/Eduardo.jpeg"
+		},
+		{
+			"name": "Laurent Broudoux",
+			"title": "Co-founder of Microcks",
+			"img": "https://user-images.githubusercontent.com/66913810/279639901-07c64c42-deee-4520-b36f-92a8141b9dcb.jpg"
+		},		
+		{
+			"name": "Sho Kaneko",
+			"title": "Founder of Repoch",
+			"img": "https://pbs.twimg.com/profile_images/1680155599227502594/14ASdMcD_400x400.jpg"
+		},
+		{
+			"name": "Thulisile Sibanda",
+			"title": "Community Manager at AsyncAPI Initiative",
+			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2964/3f41ea5b-34ea-496e-a0f0-c17296d1d032.jpg"
+		},
+		{
+			"name": "James Gough",
+			"title": "Distinguished Engineer at Morgan Stanley",
+			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2201/conversions/6d4f5dcd-52e6-41f8-8862-7ca096bb6b47-square.jpg"
+		},
+		{
+			"name": "Will Osbourne",
+			"title": "Technology Associate at Morgan Stanley",
+			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2990/conversions/dc3950b7-fa4a-4d89-b930-8e62bc883b6f-square.jpg"
+		}]
 	},
 	{
 		"city": "Paris",
