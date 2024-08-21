@@ -77,7 +77,8 @@ function Paper() {
   }
 
     return (
-        <div className="relative mt-10 w-[70%] lg:w-[90%] sm:mt-0" id="forms" ref={confetiRef}>
+        <div className="py-28 flex flex-col justify-center items-center" id="forms" ref={confetiRef}>
+          <div>
           <div className='lg:px-6 mt-5'>
             <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
@@ -139,6 +140,7 @@ function Paper() {
           </div>
         </div>
       </div>
+          </div>
       </div>
   )
 }
