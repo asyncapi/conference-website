@@ -12,7 +12,7 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": false
+		"ended": true
 	},
 	{
 		"name": "London",
