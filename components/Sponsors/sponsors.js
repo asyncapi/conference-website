@@ -27,7 +27,14 @@ function Sponsors({imgs}) {
 				</div>
 				<div className=' flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold'>
 				<Heading typeStyle='heading-md' className='text-white mb-12 sm:text-2xl'>Financial Sponsor</Heading>
-					<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />
+				<div className='flex flex-col space-y-6'>
+  					<div className="w-[250px] h-[50px]">
+    					<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />	
+  					</div>
+  					<div className="w-[250px] h-[50px]">
+   						<Image src="/img/postman.png" alt='financial sponsor' width={250} height={50} />	
+  					</div>
+			</div>	
 				</div>
 			</div>
 		</div>
