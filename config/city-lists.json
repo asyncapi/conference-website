@@ -11,7 +11,7 @@
 			"/img/apidays.png"
 		],
 		"ticket": false,
-		"isFree": true,
+		"isFree": false,
 		"ended": true
 	},
 	{
