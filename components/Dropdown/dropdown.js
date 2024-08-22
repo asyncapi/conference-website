@@ -7,15 +7,15 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
+					className='flex text-white justify-center items-center p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
-					onClick={() => setShow(true)}
+					onClick={() => setShow(status => !status)}
 				>
 					<div>{active}</div>
 					<svg
-						className='-mr-1 h-5 w-5 text-gray-400'
+						className='-mr-1 h-5 w-5 text-gray-600'
 						viewBox='0 0 20 20'
 						fill='currentColor'
 						aria-hidden='true'
