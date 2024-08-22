@@ -32,7 +32,7 @@ const faqs = [
     }
 ]
 
-function Guidelines({talkDeadLine,virtual}) {
+function Guidelines({talkDeadLine,virtual,name,cfp}) {
     const [show, setShow] = useState(null);
   return (
       <div className='z-[9]'>
@@ -115,7 +115,9 @@ function Guidelines({talkDeadLine,virtual}) {
           })}
       </div>
      <div className='text-center mt-20'>
-     <Button className="px-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
+     {cfp && <a href={name === 'online'? "/venue/online/register" :cfp}target={name=='Online'?"":'_blank'} rel='noreferrer'>
+							<Button className="x-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
+		</a>}
      </div>
       </div>
     </div>

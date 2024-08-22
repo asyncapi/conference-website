@@ -72,7 +72,7 @@ function Venue({ city }) {
 				className='border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
 				{city.cfp ? <div className='w-[1090px] lg:w-full'>
-				<Guidelines talkDeadLine={(city.name=='Online' && CFPdata.CallEndDate) || city.date} virtual={city.name=='Online'}/>
+				<Guidelines talkDeadLine={(city.name=='Online' && CFPdata.CallEndDate) || city.date} virtual={city.name=='Online'} name={city.name} cfp={city.cfp}/>
 				</div> : <div className='w-[1130px] lg:w-full'>
 					<Agenda city={city} />
 				</div>}
