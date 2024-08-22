@@ -7,8 +7,9 @@ function Agenda({ city }) {
   return (
 	  <div className=''>
 		  <div className='flex flex-col justify-center items-center'>
+		  
 			  <Heading className='text-[30px] text-white'>
-				Agenda
+				Agenda 
 			</Heading>
 			  {!city.agenda && <div className='w-[720px] lg:w-full mt-[140px] text-center'>
 				<Heading typeStyle='lg' className='text-white text-[30px]'>
@@ -16,6 +17,7 @@ function Agenda({ city }) {
 				</Heading>
           </div>}
 		  </div>
+		  
 		  {city.agenda && <div className='mt-[40px]'>
 			  <Heading
 				  typeStyle='heading-md'
@@ -23,6 +25,7 @@ function Agenda({ city }) {
 				  level='h3'>
 				  {city.date}
 			  </Heading>
+			  
 			  <div className='mt-[40px]'>
 				  {city.agenda.map((talk) => {
 					  return <div key={talk.session} className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}>

@@ -17,7 +17,7 @@
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 18-19, 2024",
+		"date": "September 18, 2024",
 		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
@@ -25,10 +25,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": false,
+		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/cart?coupon=GUESTOFASYNCAPILONDON2024",
 		"isFree": true,
-		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+		"ended": false
 	},
 	{
 		"name": "Paris",
