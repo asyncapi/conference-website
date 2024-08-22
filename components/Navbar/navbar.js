@@ -15,7 +15,7 @@ function Navbar() {
 	const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
 	const menuRef = useRef(null);
 	const svg = useRef(null);
-	let closeTimeout = useRef(null);  
+	let closeTimeout = useRef(null);
 
 	const handleClosing = useCallback((event) => {
 		if (show && !event.target.closest('.subMenu')) {
@@ -55,7 +55,7 @@ function Navbar() {
 			if (!isSubMenuHovered) {
 				setShow(null);
 			}
-		}, 300);  
+		}, 300);
 	};
 
 	const handleSubMenuEnter = () => {
@@ -98,7 +98,7 @@ function Navbar() {
 									<div
 										onMouseEnter={() => handleMouseEnter(link.title)}
 										onMouseLeave={handleMouseLeave}
-										className='ml-16 text-[14px] group cursor-pointer relative flex flex-col'
+										className='ml-16 text-[14px] hover:text-sky-300 group cursor-pointer relative flex flex-col transition-all duration-300'
 									>
 										<div>
 											{link.subMenu ? (
@@ -125,11 +125,11 @@ function Navbar() {
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
 														{link.subMenu.length === 1 ? (
-															<div className='h-[32px] flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
+															<div className='h-[32px] text-white flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 hover:text-sky-50 transition-all'>
 																{subL.title}
 															</div>
 														) : (
-															<div className='h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
+															<div className='h-[32px] text-white text-[16px] hover:scale-95 hover:translate-x-1 hover:text-sky-50 transition-all'>
 																{subL.title}
 															</div>
 														)}
