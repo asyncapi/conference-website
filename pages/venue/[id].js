@@ -8,7 +8,7 @@ import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
-
+import CFPdata from "../../config/cfp-data.json"
 export async function getStaticProps({ params }) {
 	let res = {};
 	const data = cities.filter((p) => p.name === params.id);
@@ -39,7 +39,7 @@ function Venue({ city }) {
 			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
-						{city.name=='Online'?<Heading className='text-gradient'>
+						{city.name=='Online'?<Heading className='text-white'>
 							{city.name} {city.country}
 						</Heading>:
 						<Heading className='text-white'>
@@ -72,7 +72,7 @@ function Venue({ city }) {
 				className='border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
 				{city.cfp ? <div className='w-[1090px] lg:w-full'>
-				<Guidelines />
+				<Guidelines talkDeadLine={(city.name=='Online' && CFPdata.CallEndDate) || city.date} virtual={city.name=='Online'}/>
 				</div> : <div className='w-[1130px] lg:w-full'>
 					<Agenda city={city} />
 				</div>}
