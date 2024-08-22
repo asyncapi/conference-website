@@ -63,20 +63,20 @@
 			},
 			{
 				"time": "2:15 PM BST - 2:40 PM BST",
-				"session": "Topic Characteristics: What Do You Need To Know In Advance",
-				"speaker": 1,
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "2:40 PM BST - 3:05 PM BST",
 				"session": "Harmonizing Asynchronous Systems: NATS, CloudEvents and AsyncAPI",
 				"speaker": 3,
 				"type": "Technical Speaker"
 			},
 			{
+				"time": "2:40 PM BST - 3:05 PM BST",
+				"session": "Topic Characteristics: What Do You Need To Know In Advance",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			},
+			{
 				"time": "3:05 PM BST - 3:30 PM BST",
-				"session": "Better AsyncAPI Governance",
-				"speaker": 2,
+				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
+				"speaker": 4,
 				"type": "Technical Speaker"
 			},
 			{
@@ -86,8 +86,8 @@
 			},
 			{
 				"time": "3:50 PM BST - 4:15 PM BST",
-				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
-				"speaker": 4,
+				"session": "Better AsyncAPI Governance",
+				"speaker": 2,
 				"type": "Technical Speaker"
 			},
 			{
@@ -104,6 +104,12 @@
 			},
 			{
 				"time": "5:05 PM BST - 5:30 PM BST",
+				"session": "Lessons from Sync API Design: What Makes A Good AsyncAPI?",
+				"speaker": 10,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "5:30 PM BST - 5:55 PM BST",
 				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
 				"speaker": 6,
 				"type": "Technical Speaker"
@@ -153,6 +159,11 @@
 			"name": "Will Osbourne",
 			"title": "Technology Associate at Morgan Stanley",
 			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2990/conversions/dc3950b7-fa4a-4d89-b930-8e62bc883b6f-square.jpg"
+		},
+		{
+			"name": "Swen-Helge Huber",
+			"title": "Senior Director, Office of the CTO at Solace",
+			"img": "https://user-images.githubusercontent.com/66913810/262295277-4cab51aa-e336-4f13-9e63-6eea20ad411a.png"
 		}]
 	},
 	{
