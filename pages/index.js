@@ -16,6 +16,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
+import Gallery from '../components/Gallery/gallery';
 
 export default function Home() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -175,6 +176,9 @@ export default function Home() {
 			</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
+			</div>
+			<div>
+				<Gallery/>
 			</div>
 			<div className='mt-5'>
 			<Subcription/>

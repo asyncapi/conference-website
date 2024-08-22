@@ -208,3 +208,46 @@ mix-blend-mode: lighten;
 .hoverEffect:hover {
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.pics {
+  overflow: hidden;
+  position: relative;
+}
+
+.pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pics:hover img {
+  transform: scale(1.1);
+}
+
+.pics.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.text-white {
+  color: white;
+}
+
+@media (max-width: 768px) {
+.gallery {
+  padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+}
+
