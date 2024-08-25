@@ -222,6 +222,10 @@ backdrop-filter: blur(10px); */
   /* Add a smooth transition effect */
 }
 
+.card-opacity:hover{
+  opacity: 100;
+}
+
 .hoverEffect:hover {
   transform: scale(1.1);
   /* Scale the image by 10% on hover */
