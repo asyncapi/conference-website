@@ -5,7 +5,8 @@ import nodemailer from "nodemailer"
 export default async function handler(req, res) {
 
     const authClient = new auth.GoogleAuth({
-        keyFile: './credentials.json',
+        // keyFile: './credentials.json', // uncomment this line to run locally
+        credentials: JSON.parse(process.env.GOOGLE_SHEET_SERVICE_ACCOUNT), // comment this line to run locally
         scopes: [
             'https://www.googleapis.com/auth/spreadsheets'
         ],

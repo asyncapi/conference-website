@@ -1,4 +1,4 @@
-# Steps to Initialize the speaker registration API
+# Steps to Initialize the speaker registration API (Locally)
 
 1. In the google cloud console
     
