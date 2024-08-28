@@ -37,12 +37,12 @@ export default async function handler(req, res) {
         port: 465,
         secure: true, 
         auth: {
-            user: process.env.SENDER_MAIL,
-            pass: process.env.APP_PASSWORD,
+            user: process.env.ASYNCAPI_EMAIL,
+            pass: process.env.GOOOGLE_APP_PASSWORD,
         },
         });
 
-        const info = await transporter.sendMail({
+        const info = transporter.sendMail({
             to: req.body.Email, // list of receivers
             subject: "Confirmation for registeration of your talk with AsyncAPI!", // Subject line
             html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
