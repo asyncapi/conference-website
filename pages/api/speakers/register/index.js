@@ -1,8 +1,7 @@
-"use server"
 
 import { auth, sheets } from '@googleapis/sheets'
 import nodemailer from "nodemailer"
-export default async function handler(req, res) {
+export default async function POST(req, res) {
 
     const authClient = new auth.GoogleAuth({
         // keyFile: './credentials.json', // uncomment this line to run locally
