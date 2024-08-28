@@ -3,6 +3,7 @@ import { auth, sheets } from '@googleapis/sheets'
 import nodemailer from "nodemailer"
 export default async function POST(req, res) {
 
+    try{
     const authClient = new auth.GoogleAuth({
         // keyFile: './credentials.json', // uncomment this line to run locally
         credentials: JSON.parse(process.env.GOOGLE_SHEET_SERVICE_ACCOUNT), // comment this line to run locally
@@ -49,4 +50,8 @@ export default async function POST(req, res) {
 
 
     res.json(a);
+    }
+    catch(error){
+        res.status(500).json({message: 'Internal Server Error', error:error})
+    }
 }
