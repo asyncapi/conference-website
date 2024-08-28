@@ -15,11 +15,11 @@ export function isEventEnded(date){
 function Venue({ className, city }) {
 
 	const eventEnded = isEventEnded(city.date);
-	const textColor = eventEnded ? "text-gray-300": "text-white";
+	const textColor = eventEnded ? "text-white": "text-white";
 
 	return (
 		<Link href={`/venue/${city.name}`}>
-			<div style={{'--image-url': `url(${city.img})`}}
+			<div style={{background: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0, .3)), url(${city.img})`, backgroundSize: "cover"}}
 				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
 				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex justify-between items-center'>
@@ -33,8 +33,10 @@ function Venue({ className, city }) {
 						<div>
 							<span className='text-lg font-bold'>{city.country}, {city.name}</span>
 						</div>
-						<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center mt-2'>{city.date}</div>
-						<span className='text-xs text-white'> - {eventEnded ? "ENDED" : ""}</span>
+						<div className='flex align-end flex-row justify-between pt-2'>
+							<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center'>{city.date}</div>
+							<span className=' text-white flex align-middle pt-2' style={{ fontSize: ".9em" }}>{eventEnded ? "ENDED" : ""}</span>
+						</div>
 					</div>
 				</div>
 			</div>
