@@ -13,7 +13,7 @@ function StepFour({ setStep, setForm, data }) {
     setSubmitting(true);
     axios
       .post(
-        "/api/speakers/register",
+        `${process.env.NEXT_PUBLIC_APP_API_ENDPOINT}/api/speakers/register`,
         data
       )
       .then((res) => {
