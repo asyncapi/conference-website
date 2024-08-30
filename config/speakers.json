@@ -171,5 +171,12 @@
 		"location": "Paris, France",
 		"lists": [],
 		"agenda": null
+	},
+
+	{
+		"city": "Online",
+		"location": "Online Edition",
+		"lists": [],
+		"agenda": null
 	}
 ]

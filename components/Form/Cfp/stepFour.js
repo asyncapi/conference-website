@@ -13,7 +13,7 @@ function StepFour({ setStep, setForm, data }) {
     setSubmitting(true);
     axios
       .post(
-        "https://sheet.best/api/sheets/91aebdc6-66cb-46c2-9c7b-4cdfc7541b56",
+        `/api/speakers/register`,
         data
       )
       .then((res) => {
@@ -26,7 +26,7 @@ function StepFour({ setStep, setForm, data }) {
       .catch((err) => {
         setSubmitting(false);
         toast.error("Failed to submit feedback. Try again", {
-            duration: '6000'
+            duration: '5600'
           });
       });
   };
@@ -52,20 +52,19 @@ function StepFour({ setStep, setForm, data }) {
         <div className="mt-6 text-dark-600 text-md">
           By clicking submit, this means you agree to follow the <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">AsyncAPI Initiative Code of Conduct</a>
         </div>
-        <div className="float-right">
+        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
-            className="mr-10 text-dark-600 cursor-pointer"
+            className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
             onClick={() => !disabled && setStep(null, 3)}
           >
             Back
           </a>
           <Button
             type="submit"
-            className="p-3 rounded-md mt-3 w-36"
             disabled={submitting || disabled}
-          >
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5">
             {submitting ? <ActivityLoader /> : "Submit"}
-          </Button>
+            </Button>
         </div>
       </div>
     </form>
