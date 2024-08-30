@@ -11,8 +11,8 @@
 			"/img/apidays.png"
 		],
 		"ticket": false,
-		"isFree": false,
-		"ended": true
+		"isFree": true,
+		"ended": false
 	},
 	{
 		"name": "London",
