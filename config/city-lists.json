@@ -11,8 +11,8 @@
 			"/img/apidays.png"
 		],
 		"ticket": false,
-		"isFree": true,
-		"ended": false
+		"isFree": false,
+		"ended": true
 	},
 	{
 		"name": "London",
@@ -44,24 +44,5 @@
 		"isFree": true,
 		"ended": false,
 		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
-	},
-
-	{
-
-		"name": "Online",
-		"country": " Edition",
-		"date": "30th October 2024",
-		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-		"img": "/img/testMic.png",
-		"address": "AsyncAPI Youtube Channel",
-		"map": "https://www.youtube.com/@AsyncAPI",
-		"sponsors": [
-			"/img/apidays.png"
-		],
-		"ticket": false,
-		"isFree": true,
-		"ended": false,
-		"cfp": "/venue/online/register"
-
 	}
 ]

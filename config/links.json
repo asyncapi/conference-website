@@ -16,10 +16,6 @@
 				"ref": "/venue/London"
 			},
 			{
-				"title": "Online",
-				"ref": "/venue/Online"
-			},
-			{
 				"title": "Paris, France",
 				"ref": "/venue/Paris"
 			}
@@ -28,6 +24,10 @@
 	{
 		"title": "Speakers",
 		"ref": "/#speakers"
+	},
+	{
+		"title": "Tickets",
+		"ref": "/#tickets"
 	},
 	{
 		"title": "Sponsors",
@@ -52,6 +52,3 @@
 }
 
 ]
-
-
-    
