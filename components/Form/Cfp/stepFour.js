@@ -24,7 +24,6 @@ function StepFour({ setStep, setForm, data }) {
         }
       })
       .catch((err) => {
-        console.log(err);
         setSubmitting(false);
         toast.error("Failed to submit feedback. Try again", {
             duration: '6000'
