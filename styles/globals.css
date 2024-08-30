@@ -206,10 +206,6 @@ mix-blend-mode: lighten;
   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 
-.card-opacity:hover{
-  opacity: 100;
-}
-
 .hoverEffect:hover {
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
