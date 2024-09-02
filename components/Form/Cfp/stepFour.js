@@ -12,7 +12,6 @@ function StepFour({ setStep, setForm, data }) {
   const onSubmit = (e) => {
     e.preventDefault();
     setSubmitting(true);
-    conbs
     axios
       .post(
         `/api/speakers/register`,
