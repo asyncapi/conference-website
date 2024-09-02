@@ -7,6 +7,9 @@
   command = "npm run build"
   publish = ".next"
 
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   NODE_VERSION = "16.13.2"
   NPM_VERSION = "8.1.2"
