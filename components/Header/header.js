@@ -33,9 +33,9 @@ function Header() {
 							</div>
 							<div className='mt-[54px] relative flex items-center justify-center'>
 								<Link
-									href='#tickets'
+									href='#register'
 								>
-									<Button className='w-[250px]'>Register Now</Button>
+									<Button className='w-[250px]'>Register now</Button>
 								</Link>
 							</div>
 						</div>
