@@ -4,7 +4,7 @@ import StepOne from "./Cfp/stepOne";
 import StepTwo from "./Cfp/stepTwo";
 import StepThree from './Cfp/stepThree';
 import StepFour from './Cfp/stepFour';
-
+import cfpData from "../../config/cfp-data.json"
 const fields = [
   {
     title: "Your Information",
@@ -45,10 +45,11 @@ function Paper() {
   useEffect(() => {
     setHeight(confetiRef.current.clientHeight);
     setWidth(confetiRef.current.clientWidth);
+
   }, []);
   const stepOne =  <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />
   let view = stepOne
-  if (step === 4) {
+  if (step === 1) {
     view = stepOne
   }
   if (step === 2) {
@@ -76,7 +77,9 @@ function Paper() {
   }
 
     return (
-        <div className="relative mt-10 sm:mt-0" id="forms" ref={confetiRef}>
+        <div className="py-28 flex flex-col justify-center items-center" id="forms" ref={confetiRef}>
+          <div>
+          <div className='lg:px-6 mt-5'>
             <h1 className="text-white font-bold text-5xl lg:text-3xl">
         Submit your talk!
             </h1>
@@ -87,7 +90,8 @@ function Paper() {
           <p>
                P.S. We do not offer travel scholarships or financial support.
           </p>
-          <p className='sm:mt-4'>Application closes on Oct 19</p>
+          <p className='sm:mt-4'>Application closes on {cfpData.CallEndDate}</p>
+        </div>
         </div>
       <div
         className="mt-5"
@@ -103,17 +107,17 @@ function Paper() {
             minHeight: "50vh",
           }}
         >
-          <div className="p-6 lg:p-0 lg:py-2 lg:pr-4 mt-12">
+          <div className="p-6 pr-14 lg:p-0 lg:py-2 lg:pr-4 mt-12">
             {fields.map((field, i) => {
               const index = i + 1 ;
               return (
                 <div
                       key={field.title}
-                      className='h-[100px]'
+                      className=' w-full'
                 >
                   <div className="flex justify-between">
-                    <div className="md:hidden">
-                      <h3 className={`text-white font-bold text-lg ${index <= step && "text-[#E50E99]"}`}>
+                    <div className="sm:hidden my-4">
+                      <h3 className={`font-bold text-lg ${(index <= step && "text-[#E50E99]") || ("text-white")}`}>
                         {field.title}
                       </h3>
                       <p className="text-dark-600">{field.description}</p>
@@ -124,7 +128,7 @@ function Paper() {
             })}
           </div>
         </div>
-        <div className="p-10 p-6">
+        <div className="p-10 ml-24 lg:ml-0">
           <p className="text-dark-400">{typeof(step) === 'number' && `Step ${step}/4`}</p>
           {view}
           <div
@@ -136,6 +140,7 @@ function Paper() {
           </div>
         </div>
       </div>
+          </div>
       </div>
   )
 }
