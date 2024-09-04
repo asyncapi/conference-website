@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         secure: true, 
         auth: {
             user: process.env.ASYNCAPI_EMAIL,
-            pass: process.env.GOOOGLE_APP_PASSWORD,
+            pass: process.env.GOOGLE_APP_PASSWORD,
         },
         });
 
