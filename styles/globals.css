@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 :root {
   --bg-color: white;
@@ -77,6 +78,7 @@ body {
 .gradient-bg:hover {
   background: linear-gradient(225deg, #2DCCFD 9.35%, #e74694 88.41%) !important;
   transform: scale(1.05);
+  
 }
 
 .navbg:hover,

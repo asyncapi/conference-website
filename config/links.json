@@ -8,6 +8,10 @@
 		"ref": "",
 		"subMenu": [
 			{
+				"title": "Online",
+				"ref": "/venue/Online"
+			},
+			{
 				"title": "Helsinki, Finland",
 				"ref": "/venue/Helsinki"
 			},
@@ -52,6 +56,3 @@
 }
 
 ]
-
-
-    
