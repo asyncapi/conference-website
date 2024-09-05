@@ -4,19 +4,15 @@ import Countdown from 'react-countdown';
 const dates = [
 	{
 		name: 'London, UK',
-		date: 'September 20, 2023',
+		date: 'September 18, 2024',
 	},
 	{
-		name: 'Madrid, Spain',
-		date: 'October 19, 2023',
-	},
-	{
-		name: 'Bangalore, India',
-		date: 'November 30, 2023',
+		name: 'Online ,Edition',
+		date: 'October 30, 2024',
 	},
 	{
 		name: 'Paris, France',
-		date: 'December 6, 2023',
+		date: 'December 3, 2024',
 	},
 ];
 
@@ -32,6 +28,7 @@ function Countdowns() {
 			dateRef.current.classList.remove('hidden');
 			dateRef.current.classList.add('home-title');
 			setSelectedIndex((prevIndex) => (prevIndex + 1) % dates.length);
+			
 			setTimeout(() => {
 				if(locationRef?.current) {
 					locationRef.current.classList.remove('home-title');
@@ -74,23 +71,23 @@ function Countdowns() {
 					ref={dateRef}
 				>
 					<div>
-						<span className='glitch text-white text-[30px] sm:text-[18px]'>
-							{days}:
+						<span className=' text-white text-[30px] sm:text-[18px] flex flex-col justify-center items-center '>
+							{days} <span className='text-sm'>DAYS</span>
 						</span>
 					</div>
 					<div>
-						<span className='glitch text-white text-[30px] sm:text-[18px]'>
-							{hours}:
+						<span className='glitch text-white text-[30px] sm:text-[18px] flex flex-col justify-center items-center'>
+							{hours} <span className='text-sm'>HOURS</span>
 						</span>
 					</div>
 					<div>
-						<span className='glitch text-white text-[30px] sm:text-[18px]'>
-							{minutes}:
+						<span className='glitch text-white text-[30px] sm:text-[18px] flex flex-col justify-center items-center'>
+							{minutes} <span className='text-sm'>MIN</span>
 						</span>
 					</div>
 					<div>
-						<span className='glitch text-white text-[30px] sm:text-[18px]'>
-							{seconds}
+						<span className='glitch text-white text-[30px] sm:text-[18px] flex flex-col justify-center items-center'>
+							{seconds} <span className='text-sm'>SEC</span>
 						</span>
 					</div>
 				</div>
@@ -98,7 +95,7 @@ function Countdowns() {
 		}
 	};
 	return (
-		<div className='mt-[400px] sm:mt-[150px] flex items-center justify-between'>
+		<div className=' flex flex-col gap-y-5 px-10 py-5  items-center justify-between '>
 			<div className='h-[40px]'>
 				<div className='home-title' ref={locationRef}>
 					<span className='text-[25px] sm:text-[18px] text-white font-bold'>

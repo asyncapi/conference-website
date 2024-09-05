@@ -8,6 +8,7 @@ import Venue from '../Venue/venue';
 import Announcement from '../announcement';
 import Link from 'next/link';
 
+
 function Header() {
 	return (
 		<div className='relative'>
@@ -25,6 +26,7 @@ function Header() {
 									AsyncAPI Conf On Tour 2024
 								</Heading>
 							</div>
+							
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]' textColor='text-gray-200'>
 								Join us for the AsyncAPI Conference on Tour,
