@@ -1,5 +1,22 @@
 [
 	{
+		"name": "Online",
+		"country": " Edition",
+		"date": "30th October 2024",
+		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+		"img": "/img/testMic.png",
+		"address": "AsyncAPI Youtube Channel",
+		"map": "https://www.youtube.com/@AsyncAPI",
+		"sponsors": [
+			"/img/apidays.png"
+		],
+		"ticket": false,
+		"isFree": true,
+		"ended": false,
+		"cfp": "/venue/online/register"
+
+	},
+	{
 		"name": "Helsinki",
 		"country": "Finland",
 		"date": "May 29 2024",
@@ -11,13 +28,13 @@
 			"/img/apidays.png"
 		],
 		"ticket": false,
-		"isFree": true,
-		"ended": false
+		"isFree": false,
+		"ended": true
 	},
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 18-19, 2024",
+		"date": "September 18, 2024",
 		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
@@ -25,10 +42,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": false,
+		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/cart?coupon=GUESTOFASYNCAPILONDON2024",
 		"isFree": true,
-		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+		"ended": false
 	},
 	{
 		"name": "Paris",

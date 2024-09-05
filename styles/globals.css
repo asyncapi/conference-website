@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 :root{
     --bg-color: white;
@@ -203,6 +204,10 @@ mix-blend-mode: lighten;
 
 .hoverEffect{
   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.card-opacity:hover{
+  opacity: 100;
 }
 
 .hoverEffect:hover {
