@@ -9,10 +9,10 @@ function TicketCards({ className, city }) {
 
   return (
     <div 
-      className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between rounded-lg card bg-cover bg-center ${className}`}
+      className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between   card-bg bg-center ${className}`}
       style={{ backgroundImage: `url(${city.img})` }}
     >
-      <div className='p-4 bg-black bg-opacity-40 rounded-t-lg'>
+      <div className='p-4 bg-black bg-opacity-60 rounded-t-[30px]'>
         <div className='text-xl font-bold text-gradient'>{city.name}, {city.country}</div>
         <div className='mt-2 text-lg'>{city.date}</div>
       </div>
