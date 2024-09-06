@@ -16,6 +16,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
+import Gallery from '../components/Gallery/gallery';
 
 export default function Home() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -47,6 +48,9 @@ export default function Home() {
 			<Header />
 			<div id='about' className='mt-20'>
 				<About />
+			</div>
+			<div id='gallery' className='mt-20'>
+				<Gallery />
 			</div>
 			<div id="register" className='container mt-20'>
 			<div className='flex items-center flex-col justify-center'>

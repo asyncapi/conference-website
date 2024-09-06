@@ -26,6 +26,10 @@
 		]
 	},
 	{
+        "title":"Gallery",
+		"ref":"/#gallery"
+	},
+	{
 		"title": "Speakers",
 		"ref": "/#speakers"
 	},
