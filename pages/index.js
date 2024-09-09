@@ -178,7 +178,6 @@ export default function Home() {
 			</div>
 			</div>
 			</div>
-			</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors imgs={['/img/apidays.png']} />
 			</div>

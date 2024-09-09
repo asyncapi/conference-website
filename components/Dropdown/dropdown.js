@@ -16,7 +16,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 		};
 	}, [dropdownRef]);
 	return (
-		<div className='relative inline-block w-full'>
+		<div class='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
