@@ -8,12 +8,15 @@ function TicketCards({ className, city }) {
   const buttonText = city.isFree ? 'Get Your Ticket' : 'Buy Now';
 
   return (
-    <div className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between rounded-lg card bg-white ${className}`}>
-      <div className='p-4'>
+    <div 
+      className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between   card-bg bg-center ${className}`}
+      style={{ backgroundImage: `url(${city.img})` }}
+    >
+      <div className='p-4 bg-black bg-opacity-60 rounded-t-[30px]'>
         <div className='text-xl font-bold text-gradient'>{city.name}, {city.country}</div>
         <div className='mt-2 text-lg'>{city.date}</div>
       </div>
-      <div className='border-t h-20 border-dashed p-4 text-center'>
+      <div className='border-t h-20 border-dashed p-4 text-center bg-black bg-opacity-40 rounded-t-lg'>
         {/* Show a button based on the event status */}
         {isEndedOrUpcoming ? (
           <Button disabled overlay={true} className='w-[200px] bg-gray-400'>
