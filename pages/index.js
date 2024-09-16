@@ -95,11 +95,20 @@ export default function Home() {
 													className={`w-[168px] ${
 														city.city === speaker.city
 															? 'gradient-bg'
-															: 'border border-gray'
+															: 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
 													}`}
 													overlay={true}
 													>
-													{speaker.city}
+													{/* {speaker.city} */}
+	 												{city.city !== speaker.city && (
+        <>
+        <span className="transparent-bg "></span>
+        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+          {speaker.city}
+        </span>
+      </>
+    )}
+    {city.city === speaker.city && speaker.city}
 													</Button>
 												</div>
 											);
