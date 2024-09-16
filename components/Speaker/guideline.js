@@ -28,100 +28,100 @@ const faqs = [
     {
         q: 'Can I send a virtual talk?',
         ai: 'No, this is an in-person event; all speakers must deliver their sessions in person.',
-        av: 'Yes, you can send a virtual talk as this is an online event.'
+        av:'Yes, you can send a virtual talk as this is an online event.'
     }
 ]
 
-function Guidelines({ talkDeadLine, virtual, name, cfp }) {
+function Guidelines({talkDeadLine,virtual,name,cfp}) {
     const [show, setShow] = useState(null);
-    return (
-        <div className='z-[9]'>
-            <div className='flex flex-col justify-center'>
-                <Heading className='text-[30px] text-white text-center'>Speakers Guideline</Heading>
-                <div className='mt-20'>
-                    {faqs.map((faq, i) => {
+  return (
+      <div className='z-[9]'>
+        <div className='flex flex-col justify-center'>
+        <Heading className='text-[30px] text-white text-center'>Speakers Guideline</Heading>
+        <div className='mt-20'>
+      {faqs.map((faq, i) => {
 
-                        if (i == 2) {
-                            return (<div key={faq.q} onClick={() => {
-                                if (show === i) {
-                                    setShow(null)
-                                } else {
-                                    setShow(i)
-                                }
-                            }}>
-                                <div className='pb-4 cursor-pointer mt-4 ' style={{
-                                    borderBottom: "1px solid #333"
-                                }}>
-                                    <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
-                                        <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                                        <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
-                                    </div>
-
-
-                                    <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a1 + talkDeadLine + faq.a2}</p>
-
-                                </div>
-
-                            </div>)
+            if(i==2){
+                return(<div key={faq.q} onClick={() => {
+                    if (show === i) {
+                        setShow(null)
+                    } else {
+                        setShow(i)
+                    }
+                } }>
+                      <div className='pb-4 cursor-pointer mt-4 ' style={{
+                          borderBottom: "1px solid #333"
+                      }}>
+                          <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
+                              <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                          </div>
+                          
+                            
+                          <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a1 + talkDeadLine + faq.a2}</p>
+    
+                      </div>
+    
+                  </div>)
+            }
+            
+            if(i==5){
+                return(<div key={faq.q} onClick={() => {
+                    if (show === i) {
+                        setShow(null)
+                    } else {
+                        setShow(i)
+                    }
+                } }>
+                      <div className='pb-4 cursor-pointer mt-4 ' style={{
+                          borderBottom: "1px solid #333"
+                      }}>
+                          <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
+                              <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                          </div>
+                          {
+                          virtual?<p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.av}</p>:  
+                          <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.ai}</p>
                         }
+    
+                      </div>
+    
+                  </div>)
+            }
 
-                        if (i == 5) {
-                            return (<div key={faq.q} onClick={() => {
-                                if (show === i) {
-                                    setShow(null)
-                                } else {
-                                    setShow(i)
-                                }
-                            }}>
-                                <div className='pb-4 cursor-pointer mt-4 ' style={{
-                                    borderBottom: "1px solid #333"
-                                }}>
-                                    <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
-                                        <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                                        <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
-                                    </div>
-                                    {
-                                        virtual ? <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.av}</p> :
-                                            <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.ai}</p>
-                                    }
+              return <div key={faq.q} onClick={() => {
+                if (show === i) {
+                    setShow(null)
+                } else {
+                    setShow(i)
+                }
+            } }>
+                  <div className='pb-4 cursor-pointer mt-4 ' style={{
+                      borderBottom: "1px solid #333"
+                  }}>
+                      <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
+                          <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
+                          <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                      </div>
+                      {
+                        
+                      <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a}</p>
+                    }
 
-                                </div>
+                  </div>
 
-                            </div>)
-                        }
-
-                        return <div key={faq.q} onClick={() => {
-                            if (show === i) {
-                                setShow(null)
-                            } else {
-                                setShow(i)
-                            }
-                        }}>
-                            <div className='pb-4 cursor-pointer mt-4 ' style={{
-                                borderBottom: "1px solid #333"
-                            }}>
-                                <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
-                                    <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                                    <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
-                                </div>
-                                {
-
-                                    <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a}</p>
-                                }
-
-                            </div>
-
-                        </div>
-                    })}
-                </div>
-                <div className='text-center mt-20'>
-                    {cfp && <a href={name === 'online' ? "/venue/online/register" : cfp} target={name == 'Online' ? "" : '_blank'} rel='noreferrer'>
-                        <Button className="x-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
-                    </a>}
-                </div>
-            </div>
-        </div>
-    )
+              </div>
+          })}
+      </div>
+     <div className='text-center mt-20'>
+     {cfp && <a href={name === 'online'? "/venue/online/register" :cfp}target={name=='Online'?"":'_blank'} rel='noreferrer'>
+							<Button className="x-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
+		</a>}
+     </div>
+      </div>
+    </div>
+  )
 }
 
 export default Guidelines;
