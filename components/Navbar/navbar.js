@@ -55,7 +55,7 @@ function Navbar() {
 			if (!isSubMenuHovered) {
 				setShow(null);
 			}
-		}, 300);  
+		}, 300);
 	};
 
 	const handleSubMenuEnter = () => {
@@ -124,15 +124,9 @@ function Navbar() {
 											>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
-														{link.subMenu.length === 1 ? (
-															<div className='h-[32px] flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
-																{subL.title}
-															</div>
-														) : (
-															<div className='h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
-																{subL.title}
-															</div>
-														)}
+														<div className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}>
+															{subL.title}
+														</div>
 													</Link>
 												))}
 											</div>
