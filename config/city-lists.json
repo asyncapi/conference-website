@@ -45,9 +45,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
+		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/cart?coupon=GUESTOFASYNCAPILONDON2024",
 		"isFree": true,
-		"ended": true
+		"ended": false
 	},
 	{
 		"name": "Paris",
