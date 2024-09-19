@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 
 function Venue({ city }) {
 	return (
-		<div>
+		<div data-test={`venue-${city.name}`}>
 			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>

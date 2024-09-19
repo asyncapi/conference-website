@@ -35,7 +35,7 @@ const faqs = [
 function Guidelines({talkDeadLine,virtual,name,cfp}) {
     const [show, setShow] = useState(null);
   return (
-      <div className='z-[9]'>
+      <div className='z-[9]' data-test="guideline-com">
         <div className='flex flex-col justify-center'>
         <Heading className='text-[30px] text-white text-center'>Speakers Guideline</Heading>
         <div className='mt-20'>
