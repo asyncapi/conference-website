@@ -43,11 +43,17 @@ function Header() {
 				</div>
 			</div>
 			<div className='mt-24'>
-				<ReactSlider>
+				{cities.length > 4 ? <ReactSlider>
 					{cities.map((city) => {
-						return <Venue key={city.name} city={city}/>;
+						return <>
+						<Venue key={city.name} city={city}/>;
+                          </>
 					})}
-				</ReactSlider>
+				</ReactSlider>:<div className='flex m-1'>
+				{cities.map((city) => {
+						return <Venue key={city.name} city={city}/>;     
+					})}
+				</div>}	
 			</div>
 		</div>
 	);
