@@ -7,8 +7,10 @@ import cities from '../../config/city-lists.json';
 import Venue from '../Venue/venue';
 import Announcement from '../announcement';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 
 function Header() {
+	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	return (
 		<div className='relative'>
 			<div className='container w-full flex items-center justify-center'>
@@ -43,7 +45,7 @@ function Header() {
 				</div>
 			</div>
 			<div className='mt-24'>
-				{cities.length > 4 ? <ReactSlider>
+				{cities.length > 4 || isMobile ? <ReactSlider>
 					{cities.map((city) => {
 						return <>
 						<Venue key={city.name} city={city}/>;
