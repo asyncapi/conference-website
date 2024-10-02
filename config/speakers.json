@@ -170,7 +170,46 @@
 	{
 		"city": "Online",
 		"location": "Online Edition",
-		"lists": [],
+		"lists": [			{
+			"name": "Hari Krishnan",
+			"title": "Founder and CEO at Polarizer Technologies",
+			"img": "https://media.licdn.com/dms/image/v2/C5603AQECQuUSsOONpQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1652006613665?e=1733356800&v=beta&t=KmRc3uH5PZOBemSNDS08prfAOLxJGli21TA35jt5oog"
+		},
+		{
+			"name": "Yuan Yuan",
+			"title": "MSE in DS Student at the University of Pennsylvania",
+			"img": "https://avatars.githubusercontent.com/u/16447041?v=4"
+		},
+		{
+			"name": "Ivan Garcia Sainz-Aja",
+			"title": "Java Architect. Speaker. Building ZenWave 360°",
+			"img": "https://media.licdn.com/dms/image/v2/C4E03AQHwWMQkufyIxQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1517669088843?e=1733356800&v=beta&t=pnX1RAueiwPNPuyLkgAHW4KexvNB0bSKv6vDTWIgDsA"
+		},
+		{
+			"name": "Atinuke Oluwabamikemi Kayode",
+			"title": "",
+			"img": "https://media.licdn.com/dms/image/v2/C5603AQHQRFnT-j9V0w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1657787935712?e=1733356800&v=beta&t=dd3I1-lgNTW1BjOpLBljK8TYaAYcTtng3XvmsS2Dpuw"
+		},
+		{
+			"name": "Aishat Muibudeen",
+			"title": "",
+			"img": "https://media.licdn.com/dms/image/v2/D4E03AQEX1YDxXNXWYw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711890580471?e=1733356800&v=beta&t=-_VSVmb9JS1HA6BP4k2BEDpw6Eg0bF-VddG31j2PE1Q"
+		},		
+		{
+			"name": "Thulisile Sibanda",
+			"title": "",
+			"img": "https://media.licdn.com/dms/image/v2/D5603AQHDfk4HvRiZFQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711019429082?e=1733356800&v=beta&t=Tr5uWSEbmXU-tTQkGCE7Q2aJeBW1jZzFJwY-d6bOxT8"
+		},
+		{
+			"name": "Ankit Dash",
+			"title": "",
+			"img": "https://media.licdn.com/dms/image/v2/D5603AQEKgTNAVwxuHg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687942191582?e=1733356800&v=beta&t=GVsvgRB0kV_dkHkkEdyZ3h9_KqxBZ6sgeyio4iaurhQ"
+		},
+		{
+			"name": "Giri Venkatesan",
+			"title": "Principal Developer Advocate, Office of the CTO at Solace",
+			"img": "https://media.licdn.com/dms/image/v2/D5603AQGE4ZJbCIzvxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711356838313?e=1733356800&v=beta&t=iuzujzG57X5qI8P0gsNPqGjzd0oMXKz0ehx58gIIKlc"
+		}],
 		"agenda": null
 	}
 ]
