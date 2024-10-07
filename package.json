@@ -1,0 +1,45 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "generate:assets": "echo \"No assets to configure\"",
+    "test": "echo \"No tests configured yet\"",
+    "release": "echo \"No release to npm for this project\""
+  },
+  "dependencies": {
+    "@googleapis/sheets": "^7.0.0",
+    "axios": "^1.7.4",
+    "d3": "^7.8.5",
+    "lucide-react": "^0.350.0",
+    "net": "^1.0.2",
+    "next": "^12.0.0",
+    "next-on-netlify": "^3.0.1",
+    "nodemailer": "^6.9.13",
+    "react": "^17.0.2",
+    "react-confetti": "^6.1.0",
+    "react-countdown": "^2.3.5",
+    "react-dom": "^17.0.2",
+    "react-ga": "^3.3.1",
+    "react-globe.gl": "^2.24.2",
+    "react-gtm-module": "^2.0.11",
+    "react-hot-toast": "^2.4.1",
+    "react-responsive": "^9.0.0",
+    "react-select": "^5.7.5",
+    "react-slick": "^0.29.0",
+    "react-youtube-embed": "^1.0.3",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.15.0",
+    "eslint-config-next": "13.1.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.0.24"
+  }
+}

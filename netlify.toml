@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "16.13.2"
+  NPM_VERSION = "8.1.2"
+
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOW-FROM https://www.youtube.com/"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

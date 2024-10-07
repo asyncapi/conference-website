@@ -1,0 +1,176 @@
+[
+	{
+		"location": "",
+		"city": "All",
+		"lists": []
+	},
+	{
+		"location": "Helsinki, Finland",
+		"city": "Helsinki",
+		"agenda": [
+			{
+				"time": "01:50 PM CEST - 02:15 PM CEST",
+				"session": "Getting Started With Event Driven Architecture & AsyncAPI",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "02:15 PM CEST - 02:40 PM CEST",
+				"session": "Navigating The Jungle of The AsyncAPI Ecosystem",
+				"speaker": 2,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "02:40 PM CEST - 03:05 PM CEST",
+				"session": "AsyncAPI In Production - The True Potential",
+				"speaker": 3,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "03:05 PM CEST - 03:30 PM CEST",
+				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			}
+		],
+		"lists": [
+			{
+				"name": "Hugo Guerrero",
+				"title": "Developer Advocate at Redhat",
+				"img": "/img/Hugo Guerrero.jpeg"
+			},
+			{
+				"name": "Jonas Lagoni",
+				"title": "Lead Software Engineer at Postman",
+				"img": "/img/Jonas Lagoni.jpg"
+			},
+			{
+				"name": "Lukasz Gornicki",
+				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
+				"img": "/img/Lukasz Gornicki.jpg"
+			}
+		]
+	},
+	{
+		"location": "London, United Kingdom",
+		"city": "London",
+		"agenda": [
+			{
+				"time": "1:50 PM BST - 2:15 PM BST",
+				"session": "Better AsyncAPI Governance",
+				"speaker": 2,
+				"type": "Keynote Speaker"
+			},
+			{
+				"time": "2:15 PM BST - 2:40 PM BST",
+				"session": "Harmonizing Asynchronous Systems: NATS, CloudEvents and AsyncAPI",
+				"speaker": 3,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "2:40 PM BST - 3:05 PM BST",
+				"session": "Event-Driven Architectures Through API Management and AsyncAPI",
+				"speaker": 4,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "3:05 PM BST - 3:30 PM BST",
+				"session": "Lessons from Sync API Design: What Makes A Good AsyncAPI?",
+				"speaker": 10,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "3:30 PM BST - 3:50 PM BST",
+				"session": "",
+				"type": "Break/Networking"
+			},
+			{
+				"time": "3:50 PM BST - 4:15 PM BST",
+				"session": "Topic Characteristics: What Do You Need To Know In Advance",
+				"speaker": 1,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "4:15 PM BST - 4:40 PM BST",
+				"session": "Using Test Containers for AsyncAPI Unit Testing and Mocking",
+				"speaker": 5,
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "4:40 PM BST - 5:05 PM BST",
+				"session": "Deploying WebSockets with AsyncAPI and Architecture as Code",
+				"speaker": [8,9],
+				"type": "Technical Speaker"
+			},
+			{
+				"time": "5:05 PM BST - 5:30 PM BST",
+				"session": "Building Cross-Exchange Trading Library With AsyncAPI",
+				"speaker": 6,
+				"type": "Technical Speaker"
+			}
+		],
+		"lists": [			{
+			"name": "Dale Lane",
+			"title": "Chief Architect at IBM",
+			"img": "/img/Dale Lane.png"
+		},
+		{
+			"name": "Lorna Mitchell",
+			"title": "VP of Developer Experience at Redocly",
+			"img": "/img/Lorna Mitchell.jpg"
+		},
+		{
+			"name": "Artur Ciocanu",
+			"title": "Senior Computer Scientist at Adobe",
+			"img": "/img/Artur Ciocanu.jpg"
+		},
+		{
+			"name": "Eduardo Maldonado Fonseca Silva ",
+			"title": "Senior DevOps Engineer at The LEGO Group ",
+			"img": "/img/Eduardo.jpeg"
+		},
+		{
+			"name": "Laurent Broudoux",
+			"title": "Co-founder of Microcks",
+			"img":  "/img/Laurent Broudoux.jpg"
+		},		
+		{
+			"name": "Sho Kaneko",
+			"title": "Founder of Repoch",
+			"img":"/img/Sho Kaneko.jpg"
+		},
+		{
+			"name": "Thulisile Sibanda",
+			"title": "Community Manager at AsyncAPI Initiative",
+			"img": "/img/Thulisile Sibanda.jpg"
+		},
+		{
+			"name": "James Gough",
+			"title": "Distinguished Engineer at Morgan Stanley",
+			"img": "/img/James Gough.jpg"
+		},
+		{
+			"name": "Will Osbourne",
+			"title": "Technology Associate at Morgan Stanley",
+			"img": "/img/Will Osbourne.jpg"
+		},
+		{
+			"name": "Swen-Helge Huber",
+			"title": "Senior Director, Office of the CTO at Solace",
+			"img":"/img/Swen-Helge Huber.png"
+		}]
+	},
+	{
+		"city": "Paris",
+		"location": "Paris, France",
+		"lists": [],
+		"agenda": null
+	},
+
+	{
+		"city": "Online",
+		"location": "Online Edition",
+		"lists": [],
+		"agenda": null
+	}
+]
