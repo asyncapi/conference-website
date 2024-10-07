@@ -51,7 +51,7 @@ function Header() {
 						<Venue key={city.name} city={city}/>;
                           </>
 					})}
-				</ReactSlider>:<div className='flex m-1'>
+				</ReactSlider>:<div className='flex m-1 justify-center'>
 				{cities.map((city) => {
 						return <Venue key={city.name} city={city}/>;     
 					})}
