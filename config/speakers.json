@@ -37,17 +37,17 @@
 			{
 				"name": "Hugo Guerrero",
 				"title": "Developer Advocate at Redhat",
-				"img": "/img/Hugo Guerrero.jpeg"
+				"img": "/img/Hugo Guerrero.webp"
 			},
 			{
 				"name": "Jonas Lagoni",
 				"title": "Lead Software Engineer at Postman",
-				"img": "/img/Jonas Lagoni.jpg"
+				"img": "/img/Jonas Lagoni.webp"
 			},
 			{
 				"name": "Lukasz Gornicki",
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
-				"img": "/img/Lukasz Gornicki.jpg"
+				"img": "/img/Lukasz Gornicki.webp"
 			}
 		]
 	},
@@ -112,52 +112,52 @@
 		"lists": [			{
 			"name": "Dale Lane",
 			"title": "Chief Architect at IBM",
-			"img": "/img/Dale Lane.png"
+			"img": "/img/Dale Lane.webp"
 		},
 		{
 			"name": "Lorna Mitchell",
 			"title": "VP of Developer Experience at Redocly",
-			"img": "/img/Lorna Mitchell.jpg"
+			"img": "/img/Lorna Mitchell.webp"
 		},
 		{
 			"name": "Artur Ciocanu",
 			"title": "Senior Computer Scientist at Adobe",
-			"img": "/img/Artur Ciocanu.jpg"
+			"img": "/img/Artur Ciocanu.webp"
 		},
 		{
 			"name": "Eduardo Maldonado Fonseca Silva ",
 			"title": "Senior DevOps Engineer at The LEGO Group ",
-			"img": "/img/Eduardo.jpeg"
+			"img": "/img/Eduardo.webp"
 		},
 		{
 			"name": "Laurent Broudoux",
 			"title": "Co-founder of Microcks",
-			"img":  "/img/Laurent Broudoux.jpg"
+			"img":  "/img/Laurent Broudoux.webp"
 		},		
 		{
 			"name": "Sho Kaneko",
 			"title": "Founder of Repoch",
-			"img":"/img/Sho Kaneko.jpg"
+			"img":"/img/Sho Kaneko.webp"
 		},
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
-			"img": "/img/Thulisile Sibanda.jpg"
+			"img": "/img/Thulisile Sibanda.webp"
 		},
 		{
 			"name": "James Gough",
 			"title": "Distinguished Engineer at Morgan Stanley",
-			"img": "/img/James Gough.jpg"
+			"img": "/img/James Gough.webp"
 		},
 		{
 			"name": "Will Osbourne",
 			"title": "Technology Associate at Morgan Stanley",
-			"img": "/img/Will Osbourne.jpg"
+			"img": "/img/Will Osbourne.webp"
 		},
 		{
 			"name": "Swen-Helge Huber",
 			"title": "Senior Director, Office of the CTO at Solace",
-			"img":"/img/Swen-Helge Huber.png"
+			"img":"/img/Swen-Helge Huber.webp"
 		}]
 	},
 	{
