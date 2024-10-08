@@ -49,9 +49,6 @@ export default function Home() {
 			<div id='about' className='mt-20'>
 				<About />
 			</div>
-			<div id='gallery' className=''>
-				<Gallery />
-			</div>
 			<div id="register" className='container mt-20'>
 			<div className='flex items-center flex-col justify-center'>
 			<div
@@ -187,6 +184,9 @@ export default function Home() {
 						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
 					}
 				})}
+			</div>
+			<div id='gallery' className='mt-20'>
+				<Gallery />
 			</div>
 			</div>
 			</div>
