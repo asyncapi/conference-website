@@ -114,7 +114,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
               </div>
           })}
       </div>
-     <div className='text-center mt-20'>
+     <div className='flex items-center justify-center text-center mt-20'>
      {cfp && <a href={name === 'online'? "/venue/online/register" :cfp}target={name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="x-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
 		</a>}
