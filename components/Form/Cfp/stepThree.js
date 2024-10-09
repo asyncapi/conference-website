@@ -5,10 +5,6 @@ import Button from "../../Buttons/button";
 
 const options1 = [
   {
-    value: "Lightning talk",
-    label: "Lightning talk(5mins)",
-  },
-  {
     value: "Session",
     label: "Session(20 - 25mins)",
   }
@@ -37,7 +33,7 @@ function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState({});
   useEffect(() => {
     setForm({ ...data, ...value});
-  }, [data, setForm, value]); 
+  }, [value]); 
   return (
     <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
@@ -63,21 +59,21 @@ function StepThree({ setStep, setForm, data }) {
           setValue={(val) => setValue({...value, Level: val})}
           multi={false}
         />
-        <div className="float-right">
-        <a
-            className="mr-10 text-dark-600 cursor-pointer"
-            onClick={() => setStep(null, 1)}
+        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
+          <a
+            className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
+            onClick={() => setStep(null, 2)}
           >
             Back
-                  </a>
-                  <Button
-                    type="submit"
-                    disabled={!data.Format || !data.Level && true}
-                    className="p-3 rounded-md mt-3 w-36">
-                      Next
-                  </Button>
+          </a>
+          <Button
+            type="submit"
+            disabled={!data.Description || !data.Title && true}
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5">
+            Next
+            </Button>
         </div>
-      </div>
+        </div>
     </form>
   );
 }

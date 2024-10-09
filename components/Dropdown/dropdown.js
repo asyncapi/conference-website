@@ -1,9 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState,useRef,useEffect} from 'react';
 
 function Dropdown({ active, items, setOptions, setOptions2 }) {
     const [show, setShow] = useState(false)
+	const dropdownRef = useRef(null);
+	useEffect(() => {
+		//  This checks if the click event occurred outside the dropdown, if true we closes the dropdown. 
+		function handleClickOutside(event) {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+				setShow(false);
+			}
+		}
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [dropdownRef]);
 	return (
-		<div class='relative inline-block w-full'>
+		<div class='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
@@ -11,7 +24,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
+
 					onClick={() => setShow(status => !status)}
+
 				>
 					<div>{active}</div>
 					<svg

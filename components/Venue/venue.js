@@ -21,7 +21,7 @@ function Venue({ className, city }) {
 					<div></div>
 					<div className='text-white'>
 						<div>
-							<span className='text-lg font-bold'>{city.country}, {city.name}</span>
+							{city.name=='Online'?<span className='text-lg font-bold'>{city.name} {city.country}</span>:<span className='text-lg font-bold'>{city.country}, {city.name}</span>}
 						</div>
 						<div className='flex items-center justify-between w-full'>
 							<div className='border border-gray-400 rounded-lg p-1 text-center mt-2'>{city.date}</div>

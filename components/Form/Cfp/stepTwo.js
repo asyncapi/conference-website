@@ -30,9 +30,9 @@ function StepTwo({ setStep, setForm, data }) {
             border: "1px solid #E50E99",
           }}
           onChange={(e) => setForm({ ...data, Description: e.target.value })} />
-        <div className="float-right">
+        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
-            className="mr-10 text-dark-600 cursor-pointer"
+            className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
             onClick={() => setStep(null, 1)}
           >
             Back
@@ -40,7 +40,7 @@ function StepTwo({ setStep, setForm, data }) {
           <Button
             type="submit"
             disabled={!data.Description || !data.Title && true}
-            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36">
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-3">
             Next
             </Button>
         </div>
