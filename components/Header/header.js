@@ -45,17 +45,11 @@ function Header() {
 				</div>
 			</div>
 			<div className='mt-24'>
-				{cities.length > 4 || isMobile ? <ReactSlider>
+			    <ReactSlider>
 					{cities.map((city) => {
-						return <>
-						<Venue key={city.name} city={city}/>;
-                          </>
+						return <Venue key={city.name} city={city}/>;
 					})}
-				</ReactSlider>:<div className='flex m-1 justify-center'>
-				{cities.map((city) => {
-						return <Venue key={city.name} city={city}/>;     
-					})}
-				</div>}	
+				</ReactSlider>
 			</div>
 		</div>
 	);
