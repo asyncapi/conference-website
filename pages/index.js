@@ -169,6 +169,7 @@ export default function Home() {
 				<div className='w-[40px] h-[3px] bg-blue-400' />
 				<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>Tickets</div>
 			</div>
+			<div data-test="ticket-section">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
 			</Heading>
@@ -192,6 +193,7 @@ export default function Home() {
 			<div className='mt-5'>
 			<Subscription/>
 			</div>
+		</div>
 		</div>
 	);
 }

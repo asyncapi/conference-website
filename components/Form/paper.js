@@ -77,7 +77,7 @@ function Paper() {
   }
 
     return (
-        <div className="py-28 flex flex-col justify-center items-center" id="forms" ref={confetiRef}>
+        <div className="py-28 flex flex-col justify-center items-center" id="forms" ref={confetiRef} data-test="cfp-form">
           <div>
           <div className='lg:px-6 mt-5'>
             <h1 className="text-white font-bold text-5xl lg:text-3xl">
