@@ -1,3 +1,4 @@
+
 [
 	{
 		"location": "",
@@ -170,7 +171,46 @@
 	{
 		"city": "Online",
 		"location": "Online Edition",
-		"lists": [],
+		"lists": [			{
+			"name": "Hari Krishnan",
+			"title": "Co-founder, CTO at Specmatic",
+			"img": "img/online-conf-images/HariKrishanan.webp"
+		},
+		{
+			"name": "Yuan Yuan",
+			"title": "Software Engineer",
+			"img": "img/online-conf-images/YuanYuan.webp"
+		},
+		{
+			"name": "Ivan Garcia Sainz-Aja",
+			"title": "Java Architect",
+			"img": "img/online-conf-images/IvanGarciaSainz-Aja.webp"
+		},
+		{
+			"name": "Atinuke Oluwabamikemi Kayode",
+			"title": "Community Marketing Specialist at AsyncAPI Initiative",
+			"img": "img/online-conf-images/AtinukeOluwabamikemiKayode.webp"
+		},
+		{
+			"name": "Aishat Muibudeen",
+			"title": "Product Designer and UX Researcher",
+			"img": "img/online-conf-images/AISHAT(Maya)MUIBUDEEN.webp"
+		},		
+		{
+			"name": "Thulisile Sibanda",
+			"title": "Community Manager at AsyncAPI Initiative",
+			"img": "img/online-conf-images/VThulisileSibanda.webp"
+		},
+		{
+			"name": "Ankit Dash",
+			"title": "Full Stack Developer",
+			"img": "img/online-conf-images/AnkitDash.webp"
+		},
+		{
+			"name": "Giri Venkatesan",
+			"title": "Principal Developer Advocate and Architect at Solace",
+			"img": "img/online-conf-images/GiriVenkatesan.webp"
+		}],
 		"agenda": null
 	}
 ]
