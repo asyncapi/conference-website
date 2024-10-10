@@ -24,10 +24,15 @@ function ReactSlider({ children }) {
 		variableWidth: isMobile ? false : true,
 		arrows: false,
 	};
+
 	return (
-		<Slider ref={slider} {...settings}>
+		<>
+		{ children.length > 4 || isMobile ? 
+		(<Slider ref={slider} {...settings}>
 			{children}
-		</Slider>
+		</Slider>):(
+	       <div className='flex m-2 justify-center'>{children}</div>)}
+	    </>
 	);
 }
 
