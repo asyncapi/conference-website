@@ -154,7 +154,7 @@ export default function Home() {
 											enthusiastic audience!
 										</Paragraph>
 										<Link legacyBehavior href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx">
-										<a target="_blank">
+										<a className='flex justify-center' target="_blank">
 											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 											Apply as a Speaker
 											</Button>
