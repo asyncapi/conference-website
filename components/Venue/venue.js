@@ -31,7 +31,7 @@ function Venue({ className, city }) {
 					<div></div>
 					<div className={textColor}>
 						<div>
-							<span className='text-lg font-bold'>{city.country}, {city.name}</span>
+							{city.name=='Online'?<span className='text-lg font-bold'>{city.name} {city.country}</span>:<span className='text-lg font-bold'>{city.country}, {city.name}</span>}
 						</div>
 						<div className='flex align-end flex-row justify-between pt-2'>
 							<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center'>{city.date}</div>

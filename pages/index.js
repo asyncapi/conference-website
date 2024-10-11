@@ -7,7 +7,7 @@ import Header from '../components/Header/header';
 import cities from '../config/city-lists.json';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
-import TicketCards from '../components/Cards/ticketCards';
+import TicketCards from '../components/Tickets/ticketCards';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
@@ -95,11 +95,20 @@ export default function Home() {
 													className={`w-[168px] ${
 														city.city === speaker.city
 															? 'gradient-bg'
-															: 'border border-gray'
+															: 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
 													}`}
 													overlay={true}
 													>
-													{speaker.city}
+													{/* {speaker.city} */}
+	 												{city.city !== speaker.city && (
+        <>
+        <span className="transparent-bg "></span>
+        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+          {speaker.city}
+        </span>
+      </>
+    )}
+    {city.city === speaker.city && speaker.city}
 													</Button>
 												</div>
 											);
@@ -144,7 +153,7 @@ export default function Home() {
 											enthusiastic audience!
 										</Paragraph>
 										<Link legacyBehavior href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx">
-										<a target="_blank">
+										<a className='flex justify-center' target="_blank">
 											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 											Apply as a Speaker
 											</Button>
@@ -156,20 +165,24 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			<div className='flex items-center'>
+			<div id='tickets' className='flex items-center'>
 				<div className='w-[40px] h-[3px] bg-blue-400' />
 				<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>Tickets</div>
 			</div>
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
-				Tickets Sale [Coming Soon]
+				Get Tickets
 			</Heading>
 			<div className='max-w-3xl sm:w-full text-center'>
 			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-			Experience the Future of Asynchronous Communication: Tickets for Sale for the AsyncAPI Conference on Tour!
+			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
 			</Paragraph>
 			</div>
 			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
-				{cities.map((city) => <TicketCards key={city.name} city={city} className='lg:mt-10' />)}
+				{cities.map((city) => {
+					if(city.ended === false){
+						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
+					}
+				})}
 			</div>
 			</div>
 			</div>

@@ -8,7 +8,8 @@ import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
 import { isEventEnded } from '../../components/Venue/venue';
 import Agenda from '../../components/Agenda/agenda';
-
+import Guidelines from '../../components/Speaker/guideline';
+import CFPdata from "../../config/cfp-data.json"
 export async function getStaticProps({ params }) {
 	let res = {};
 	const data = cities.filter((p) => p.name === params.id);
@@ -40,13 +41,16 @@ function Venue({ city }) {
 
 	return (
 		<div>
-			<div className='w-full h-[500px] sm:h-[auto] bg-madrid bg-cover bg-center'>
+			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
-					<div className='mt-[82px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
+					<div className='mt-[60px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
+						{city.name == 'Online' ? <Heading className={textColor}>
+							{city.name} {city.country}
+						</Heading> :
 						<Heading className={textColor}>
 							{city.name}, {city.country}
-						</Heading>
-						{eventEnded && <p className='text-xs text-white border border-white py-1 px-2'>ENDED</p>}
+						</Heading>}
+						
 						<Paragraph className='mt-[24px]' textColor={textColor}>{city.description}</Paragraph>
 
 						<Heading typeStyle='lg' className={`${textColor} mt-[24px] hover:underline`}>
@@ -59,9 +63,9 @@ function Venue({ city }) {
 						</Heading>
 						{city.ended ? "" : <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
-							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Register for free" : "Register now"}</Button>
+							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
 						</a>}
-						{(!eventEnded && city.cfp) && <a href={city.cfp} target='_blank' rel='noreferrer'>
+						{(!eventEnded && city.cfp) && <a href={city.name === 'online'? "/venue/online/register" :city.cfp}target={city.name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
 						</a>}
 						</div>}
@@ -72,9 +76,11 @@ function Venue({ city }) {
 				id='agenda'
 				className='border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
 			>
-				<div className='w-[1130px] lg:w-full'>
+				{city.cfp ? <div className='w-[1090px] lg:w-full'>
+				<Guidelines talkDeadLine={(city.name=='Online' && CFPdata.CallEndDate) || city.cfpdate} virtual={city.name=='Online'} name={city.name} cfp={city.cfp}/>
+				</div> : <div className='w-[1130px] lg:w-full'>
 					<Agenda city={city} />
-				</div>
+				</div>}
 			</div>
 			<div
 				id='sponsors'

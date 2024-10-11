@@ -55,7 +55,7 @@ function Navbar() {
 			if (!isSubMenuHovered) {
 				setShow(null);
 			}
-		}, 300);  
+		}, 300);
 	};
 
 	const handleSubMenuEnter = () => {
@@ -94,13 +94,13 @@ function Navbar() {
 					) : (
 						<div className='flex items-center'>
 							{links.map((link) => (
-								<div href={link.ref} key={link.title}>
+								<div href={link.ref} key={link.title} >
 									<div
 										onMouseEnter={() => handleMouseEnter(link.title)}
 										onMouseLeave={handleMouseLeave}
-										className='ml-16 text-[14px] group cursor-pointer relative flex flex-col'
+										className='ml-16 text-[14px] group cursor-pointer relative flex flex-col '
 									>
-										<div>
+										<div >
 											{link.subMenu ? (
 												<div className='flex items-center'>
 													{link.title}{' '}
@@ -113,26 +113,23 @@ function Navbar() {
 													)}
 												</div>
 											) : (
-												<Link href={link.ref}>{link.title}</Link>
+												<Link href={link.ref} >{link.title}</Link>
 											)}
+											
 										</div>
+										<span class="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
+                                       <span class="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
 										{show === link.title && link.subMenu && (
 											<div
-												className='subMenu absolute z-[9] mt-8 w-[140px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
+												className='subMenu absolute z-[9] mt-8 w-[150px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
 												onMouseEnter={handleSubMenuEnter}
 												onMouseLeave={handleSubMenuLeave}
 											>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} key={subL.title}>
-														{link.subMenu.length === 1 ? (
-															<div className='h-[32px] flex items-center justify-center text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
-																{subL.title}
-															</div>
-														) : (
-															<div className='h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all'>
-																{subL.title}
-															</div>
-														)}
+														<div className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}>
+															{subL.title}
+														</div>
 													</Link>
 												))}
 											</div>
