@@ -1,9 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Work+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 :root{
     --bg-color: white;
@@ -87,6 +85,9 @@ body {
   opacity: 1;
 }
 
+.transparent-bg{
+  @apply w-56 h-48 rounded gradient-bg absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0
+}
 .navbg:hover, .navbg:focus{
     background: linear-gradient(225deg, #AD20E2 9.35%, #2DCCFD 88.41%);
 }

@@ -13,8 +13,7 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": false,
-		"cfp": "/venue/online/register"
+		"ended": true
 
 	},
 	{
@@ -45,15 +44,15 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/cart?coupon=GUESTOFASYNCAPILONDON2024",
+		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
 		"isFree": true,
-		"ended": false
+		"ended": true
 	},
 	{
 		"name": "Paris",
 		"country": "France",
 		"date": "December 3-5, 2024",
-		"cfpdate":"September 20, 2024",
+		"cfpdate":"October 12, 2024",
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
