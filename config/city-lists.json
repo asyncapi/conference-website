@@ -62,7 +62,6 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": false,
-		"cfp": "true"
+		"ended": true
 	}
 ]
