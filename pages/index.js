@@ -178,6 +178,7 @@ export default function Home() {
 			</Paragraph>
 			</div>
 			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
+				hello
 				{cities.map((city) => {
 					if(city.ended === false){
 						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
