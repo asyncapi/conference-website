@@ -210,7 +210,18 @@
 			"name": "Giri Venkatesan",
 			"title": "Principal Developer Advocate and Architect at Solace",
 			"img": "img/online-conf-images/GiriVenkatesan.webp"
-		}],
+		},
+		{
+			"name": "Dr. Annegret Junker",
+			"title": "Chief Software Architect at codecentric AG",
+			"img": "img/online-conf-images/Annegret.webp"
+		},
+		{
+			"name": "Lukasz Gornicki",
+			"title": "Executive Director at AsyncAPI Initiative",
+			"img": "img/online-conf-images/Lukasz.webp"
+		}
+	],
 		"agenda": null
 	}
 ]
