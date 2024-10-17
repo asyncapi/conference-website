@@ -48,6 +48,7 @@ function StepFour({ setStep, setForm, data }) {
             border: "1px solid #E50E99",
           }}
           onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
+          data-test="step-four-additional"
         />
         
         <div className="mt-6 text-dark-600 text-md">
@@ -63,7 +64,8 @@ function StepFour({ setStep, setForm, data }) {
           <Button
             type="submit"
             disabled={submitting || disabled}
-            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5">
+            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
+            test="step-four-next">
             {submitting ? <ActivityLoader /> : "Submit"}
             </Button>
         </div>
