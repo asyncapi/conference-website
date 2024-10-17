@@ -24,7 +24,7 @@ function TicketCards({ className, city }) {
         <div className="mt-2 text-lg">{city.date}</div>
         <div className="mt-1 text-sm italic">{statusLabel}</div>
       </div>
-      <div className="border-t h-20 border-dashed p-4 text-center">
+      <div className="flex justify-center border-t h-20 border-dashed p-4 text-center">
         {/* Show a button based on the event status */}
         {isEnded ? (
           <Button disabled overlay={true} className="w-[200px] bg-gray-400">
