@@ -37,17 +37,17 @@
 			{
 				"name": "Hugo Guerrero",
 				"title": "Developer Advocate at Redhat",
-				"img": "https://avatars.githubusercontent.com/u/1001939?v=4"
+				"img": "/img/Hugo Guerrero.jpeg"
 			},
 			{
 				"name": "Jonas Lagoni",
 				"title": "Lead Software Engineer at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1507770710789402630/w4IZfLUZ_400x400.jpg"
+				"img": "/img/Jonas Lagoni.jpg"
 			},
 			{
 				"name": "Lukasz Gornicki",
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
+				"img": "/img/Lukasz Gornicki.jpg"
 			}
 		]
 	},
@@ -112,17 +112,17 @@
 		"lists": [			{
 			"name": "Dale Lane",
 			"title": "Chief Architect at IBM",
-			"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+			"img": "/img/Dale Lane.png"
 		},
 		{
 			"name": "Lorna Mitchell",
 			"title": "VP of Developer Experience at Redocly",
-			"img": "https://lornajane.net/wp-content/uploads/2011/08/IMG_9410-smaller.jpg"
+			"img": "/img/Lorna Mitchell.jpg"
 		},
 		{
 			"name": "Artur Ciocanu",
 			"title": "Senior Computer Scientist at Adobe",
-			"img": "https://user-images.githubusercontent.com/66913810/262294782-32d6cf14-3e7b-4b68-b8a6-82de97166c7d.jpg"
+			"img": "/img/Artur Ciocanu.jpg"
 		},
 		{
 			"name": "Eduardo Maldonado Fonseca Silva ",
@@ -132,32 +132,32 @@
 		{
 			"name": "Laurent Broudoux",
 			"title": "Co-founder of Microcks",
-			"img": "https://user-images.githubusercontent.com/66913810/279639901-07c64c42-deee-4520-b36f-92a8141b9dcb.jpg"
+			"img":  "/img/Laurent Broudoux.jpg"
 		},		
 		{
 			"name": "Sho Kaneko",
 			"title": "Founder of Repoch",
-			"img": "https://pbs.twimg.com/profile_images/1680155599227502594/14ASdMcD_400x400.jpg"
+			"img":"/img/Sho Kaneko.jpg"
 		},
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2964/3f41ea5b-34ea-496e-a0f0-c17296d1d032.jpg"
+			"img": "/img/Thulisile Sibanda.jpg"
 		},
 		{
 			"name": "James Gough",
 			"title": "Distinguished Engineer at Morgan Stanley",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2201/conversions/6d4f5dcd-52e6-41f8-8862-7ca096bb6b47-square.jpg"
+			"img": "/img/James Gough.jpg"
 		},
 		{
 			"name": "Will Osbourne",
 			"title": "Technology Associate at Morgan Stanley",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2990/conversions/dc3950b7-fa4a-4d89-b930-8e62bc883b6f-square.jpg"
+			"img": "/img/Will Osbourne.jpg"
 		},
 		{
 			"name": "Swen-Helge Huber",
 			"title": "Senior Director, Office of the CTO at Solace",
-			"img": "https://user-images.githubusercontent.com/66913810/262295277-4cab51aa-e336-4f13-9e63-6eea20ad411a.png"
+			"img":"/img/Swen-Helge Huber.png"
 		}]
 	},
 	{
