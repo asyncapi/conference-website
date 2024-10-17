@@ -56,7 +56,7 @@ export default function Home() {
 			>
 				<div className='text-center'>
 					<div className='flex items-center justify-center'>
-						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Speakers</div>
+						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Speakers</div>
 					</div>
 				</div>
 				<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
@@ -165,7 +165,7 @@ export default function Home() {
 					</div>
 				</div>
 			<div id='tickets' className='flex items-center'>
-				<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
+				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
