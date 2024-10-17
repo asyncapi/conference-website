@@ -216,30 +216,6 @@ export default function Home() {
               <TicketCards key={city.name} city={city} className="lg:mt-10" />
             ))}
           </div>
-          {/* Past Events */}
-          <div id="past-events" className="flex items-center mt-20">
-            <div className="w-[40px] h-[3px] bg-gray-400" />
-            <div className="ml-4 text-lg sm:text-sm text-white font-semi-bold">
-              Past Events
-            </div>
-          </div>
-
-          <Heading
-            typeStyle="heading-md"
-            className="text-gradient text-center lg:mt-10"
-          >
-            Past Events
-          </Heading>
-          <div className="max-w-3xl sm:w-full text-center">
-            <Paragraph
-              typeStyle="body-lg"
-              className="mt-6"
-              textColor="text-gray-200"
-            >
-              Discover the previous events of AsyncAPI Conference, where
-              industry leaders shared valuable insights.
-            </Paragraph>
-          </div>
 
           <div className="w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col">
             {pastCities.map((city) => (
