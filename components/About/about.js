@@ -12,8 +12,7 @@ function About() {
 			</div>
 				<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 				<div className='flex items-center lg:justify-center'>
-					<div className='w-[40px] h-[3px] bg-blue-400' />
-						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>About The Event</div>
+						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>About The Event</div>
 					</div>
 					<Heading typeStyle='heading-md' className='text-gradient lg:mt-10'>
 					AACoT'24
