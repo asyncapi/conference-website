@@ -1,4 +1,3 @@
-
 [
 	{
 		"location": "",
@@ -164,14 +163,66 @@
 	{
 		"city": "Paris",
 		"location": "Paris, France",
-		"lists": [],
+		"lists": [
+			{
+				"name": "Dr. Annegret Junker",
+				"title": "Chief Software Architect at codecentric AG",
+				"img": "img/paris-images/Annegret.webp"
+			},
+			{
+				"name": "Leonid Lukyanov",
+				"title": "Co-Founder, CEO at Aklivity",
+				"img": "img/paris-images/Leonid.webp"
+			},			
+			{
+				"name": "Hugo Guerrero",
+				"title": "Developer Advocate at Redhat",
+				"img": "img/paris-images/Hugo.webp"
+			},			
+			{
+				"name": "Naresh Jain",
+				"title": "Founder, CEO at Specmatic",
+				"img": "img/paris-images/Naresh.webp"
+			},			
+			{
+				"name": "Frank Kilcommins",
+				"title": "Principal API Technical Evangelist at SmartBear",
+				"img": "img/paris-images/Frank.webp"
+			},			
+			{
+				"name": "Laurent Broudoux",
+				"title": "Co-founder at Microcks",
+				"img": "img/paris-images/Laurent.webp"
+			},			
+			{
+				"name": "Hari Krishnan",
+				"title": "Co-Founder, CTO at Specmatic",
+				"img": "img/paris-images/Hari.webp"
+			},			
+			{
+				"name": "Joel Rosario",
+				"title": "Chief Scientist at Specmatic",
+				"img": "img/paris-images/Joel.webp"
+			},			
+			{
+				"name": "Julien Testut",
+				"title": "Senior Principal Product Manager at Oracle",
+				"img": "img/paris-images/Julien.webp"
+			},			
+			{
+				"name": "Alessandro Cagnetti",
+				"title": "Customer Engineering at Solace",
+				"img": "img/paris-images/Alessandro.webp"
+			}
+		],
 		"agenda": null
 	},
 
 	{
 		"city": "Online",
 		"location": "Online Edition",
-		"lists": [			{
+		"lists": [
+		{
 			"name": "Hari Krishnan",
 			"title": "Co-founder, CTO at Specmatic",
 			"img": "img/online-conf-images/HariKrishanan.webp"
@@ -210,7 +261,18 @@
 			"name": "Giri Venkatesan",
 			"title": "Principal Developer Advocate and Architect at Solace",
 			"img": "img/online-conf-images/GiriVenkatesan.webp"
-		}],
+		},
+		{
+			"name": "Dr. Annegret Junker",
+			"title": "Chief Software Architect at codecentric AG",
+			"img": "img/online-conf-images/Annegret.webp"
+		},
+		{
+			"name": "Lukasz Gornicki",
+			"title": "Executive Director at AsyncAPI Initiative",
+			"img": "img/online-conf-images/Lukasz.webp"
+		}
+	],
 		"agenda": null
 	}
 ]

@@ -5,7 +5,7 @@
 		"date": "30th October 2024",
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-		"img": "/img/testMic.png",
+		"img": "/img/testMic.webp",
 		"address": "AsyncAPI Youtube Channel",
 		"map": "https://www.youtube.com/@AsyncAPI",
 		"sponsors": [
@@ -52,7 +52,7 @@
 		"name": "Paris",
 		"country": "France",
 		"date": "December 3-5, 2024",
-		"cfpdate":"October 12, 2024",
+		"cfpdate":"Not announced yet",
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
@@ -62,7 +62,6 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+		"ended": true
 	}
 ]
