@@ -17,6 +17,7 @@ function Venue({ className, city }) {
 						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
 							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
 						</button>
+						<div></div>
 					</div>
 					<div></div>
 					<div className='text-white'>

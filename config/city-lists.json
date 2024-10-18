@@ -46,7 +46,8 @@
 		],
 		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
 		"isFree": true,
-		"ended": true
+		"ended": true,
+		"recordings":"https://youtube.com/playlist?list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5&si=YPmjUsj5mU6FpLhB"
 	},
 	{
 		"name": "Paris",

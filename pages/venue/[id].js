@@ -56,7 +56,7 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-						{city.ended ? "" : <div className='m-[30px]'>
+						{city.ended ? (city.recordings && <a href={city.recordings}><Button className='text-white m-7 py-0'>View Recordings</Button></a>): <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
 						</a>}
