@@ -1,10 +1,11 @@
-import React, {useState,useRef,useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function Dropdown({ active, items, setOptions, setOptions2 }) {
-    const [show, setShow] = useState(false)
+	const [show, setShow] = useState(false);
 	const dropdownRef = useRef(null);
+
+	// Handle click outside the dropdown
 	useEffect(() => {
-		//  This checks if the click event occurred outside the dropdown, if true we closes the dropdown. 
 		function handleClickOutside(event) {
 			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
 				setShow(false);
@@ -15,12 +16,13 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
 	}, [dropdownRef]);
+
 	return (
-		<div class='relative inline-block w-full' ref={dropdownRef}>
+		<div className='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
+					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm gradient-bg hover:bg-gray-50 no-border rounded-md'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
@@ -34,33 +36,23 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 						aria-hidden='true'
 					>
 						<path
-							fill-rule='evenodd'
+							fillRule='evenodd'
 							d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'
-							clip-rule='evenodd'
+							clipRule='evenodd'
 						/>
 					</svg>
 				</button>
 			</div>
-			{/* 
-  <!--
-    Dropdown menu, show/hide based on menu state.
 
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  --> */}
 			{show && (
 				<div
-					className='w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
+					className='w-full md:w-auto absolute right-0 z-10 mt-2 origin-top-right rounded-md backdrop-blur-sm bg-white/70 shadow-lg ring-1 ring-gray-400 ring-opacity-5 focus:outline-none transition-all duration-200 ease-in-out transform scale-95'
 					role='menu'
 					aria-orientation='vertical'
 					aria-labelledby='menu-button'
-					tabindex='-1'
+					tabIndex='-1'
 				>
-					<div className='' role='none'>
+					<div className='py-2' role='none'>
 						{items &&
 							items.map((item) => {
 								return (
@@ -71,9 +63,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
+										className={`text-gray-700 block px-4 py-3 text-md hover:text-white cursor-pointer navbg hover:bg-gradient-to-r from-purple-500 to-blue-500`}
 										role='menuitem'
-										tabindex='-1'
+										tabIndex='-1'
 										id='menu-item-0'
 									>
 										{item.city}
