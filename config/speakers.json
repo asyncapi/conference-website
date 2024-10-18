@@ -213,6 +213,11 @@
 				"name": "Alessandro Cagnetti",
 				"title": "Customer Engineering at Solace",
 				"img": "img/paris-images/Alessandro.webp"
+			},			
+			{
+				"name": "Jonathan Michaux",
+				"title": "Product Manager at Gravitee",
+				"img": "img/paris-images/Jonathan.webp"
 			}
 		],
 		"agenda": null
@@ -273,6 +278,123 @@
 			"img": "img/online-conf-images/Lukasz.webp"
 		}
 	],
-		"agenda": null
+		"agenda": [
+			{
+                "time": "10:00 AM UTC - 10:20 AM UTC",
+                "session": "Welcome Speech",
+                "speaker": 6,
+                "type": "Welcome Note"
+            },
+            {
+                "time": "10:20 AM UTC - 10:30 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "10:30 AM UTC - 11:00 AM UTC",
+                "session": "Using API spec as an Executable Contract To Mock and Test Microservices",
+                "speaker": 1,
+                "type": "Keynote Speaker"
+            },
+            {
+                "time": "11:00 AM UTC - 11:10 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "11:10 AM UTC - 11:40 AM UTC",
+                "session": "The Art of Innovation: Designers Leading Open Source",
+                "speaker": 5,
+                "type": "Community Session"
+            },
+            {
+                "time": "11:40 AM UTC - 11:50 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "11:50 AM UTC - 12:20 PM UTC",
+                "session": "AsyncAPI In Production",
+                "speaker": 10,
+                "type": "Technical Session"
+            },
+            {
+                "time": "12:20 PM UTC - 12:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "12:30 PM UTC - 13:00PM UTC",
+                "session": "My experience of doing GSoC '24 in AsyncAPI",
+                "speaker": 7,
+                "type": "Community Session"
+            },
+            {
+                "time": "13:00 PM UTC - 13:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "13:30 PM UTC - 2:00 PM UTC",
+                "session": "AsyncAPI Full Code Generation for Java with ZenWave SDK",
+                "speaker": 3,
+                "type": "Technical Session"
+            },
+            {
+                "time": "14:00 PM UTC - 14:10 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "14:10 PM UTC - 14:40 PM UTC",
+                "session": "The State of AsyncAPI Initiative",
+                "speaker": 6,
+                "type": "Community Session"
+            },
+            {
+                "time": "14:40 PM UTC - 14:50 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "14:50 PM UTC - 15:20 PM UTC",
+                "session": "Streamlining EDA: AsyncAPI-Driven Design, Documentation, and Testing",
+                "speaker": 8,
+                "type": "Technical Session"
+            },
+            {
+                "time": "15:20 PM UTC - 15:40 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "15:40 PM UTC - 16:10 PM UTC",
+                "session": "Sustaining Open Source Beyond Code: The Importance of Marketing and Funding",
+                "speaker": 4,
+                "type": "Community Session"
+            },
+            {
+                "time": "16:10 PM UTC - 16:20 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "16:20 PM UTC - 16:40 PM UTC",
+                "session": "AsyncAPI and DDD - a pretty couple",
+                "speaker": 9,
+                "type": "Technical Session"
+            },
+            {
+                "time": "16:40 PM UTC - 16:50 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "16:50 PM UTC - 17:20 PM UTC",
+                "session": "TBA",
+                "speaker": 2,
+                "type": "Community Session"
+            }
+		]
 	}
 ]
