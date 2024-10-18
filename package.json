@@ -13,6 +13,8 @@
     "release": "echo \"No release to npm for this project\""
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.7.4",
     "d3": "^7.8.5",
