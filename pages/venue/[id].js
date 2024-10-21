@@ -67,10 +67,10 @@ function Venue({ city }) {
 					</div>
 				</div>
 			</div>
-			{city.ended ?  (city.recordings && 
+			{city.ended ?  (city.playlist && 
 			<div className=' my-10 px-40 sm:px-5 flex justify-center flex-col items-center w-[100%] h-[500px] sm:h-72'>
 				<h1 className='text-white font-bold text-5xl mb-10'>Recordings</h1>
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=92z0xOVroBuDUvMR&amp;list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe width="100%" height="100%" src={city.playlist} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 		    ) : <div></div>}
 			<div
