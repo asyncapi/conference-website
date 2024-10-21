@@ -56,7 +56,7 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className='text-white mt-[24px]'>
 							{city.date}
 						</Heading>
-						{city.ended ? (city.recordings && <a href={city.recordings}><Button className='text-white m-7 py-0'>View Recordings</Button></a>): <div className='m-[30px]'>
+						{city.ended ? <div></div>: <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
 						</a>}
@@ -67,6 +67,12 @@ function Venue({ city }) {
 					</div>
 				</div>
 			</div>
+			{city.ended ?  (city.recordings && 
+			<div className=' my-10 px-40 sm:px-5 flex justify-center flex-col items-center w-[100%] h-[500px] sm:h-72'>
+				<h1 className='text-white font-bold text-5xl mb-10'>Recordings</h1>
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=92z0xOVroBuDUvMR&amp;list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+		    ) : <div></div>}
 			<div
 				id='agenda'
 				className='border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center '
