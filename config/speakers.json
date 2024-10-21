@@ -167,57 +167,57 @@
 			{
 				"name": "Dr. Annegret Junker",
 				"title": "Chief Software Architect at codecentric AG",
-				"img": "img/paris-images/Annegret.webp"
+				"img": "/img/paris-images/Annegret.webp"
 			},
 			{
 				"name": "Leonid Lukyanov",
 				"title": "Co-Founder, CEO at Aklivity",
-				"img": "img/paris-images/Leonid.webp"
+				"img": "/img/paris-images/Leonid.webp"
 			},			
 			{
 				"name": "Hugo Guerrero",
 				"title": "Developer Advocate at Redhat",
-				"img": "img/paris-images/Hugo.webp"
+				"img": "/img/paris-images/Hugo.webp"
 			},			
 			{
 				"name": "Naresh Jain",
 				"title": "Founder, CEO at Specmatic",
-				"img": "img/paris-images/Naresh.webp"
+				"img": "/img/paris-images/Naresh.webp"
 			},			
 			{
 				"name": "Frank Kilcommins",
 				"title": "Principal API Technical Evangelist at SmartBear",
-				"img": "img/paris-images/Frank.webp"
+				"img": "/img/paris-images/Frank.webp"
 			},			
 			{
 				"name": "Laurent Broudoux",
 				"title": "Co-founder at Microcks",
-				"img": "img/paris-images/Laurent.webp"
+				"img": "/img/paris-images/Laurent.webp"
 			},			
 			{
 				"name": "Hari Krishnan",
 				"title": "Co-Founder, CTO at Specmatic",
-				"img": "img/paris-images/Hari.webp"
+				"img": "/img/paris-images/Hari.webp"
 			},			
 			{
 				"name": "Joel Rosario",
 				"title": "Chief Scientist at Specmatic",
-				"img": "img/paris-images/Joel.webp"
+				"img": "/img/paris-images/Joel.webp"
 			},			
 			{
 				"name": "Julien Testut",
 				"title": "Senior Principal Product Manager at Oracle",
-				"img": "img/paris-images/Julien.webp"
+				"img": "/img/paris-images/Julien.webp"
 			},			
 			{
 				"name": "Alessandro Cagnetti",
 				"title": "Customer Engineering at Solace",
-				"img": "img/paris-images/Alessandro.webp"
+				"img": "/img/paris-images/Alessandro.webp"
 			},			
 			{
 				"name": "Jonathan Michaux",
 				"title": "Product Manager at Gravitee",
-				"img": "img/paris-images/Jonathan.webp"
+				"img": "/img/paris-images/Jonathan.webp"
 			}
 		],
 		"agenda": null
@@ -230,52 +230,52 @@
 		{
 			"name": "Hari Krishnan",
 			"title": "Co-founder, CTO at Specmatic",
-			"img": "img/online-conf-images/HariKrishanan.webp"
+			"img": "/img/online-conf-images/HariKrishanan.webp"
 		},
 		{
 			"name": "Yuan Yuan",
 			"title": "Software Engineer",
-			"img": "img/online-conf-images/YuanYuan.webp"
+			"img": "/img/online-conf-images/YuanYuan.webp"
 		},
 		{
 			"name": "Ivan Garcia Sainz-Aja",
 			"title": "Java Architect",
-			"img": "img/online-conf-images/IvanGarciaSainz-Aja.webp"
+			"img": "/img/online-conf-images/IvanGarciaSainz-Aja.webp"
 		},
 		{
 			"name": "Atinuke Oluwabamikemi Kayode",
 			"title": "Community Marketing Specialist at AsyncAPI Initiative",
-			"img": "img/online-conf-images/AtinukeOluwabamikemiKayode.webp"
+			"img": "/img/online-conf-images/AtinukeOluwabamikemiKayode.webp"
 		},
 		{
 			"name": "Aishat Muibudeen",
 			"title": "Product Designer and UX Researcher",
-			"img": "img/online-conf-images/AISHAT(Maya)MUIBUDEEN.webp"
+			"img": "/img/online-conf-images/AISHAT(Maya)MUIBUDEEN.webp"
 		},		
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
-			"img": "img/online-conf-images/VThulisileSibanda.webp"
+			"img": "/img/online-conf-images/VThulisileSibanda.webp"
 		},
 		{
 			"name": "Ankit Dash",
 			"title": "Full Stack Developer",
-			"img": "img/online-conf-images/AnkitDash.webp"
+			"img": "/img/online-conf-images/AnkitDash.webp"
 		},
 		{
 			"name": "Giri Venkatesan",
 			"title": "Principal Developer Advocate and Architect at Solace",
-			"img": "img/online-conf-images/GiriVenkatesan.webp"
+			"img": "/img/online-conf-images/GiriVenkatesan.webp"
 		},
 		{
 			"name": "Dr. Annegret Junker",
 			"title": "Chief Software Architect at codecentric AG",
-			"img": "img/online-conf-images/Annegret.webp"
+			"img": "/img/online-conf-images/Annegret.webp"
 		},
 		{
 			"name": "Lukasz Gornicki",
 			"title": "Executive Director at AsyncAPI Initiative",
-			"img": "img/online-conf-images/Lukasz.webp"
+			"img": "/img/online-conf-images/Lukasz.webp"
 		}
 	],
 		"agenda": [
