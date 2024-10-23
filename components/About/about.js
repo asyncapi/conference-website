@@ -12,8 +12,7 @@ function About() {
 			</div>
 				<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 				<div className='flex items-center lg:justify-center'>
-					<div className='w-[40px] h-[3px] bg-blue-400' />
-						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>About The Event</div>
+						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>About The Event</div>
 					</div>
 					<Heading typeStyle='heading-md' className='text-gradient lg:mt-10'>
 					AACoT'24
@@ -30,25 +29,24 @@ function About() {
 					</Paragraph>
 					<div className='mt-10 flex gap-4 sm:flex-col lg:justify-center'>
 						<a
-						href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
-						target='_blank'
-						rel='noreferrer'
+							className='flex justify-center'
+							href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
+							target='_blank'
+							rel='noreferrer'
 						>
 							<Button className='w-[200px]'>Become a sponsor now</Button>
 						</a>
-						<a href='/pdf/conf-2024.pdf' download= {`conf ${new Date().getFullYear()}.pdf`} >
-						<Button overlay={true} className='w-[240px] border'>
-						<div className='flex gap-2 justify-center'>
-						<div>
-							<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain'/>
-						</div>
-						<div>
-							Sponsorship prospectus
-						</div>
-						</div>
+						<a className='flex justify-center ' href='/pdf/conf-2024.pdf' download={`conf ${new Date().getFullYear()}.pdf`} >
+							<Button overlay={true} className='w-[240px] border'>
+								<div className='flex gap-2 justify-center items-center'>
+									<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain' />
+									<div>
+										Sponsorship prospectus
+									</div>
+								</div>
 							</Button>
 						</a>
-				</div>
+					</div>
 				</div>
 			</div>
 		</div>
