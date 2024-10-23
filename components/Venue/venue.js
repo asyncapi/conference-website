@@ -7,7 +7,7 @@ function Venue({ className, city }) {
 	return (
 		<Link href={`/venue/${city.name}`}>
 			<div style={{'--image-url': `url(${city.img})`}}
-				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer'>
+				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer m-2'>
 				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex items-center'>
 						{city.cfp? <div className='border text-white text-md rounded-lg p-1 text-center mt-2'>cfp is open</div> :null}
@@ -17,6 +17,7 @@ function Venue({ className, city }) {
 						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
 							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
 						</button>
+						<div></div>
 					</div>
 					<div></div>
 					<div className='text-white'>
