@@ -79,10 +79,10 @@ function Venue({ city }) {
 			</div>
 			<div id="recordings" className='flex justify-center'>
 				{city.ended ?  (city.playlist && 
-			<div className=' pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72'>
-				<h1 className='text-white font-bold text-5xl mb-10'>Recordings</h1>
-				<iframe width="100%" height="100%" src={city.playlist} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
+			    <div className='pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72'>
+				    <h1 className='text-white font-bold text-5xl mb-10'>Recordings</h1>
+				     <iframe width="100%" height="100%" src={city.playlist} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			    </div>
 		    ) : <div></div>}
 			</div>
 			<div
