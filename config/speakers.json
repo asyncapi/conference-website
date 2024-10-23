@@ -233,9 +233,9 @@
 			"img": "/img/online-conf-images/HariKrishanan.webp"
 		},
 		{
-			"name": "Yuan Yuan",
-			"title": "Software Engineer",
-			"img": "/img/online-conf-images/YuanYuan.webp"
+			"name": "Swen-Helge Huber",
+			"title": "Senior Director, Office of the CTO at Solace",
+			"img": "/img/Swen-Helge Huber.webp"
 		},
 		{
 			"name": "Ivan Garcia Sainz-Aja",
@@ -276,6 +276,11 @@
 			"name": "Lukasz Gornicki",
 			"title": "Executive Director at AsyncAPI Initiative",
 			"img": "/img/online-conf-images/Lukasz.webp"
+		},
+		{
+			"name": "Daniel Kocot",
+			"title": "Head of API Consulting at codecentric AG",
+			"img": "/img/online-conf-images/Daniel.webp"
 		}
 	],
 		"agenda": [
@@ -391,9 +396,20 @@
             },
             {
                 "time": "16:50 PM UTC - 17:20 PM UTC",
-                "session": "TBA",
+                "session": "The Many Meanings Of An AsyncAPI File",
                 "speaker": 2,
-                "type": "Community Session"
+                "type": "Technical Session"
+            },
+			{
+                "time": "17:20 PM UTC - 17:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+			{
+                "time": "17:30 PM UTC - 18:00 PM UTC",
+                "session": "TBA",
+                "speaker": 11,
+                "type": "Technical Session"
             }
 		]
 	}
