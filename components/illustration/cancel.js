@@ -11,7 +11,7 @@ function Cancel() {
 				fill='#ffffff'
 				stroke='#ffffff'
 			>
-				<g id='SVGRepo_bgCarrier' stroke-width='0' />
+				<g id='SVGRepo_bgCarrier' strokeWidth='0' />
 
 				<g
 					id='SVGRepo_tracerCarrier'

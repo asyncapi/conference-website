@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 
 function Venue({ city }) {
 	return (
-		<div>
+		<div data-test={`venue-${city.name}`}>
 			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[60px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
@@ -60,7 +60,7 @@ function Venue({ city }) {
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
 						</a>}
-						{city.cfp && <a href={city.name === 'online'? "/venue/online/register" :city.cfp}target={city.name=='Online'?"":'_blank'} rel='noreferrer'>
+						{city.cfp && <a href={city.name === 'Online'? "/venue/online/register" :city.cfp}target={city.name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
 						</a>}
 						</div>}
