@@ -211,16 +211,20 @@ export default function Home() {
             </Paragraph>
           </div>
           {/* Upcoming Events */}
-          <div className="w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col">
-            {upcomingCities.map((city) => (
-              <TicketCards key={city.name} city={city} className="lg:mt-10" />
-            ))}
-          </div>
+          <div className="w-[1000px] lg:w-full mt-10 flex flex-col gap-16">
+            {/* Upcoming Events */}
+            <div className="flex justify-between lg:flex-col space-x-6 lg:space-x-0">
+              {upcomingCities.map((city) => (
+                <TicketCards key={city.name} city={city} className="lg:mt-10" />
+              ))}
+            </div>
 
-          <div className="w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col">
-            {pastCities.map((city) => (
-              <TicketCards key={city.name} city={city} className="lg:mt-10" />
-            ))}
+            {/* Past Events */}
+            <div className="flex justify-between lg:flex-col space-x-6 lg:space-x-0">
+              {pastCities.map((city) => (
+                <TicketCards key={city.name} city={city} className="lg:mt-10" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
