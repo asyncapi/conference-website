@@ -60,7 +60,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 					aria-labelledby='menu-button'
 					tabindex='-1'
 				>
-					<div className='' role='none'>
+					<div className='rounded-md gradient-bg' role='none'>
 						{items &&
 							items.map((item) => {
 								return (
@@ -71,7 +71,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
+										className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
 										role='menuitem'
 										tabindex='-1'
 										id='menu-item-0'
