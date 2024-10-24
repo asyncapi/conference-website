@@ -20,7 +20,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
+					className='flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
