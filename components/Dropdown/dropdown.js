@@ -16,7 +16,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 		};
 	}, [dropdownRef]);
 	return (
-		<div class='relative inline-block w-full' ref={dropdownRef}>
+		<div className='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
@@ -34,9 +34,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 						aria-hidden='true'
 					>
 						<path
-							fill-rule='evenodd'
+							fillRule='evenodd'
 							d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'
-							clip-rule='evenodd'
+							clipRule='evenodd'
 						/>
 					</svg>
 				</button>
@@ -58,7 +58,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 					role='menu'
 					aria-orientation='vertical'
 					aria-labelledby='menu-button'
-					tabindex='-1'
+					tabIndex='-1'
 				>
 					<div className='rounded-md gradient-bg' role='none'>
 						{items &&
@@ -73,7 +73,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 										}}
 										className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
 										role='menuitem'
-										tabindex='-1'
+										tabIndex='-1'
 										id='menu-item-0'
 									>
 										{item.city}
