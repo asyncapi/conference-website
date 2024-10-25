@@ -318,57 +318,57 @@
                 "type": "Break"
             },
             {
-                "time": "11:50 AM UTC - 12:20 PM UTC",
+                "time": "11:50 AM UTC - 12:30 PM UTC",
                 "session": "AsyncAPI In Production",
                 "speaker": 10,
                 "type": "Technical Session"
             },
             {
-                "time": "12:20 PM UTC - 12:30 PM UTC",
+                "time": "12:30 PM UTC - 12:40 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "12:30 PM UTC - 13:00PM UTC",
+                "time": "12:40 PM UTC - 13:10PM UTC",
                 "session": "My experience of doing GSoC '24 in AsyncAPI",
                 "speaker": 7,
                 "type": "Community Session"
             },
             {
-                "time": "13:00 PM UTC - 13:30 PM UTC",
+                "time": "13:10 PM UTC - 13:40 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "13:30 PM UTC - 2:00 PM UTC",
+                "time": "13:40 PM UTC - 2:10 PM UTC",
                 "session": "AsyncAPI Full Code Generation for Java with ZenWave SDK",
                 "speaker": 3,
                 "type": "Technical Session"
             },
             {
-                "time": "14:00 PM UTC - 14:10 PM UTC",
+                "time": "14:10 PM UTC - 14:20 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "14:10 PM UTC - 14:40 PM UTC",
+                "time": "14:20 PM UTC - 14:50 PM UTC",
                 "session": "The State of AsyncAPI Initiative",
                 "speaker": 6,
                 "type": "Community Session"
             },
             {
-                "time": "14:40 PM UTC - 14:50 PM UTC",
+                "time": "14:50 PM UTC - 15:00 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "14:50 PM UTC - 15:20 PM UTC",
+                "time": "15:00 PM UTC - 15:30 PM UTC",
                 "session": "Streamlining EDA: AsyncAPI-Driven Design, Documentation, and Testing",
                 "speaker": 8,
                 "type": "Technical Session"
             },
             {
-                "time": "15:20 PM UTC - 15:40 PM UTC",
+                "time": "15:30 PM UTC - 15:40 PM UTC",
                 "session": "",
                 "type": "Break"
             },
@@ -379,35 +379,35 @@
                 "type": "Community Session"
             },
             {
-                "time": "16:10 PM UTC - 16:20 PM UTC",
+                "time": "16:20 PM UTC - 16:30 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "16:20 PM UTC - 16:40 PM UTC",
+                "time": "16:30 PM UTC - 17:00 PM UTC",
                 "session": "AsyncAPI and DDD - a pretty couple",
                 "speaker": 9,
                 "type": "Technical Session"
             },
             {
-                "time": "16:40 PM UTC - 16:50 PM UTC",
+                "time": "17:00 PM UTC - 17:10 PM UTC",
                 "session": "",
                 "type": "Break"
             },
             {
-                "time": "16:50 PM UTC - 17:20 PM UTC",
+                "time": "17:10 PM UTC - 17:40 PM UTC",
                 "session": "The Many Meanings Of An AsyncAPI File",
                 "speaker": 2,
                 "type": "Technical Session"
             },
 			{
-                "time": "17:20 PM UTC - 17:30 PM UTC",
+                "time": "17:40 PM UTC - 17:50 PM UTC",
                 "session": "",
                 "type": "Break"
             },
 			{
-                "time": "17:30 PM UTC - 18:00 PM UTC",
-                "session": "TBA",
+                "time": "17:50 PM UTC - 18:20 PM UTC",
+                "session": "AsyncAPI and CloudEvents in the Enterprise",
                 "speaker": 11,
                 "type": "Technical Session"
             }
