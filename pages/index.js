@@ -175,11 +175,12 @@ export default function Home() {
 			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
 			</Paragraph>
 			</div>
-			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
-				{cities.map((city) => {
-					if(city.ended === false){
+			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col flex-wrap'>
+				{cities.filter((x)=>x.ended == false).map((city) => {
 						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
-					}
+				})}
+				{cities.filter((x)=>x.ended == true).map((city) => {
+						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
 				})}
 			</div>
 			</div>

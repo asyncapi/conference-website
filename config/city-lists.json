@@ -64,6 +64,6 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": true
+		"ended": false
 	}
 ]
