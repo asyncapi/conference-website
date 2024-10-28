@@ -3,8 +3,9 @@ import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Image from 'next/image';
+import Link from 'next/link';
 
-function Sponsors({imgs}) {
+function Sponsors({imgs}) {	 //imgs = [{image: 'url', sponsorUrl: 'url'}]
   return (
 		<div className='sponsor-bg container text-center'>
 			<div className='py-[80px] flex flex-col items-center'>
@@ -20,8 +21,12 @@ function Sponsors({imgs}) {
 				<div className='flex justify-center  w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
 					{imgs &&
 						imgs.map((img) => (
-							<div key={img} className='w-[300px] h-[150px] flex items-center'>
-								<Image src={img} alt={img} height={210} width={300}/>
+
+							<div key={img.image} className='w-[300px] h-[150px] flex items-center'>
+								<Link href={img.sponsorUrl} target='_blank'>
+									<Image src={img.image} alt={img.image} height={210} width={300}/>
+								</Link>	
+								
 							</div>
 						))}
 				</div>
@@ -29,10 +34,14 @@ function Sponsors({imgs}) {
 				<Heading typeStyle='heading-md' className='text-white mb-12 sm:text-2xl'>Financial Sponsor</Heading>
 				<div className='flex flex-col space-y-6'>
   					<div className="w-[250px] h-[50px]">
-    					<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />	
+						<Link href={"https://www.gravitee.io/"} target='_blank'>
+    						<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />	
+						</Link>	
   					</div>
   					<div className="w-[240px] h-[70px]">
-   						<Image src="/img/postman.png" alt='financial sponsor' width={235} height={70} />	
+						<Link href={"https://www.postman.com/"} target='_blank'>
+   							<Image src="/img/postman.png" alt='financial sponsor' width={235} height={70} />	
+						</Link>
   					</div>
 			</div>	
 				</div>
