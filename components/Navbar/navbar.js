@@ -75,7 +75,7 @@ function Navbar() {
 					<div className='flex items-center sm:justify-between sm:w-full'>
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer'>
-								<Image src='/img/logo.png' alt='conference logo' height={0} width={0} style={{width:'120px', height: "auto" }} />
+								<Image src='/img/logo.png' alt='conference logo' width={120} height={33}  />
 							</div>
 						</Link>
 					</div>

@@ -32,7 +32,7 @@ function Sponsors({imgs}) {
     					<Image src="/img/graviteeio.svg" alt='financial sponsor' width={250} height={50} />	
   					</div>
   					<div className="w-[240px] h-[70px]">
-   						<Image src="/img/postman.png" alt='financial sponsor' height={0} width={0} style={{width:'235px', height: "auto" }} />	
+   						<Image src="/img/postman.png" alt='financial sponsor' width={235} height={70} />	
   					</div>
 			</div>	
 				</div>
