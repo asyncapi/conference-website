@@ -185,7 +185,7 @@ export default function Home() {
 			</div>
 			</div>
 			<div id='sponsors' className='mt-20'>
-				<Sponsors imgs={[{image:'/img/apidays.png',sponsorUrl:"https://www.apidays.global/"}]} />
+				<Sponsors eventSponsors={[{image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"}]} financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}  />
 			</div>
 			<div className='mt-5'>
 			<Subscription/>
