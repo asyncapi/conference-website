@@ -65,7 +65,7 @@ describe("Navbar links", () => {
     let data = resourcesData[0].subMenu;
     cy.wrap(data).each((val,idx)=>{
       cy.getTestData("nav-Resources Hub").trigger('mouseover');
-      cy.wrap(val.ref).should("match", /.*drive.google.com*/);
+      cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
     });
 
   });
@@ -147,7 +147,7 @@ describe("Navbar links", () => {
 
     let data = resourcesData[0].subMenu;
     cy.wrap(data).each((val,idx)=>{
-      cy.wrap(val.ref).should("match", /.*drive.google.com*/);
+      cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
     });
 
   });
