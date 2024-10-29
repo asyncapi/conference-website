@@ -37,17 +37,17 @@
 			{
 				"name": "Hugo Guerrero",
 				"title": "Developer Advocate at Redhat",
-				"img": "https://avatars.githubusercontent.com/u/1001939?v=4"
+				"img": "/img/Hugo Guerrero.webp"
 			},
 			{
 				"name": "Jonas Lagoni",
 				"title": "Lead Software Engineer at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1507770710789402630/w4IZfLUZ_400x400.jpg"
+				"img": "/img/Jonas Lagoni.webp"
 			},
 			{
 				"name": "Lukasz Gornicki",
 				"title": "Executive Director at AsyncAPI Initiative and Developer Relations Manager at Postman",
-				"img": "https://pbs.twimg.com/profile_images/1683523954957328393/W009Rxsj_400x400.jpg"
+				"img": "/img/Lukasz Gornicki.webp"
 			}
 		]
 	},
@@ -112,52 +112,52 @@
 		"lists": [			{
 			"name": "Dale Lane",
 			"title": "Chief Architect at IBM",
-			"img": "https://user-images.githubusercontent.com/66913810/261602797-91ddd137-f71b-4486-84bf-de98ac58e839.png"
+			"img": "/img/Dale Lane.webp"
 		},
 		{
 			"name": "Lorna Mitchell",
 			"title": "VP of Developer Experience at Redocly",
-			"img": "https://lornajane.net/wp-content/uploads/2011/08/IMG_9410-smaller.jpg"
+			"img": "/img/Lorna Mitchell.webp"
 		},
 		{
 			"name": "Artur Ciocanu",
 			"title": "Senior Computer Scientist at Adobe",
-			"img": "https://user-images.githubusercontent.com/66913810/262294782-32d6cf14-3e7b-4b68-b8a6-82de97166c7d.jpg"
+			"img": "/img/Artur Ciocanu.webp"
 		},
 		{
 			"name": "Eduardo Maldonado Fonseca Silva ",
 			"title": "Senior DevOps Engineer at The LEGO Group ",
-			"img": "/img/Eduardo.jpeg"
+			"img": "/img/Eduardo.webp"
 		},
 		{
 			"name": "Laurent Broudoux",
 			"title": "Co-founder of Microcks",
-			"img": "https://user-images.githubusercontent.com/66913810/279639901-07c64c42-deee-4520-b36f-92a8141b9dcb.jpg"
+			"img":  "/img/Laurent Broudoux.webp"
 		},		
 		{
 			"name": "Sho Kaneko",
 			"title": "Founder of Repoch",
-			"img": "https://pbs.twimg.com/profile_images/1680155599227502594/14ASdMcD_400x400.jpg"
+			"img":"/img/Sho Kaneko.webp"
 		},
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2964/3f41ea5b-34ea-496e-a0f0-c17296d1d032.jpg"
+			"img": "/img/Thulisile Sibanda.webp"
 		},
 		{
 			"name": "James Gough",
 			"title": "Distinguished Engineer at Morgan Stanley",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2201/conversions/6d4f5dcd-52e6-41f8-8862-7ca096bb6b47-square.jpg"
+			"img": "/img/James Gough.webp"
 		},
 		{
 			"name": "Will Osbourne",
 			"title": "Technology Associate at Morgan Stanley",
-			"img": "https://apidays.s3.fr-par.scw.cloud/medias/2990/conversions/dc3950b7-fa4a-4d89-b930-8e62bc883b6f-square.jpg"
+			"img": "/img/Will Osbourne.webp"
 		},
 		{
 			"name": "Swen-Helge Huber",
 			"title": "Senior Director, Office of the CTO at Solace",
-			"img": "https://user-images.githubusercontent.com/66913810/262295277-4cab51aa-e336-4f13-9e63-6eea20ad411a.png"
+			"img":"/img/Swen-Helge Huber.webp"
 		}]
 	},
 	{
@@ -167,52 +167,57 @@
 			{
 				"name": "Dr. Annegret Junker",
 				"title": "Chief Software Architect at codecentric AG",
-				"img": "img/paris-images/Annegret.webp"
+				"img": "/img/paris-images/Annegret.webp"
 			},
 			{
 				"name": "Leonid Lukyanov",
 				"title": "Co-Founder, CEO at Aklivity",
-				"img": "img/paris-images/Leonid.webp"
+				"img": "/img/paris-images/Leonid.webp"
 			},			
 			{
 				"name": "Hugo Guerrero",
 				"title": "Developer Advocate at Redhat",
-				"img": "img/paris-images/Hugo.webp"
+				"img": "/img/paris-images/Hugo.webp"
 			},			
 			{
 				"name": "Naresh Jain",
 				"title": "Founder, CEO at Specmatic",
-				"img": "img/paris-images/Naresh.webp"
+				"img": "/img/paris-images/Naresh.webp"
 			},			
 			{
 				"name": "Frank Kilcommins",
 				"title": "Principal API Technical Evangelist at SmartBear",
-				"img": "img/paris-images/Frank.webp"
+				"img": "/img/paris-images/Frank.webp"
 			},			
 			{
 				"name": "Laurent Broudoux",
 				"title": "Co-founder at Microcks",
-				"img": "img/paris-images/Laurent.webp"
+				"img": "/img/paris-images/Laurent.webp"
 			},			
 			{
 				"name": "Hari Krishnan",
 				"title": "Co-Founder, CTO at Specmatic",
-				"img": "img/paris-images/Hari.webp"
+				"img": "/img/paris-images/Hari.webp"
 			},			
 			{
 				"name": "Joel Rosario",
 				"title": "Chief Scientist at Specmatic",
-				"img": "img/paris-images/Joel.webp"
+				"img": "/img/paris-images/Joel.webp"
 			},			
 			{
 				"name": "Julien Testut",
 				"title": "Senior Principal Product Manager at Oracle",
-				"img": "img/paris-images/Julien.webp"
+				"img": "/img/paris-images/Julien.webp"
 			},			
 			{
 				"name": "Alessandro Cagnetti",
 				"title": "Customer Engineering at Solace",
-				"img": "img/paris-images/Alessandro.webp"
+				"img": "/img/paris-images/Alessandro.webp"
+			},			
+			{
+				"name": "Jonathan Michaux",
+				"title": "Product Manager at Gravitee",
+				"img": "/img/paris-images/Jonathan.webp"
 			}
 		],
 		"agenda": null
@@ -225,54 +230,203 @@
 		{
 			"name": "Hari Krishnan",
 			"title": "Co-founder, CTO at Specmatic",
-			"img": "img/online-conf-images/HariKrishanan.webp"
+			"img": "/img/online-conf-images/HariKrishanan.webp"
 		},
 		{
-			"name": "Yuan Yuan",
-			"title": "Software Engineer",
-			"img": "img/online-conf-images/YuanYuan.webp"
+			"name": "Swen-Helge Huber",
+			"title": "Senior Director, Office of the CTO at Solace",
+			"img": "/img/Swen-Helge Huber.webp"
 		},
 		{
 			"name": "Ivan Garcia Sainz-Aja",
 			"title": "Java Architect",
-			"img": "img/online-conf-images/IvanGarciaSainz-Aja.webp"
+			"img": "/img/online-conf-images/IvanGarciaSainz-Aja.webp"
 		},
 		{
 			"name": "Atinuke Oluwabamikemi Kayode",
 			"title": "Community Marketing Specialist at AsyncAPI Initiative",
-			"img": "img/online-conf-images/AtinukeOluwabamikemiKayode.webp"
+			"img": "/img/online-conf-images/AtinukeOluwabamikemiKayode.webp"
 		},
 		{
 			"name": "Aishat Muibudeen",
 			"title": "Product Designer and UX Researcher",
-			"img": "img/online-conf-images/AISHAT(Maya)MUIBUDEEN.webp"
+			"img": "/img/online-conf-images/AISHAT(Maya)MUIBUDEEN.webp"
 		},		
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Community Manager at AsyncAPI Initiative",
-			"img": "img/online-conf-images/VThulisileSibanda.webp"
+			"img": "/img/online-conf-images/VThulisileSibanda.webp"
 		},
 		{
 			"name": "Ankit Dash",
 			"title": "Full Stack Developer",
-			"img": "img/online-conf-images/AnkitDash.webp"
+			"img": "/img/online-conf-images/AnkitDash.webp"
 		},
 		{
 			"name": "Giri Venkatesan",
 			"title": "Principal Developer Advocate and Architect at Solace",
-			"img": "img/online-conf-images/GiriVenkatesan.webp"
+			"img": "/img/online-conf-images/GiriVenkatesan.webp"
 		},
 		{
 			"name": "Dr. Annegret Junker",
 			"title": "Chief Software Architect at codecentric AG",
-			"img": "img/online-conf-images/Annegret.webp"
+			"img": "/img/online-conf-images/Annegret.webp"
 		},
 		{
 			"name": "Lukasz Gornicki",
 			"title": "Executive Director at AsyncAPI Initiative",
-			"img": "img/online-conf-images/Lukasz.webp"
+			"img": "/img/online-conf-images/Lukasz.webp"
+		},
+		{
+			"name": "Daniel Kocot",
+			"title": "Head of API Consulting at codecentric AG",
+			"img": "/img/online-conf-images/Daniel.webp"
+		},
+{
+			"name": "Yuan Yuan",
+			"title": "MSE DS Student",
+			"img": "/img/online-conf-images/YuanYuan.webp"
 		}
 	],
-		"agenda": null
+		"agenda": [
+			{
+                "time": "10:00 AM UTC - 10:20 AM UTC",
+                "session": "Welcome Speech",
+                "speaker": 6,
+                "type": "Welcome Note"
+            },
+            {
+                "time": "10:20 AM UTC - 10:30 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "10:30 AM UTC - 11:00 AM UTC",
+                "session": "Using API spec as an Executable Contract To Mock and Test Microservices",
+                "speaker": 1,
+                "type": "Keynote Speaker"
+            },
+            {
+                "time": "11:00 AM UTC - 11:10 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "11:10 AM UTC - 11:40 AM UTC",
+                "session": "The Art of Innovation: Designers Leading Open Source",
+                "speaker": 5,
+                "type": "Community Session"
+            },
+            {
+                "time": "11:40 AM UTC - 11:50 AM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "11:50 AM UTC - 12:30 PM UTC",
+                "session": "AsyncAPI In Production",
+                "speaker": 10,
+                "type": "Technical Session"
+            },
+            {
+                "time": "12:30 PM UTC - 12:40 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "12:40 PM UTC - 13:10PM UTC",
+                "session": "My experience of doing GSoC '24 in AsyncAPI",
+                "speaker": 7,
+                "type": "Community Session"
+            },
+            {
+                "time": "13:10 PM UTC - 13:40 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "13:40 PM UTC - 2:10 PM UTC",
+                "session": "AsyncAPI Full Code Generation for Java with ZenWave SDK",
+                "speaker": 3,
+                "type": "Technical Session"
+            },
+            {
+                "time": "14:10 PM UTC - 14:20 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "14:20 PM UTC - 14:50 PM UTC",
+                "session": "The State of AsyncAPI Initiative",
+                "speaker": 6,
+                "type": "Community Session"
+            },
+            {
+                "time": "14:50 PM UTC - 15:00 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "15:00 PM UTC - 15:30 PM UTC",
+                "session": "Streamlining EDA: AsyncAPI-Driven Design, Documentation, and Testing",
+                "speaker": 8,
+                "type": "Technical Session"
+            },
+            {
+                "time": "15:30 PM UTC - 15:40 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "15:40 PM UTC - 16:10 PM UTC",
+                "session": "Sustaining Open Source Beyond Code: The Importance of Marketing and Funding",
+                "speaker": 4,
+                "type": "Community Session"
+            },
+            {
+                "time": "16:20 PM UTC - 16:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "16:30 PM UTC - 17:00 PM UTC",
+                "session": "AsyncAPI and DDD - a pretty couple",
+                "speaker": 9,
+                "type": "Technical Session"
+            },
+            {
+                "time": "17:00 PM UTC - 17:10 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+            {
+                "time": "17:10 PM UTC - 17:40 PM UTC",
+                "session": "The Many Meanings Of An AsyncAPI File",
+                "speaker": 2,
+                "type": "Technical Session"
+            },
+	    {
+                "time": "17:40 PM UTC - 17:50 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+			{
+                "time": "17:50 PM UTC - 18:20 PM UTC",
+                "session": "Broadening the API Landscape: AsyncAPI and CloudEvents in the Enterprise",
+                "speaker": 11,
+                "type": "Technical Session"
+            },
+	    {
+                "time": "18:20 PM UTC - 18:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+			{
+                "time": "18:30 PM UTC - 19:00 PM UTC",
+                "session": "My GSoC Experience with AsyncAPI",
+                "speaker": 12,
+                "type": "Community Session"
+            }
+		]
 	}
 ]

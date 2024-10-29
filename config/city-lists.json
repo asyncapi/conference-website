@@ -6,8 +6,8 @@
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
 		"img": "/img/testMic.webp",
-		"address": "AsyncAPI Youtube Channel",
-		"map": "https://www.youtube.com/@AsyncAPI",
+		"address": "AsyncAPI YouTube Channel",
+		"map": "https://www.youtube.com/live/F9wHxd-v2f0?si=PT8BuAUKNmoLHRiM",
 		"sponsors": [
 			"/img/apidays.png"
 		],
@@ -46,7 +46,9 @@
 		],
 		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
 		"isFree": true,
-		"ended": true
+		"ended": true,
+		"recordings":"https://youtube.com/playlist?list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5&si=YPmjUsj5mU6FpLhB",
+		"playlist":"https://www.youtube.com/embed/videoseries?si=92z0xOVroBuDUvMR&amp;list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5"
 	},
 	{
 		"name": "Paris",
