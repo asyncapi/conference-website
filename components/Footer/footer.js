@@ -24,7 +24,7 @@ function Footer() {
     <div className="container">
       <div className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3">
           <Link href='/'>
-            <Image className="cursor-pointer" src="/img/logo.png" alt="company logo" width={150} height={42} />
+            <Image className="cursor-pointer" src="/img/logo.png" alt="company logo" width={150} height={42}/>
           </Link>
             <div className="sm:hidden"> 
               {/* This div helps keep the text centered */}
