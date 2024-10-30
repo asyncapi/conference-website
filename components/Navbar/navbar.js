@@ -126,7 +126,7 @@ function Navbar() {
 												onMouseLeave={handleSubMenuLeave}
 											>
 												{link.subMenu.map((subL) => (
-													<Link href={subL.ref} target={subL.target} key={subL.title}>
+													<Link href={subL.ref} target={subL.target} key={subL.title} rel="noopener noreferrer">
 														<div className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}>
 															{subL.title}
 														</div>
