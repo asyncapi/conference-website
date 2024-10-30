@@ -351,6 +351,11 @@
 			"name": "Daniel Kocot",
 			"title": "Head of API Consulting at codecentric AG",
 			"img": "/img/online-conf-images/Daniel.webp"
+		},
+{
+			"name": "Yuan Yuan",
+			"title": "MSE DS Student",
+			"img": "/img/online-conf-images/YuanYuan.webp"
 		}
 	],
 		"agenda": [
@@ -470,7 +475,7 @@
                 "speaker": 2,
                 "type": "Technical Session"
             },
-			{
+	    {
                 "time": "17:40 PM UTC - 17:50 PM UTC",
                 "session": "",
                 "type": "Break"
@@ -480,6 +485,17 @@
                 "session": "Broadening the API Landscape: AsyncAPI and CloudEvents in the Enterprise",
                 "speaker": 11,
                 "type": "Technical Session"
+            },
+	    {
+                "time": "18:20 PM UTC - 18:30 PM UTC",
+                "session": "",
+                "type": "Break"
+            },
+			{
+                "time": "18:30 PM UTC - 19:00 PM UTC",
+                "session": "My GSoC Experience with AsyncAPI",
+                "speaker": 12,
+                "type": "Community Session"
             }
 		]
 	}
