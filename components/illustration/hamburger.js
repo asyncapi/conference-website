@@ -10,12 +10,12 @@ const Hamburger = forwardRef((props, ref)=> {
             fill='none'
             className={className}
 			>
-				<g id='SVGRepo_bgCarrier' stroke-width='0' />
+				<g id='SVGRepo_bgCarrier' strokeWidth='0' />
 
 				<g
 					id='SVGRepo_tracerCarrier'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 
 				<g id='SVGRepo_iconCarrier'>
@@ -23,20 +23,20 @@ const Hamburger = forwardRef((props, ref)=> {
 					<path
 						d='M4 7L7 7M20 7L11 7'
 						stroke='#ffffff'
-						stroke-width='1.5'
-						stroke-linecap='round'
+						strokeWidth='1.5'
+						strokeLinecap='round'
 					/>{' '}
 					<path
 						d='M20 17H17M4 17L13 17'
 						stroke='#ffffff'
-						stroke-width='1.5'
-						stroke-linecap='round'
+						strokeWidth='1.5'
+						strokeLinecap='round'
 					/>{' '}
 					<path
 						d='M4 12H7L20 12'
 						stroke='#ffffff'
-						stroke-width='1.5'
-						stroke-linecap='round'
+						strokeWidth='1.5'
+						strokeLinecap='round'
 					/>{' '}
 				</g>
 			</svg>
