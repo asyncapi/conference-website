@@ -218,9 +218,84 @@
 				"name": "Jonathan Michaux",
 				"title": "Product Manager at Gravitee",
 				"img": "/img/paris-images/Jonathan.webp"
+			},			
+			{
+				"name": "Pierre Gauthier",
+				"title": "Chief API Architect at TM Forum",
+				"img": "/img/online-conf-images/Pierre.webp"
 			}
 		],
-		"agenda": null
+		"agenda": [
+			{
+                "time": "10:00 AM CEST - 10:50 AM CEST",
+                "session": "TMForum's AsyncAPI For a New Era of Event-Driven Architecture",
+                "speaker": [4,12],
+                "type": "Keynote Speaker"
+            },
+			{
+                "time": "10:50 AM CEST - 11:10 AM CEST",
+                "session": "",
+                "type": "Break/Networking"
+            },
+			{
+                "time": "11:10 AM CEST - 11:35 AM CEST",
+                "session": "API Governance for EDA: Unlocking Developer Experience with AsyncAPI",
+                "speaker": 5,
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "11:35 AM CEST - 12:25 PM CEST",
+                "session": "Reimagining Streaming Apps with AsyncAPI and Postgres",
+                "speaker": 2,
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "12:25 PM CEST - 12:50 PM CEST",
+                "session": "Using the AsyncAPI Ecosystem for Your Event-Driven Architecture",
+                "speaker": 3,
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "12:50 PM CEST - 1:50 PM CEST",
+                "session": "",
+                "type": "Lunch"
+            },
+			{
+                "time": "1:50 PM CEST - 2:40 PM CEST",
+                "session": "Streaming Data Events Into An Event Mesh Infrastructure Using AsyncAPI",
+                "speaker": [9,10],
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "2:40 PM CEST - 3:30 PM CEST",
+                "session": "AsyncAPI for Kafka",
+                "speaker": 1,
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "3:30 PM CEST - 3:55 PM CEST",
+                "session": "",
+                "type": "Break/Networking"
+            },
+			{
+                "time": "3:55 PM CEST - 4:20 PM CEST",
+                "session": "AI Agents Meet AsyncAPI: Conversational Interfaces for Event Streams",
+                "speaker": 11,
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "4:20 PM CEST - 5:10 PM CEST",
+                "session": "Contract-Driven Development for Event-Driven Architectures",
+                "speaker": [7,8],
+                "type": "Technical Speaker"
+            },
+			{
+                "time": "5:10 PM CEST - 5:35 PM CEST",
+                "session": "From Nightmares to Sweet Dreams: Conquering AsyncAPI Testing!",
+                "speaker": 6,
+                "type": "Technical Speaker"
+            }
+		]
 	},
 
 	{
