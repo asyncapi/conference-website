@@ -218,13 +218,18 @@
 				"name": "Jonathan Michaux",
 				"title": "Product Manager at Gravitee",
 				"img": "/img/paris-images/Jonathan.webp"
+			},			
+			{
+				"name": "Pierre Gauthier",
+				"title": "Chief API Architect at TM Forum",
+				"img": "/img/paris-images/Pierre.webp"
 			}
 		],
 		"agenda": [
 			{
                 "time": "10:00 AM CEST - 10:50 AM CEST",
                 "session": "TMForum's AsyncAPI For a New Era of Event-Driven Architecture",
-                "speaker": 4,
+                "speaker": [4,12],
                 "type": "Keynote Speaker"
             },
 			{
