@@ -62,8 +62,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": false,
+		"ticket": "https://ticket.apidays.global/event/apidays-paris-2024/f8f61349-4f78-4bba-a162-68d598833116/cart?coupon=ASYNCAPICONF",
 		"isFree": true,
+		"cfp": false,
 		"ended": false
 	}
 ]
