@@ -10,7 +10,6 @@ function TicketCards({ className, city }) {
   return (
     <div className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between rounded-lg card bg-white lg:m-0 m-4 ${className}`}>
       <div className="p-4 h-[100%] bg-cover relative">
-          <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(${city.img})`, opacity: 0.2, zIndex: -1 }}></div>
           <div className='text-xl font-bold text-gradient'>{city.name}, {city.country}
           </div>
           <div className='mt-2 text-lg mb-2'>{city.date}</div>
