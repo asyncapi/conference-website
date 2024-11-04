@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
@@ -21,6 +21,7 @@ export default function Home() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
 	const [speakersList, setSpeakersList] = useState([]);
 	const [city, setCity] = useState("");
+	const carouselRef = useRef(null);
 	speakers[0].lists = [];
 	speakers.map((speaker) => {
 		if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
@@ -36,6 +37,27 @@ export default function Home() {
 		setCity(speakers[0]);
 		setSpeakersList(speakers[0].lists);
 	},[]);
+
+	const shiftLeft = () => {
+		console.log(carouselRef.current);
+	if (carouselRef.current) {
+			carouselRef.current.scrollBy({
+				left: -365,
+				behavior: 'smooth',
+			});
+		}
+	}
+
+		const shiftRight = () => {
+	if (carouselRef.current) {
+			carouselRef.current.scrollBy({
+				left: 365,
+				behavior: 'smooth',
+			});
+		}
+	}
+
+
 	return (
 		<div>
 			<Head>
@@ -164,25 +186,35 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			<div id='tickets' className='flex items-center'>
-				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
-			</div>
-			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
-				Get Tickets
-			</Heading>
-			<div className='max-w-3xl sm:w-full text-center'>
-			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
-			</Paragraph>
-			</div>
-			<div className='w-[1000px] lg:w-full mt-10 flex justify-center lg:flex-col flex-wrap'>
-				{cities.filter((x)=>x.ended == false).map((city) => {
-						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
-				})}
-				{cities.filter((x)=>x.ended == true).map((city) => {
-						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
-				})}
-			</div>
+				<div className='w-full mx-20 flex flex-col justify-center items-center'>
+				<div id='tickets' className='flex items-center'>
+					<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
+				</div>
+				<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
+					Get Tickets
+				</Heading>
+			    <div className='max-w-3xl sm:w-full text-center'>
+				<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
+				Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
+				</Paragraph>
+				</div>
+				<div className='relative w-full'>
+					{isTablet ?  null : <>
+					<Button onClick={shiftLeft} className={"p-2 z-10 absolute top-[45%] left-[-5%] md:left-0 sm:left-0"}>{"<"}</Button>
+					<Button onClick={shiftRight} className={"p-2 z-10 absolute top-[45%] right-[-5%] md:right-0 sm:right-0"}>{">"}</Button>
+					</>}	
+					<div className='w-full overflow-x-scroll mt-10 flex lg:flex-col shrink-0 items-center justify-items-start' style={{scrollbarWidth : "none"}} ref={carouselRef} >
+						<div className='flex w-[340px] sm:flex-col'>
+						{cities.filter((x)=>x.ended == false).map((city) => {
+								return <TicketCards key={city.name} city={city} className='lg:mt-10' />
+						})}
+						{cities.filter((x)=>x.ended == true).map((city) => {
+								return <TicketCards key={city.name} city={city} className='lg:mt-10' />
+						})}
+						</div>
+					</div>
+					</div>
+				</div>
 			</div>
 			</div>
 			<div id='sponsors' className='mt-20'>
