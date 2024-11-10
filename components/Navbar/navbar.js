@@ -75,7 +75,7 @@ function Navbar() {
 					<div className='flex items-center sm:justify-between sm:w-full'>
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer'>
-								<Image src='/img/logo.png' alt='conference logo' width={120} height={33} />
+								<Image src='/img/logo.png' alt='conference logo' width={120} height={33}  />
 							</div>
 						</Link>
 					</div>
@@ -117,8 +117,8 @@ function Navbar() {
 											)}
 											
 										</div>
-										<span class="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
-                                       <span class="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
+										<span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
+                                       <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
 										{show === link.title && link.subMenu && (
 											<div
 												className='subMenu absolute z-[9] mt-8 w-[150px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
@@ -126,7 +126,7 @@ function Navbar() {
 												onMouseLeave={handleSubMenuLeave}
 											>
 												{link.subMenu.map((subL) => (
-													<Link href={subL.ref} key={subL.title}>
+													<Link href={subL.ref} target={subL.target} key={subL.title} rel="noopener noreferrer">
 														<div className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}>
 															{subL.title}
 														</div>

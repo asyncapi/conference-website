@@ -16,11 +16,11 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 		};
 	}, [dropdownRef]);
 	return (
-		<div class='relative inline-block w-full' ref={dropdownRef}>
+		<div className='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
-					className='flex justify-between text-white p-4 w-full justify-center gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
+					className='flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md'
 					id='menu-button'
 					aria-expanded='true'
 					aria-haspopup='true'
@@ -34,9 +34,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 						aria-hidden='true'
 					>
 						<path
-							fill-rule='evenodd'
+							fillRule='evenodd'
 							d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'
-							clip-rule='evenodd'
+							clipRule='evenodd'
 						/>
 					</svg>
 				</button>
@@ -58,9 +58,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 					role='menu'
 					aria-orientation='vertical'
 					aria-labelledby='menu-button'
-					tabindex='-1'
+					tabIndex='-1'
 				>
-					<div className='' role='none'>
+					<div className='rounded-md gradient-bg' role='none'>
 						{items &&
 							items.map((item) => {
 								return (
@@ -71,9 +71,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 											setOptions2(item.lists);
 											setShow(false);
 										}}
-										className={`text-gray-700 block p-4 text-md hover:text-white cursor-pointer navbg`}
+										className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
 										role='menuitem'
-										tabindex='-1'
+										tabIndex='-1'
 										id='menu-item-0'
 									>
 										{item.city}

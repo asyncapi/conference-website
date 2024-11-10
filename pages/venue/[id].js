@@ -61,7 +61,7 @@ function Venue({ city }) {
 						<Heading typeStyle='lg' className={`${textColor} mt-[24px]`}>
 							{city.date}
 						</Heading>
-						{city.ended ? "" : <div className='m-[30px]'>
+						{city.ended ? (city.playlist && <a href='#recordings'><Button className="w-[250px] h-[50px] m-8">Watch Recordings</Button></a>): <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
 						</a>}
@@ -81,6 +81,14 @@ function Venue({ city }) {
 				</div> : <div className='w-[1130px] lg:w-full'>
 					<Agenda city={city} />
 				</div>}
+			</div>
+			<div id="recordings" className='flex justify-center'>
+				{city.ended ?  (city.playlist && 
+			<div className=' pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72'>
+				<h1 className='text-white font-bold text-5xl mb-10'>Recordings</h1>
+				<iframe width="100%" height="100%" src={city.playlist} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+		    ) : <div></div>}
 			</div>
 			<div
 				id='sponsors'

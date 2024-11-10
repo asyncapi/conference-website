@@ -5,9 +5,9 @@
 		"date": "30th October 2024",
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-		"img": "/img/testMic.png",
-		"address": "AsyncAPI Youtube Channel",
-		"map": "https://www.youtube.com/@AsyncAPI",
+		"img": "/img/testMic.webp",
+		"address": "AsyncAPI YouTube Channel",
+		"map": "https://www.youtube.com/live/F9wHxd-v2f0?si=PT8BuAUKNmoLHRiM",
 		"sponsors": [
 			"/img/apidays.png"
 		],
@@ -46,13 +46,15 @@
 		],
 		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
 		"isFree": true,
-		"ended": true
+		"ended": true,
+		"recordings":"https://youtube.com/playlist?list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5&si=YPmjUsj5mU6FpLhB",
+		"playlist":"https://www.youtube.com/embed/videoseries?si=92z0xOVroBuDUvMR&amp;list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5"
 	},
 	{
 		"name": "Paris",
 		"country": "France",
-		"date": "December 3-5, 2024",
-		"cfpdate":"October 12, 2024",
+		"date": "December 5, 2024",
+		"cfpdate":"Not announced yet",
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
@@ -60,9 +62,9 @@
 		"sponsors": [
 			"/img/apidays.png"
 		],
-		"ticket": false,
+		"ticket": "https://ticket.apidays.global/event/apidays-paris-2024/f8f61349-4f78-4bba-a162-68d598833116/cart?coupon=ASYNCAPICONF",
 		"isFree": true,
-		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
+		"cfp": false,
+		"ended": false
 	}
 ]
