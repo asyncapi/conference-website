@@ -69,7 +69,7 @@ function Navbar() {
 	};
 
 	return (
-		<div className='flex justify-center items-center sticky top-0 z-[99] text-white'>
+		<div className='flex justify-center items-center fixed w-full top-0 z-[99] text-white'>
 			<div className='w-[1131px]'>
 				<div className='p-5 flex justify-between h-[75px] w-full items-center'>
 					<div className='flex items-center sm:justify-between sm:w-full'>
