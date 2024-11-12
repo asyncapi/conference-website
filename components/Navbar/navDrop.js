@@ -22,7 +22,7 @@ const NavDrop = forwardRef((props, ref)=> {
 								{link.subMenu ? (
 									<div>
 										<div className='flex items-center justify-between'>
-											<div className='text-white'>{link.title}</div>
+											<div className='text-white hover:text-cyan-400'>{link.title}</div>
 											<Dropdown
 												className={`transition-transform duration-700 ${
 													show === link.title ? 'rotate-0' : 'rotate-[-90deg]'
@@ -35,7 +35,7 @@ const NavDrop = forwardRef((props, ref)=> {
 													<Link href={sub.ref} key={sub.ref}>
 														<div
 															onClick={() => setDrop(false)}
-															className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'
+															className='h-[40px] flex navbg transition duration-150 ease-out items-center p-6 hover:text-black text-white cursor-pointer'
 														>
 															{sub.title}
 														</div>
@@ -45,7 +45,7 @@ const NavDrop = forwardRef((props, ref)=> {
 										)}
 									</div>
 								) : (
-									<div className='text-white' onClick={() => setDrop(false)}>
+									<div className='text-white hover:text-cyan-400' onClick={() => setDrop(false)}>
 										{link.title}
 									</div>
 								)}

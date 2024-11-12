@@ -90,6 +90,7 @@ body {
 }
 .navbg:hover, .navbg:focus{
     background: linear-gradient(225deg, #AD20E2 9.35%, #2DCCFD 88.41%);
+    border-radius: 15px;
 }
 
 .kinda-dark{
