@@ -1,12 +1,24 @@
-import React,{useState,forwardRef} from 'react';
+import React,{useState,forwardRef, useEffect} from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
 
 const NavDrop = forwardRef((props, ref)=> {
-	const {setDrop}=props;
-    const [show, setShow] = useState(null);
+  const {setDrop}=props;
+  const [show, setShow] = useState(null);
+  const [active, setActive] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
+  
+  const currentUrl  = window.location.href
+  let currentMenu = currentUrl.split('/')[(currentUrl.split('/')).length - 2]
+  let currentSubMenu = "/" + currentMenu + '/' + currentUrl.split('/')[(currentUrl.split('/')).length - 1]
+  
+  useEffect(() => { 
+    setActive(currentMenu) 
+    setActiveSubMenu(currentSubMenu) 
+  }, [currentUrl])
+  
   return (
 		<div  ref ={ref} className='absolute ml-[-20px] top-16 w-full bg-[#1B1130]'>
 			<div className='flex flex-col p-5 pb-8 w-full'>
@@ -16,13 +28,13 @@ const NavDrop = forwardRef((props, ref)=> {
 							<div
 								className='min-h-[50px] cursor-pointer'
 								onClick={() =>
-									show === link.title ? setShow(null) : setShow(link.title)
+									show === link.title ? setShow(null): setShow(link.title)
 								}
 							>
 								{link.subMenu ? (
 									<div>
 										<div className='flex items-center justify-between'>
-											<div className='text-white hover:text-cyan-400'>{link.title}</div>
+                                    <div className={`hover:text-cyan-400 ${active===link.title.toLowerCase() ? 'text-cyan-400': 'text-white'}`}>{link.title}</div>
 											<Dropdown
 												className={`transition-transform duration-700 ${
 													show === link.title ? 'rotate-0' : 'rotate-[-90deg]'
@@ -34,8 +46,8 @@ const NavDrop = forwardRef((props, ref)=> {
 												{link.subMenu.map((sub) => (
 													<Link href={sub.ref} key={sub.ref}>
 														<div
-															onClick={() => setDrop(false)}
-															className='h-[40px] flex navbg transition duration-150 ease-out items-center p-6 hover:text-black text-white cursor-pointer'
+                                                    onClick={() => setDrop(false)}
+                                                    className={`h-[40px] flex ${activeSubMenu === sub.ref ? 'navbg-fixed' : 'navbg'} transition duration-150 ease-out items-center p-6 cursor-pointer`}
 														>
 															{sub.title}
 														</div>
@@ -45,7 +57,7 @@ const NavDrop = forwardRef((props, ref)=> {
 										)}
 									</div>
 								) : (
-									<div className='text-white hover:text-cyan-400' onClick={() => setDrop(false)}>
+                      <div className='text-white hover:text-cyan-400' onClick={() => setDrop(false)}>
 										{link.title}
 									</div>
 								)}
