@@ -12,16 +12,18 @@ const NavDrop = forwardRef((props, ref)=> {
 			<div className='flex flex-col p-5 pb-8 w-full'>
 				{links.map((link) => {
 					return (
-						<Link href={link.ref} key={link.title}>
+						<Link href={link.ref || '#'} key={link.title}>
 							<div
 								className='min-h-[50px] cursor-pointer'
+								data-test={`nav-${link.title}`}
 								onClick={() =>
 									show === link.title ? setShow(null) : setShow(link.title)
 								}
 							>
 								{link.subMenu ? (
 									<div>
-										<div className='flex items-center justify-between'>
+										<div className='flex items-center justify-between' 
+										>
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
 												className={`transition-transform duration-700 ${
@@ -32,8 +34,8 @@ const NavDrop = forwardRef((props, ref)=> {
 										{show && show === link.title && (
 											<div className='flex flex-col py-6 w-full'>
 												{link.subMenu.map((sub) => (
-													<Link href={sub.ref} key={sub.ref}>
-														<div
+													<Link href={sub.ref} key={sub.ref} >
+														<div data-test={`nav-sub-${sub.title}`}
 															onClick={() => setDrop(false)}
 															className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'
 														>
