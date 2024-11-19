@@ -40,7 +40,7 @@ function Venue({ city }) {
 	const textColor = eventEnded ? "text-gray-400": "text-white";
 
 	return (
-		<div>
+		<div data-test={`venue-${city.name}`}>
 			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[60px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
