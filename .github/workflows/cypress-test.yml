@@ -1,9 +1,9 @@
 name: Cypress End-to-End test
 
 on:
-  pull_request:
-    branches:
-      - master
+  pull_request_target:
+    types: [opened, reopened, synchronize, edited, ready_for_review]
+
   push:
     branches:
       - master
