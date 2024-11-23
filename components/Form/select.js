@@ -33,7 +33,7 @@ const customStyles = {
   },
 };
 
-function Dropdown({ options, title, setValue, multi }) {
+function Dropdown({ options, title, setValue, multi ,dataTest}) {
   const [selectedOption, setSelectedOption] = useState(title);
   useEffect(() => {
     if (multi && Array.isArray(selectedOption)) {
@@ -49,6 +49,7 @@ function Dropdown({ options, title, setValue, multi }) {
   return (
     <div className="relative inline-block w-full">
       <Select
+      className={`${dataTest || ""}`}
         styles={customStyles}
         defaultValue={selectedOption}
         onChange={setSelectedOption}
