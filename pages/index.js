@@ -16,7 +16,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
-import ScrollButton from '../components/Scrollbutton/ScrolButton'; 
+import ScrollButton from '../components/ScrollButton/ScrollButton'; 
 
 export default function Home() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
