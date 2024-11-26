@@ -31,7 +31,7 @@ function ReactSlider({ children }) {
 		(<Slider ref={slider} {...settings}>
 			{children}
 		</Slider>):(
-	       <div className='flex m-2 justify-center'>{children}</div>)}
+	       <div className='flex m-4 justify-center'>{children}</div>)}
 	    </>
 	);
 }
