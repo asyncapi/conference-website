@@ -292,7 +292,7 @@
 			{
                 "time": "5:10 PM CEST - 5:35 PM CEST",
                 "session": "From Nightmares to Sweet Dreams: Conquering AsyncAPI Testing!",
-                "speaker": 6,
+                "speaker": [6,3],
                 "type": "Technical Speaker"
             }
 		]
