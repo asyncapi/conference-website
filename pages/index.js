@@ -16,6 +16,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
+import ReactSlider from '../components/Slider/slider';
 
 export default function Home() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -197,23 +198,15 @@ export default function Home() {
 				<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
 				Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
 				</Paragraph>
-				</div>
-				<div className='relative w-full'>
-					{isTablet ?  null : <>
-					<Button onClick={shiftLeft} className={"p-2 z-10 absolute top-[45%] left-[-5%] md:left-0 sm:left-0"}>{"<"}</Button>
-					<Button onClick={shiftRight} className={"p-2 z-10 absolute top-[45%] right-[-5%] md:right-0 sm:right-0"}>{">"}</Button>
-					</>}	
-					<div className='w-full overflow-x-scroll mt-10 flex lg:flex-col shrink-0 items-center justify-items-start' style={{scrollbarWidth : "none"}} ref={carouselRef} >
-						<div className='flex w-[340px] sm:flex-col'>
+					<ReactSlider>
 						{cities.filter((x)=>x.ended == false).map((city) => {
 								return <TicketCards key={city.name} city={city} className='lg:mt-10' />
 						})}
 						{cities.filter((x)=>x.ended == true).map((city) => {
 								return <TicketCards key={city.name} city={city} className='lg:mt-10' />
 						})}
-						</div>
-					</div>
-					</div>
+					</ReactSlider>	
+				</div>
 				</div>
 			</div>
 			</div>
