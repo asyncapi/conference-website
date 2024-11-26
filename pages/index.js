@@ -217,5 +217,6 @@ export default function Home() {
 			<Subscription/>
 			</div>
 		</div>
+		</div>
 	);
 }

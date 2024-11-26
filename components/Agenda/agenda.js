@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function Agenda({ city }) {
   return (
-	  <div className=''>
+	  <div className='' data-test="agenda-com">
 		  <div className='flex flex-col justify-center items-center'>
 		  
 			  <Heading className='text-[30px] text-white'>
