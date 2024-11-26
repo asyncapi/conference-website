@@ -12,6 +12,7 @@ function TicketCards({ className, city }) {
       <div className='p-4'>
         <div className='text-xl font-bold text-gradient'>{city.name}, {city.country}</div>
         <div className='mt-2 text-lg'>{city.date}</div>
+                  <p className='border-t pt-2'>{city.description}</p>
       </div>
       <div className='flex justify-center border-t h-20 border-dashed p-4 text-center'>
         {/* Show a button based on the event status */}
