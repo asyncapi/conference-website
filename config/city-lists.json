@@ -13,7 +13,9 @@
 		],
 		"ticket": false,
 		"isFree": true,
-		"ended": true
+		"ended": true,
+		"recordings": "https://www.youtube.com/playlist?list=PLbi1gRlP7pijItMBmw9SeeyWxuEa3jLR2",
+        "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pijItMBmw9SeeyWxuEa3jLR2"
 
 	},
 	{
