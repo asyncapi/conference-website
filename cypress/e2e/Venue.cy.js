@@ -18,7 +18,39 @@ it("should render guideline for not ended cities and agenda otherwise",()=>{
 
 });
 
-it.only("Form should work",()=>{
+it("Should contain logos in Sponsor component", () => {
+    const sponsors = {
+        eventSponsors : [
+            { image: '/img/apidays.png', websiteUrl: 'https://www.apidays.global/' },
+        ],
+        financialSponsor : [
+            { image: '/img/graviteeio.svg', websiteUrl: 'https://www.gravitee.io/' },
+            { image: '/img/postman.png', websiteUrl: 'https://www.postman.com/' },
+        ]
+    };
+
+    cy.wrap(cities).each((city) => {
+        cy.visit(`http://localhost:3000/venue/${city.name}`);
+        
+        cy.getTestData("sponsor-section").should("exist");
+    
+        sponsors.eventSponsors.forEach((sponsor) => {
+            cy.getTestData('sponsor-section')
+            .find(`img[src="${sponsor.image}"]`)
+            .should('be.visible');
+            cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+        });
+    
+        sponsors.financialSponsor.forEach((sponsor) => {
+            cy.getTestData('sponsor-section')
+            .find(`img[src="${sponsor.image}"]`)
+            .should('be.visible');
+            cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+        });
+    })
+});
+
+it("Form should work",()=>{
     cy.visit('http://localhost:3000/venue/online/register');
 
     cy.getTestData("cfp-form").should('be.visible');
