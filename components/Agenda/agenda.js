@@ -28,7 +28,7 @@ function Agenda({ city }) {
 			  
 			  <div className='mt-[40px]'>
 				  {city.agenda.map((talk) => {
-					  return <div key={talk.session} className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}>
+					  return <div key={talk.time} className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}>
 						  <Paragraph typeStyle='body-md'>
 							  {talk.time}
 						  </Paragraph>
