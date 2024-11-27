@@ -1,4 +1,6 @@
 import path from "path";
+import cities from "../../config/city-lists.json"
+
 describe("Landing Page Tests", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -34,14 +36,9 @@ describe("Landing Page Tests", () => {
   });
 
   it("Should contain logos in Sponsor component", () => {
-    const eventSponsors = [
-      { image: '/img/apidays.png', websiteUrl: 'https://www.apidays.global/' },
-    ];
+    const eventSponsors = cities[0].sponsors.eventSponsors;
     
-    const financialSponsor = [
-      { image: '/img/graviteeio.svg', websiteUrl: 'https://www.gravitee.io/' },
-      { image: '/img/postman.png', websiteUrl: 'https://www.postman.com/' },
-    ];
+    const financialSponsor = cities[0].sponsors.financialSponsors;
 
     eventSponsors.forEach((sponsor) => {
       cy.getTestData('sponsor-section')
