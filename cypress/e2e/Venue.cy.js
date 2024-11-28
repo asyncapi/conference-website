@@ -6,7 +6,7 @@ it("should render guideline for not ended cities and agenda otherwise",()=>{
         
         cy.getTestData(`venue-${city.name}`).then(val=>{
             
-            if(!city.ended){
+            if(Date.now()>Date(city.date) && !city.ended){
                 cy.getTestData("guideline-com").should("be.visible");
             }
             else{
