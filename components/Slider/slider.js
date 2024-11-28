@@ -31,7 +31,7 @@ function ReactSlider({ children }) {
 		(<Slider ref={slider} {...settings}>
 			{children}
 		</Slider>):(
-	       <div className='flex m-4 justify-center'>{children}</div>)}
+	       <div className='flex m-4 overflow-x-scroll overflow-y-hidden ' style={{scrollbarWidth:"none"}}>{children}</div>)}
 	    </>
 	);
 }
