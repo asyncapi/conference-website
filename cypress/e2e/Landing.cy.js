@@ -28,6 +28,20 @@ describe("Landing Page Tests", () => {
   it("Should contain Ticket section", () => {
     cy.getTestData("ticket-section").should("be.visible");
   });
+   
+  it("Should contain Ticket container section",() => {
+    cy.getTestData("ticket-card-container").should("be.visible");
+  })
+
+  it("Should render Slider for small screen devices", () => {
+    cy.viewport(0,590);
+    cy.getTestData("ticket-card-container").find("div.slick-slider")
+  });
+
+  it("Should verify that the container has a child with overflow-x-scroll for medium and large screen", () => {
+    cy.viewport(591,1500);
+    cy.getTestData("ticket-card-container").find("div.overflow-x-scroll")
+  });
 
   it("Should contain Sponsor component", () => {
     cy.getTestData("sponsor-section").should("be.visible");

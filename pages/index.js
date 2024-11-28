@@ -206,7 +206,7 @@ export default function Home() {
               </Paragraph>
             </div>
           </div>
-            <div className="lg:w-full mt-10 flex justify-between lg:flex-col">
+            <div data-test="ticket-card-container" className="lg:w-full mt-10 flex justify-between lg:flex-col">
                 <ReactSlider>
                   {cities
                     .filter((x) => x.ended == false)
