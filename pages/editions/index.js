@@ -1,6 +1,7 @@
 import React from 'react'
 import PastEditonCard from '../../components/PastEditionCard'
 import pastEditionsArchiveLinks from '../../config/editions.json'
+import ScrollButton from '../../components/ScrollButton/ScrollButton'; 
 const PastEditions = () => {
     return (
         <div >
@@ -19,6 +20,7 @@ const PastEditions = () => {
                     })
                 }
             </div>
+            <ScrollButton />
         </div>
     )
 }

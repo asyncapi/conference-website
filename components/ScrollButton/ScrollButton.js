@@ -35,7 +35,7 @@ function ScrollButton() {
           className="rounded-full transition-transform hover:-translate-y-2 duration-150 ease-in-out shadow-lg bg-white"
           onClick={scrollUp}
         >
-          <Image alt="scroll up" width={40} height={40} src="/img/scroll.svg" />
+          <Image alt="scroll up" width={40} height={40} src="/img/scroll.webp" />
         </button>
       )}
     </div>

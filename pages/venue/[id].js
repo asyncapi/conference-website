@@ -10,6 +10,7 @@ import { isEventEnded } from '../../components/Venue/venue';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from "../../config/cfp-data.json"
+import ScrollButton from '../../components/ScrollButton/ScrollButton';
 export async function getStaticProps({ params }) {
 	let res = {};
 	const data = cities.filter((p) => p.name === params.id);
@@ -95,6 +96,7 @@ function Venue({ city }) {
 			>
 				<Sponsors imgs={city.sponsors} />
 			</div>
+				<ScrollButton />
 		</div>
 	);
 }
