@@ -53,7 +53,7 @@ function Venue({ city }) {
 						
 						<Paragraph className='mt-[24px]' textColor={textColor}>{city.description}</Paragraph>
 
-						<Heading typeStyle='lg' className={`${textColor} mt-[24px] hover:underline`}>
+						<Heading typeStyle='lg' className={`${textColor} mt-[24px] underline`}>
 							<a href={city.map} target='_blank' rel="noreferrer">
     							{city.address}
   							</a>
