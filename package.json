@@ -17,6 +17,8 @@
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.7.4",
     "d3": "^7.8.5",
+    "embla-carousel-auto-scroll": "^8.5.1",
+    "embla-carousel-react": "^8.5.1",
     "lucide-react": "^0.350.0",
     "net": "^1.0.2",
     "next": "^14.2.10",
@@ -32,7 +34,6 @@
     "react-hot-toast": "^2.4.1",
     "react-responsive": "^9.0.0",
     "react-select": "^5.7.5",
-    "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
     "slick-carousel": "^1.8.1"
   },
