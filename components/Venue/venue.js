@@ -3,19 +3,28 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export function isEventEnded(date){
-	const eventDate = date.split(" ");
-	const month = eventDate[0];
-	const year = eventDate[eventDate.length-1];
-	const startDay = eventDate[1].split("-")[0];
-	return new Date(`${startDay} ${month} ${year}`) < Date.now()
+export function getEventStatus(date){
+	const today = new Date();
+    const event = new Date(date);
+
+    if (event.toDateString() === today.toDateString()) {
+        return "Ongoing";
+    } else if (event > today) {
+        return "Upcoming";
+    } else {
+        return "Ended";
+    }
 }
 
+export function isEventEnded(date){
+	return getEventStatus(date) === "Ended";
+}
 
 function Venue({ className, city }) {
 
 	const eventEnded = isEventEnded(city.date);
 	const textColor = eventEnded ? "text-white": "text-white";
+	const eventStatus = getEventStatus(city.date);
 
 	return (
 		<Link href={`/venue/${city.name}`}>
@@ -37,8 +46,8 @@ function Venue({ className, city }) {
 							{city.name=='Online'?<span className='text-lg font-bold'>{city.name} {city.country}</span>:<span className='text-lg font-bold'>{city.country}, {city.name}</span>}
 						</div>
 						<div className='flex align-end flex-row justify-between pt-2'>
-							<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center'>{city.date}</div>
-							<span className=' text-white flex align-middle pt-2' style={{ fontSize: ".9em" }}>{eventEnded ? "ENDED" : ""}</span>
+							<div className='inline-block border border-gray-400 rounded-lg py-1 px-2 text-center sm:text-sm text-base'>{city.date}</div>
+							<span className=' text-white flex align-middle pt-2 sm:text-[0.8rem] sm:leading-4 text-base'>{eventStatus}</span>
 						</div>
 					</div>
 				</div>
