@@ -33,7 +33,7 @@ function StepThree({ setStep, setForm, data }) {
   const [value, setValue] = useState({});
   useEffect(() => {
     setForm({ ...data, ...value});
-  }, [value]); 
+  }, [value, data, setForm]); 
   return (
     <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
