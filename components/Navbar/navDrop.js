@@ -8,7 +8,7 @@ const NavDrop = forwardRef((props, ref)=> {
 	const {setDrop}=props;
     const [show, setShow] = useState(null);
   return (
-		<div  ref ={ref} className='absolute ml-[-20px] top-16 w-full bg-[#1B1130]'>
+		<div  ref ={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
 			<div className='flex flex-col p-5 pb-8 w-full'>
 				{links.map((link) => {
 					return (
@@ -22,13 +22,10 @@ const NavDrop = forwardRef((props, ref)=> {
 							>
 								{link.subMenu ? (
 									<div>
-										<div className='flex items-center justify-between' 
-										>
+										<div className='flex'>
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
-												className={`transition-transform duration-700 ${
-													show === link.title ? 'rotate-0' : 'rotate-[-90deg]'
-												}`}
+												className={`transition-transform duration-700`}
 											/>
 										</div>
 										{show && show === link.title && (
