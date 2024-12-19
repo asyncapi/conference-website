@@ -2,12 +2,12 @@
 	{
 		"name": "Online",
 		"country": " Edition",
-		"date": "30th October 2024",
+		"date": "October 30, 2024",
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
 		"img": "/img/testMic.webp",
 		"address": "AsyncAPI YouTube Channel",
-		"map": "https://www.youtube.com/live/F9wHxd-v2f0?si=PT8BuAUKNmoLHRiM",
+		"map": "https://www.youtube.com/playlist?list=PLbi1gRlP7pijItMBmw9SeeyWxuEa3jLR2",
 		"sponsors": [
 			"/img/apidays.png"
 		],
@@ -21,7 +21,7 @@
 	{
 		"name": "Helsinki",
 		"country": "Finland",
-		"date": "May 29 2024",
+		"date": "May 29, 2024",
 		"cfpdate":"Not announced yet",
 		"description": "Join us in Helsinki for the AsyncAPI Conference, where we will explore all things AsyncAPI and connect physical and digital worlds. Get excited as we delve into sustainable APIs for the Era of AI, Data Platforms, and Quantum Computing!.",
 		"img": "/img/finland.webp",
@@ -67,6 +67,6 @@
 		"ticket": "https://ticket.apidays.global/event/apidays-paris-2024/f8f61349-4f78-4bba-a162-68d598833116/cart?coupon=ASYNCAPICONF",
 		"isFree": true,
 		"cfp": false,
-		"ended": false
+		"ended": true
 	}
 ]
