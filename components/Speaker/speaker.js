@@ -7,7 +7,7 @@ function Speaker({details, location, className}) {
 			className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
 			data-test="speakers-section"
 		>
-			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-400 bg-gray-800'>
+			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full  border-2  border-gray-400 bg-gray-800'>
 				<Image src={details.img} alt={details.name} width={0} height={0} sizes='100vw' className='rounded-full object-cover transition-all duration-300 hover:scale-110 w-[100%] h-[100%]' />
 			</div>
 			<div className='mt-[19px]'>
