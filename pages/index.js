@@ -167,7 +167,7 @@ export default function Home() {
 			<div id='tickets' className='flex items-center'>
 				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
-			<div data-test="ticket-section">
+			<div data-test="ticket-section" className="flex flex-col items-center ">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
 			</Heading>
