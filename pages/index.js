@@ -185,13 +185,13 @@ export default function Home() {
 			</div>
 			</div>
 			</div>
+		</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors eventSponsors={[{image:'/img/apidays_2.webp',websiteUrl:"https://www.apidays.global/"}]} financialSponsor={[{image:"/img/graviteeIo_1.png" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman_1.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}  />
 			</div>
 			<div className='mt-5'>
 			<Subscription/>
 			</div>
-		</div>
 		</div>
 	);
 }
