@@ -93,7 +93,7 @@ function Venue({ city }) {
 			<div
 				id='sponsors'
 			>
-				<Sponsors imgs={city.sponsors} />
+				<Sponsors eventSponsors={city.sponsors.eventSponsors} financialSponsor={city.sponsors.financialSponsors} />
 			</div>
 		</div>
 	);
