@@ -17,7 +17,7 @@ function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financial
 						orchestrate an unforgettable celebration.
 					</Paragraph>
 				</div>
-				<Heading typeStyle='heading-md' className='text-white mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
+				<Heading typeStyle='heading-md' className='text-gray-600 mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
 				<div className='flex justify-center  w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
 					{eventSponsors &&
 						eventSponsors.map((sponsor) => (
@@ -31,7 +31,7 @@ function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financial
 						))}
 				</div>
 				<div className=' flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold'>
-				<Heading typeStyle='heading-md' className='text-white mb-12 sm:text-2xl'>Financial Sponsor</Heading>
+				<Heading typeStyle='heading-md' className='text-gray-600 mb-12 sm:text-2xl'>Financial Sponsor</Heading>
 				<div className='flex flex-col space-y-6'>
 					{financialSponsor &&
 						financialSponsor.map((sponsor) => (
