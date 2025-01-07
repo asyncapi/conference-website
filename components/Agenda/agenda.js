@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function Agenda({ city }) {
   return (
-	  <div className=''>
+	  <div className='' data-test="agenda-com">
 		  <div className='flex flex-col justify-center items-center'>
 		  
 			  <Heading className='text-[30px] text-white'>
@@ -28,7 +28,7 @@ function Agenda({ city }) {
 			  
 			  <div className='mt-[40px]'>
 				  {city.agenda.map((talk) => {
-					  return <div key={talk.session} className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}>
+					  return <div key={talk.time} className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}>
 						  <Paragraph typeStyle='body-md'>
 							  {talk.time}
 						  </Paragraph>
@@ -43,7 +43,7 @@ function Agenda({ city }) {
 						  </div>
 						  {talk.speaker && typeof talk.speaker === 'number' ? <div className='flex items-center lg:mt-4'>
 							  <div className='w-[94px] h-[94px]'>
-								  <Image src={city.speakers[talk.speaker - 1].img} alt={city.speakers[talk.speaker -1].name} className='object-cover rounded-full' height={'100%'} width={'100%'} />
+								  <Image src={city.speakers[talk.speaker - 1].img} alt={city.speakers[talk.speaker -1].name} width={0} height={0} className='object-cover rounded-full w-[100%] h-[100%]' />
 							  </div>
 							  <div className='ml-4 w-[300px] sm:w-[250px]'>
 								  <Heading typeStyle='heading-sm-semibold' className='text-white'>
@@ -58,7 +58,7 @@ function Agenda({ city }) {
 								  {talk.speaker.map((speak, i) => <div key={i} className='mt-6'>
 										  <div className='flex items-center lg:mt-4'>
 										  <div className='w-[94px] h-[94px]'>
-											  <Image src={city.speakers[speak - 1].img} alt={city.speakers[speak - 1].name} className='object-cover rounded-full' height={'100%'} width={'100%'} />
+											  <Image src={city.speakers[speak - 1].img} alt={city.speakers[speak - 1].name} width={0} height={0} className='object-cover rounded-full w-[100%] h-[100%]' />
 										  </div>
 										  <div className='ml-4 w-[300px] sm:w-[250px]'>
 								  <Heading typeStyle='heading-sm-semibold' className='text-white'>

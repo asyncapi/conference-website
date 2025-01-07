@@ -35,7 +35,7 @@ const faqs = [
 function Guidelines({talkDeadLine,virtual,name,cfp}) {
     const [show, setShow] = useState(null);
   return (
-      <div className='z-[9]'>
+      <div className='z-[9]' data-test="guideline-com">
         <div className='flex flex-col justify-center'>
         <Heading className='text-[30px] text-white text-center'>Speakers Guideline</Heading>
         <div className='mt-20'>
@@ -54,7 +54,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                       }}>
                           <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                               <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-12' : 'rotate-90'}`} /></button>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                           </div>
                           
                             
@@ -78,7 +78,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                       }}>
                           <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                               <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-12' : 'rotate-90'}`} /></button>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                           </div>
                           {
                           virtual?<p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.av}</p>:  
@@ -102,7 +102,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                   }}>
                       <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                           <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                          <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-12' : 'rotate-90'}`} /></button>
+                          <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                       </div>
                       {
                         
@@ -114,7 +114,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
               </div>
           })}
       </div>
-     <div className='text-center mt-20'>
+     <div className='flex items-center justify-center text-center mt-20'>
      {cfp && <a href={name === 'online'? "/venue/online/register" :cfp}target={name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="x-8 m-2 w-[250px] text-center">Submit Talk Proposal</Button>
 		</a>}

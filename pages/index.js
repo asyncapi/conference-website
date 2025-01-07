@@ -56,8 +56,7 @@ export default function Home() {
 			>
 				<div className='text-center'>
 					<div className='flex items-center justify-center'>
-						<div className='w-[40px] h-[3px] bg-blue-400' />
-						<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>Speakers</div>
+						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Speakers</div>
 					</div>
 				</div>
 				<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
@@ -95,11 +94,20 @@ export default function Home() {
 													className={`w-[168px] ${
 														city.city === speaker.city
 															? 'gradient-bg'
-															: 'border border-gray'
+															: 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
 													}`}
 													overlay={true}
 													>
-													{speaker.city}
+													{/* {speaker.city} */}
+	 												{city.city !== speaker.city && (
+        <>
+        <span className="transparent-bg "></span>
+        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+          {speaker.city}
+        </span>
+      </>
+    )}
+    {city.city === speaker.city && speaker.city}
 													</Button>
 												</div>
 											);
@@ -144,7 +152,7 @@ export default function Home() {
 											enthusiastic audience!
 										</Paragraph>
 										<Link legacyBehavior href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx">
-										<a target="_blank">
+										<a className='flex justify-center' target="_blank">
 											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
 											Apply as a Speaker
 											</Button>
@@ -157,9 +165,9 @@ export default function Home() {
 					</div>
 				</div>
 			<div id='tickets' className='flex items-center'>
-				<div className='w-[40px] h-[3px] bg-blue-400' />
-				<div className='ml-4 text-lg sm:text-sm text-white font-semi-bold'>Tickets</div>
+				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
+			<div data-test="ticket-section">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
 			</Heading>
@@ -177,8 +185,9 @@ export default function Home() {
 			</div>
 			</div>
 			</div>
+		</div>
 			<div id='sponsors' className='mt-20'>
-				<Sponsors imgs={['/img/apidays.png']} />
+				<Sponsors eventSponsors={[{image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"}]} financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}  />
 			</div>
 			<div className='mt-5'>
 			<Subscription/>

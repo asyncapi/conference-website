@@ -1,9 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState,useRef,useEffect} from 'react';
 
 function Dropdown({ active, items, setOptions, setOptions2 }) {
     const [show, setShow] = useState(false)
+	const dropdownRef = useRef(null);
+	useEffect(() => {
+		//  This checks if the click event occurred outside the dropdown, if true we closes the dropdown. 
+		function handleClickOutside(event) {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+				setShow(false);
+			}
+		}
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [dropdownRef]);
 	return (
-		<div class='relative inline-block w-full'>
+		<div className='relative inline-block w-full' ref={dropdownRef}>
 			<div className='w-full'>
 				<button
 					type='button'
@@ -21,9 +34,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 						aria-hidden='true'
 					>
 						<path
-							fill-rule='evenodd'
+							fillRule='evenodd'
 							d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'
-							clip-rule='evenodd'
+							clipRule='evenodd'
 						/>
 					</svg>
 				</button>
@@ -45,9 +58,9 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 					role='menu'
 					aria-orientation='vertical'
 					aria-labelledby='menu-button'
-					tabindex='-1'
+					tabIndex='-1'
 				>
-					<div className='' role='none'>
+					<div className='rounded-md gradient-bg' role='none'>
 						{items &&
 							items.map((item) => {
 								return (
@@ -60,7 +73,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
 										}}
 										className={`text-white block p-4 text-md cursor-pointer navbg`}
 										role='menuitem'
-										tabindex='-1'
+										tabIndex='-1'
 										id='menu-item-0'
 									>
 										{item.city}

@@ -5,7 +5,7 @@ function TicketCards({ className, city }) {
   // Determine card style based on event status
   const isEndedOrUpcoming = city.ended || !city.ticket;
   const cardOpacity = isEndedOrUpcoming ? 'opacity-40' : 'opacity-100';
-  const buttonText = city.isFree ? 'Get Your Ticket' : 'Buy Now';
+  const buttonText = city.isFree ? 'Get Your Free Ticket' : 'Buy Now';
 
   return (
     <div className={`w-[300px] lg:w-full ${cardOpacity} hoverEffect h-[400px] cursor-pointer flex flex-col text-white justify-between rounded-lg card bg-white ${className}`}>
@@ -13,7 +13,7 @@ function TicketCards({ className, city }) {
         <div className='text-xl font-bold text-gradient'>{city.name}, {city.country}</div>
         <div className='mt-2 text-lg'>{city.date}</div>
       </div>
-      <div className='border-t h-20 border-dashed p-4 text-center'>
+      <div className='flex justify-center border-t h-20 border-dashed p-4 text-center'>
         {/* Show a button based on the event status */}
         {isEndedOrUpcoming ? (
           <Button disabled overlay={true} className='w-[200px] bg-gray-400'>

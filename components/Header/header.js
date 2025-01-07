@@ -7,8 +7,10 @@ import cities from '../../config/city-lists.json';
 import Venue from '../Venue/venue';
 import Announcement from '../announcement';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 
 function Header() {
+	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	return (
 		<div className='relative'>
 			<div className='container w-full flex items-center justify-center'>
@@ -16,11 +18,12 @@ function Header() {
 					<div className='flex justify-center w-full mt-32'>
 						<div className='flex flex-col justify-center items-center w-full'>
 						<div className='my-10'><Announcement /></div>
-							<div className='sm:w-full text-center'>
+							<div className='sm:w-full text-center' data-test="landing-heading">
 								<Heading
 									className='text-6xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient'
 									level='h1'
 									typeStyle='heading'
+									
 								>
 									AsyncAPI Conf On Tour 2024
 								</Heading>
@@ -43,7 +46,7 @@ function Header() {
 				</div>
 			</div>
 			<div className='mt-24'>
-				<ReactSlider>
+			    <ReactSlider>
 					{cities.map((city) => {
 						return <Venue key={city.name} city={city}/>;
 					})}
