@@ -226,3 +226,74 @@ mix-blend-mode: lighten;
 .hoverEffect:hover {
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
+
+.announcement {
+  background: linear-gradient(to right, #8b5cf6, #ec4899); 
+  color: white; 
+  padding: 0.3rem 0.6rem; 
+  text-align: center; 
+  font-size: 0.9rem; 
+  font-weight: 500; 
+  border-radius: 0.5rem; 
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transform: scale(1); 
+  max-width: 200px; 
+  margin: 0 auto; 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.announcement::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.announcement:hover {
+  background: linear-gradient(to right, #ec4899, #8b5cf6); 
+  transform: scale(1.05); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.5); 
+}
+
+.announcement:hover::before {
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+.announcement span {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.announcement:hover span {
+  transform: scale(1.1); 
+}
+
+@media (min-width: 768px) {
+  .announcement {
+    padding: 0.4rem 0.7rem; 
+    max-width: 220px; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .announcement {
+    padding: 0.5rem 0.8rem; 
+    max-width: 240px; 
+  }
+}
+
+@media (min-width: 1280px) {
+  .announcement {
+    padding: 0.6rem 1rem; 
+    max-width: 260px; 
+  }
+}
