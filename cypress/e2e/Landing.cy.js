@@ -1,4 +1,6 @@
 import path from "path";
+import cities from "../../config/city-lists.json"
+
 describe("Landing Page Tests", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -33,11 +35,31 @@ describe("Landing Page Tests", () => {
     cy.getTestData("sponsor-section").should("be.visible");
   });
 
+  it("Should contain logos in Sponsor component", () => {
+    const eventSponsors = cities[0].sponsors.eventSponsors;
+    
+    const financialSponsor = cities[0].sponsors.financialSponsors;
+
+    eventSponsors.forEach((sponsor) => {
+      cy.getTestData('sponsor-section')
+        .find(`img[src="${sponsor.image}"]`)
+        .should('be.visible');
+      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+    });
+
+    financialSponsor.forEach((sponsor) => {
+      cy.getTestData('sponsor-section')
+        .find(`img[src="${sponsor.image}"]`)
+        .should('be.visible');
+      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+    });
+  });
+
   it("Subscribe Button is functional", () => {
     cy.getTestData("subscribe-button").invoke("removeAttr", "target").click();
 
     cy.origin("https://www.asyncapi.com/newsletter", () => {
-      cy.url().should("eq", "https://www.asyncapi.com/newsletter");
+      cy.url().should("match", /https:\/\/www\.asyncapi\.com\/[a-z]{2}\/newsletter/);
     });
   });
 });
