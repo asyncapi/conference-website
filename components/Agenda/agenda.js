@@ -19,9 +19,9 @@ function Agenda({ city }) {
 		  </div>
 		  
 		  {city.agenda && <div className='mt-[40px]'>
-			  <Heading
+			  <Heading 
 				  typeStyle='heading-md'
-				  className='text-gradient text-2xl'
+				  className='text-gradient text-2xl h-10'
 				  level='h3'>
 				  {city.date}
 			  </Heading>
