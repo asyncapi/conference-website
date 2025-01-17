@@ -167,19 +167,14 @@ export default function Home() {
 						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 					</div>
 					<div data-test="ticket-section">
-						<div className="bg-darkBlue-900 py-16 px-8">
+						<div className="bg-darkBlue-900 py-8 px-8">
 							<div className="max-w-4xl mx-auto text-center">
-								<h2 className="text-4xl font-bold text-blue-500 mb-4">
+								<h2 className="text-4xl font-bold text-blue-500 mb-2">
 									Get Tickets
 								</h2>
-								<p className="text-lg text-gray-200 mb-6">
-									Experience the Future of Asynchronous Communication: Get Tickets for the <br /> AsyncAPI Conference on Tour!
+								<p className="text-lg text-gray-200">
+									Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
 								</p>
-								<div className="flex justify-center">
-									<Button className="bg-blue-500 hover:bg-blue-600 text-white text-lg font-medium py-3 px-8 rounded shadow-lg transition">
-										Buy Tickets
-									</Button>
-								</div>
 							</div>
 						</div>
 						<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
