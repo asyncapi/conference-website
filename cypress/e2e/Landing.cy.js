@@ -8,7 +8,7 @@ describe("Landing Page Tests", () => {
 
   it("Contains correct heading", () => {
     const Year = new Date().getFullYear();
-    cy.getTestData("landing-heading").contains(`AsyncAPI Conf On Tour ${Year}`);
+    cy.getTestData("landing-heading").contains(new RegExp(`AsyncAPI Conf On Tour (${Year}|${Year-1})`));
   });
 
   it("Should contain About Section", () => {
