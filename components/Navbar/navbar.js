@@ -122,14 +122,22 @@ function Navbar() {
                                        <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
 										{show === link.title && link.subMenu && (
 											<div
-												className='subMenu absolute z-[9] mt-8 w-[150px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0'
+												className={`subMenu absolute z-[9] mt-8 ${link.title=="Venue"?"w-[150px]":"w-[200px]"}  rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0`}
 												onMouseEnter={handleSubMenuEnter}
 												onMouseLeave={handleSubMenuLeave}>
 												{link.subMenu.map((subL) => (
 													<Link href={subL.ref} target={subL.target} key={subL.title} rel="noopener noreferrer">
-														<div className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
+														<div className={`flex items-center justify-between  min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
 														data-test={`nav-sub-${subL.title}`}>
-															{subL.title}
+															<p className=' shrink-0'>{subL.title} </p> 
+															{link.title=="Resources Hub" && (<div className=' h-5 w-5'>
+															<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  															<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+  															<polyline points="15 3 21 3 21 9"/>
+  															<line x1="10" y1="14" x2="21" y2="3"/>
+															</svg>
+															</div>
+													)}
 														</div>
 													</Link>
 													
