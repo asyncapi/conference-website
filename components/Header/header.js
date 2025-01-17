@@ -13,9 +13,9 @@ function Header() {
 	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	return (
 		<div className='relative'>
-			<div className='container w-full flex items-center justify-center'>
-				<div className=''>
-					<div className='flex justify-center w-full mt-32'>
+			<div className='container w-full flex items-center justify-center h-screen'>
+				<div className='items-center'>
+					<div className='flex justify-center w-full'>
 						<div className='flex flex-col justify-center items-center w-full'>
 						<div className='my-10'><Announcement /></div>
 							<div className='sm:w-full text-center' data-test="landing-heading">
