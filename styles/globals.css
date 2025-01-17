@@ -108,6 +108,32 @@ body {
 .no-border {
   border: none !important;
 }
+.my-10{
+   border-radius: 8px;
+}
+
+.my-10:hover {
+  border-radius: 8px;
+  transform: scale(1.02); /* scale up slightly on hover */
+  box-shadow: 0 0 20px rgba(2, 2, 2, 10); /* add deeper shadow on hover */
+  background: linear-gradient(225deg, #34A8FF 9.35%, #C300E2 88.41%); 
+  animation: hover-pulse 1.5s; /* add pulse animation on hover */
+  transition: 1.5s all ease-in-out;
+}
+@keyframes hover-pulse {
+  0% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.10);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+}
 
 .header-bg{ 
 background: linear-gradient(320deg, #2db4fd 10.35%, #410854 88.41%);
