@@ -4,23 +4,22 @@ import Image from 'next/image';
 
 const imageUrls = [
 	
-    "/img/gallery/IMG_20241204_131757.jpg",
-    "/img/gallery/IMG_20240919_113846~2.jpg",
-    "/img/gallery/image.png",
+    "/img/gallery/1.webp",
+    "/img/gallery/2.webp",
+    "/img/gallery/3.webp",
 
-    "/img/gallery/IMG_20240918_110337.jpg",
-    "/img/gallery/IMG-20241205-WA0007.jpg",
-    "/img/gallery/1000149996.jpg",
+    "/img/gallery/4.webp",
+    "/img/gallery/5.webp",
+    "/img/gallery/6.webp",
 
-    "/img/gallery/IMG_20240918_150048.jpg",
-    "/img/gallery/IMG_20240918_155145_1726671294545.jpg",
-    "/img/gallery/IMG_20241205_100012.jpg",
+    "/img/gallery/7.webp",
+    "/img/gallery/8.webp",
+    "/img/gallery/9.webp",
 
-    "/img/gallery/IMG_20240918_112552.jpg",
-    "/img/gallery/IMG_20240918_113924~2.jpg",
-    "/img/gallery/IMG_20241205_155556.jpg",
+    "/img/gallery/10.webp",
+    "/img/gallery/11.webp",
+    "/img/gallery/12.webp",
     
-  
 ];
 
 export function Gallery(){
@@ -44,7 +43,7 @@ export function Gallery(){
                     />
                 ))}
             </div>
-            <Button type='button' onClick={()=>{console.log("click")}} className='w-[200px] mt-4 px-10'>
+            <Button type='button' onClick={()=>{}} className='w-[200px] mt-4 px-10'>
                 Browse
             </Button>
         </div>
