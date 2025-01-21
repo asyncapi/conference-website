@@ -40,10 +40,10 @@ function Venue({ city }) {
 	const textColor = eventEnded ? "text-gray-400": "text-white";
 
 	return (
-		<div>
+		<div data-test={`venue-${city.name}`}>
 			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
 				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
-					<div className='mt-[60px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
+					<div className='mt-[68px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
 						{city.name == 'Online' ? <Heading className={textColor}>
 							{city.name} {city.country}
 						</Heading> :
@@ -53,7 +53,7 @@ function Venue({ city }) {
 						
 						<Paragraph className='mt-[24px]' textColor={textColor}>{city.description}</Paragraph>
 
-						<Heading typeStyle='lg' className={`${textColor} mt-[24px] hover:underline`}>
+						<Heading typeStyle='lg' className={`${textColor} mt-[24px] underline`}>
 							<a href={city.map} target='_blank' rel="noreferrer">
     							{city.address}
   							</a>
@@ -63,7 +63,7 @@ function Venue({ city }) {
 						</Heading>
 						{city.ended ? (city.playlist && <a href='#recordings'><Button className="w-[250px] h-[50px] m-8">Watch Recordings</Button></a>): <div className='m-[30px]'>
 							{city.ticket && <a href={city.ticket} target='_blank' rel='noreferrer'>
-							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Ticket" : "Register Now"}</Button>
+							<Button className="px-8 m-2 w-[250px]">{city.isFree ? "Get Your Free Ticket" : "Register Now"}</Button>
 						</a>}
 						{(!eventEnded && city.cfp) && <a href={city.name === 'online'? "/venue/online/register" :city.cfp}target={city.name=='Online'?"":'_blank'} rel='noreferrer'>
 							<Button className="px-8 m-2 w-[250px]">Apply to be a speaker</Button>
@@ -93,7 +93,7 @@ function Venue({ city }) {
 			<div
 				id='sponsors'
 			>
-				<Sponsors imgs={city.sponsors} />
+				<Sponsors eventSponsors={city.sponsors.eventSponsors} financialSponsor={city.sponsors.financialSponsors} />
 			</div>
 		</div>
 	);
