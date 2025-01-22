@@ -8,7 +8,7 @@ import Link from 'next/link';
 function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financialSponsor = [{image: 'url', websiteUrl: 'url' , className: 'string'}] //className for additional styling if needed
   return (
 		<div className='sponsor-bg container text-center' data-test="sponsor-section">
-			<div className='py-[80px] flex flex-col items-center'>
+			{/* <div className='py-[80px] flex flex-col items-center'>
 
 				<div className='max-w-3xl sm:w-full'>
 					<Paragraph className='mt-[40px]' textColor='text-white'>
@@ -45,7 +45,7 @@ function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financial
   					
 			</div>	
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
