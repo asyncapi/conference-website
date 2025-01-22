@@ -167,6 +167,7 @@ export default function Home() {
 			<div id='tickets' className='flex items-center'>
 				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
+			<div data-test="ticket-section">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
 			</Heading>
@@ -184,8 +185,9 @@ export default function Home() {
 			</div>
 			</div>
 			</div>
+		</div>
 			<div id='sponsors' className='mt-20'>
-				<Sponsors imgs={['/img/apidays.png']} />
+				<Sponsors eventSponsors={[{image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"}]} financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}  />
 			</div>
 			<div className='mt-5'>
 			<Subscription/>
