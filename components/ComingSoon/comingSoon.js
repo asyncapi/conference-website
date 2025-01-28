@@ -23,8 +23,9 @@ function ComingSoon() {
       <NotificationForm />
       </div>
     </div>
-    <div className='w-full h-[450px] mt-16 flex justify-center items-center overflow-hidden'>
-     <Image src='/img/conf-illustration.png' alt='test' width={1200} height={100} className='mt-[200px]' />
+    <div className='w-full h-[450px] mt-16 relative flex justify-center items-center overflow-hidden'>
+      <Image src='/img/arrow-bounce.png' alt='test' width={100} height={100} className='mt-[10px] absolute top-10 animate-bounce' />
+     <Image src='/img/conference-ill.webp' alt='test' width={1200} height={100} className='mt-[200px]' />
     </div>
     </div>
   );
