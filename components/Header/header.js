@@ -13,7 +13,7 @@ function Header() {
 	const isMobile = useMediaQuery({ maxWidth: '590px' });
 	return (
 		<div className='relative'>
-			<div className='container w-full flex items-center justify-center'>
+			{/* <div className='container w-full flex items-center justify-center'>
 				<div className=''>
 					<div className='flex justify-center w-full mt-32'>
 						<div className='flex flex-col justify-center items-center w-full'>
@@ -51,7 +51,7 @@ function Header() {
 						return <Venue key={city.name} city={city}/>;
 					})}
 				</ReactSlider>
-			</div>
+			</div> */}
 		</div>
 	);
 }

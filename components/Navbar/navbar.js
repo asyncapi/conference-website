@@ -69,13 +69,13 @@ function Navbar() {
 	};
 
 	return (
-		<div className={`flex justify-center items-center fixed w-full backdrop-blur ${ drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}>
+		<div className={`flex justify-center items-center fixed w-full ${ drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}>
 			<div className='w-[1131px]'>
 				<div className='p-5 flex justify-between h-[75px] w-full items-center'>
 					<div className='flex items-center sm:justify-between sm:w-full' data-test="nav-Home">
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer'>
-								<Image src='/img/logo.png' alt='conference logo' width={120} height={33}  />
+								{/* <Image src='/img/logo.png' alt='conference logo' width={120} height={33}  /> */}
 							</div>
 						</Link>
 					</div>
