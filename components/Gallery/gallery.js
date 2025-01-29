@@ -24,7 +24,7 @@ const imageUrls = [
 
 export function Gallery(){
     return(
-        <div className='flex flex-col items-center' >
+        <div className='flex flex-col items-center pb-24' >
             <div>
                 <div className='text-lg capitalize sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>gallery</div>
             </div>
@@ -40,10 +40,11 @@ export function Gallery(){
                         fill
                         alt={`Gallery Image ${index + 1}`}
                         className="rounded-xl max-w-full h-auto"
+                        placeholder='blur'
                     />
                 ))}
             </div>
-            <Button type='button' onClick={()=>{}} className='w-[200px] mt-4 px-10'>
+            <Button type='button' onClick={()=>{}} className='w-[200px] my-4 px-10'>
                 Browse
             </Button>
         </div>

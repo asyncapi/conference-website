@@ -51,9 +51,6 @@ export default function Home() {
 			</div>
 			<div id="register" className='container mt-20'>
 			<div className='flex items-center flex-col justify-center'>
-			<div id='gallery'>
-				<Gallery />
-			</div>
 			<div
 			id='speakers'
 			className='relative flex flex-col items-center justify-center mt-12'
@@ -168,6 +165,9 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+			<div id='gallery'>
+				<Gallery />
+			</div>
 			<div id='tickets' className='flex items-center'>
 				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
