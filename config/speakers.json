@@ -25,6 +25,71 @@
             }
             
 		]
+	},
+	{
+		"location": "London, United Kingdom",
+		"city": "London",
+		"agenda": [
+			 {
+				"time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+			}
+		],
+		"lists": [	]		
+	},
+	{
+		"location": "Paris, France",
+		"city": "Paris",
+		"agenda": [
+			 {
+				"time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+			}
+		],
+		"lists": [	]		
+	},
+	{
+		"location": "Lagos, Nigeria",
+		"city": "Lagos",
+		"agenda": [
+			 {
+				"time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+			}
+		],
+		"lists": [	]		
+	},
+	{
+		"location": "Singapore",
+		"city": "Singapore",
+		"agenda": [
+			 {
+				"time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+			}
+		],
+		"lists": [	]		
+	},
+	{
+		"location": "Munich, Germany",
+		"city": "Munich",
+		"agenda": [
+			 {
+				"time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+			}
+		],
+		"lists": [	]		
 	}
 	
 	

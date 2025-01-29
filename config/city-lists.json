@@ -2,7 +2,7 @@
 	{
 		"name": "Online",
 		"country": " Edition",
-		"date": "To Be Decided",
+		"date": "October 29, 2025",
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
 		"img": "/img/testMic.webp",
@@ -32,6 +32,115 @@
 		"recordings": "",
         "playlist": ""
 
+	},
+	{
+		"name": "Singapore",
+		"country": "Singapore",
+		"date": "April 15, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us in Singapore for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"img": "/img/london.gif",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	{
+		"name": "Munich",
+		"country": "Germany",
+		"date": "July 2, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us in Munich for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"img": "/img/london.gif",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	{
+		"name": "Lagos",
+		"country": "Nigeria",
+		"date": "July 18, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us in Lagos for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"img": "/img/london.gif",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	{
+		"name": "London",
+		"country": "UK",
+		"date": "September 22, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"img": "/img/london.gif",
+		"address": "155 Bishopsgate, London EC2M 3YD",
+		"map": "https://maps.app.goo.gl/b2Vb5H2mM41F9nQA6",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	{
+		"name": "Paris",
+		"country": "France",
+		"date": "December 9, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
+		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
+		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
+		"map": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"cfp": false,
+		"ended": false
 	}
 	
 ]
