@@ -1,5 +1,4 @@
 import Slider from 'react-slick';
-import Arrow from '../illustration/arrow';
 import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
