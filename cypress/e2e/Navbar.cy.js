@@ -61,14 +61,14 @@ describe("Navbar links", () => {
 
   });
 
-//   it("should redirect to resource hub", () => {
-//     let data = resourcesData[0].subMenu;
-//     cy.wrap(data).each((val,idx)=>{
-//       cy.getTestData("nav-Resources Hub").trigger('mouseover');
-//       cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
-//     });
+  it("should redirect to resource hub", () => {
+    let data = resourcesData[0].subMenu;
+    cy.wrap(data).each((val,idx)=>{
+      cy.getTestData("nav-Resources Hub").trigger('mouseover');
+      cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
+    });
 
-//   });
+  });
 
   // To check for mobile view
 
@@ -140,16 +140,16 @@ describe("Navbar links", () => {
 
   });
 
-//   it("should redirect to resource hub mobile view", () => {
+  it("should redirect to resource hub mobile view", () => {
 
-//     cy.viewport(700,800)
-//     cy.getTestData("nav-Hamberger").click();
+    cy.viewport(700,800)
+    cy.getTestData("nav-Hamberger").click();
 
-//     let data = resourcesData[0].subMenu;
-//     cy.wrap(data).each((val,idx)=>{
-//       cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
-//     });
+    let data = resourcesData[0].subMenu;
+    cy.wrap(data).each((val,idx)=>{
+      cy.wrap(val.ref).should("match", /.*(drive\.google\.com|youtube\.com).*/);
+    });
 
-//   });
+  });
 
 });
