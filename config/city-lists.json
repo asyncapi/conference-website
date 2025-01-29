@@ -10,21 +10,18 @@
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
-				"image":"",
-				"websiteUrl":""
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
 			}],
 			"financialSponsors" : [
 				{
 					"image":"" , 
 					"websiteUrl": "",
 					"className":"" 
-				}, 
-				{
-					"image":"" ,
-					"websiteUrl":"",
-					"className":""
 				}
+				
 			]
+			
 		},
 		"ticket": false,
 		"isFree": true,
@@ -46,7 +43,13 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}]
+			}],"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
 			
 		},
 		"ticket": "",
@@ -68,7 +71,13 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}]
+			}],"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
 			
 		},
 		"ticket": "",
@@ -90,7 +99,13 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}]
+			}],"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
 			
 		},
 		"ticket": "",
@@ -112,7 +127,13 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}]
+			}],"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
 			
 		},
 		"ticket": "",
@@ -134,7 +155,13 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}]
+			}],"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
 			
 		},
 		"ticket": "",

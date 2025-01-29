@@ -1,11 +1,11 @@
 {
-    "EventStartDate": "To be decided",
-    "EventEndDate": "To be decided",
-    "CallStartDate": "To be decided",
-    "CallEndDate": "To be decided",
-    "Edition": "Online Edition",
+    "EventStartDate": "15th April 2025",
+    "EventEndDate": "16th April 2025",
+    "CallStartDate": "29th January 2025",
+    "CallEndDate": "23rd February 2025",
+    "Edition": "Singapore",
     "sponsors":[
-        ""
+        "/img/apidays.png"
     ],
     "ended": true,
     "agenda":null
