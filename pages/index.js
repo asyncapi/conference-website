@@ -132,7 +132,6 @@ export default function Home() {
                   </div>
                 )}
               </div>
-
               <div className="mt-[64px] pb-[181px]">
                 {typeof speakersList === "string" ? (
                   <div className="mt-[140px] flex items-center justify-center text-center">
