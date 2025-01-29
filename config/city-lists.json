@@ -1,12 +1,12 @@
 [
 	{
-		"name": "",
-		"country": "",
-		"date": "",
-		"cfpdate":"",
-		"description": "",
-		"img": "",
-		"address": "",
+		"name": "Online",
+		"country": " Edition",
+		"date": "To Be Decided",
+		"cfpdate":"Not announced yet",
+		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+		"img": "/img/testMic.webp",
+		"address": "AsyncAPI YouTube Channel",
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
@@ -16,8 +16,8 @@
 			"financialSponsors" : [
 				{
 					"image":"" , 
-					"websiteUrl": ""
-					 
+					"websiteUrl": "",
+					"className":"" 
 				}, 
 				{
 					"image":"" ,
@@ -26,12 +26,11 @@
 				}
 			]
 		},
-		"ticket": "" , 
-		"isFree": "",
-		"ended": "",
+		"ticket": false,
+		"isFree": true,
+		"ended": true,
 		"recordings": "",
-        "playlist": "",
-		"cfp" : ""
+        "playlist": ""
 
 	}
 	

@@ -1,13 +1,13 @@
 {
-    "EventStartDate": "",
-    "EventEndDate": "",
-    "CallStartDate": "",
-    "CallEndDate": "",
-    "Edition": "",
+    "EventStartDate": "To be decided",
+    "EventEndDate": "To be decided",
+    "CallStartDate": "To be decided",
+    "CallEndDate": "To be decided",
+    "Edition": "Online Edition",
     "sponsors":[
         ""
     ],
-    "ended": "",
-    "agenda":""
+    "ended": true,
+    "agenda":null
 
 }

@@ -1,28 +1,36 @@
 [
 	{
-		"title": "",
-		"ref": ""
+		"title": "About",
+		"ref": "/#about"
 	},
 	{
-		"title": "",
+		"title": "Venue",
 		"ref": "",
 		"subMenu": [
 			{
-				"title": "",
-				"ref": ""
-			},
-			{
-				"title": "",
-				"ref": ""
-			},
-			{
-				"title": "",
-				"ref": ""
-			},
-			{
-				"title": "",
-				"ref": "" 
+				"title": "Online",
+				"ref": "/venue/Online"
 			}
+			
 		]
+	},
+	{
+		"title": "Speakers",
+		"ref": "/#speakers"
+	},
+	{
+		"title": "Tickets",
+		"ref": "/#tickets"
+	},
+	{
+		"title": "Sponsors",
+		"ref": "/#sponsors"
+	},
+	{
+		"title":"Past Editions",
+		"ref":"/editions"
 	}
+	
+	
+	
 	]

@@ -1,27 +1,29 @@
 [
 	{
 		"location": "",
-		"city": "",
+		"city": "All",
 		"lists": []
 	},
 	{
-		"location": "",
-		"city": "",
+		"city": "Online",
+		"location": "Online Edition",
+		"lists": [
+		{
+			"name": "TBD",
+			"title": "TDB",
+			"img": ""
+		}
+		
+	
+		],
 		"agenda": [
 			{
-				"time": "",
-				"session": "",
-				"speaker": "", 
-				"type": ""
-			}
-			
-		],
-		"lists": [
-			{
-				"name": "",
-				"title": "",
-				"img": ""
-			}
+                "time": "TBD",
+                "session": "TBD",
+                "speaker": "TBD",
+                "type": "TBD"
+            }
+            
 		]
 	}
 	
