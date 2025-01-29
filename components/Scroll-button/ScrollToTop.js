@@ -33,7 +33,7 @@ const ScrollToTop = () => {
         style={{
           fontSize: '0.875rem',
           lineHeight: '1.25rem',
-          boxShadow: '0 8px 12px rgba(255, 255, 255, 0.5)', // Subtle white shadow for appeal
+          boxShadow: '0 4px 8px rgba(255, 255, 255, 0.3)', 
         }}
         aria-label="Scroll to top"
       >
