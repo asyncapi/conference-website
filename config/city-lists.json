@@ -17,18 +17,18 @@
 				{
 					"image":"" , 
 					"websiteUrl": "",
-					"className":"" 
+					"className":"w-[250px] h-[50px]" 
 				}, 
 				{
 					"image":"" ,
 					"websiteUrl":"",
-					"className":""
+					"className":"w-[240px] h-[70px]"
 				}
 			]
 		},
-		"ticket": "",
-		"isFree": "",
-		"ended":  "",
+		"ticket": null,
+		"isFree": null,
+		"ended":  null,
 		"recordings": "",
         "playlist": ""
 
