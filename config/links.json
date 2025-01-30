@@ -8,21 +8,30 @@
 		"ref": "",
 		"subMenu": [
 			{
-				"title": "Online",
-				"ref": "/venue/Online"
+				"title": "Singapore",
+				"ref": "/venue/Singapore"
 			},
 			{
-				"title": "Helsinki, Finland",
-				"ref": "/venue/Helsinki"
+				"title": "Munich, Germany",
+				"ref": "/venue/Munich"
+			},
+			{
+				"title": "Lagos, Nigeria",
+				"ref": "/venue/Lagos"
 			},
 			{
 				"title": "London, UK",
 				"ref": "/venue/London"
 			},
 			{
+				"title": "Online", 
+				"ref": "/venue/Online"
+			},
+			{
 				"title": "Paris, France",
 				"ref": "/venue/Paris"
 			}
+			
 		]
 	},
 	{
@@ -75,5 +84,7 @@
             
 	]
 }
-
-]
+	
+	
+	
+	]

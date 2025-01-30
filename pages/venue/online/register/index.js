@@ -7,7 +7,17 @@ export default function SpeakersForm(){
         <Paper />
         </div>
         <div>
-        <Sponsors eventSponsors={[{image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"}]} financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} />
+        <Sponsors eventSponsors={[
+					{
+						image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"
+					},
+					{
+						"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
+						"websiteUrl":""
+					}
+					]} 
+					// financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} 
+					 />
         </div>
     </div>)
 }

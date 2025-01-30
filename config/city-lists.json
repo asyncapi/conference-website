@@ -1,75 +1,100 @@
 [
+	
 	{
-		"name": "Online",
-		"country": " Edition",
-		"date": "October 30, 2024",
+		"name": "Singapore",
+		"country": "Singapore",
+		"date": "April 15-16, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-		"img": "/img/testMic.webp",
-		"address": "AsyncAPI YouTube Channel",
-		"map": "https://www.youtube.com/live/F9wHxd-v2f0?si=PT8BuAUKNmoLHRiM",
+		"description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
+		"img": "/img/singapore.jpg",
+		"address": "Marina Bay Sands, Singapore",
+		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}],
-			"financialSponsors" : [
+			}],"financialSponsors" : [
 				{
-					"image":"/img/graviteeio.svg" , 
-					"websiteUrl": "https://www.gravitee.io/",
-					"className":"w-[250px] h-[50px]" 
-				}, 
-				{
-					"image":"/img/postman.png" ,
-					"websiteUrl":"https://www.postman.com/",
-					"className":"w-[240px] h-[70px]"
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
 				}
 			]
+			
 		},
-		"ticket": false,
+		"ticket": "",
 		"isFree": true,
-		"ended": true,
-		"recordings": "https://www.youtube.com/playlist?list=PLbi1gRlP7pijItMBmw9SeeyWxuEa3jLR2",
-        "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pijItMBmw9SeeyWxuEa3jLR2"
-
+		"ended": false,
+		"recordings":"",
+		"playlist":""
 	},
 	{
-		"name": "Helsinki",
-		"country": "Finland",
-		"date": "May 29, 2024",
+		"name": "Munich",
+		"country": "Germany",
+		"date": "July 2-3, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in Helsinki for the AsyncAPI Conference, where we will explore all things AsyncAPI and connect physical and digital worlds. Get excited as we delve into sustainable APIs for the Era of AI, Data Platforms, and Quantum Computing!.",
-		"img": "/img/finland.webp",
-		"address": "Pikku-Finlandia, Helsinki, Karamzininranta 4, 00100 Helsinki, Finland",
-		"map": "https://maps.app.goo.gl/UpdEp188m5YNEAEo9",
+		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
+		"img": "/img/munich.jpg",
+		"address": "Smartvillage Bogenhausen, München, Germany",
+		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}],
-			"financialSponsors" : [
+			}],"financialSponsors" : [
 				{
-					"image":"/img/graviteeio.svg" , 
-					"websiteUrl": "https://www.gravitee.io/",
-					"className":"w-[250px] h-[50px]" 
-				}, 
-				{
-					"image":"/img/postman.png" ,
-					"websiteUrl":"https://www.postman.com/",
-					"className":"w-[240px] h-[70px]"
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
 				}
 			]
+			
 		},
-		"ticket": false,
-		"isFree": false,
-		"ended": true
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
 	},
+	{
+		"name": "Lagos",
+		"country": "Nigeria",
+		"date": "July 18-19, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
+		"img": "/img/lagos.jpg",
+		"address": "etc.venues 155 Bishopsgate, London EC2M 3YD",
+		"map": "",
+		"sponsors": {
+			"eventSponsors" : [{
+					"image":"/img/apidays.png",
+					"websiteUrl":"https://www.apidays.global/"
+				},{
+					"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
+					"websiteUrl":""
+				}],
+			"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+			]
+			
+		},
+		"ticket": "",
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 18, 2024",
+		"date": "September 22-24, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
 		"map": "https://maps.app.goo.gl/b2Vb5H2mM41F9nQA6",
@@ -77,35 +102,30 @@
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}],
-			"financialSponsors" : [
+			}],"financialSponsors" : [
 				{
-					"image":"/img/graviteeio.svg" , 
-					"websiteUrl": "https://www.gravitee.io/",
-					"className":"w-[250px] h-[50px]" 
-				}, 
-				{
-					"image":"/img/postman.png" ,
-					"websiteUrl":"https://www.postman.com/",
-					"className":"w-[240px] h-[70px]"
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
 				}
 			]
+			
 		},
-		"ticket": "https://ticket.apidays.global/event/apidays-london-2024/869eca20-bfb6-4103-b8bb-d0348932e940/",
+		"ticket": "",
 		"isFree": true,
-		"ended": true,
-		"recordings":"https://youtube.com/playlist?list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5&si=YPmjUsj5mU6FpLhB",
-		"playlist":"https://www.youtube.com/embed/videoseries?si=92z0xOVroBuDUvMR&amp;list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5"
+		"ended": false,
+		"recordings":"",
+		"playlist":""
 	},
 	{
-		"name": "Paris",
-		"country": "France",
-		"date": "December 5, 2024",
+		"name": "Online",
+		"country": " Edition",
+		"date": "October 29, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
-		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
-		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
-		"map": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",
+		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+		"img": "/img/testMic.webp",
+		"address": "AsyncAPI YouTube Channel",
+		"map": "https://www.youtube.com/@AsyncAPI",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/apidays.png",
@@ -113,20 +133,47 @@
 			}],
 			"financialSponsors" : [
 				{
-					"image":"/img/graviteeio.svg" , 
-					"websiteUrl": "https://www.gravitee.io/",
-					"className":"w-[250px] h-[50px]" 
-				}, 
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+				
+			]
+			
+		},
+		"ticket": false,
+		"isFree": true,
+		"ended": true,
+		"recordings": "",
+        "playlist": ""
+
+	},
+	{
+		"name": "Paris",
+		"country": "France",
+		"date": "December 9-11, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
+		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
+		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
+		"map": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}],"financialSponsors" : [
 				{
-					"image":"/img/postman.png" ,
-					"websiteUrl":"https://www.postman.com/",
-					"className":"w-[240px] h-[70px]"
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
 				}
 			]
+			
 		},
-		"ticket": "https://ticket.apidays.global/event/apidays-paris-2024/f8f61349-4f78-4bba-a162-68d598833116/cart?coupon=ASYNCAPICONF",
+		"ticket": "",
 		"isFree": true,
 		"cfp": false,
-		"ended": true
+		"ended": false
 	}
+	
 ]

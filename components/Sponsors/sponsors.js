@@ -18,11 +18,11 @@ function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financial
 					</Paragraph>
 				</div>
 				<Heading typeStyle='heading-md' className='text-white mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
-				<div className='flex justify-center  w-[650px] sm:w-full sm:flex-col sm:justify-center sm:items-center'>
+				<div className='flex justify-center  w-[650px] sm:w-full flex-col  items-center'>
 					{eventSponsors &&
 						eventSponsors.map((sponsor) => (
 
-							<div key={sponsor.image} className={`w-[300px] h-[150px] flex items-center ${(sponsor.className)? sponsor.className : ""}`}>
+							<div key={sponsor.image} className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${(sponsor.className)? sponsor.className : ""}`}>
 								<Link href={sponsor.websiteUrl} target='_blank'>
 									<Image src={sponsor.image} alt={sponsor.image} height={210} width={300}/>
 								</Link>	

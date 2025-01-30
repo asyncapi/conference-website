@@ -21,7 +21,7 @@ it("should render guideline for not ended cities and agenda otherwise",()=>{
 it("Should contain logos in Sponsor component", () => {
     const eventSponsors = cities[0].sponsors.eventSponsors;
     
-    const financialSponsor = cities[0].sponsors.financialSponsors;
+    // const financialSponsor = cities[0].sponsors.financialSponsors;
 
     cy.wrap(cities).each((city) => {
         cy.visit(`http://localhost:3000/venue/${city.name}`);
@@ -35,12 +35,12 @@ it("Should contain logos in Sponsor component", () => {
             cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
         });
     
-        financialSponsor.forEach((sponsor) => {
-            cy.getTestData('sponsor-section')
-            .find(`img[src="${sponsor.image}"]`)
-            .should('be.visible');
-            cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
-        });
+        // financialSponsor.forEach((sponsor) => {
+        //     cy.getTestData('sponsor-section')
+        //     .find(`img[src="${sponsor.image}"]`)
+        //     .should('be.visible');
+        //     cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+        // });
     })
 });
 
