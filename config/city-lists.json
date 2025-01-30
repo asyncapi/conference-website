@@ -67,9 +67,13 @@
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
-				"image":"/img/apidays.png",
-				"websiteUrl":"https://www.apidays.global/"
-			}],"financialSponsors" : [
+					"image":"/img/apidays.png",
+					"websiteUrl":"https://www.apidays.global/"
+				},{
+					"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
+					"websiteUrl":""
+				}],
+			"financialSponsors" : [
 				{
 					"image":"" , 
 					"websiteUrl": "",
