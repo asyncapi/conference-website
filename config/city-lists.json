@@ -1,43 +1,13 @@
 [
-	{
-		"name": "Online",
-		"country": " Edition",
-		"date": "October 29, 2025",
-		"cfpdate":"Not announced yet",
-		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-		"img": "/img/testMic.webp",
-		"address": "AsyncAPI YouTube Channel",
-		"map": "",
-		"sponsors": {
-			"eventSponsors" : [{
-				"image":"/img/apidays.png",
-				"websiteUrl":"https://www.apidays.global/"
-			}],
-			"financialSponsors" : [
-				{
-					"image":"" , 
-					"websiteUrl": "",
-					"className":"" 
-				}
-				
-			]
-			
-		},
-		"ticket": false,
-		"isFree": true,
-		"ended": true,
-		"recordings": "",
-        "playlist": ""
-
-	},
+	
 	{
 		"name": "Singapore",
 		"country": "Singapore",
-		"date": "April 15, 2025",
+		"date": "April 15-16, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in Singapore for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
-		"img": "/img/london.gif",
-		"address": "",
+		"description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
+		"img": "/img/singapore.jpg",
+		"address": "Marina Bay Sands, Singapore",
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
@@ -61,11 +31,11 @@
 	{
 		"name": "Munich",
 		"country": "Germany",
-		"date": "July 2, 2025",
+		"date": "July 2-3, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in Munich for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
-		"img": "/img/london.gif",
-		"address": "",
+		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
+		"img": "/img/munich.jpg",
+		"address": "Smartvillage Bogenhausen, München, Germany",
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
@@ -89,11 +59,11 @@
 	{
 		"name": "Lagos",
 		"country": "Nigeria",
-		"date": "July 18, 2025",
+		"date": "July 18-19, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in Lagos for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
-		"img": "/img/london.gif",
-		"address": "",
+		"description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
+		"img": "/img/lagos.jpg",
+		"address": "etc.venues 155 Bishopsgate, London EC2M 3YD",
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
@@ -114,12 +84,13 @@
 		"recordings":"",
 		"playlist":""
 	},
+	
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 22, 2025",
+		"date": "September 22-24, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us in London for AsyncAPI Conference and learn how to speak fluent API! Let's taco about messaging and have a fiesta you will remember!",
+		"description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
 		"img": "/img/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
 		"map": "https://maps.app.goo.gl/b2Vb5H2mM41F9nQA6",
@@ -143,11 +114,42 @@
 		"playlist":""
 	},
 	{
+		"name": "Online",
+		"country": " Edition",
+		"date": "October 29, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+		"img": "/img/testMic.webp",
+		"address": "AsyncAPI YouTube Channel",
+		"map": "https://www.youtube.com/@AsyncAPI",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}],
+			"financialSponsors" : [
+				{
+					"image":"" , 
+					"websiteUrl": "",
+					"className":"" 
+				}
+				
+			]
+			
+		},
+		"ticket": false,
+		"isFree": true,
+		"ended": true,
+		"recordings": "",
+        "playlist": ""
+
+	},
+	{
 		"name": "Paris",
 		"country": "France",
-		"date": "December 9, 2025",
+		"date": "December 9-11, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Join us at apidays Paris for the AsyncAPI Conference and experience the art of API perfection! Let's craft a symphony of messaging and celebrate tech in style!",
+		"description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
 		"map": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",

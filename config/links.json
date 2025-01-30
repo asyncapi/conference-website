@@ -8,10 +8,6 @@
 		"ref": "",
 		"subMenu": [
 			{
-				"title": "Online",
-				"ref": "/venue/Online"
-			},
-			{
 				"title": "Singapore",
 				"ref": "/venue/Singapore"
 			},
@@ -26,6 +22,10 @@
 			{
 				"title": "London, UK",
 				"ref": "/venue/London"
+			},
+			{
+				"title": "Online", 
+				"ref": "/venue/Online"
 			},
 			{
 				"title": "Paris, France",
