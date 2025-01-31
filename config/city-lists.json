@@ -92,8 +92,8 @@
 			]
 		},
 		"ticket": "__",
-		"isFree": true,
-		"ended": true,
+		"isFree": false,
+		"ended": false,
 		"recordings":"__",
 		"playlist":"__"
 	},
