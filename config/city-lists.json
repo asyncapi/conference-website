@@ -3,34 +3,73 @@
 		"name": "",
 		"country": "",
 		"date": "",
-		"cfpdate":"",
+		"cfpdate": "",
 		"description": "",
 		"img": "",
 		"address": "",
 		"map": "",
 		"sponsors": {
-			"eventSponsors" : [{
-				"image":"",
-				"websiteUrl":""
-			}],
-			"financialSponsors" : [
-				{
-					"image":"" , 
-					"websiteUrl": "",
-					"className":"w-[250px] h-[50px]" 
-				}, 
-				{
-					"image":"" ,
-					"websiteUrl":"",
-					"className":"w-[240px] h-[70px]"
-				}
-			]
+			"eventSponsors": [],
+			"financialSponsors": []
 		},
-		"ticket": null,
+		"ticket": "",
 		"isFree": null,
-		"ended":  null,
+		"ended": null,
 		"recordings": "",
-        "playlist": ""
-
+		"playlist": ""
+	},
+	{
+		"name": "",
+		"country": "",
+		"date": "",
+		"cfpdate": "",
+		"description": "",
+		"img": "",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors": [],
+			"financialSponsors": []
+		},
+		"ticket": "",
+		"isFree": null,
+		"ended": null
+	},
+	{
+		"name": "",
+		"country": "",
+		"date": "",
+		"cfpdate": "",
+		"description": "",
+		"img": "",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors": [],
+			"financialSponsors": []
+		},
+		"ticket": "",
+		"isFree": null,
+		"ended": null,
+		"recordings": "",
+		"playlist": ""
+	},
+	{
+		"name": "",
+		"country": "",
+		"date": "",
+		"cfpdate": "",
+		"description": "",
+		"img": "",
+		"address": "",
+		"map": "",
+		"sponsors": {
+			"eventSponsors": [],
+			"financialSponsors": []
+		},
+		"ticket": "",
+		"isFree": null,
+		"cfp": null,
+		"ended": null
 	}
 ]
