@@ -1,7 +1,7 @@
 [
 	{
-		"name": "__",
-		"country": "__",
+		"name": "Online",
+		"country": " Edition",
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
@@ -34,8 +34,8 @@
 
 	},
 	{
-		"name": "__",
-		"country": "__",
+		"name": "Helsinki",
+		"country": "Finland",
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
@@ -65,8 +65,8 @@
 		"ended": false
 	},
 	{
-		"name": "__",
-		"country": "__",
+		"name": "London",
+		"country": "UK",
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
@@ -98,8 +98,8 @@
 		"playlist":"__"
 	},
 	{
-		"name": "__",
-		"country": "__",
+		"name": "Paris",
+		"country": "France",
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
