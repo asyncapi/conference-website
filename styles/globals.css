@@ -76,7 +76,7 @@ body {
   display: flex;
 }
 .embla__slide {
-  flex: 0 0 75%;
+  flex: 0 0 70%;
   min-width: 0;
 }
 
