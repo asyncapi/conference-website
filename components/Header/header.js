@@ -25,7 +25,7 @@ function Header() {
 									typeStyle='heading'
 									
 								>
-									AsyncAPI Conf On Tour 2024
+									AsyncAPI Conf On Tour 2025
 								</Heading>
 							</div>
 							<div className='w-[624px] sm:w-full text-center'>
