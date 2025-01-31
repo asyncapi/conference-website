@@ -5,7 +5,7 @@
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
-		"img": "/img/testMic.webp",
+		"img": "__",
 		"address": "__",
 		"map": "__",
 		"sponsors": {
@@ -39,7 +39,7 @@
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
-		"img": "/img/finland.webp",
+		"img": "__",
 		"address": "__",
 		"map": "__",
 		"sponsors": {
@@ -70,7 +70,7 @@
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
-		"img": "/img/london.gif",
+		"img": "__",
 		"address": "__",
 		"map": "__",
 		"sponsors": {
@@ -91,9 +91,9 @@
 				}
 			]
 		},
-		"ticket": false,
-		"isFree": false,
-		"ended": false,
+		"ticket": "__",
+		"isFree": true,
+		"ended": true,
 		"recordings":"__",
 		"playlist":"__"
 	},
@@ -103,7 +103,7 @@
 		"date": "__",
 		"cfpdate":"__",
 		"description": "__",
-		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
+		"img": "__",
 		"address": "__",
 		"map": "__",
 		"sponsors": {
@@ -124,7 +124,7 @@
 				}
 			]
 		},
-		"ticket": false,
+		"ticket": "__",
 		"isFree": false,
 		"cfp": false,
 		"ended": false
