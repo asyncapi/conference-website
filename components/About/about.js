@@ -15,7 +15,7 @@ function About() {
 						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>About The Event</div>
 					</div>
 					<Heading typeStyle='heading-md' className='text-gradient lg:mt-10'>
-					AACoT'24
+					AACoT'25
 					</Heading>
 					<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
 					The AsyncAPI Conf on Tour is an official event created by the AsyncAPI
