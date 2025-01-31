@@ -5,8 +5,8 @@
 		"lists": []
 	},
 	{
-		"location": "",
-		"city": "",
+		"location": "Helsinki, Finland",
+		"city": "Helsinki",
 		"agenda": [
 			{
 				"time": "",
@@ -42,8 +42,8 @@
 		]
 	},
 	{
-		"location": "",
-		"city": "",
+		"location": "London, United Kingdom",
+		"city": "London",
 		"agenda": [
 			{
 				"time": "",
@@ -90,8 +90,8 @@
 		]
 	},
 	{
-		"city": "",
-		"location": "",
+		"city": "Paris",
+		"location": "Paris, France",
 		"lists": [
 			{
 				"name": "",
