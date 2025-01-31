@@ -13,24 +13,6 @@
 				"session": "",
 				"speaker": "",
 				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
 			}
 		],
 		"lists": [
@@ -50,35 +32,6 @@
 				"session": "",
 				"speaker": "",
 				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": ""
-			},
-			{
-				"time": "",
-				"session": "",
-				"type": "Break/Networking"
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": "Technical Speaker"
 			}
 		],
 		"lists": [
@@ -104,36 +57,7 @@
 				"time": "",
 				"session": "",
 				"speaker": "",
-				"type": "Keynote Speaker"
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": "Technical Speaker"
-			},
-			{
-				"time": "",
-				"session": "",
-				"type": "Lunch"
-			},
-			{
-				"time": "",
-				"session": "",
-				"speaker": "",
-				"type": "Technical Speaker"
+				"type": ""
 			}
 		]
 	},
