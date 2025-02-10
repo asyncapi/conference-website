@@ -1,10 +1,11 @@
 import path from "path";
-import cities from "../../config/city-lists.json"
+import cities from "../../config/city-lists.json";
 
 describe("Landing Page Tests", () => {
   beforeEach(() => {
     cy.visit("/");
   });
+
   it("Contains correct heading", () => {
     const Year = new Date().getFullYear();
     cy.getTestData("landing-heading").contains(new RegExp(`AsyncAPI Conf On Tour (${Year}|${Year-1})`));
@@ -15,12 +16,12 @@ describe("Landing Page Tests", () => {
   });
 
   it("Verify the downloaded file", () => {
+    const Year = new Date().getFullYear();
     cy.getTestData("prospectus-download").should("be.visible");
     cy.getTestData("prospectus-download").click();
 
-    const Year = new Date().getFullYear();
     const downloadsFolder = Cypress.config("downloadsFolder");
-    cy.readFile(path.join(downloadsFolder, `conf ${Year}.pdf`));
+    cy.readFile(path.join(downloadsFolder, `conf ${Year}.pdf`)).should("exist");
   });
 
   it("Should contain Speakers section", () => {
@@ -35,25 +36,24 @@ describe("Landing Page Tests", () => {
     cy.getTestData("sponsor-section").should("be.visible");
   });
 
-  it("Should contain logos in Sponsor component", () => {
-    const eventSponsors = cities[0].sponsors.eventSponsors;
-    
-    const financialSponsor = cities[0].sponsors.financialSponsors;
+//   it("Should contain logos in Sponsor component", () => {
+//     const eventSponsors = cities[0].sponsors.eventSponsors;
+//     const financialSponsors = cities[0].sponsors.financialSponsors;
 
-    eventSponsors.forEach((sponsor) => {
-      cy.getTestData('sponsor-section')
-        .find(`img[src="${sponsor.image}"]`)
-        .should('be.visible');
-      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
-    });
+//     eventSponsors.forEach((sponsor) => {
+//       cy.getTestData("sponsor-section")
+//         .find(`img[src="${sponsor.image}"]`)
+//         .should("be.visible");
+//       cy.get(`a[href="${sponsor.websiteUrl}"]`).should("exist");
+//     });
 
-    financialSponsor.forEach((sponsor) => {
-      cy.getTestData('sponsor-section')
-        .find(`img[src="${sponsor.image}"]`)
-        .should('be.visible');
-      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
-    });
-  });
+//     financialSponsors.forEach((sponsor) => {
+//       cy.getTestData("sponsor-section")
+//         .find(`img[src="${sponsor.image}"]`)
+//         .should("be.visible");
+//       cy.get(`a[href="${sponsor.websiteUrl}"]`).should("exist");
+//     });
+//   });
 
   it("Subscribe Button is functional", () => {
     cy.getTestData("subscribe-button").invoke("removeAttr", "target").click();

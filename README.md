@@ -9,6 +9,11 @@ First, fork the repository and clone it.
 git clone https://github.com/<username>/conference-website.git
 ```
 
+Change Directory
+```bash
+cd conference-website
+```
+
 Install Dependencies
 ```bash
 npm install
