@@ -49,7 +49,7 @@ describe("Footer links", () => {
     });
   });
 
-  it("Should Contain AsycAPI Logo", () => {
+  it("Should Contain AsycAPI Conf Logo", () => {
     cy.getTestData("footer-asyncAPI-logo").should("be.visible");
   });
 });
