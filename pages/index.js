@@ -173,7 +173,7 @@ export default function Home() {
 			</Heading>
 			<div className='max-w-3xl sm:w-full text-center'>
 			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
+			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference!
 			</Paragraph>
 			</div>
 			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
@@ -189,11 +189,10 @@ export default function Home() {
 			<div id='sponsors' className='mt-20'>
 				<Sponsors eventSponsors={[
 					{
-						image:'/img/logos/apidays.png',websiteUrl:"https://www.apidays.global/"
+						image:"/img/logos/apidays.png",websiteUrl:"https://www.apidays.global/"
 					},
 					{
-						"image":"/img/logos/APICONF-LOGO-White.png",
-						"websiteUrl":""
+						"image":"/img/logos/APICONF-LOGO-White.png","websiteUrl":"https://apiconf.net/"
 					}
 					]} 
 					// financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} 
