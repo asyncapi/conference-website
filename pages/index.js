@@ -189,10 +189,10 @@ export default function Home() {
 			<div id='sponsors' className='mt-20'>
 				<Sponsors eventSponsors={[
 					{
-						image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"
+						image:'/img/logos/apidays.png',websiteUrl:"https://www.apidays.global/"
 					},
 					{
-						"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
+						"image":"/img/logos/APICONF-LOGO-White.png",
 						"websiteUrl":""
 					}
 					]} 

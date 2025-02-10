@@ -24,7 +24,7 @@ function Sponsors({eventSponsors,financialSponsor}) {	 //eventSponsors,financial
 
 							<div key={sponsor.image} className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${(sponsor.className)? sponsor.className : ""}`}>
 								<Link href={sponsor.websiteUrl} target='_blank'>
-									<Image src={sponsor.image} alt={sponsor.image} height={210} width={300}/>
+									<Image src={sponsor.image} alt={sponsor.image} height={230} width={280}/>
 								</Link>	
 								
 							</div>

@@ -75,7 +75,7 @@ function Navbar() {
 					<div className='flex items-center sm:justify-between sm:w-full' data-test="nav-Home">
 						<Link href='/'>
 							<div className='flex items-center cursor-pointer'>
-								<Image src='/img/logo.png' alt='conference logo' width={120} height={33}  />
+								<Image src='/img/logos/2025-logo.png' alt='conference logo' width={150} height={33}  />
 							</div>
 						</Link>
 					</div>

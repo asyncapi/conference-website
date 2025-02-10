@@ -25,12 +25,12 @@ function Header() {
 									typeStyle='heading'
 									
 								>
-									AsyncAPI Conf On Tour 2024
+									AsyncAPI Conference 2025
 								</Heading>
 							</div>
 							<div className='w-[624px] sm:w-full text-center'>
 								<Paragraph className='mt-[16px]' textColor='text-gray-200'>
-								Join us for the AsyncAPI Conference on Tour,
+								Join us for the AsyncAPI Conference,
 								bringing the latest in AsyncAPI technology to locations worldwide!
 								</Paragraph>
 							</div>
