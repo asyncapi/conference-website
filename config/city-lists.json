@@ -102,7 +102,7 @@
 		"map": "https://www.youtube.com/@AsyncAPI",
 		"sponsors": {
 			"eventSponsors" : [{
-				"image":"asyncapi-logo--white.png",
+				"image":"/img/logos/asyncapi-logo--white.png",
 				"websiteUrl":"https://asyncapi.com"
 			}]
 			
