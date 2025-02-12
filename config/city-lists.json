@@ -82,13 +82,7 @@
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
 				"websiteUrl":"https://www.apidays.global/"
-			}],"financialSponsors" : [
-				{
-					"image":"" , 
-					"websiteUrl": "",
-					"className":"" 
-				}
-			]
+			}]
 			
 		},
 		"ticket": "",
@@ -108,8 +102,8 @@
 		"map": "https://www.youtube.com/@AsyncAPI",
 		"sponsors": {
 			"eventSponsors" : [{
-				"image":"",
-				"websiteUrl":""
+				"image":"asyncapi-logo--white.png",
+				"websiteUrl":"https://asyncapi.com"
 			}]
 			
 		},
