@@ -28,14 +28,14 @@ export default function Home() {
 		}
 	});
 	const list = speakers[0].lists.filter((obj, index) => {
-		return index === speakers[0].lists.findIndex(o => obj.name=== o.name);
+		return index === speakers[0].lists.findIndex(o => obj.name === o.name);
 	});
-	speakers[0].lists =[...list];
-	
+	speakers[0].lists = [...list];
+
 	useEffect(() => {
 		setCity(speakers[0]);
 		setSpeakersList(speakers[0].lists);
-	},[]);
+	}, []);
 	return (
 		<div>
 			<Head>
@@ -49,158 +49,157 @@ export default function Home() {
 				<About />
 			</div>
 			<div id="register" className='container mt-20'>
-			<div className='flex items-center flex-col justify-center'>
-			<div
-			id='speakers'
-			className='relative flex flex-col items-center justify-center'
-			>
-				<div className='text-center'>
-					<div className='flex items-center justify-center'>
-						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Speakers</div>
-					</div>
-				</div>
-				<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
-				Meet The Speakers
-				</Heading>
-				<div className='max-w-3xl sm:w-full text-center'>
-					<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-					Discover the inspiring voices shaping our event, each bringing unique insights and expertise to the forefront of their respective fields.
-					</Paragraph>
-				</div>
-				<div className='lg:py-20 w-[1130px] lg:w-full'>
-						<div className='mt-[64px] '>
-							{isTablet ? (
-								<div className='w-full'>
-									<Dropdown
-									active={city.city}
-									items={speakers}
-									setOptions={setCity}
-									setOptions2={setSpeakersList}
-								/>
+				<div className='flex items-center flex-col justify-center'>
+					<div
+						id='speakers'
+						className='relative flex flex-col items-center justify-center'
+					>
+						<div className='text-center'>
+							<div className='flex items-center justify-center'>
+								<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Speakers</div>
+							</div>
 						</div>
-							) : (
-								<div className='flex justify-center'>
-									<div className='w-[900px] lg:w-full flex justify-between'>
-										{speakers.map((speaker) => {
-											return (
-												<div
-												key={speaker.location}
-												onClick={() => {
-													setCity(speaker);
-													setSpeakersList(speaker.lists);
-												}}
-												>
-													<Button
-													className={`w-[168px] ${
-														city.city === speaker.city
-															? 'gradient-bg'
-															: 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
-													}`}
-													overlay={true}
+						<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
+							Meet The Speakers
+						</Heading>
+						<div className='max-w-3xl sm:w-full text-center'>
+							<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
+								Discover the inspiring voices shaping our event, each bringing unique insights and expertise to the forefront of their respective fields.
+							</Paragraph>
+						</div>
+						<div className='lg:py-20 w-[1130px] lg:w-full'>
+							<div className='mt-[64px] '>
+								{isTablet ? (
+									<div className='w-full'>
+										<Dropdown
+											active={city.city}
+											items={speakers}
+											setOptions={setCity}
+											setOptions2={setSpeakersList}
+										/>
+									</div>
+								) : (
+									<div className='flex justify-center'>
+										<div className='w-[900px] lg:w-full flex justify-between'>
+											{speakers.map((speaker) => {
+												return (
+													<div
+														key={speaker.location}
+														onClick={() => {
+															setCity(speaker);
+															setSpeakersList(speaker.lists);
+														}}
 													>
-													{/* {speaker.city} */}
-	 												{city.city !== speaker.city && (
-        <>
-        <span className="transparent-bg "></span>
-        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-          {speaker.city}
-        </span>
-      </>
-    )}
-    {city.city === speaker.city && speaker.city}
-													</Button>
-												</div>
+														<Button
+															className={`w-[168px] ${city.city === speaker.city
+																	? 'gradient-bg'
+																	: 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
+																}`}
+															overlay={true}
+														>
+															{/* {speaker.city} */}
+															{city.city !== speaker.city && (
+																<>
+																	<span className="transparent-bg "></span>
+																	<span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+																		{speaker.city}
+																	</span>
+																</>
+															)}
+															{city.city === speaker.city && speaker.city}
+														</Button>
+													</div>
+												);
+											})}
+										</div>
+									</div>
+								)}
+							</div>
+
+							<div className='mt-[64px] pb-[181px]'>
+								{typeof speakersList === 'string' ? (
+									<div className='mt-[140px] flex items-center justify-center text-center'>
+										<div className='w-[720px] lg:w-full'>
+											<Heading className='text-white'>
+												{city.city} Speakers To Be Announced Soon - Stay Tuned!
+											</Heading>
+										</div>
+									</div>
+								) : Object.keys(speakersList).length > 0 ? (
+									<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
+										{speakersList.map((speaker, i) => {
+											return (
+												<Speaker
+													key={i}
+													details={speaker}
+													location={city}
+													className='mt-10'
+												/>
 											);
 										})}
 									</div>
-								</div>
-							)}
+								) : (
+									<div className='mt-[140px] flex items-center justify-center text-center'>
+										<div className='w-[720px] lg:w-full'>
+											<Heading typeStyle='heading-md' className='text-white'>
+												{city.city} Speakers Coming Soon - Stay Tuned!
+											</Heading>
+											<Paragraph className='mt-12 text-gray-200'>
+												We are actively accepting speaker applications, and you
+												can start your journey by clicking the button below. Join
+												us on stage and share your valuable insights with our
+												enthusiastic audience!
+											</Paragraph>
+											<Link legacyBehavior href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx">
+												<a className='flex justify-center' target="_blank">
+													<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
+														Apply as a Speaker
+													</Button>
+												</a>
+											</Link>
+										</div>
+									</div>
+								)}
+							</div>
 						</div>
-
-						<div className='mt-[64px] pb-[181px]'>
-							{typeof speakersList === 'string' ? (
-								<div className='mt-[140px] flex items-center justify-center text-center'>
-									<div className='w-[720px] lg:w-full'>
-										<Heading className='text-white'>
-											{city.city} Speakers To Be Announced Soon - Stay Tuned!
-										</Heading>
-									</div>
-								</div>
-							) : Object.keys(speakersList).length > 0 ? (
-								<div className='w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4'>
-									{speakersList.map((speaker, i) => {
-										return (
-											<Speaker
-												key={i}
-												details={speaker}
-												location={city}
-												className='mt-10'
-											/>
-										);
-									})}
-								</div>
-							) : (
-								<div className='mt-[140px] flex items-center justify-center text-center'>
-									<div className='w-[720px] lg:w-full'>
-										<Heading typeStyle='heading-md' className='text-white'>
-											{city.city} Speakers Coming Soon - Stay Tuned!
-										</Heading>
-										<Paragraph className='mt-12 text-gray-200'>
-											We are actively accepting speaker applications, and you
-											can start your journey by clicking the button below. Join
-											us on stage and share your valuable insights with our
-											enthusiastic audience!
-										</Paragraph>
-										<Link legacyBehavior href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx">
-										<a className='flex justify-center' target="_blank">
-											<Button className='mt-[80px] w-[244px] border border-gray card-bg'>
-											Apply as a Speaker
-											</Button>
-										</a>
-										</Link>
-									</div>
-								</div>
-							)}
+					</div>
+					<div id='tickets' className='flex items-center'>
+						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
+					</div>
+					<div data-test="ticket-section">
+						<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
+							Get Tickets
+						</Heading>
+						<div className='max-w-3xl mx-auto sm:w-full text-center mb-16'>
+							<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200'>
+								Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
+							</Paragraph>
+						</div>
+						<div className='ticket-grid container mx-auto'>
+							{cities.map((city) => {
+								if (city.ended === false) {
+									return <TicketCards key={city.name} city={city} />
+								}
+							})}
 						</div>
 					</div>
 				</div>
-			<div id='tickets' className='flex items-center'>
-				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
-			<div data-test="ticket-section">
-			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
-				Get Tickets
-			</Heading>
-			<div className='max-w-3xl sm:w-full text-center'>
-			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
-			</Paragraph>
-			</div>
-			<div className='w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col'>
-				{cities.map((city) => {
-					if(city.ended === false){
-						return <TicketCards key={city.name} city={city} className='lg:mt-10' />
-					}
-				})}
-			</div>
-			</div>
-			</div>
-		</div>
 			<div id='sponsors' className='mt-20'>
 				<Sponsors eventSponsors={[
 					{
-						image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"
+						image: '/img/apidays.png', websiteUrl: "https://www.apidays.global/"
 					},
 					{
-						"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
-						"websiteUrl":""
+						"image": "/img/APIConfLogos/APICONF LOGO - White.svg",
+						"websiteUrl": ""
 					}
-					]} 
-					// financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} 
-					 />
+				]}
+				// financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} 
+				/>
 			</div>
 			<div className='mt-5'>
-			<Subscription/>
+				<Subscription />
 			</div>
 		</div>
 	);
