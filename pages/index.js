@@ -52,7 +52,7 @@ export default function Home() {
 			<div className='flex items-center flex-col justify-center'>
 			<div
 			id='speakers'
-			className='relative flex flex-col items-center justify-center'
+			className='relative flex flex-col items-center justify-center pt-20'
 			>
 				<div className='text-center'>
 					<div className='flex items-center justify-center'>
@@ -164,15 +164,15 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			<div id='tickets' className='flex items-center'>
+			<div id='tickets' className='flex items-center pt-20'>
 				<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>Tickets</div>
 			</div>
-			<div data-test="ticket-section">
+			<div data-test="ticket-section" className="flex flex-col items-center ">
 			<Heading typeStyle='heading-md' className='text-gradient text-center lg:mt-10'>
 				Get Tickets
 			</Heading>
 			<div className='max-w-3xl sm:w-full text-center'>
-			<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
+			<Paragraph typeStyle='body-lg' className="mt-6 " textColor='text-gray-200' >
 			Experience the Future of Asynchronous Communication: Get Tickets for the AsyncAPI Conference on Tour!
 			</Paragraph>
 			</div>
