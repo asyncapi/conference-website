@@ -7,6 +7,7 @@
 	{
 		"city": "Singapore",
 		"location": "Singapore, Singapore",
+		"cfp": true,
 		"lists": [],
 		"agenda": null
 	},

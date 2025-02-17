@@ -16,7 +16,6 @@
 			}]
 			
 		},
-		"ticket": "",
 		"isFree": true,
 		"ended": false,
 		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
@@ -39,7 +38,6 @@
 			}]
 			
 		},
-		"ticket": "",
 		"cfp": false,
 		"isFree": true,
 		"ended": false,
@@ -62,7 +60,6 @@
 				}]
 			
 		},
-		"ticket": "",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -85,7 +82,6 @@
 			}]
 			
 		},
-		"ticket": "",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -107,7 +103,6 @@
 			}]
 			
 		},
-		"ticket": false,
 		"isFree": true,
 		"ended": false,
 		"recordings": "",
@@ -130,7 +125,6 @@
 			}]
 			
 		},
-		"ticket": "",
 		"isFree": true,
 		"cfp": false,
 		"ended": false

@@ -49,13 +49,5 @@
 	{
 		"title":"Past Editions",
 		"ref":"/editions"
-	},
-	{
-		"title":"Resources Hub",
-		"ref":"",
-		"subMenu": []
-}
-	
-	
-	
-	]
+	}
+]
