@@ -5,92 +5,42 @@
 		"lists": []
 	},
 	{
-		"city": "Online",
-		"location": "Online Edition",
-		"lists": [
-		{
-			"name": "TBD",
-			"title": "TDB",
-			"img": ""
-		}
-		
-	
-		],
-		"agenda": [
-			{
-                "time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-            }
-            
-		]
-	},
-	{
-		"location": "London, United Kingdom",
-		"city": "London",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Paris, France",
-		"city": "Paris",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Lagos, Nigeria",
-		"city": "Lagos",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Singapore",
 		"city": "Singapore",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
+		"location": "Singapore, Singapore",
+		"lists": [],
+		"agenda": null
 	},
 	{
-		"location": "Munich, Germany",
 		"city": "Munich",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
+		"location": "Munich, Germany",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Lagos",
+		"location": "Lagos, Nigeria",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "London",
+		"location": "London, UK",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Online",
+		"location": "AsyncAPI YouTube Channel",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Paris",
+		"location": "Paris, France",
+		"lists": [],
+		"agenda": null
 	}
+
 	
 	
 ]

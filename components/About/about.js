@@ -15,14 +15,13 @@ function About() {
 						<div className='text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>About The Event</div>
 					</div>
 					<Heading typeStyle='heading-md' className='text-gradient lg:mt-10'>
-					AACoT'24
+					AsyncAPI Conference
 					</Heading>
 					<Paragraph typeStyle='body-lg' className="mt-6" textColor='text-gray-200' >
-					The AsyncAPI Conf on Tour is an official event created by the AsyncAPI
-					Initiative. This conference is aimed primarily at the community to share and
-					exchange experiences between existing users and new members. We plan to
-					integrate new members into the community and expand their knowledge about
-					the project.
+					The AsyncAPI Conference is an official event created by the AsyncAPI Initiative. This
+					conference is aimed primarily at the community to share and exchange experiences between
+					existing users and new members. We plan to integrate new members into the community and
+					expand their knowledge about the project.
 					</Paragraph>
 					<Paragraph  typeStyle='body-lg' className="mt-6" textColor='text-gray-200'>
 					We are currently looking for sponsors, for more details please read our Sponsorship Prospectus.
@@ -30,13 +29,13 @@ function About() {
 					<div className='mt-10 flex gap-4 sm:flex-col lg:justify-center' data-test="prospectus-download">
 						<a
 							className='flex justify-center'
-							href='https://opencollective.com/asyncapi/events/asyncapi-conference-on-tour-6b3c0aa1'
+							href='https://opencollective.com/asyncapi/events/asyncapi-conference-e9fd5b06'
 							target='_blank'
 							rel='noreferrer'
 						>
 							<Button className='w-[200px]'>Become a sponsor now</Button>
 						</a>
-						<a className='flex justify-center ' href='/pdf/conf-2024.pdf' download={`conf ${new Date().getFullYear()}.pdf`} >
+						<a className='flex justify-center ' href='/pdf/conf-2025.pdf' download={`conf ${new Date().getFullYear()}.pdf`} >
 							<Button overlay={true} className='w-[240px] border'>
 								<div className='flex gap-2 justify-center items-center'>
 									<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain'  />

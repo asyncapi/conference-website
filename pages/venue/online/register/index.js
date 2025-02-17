@@ -9,10 +9,10 @@ export default function SpeakersForm(){
         <div>
         <Sponsors eventSponsors={[
 					{
-						image:'/img/apidays.png',websiteUrl:"https://www.apidays.global/"
+						image:'/img/logos/apidays.png',websiteUrl:"https://www.apidays.global/"
 					},
 					{
-						"image":"/img/APIConfLogos/APICONF LOGO - White.svg",
+						"image":"/img/logos/APICONF-LOGO-White.svg",
 						"websiteUrl":""
 					}
 					]} 
