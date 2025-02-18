@@ -1,5 +1,4 @@
 import React from 'react'
-import {ExternalLink} from 'lucide-react'
 const PastEditonCard = ({ url }) => {
     let year = url.split('.')[1]
     return (
@@ -9,7 +8,11 @@ const PastEditonCard = ({ url }) => {
                 <div>
                     <a href={url} rel='noreferrer' target='_blank' className='flex hover:scale-95 transiti items-center justify-center'>
                        <p className='mr-2 text-white text-sm'>View Website</p> 
-                       <ExternalLink color='white' size={19} />
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15 3 21 3 21 9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
                     </a>
                 </div>
             </div>
