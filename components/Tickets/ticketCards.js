@@ -14,7 +14,7 @@ const Tickets = () => {
       description: 'Access to all conference talks and workshops',
       status: 'Check Back Later',
       available: 50,
-      benefits: ['All talks', 'Workshop access', 'Lunch included', 'Swags']
+      benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth']
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Tickets = () => {
       description: 'Access to all conference talks and workshops',
       status: 'Opening Soon',
       available: 50,
-      benefits: ['All talks', 'Workshop access', 'Lunch included', 'Swags']
+      benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth']
     },
      {
       id: 3,
@@ -34,7 +34,7 @@ const Tickets = () => {
       description: 'Access to all conference talks and workshops',
       status: 'Not Yet Available',
       available: 50,
-      benefits: ['All talks', 'Workshop access', 'Lunch included', 'Swags']
+      benefits: ['All talks', 'Workshop access', 'Lunch included']
     },
   ];
 
