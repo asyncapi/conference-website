@@ -28,7 +28,7 @@ function Footer() {
       >
         <div className="mt-2 text-[14px] text-gray-100 sm:hidden">
           <a
-            href="https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md"
+            href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
             rel="noreferrer"
             className="hover:underline text-white duration-200 ease-in-out flex items-center"
