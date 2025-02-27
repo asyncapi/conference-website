@@ -5,8 +5,8 @@ import Button from '../Buttons/button';
 import CFPdata from "../../config/cfp-data.json"
 const faqs = [
     {
-        q: 'What is AACoT?',
-        a: 'AsyncAPI Conf on Tour (AACoT) is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
+        q: 'What is AsyncAPI Conf?',
+        a: 'AsyncAPI Conference is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
     },
     {
         q: 'Who can submit a talk?',
