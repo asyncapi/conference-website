@@ -10,13 +10,13 @@ import About from "../components/About/about";
 import TicketCards from "../components/Tickets/ticketCards";
 import Heading from "../components/Typography/heading";
 import Paragraph from "../components/Typography/paragraph";
-import Subscription from "../components/Form/subscription";
+// import Subscription from "../components/Form/subscription";
 import Speaker from "../components/Speaker/speaker";
 import speakers from "../config/speakers.json";
 import Link from "next/link";
 import Button from "../components/Buttons/button";
 import Dropdown from "../components/Dropdown/dropdown";
-
+import Subscription from "../components/Form/subscription";
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
   const [speakersList, setSpeakersList] = useState([]);
@@ -232,6 +232,10 @@ export default function Home() {
           </div> */}
         </div>
       </div>
+        <div className="mt-20">
+            <Subscription />
+        </div>
+
       <div id="sponsors" className="mt-20">
         <Sponsors
           eventSponsors={[
@@ -246,9 +250,6 @@ export default function Home() {
           ]}
           // financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}
         />
-      </div>
-      <div className="mt-5">
-        <Subscription />
       </div>
     </div>
   );
