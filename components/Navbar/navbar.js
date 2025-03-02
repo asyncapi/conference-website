@@ -54,6 +54,10 @@ function Navbar() {
     setShow(title);
   };
 
+  useEffect(() => {
+    setDrop(false);
+  }, [isTablet]);
+  
   const handleMouseLeave = () => {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
