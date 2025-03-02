@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
 import Select from "../select";
-import Button from "../../Buttons/button";
+import Button from "../../common/Buttons/button";
 
 const options1 = [
   {

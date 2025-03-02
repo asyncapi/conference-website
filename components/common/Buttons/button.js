@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Button({className, children, overlay, onClick, type, disabled,test}) {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Ticket, ChevronLeft, ChevronRight } from 'lucide-react';
-import Button from '../Buttons/button';
+import Button from '../common/Buttons/button';
 
 const Tickets = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
