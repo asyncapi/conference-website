@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
-import Button from "../../Buttons/button";
+import Button from "../../common/Buttons/button";
 
 
 function StepTwo({ setStep, setForm, data }) {

@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import ActivityLoader from "../../illustration/activityLoader";
-import Button from "../../Buttons/button";
+import Button from "../../common/Buttons/button";
 
 function StepFour({ setStep, setForm, data }) {
   const [submitting, setSubmitting] = useState(false);
