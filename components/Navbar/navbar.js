@@ -19,7 +19,9 @@ function Navbar() {
 
   const handleClosing = useCallback(
     (event) => {
-      if (show && !event.target.closest(".subMenu")) {
+      if (show && 
+        !event.target.closest(".subMenu") && 
+        !event.target.closest(".navVenue")) {
         setShow(null);
       }
     },
@@ -116,7 +118,7 @@ function Navbar() {
                   <div
                     onMouseEnter={() => handleMouseEnter(link.title)}
                     onMouseLeave={handleMouseLeave}
-                    className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
+                    className="navVenue ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
                   >
                     <div>
