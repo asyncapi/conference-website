@@ -34,7 +34,7 @@ function StepOne({ setStep, setForm, data }) {
           onChange={(e) => setForm({ ...data, Email: e.target.value })}
           data-test="step-one-email"
         />
-         <div className="text-dark-600 text-lg mt-5">Bio</div>
+        <div className="text-dark-600 text-lg mt-5">Bio</div>
         <textarea
           required
           type="text"

@@ -10,7 +10,7 @@ function StepTwo({ setStep, setForm, data }) {
         Session Info
       </h1>
       <p className="mt-3 text-dark-600">
-       Please provide your session title and description
+        Please provide your session title and description
       </p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10">
@@ -21,9 +21,9 @@ function StepTwo({ setStep, setForm, data }) {
           style={{
             border: "1px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, Title: e.target.value })} 
+          onChange={(e) => setForm({ ...data, Title: e.target.value })}
           data-test="step-two-title"
-          />
+        />
         <div className="text-dark-600 text-lg mt-4">Session Description</div>
         <textarea
           required
@@ -31,9 +31,9 @@ function StepTwo({ setStep, setForm, data }) {
           style={{
             border: "1px solid #E50E99",
           }}
-          onChange={(e) => setForm({ ...data, Description: e.target.value })} 
+          onChange={(e) => setForm({ ...data, Description: e.target.value })}
           data-test="step-two-description"
-          />
+        />
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
@@ -47,7 +47,7 @@ function StepTwo({ setStep, setForm, data }) {
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-3"
             test="step-two-next">
             Next
-            </Button>
+          </Button>
         </div>
       </div>
     </form>

@@ -19,8 +19,8 @@ function Navbar() {
 
   const handleClosing = useCallback(
     (event) => {
-      if (show && 
-        !event.target.closest(".subMenu") && 
+      if (show &&
+        !event.target.closest(".subMenu") &&
         !event.target.closest(".navVenue")) {
         setShow(null);
       }
@@ -59,7 +59,7 @@ function Navbar() {
   useEffect(() => {
     setDrop(false);
   }, [isTablet]);
-  
+
   const handleMouseLeave = () => {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
@@ -128,9 +128,8 @@ function Navbar() {
                           {link.subMenu && (
                             <Dropdown
                               color="white"
-                              className={`ml-2 transition-transform duration-700 ${
-                                show === link.title ? "rotate-180" : "rotate-0"
-                              }`}
+                              className={`ml-2 transition-transform duration-700 ${show === link.title ? "rotate-180" : "rotate-0"
+                                }`}
                             />
                           )}
                         </div>

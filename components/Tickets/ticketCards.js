@@ -4,7 +4,7 @@ import Button from '../Buttons/button';
 
 const Tickets = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const tickets = [
     {
       id: 1,
@@ -26,7 +26,7 @@ const Tickets = () => {
       available: 50,
       benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth']
     },
-     {
+    {
       id: 3,
       type: 'Lagos, Nigeria',
       price: 0,
@@ -110,7 +110,7 @@ const Tickets = () => {
                       {ticket.status}
                     </div>
                   </div>
-                  
+
                   <div className="mt-4">
                     <span className="text-3xl font-bold text-gray-900">${ticket.price}</span>
                     <span className="text-gray-500 ml-2">/person</span>
@@ -126,9 +126,9 @@ const Tickets = () => {
                   </ul>
                   {ticket.url ? <a href={ticket.url} target='_blank' rel="noreferrer"><Button className="mt-8 w-full">
                     Get a Ticket
-                  </Button></a> : <Button  disabled={true} overlay={true} className="mt-8 w-full bg-gray-300">
+                  </Button></a> : <Button disabled={true} overlay={true} className="mt-8 w-full bg-gray-300">
                     Get a Ticket
-                  </Button> }
+                  </Button>}
                 </div>
               </div>
             </div>

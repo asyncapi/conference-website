@@ -1,14 +1,14 @@
-import React,{useState,forwardRef} from 'react';
+import React, { useState, forwardRef } from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
 
-const NavDrop = forwardRef((props, ref)=> {
-	const {setDrop}=props;
-    const [show, setShow] = useState(null);
-  return (
-		<div  ref ={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
+const NavDrop = forwardRef((props, ref) => {
+	const { setDrop } = props;
+	const [show, setShow] = useState(null);
+	return (
+		<div ref={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
 			<div className='flex flex-col p-5 pb-8 w-full'>
 				{links.map((link) => {
 					return (

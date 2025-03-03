@@ -33,11 +33,11 @@ function Countdowns() {
 			dateRef.current.classList.add('home-title');
 			setSelectedIndex((prevIndex) => (prevIndex + 1) % dates.length);
 			setTimeout(() => {
-				if(locationRef?.current) {
+				if (locationRef?.current) {
 					locationRef.current.classList.remove('home-title');
 					locationRef.current.classList.add('hidden');
 				}
-				if(dateRef?.current) {
+				if (dateRef?.current) {
 					dateRef.current.classList.remove('home-title');
 					dateRef.current.classList.add('hidden');
 				}
@@ -53,19 +53,19 @@ function Countdowns() {
 		if (completed) {
 			// Render a completed state
 			return <div
-					className='home-title flex items-center  w-[200px] sm:w-[100px] justify-between'
-					ref={dateRef}
+				className='home-title flex items-center  w-[200px] sm:w-[100px] justify-between'
+				ref={dateRef}
 			>
 				<div></div>
 				<div></div>
 				<div></div>
 				<div></div>
 				<div>
-						<span className='glitch text-white text-[30px] sm:text-[18px]'>
-							Ended
-						</span>
-					</div>
+					<span className='glitch text-white text-[30px] sm:text-[18px]'>
+						Ended
+					</span>
 				</div>
+			</div>
 		} else {
 			// Render a countdown
 			return (

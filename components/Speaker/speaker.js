@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react'
 
-function Speaker({details, location, className}) {
-  return (
+function Speaker({ details, location, className }) {
+	return (
 		<div
 			className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
 			data-test="speakers-section"
