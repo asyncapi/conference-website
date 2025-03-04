@@ -16,6 +16,7 @@ import speakers from "../config/speakers.json";
 import Link from "next/link";
 import Button from "../components/Buttons/button";
 import Dropdown from "../components/Dropdown/dropdown";
+import FaqSection from "../components/FAQs/FaqSection";
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -247,6 +248,11 @@ export default function Home() {
           // financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}
         />
       </div>
+
+      <div id="faqs" className="mt-20">
+          <FaqSection />
+      </div>
+
       <div className="mt-5">
         <Subscription />
       </div>
