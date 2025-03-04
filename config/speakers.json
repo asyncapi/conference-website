@@ -7,8 +7,28 @@
 	{
 		"city": "Singapore",
 		"location": "Singapore, Singapore",
-		"cfp": true,
-		"lists": [],
+		"lists": [
+		{
+			"name": "Hugo Guerrero",
+			"title": "Head of Technical Marketing at Kong",
+			"img": "/img/london-speakers/Hugo Guerrero.webp"
+		},
+		{
+			"name": "Naresh Jain",
+			"title": "Founder & CEO at Specmatic",
+			"img": "/img/paris-images/Naresh.webp"
+		},
+		{
+			"name": "Lukasz Gornicki",
+			"title": "Executive Director at AsyncAPI Initiative",
+			"img": "/img/london-speakers/Lukasz Gornicki.webp"
+		},
+		{
+			"name": "Ankit Kumar",
+			"title": "Head of Developer and Customer Success at Aklivity",
+			"img": "/img/london-speakers/Ankit.webp"
+		}
+	],
 		"agenda": null
 	},
 	{
@@ -26,6 +46,12 @@
 	{
 		"city": "London",
 		"location": "London, UK",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Suprise!",
+		"location": "Suprise!",
 		"lists": [],
 		"agenda": null
 	},
