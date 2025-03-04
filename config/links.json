@@ -53,5 +53,25 @@
 	{
 		"title":"Past Editions",
 		"ref":"/editions"
+	},
+
+	{
+		"title":"More",
+		"ref":"",
+		"subMenu": [
+			{
+				"title":"FAQ",
+				"ref":"/faq"
+			},
+			{
+				"title":"Feedback",
+				"ref":"/feedback"
+			},
+			{
+				"title":"Meetup",
+				"ref":"/meetup"
+			}
+			
+		]
 	}
 ]
