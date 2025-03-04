@@ -18,7 +18,7 @@
 		},
 		"isFree": true,
 		"ended": false,
-		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
+		"cfp": false,
 		"recordings":"",
 		"playlist":""
 	},
@@ -26,7 +26,7 @@
 		"name": "Munich",
 		"country": "Germany",
 		"date": "3 July, 2025",
-		"cfpdate":"Not announced yet",
+		"cfpdate":"11 May 2025",
 		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
 		"img": "/img/locations/munich.jpg",
 		"address": "Smartvillage Bogenhausen, München, Germany",
@@ -38,7 +38,7 @@
 			}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -60,12 +60,12 @@
 				}]
 			
 		},
+		"cfp": false,
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
 		"playlist":""
-	},
-	
+	},	
 	{
 		"name": "London",
 		"country": "UK",
@@ -82,6 +82,29 @@
 			}]
 			
 		},
+		"cfp": false,
+		"isFree": true,
+		"ended": false,
+		"recordings":"",
+		"playlist":""
+	},
+	{
+		"name": "Suprise!",
+		"country": "Suprise!",
+		"date": "October 9, 2025",
+		"cfpdate":"Not announced yet",
+		"description": "Can You Guess The Location? Stay Tuned!",
+		"img": "/img/locations/teasers.webp",
+		"address": "Location Coming Soon",
+		"map": "",
+		"sponsors": {
+			"eventSponsors" : [{
+				"image":"/img/logos/apidays.png",
+				"websiteUrl":"https://www.apidays.global/"
+			}]
+			
+		},
+		"cfp": false,
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -103,6 +126,7 @@
 			}]
 			
 		},
+		"cfp": false,
 		"isFree": true,
 		"ended": false,
 		"recordings": "",
