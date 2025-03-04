@@ -24,6 +24,10 @@
 				"ref": "/venue/London"
 			},
 			{
+			"title": "Suprise!, Suprise!",
+			"ref": "/venue/Suprise"
+			},
+			{
 				"title": "Online", 
 				"ref": "/venue/Online"
 			},
