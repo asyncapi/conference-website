@@ -27,12 +27,12 @@ function ReactSlider({ children }) {
 
 	return (
 		<>
-		{ children.length > 4 || isMobile ? 
-		(<Slider ref={slider} {...settings}>
-			{children}
-		</Slider>):(
-	       <div className='flex m-2 justify-center'>{children}</div>)}
-	    </>
+			{children.length > 4 || isMobile ?
+				(<Slider ref={slider} {...settings}>
+					{children}
+				</Slider>) : (
+					<div className='flex m-2 justify-center'>{children}</div>)}
+		</>
 	);
 }
 

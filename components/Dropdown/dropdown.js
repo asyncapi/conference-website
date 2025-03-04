@@ -1,7 +1,7 @@
-import React, {useState,useRef,useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function Dropdown({ active, items, setOptions, setOptions2 }) {
-    const [show, setShow] = useState(false)
+	const [show, setShow] = useState(false)
 	const dropdownRef = useRef(null);
 	useEffect(() => {
 		//  This checks if the click event occurred outside the dropdown, if true we closes the dropdown. 

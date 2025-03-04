@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import ActivityLoader from "../../illustration/activityLoader";
@@ -27,8 +27,8 @@ function StepFour({ setStep, setForm, data }) {
       .catch((err) => {
         setSubmitting(false);
         toast.error("Failed to submit feedback. Try again", {
-            duration: '5600'
-          });
+          duration: '5600'
+        });
       });
   };
   return (
@@ -37,7 +37,7 @@ function StepFour({ setStep, setForm, data }) {
         Additional Information
       </h1>
       <p className="mt-3 text-dark-600">
-        Notes will only be seen by reviewers during the CFP process. Therefore, it is important to use this space to explain any technical requirements or why you are best suited to speak on the subject, etc...  
+        Notes will only be seen by reviewers during the CFP process. Therefore, it is important to use this space to explain any technical requirements or why you are best suited to speak on the subject, etc...
       </p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
       <div className="mt-10">
@@ -50,7 +50,7 @@ function StepFour({ setStep, setForm, data }) {
           onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
           data-test="step-four-additional"
         />
-        
+
         <div className="mt-6 text-dark-600 text-md">
           By clicking submit, this means you agree to follow the <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">AsyncAPI Initiative Code of Conduct</a>
         </div>
@@ -67,7 +67,7 @@ function StepFour({ setStep, setForm, data }) {
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
             test="step-four-next">
             {submitting ? <ActivityLoader /> : "Submit"}
-            </Button>
+          </Button>
         </div>
       </div>
     </form>
