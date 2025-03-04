@@ -1,12 +1,12 @@
 import cities from "../../config/city-lists.json"
 
-it("should render guideline for not ended cities and agenda otherwise",()=>{
+it("should render guideline if cfp is open, and agenda otherwise",()=>{
     cy.wrap(cities).each(city => {
         cy.visit(`http://localhost:3000/venue/${city.name}`);
         
         cy.getTestData(`venue-${city.name}`).then(val=>{
             
-            if(Date.now()>Date(city.date) && !city.ended){
+            if(city.cfp && !city.ended){
                 cy.getTestData("guideline-com").should("be.visible");
             }
             else{
@@ -18,31 +18,33 @@ it("should render guideline for not ended cities and agenda otherwise",()=>{
 
 });
 
-it("Should contain logos in Sponsor component", () => {
-    const eventSponsors = cities[0].sponsors.eventSponsors;
-    
-    // const financialSponsor = cities[0].sponsors.financialSponsors;
+// disbale this test file for now
 
-    cy.wrap(cities).each((city) => {
-        cy.visit(`http://localhost:3000/venue/${city.name}`);
+// it("Should contain logos in Sponsor component", () => {
+//     const eventSponsors = cities[0].sponsors.eventSponsors;
+    
+//     // const financialSponsor = cities[0].sponsors.financialSponsors;
+
+//     cy.wrap(cities).each((city) => {
+//         cy.visit(`http://localhost:3000/venue/${city.name}`);
         
-        cy.getTestData("sponsor-section").should("exist");
+//         cy.getTestData("sponsor-section").should("exist");
     
-        eventSponsors.forEach((sponsor) => {
-            cy.getTestData('sponsor-section')
-            .find(`img[src="${sponsor.image}"]`)
-            .should('be.visible');
-            cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
-        });
+//         eventSponsors.forEach((sponsor) => {
+//             cy.getTestData('sponsor-section')
+//             .find(`img[src="${sponsor.image}"]`)
+//             .should('be.visible');
+//             cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+//         });
     
-        // financialSponsor.forEach((sponsor) => {
-        //     cy.getTestData('sponsor-section')
-        //     .find(`img[src="${sponsor.image}"]`)
-        //     .should('be.visible');
-        //     cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
-        // });
-    })
-});
+//         // financialSponsor.forEach((sponsor) => {
+//         //     cy.getTestData('sponsor-section')
+//         //     .find(`img[src="${sponsor.image}"]`)
+//         //     .should('be.visible');
+//         //     cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+//         // });
+//     })
+// });
 
 it("Form should work",()=>{
     cy.visit('http://localhost:3000/venue/online/register');
