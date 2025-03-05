@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                 ) : (
                   <div className="flex justify-center">
-                    <div className="w-[900px] lg:w-full flex justify-between">
+                    <div className="space-x-4 lg:w-full flex justify-between">
                       {speakers.map((speaker) => {
                         return (
                           <div
