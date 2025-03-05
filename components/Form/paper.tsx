@@ -44,10 +44,10 @@ function Paper() {
 
   // Step views
   const stepComponents = [
-    <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />,
-    <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />,
-    <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />,
-    <StepFour setStep={onStepUpdate} setForm={setFormData} data={formData} />,
+    <StepOne key={1} setStep={onStepUpdate} setForm={setFormData} data={formData} />,
+    <StepTwo key={2} setStep={onStepUpdate} setForm={setFormData} data={formData} />,
+    <StepThree key={3} setStep={onStepUpdate} setForm={setFormData} data={formData} />,
+    <StepFour key={4} setStep={onStepUpdate} setForm={setFormData} data={formData} />,
   ];
 
   const view = step === "successful" ? (
