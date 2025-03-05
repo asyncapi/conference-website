@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import cities from '../../config/city-lists.json';
-import Button from '../../components/Buttons/button';
+import Button from '../../components/common/Buttons/button';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
 import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-import { isEventEnded } from '../../components/Venue/venue';
+import { isEventEnded } from '../../components/common/Cards/venue';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from "../../config/cfp-data.json"

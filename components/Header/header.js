@@ -1,10 +1,10 @@
 import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
-import Button from "../Buttons/button";
+import Button from "../common/Buttons/button";
 import ReactSlider from "../Slider/slider";
 import cities from "../../config/city-lists.json";
-import Venue from "../Venue/venue";
+import Venue from "../common/Cards/venue";
 import Announcement from "../announcement";
 import Link from "next/link";
 

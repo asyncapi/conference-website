@@ -2,7 +2,7 @@
 import React from 'react'
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
-import Button from '../Buttons/button';
+import Button from '../common/Buttons/button';
 import Image from 'next/image';
 function About() {
     return (
