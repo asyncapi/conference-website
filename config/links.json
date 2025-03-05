@@ -53,5 +53,9 @@
 	{
 		"title":"Past Editions",
 		"ref":"/editions"
+	},
+	{
+		"title":"FAQs",
+		"ref":"/faqs"
 	}
 ]
