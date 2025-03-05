@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/footer';
 import { useState, useEffect } from 'react';
+import ScrollToTop from "../components/ScrollToTopButton/ScrollToTop";
 
 function MyApp({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       
       <Component {...pageProps} />
       <Footer />
+      <ScrollToTop />
       </div>
   );
 }

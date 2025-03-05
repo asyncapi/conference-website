@@ -16,6 +16,7 @@ import speakers from "../config/speakers.json";
 import Link from "next/link";
 import Button from "../components/Buttons/button";
 import Dropdown from "../components/Dropdown/dropdown";
+import ScrollToTop from "../components/ScrollToTopButton/ScrollToTop";
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -250,6 +251,7 @@ export default function Home() {
       <div className="mt-5">
         <Subscription />
       </div>
+      {/* <ScrollToTop /> */}
     </div>
   );
 }
