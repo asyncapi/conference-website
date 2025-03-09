@@ -16,6 +16,7 @@ import speakers from "../config/speakers.json";
 import Link from "next/link";
 import Button from "../components/Buttons/button";
 import Dropdown from "../components/Dropdown/dropdown";
+import { Gallery } from '../components/Gallery/gallery';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -175,10 +176,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
           <div id="tickets" className="flex items-center flex-col justify-center">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               Tickets
             </div>
+      
 			<div data-test="ticket-section">
             <Heading
               typeStyle="heading-md"
@@ -199,6 +202,9 @@ export default function Home() {
 			</div>
 			<div className="w-full mt-12"><TicketCards /></div>
           </div>
+	<div id='gallery'>
+		<Gallery />
+ 	</div>
           {/* <div data-test="ticket-section">
             <Heading
               typeStyle="heading-md"
