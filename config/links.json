@@ -8,21 +8,34 @@
 		"ref": "",
 		"subMenu": [
 			{
-				"title": "Online",
-				"ref": "/venue/Online"
+				"title": "Singapore",
+				"ref": "/venue/Singapore"
 			},
 			{
-				"title": "Helsinki, Finland",
-				"ref": "/venue/Helsinki"
+				"title": "Munich, Germany",
+				"ref": "/venue/Munich"
+			},
+			{
+				"title": "Lagos, Nigeria",
+				"ref": "/venue/Lagos"
 			},
 			{
 				"title": "London, UK",
 				"ref": "/venue/London"
 			},
 			{
+			"title": "Suprise!, Suprise!",
+			"ref": "/venue/Suprise"
+			},
+			{
+				"title": "Online", 
+				"ref": "/venue/Online"
+			},
+			{
 				"title": "Paris, France",
 				"ref": "/venue/Paris"
 			}
+			
 		]
 	},
 	{
@@ -40,40 +53,5 @@
 	{
 		"title":"Past Editions",
 		"ref":"/editions"
-	},
-	{
-		"title":"Resources Hub",
-		"ref":"",
-		"subMenu": [
-
-            {
-                "title": "Helsinki Slides",
-                "ref": "https://drive.google.com/drive/folders/1nY7dZF8WFXZ3r2rCWJDDoT2C_GMfQJMV?usp=drive_link",
-                "target": "_blank"
-            },
-			{
-                "title": "London Slides",
-                "ref": "https://drive.google.com/drive/folders/1PsIZSsQmsvSILZ83f9L-2ErV-pXM6PQf?usp=drive_link",
-                "target": "_blank"
-            },
-			{
-                "title": "London Talks",
-                "ref": "https://youtube.com/playlist?list=PLbi1gRlP7pig77jJD2ER9wfTxPSzBrLW5&si=YPmjUsj5mU6FpLhB",
-                "target": "_blank"
-            },
-			{
-                "title": "Online Conf Slides",
-                "ref": "https://drive.google.com/drive/folders/1gw_kr6mLX5lITe_DHG94pGUOVYYS0DjY?usp=drive_link",
-                "target": "_blank"
-            },
-			{
-                "title": "Paris Slides",
-                "ref": "https://drive.google.com/drive/folders/1MBqecV7Q__tLIciF2vaPvwG5gV4RxcI_?usp=drive_link",
-                "target": "_blank"
-            }
-            
-            
-	]
-}
-
+	}
 ]
