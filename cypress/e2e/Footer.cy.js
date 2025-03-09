@@ -15,11 +15,11 @@ describe("Footer links", () => {
     cy.getTestData("code-of-conduct").invoke("removeAttr", "target").click();
 
     cy.origin(
-      "https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md",
+      "https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md",
       () => {
         cy.url().should(
           "eq",
-          "https://github.com/asyncapi/.github/blob/master/CODE_OF_CONDUCT.md",
+          "https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md",
         );
       },
     );
@@ -49,7 +49,7 @@ describe("Footer links", () => {
     });
   });
 
-  it("Should Contain AsycAPI Logo", () => {
+  it("Should Contain AsycAPI Conference Logo", () => {
     cy.getTestData("footer-asyncAPI-logo").should("be.visible");
   });
 });
