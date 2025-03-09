@@ -181,9 +181,7 @@ export default function Home() {
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               Tickets
             </div>
-      <div id='gallery'>
-				<Gallery />
-			</div>
+      
 			<div data-test="ticket-section">
             <Heading
               typeStyle="heading-md"
@@ -204,6 +202,9 @@ export default function Home() {
 			</div>
 			<div className="w-full mt-12"><TicketCards /></div>
           </div>
+	<div id='gallery'>
+		<Gallery />
+ 	</div>
           {/* <div data-test="ticket-section">
             <Heading
               typeStyle="heading-md"
