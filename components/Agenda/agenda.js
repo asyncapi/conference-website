@@ -1,24 +1,101 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
 import Image from "next/image";
 
 function Agenda({ city }) {
-  return (
-    <div className="" data-test="agenda-com">
-      <div className="flex flex-col justify-center items-center">
-        {!city.agenda ? (
+  const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+  const [selectedType, setSelectedType] = useState('');
+  const [filteredSpeakers, setFilteredSpeakers] = useState([]);
+  const [filteredTypes, setFilteredTypes] = useState([]);
+  
+  useEffect(() => {
+    if (!city.agenda) return;
+
+    if (selectedType) {
+      const speakersForType = city.agenda
+        .filter((talk) => 
+          talk.type === selectedType && talk.speaker !== undefined
+        )
+        .flatMap((talk) => (Array.isArray(talk.speaker) ? talk.speaker : [talk.speaker]));
+      const uniqueSpeakers = [...new Set(speakersForType)];
+      setFilteredSpeakers(uniqueSpeakers);
+    } else {
+      setFilteredSpeakers(city.speakers.map((s, index) => index + 1));
+    }
+
+    if (selectedSpeaker) {
+      const typesForSpeaker = city.agenda
+        .filter((talk) =>
+          Array.isArray(talk.speaker) ? talk.speaker.includes(selectedSpeaker) : talk.speaker === selectedSpeaker
+        )
+        .map((talk) => talk.type);
+
+      setFilteredTypes([...new Set(typesForSpeaker)]);
+    } else {
+      setFilteredTypes([...new Set(city.agenda.map((talk) => talk.type))]);
+    }
+  }, [selectedSpeaker, selectedType, city.agenda, city.speakers]);
+
+  if (!city.agenda) {
+    return (
+      <div className="" data-test="agenda-com">
+        <div className="flex flex-col justify-center items-center">
           <div className="w-[720px] lg:w-full mt-[10px] text-center">
             <Heading typeStyle="lg" className="text-white text-[30px]">
               Agenda Coming Soon - Stay Tuned!
             </Heading>
           </div>
-        ) : (
-          <Heading className="text-[30px] text-white">Agenda</Heading>
-        )}
+        </div>
+      </div>
+    );
+  }
+
+  const filteredAgenda = city.agenda.filter((talk) => {
+    const matchesSpeaker = selectedSpeaker
+      ? Array.isArray(talk.speaker) ? talk.speaker.includes(selectedSpeaker) : talk.speaker === selectedSpeaker : true;
+    const matchesType = selectedType ? talk.type === selectedType : true;
+    return matchesSpeaker && matchesType;
+  });
+  
+  return (
+    <div className="" data-test="agenda-com">
+      <div className="flex flex-col justify-center items-center">
+        <Heading className="text-[30px] text-white">Agenda</Heading>   
+      </div>
+      
+      {/* filters */}
+      <div className="flex justify-center mt-6 gap-4">
+        {/* Speaker Filter Dropdown */}
+        <select
+          className="p-2 rounded-md bg-transparent border border-white text-white"
+          onChange={(e) => setSelectedSpeaker(e.target.value ? parseInt(e.target.value) : null)}
+          value={selectedSpeaker || ""}
+        >
+          <option value=""  className='bg-[#1B1130]'>All Speakers</option>
+          {filteredSpeakers.map((speakerId) => (
+            <option key={speakerId} value={speakerId}  className='bg-[#1B1130]'>
+              {city.speakers[speakerId - 1].name}
+            </option>
+          ))}
+        </select>
+
+        {/* Session Type Filter Dropdown */}
+        <select
+          className="p-2 rounded-md bg-transparent border border-white text-white"
+          onChange={(e) => setSelectedType(e.target.value)}
+          value={selectedType}
+        >
+          <option value="" className='bg-[#1B1130]'>All Session Types</option>
+          {filteredTypes.map((type, index) => (
+            <option key={index} value={type} className='bg-[#1B1130]'>
+              {type}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {city.agenda && (
+      {filteredAgenda.length > 0 ? (
         <div className="mt-[40px]">
           <Heading
             typeStyle="heading-md"
@@ -29,7 +106,7 @@ function Agenda({ city }) {
           </Heading>
 
           <div className="mt-[40px]">
-            {city.agenda.map((talk) => {
+            {filteredAgenda.map((talk) => {
               return (
                 <div
                   key={talk.time}
@@ -111,6 +188,9 @@ function Agenda({ city }) {
             })}
           </div>
         </div>
+      )
+      : (
+        <div className="text-center text-white mt-10">No agenda items found for the selected criteria.</div>
       )}
     </div>
   );
