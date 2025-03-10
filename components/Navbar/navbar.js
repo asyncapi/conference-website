@@ -112,6 +112,9 @@ function Navbar() {
                   <div
                     onMouseEnter={() => handleMouseEnter(link.title)}
                     onMouseLeave={handleMouseLeave}
+                    onClick={() =>
+                      setShow((prev) => (prev === link.title ? null : link.title))
+                    }
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
                   >

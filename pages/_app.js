@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/footer';
 import { useState, useEffect } from 'react';
-
+import ScrollButton from '../components/Buttons/scroll';
 function MyApp({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       
       <Component {...pageProps} />
+      <ScrollButton />
       <Footer />
       </div>
   );
