@@ -112,9 +112,6 @@ function Navbar() {
                   <div
                     onMouseEnter={() => handleMouseEnter(link.title)}
                     onMouseLeave={handleMouseLeave}
-                    onClick={() =>                  //Toggle visibility: if the clicked component is already open, close it; otherwise, open it 
-                      setShow((prev) => (prev === link.title ? null : link.title))
-                    }
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
                   >
