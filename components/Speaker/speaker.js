@@ -1,37 +1,46 @@
-import Image from 'next/image';
-import React from 'react'
+import React from "react";
+import Image from "next/image";
+import ILink from "../illustration/link";
 
-function Speaker({details, location, className}) {
+function Footer() {
+  const socials = [
+    {
+      name: "Github",
+      href: "https://github.com/asyncapi",
+      imgUrl: "/img/Github.png",
+    },
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/company/asyncapi/",
+      imgUrl: "/img/Linkedln.png",
+    },
+    {
+      name: "Twitter(X)",
+      href: "https://x.com/asyncapispec",
+      imgUrl: "/img/twitter_new.png",
+    },
+  ];
   return (
-		<div
-			className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
-			data-test="speakers-section"
-		>
-			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full'>
-				<Image src={details.img} alt={details.name} width={0} height={0} sizes='100vw' className='rounded-full object-cover transition-all duration-300 hover:scale-110 w-[100%] h-[100%]' />
-			</div>
-			<div className='mt-[19px]'>
-				<h3 className='text-[23px] text-white'>{details.name}</h3>
-				<div
-					className={`flex flex-col ${
-						location && 'min-h-[150px]'
-					} justify-between`}
-				>
-					<div>
-						{' '}
-						<p className='mt-[6.6px] text-[18px] text-gray-500'>{details.title}</p>
-					</div>
-					<div>
-						<p className='mt-[6.6px] text-[20px] text-gradient'>
-							{location?.location}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+    <div className="container" data-test="footer">
+      <div
+        className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3"
+        data-test="footer-asyncAPI-logo"
+      >
+        <div className="mt-2 text-[14px] text-gray-100">
+          <a
+            href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline text-white duration-200 ease-in-out flex items-center" // Removed sm:hidden class to make Code of Conduct visible on small screens
+            data-test="code-of-conduct"
+          >
+           <span> Code of Conduct </span><span><ILink className='w-4 ml-2' fill='white' /></span>
+          </a>
+        </div>
+        // ... existing code ...
+      </div>
+    </div>
+  );
 }
 
-export default Speaker
-
-
+export default Footer;
