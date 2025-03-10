@@ -5,8 +5,8 @@ import Button from '../Buttons/button';
 import CFPdata from "../../config/cfp-data.json"
 const faqs = [
     {
-        q: 'What is AACoT?',
-        a: 'AsyncAPI Conf on Tour (AACoT) is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
+        q: 'What is AsyncAPI Conf?',
+        a: 'AsyncAPI Conference is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
     },
     {
         q: 'Who can submit a talk?',
@@ -58,8 +58,10 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                           </div>
                           
                             
-                          <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a1 + talkDeadLine + faq.a2}</p>
-    
+                        <p className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? "mt-8 max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>
+                            {faq.a1 + talkDeadLine + faq.a2}
+                        </p>
+
                       </div>
     
                   </div>)
@@ -81,8 +83,8 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                               <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                           </div>
                           {
-                          virtual?<p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.av}</p>:  
-                          <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.ai}</p>
+                            virtual ? <p className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? "mt-8 max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>{faq.av}</p>:  
+                                <p className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? "mt-8 max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>{faq.ai}</p>
                         }
     
                       </div>
@@ -106,7 +108,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                       </div>
                       {
                         
-                      <p className={`mt-8 text-md text-white ${show === i ? "block" : "hidden"}`}>{faq.a}</p>
+                          <p className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? "mt-8 max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>{faq.a}</p>
                     }
 
                   </div>
