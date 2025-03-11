@@ -89,28 +89,6 @@
 		"playlist":""
 	},
 	{
-		"name": "Suprise!",
-		"country": "Suprise!",
-		"date": "October 9, 2025",
-		"cfpdate":"Not announced yet",
-		"description": "Can You Guess The Location? Stay Tuned!",
-		"img": "/img/locations/teasers.webp",
-		"address": "Location Coming Soon",
-		"map": "",
-		"sponsors": {
-			"eventSponsors" : [{
-				"image":"/img/logos/apidays.png",
-				"websiteUrl":"https://www.apidays.global/"
-			}]
-			
-		},
-		"cfp": false,
-		"isFree": true,
-		"ended": false,
-		"recordings":"",
-		"playlist":""
-	},
-	{
 		"name": "Online",
 		"country": " Edition",
 		"date": "October 29, 2025",
