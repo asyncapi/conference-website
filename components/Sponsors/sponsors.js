@@ -14,7 +14,7 @@ function Sponsors({ eventSponsors, financialSponsor }) {
     >
       <div className="py-[80px] flex flex-col items-center">
         <div className="max-w-3xl sm:w-full">
-          <Paragraph className="mt-[40px]" textColor="text-white">
+          <Paragraph className="" textColor="text-white">
             Elevating the future of APIs. Our valued partners and sponsors play
             a pivotal role in bringing our vision to life. With their support,
             we orchestrate an unforgettable celebration.
@@ -22,16 +22,16 @@ function Sponsors({ eventSponsors, financialSponsor }) {
         </div>
         <Heading
           typeStyle="heading-md"
-          className="text-white mt-10 sm:text-2xl sm:mt-5"
+          className="text-gray-800 m-8 mb-4 sm:text-2xl sm:mt-5"
         >
           Event and Host Sponsor
         </Heading>
-        <div className="flex justify-center  w-[650px] sm:w-full flex-col  items-center">
+        <div className="flex justify-center  w-[650px] sm:w-full  items-center flex-wrap gap-12">
           {eventSponsors &&
             eventSponsors.map((sponsor) => (
               <div
                 key={sponsor.image}
-                className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${sponsor.className ? sponsor.className : ""}`}
+                className={`w-[300px] h-[150px] flex justify-center items-center ${sponsor.className ? sponsor.className : ""}`}
               >
                 <Link href={sponsor.websiteUrl} target="_blank">
                   <Image
@@ -44,31 +44,34 @@ function Sponsors({ eventSponsors, financialSponsor }) {
               </div>
             ))}
         </div>
-        <div className=" flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold">
+        <div className=" flex space-y-2 items-center justify-center text-white text-2xl font-bold">
           <div className="flex flex-col space-y-6">
             {financialSponsor && (
               <div>
                 <Heading
                   typeStyle="heading-md"
-                  className="text-white mb-12 sm:text-2xl"
+                  className="text-gray-800 m-8 mb-6 sm:text-2xl"
                 >
                   Financial Sponsor
                 </Heading>
-                {financialSponsor.map((sponsor) => (
-                  <div
-                    key={sponsor.image}
-                    className={`${sponsor.className ? sponsor.className : ""}`}
-                  >
-                    <Link href={sponsor.websiteUrl} target="_blank">
-                      <Image
-                        src={sponsor.image}
-                        alt={sponsor.image}
-                        height={210}
-                        width={300}
-                      />
-                    </Link>
-                  </div>
-                ))}
+                <div className="flex justify-center items-center flex-wrap gap-16">
+                {
+                  financialSponsor.map((sponsor) => (
+                    <div
+                      key={sponsor.image}
+                      className={`w-[300px] h-[120px] flex justify-center items-center ${sponsor.className ? sponsor.className : ""}`}
+                    >
+                      <Link href={sponsor.websiteUrl} target="_blank">
+                        <Image
+                          src={sponsor.image}
+                          alt={sponsor.image}
+                          height={210}
+                          width={300}
+                          />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>

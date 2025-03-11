@@ -16,6 +16,10 @@ import speakers from "../config/speakers.json";
 import Link from "next/link";
 import Button from "../components/Buttons/button";
 import Dropdown from "../components/Dropdown/dropdown";
+import eventSponsorsImg1 from '../public/img/logos/apidays.png'
+import eventSponsorsImg2 from '../public/img/logos/APICONF-LOGO-White.png'
+import financialSponsorImg1 from '../public/img/logos/graviteeio.svg'
+import financialSponsorImg2 from '../public/img/logos/postman.png'
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -236,15 +240,24 @@ export default function Home() {
         <Sponsors
           eventSponsors={[
             {
-              image: "/img/logos/apidays.png",
+              image: eventSponsorsImg1,
               websiteUrl: "https://www.apidays.global/",
             },
             {
-              image: "/img/logos/APICONF-LOGO-White.png",
+              image: eventSponsorsImg2,
               websiteUrl: "https://apiconf.net/",
             },
           ]}
-          // financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}
+          financialSponsor={[
+            {
+              image: financialSponsorImg1 ,
+              websiteUrl: "https://www.gravitee.io/",
+            } , 
+            {
+              image: financialSponsorImg2 ,
+              websiteUrl:"https://www.postman.com/",
+            }
+          ]}
         />
       </div>
       <div className="mt-5">
