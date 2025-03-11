@@ -44,9 +44,6 @@ body {
   }
 }
 
-/* .container{
-  max-width: 1400px;
-} */
 
 @media(max-width:992px){
   .container{
@@ -114,10 +111,6 @@ background: linear-gradient(320deg, #2db4fd 10.35%, #410854 88.41%);
 }
 
 .card-bg{
-  /* background: linear-gradient(119.66deg, rgba(255, 255, 255, 0.18) 6.74%, rgba(255, 255, 255, 0.06) 98.36%);
-border: 2px solid rgba(255, 255, 255, 0.64); */
-/* box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.05);
-backdrop-filter: blur(10px); */
 /* Note: backdrop-filter has minimal browser support */
 background-position: center;
 background-size: cover ;
