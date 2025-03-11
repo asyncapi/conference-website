@@ -7,6 +7,7 @@ import Hamburger from "../illustration/hamburger";
 import { useMediaQuery } from "react-responsive";
 import Cancel from "../illustration/cancel";
 import Image from "next/image";
+import StarOnGitHub from "../Github/star-button"; 
 
 function Navbar() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -71,7 +72,6 @@ function Navbar() {
     setIsSubMenuHovered(false);
     setShow(null);
   };
-
   return (
     <div className="relative">
       <div
@@ -115,7 +115,7 @@ function Navbar() {
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
                   >
-                    <div>
+                    <div className="whitespace-nowrap">
                       {link.subMenu ? (
                         <div className="flex items-center">
                           {link.title}{" "}
@@ -132,7 +132,7 @@ function Navbar() {
                         <Link href={link.ref}>{link.title}</Link>
                       )}
                     </div>
-                    <span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
+                    <span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
                     <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
                     {show === link.title && link.subMenu && (
                       <div
@@ -160,6 +160,9 @@ function Navbar() {
                   </div>
                 </div>
               ))}
+              <div className="ml-16">
+                <StarOnGitHub className="px-3 py-2" inNav={true} />
+              </div>
             </div>
           )}
           {isTablet && drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
