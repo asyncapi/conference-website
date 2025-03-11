@@ -29,15 +29,13 @@ function Venue({ city }) {
 	return (
 		<Link href={`/venue/${city.name}`}>
 			<div style={{background: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0, .3)), url(${city.img})`, backgroundSize: "cover"}}
-				className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer m-2'>
-				<div className='flex justify-between flex-col w-full h-full'>
+className='relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-md bg-[image:var(--image-url)] flex items-center justify-center p-4 cursor-pointer m-3 hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out'>				<div className='flex justify-between flex-col w-full h-full'>
 					<div className='flex items-center'>
 						{city.cfp? <div className={`border ${textColor} text-md rounded-lg p-1 text-center mt-2`}>cfp is open</div> :null}
 						<button onClick={(e) => {
 							e.preventDefault()
 							window.open(city.map, '_blank', 'noopener')
-						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto'>
-							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
+						}} className='w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300'>							<Image src='/img/mapIcon.svg' alt='Map Icon' width={24} height={24} />
 						</button>
 					</div>
 					<div></div>
