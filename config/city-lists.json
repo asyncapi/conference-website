@@ -89,12 +89,12 @@
 		"playlist":""
 	},
 	{
-		"name": "Suprise!",
-		"country": "Suprise!",
+		"name": "Bangalore",
+		"country": "India",
 		"date": "October 9, 2025",
 		"cfpdate":"Not announced yet",
-		"description": "Can You Guess The Location? Stay Tuned!",
-		"img": "/img/locations/teasers.webp",
+		"description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
+		"img": "/img/locations/bangalore.webp",
 		"address": "Location Coming Soon",
 		"map": "",
 		"sponsors": {
