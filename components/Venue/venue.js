@@ -20,7 +20,7 @@ export function isEventEnded(date){
 	return getEventStatus(date) === "Ended";
 }
 
-function Venue({ className, city }) {
+function Venue({ city }) {
 
 	const eventEnded = isEventEnded(city.date);
 	const textColor = eventEnded ? "text-white": "text-white";
