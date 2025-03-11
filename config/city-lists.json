@@ -6,7 +6,7 @@
 		"date": "16 April, 2025",
 		"cfpdate":"24 February, 2025",
 		"description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
-		"img": "/img/locations/singapore.jpg",
+		"img": "/img/locations/singapore.webp",
 		"address": "Marina Bay Sands, Singapore",
 		"map": "",
 		"sponsors": {
@@ -28,7 +28,7 @@
 		"date": "3 July, 2025",
 		"cfpdate":"11 May 2025",
 		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
-		"img": "/img/locations/munich.jpg",
+		"img": "/img/locations/munich.webp",
 		"address": "Smartvillage Bogenhausen, München, Germany",
 		"map": "",
 		"sponsors": {
@@ -50,7 +50,7 @@
 		"date": "19 July, 2025",
 		"cfpdate":"Not announced yet",
 		"description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
-		"img": "/img/locations/lagos.jpg",
+		"img": "/img/locations/lagos.webp",
 		"address": "Location Coming Soon",
 		"map": "",
 		"sponsors": {
