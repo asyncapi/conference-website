@@ -1,39 +1,44 @@
-import Slider from 'react-slick';
-import Arrow from '../illustration/arrow';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useCallback, useEffect, useState } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import AutoScroll from 'embla-carousel-auto-scroll'
 import { useMediaQuery } from 'react-responsive';
 
-function ReactSlider({ children }) {
-	const isMobile = useMediaQuery({ maxWidth: '590px' });
-	const [slides, setSlides] = useState(1);
 
-	useEffect(() => {
-		if (isMobile) {
-			setSlides(1);
-		}
-	}, [isMobile]);
-	const slider = useRef(null);
-	const settings = {
-		slidesToScroll: slides,
-		infinite: true,
-		autoplay: true,
-		speed: 10000,
-		autoplaySpeed: 0,
-		centerMode: true,
-		cssEase: 'linear',
-		variableWidth: isMobile ? false : true,
-		arrows: false,
-	};
+function EmblaCarousel({ slides }) {
+	const isMobile = useMediaQuery({ maxWidth: '590px' });
+	
+	const scrollOptions = {
+		playOnInit: true,
+		stopOnInteraction: false,
+		stopOnMouseEnter: true,
+		startDelay: 200,
+		speed: 1
+	}
+
+	const options = {
+		loop: true, 
+		dragFree: true
+	}
+	
+	const [emblaRef] = useEmblaCarousel({ ...options }, [
+		AutoScroll({ ...scrollOptions })
+	]);
 
 	return (
 		<>
-		{ children.length > 4 || isMobile ? 
-		(<Slider ref={slider} {...settings}>
-			{children}
-		</Slider>):(
-	       <div className='flex m-2 justify-center'>{children}</div>)}
-	    </>
+			{slides.length > 4 || isMobile ? (
+				<div className="embla" ref={emblaRef}>
+					<div className="embla__container">
+						{slides.map((item, idx) => (
+							<div className="embla__slide" key={`embla__slide_${idx}`}>{item}</div>
+						))}
+					</div>
+				</div>
+			) : (
+				<div className='flex m-2 justify-center'>{slides}</div>
+			)}
+		</>
 	);
 }
 
-export default ReactSlider;
+export default EmblaCarousel;
