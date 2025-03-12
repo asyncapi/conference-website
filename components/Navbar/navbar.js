@@ -114,6 +114,7 @@ function Navbar() {
                     onMouseLeave={handleMouseLeave}
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
+                    style={{ display: "inline-block", minWidth: "max-content", whiteSpace: "nowrap" }}
                   >
                     <div>
                       {link.subMenu ? (
