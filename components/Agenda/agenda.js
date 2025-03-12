@@ -5,7 +5,6 @@ import Image from "next/image";
 import { PdfDownloader } from "./pdf";
 
 function Agenda({ city }) {
-  console.log(city)
   return (
     <div className="" data-test="agenda-com">
       <div className="flex flex-col justify-center items-center">
