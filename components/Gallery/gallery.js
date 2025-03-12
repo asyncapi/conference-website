@@ -24,7 +24,7 @@ const imageUrls = [
 
 export function Gallery(){
     return(
-        <div className='flex flex-col items-center pb-24' >
+        <div className='flex flex-col items-center py-12' >
             <div>
                 <div className='text-lg capitalize sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>gallery</div>
             </div>
@@ -44,9 +44,11 @@ export function Gallery(){
                     />
                 ))}
             </div>
-            <Button type='button' onClick={()=>{}} className='w-[200px] my-4 px-10'>
-                Browse
-            </Button>
+            <a href="https://drive.google.com/drive/folders/15QooKSy__jerOtLSkXzuKQh0hdlhZqo7?usp=drive_link" >
+                <Button type='button'className='w-[200px] my-4 px-10'>
+                    Browse
+                </Button>
+            </a>
         </div>
     )
 }			
