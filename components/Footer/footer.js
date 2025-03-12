@@ -21,7 +21,7 @@ function Footer() {
     },
   ];
   return (
-    <div className="container" data-test="footer">
+    <div className="container gradient-bg" data-test="footer">
       <div
         className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3"
         data-test="footer-asyncAPI-logo"
@@ -39,7 +39,7 @@ function Footer() {
         </div>
         <div></div>
         <div className="flex items-center justify-between sm:flex-col sm:items-center">
-         <div className="text-white">© 2025 AsyncAPI.com – All rights reserved</div>
+         <div className="text-white">Developed by an incredible community. Built by the people, for the people.</div>
          <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
             <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">
               {socials.map((social, index) => {
@@ -55,8 +55,8 @@ function Footer() {
                     <Image
                       src={social.imgUrl}
                       alt={social.name}
-                      height={23}
-                      width={23}
+                      height={30}
+                      width={30}
                     />
                   </a>
                 );
