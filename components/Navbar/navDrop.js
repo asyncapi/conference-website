@@ -26,6 +26,7 @@ const NavDrop = forwardRef((props, ref)=> {
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
 												className={`transition-transform duration-700`}
+												style={{ display: "inline-block", minWidth: "max-content", whiteSpace: "nowrap" }}
 											/>
 										</div>
 										{show && show === link.title && (
