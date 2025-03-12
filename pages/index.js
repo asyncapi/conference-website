@@ -56,7 +56,7 @@ export default function Home() {
         <div className="flex items-center flex-col justify-center">
           <div
             id="speakers"
-            className="relative flex flex-col items-center justify-center"
+            className="relative flex flex-col items-center justify-center pt-20"
           >
             <div className="text-center">
               <div className="flex items-center justify-center">
@@ -175,11 +175,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div id="tickets" className="flex items-center flex-col justify-center">
+          <div id="tickets" className="flex items-center flex-col justify-center pt-20">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               Tickets
             </div>
-			<div data-test="ticket-section">
+			<div data-test="ticket-section" className="flex flex-col items-center ">
             <Heading
               typeStyle="heading-md"
               className="text-gradient text-center lg:mt-10"
@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </div>
       <div id="sponsors" className="mt-20">
-        <Sponsors
+      <Sponsors
           eventSponsors={[
             {
               image: "/img/logos/apidays.png",
@@ -243,10 +243,8 @@ export default function Home() {
               image: "/img/logos/APICONF-LOGO-White.png",
               websiteUrl: "https://apiconf.net/",
             },
-          ]}
-          // financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}
-        />
-      </div>
+          ]}/>
+                </div>
       <div className="mt-5">
         <Subscription />
       </div>
