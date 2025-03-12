@@ -2,8 +2,10 @@ import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
 import Image from "next/image";
+import { PdfDownloader } from "./pdf";
 
 function Agenda({ city }) {
+  console.log(city)
   return (
     <div className="" data-test="agenda-com">
       <div className="flex flex-col justify-center items-center">
@@ -17,7 +19,7 @@ function Agenda({ city }) {
           <Heading className="text-[30px] text-white">Agenda</Heading>
         )}
       </div>
-
+      <PdfDownloader city={city} />
       {city.agenda && (
         <div className="mt-[40px]">
           <Heading
