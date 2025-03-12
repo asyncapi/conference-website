@@ -36,14 +36,15 @@ function About() {
 							<Button className='w-[200px]'>Become a sponsor now</Button>
 						</a>
 						<a className='flex justify-center ' href='/pdf/conf-2025.pdf' download={`conf ${new Date().getFullYear()}.pdf`} >
-							<Button overlay={true} className='w-[240px] border'>
-								<div className='flex gap-2 justify-center items-center'>
-									<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain'  />
-									<div>
-										Sponsorship prospectus
-									</div>
-								</div>
-							</Button>
+						    <Button className='w-[240px] border border-gray btn relative overflow-hidden transition-all rounded group '  overlay={true}>
+                                <span className="transparent-bg "></span>
+                                <div className='flex gap-2 justify-center items-center relative w-full rounded transition-colors duration-300 ease-in-out group-hover:text-white'>
+                                    <Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain' />
+                                    <div>
+                                        Sponsorship prospectus
+                                    </div>
+                                </div>
+                            </Button>
 						</a>
 					</div>
 				</div>
