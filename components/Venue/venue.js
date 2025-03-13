@@ -3,21 +3,21 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export function getEventStatus(date){
+export function getEventStatus(dates){
 	const today = new Date();
-    const event = new Date(date);
+    const eventDates = dates.split('-').map(date => new Date);
 
-    if (event.toDateString() === today.toDateString()) {
+    if (eventDates.some(event => event.toDateString() === today.toDateString())) {
         return "Ongoing";
-    } else if (event > today) {
+    } else if (eventDates.some(event => event > today)) {
         return "Upcoming";
     } else {
         return "Ended";
     }
 }
 
-export function isEventEnded(date){
-	return getEventStatus(date) === "Ended";
+export function isEventEnded(dates){
+	return getEventStatus(dates) === "Ended";
 }
 
 function Venue({ city }) {
