@@ -8,4 +8,4 @@ function Dropdown({className, color}) {
   )
 }
 
-export default Dropdown
+export default Dropdown;

@@ -22,19 +22,22 @@ const NavDrop = forwardRef((props, ref)=> {
 							>
 								{link.subMenu ? (
 									<div>
-										<div className='flex'>
+										<div className='flex items-center'>
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
-												className={`transition-transform duration-700`}
+												color="white"
+												className={`ml-2 transition-transform duration-700 ${
+													show === link.title ? "rotate-180" : "rotate-0"
+												  }`}
 											/>
 										</div>
 										{show && show === link.title && (
-											<div className='flex flex-col py-6 w-full'>
+											<div className='flex flex-col py-4 w-full max-w-fit'>
 												{link.subMenu.map((sub) => (
 													<Link href={sub.ref} key={sub.ref} >
 														<div data-test={`nav-sub-${sub.title}`}
 															onClick={() => setDrop(false)}
-															className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'
+															className='h-[40px] flex navbg items-center space-y-4 px-14 hover:text-black text-white cursor-pointer'
 														>
 															{sub.title}
 														</div>
