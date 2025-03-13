@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function getEventStatus(dates){
 	const today = new Date();
-    const eventDates = dates.split('-').map(date => new Date);
+	const eventDates = dates.split('-').map(date => new Date(date));
 
     if (eventDates.some(event => event.toDateString() === today.toDateString())) {
         return "Ongoing";
