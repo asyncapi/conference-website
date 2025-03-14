@@ -1,24 +1,45 @@
-import React,{useState,forwardRef} from 'react';
+import React, { useState, forwardRef } from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
 
-const NavDrop = forwardRef((props, ref)=> {
-	const {setDrop}=props;
-    const [show, setShow] = useState(null);
-  return (
-		<div  ref ={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
+const NavDrop = forwardRef((props, ref) => {
+	const { setDrop } = props;
+	const [show, setShow] = useState(null);
+
+	const handleKeyDown = (e, link) => {
+		switch (e.key) {
+			case 'Enter':
+			case ' ':
+				e.preventDefault();
+				if (link.subMenu) {
+					setShow(show === link.title ? null : link.title);
+				} else {
+					setDrop(false);
+				}
+				break;
+			case 'Escape':
+				setDrop(false);
+				break;
+		}
+	};
+
+	return (
+		<div ref={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
 			<div className='flex flex-col p-5 pb-8 w-full'>
 				{links.map((link) => {
 					return (
 						<Link href={link.ref || '#'} key={link.title}>
-							<div
-								className='min-h-[50px] cursor-pointer'
+							<button
+								aria-expanded={show === link.title}
+								aria-controls={`mobile-submenu-${link.title}`}
+								className='w-full text-left focus:outline-none focus:ring-2 focus:ring-white'
 								data-test={`nav-${link.title}`}
 								onClick={() =>
 									show === link.title ? setShow(null) : setShow(link.title)
 								}
+								onKeyDown={(e) => handleKeyDown(e, link)}
 							>
 								{link.subMenu ? (
 									<div>
@@ -48,7 +69,7 @@ const NavDrop = forwardRef((props, ref)=> {
 										{link.title}
 									</div>
 								)}
-							</div>
+							</button>
 						</Link>
 					);
 				})}
