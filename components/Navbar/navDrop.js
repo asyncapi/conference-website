@@ -1,16 +1,20 @@
-import React,{useState,forwardRef} from 'react';
+import React,{useState,forwardRef, useEffect} from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
 
 const NavDrop = forwardRef((props, ref)=> {
-	const {setDrop}=props;
+	const {setDrop,drop}=props;
     const [show, setShow] = useState(null);
-  return (
-		<div  ref ={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
-			<div className='flex flex-col p-5 pb-8 w-full'>
-				{links.map((link) => {
+	const [animation,setAnimation]=useState(false);
+	useEffect(()=>{
+		setAnimation(true);
+	},[])
+  	return (
+		<div  ref ={ref} className={`z-[99] absolute left-0 top-[74px] w-full bg-[#1B1130]/90 backdrop-filter backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out ${animation && drop?"h-screen":"h-0"}`}>
+			<div className="flex flex-col p-5 pb-8 w-full">
+			{links.map((link) => {
 					return (
 						<Link href={link.ref || '#'} key={link.title}>
 							<div
