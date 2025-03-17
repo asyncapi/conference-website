@@ -26,12 +26,14 @@ export function Gallery(){
     return(
         <div className='flex flex-col items-center py-12' >
             <div>
-                <div className='text-lg capitalize sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>gallery</div>
+                <div data-test="gallery-section-text" className='text-lg capitalize sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1'>gallery</div>
             </div>
+            <div data-test="gallery-main-heading" >
             <Heading typeStyle='heading-md' className='capitalize text-gradient text-center lg:mt-10'>
                 our event gallery
             </Heading>
-            <div className="w-full overflow-x-auto columns-4 sm:columns-2 space-y-5 lg:w-full justify-center my-4 p-4">
+            </div>
+            <div data-test="gallery-grid" className="w-full overflow-x-auto columns-4 sm:columns-2 space-y-5 lg:w-full justify-center my-4 p-4">
                 {imageUrls.map((url, index) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -44,7 +46,7 @@ export function Gallery(){
                     />
                 ))}
             </div>
-            <a href="https://drive.google.com/drive/folders/15QooKSy__jerOtLSkXzuKQh0hdlhZqo7?usp=drive_link" >
+            <a data-test="gallery-button" href="https://drive.google.com/drive/folders/15QooKSy__jerOtLSkXzuKQh0hdlhZqo7?usp=drive_link" >
                 <Button type='button'className='w-[200px] my-4 px-10'>
                     Browse
                 </Button>

@@ -40,6 +40,32 @@ describe("Landing Page Tests", () => {
     cy.getTestData("ticket-section").should("be.visible");
   });
 
+  it("Should render the Gallery section", () => {
+    cy.getTestData("gallery-section-text")
+      .should("be.visible")
+      .and("contain.text", "gallery");
+  });
+
+  it("Should display all gallery images", () => {
+    
+    cy.getTestData("gallery-grid")
+      .find("img")
+      .should("have.length", 12) 
+      .each(($img, index) => {
+        // Verify image src is correct
+        cy.wrap($img)
+          .should("have.attr", "src")
+          .and("include", `/img/gallery/${index + 1}.webp`);
+
+        cy.wrap($img).should("be.visible");
+      });
+  });
+
+  it("Should open correct URL when clicking the Browse button", () => {
+    cy.getTestData("gallery-button").should("be.visible").click();
+  });
+
+
   it("Should contain Sponsor component", () => {
     cy.getTestData("sponsor-section").should("be.visible");
   });
