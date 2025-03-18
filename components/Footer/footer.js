@@ -26,7 +26,7 @@ function Footer() {
         className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3"
         data-test="footer-asyncAPI-logo"
       >
-            <div className="mt-2 text-[14px] text-gray-100">
+            <div className="mt-2 text-[14px] text-gray-100 sm:hidden">
           <a
             href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
