@@ -52,7 +52,7 @@ describe("Landing Page Tests", () => {
       .find("img")
       .should("have.length", 12) 
       .each(($img, index) => {
-        // Verify image src is correct
+        
         cy.wrap($img)
           .should("have.attr", "src")
           .and("include", `/img/gallery/${index + 1}.webp`);
