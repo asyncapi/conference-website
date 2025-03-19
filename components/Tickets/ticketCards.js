@@ -36,7 +36,7 @@ const TICKETS = [
   },
 ];
 
-const TicketCards = () => {
+const Tickets = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -182,4 +182,4 @@ const TicketCards = () => {
   );
 };
 
-export default TicketCards;
+export default Tickets;
