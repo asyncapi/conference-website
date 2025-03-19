@@ -11,12 +11,32 @@ it("should render guideline if cfp is open, and agenda otherwise",()=>{
             }
             else{
                 cy.getTestData("agenda-com").should("be.visible");
+                it('should display and allow interaction with the speaker and type dropdowns', () => {
+                    // Check if the Speaker dropdown is visible and clickable
+                    cy.get('[data-test="speaker-dropdown"]')
+                      .should('be.visible')
+                      .click();
+                
+                    // Close the dropdown after clicking
+                    cy.get('[data-test="speaker-dropdown"]').blur();
+                
+                    // Check if the Type dropdown is visible and clickable
+                    cy.get('[data-test="type-dropdown"]')
+                      .should('be.visible')
+                      .click();
+                
+                    // Close the dropdown after clicking
+                    cy.get('[data-test="type-dropdown"]').blur();
+                  });
+
             }
         });
            
     })
 
 });
+
+
 
 // disbale this test file for now
 

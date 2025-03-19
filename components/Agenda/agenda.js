@@ -68,6 +68,7 @@ function Agenda({ city }) {
       <div className="flex justify-center mt-6 gap-4">
         {/* Speaker Filter Dropdown */}
         <select
+          data-test="speaker-dropdown"
           className="p-2 rounded-md bg-transparent border border-white text-white"
           onChange={(e) => setSelectedSpeaker(e.target.value ? parseInt(e.target.value) : null)}
           value={selectedSpeaker || ""}
@@ -82,6 +83,7 @@ function Agenda({ city }) {
 
         {/* Session Type Filter Dropdown */}
         <select
+          data-test="type-dropdown"
           className="p-2 rounded-md bg-transparent border border-white text-white"
           onChange={(e) => setSelectedType(e.target.value)}
           value={selectedType}
