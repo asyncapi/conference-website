@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 function ReactSlider({ children }) {
-	const isMobile = useMediaQuery({ maxWidth: '590px' });
+	const isMobile = useMediaQuery({ maxWidth: '260px' });
 	const [slides, setSlides] = useState(1);
 
 	useEffect(() => {

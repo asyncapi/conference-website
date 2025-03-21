@@ -92,10 +92,10 @@
 		"name": "Bangalore",
 		"country": "India",
 		"date": "8 - 9 October, 2025",
-		"cfpdate":"Not announced yet",
+		"cfpdate":"29 June 2025",
 		"description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
 		"img": "/img/locations/bangalore.webp",
-		"address": "Location Coming Soon",
+		"address": "The Chancery Pavilion, Bangalore",
 		"map": "",
 		"sponsors": {
 			"eventSponsors" : [{
@@ -104,7 +104,7 @@
 			}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://confengine.com/conferences/apidays-india-2025",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
