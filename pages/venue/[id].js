@@ -41,8 +41,7 @@ function Venue({ city }) {
 
 	return (
 		<div data-test={`venue-${city.name}`}>
-<div 
-    style={{
+<div style={{
         backgroundImage: city.name == 'Online' ? '' : `url(${city.img})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 30%',
