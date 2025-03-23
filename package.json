@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@googleapis/sheets": "^7.0.0",
-    "axios": "^1.7.4",
+    "axios": "^1.8.2",
     "d3": "^7.8.5",
     "net": "^1.0.2",
     "next": "^14.2.21",

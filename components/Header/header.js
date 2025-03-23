@@ -1,3 +1,4 @@
+
 import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
@@ -54,6 +55,7 @@ function Header() {
       </div>
     </div>
   );
+
 }
 
 export default Header;
