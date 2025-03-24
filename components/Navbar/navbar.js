@@ -72,6 +72,13 @@ function Navbar() {
     setShow(null);
   };
 
+  const handleKeyDown = (event, linkTitle) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      show === linkTitle ? setShow(null) : setShow(linkTitle);
+    }
+  };
+
   return (
     <div className="relative">
       <div
@@ -114,6 +121,8 @@ function Navbar() {
                     onMouseLeave={handleMouseLeave}
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
+                    tabIndex={0}
+                    onKeyDown={(event) => handleKeyDown(event, link.title)}
                   >
                     <div>
                       {link.subMenu ? (
@@ -150,6 +159,7 @@ function Navbar() {
                             <div
                               className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
                               data-test={`nav-sub-${subL.title}`}
+                              tabIndex={0}
                             >
                               {subL.title}
                             </div>
