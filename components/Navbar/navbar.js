@@ -121,10 +121,9 @@ function Navbar() {
                     onMouseLeave={handleMouseLeave}
                     className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
                     data-test={`nav-${link.title}`}
-                    tabIndex={0}
                     onKeyDown={(event) => handleKeyDown(event, link.title)}
                   >
-                    <div>
+                    <div tabIndex={0}>
                       {link.subMenu ? (
                         <div className="flex items-center">
                           {link.title}{" "}
