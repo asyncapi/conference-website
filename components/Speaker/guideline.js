@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Plus from '../illustration/plus';
 import Heading from '../Typography/heading';
 import Button from '../Buttons/button';
-import CFPdata from "../../config/cfp-data.json"
 const faqs = [
     {
         q: 'What is AsyncAPI Conf?',
