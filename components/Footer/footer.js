@@ -19,6 +19,11 @@ function Footer() {
       href: "https://x.com/asyncapispec",
       imgUrl: "/img/twitter_new.png",
     },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@AsyncAPI",
+      imgUrl: "/img/youtube.png",
+    },
   ];
   return (
     <div className="container" data-test="footer">
