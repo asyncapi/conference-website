@@ -7,6 +7,7 @@ import Hamburger from "../illustration/hamburger";
 import { useMediaQuery } from "react-responsive";
 import Cancel from "../illustration/cancel";
 import Image from "next/image";
+import StarOnGitHub from "../Github/star-github"; 
 
 function Navbar() {
   const isTablet = useMediaQuery({ maxWidth: "1118px" });
@@ -160,6 +161,9 @@ function Navbar() {
                   </div>
                 </div>
               ))}
+              <div className="ml-10">
+                <StarOnGitHub className="px-2 py-1"/>
+              </div>
             </div>
           )}
           {isTablet && drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
