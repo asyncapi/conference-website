@@ -75,15 +75,16 @@ function Navbar() {
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && "bg-[#1B1130]/90"} top-0 z-[99] text-white`}
+        className={`container flex justify-center fixed items-center w-full ${drop && "bg-[#1B1130]/90"} top-0 z-[99] text-white`}
       >
+        <div className={`absolute w-full h-full backdrop-blur`} />
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
             className="flex items-center sm:justify-between sm:w-full"
             data-test="nav-Home"
           >
             <Link href="/">
-              <div className="flex items-center cursor-pointer">
+              <div className="flex items-center cursor-pointer relative">
                 <Image
                   src="/img/logos/2025-logo.png"
                   alt="conference logo"
@@ -94,7 +95,7 @@ function Navbar() {
             </Link>
           </div>
           {isTablet ? (
-            <div data-test="nav-Hamberger">
+            <div data-test="nav-Hamberger" className="relative">
               {drop ? (
                 <button>
                   <Cancel />
@@ -122,9 +123,8 @@ function Navbar() {
                           {link.subMenu && (
                             <Dropdown
                               color="white"
-                              className={`ml-2 transition-transform duration-700 ${
-                                show === link.title ? "rotate-180" : "rotate-0"
-                              }`}
+                              className={`ml-2 transition-transform duration-700 ${show === link.title ? "rotate-180" : "rotate-0"
+                                }`}
                             />
                           )}
                         </div>
@@ -136,7 +136,7 @@ function Navbar() {
                     <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
                     {show === link.title && link.subMenu && (
                       <div
-                        className="subMenu absolute z-[9] mt-8 w-[150px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
+                        className="subMenu absolute z-[9] mt-8 w-40 rounded-md left-[-15px] py-1 flex flex-col justify-center space-y-0 bg-white bg-opacity-10 overflow-hidden shadow-xl border border-white/20 backdrop-blur-lg bg-[#1B1130]/90"
                         onMouseEnter={handleSubMenuEnter}
                         onMouseLeave={handleSubMenuLeave}
                       >
@@ -148,7 +148,7 @@ function Navbar() {
                             rel="noopener noreferrer"
                           >
                             <div
-                              className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
+                              className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:translate-x-1 px-2 transition-all hover:bg-white hover:bg-opacity-20 duration-200`}
                               data-test={`nav-sub-${subL.title}`}
                             >
                               {subL.title}

@@ -1,10 +1,10 @@
 
 const dark = {
-  300: "#E8E2F4",
-  400: "#C6BED9",
-  500: "#9081B0",
-  600: "#675788",
-  700: "#453763",
+	300: "#E8E2F4",
+	400: "#C6BED9",
+	500: "#9081B0",
+	600: "#675788",
+	700: "#453763",
 };
 
 module.exports = {
@@ -29,6 +29,13 @@ module.exports = {
 		extend: {
 			colors: {
 				dark: dark,
+			},
+			backdropBlur: {
+				xs: '2px',
+				sm: '4px',
+				DEFAULT: '8px',
+				lg: '10px',
+				xl: '20px',
 			},
 		},
 		screens: {
