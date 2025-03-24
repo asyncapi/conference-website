@@ -79,7 +79,7 @@ function Navbar() {
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
-            className="flex items-center sm:justify-between sm:w-full"
+            className="flex items-center sm:justify-between sm:w-full z-[99]"
             data-test="nav-Home"
           >
             <Link href="/">
@@ -94,7 +94,7 @@ function Navbar() {
             </Link>
           </div>
           {isTablet ? (
-            <div data-test="nav-Hamberger">
+            <div data-test="nav-Hamberger" className="z-[99]">
               {drop ? (
                 <button>
                   <Cancel />
@@ -162,7 +162,14 @@ function Navbar() {
               ))}
             </div>
           )}
-          {isTablet && drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+          {isTablet && (
+            <div
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop ? "opacity-100 translate-y-[75px]" : "opacity-0 -translate-y-full pointer-events-none"
+                }`}
+            >
+              {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+            </div>
+          )}
         </div>
       </div>
     </div>
