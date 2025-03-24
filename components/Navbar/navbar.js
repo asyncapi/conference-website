@@ -73,7 +73,7 @@ function Navbar() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative" >
       <div
         className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && "bg-[#1B1130]/90"} top-0 z-[99] text-white`}
       >

@@ -1,0 +1,25 @@
+[
+  {
+    "category": "General",
+    "questions": [
+      {
+        "question": "What is the AsyncAPI Conference?",
+        "answer": "The AsyncAPI Conference is an event dedicated to event-driven architecture and APIs, bringing together developers, architects, and industry experts."
+      },
+      {
+        "question": "Who should attend the conference?",
+        "answer": "Anyone interested in event-driven APIs, microservices, message-driven architectures, and the AsyncAPI specification, including developers, architects, and product managers."
+      }
+    ]
+  },
+  {
+    "category": "Registration & Tickets",
+    "questions": [
+      {
+        "question": "How can I register for the conference?",
+        "answer": "You can register by visiting our website",
+        "link": "https://www.asyncapi.com"
+      }
+    ]
+  }
+]
