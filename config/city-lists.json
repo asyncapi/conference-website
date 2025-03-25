@@ -48,7 +48,7 @@
 		"name": "Lagos",
 		"country": "Nigeria",
 		"date": "18 - 19 July, 2025",
-		"cfpdate":"Not announced yet",
+		"cfpdate":"17 May 2025",
 		"description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
 		"img": "/img/locations/lagos.jpg",
 		"address": "Location Coming Soon",
@@ -60,7 +60,7 @@
 				}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
