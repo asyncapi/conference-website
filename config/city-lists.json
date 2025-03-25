@@ -8,7 +8,7 @@
 		"description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
 		"img": "/img/locations/singapore.jpg",
 		"address": "Marina Bay Sands, Singapore",
-		"map": "",
+		"map": "https://maps.app.goo.gl/9fG91E7Y24zmWSqP9",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
@@ -30,7 +30,7 @@
 		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
 		"img": "/img/locations/munich.jpg",
 		"address": "Smartvillage Bogenhausen, München, Germany",
-		"map": "",
+		"map": "https://maps.app.goo.gl/xUCnXb11sSJTECV5A",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
@@ -96,7 +96,7 @@
 		"description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
 		"img": "/img/locations/bangalore.webp",
 		"address": "The Chancery Pavilion, Bangalore",
-		"map": "",
+		"map": "https://maps.app.goo.gl/ANeaUDVVHKeEzLkv7",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
