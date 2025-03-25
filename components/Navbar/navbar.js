@@ -164,7 +164,7 @@ function Navbar() {
           )}
           {isTablet && (
             <div
-              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop ? "opacity-100 translate-y-[75px]" : "opacity-0 -translate-y-full pointer-events-none"
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop ? "opacity-100" : "opacity-0 -translate-y-full pointer-events-none"
                 }`}
             >
               {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
