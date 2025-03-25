@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Ticket, ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from '../Buttons/button';
-
+import Arrows from '../illustration/arrows';
+import Ticket from '../illustration/ticket';
 const Tickets = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -54,14 +54,14 @@ const Tickets = () => {
           className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Previous ticket"
         >
-          <ChevronLeft className="h-6 w-6 text-gray-600" />
+          <Arrows direction="left" className="w-6 h-6" fill="#4B5563" />
         </button>
         <button
           onClick={nextTicket}
           className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Next ticket"
         >
-          <ChevronRight className="h-6 w-6 text-gray-600" />
+          <Arrows direction="right" className="w-6 h-6" fill="#4B5563" />
         </button>
       </div>
 
