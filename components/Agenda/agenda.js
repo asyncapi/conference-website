@@ -18,7 +18,6 @@ function Agenda({ city }) {
           <Heading className="text-[30px] text-white">Agenda</Heading>
         )}
       </div>
-      <PdfDownloader city={city} />
       {city.agenda && (
         <div className="mt-[40px]">
           <Heading
@@ -113,6 +112,7 @@ function Agenda({ city }) {
           </div>
         </div>
       )}
+      <PdfDownloader city={city} />
     </div>
   );
 }
