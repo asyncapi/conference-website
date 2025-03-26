@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
 import Image from "next/image";
+import { PdfDownloader } from "./pdf";
 
 function Agenda({ city }) {
   return (
@@ -17,7 +18,6 @@ function Agenda({ city }) {
           <Heading className="text-[30px] text-white">Agenda</Heading>
         )}
       </div>
-
       {city.agenda && (
         <div className="mt-[40px]">
           <Heading
@@ -112,6 +112,7 @@ function Agenda({ city }) {
           </div>
         </div>
       )}
+      <PdfDownloader city={city} />
     </div>
   );
 }
