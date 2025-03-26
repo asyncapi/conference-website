@@ -8,7 +8,7 @@
 		"description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
 		"img": "/img/locations/singapore.jpg",
 		"address": "Marina Bay Sands, Singapore",
-		"map": "",
+		"map": "https://maps.app.goo.gl/9fG91E7Y24zmWSqP9",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
@@ -25,12 +25,12 @@
 	{
 		"name": "Munich",
 		"country": "Germany",
-		"date": "3 July, 2025",
+		"date": "2 - 3 July, 2025",
 		"cfpdate":"11 May 2025",
 		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
 		"img": "/img/locations/munich.jpg",
 		"address": "Smartvillage Bogenhausen, München, Germany",
-		"map": "",
+		"map": "https://maps.app.goo.gl/xUCnXb11sSJTECV5A",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
@@ -47,8 +47,8 @@
 	{
 		"name": "Lagos",
 		"country": "Nigeria",
-		"date": "19 July, 2025",
-		"cfpdate":"Not announced yet",
+		"date": "18 - 19 July, 2025",
+		"cfpdate":"17 May 2025",
 		"description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
 		"img": "/img/locations/lagos.jpg",
 		"address": "Location Coming Soon",
@@ -60,7 +60,7 @@
 				}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -69,8 +69,8 @@
 	{
 		"name": "London",
 		"country": "UK",
-		"date": "September 24, 2025",
-		"cfpdate":"Not announced yet",
+		"date": "22 - 24 September, 2025",
+		"cfpdate":"13 July 2025",
 		"description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
 		"img": "/img/locations/london.gif",
 		"address": "155 Bishopsgate, London EC2M 3YD",
@@ -82,21 +82,21 @@
 			}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
 		"playlist":""
 	},
 	{
-		"name": "Suprise!",
-		"country": "Suprise!",
-		"date": "October 9, 2025",
-		"cfpdate":"Not announced yet",
-		"description": "Can You Guess The Location? Stay Tuned!",
-		"img": "/img/locations/teasers.webp",
-		"address": "Location Coming Soon",
-		"map": "",
+		"name": "Bangalore",
+		"country": "India",
+		"date": "8 - 9 October, 2025",
+		"cfpdate":"29 June 2025",
+		"description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
+		"img": "/img/locations/bangalore.webp",
+		"address": "The Chancery Pavilion, Bangalore",
+		"map": "https://maps.app.goo.gl/ANeaUDVVHKeEzLkv7",
 		"sponsors": {
 			"eventSponsors" : [{
 				"image":"/img/logos/apidays.png",
@@ -104,7 +104,7 @@
 			}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://confengine.com/conferences/apidays-india-2025",
 		"isFree": true,
 		"ended": false,
 		"recordings":"",
@@ -113,7 +113,7 @@
 	{
 		"name": "Online",
 		"country": " Edition",
-		"date": "October 29, 2025",
+		"date": "29 October, 2025",
 		"cfpdate":"Not announced yet",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
 		"img": "/img/locations/testMic.webp",
@@ -136,8 +136,8 @@
 	{
 		"name": "Paris",
 		"country": "France",
-		"date": "December 11, 2025",
-		"cfpdate":"Not announced yet",
+		"date": "9 - 11 December, 2025",
+		"cfpdate":"5 October 2025",
 		"description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
 		"img": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd24yenR4djEyZzRoeDA0ZmEyb3Y1c2F4NWVmbG13NmZwYWNhZzdnNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tuy3QxNZF1cxG/giphy.gif",
 		"address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
@@ -150,7 +150,7 @@
 			
 		},
 		"isFree": true,
-		"cfp": false,
+		"cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
 		"ended": false
 	}
 	
