@@ -11,7 +11,7 @@ function GithubButton({ text = 'Star on GitHub', href = 'https://github.com/asyn
   return (
     <button
       onClick={handleClick}
-      className={`flex items-center gap-1 bg-[#6d0ccd] hover:bg-[#8a33db] 
+      className={`flex items-center gap-1 bg-white/20 hover:bg-white/40 
       text-white px- py-2 rounded-md shadow-md font-medium whitespace-nowrap
       transition-all duration-300 ${inNav ? 'h-10' : 'h-12'} ${className}`}
     >
