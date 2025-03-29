@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ChevronUp from '../illustration/chevronUp';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,13 +32,7 @@ const ScrollToTop = () => {
         onClick={scrollToTop} 
         className="gradient-bg text-white m-5 p-3 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-110 flex justify-center items-center md:p-3 md:m-2 sm:p-2 sm:m-1"
       >
-        <img 
-          src="/img/up_arrow.svg"
-          alt="Scroll to top" 
-          className="md:w-8 md:h-8 sm:w-6 sm:h-6" 
-          width={20}
-          height={20}
-        />
+        <ChevronUp className="md:w-8 md:h-8 sm:w-6 sm:h-6" color="white" />
       </button>
     </div>
   );
