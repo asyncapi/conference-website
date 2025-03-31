@@ -1,115 +1,97 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Twitter, Github, Linkedin, Youtube, Slack, Twitch } from 'lucide-react';
-
-const socialMediaLinks = [
-  { label: 'Twitter', testid: 'footer-Twitter', url: 'https://x.com/asyncapispec', icon: <Twitter className='h-5 w-5' /> },
-  { label: 'GitHub', testid: 'footer-Github', url: 'https://github.com/asyncapi', icon: <Github className='h-5 w-5' /> },
-  { label: 'LinkedIn', testid: 'footer-LinkedIn', url: 'https://www.linkedin.com/company/asyncapi/', icon: <Linkedin className='h-5 w-5' /> },
-  { label: 'YouTube', url: 'https://youtube.com/asyncapi', icon: <Youtube className='h-5 w-5' /> },
-  { label: 'Slack', url: 'https://asyncapi.com/slack-invite', icon: <Slack className='h-5 w-5' /> },
-  { label: 'Twitch', url: 'https://www.twitch.tv/asyncapi', icon: <Twitch className='h-5 w-5' /> }
-];
-
-const initiativeLinks = [
-  { label: 'About', url: '#about' },
-  { label: 'Venue', url: '/venue/Online' },
-  { label: 'Brand', url: 'https://github.com/asyncapi/brand/blob/master/brand-guidelines/README.md' },
-  { label: 'Tickets', url: '#tickets' },
-  { label: 'Speakers', url: '#speakers' },
-  { label: 'Code of Conduct', url: 'https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md' }
-];
+import Button from '../Buttons/button';
 
 const helloVariants = [
-  "thank you", "gracias", "धन्यवाद", "merci", "danke", "ありがとう", "谢谢", "Спасибо",
-  "شكراً", "감사합니다", "ευχαριστώ", "grazie", "terima kasih", "धन्यबाद", "tack",
-  "dziękuję", "mersi", "hvala", "धन्यवाद", "ขอบคุณ", "ありがとう ございます", "salamat",
-  "धन्यवाद", "მადლობა", "спасибі", "multumesc", "tänan", "aitäh", "faleminderit",
-  "شكرا جزيلا", "धन्यवाद छ", "děkuji", "kiitos", "takk", "tak"
+  "Hello", "Hola", "नमस्ते", "Bonjour", "Hallo", "こんにちは", "你好", 
+  "Здравствуйте", "مرحبا", "안녕하세요", "Γειά σου", "Ciao", "Selamat", 
+  "Szia", "Hej", "Ahoj", "Hei", "Salut", "Olá", "Привіт", "Halo"
 ];
 
-export default function ConferenceFooter() {
-  const [helloText, setHelloText] = useState('Hello');
+function Footer() {
+  const [greeting, setGreeting] = useState(helloVariants[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHelloText(prev => helloVariants[(helloVariants.indexOf(prev) + 1) % helloVariants.length]);
+      setGreeting(prev => {
+        const currentIndex = helloVariants.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % helloVariants.length;
+        return helloVariants[nextIndex];
+      });
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <footer data-testid="footer" className='bg-dark px-6 py-14 text-white'>
-      <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left'>
+    <footer className="bg-gray-900 text-white py-12 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Main Content */}
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+          
+          {/* Left Column - Logo & Description */}
+          <div className="md:w-1/3">
+            <div className="flex items-center mb-4">
+              <img src="/img/logos/2025-logo.png" alt="AsyncAPI Logo" className="h-10 mr-3" />
+            </div>
+            <p className="text-lg text-gray-300">
+              A Global Gathering for API Experts, Architects, and Enthusiasts.
+            </p>
+          </div>
 
-        {/* Left: Logo & Description */}
-        <div className='w-full md:w-1/4 flex flex-col items-start'>
-          <Link href='/' aria-label='AsyncAPI Conference'>
-            <img src='/img/logos/2025-logo.png' alt='AsyncAPI Logo' data-testid="footer-asyncAPI-logo" className='h-10 w-auto mb-4' />
-          </Link>
-          <p className='font-bold text-lg md:text-2xl mb-3'>
-            A Global Gathering for <br /> API Experts, Architects, and Enthusiasts.
+          {/* Middle Column - Subscription */}
+          <div className="md:w-1/3">
+            <h3 className="text-xl font-bold mb-4">Subscribe for AsyncAPI Conf updates!</h3>
+            <a 
+              href="https://www.asyncapi.com/newsletter" 
+              target="_blank" 
+              rel="noreferrer"
+              className="inline-block"
+            >
+              <Button className="px-8 py-3 bg-blue-600 hover:bg-blue-700">
+                Subscribe
+              </Button>
+            </a>
+          </div>
+
+          {/* Right Column - Social Links */}
+          <div className="md:w-1/3">
+            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { icon: <Twitter size={20} />, name: 'Twitter', url: 'https://x.com/asyncapispec' },
+                { icon: <Github size={20} />, name: 'GitHub', url: 'https://github.com/asyncapi' },
+                { icon: <Linkedin size={20} />, name: 'LinkedIn', url: 'https://linkedin.com/company/asyncapi' },
+                { icon: <Youtube size={20} />, name: 'YouTube', url: 'https://youtube.com/asyncapi' },
+                { icon: <Slack size={20} />, name: 'Slack', url: 'https://asyncapi.com/slack-invite' },
+                { icon: <Twitch size={20} />, name: 'Twitch', url: 'https://twitch.tv/asyncapi' },
+              ].map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-300 hover:text-white transition-colors"
+                >
+                  <span className="mr-2">{social.icon}</span>
+                  {social.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400">
+            Made with <span className="text-red-500">❤️</span> by the AsyncAPI Community
+          </p>
+          <p className="text-gray-400 mt-2 md:mt-0 animate-pulse">
+            {greeting}!
           </p>
         </div>
-
-<div className='w-full md:w-1/2 flex justify-between px-10'>
-  <div className='w-full items-center mt-[-80px]'>
-    <h3 className='font-bold text-lg md:text-2xl mb-3'>The Initiative</h3>
-    <ul className='text-base'>
-      {initiativeLinks.map((link, index) => (
-        <li key={index} className='mb-2'>
-          <Link 
-            href={link.url} 
-            data-testid={link.label === 'Code of Conduct' ? 'footer-CodeOfConduct' : link.testid || undefined} 
-            className='hover:text-gray-300 transition duration-300 ease-in-out'
-          >
-            {link.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-
-          <div className='w-auto flex justify-between px-10 ml-[-1300px]'>
-            <div className='w-full items-center mt-[-80px]'>
-            <h3 className='font-bold text-lg md:text-2xl mb-3'>News</h3>
-            <p className='text-base'>Stay updated with the latest news and updates.</p>
-            <Link href='mailto:press@asyncapi.io' className='text-secondary-500 underline hover:text-gray-300'>Email Us</Link>
-          </div>
-        </div>
-
-        {/* Right: Social Links */}
-        <div className='flex flex-col items-center mt-[-80px] ml-[-500px]'>
-          <h3 className='font-bold text-lg md:text-2xl mb-3'>Follow Us</h3>
-          <ul className='text-base'>
-            {socialMediaLinks.map((link, index) => (
-              <li key={index} className='mb-2 flex items-center'>
-                <a href={link.url} target='_blank' rel='noopener noreferrer' data-testid={link.testid || ''} className='flex items-center hover:text-gray-300'>
-                  {link.icon}
-                  <span className='ml-2'>{link.label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className='border-t border-gray-600 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center'>
-        <p className='text-sm text-center md:text-left'>
-          Made with <span className='font-mono text-secondary-500'>❤️</span> by the AsyncAPI Community.
-        </p>
-        <p className='text-sm text-center md:text-right mt-4 md:mt-0'>
-          {helloText}
-        </p>
-        <p className='text-sm text-center md:text-right mt-4 md:mt-0'>
-        Powered by AsyncAPI Initiative.{' '}
-          <a href='https://asyncapi.com' className='text-secondary-500 underline hover:text-gray-300' target='_blank' rel='noopener noreferrer'>
-            asyncapi.com
-          </a>
-        </p>
       </div>
     </footer>
   );
 }
+
+export default Footer;
