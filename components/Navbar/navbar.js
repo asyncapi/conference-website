@@ -17,6 +17,27 @@ function Navbar() {
   const svg = useRef(null);
   let closeTimeout = useRef(null);
 
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const ticketSection = document.getElementById("tickets"); // Adjust the ID
+
+      if (ticketSection) {
+        const rect = ticketSection.getBoundingClientRect();
+        
+        // If the top of the ticket section is near the top of the viewport
+        if (rect.top <= 50 && rect.bottom >= 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   const handleClosing = useCallback(
     (event) => {
       if (show && !event.target.closest(".subMenu")) {
@@ -75,7 +96,8 @@ function Navbar() {
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && "bg-[#1B1130]/90"} top-0 z-[99] text-white`}
+        className={`container flex justify-center fixed items-center w-full top-0 z-[99] text-white transition-all duration-300 backdrop-blur
+        ${drop || isScrolled ? "bg-[#1B1130]/90" : "bg-transparent"}`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
