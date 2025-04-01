@@ -236,13 +236,8 @@ export default function Home() {
       <Sponsors
           eventSponsors={[
             {
-              image: "/img/logos/apidays.png",
-              websiteUrl: "https://www.apidays.global/",
-            },
-            {
-              image: "/img/logos/APICONF-LOGO-White.png",
-              websiteUrl: "https://apiconf.net/",
-            },
+              image:'/img/logos/asyncapi-logo--white.png',websiteUrl:"https://www.asyncapi.com/en"
+            }
           ]}/>
                 </div>
       <div className="mt-5">
