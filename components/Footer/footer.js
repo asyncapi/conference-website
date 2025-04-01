@@ -7,22 +7,22 @@ function Footer() {
     {
       name: "Github",
       href: "https://github.com/asyncapi",
-      imgUrl: "/img/Github.png",
+      imgUrl: "/img/Github.webp",
     },
     {
       name: "Linkedin",
       href: "https://www.linkedin.com/company/asyncapi/",
-      imgUrl: "/img/Linkedln.png",
+      imgUrl: "/img/Linkedln.webp",
     },
     {
       name: "Twitter(X)",
       href: "https://x.com/asyncapispec",
-      imgUrl: "/img/twitter_new.png",
+      imgUrl: "/img/twitter_new.webp",
     },
     {
       name: "YouTube",
       href: "https://www.youtube.com/@AsyncAPI",
-      imgUrl: "/img/youtube.png",
+      imgUrl: "/img/youtube.webp",
     },
   ];
   return (
