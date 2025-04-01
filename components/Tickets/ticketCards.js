@@ -12,7 +12,7 @@ const Tickets = () => {
       price: 0,
       url: 'https://ticket.apidays.global/event/apidays-singapore-2025/4c745e62-0e52-4c4a-9221-29f47bc57128/cart?coupon=ASYNCAPICOMMUNITY',
       description: 'Access to all conference talks and workshops',
-      status: 'Check Back Later',
+      status: 'Get Your Free Ticket',
       available: 50,
       benefits: ['AsyncAPI Track', 'Workshop access', 'Lunch included', 'All talks']
     },
