@@ -96,7 +96,7 @@ function Navbar() {
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full top-0 z-[99] text-white transition-all duration-300 backdrop-blur
+        className={`container flex justify-center fixed items-center w-full top-0 z-[99] pl-40 pr-40 text-white transition-all duration-300 backdrop-blur
         ${drop || isScrolled ? "bg-[#1B1130]/90" : "bg-transparent"}`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
