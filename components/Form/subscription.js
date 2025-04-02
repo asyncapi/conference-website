@@ -3,8 +3,7 @@ import Button from '../Buttons/button';
 
 function Subscription() {
 	return (
-		<div className='mt-0 md:mt-[106px] subscription container flex justify-center' >
-			<div className='mt-[106px] lg:mt-0 w-[1024px] min-h-[253px] lg:py-10 lg:w-full flex flex-col items-center'>
+		<div className=' flex flex-col items-center' >
 				<h3 className='text-[32px] text-white lg:text-center'>
 					Subscribe for AsyncAPI Conf updates!
 				</h3>
@@ -14,7 +13,6 @@ function Subscription() {
 				</Button>
 				</a>
 			</div>
-		</div>
 	);
 }
 export default Subscription

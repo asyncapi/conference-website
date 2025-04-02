@@ -245,9 +245,6 @@ export default function Home() {
             },
           ]}/>
                 </div>
-      <div className="mt-5">
-        <Subscription />
-      </div>
     </div>
   );
 }
