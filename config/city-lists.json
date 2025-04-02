@@ -114,7 +114,7 @@
 		"name": "Online",
 		"country": " Edition",
 		"date": "29 October, 2025",
-		"cfpdate":"Not announced yet",
+		"cfpdate":"7th September, 2025",
 		"description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
 		"img": "/img/locations/testMic.webp",
 		"address": "AsyncAPI YouTube Channel",
@@ -126,7 +126,7 @@
 			}]
 			
 		},
-		"cfp": false,
+		"cfp": "https://conference.asyncapi.com/venue/online/register",
 		"isFree": true,
 		"ended": false,
 		"recordings": "",
