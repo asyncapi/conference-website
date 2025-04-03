@@ -19,6 +19,11 @@ function Footer() {
       href: "https://x.com/asyncapispec",
       imgUrl: "/img/twitter_new.png",
     },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@AsyncAPI",
+      imgUrl: "/img/youtube.png",
+    },
   ];
   return (
     <div className="container" data-test="footer">
@@ -39,7 +44,7 @@ function Footer() {
         </div>
         <div></div>
         <div className="flex items-center justify-between sm:flex-col sm:items-center">
-         <div className="text-white">© 2025 AsyncAPI.com – All rights reserved</div>
+         <div className="text-white">Made with ❤️ by AsyncAPI contributors. By the community for the community!</div>
          <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
             <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">
               {socials.map((social, index) => {
