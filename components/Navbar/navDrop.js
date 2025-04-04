@@ -22,7 +22,7 @@ const NavDrop = forwardRef((props, ref)=> {
 							>
 								{link.subMenu ? (
 									<div>
-										<div className='flex'>
+										<div className='flex' onClick={(e) => e.preventDefault()}>
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
 												className={`transition-transform duration-700`}
