@@ -85,7 +85,7 @@ function Navbar() {
             <Link href="/">
               <div className="flex items-center cursor-pointer">
                 <Image
-                  src="/img/logos/2025-logo.png"
+                  src="/img/logos/2025-logo.webp"
                   alt="conference logo"
                   width={150}
                   height={33}
@@ -100,7 +100,7 @@ function Navbar() {
                   <Cancel />
                 </button>
               ) : (
-                <button>
+                <button aria-label="Nav Button">
                   <Hamburger ref={svg} />
                 </button>
               )}

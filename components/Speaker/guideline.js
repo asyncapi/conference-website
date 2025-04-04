@@ -53,7 +53,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                       }}>
                           <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                               <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1' aria-label='Expand Button'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                           </div>
                           
                             
@@ -79,7 +79,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                       }}>
                           <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                               <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                              <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1' aria-label='Expand Button'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                           </div>
                           {
                             virtual ? <p className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? "mt-8 max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>{faq.av}</p>:  
@@ -103,7 +103,7 @@ function Guidelines({talkDeadLine,virtual,name,cfp}) {
                   }}>
                       <div className={`flex justify-between ${show === i ? "text-white" : "text-gray-400"} hover:text-white`}>
                           <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                          <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
+                          <button className='pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1' aria-label='Expand Button'><Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} /></button>
                       </div>
                       {
                         
