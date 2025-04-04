@@ -1,55 +1,82 @@
-describe("Footer links", () => {
+describe("Footer", () => {
   beforeEach(() => {
     cy.visit("/");
   });
 
-  it("Footer Should be visible", () => {
-    cy.getTestData("footer").should("be.visible");
+  it("should be visible", () => {
+    cy.get('footer').should("be.visible");
   });
 
-  it("Footer Should contain Code of Conduct", () => {
-    cy.getTestData("footer").contains("Code of Conduct");
+  it("should contain AsyncAPI logo", () => {
+    cy.get('img[alt="AsyncAPI Logo"]').should("be.visible");
   });
 
-  it("Code of Conduct should redirect to the correct page", () => {
-    cy.getTestData("code-of-conduct").invoke("removeAttr", "target").click();
+  it("should contain the correct description text", () => {
+    cy.get('footer').contains("A Global Gathering for API Experts, Architects, and Enthusiasts");
+  });
 
-    cy.origin(
-      "https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md",
-      () => {
-        cy.url().should(
-          "eq",
-          "https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md",
-        );
+  it("should have working social media links", () => {
+    const socialLinks = [
+      { 
+        name: 'Twitter', 
+        testId: '[href="https://x.com/asyncapispec"]',
+        url: 'https://x.com/asyncapispec'
       },
-    );
-  });
+      { 
+        name: 'GitHub', 
+        testId: '[href="https://github.com/asyncapi"]',
+        url: 'https://github.com/asyncapi'
+      },
+      { 
+        name: 'LinkedIn', 
+        testId: '[href="https://linkedin.com/company/asyncapi"]',
+        url: 'https://linkedin.com/company/asyncapi'
+      },
+      { 
+        name: 'YouTube', 
+        testId: '[href="https://youtube.com/asyncapi"]',
+        url: 'https://youtube.com/asyncapi'
+      },
+      { 
+        name: 'Slack', 
+        testId: '[href="https://asyncapi.com/slack-invite"]',
+        url: 'https://asyncapi.com/slack-invite'
+      },
+      { 
+        name: 'Twitch', 
+        testId: '[href="https://twitch.tv/asyncapi"]',
+        url: 'https://twitch.tv/asyncapi'
+      }
+    ];
 
-  it("Github should redirect to correct page", () => {
-    cy.getTestData("footer-Github").invoke("removeAttr", "target").click();
-
-    cy.origin("https://github.com/asyncapi", () => {
-      cy.url().should("eq", "https://github.com/asyncapi");
+    socialLinks.forEach((link) => {
+      cy.get(`footer ${link.testId}`)
+        .should('have.attr', 'href', link.url)
+        .and('have.attr', 'target', '_blank')
+        .and('have.attr', 'rel', 'noopener noreferrer');
     });
   });
 
-  it("Linkedin should redirect to correct page", () => {
-    cy.getTestData("footer-Linkedin").invoke("removeAttr", "target").click();
-
-    cy.origin("https://www.linkedin.com/company/asyncapi/", () => {
-      cy.url().should("eq", "https://www.linkedin.com/company/asyncapi/");
-    });
+  it("should have a working subscription link", () => {
+    cy.get('footer a[href="https://www.asyncapi.com/newsletter"]')
+      .should('exist')
+      .and('have.attr', 'target', '_blank')
+      .and('have.attr', 'rel', 'noreferrer');
   });
 
-  it("Twitter(X) should redirect to correct page", () => {
-    cy.getTestData("footer-Twitter(X)").invoke("removeAttr", "target").click();
-
-    cy.origin("https://x.com/asyncapispec", () => {
-      cy.url().should("match", /.*asyncapispec.*/);
-    });
+  it("should contain community attribution", () => {
+    cy.get('footer').contains("Made with ❤️ by the AsyncAPI Community");
   });
 
-  it("Should Contain AsycAPI Conference Logo", () => {
-    cy.getTestData("footer-asyncAPI-logo").should("be.visible");
+  it("should have a working Code of Conduct link", () => {
+    cy.get('footer a[href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"]')
+      .should('exist')
+      .and('have.attr', 'target', '_blank')
+      .and('have.attr', 'rel', 'noopener noreferrer')
+      .and('contain', 'Code of Conduct');
+  });
+
+  it("should display the rotating greeting text", () => {
+    cy.get('footer').contains(/Hello|Hola|नमस्ते|Bonjour|Hallo|こんにちは/);
   });
 });
