@@ -8,11 +8,7 @@ export default function SpeakersForm(){
         <div>
         <Sponsors eventSponsors={[
 					{
-						image:'/img/logos/apidays.png',websiteUrl:"https://www.apidays.global/"
-					},
-					{
-						"image":"/img/logos/APICONF-LOGO-White.svg",
-						"websiteUrl":""
+						image:'/img/logos/asyncapi-logo--white.png',websiteUrl:"https://www.asyncapi.com"
 					}
 					]} 
 					// financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]} 
