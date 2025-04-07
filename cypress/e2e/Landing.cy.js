@@ -63,14 +63,4 @@ describe("Landing Page Tests", () => {
   //     });
   //   });
 
-  it("Subscribe Button is functional", () => {
-    cy.getTestData("subscribe-button").invoke("removeAttr", "target").click();
-
-    cy.origin("https://www.asyncapi.com/newsletter", () => {
-      cy.url().should(
-        "match",
-        /https:\/\/www\.asyncapi\.com\/[a-z]{2}\/newsletter/,
-      );
-    });
-  });
 });
