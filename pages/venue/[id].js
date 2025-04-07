@@ -99,7 +99,7 @@ function Venue({ city }) {
 			<div
 				id='sponsors'
 			>
-				<Sponsors eventSponsors={city.sponsors.eventSponsors} financialSponsor={city.sponsors.financialSponsors} />
+				<Sponsors eventSponsors={city.sponsors.eventSponsors} />
 			</div>
 		</div>
 	);
