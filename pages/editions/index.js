@@ -1,10 +1,13 @@
 import React from 'react'
 import PastEditonCard from '../../components/PastEditionCard'
 import pastEditionsArchiveLinks from '../../config/editions.json'
+import Head from "next/head"
 const PastEditions = () => {
     return (
         <div >
-            <title>Past Editions | AACoT</title>
+            <Head>
+                <title>Past Editions | AACoT</title>
+            </Head>
             <div className='my-[70px]'>
                 <h1 className='text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold'>
                     Past Editions of
