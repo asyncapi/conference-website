@@ -19,9 +19,9 @@
 			"img": "/img/paris-images/Naresh.webp"
 		},
 		{
-			"name": "Lukasz Gornicki",
-			"title": "Executive Director at AsyncAPI Initiative",
-			"img": "/img/london-speakers/Lukasz Gornicki.webp"
+			"name": "Tamimi Ahmad",
+			"title": "Senior Developer Advocate at Solace",
+			"img": "/img/london-speakers/Tamimi.webp"
 		},
 		{
 			"name": "Ankit Kumar",
@@ -38,7 +38,7 @@
             },
             {
                 "time": "11:35 AM SGT - 12:00 PM SGT",
-                "session": "The API and Event-Driven Systems: A Natural Fit",
+                "session": "The Untapped Potentials of AsyncAPI Studio",
 				"speaker": 3,
                 "type": "Technical Speaker"
             },

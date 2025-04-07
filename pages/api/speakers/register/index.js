@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     let a = await googleSheets.spreadsheets.values.append({
         auth: authClient,
         spreadsheetId: process.env.SHEET_ID,
-        range: 'Sheet1',
+        range: 'Sheet2',
         valueInputOption: 'USER_ENTERED',
         resource: {
             values: [[req.body.Fullname,req.body.Email,req.body.Bio,req.body.Social,req.body.Title,
