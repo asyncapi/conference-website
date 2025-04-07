@@ -68,7 +68,20 @@ body {
   position: relative !important;
   bottom: 0 !important;
 }
+/* Hide scrollbar */
+.scroll-container {
+  scrollbar-width: none; /* For Firefox */
+}
 
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+/* Add a dragging cursor */
+.scroll-container.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
 .gradient-bg {
    background-image: linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%) !important;
    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);

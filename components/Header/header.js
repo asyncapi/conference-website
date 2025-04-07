@@ -1,15 +1,80 @@
-
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
 import Button from "../Buttons/button";
-import ReactSlider from "../Slider/slider";
 import cities from "../../config/city-lists.json";
 import Venue from "../Venue/venue";
 import Announcement from "../announcement";
 import Link from "next/link";
 
 function Header() {
+  const scrollContainerRef = useRef(null);
+  let autoScrollInterval;
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+
+   
+    const startAutoScroll = () => {
+      autoScrollInterval = setInterval(() => {
+        if (container) {
+          container.scrollLeft += 1; 
+
+          
+          if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+            container.scrollLeft = 0; 
+          }
+        }
+      }, 10); 
+    };
+
+    
+    const stopAutoScroll = () => {
+      clearInterval(autoScrollInterval);
+      setTimeout(startAutoScroll, 1000); 
+    };
+
+    const handleMouseDown = (e) => {
+      isDragging = true;
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+      container.classList.add("dragging");
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 2; 
+      container.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+      isDragging = false;
+      container.classList.remove("dragging");
+    };
+
+    container.addEventListener("mousedown", handleMouseDown);
+    container.addEventListener("mousemove", handleMouseMove);
+    container.addEventListener("mouseup", handleMouseUp);
+    container.addEventListener("mouseleave", handleMouseUp);
+    container.addEventListener("scroll", stopAutoScroll);
+
+    startAutoScroll();
+  
+    return () => {
+      clearInterval(autoScrollInterval);
+      container.removeEventListener("mousedown", handleMouseDown);
+      container.removeEventListener("mousemove", handleMouseMove);
+      container.removeEventListener("mouseup", handleMouseUp);
+      container.removeEventListener("mouseleave", handleMouseUp);
+      container.removeEventListener("scroll", stopAutoScroll);
+    };
+  }, []);
+
   return (
     <div className="relative">
       <div className="container w-full flex items-center justify-center">
@@ -47,15 +112,25 @@ function Header() {
         </div>
       </div>
       <div className="mt-24">
-        <ReactSlider>
+        {/* Scrollable container */}
+        <div
+          ref={scrollContainerRef}
+          className="scroll-container overflow-x-auto whitespace-nowrap scroll-smooth"
+        >
           {cities.map((city) => {
-            return <Venue key={city.name} city={city} />;
+            return (
+              <div
+                key={city.name}
+                className="inline-block align-top"
+              >
+                <Venue city={city} />
+              </div>
+            );
           })}
-        </ReactSlider>
+        </div>
       </div>
     </div>
   );
-
 }
 
 export default Header;
