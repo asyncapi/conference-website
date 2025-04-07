@@ -3,10 +3,17 @@ import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 
-
 const NavDrop = forwardRef((props, ref)=> {
 	const {setDrop}=props;
     const [show, setShow] = useState(null);
+
+    const handleKeyDown = (event, linkTitle) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            show === linkTitle ? setShow(null) : setShow(linkTitle);
+        }
+    };
+
   return (
 		<div  ref ={ref} className='z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md'>
 			<div className='flex flex-col p-5 pb-8 w-full'>
@@ -19,6 +26,8 @@ const NavDrop = forwardRef((props, ref)=> {
 								onClick={() =>
 									show === link.title ? setShow(null) : setShow(link.title)
 								}
+								tabIndex={0}
+								onKeyDown={(event) => handleKeyDown(event, link.title)}
 							>
 								{link.subMenu ? (
 									<div>
@@ -35,6 +44,7 @@ const NavDrop = forwardRef((props, ref)=> {
 														<div data-test={`nav-sub-${sub.title}`}
 															onClick={() => setDrop(false)}
 															className='h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer'
+															tabIndex={0}
 														>
 															{sub.title}
 														</div>
