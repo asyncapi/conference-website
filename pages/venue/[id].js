@@ -41,8 +41,14 @@ function Venue({ city }) {
 
 	return (
 		<div data-test={`venue-${city.name}`}>
-			<div className= {`w-full h-[500px] sm:h-[auto] ${city.name=='Online'?'bg-online':'bg-madrid'} bg-cover bg-center`}>
-				<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
+		<div style={{
+        		backgroundImage: city.name == 'Online' ? '' : `url(${city.img})`,
+        		backgroundSize: 'cover',
+        		backgroundPosition: 'center 30%',
+				backgroundRepeat: 'no-repeat'
+			}}
+    		className={`w-full h-[500px] sm:h-[auto] ${city.name=='Online' ? 'bg-online' : ''}`}>				
+		<div className='w-full h-full kinda-dark items-center flex flex-col justify-between'>
 					<div className='mt-[68px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center'>
 						{city.name == 'Online' ? <Heading className={textColor}>
 							{city.name} {city.country}
@@ -93,7 +99,7 @@ function Venue({ city }) {
 			<div
 				id='sponsors'
 			>
-				<Sponsors eventSponsors={city.sponsors.eventSponsors} financialSponsor={city.sponsors.financialSponsors} />
+				<Sponsors eventSponsors={city.sponsors.eventSponsors} />
 			</div>
 		</div>
 	);
