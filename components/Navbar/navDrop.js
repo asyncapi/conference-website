@@ -16,10 +16,9 @@ const NavDrop = forwardRef((props, ref)=> {
 							<div
 								className='min-h-[50px] cursor-pointer'
 								data-test={`nav-${link.title}`}
-								onClick={(e) => {
-									show === link.title ? setShow(null) : setShow(link.title);
-									e.preventDefault();
-								}}
+								onClick={(e) =>
+									show === link.title ? setShow(null) : setShow(link.title)
+								}
 							>
 								{link.subMenu ? (
 									<div>
