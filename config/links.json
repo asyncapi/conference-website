@@ -4,7 +4,7 @@
 		"ref": "/#about"
 	},
 	{
-		"title": "Venue",
+		"title": "Conferences",
 		"ref": "",
 		"subMenu": [
 			{
@@ -37,6 +37,10 @@
 			}
 			
 		]
+	},
+	{
+		"title": "Meetups",
+		"ref": "/#meetups"
 	},
 	{
 		"title": "Speakers",
