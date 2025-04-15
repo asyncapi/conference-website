@@ -46,7 +46,7 @@ export function Gallery(){
                     />
                 ))}
             </div>
-            <a data-test="gallery-button" href="https://drive.google.com/drive/folders/15QooKSy__jerOtLSkXzuKQh0hdlhZqo7?usp=drive_link" >
+            <a data-test="gallery-button" target='_blank' rel='noreferrer' href="https://drive.google.com/drive/folders/15QooKSy__jerOtLSkXzuKQh0hdlhZqo7?usp=drive_link" >
                 <Button type='button'className='w-[200px] my-4 px-10'>
                     Browse
                 </Button>
