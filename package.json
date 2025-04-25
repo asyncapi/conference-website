@@ -33,8 +33,7 @@
     "react-select": "^5.7.5",
     "react-slick": "^0.29.0",
     "react-youtube-embed": "^1.0.3",
-    "slick-carousel": "^1.8.1",
-     "styled-components": "^6.1.17"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
