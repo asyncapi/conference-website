@@ -1,8 +1,18 @@
 import React from 'react';
 
+// Adding a global style for the show-for-test class
+const tooltipStyle = `
+  .tooltip.show-for-test {
+    opacity: 1 !important;
+    transform: translateY(-50px) !important;
+  }
+`;
+
 const Button = () => {
   return (
     <div className="social-wrapper" data-test="social-wrapper">
+      {/* Adding style tag to define the show-for-test class */}
+      <style>{tooltipStyle}</style>
       <ul className="inline-flex list-none h-[120px] w-full pt-10 justify-center font-['Poppins',sans-serif]">
         <li className="icon linkedin relative bg-white rounded-full m-[10px] w-[45px] h-[45px] text-lg flex justify-center items-center flex-col shadow-md cursor-pointer transition-all duration-200 hover:bg-[#0077b5] hover:text-white">
           <a 
