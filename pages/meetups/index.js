@@ -62,7 +62,7 @@ const Meetups = () => {
                                 Why Host a Meetup?
             </Heading>
             <Paragraph typeStyle='body-lg' className="mt-6 text-justify " textColor='text-gray-200' >
-            Hosting an AsyncAPI meetup is a powerful way to strengthen the community while developing your own skills and network. As a host, you'll:
+            Hosting an AsyncAPI meetup is a powerful way to strengthen the community while developing your own skills and network. As a host, you&apos;ll:
                                 </Paragraph>
             <Paragraph className='mt-6 text-justify sm:text-justify lg:text-justify'>
             <ul className="space-y-4">
@@ -113,7 +113,7 @@ const Meetups = () => {
                  Guidelines & Requirements
                </Heading>
                <Paragraph className="text-center max-w-2xl mx-auto" textColor="text-gray-200">
-               To ensure high-quality meetups that benefit the entire community, we've established the following guidelines.
+               To ensure high-quality meetups that benefit the entire community, we&apos;ve established the following guidelines.
                </Paragraph>             
           </div>
         </div>
