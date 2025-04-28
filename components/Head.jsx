@@ -8,7 +8,7 @@ import AppContext from '../context/AppContext.jsx';
 export function HeadComponent({
   title,
   description = `Join us for the AsyncAPI Conference, bringing the latest in AsyncAPI technology to locations worldwide!`,
-  image = '/img/ogimage/home.jpg', //todo
+  image = '/img/ogimage/home.jpg',
 }) {
   const url = process.env.NEXT_PUBLIC_DEPLOY_URL || 'http://localhost:3000';
   const appContext = useContext(AppContext);

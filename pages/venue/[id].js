@@ -9,7 +9,8 @@ import Sponsors from '../../components/Sponsors/sponsors';
 import { isEventEnded } from '../../components/Venue/venue';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
-import CFPdata from "../../config/cfp-data.json"
+import CFPdata from "../../config/cfp-data.json";
+import { HeadComponent as Head } from '../../components/Head';
 export async function getStaticProps({ params }) {
 	let res = {};
 	const data = cities.filter((p) => p.name === params.id);
@@ -38,9 +39,17 @@ function Venue({ city }) {
 	
 	const eventEnded = isEventEnded(city.date);
 	const textColor = eventEnded ? "text-gray-400": "text-white";
+	const ogImage = city.img ? city.img : `/img/ogimage/${city.name.toLowerCase()}.jpg`;
+	const venueTitle = `${city.name}${city.country ? `, ${city.country}` : ''} - AsyncAPI Conference`;
+	const venueDescription = city.description || `Join us for the AsyncAPI Conference in ${city.name}${city.country ? `, ${city.country}` : ''}!`;
 
 	return (
 		<div data-test={`venue-${city.name}`}>
+		<Head 
+			title={venueTitle}
+			description={venueDescription}
+			image={ogImage}
+		/>
 		<div style={{
         		backgroundImage: city.name == 'Online' ? '' : `url(${city.img})`,
         		backgroundSize: 'cover',
