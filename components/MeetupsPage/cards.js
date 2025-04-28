@@ -53,8 +53,7 @@ const MeetupCard = ({
             </svg>
             <span className="text-sm text-gray-300">{date}</span>
           </div>
-        )}
-        
+        )} 
         {location && (
           <div className="flex items-center">
             <svg className="w-5 h-5 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +63,6 @@ const MeetupCard = ({
             <span className="text-sm text-gray-300">{location}</span>
           </div>
         )}
-        
         {host && (
           <div className="flex items-center">
             <svg className="w-5 h-5 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +76,6 @@ const MeetupCard = ({
     </div>
   )
 }
-
 /**
  * Navigation arrow component for the carousel
  */
@@ -108,7 +105,6 @@ const CarouselArrow = ({ direction, onClick, disabled }) => {
     </button>
   );
 };
-
 /**
  * UpcomingMeetups component with responsive multi-card scrolling carousel
  */
@@ -116,7 +112,6 @@ const UpcomingMeetups = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
   const [cardsPerView, setCardsPerView] = useState(3);
-  
   // Sample meetup data - in a real app, this would come from props or an API
   const meetups = [
     {
@@ -180,14 +175,12 @@ const UpcomingMeetups = () => {
       host: "Hosted by AsyncAPI Initiative"
     }
   ];
-
   // Add empty cards
   const allCards = [
     ...meetups,
     { id: 'empty1', isEmpty: true, avatar: 'Coming soon!' },
     { id: 'empty2', isEmpty: true, avatar: 'Coming soon!' }
   ];
-
   // Update cards per view based on screen size
   useEffect(() => {
     const updateCardsPerView = () => {
@@ -199,37 +192,29 @@ const UpcomingMeetups = () => {
         setCardsPerView(3); // Desktop: 3 cards exactly
       }
     };
-
     // Initial call
     updateCardsPerView();
-
     // Add resize listener
     window.addEventListener('resize', updateCardsPerView);
-
     // Cleanup
     return () => window.removeEventListener('resize', updateCardsPerView);
   }, []);
-
   const totalPages = Math.ceil(allCards.length / cardsPerView);
-
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => {
       const nextIndex = prevIndex + 1;
       return nextIndex >= totalPages ? 0 : nextIndex;
     });
   };
-
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) => {
       const nextIndex = prevIndex - 1;
       return nextIndex < 0 ? totalPages - 1 : nextIndex;
     });
   };
-
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
-
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -240,11 +225,9 @@ const UpcomingMeetups = () => {
         >
           Upcoming Meetups
         </Heading>
-        
         <Paragraph className="text-center mb-16 max-w-2xl mx-auto" textColor="text-gray-200">
           Connect with AsyncAPI enthusiasts around the world. Join one of our upcoming meetups to learn, share, and collaborate.
         </Paragraph>
-        
         <div className="container lg:w-5/6 xl:w-4/5 mx-auto relative">
           {/* Left arrow */}
           <CarouselArrow 
@@ -252,7 +235,6 @@ const UpcomingMeetups = () => {
             onClick={goToPrevSlide} 
             disabled={allCards.length <= cardsPerView}
           />
-
           {/* Main carousel container */}
           <div 
             ref={carouselRef}
@@ -299,8 +281,7 @@ const UpcomingMeetups = () => {
                 </div>
               ))}
             </div>
-          </div>
-          
+          </div> 
           {/* Right arrow */}
           <CarouselArrow 
             direction="right" 
@@ -308,7 +289,6 @@ const UpcomingMeetups = () => {
             disabled={allCards.length <= cardsPerView}
           />
         </div>
-        
         {/* Navigation dots */}
         {totalPages > 1 && (
           <div className="flex justify-center space-x-2 mt-8">
@@ -324,7 +304,6 @@ const UpcomingMeetups = () => {
             ))}
           </div>
         )}
-        
         {/* View All Button */}
         <div className="flex justify-center mt-8">
           <button className="border border-white text-white px-6 py-2 rounded hover:bg-white hover:bg-opacity-10 transition">
@@ -334,6 +313,7 @@ const UpcomingMeetups = () => {
       </div>
     </div>
   );
+
 };
 
 // Make sure to export the component as default
