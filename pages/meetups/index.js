@@ -135,9 +135,7 @@ const Meetups = () => {
           </div>
         </div>
             <ProposeMeetup/>
-        
         </div>
     )
 }
-
 export default Meetups;
