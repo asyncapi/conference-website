@@ -2,13 +2,10 @@ import React from 'react';
 
 const GuidelinesPage = () => {
   return (
-    <div className=" ">
+    <div>
       <div className=" mx-auto container">
-       
-        
         {/* Two column layout for desktop */}
         <div className="md:p-4 grid grid-cols-2 lg:grid-cols-1  gap-6">
-          
           {/* Requirements Column */}
           <div className="bg-white bg-opacity-10  rounded-lg p-8">
             <div className="flex items-center mb-6">
@@ -19,7 +16,6 @@ const GuidelinesPage = () => {
               </div>
               <h2 className="text-white text-xl font-bold">Requirements</h2>
             </div>
-            
             {/* Requirements List */}
             <div className="space-y-6">
               <div className="flex">
@@ -33,7 +29,6 @@ const GuidelinesPage = () => {
                   <p className="text-gray-300 text-sm mt-1">Be part of the Conference Coordination Working Group to host meetups.</p>
                 </div>
               </div>
-              
               <div className="flex">
                 <div className="bg-green-500 rounded-full p-1 mr-3 h-6 w-6 flex-shrink-0 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -45,7 +40,6 @@ const GuidelinesPage = () => {
                   <p className="text-gray-300 text-sm mt-1">Manage the meetup planning, CFP process, and speaker coordination.</p>
                 </div>
               </div>
-              
               <div className="flex">
                 <div className="bg-green-500 rounded-full p-1 mr-3 h-6 w-6 flex-shrink-0 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -57,7 +51,6 @@ const GuidelinesPage = () => {
                   <p className="text-gray-300 text-sm mt-1">Announce meetups at least three months before the intended date.</p>
                 </div>
               </div>
-              
               <div className="flex">
                 <div className="bg-green-500 rounded-full p-1 mr-3 h-6 w-6 flex-shrink-0 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
