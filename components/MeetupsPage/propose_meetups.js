@@ -7,7 +7,6 @@ const ProposeMeetup = () => {
         {/* Form Card */}
         <div className="bg-white bg-opacity-10 rounded-lg p-8 border border-white-800">
           <h3 className="text-white text-2xl font-bold mb-6">Ready to Submit Your Proposal?</h3>
-          
           <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
             Clicking the button below will redirect you to GitHub where you can create a pull request 
             with your meetup details. You'll need a GitHub account to complete this process.
@@ -33,5 +32,4 @@ const ProposeMeetup = () => {
     </div>
   );
 };
-
 export default ProposeMeetup;
