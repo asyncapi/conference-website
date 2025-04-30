@@ -39,16 +39,13 @@ function Venue({ city }) {
 	
 	const eventEnded = isEventEnded(city.date);
 	const textColor = eventEnded ? "text-gray-400": "text-white";
-	const ogImage = city.img ? city.img : `/img/ogimage/${city.name.toLowerCase()}.jpg`;
-	const venueTitle = `${city.name}${city.country ? `, ${city.country}` : ''} - AsyncAPI Conference`;
-	const venueDescription = city.description || `Join us for the AsyncAPI Conference in ${city.name}${city.country ? `, ${city.country}` : ''}!`;
-
+	const venueTitle = `${city.name} | AsyncAPI Conference`;
 	return (
 		<div data-test={`venue-${city.name}`}>
 		<Head 
 			title={venueTitle}
-			description={venueDescription}
-			image={ogImage}
+			description={city.description}
+			image={city.img}
 		/>
 		<div style={{
         		backgroundImage: city.name == 'Online' ? '' : `url(${city.img})`,
