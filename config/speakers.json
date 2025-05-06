@@ -1,36 +1,54 @@
 [
-	{
-		"location": "",
-		"city": "All",
-		"lists": []
-	},
-	{
-		"city": "Singapore",
-		"location": "Singapore, Singapore",
-		"lists": [
-		{
-			"name": "Hugo Guerrero",
-			"title": "Head of Technical Marketing at Kong",
-			"img": "/img/speaker-images/london/Hugo Guerrero.webp"
-		},
-		{
-			"name": "Naresh Jain",
-			"title": "Founder & CEO at Specmatic",
-			"img": "/img/speaker-images/paris/Naresh.webp"
-		},
-		{
-			"name": "Tamimi Ahmad",
-			"title": "Senior Developer Advocate at Solace",
-			"img": "/img/speaker-images/london/Tamimi.webp"
-		},
-		{
-			"name": "Ankit Kumar",
-			"title": "Head of Developer and Customer Success at Aklivity",
-			"img": "/img/speaker-images/london/Ankit.webp"
-		}
-	],
-		"agenda": [
+    {
+        "location": "",
+        "city": "All",
+        "lists": []
+    },
+    {
+        "city": "Singapore",
+        "location": "Singapore, Singapore",
+        "lists": [
+            {
+                "name": "Hugo Guerrero",
+                "title": "Head of Technical Marketing at Kong",
+                "img": "/img/london-speakers/Hugo Guerrero.webp",
+                "bio": "Hugo is passionate about APIs, cloud native technologies, and community building.",
+                "linkedin": "https://www.linkedin.com/in/hugoguerrero/",
+                "twitter": "https://twitter.com/hugodba",
+                "expertise": ["AI", "APIs", "Developer Advocate","AsyncAPI Ambassador"]
+            },
+            {
+                "name": "Naresh Jain",
+                "title": "Founder & CEO at Specmatic",
+                "img": "/img/paris-images/Naresh.webp",
+                "bio": "Naresh is an internationally recognized Technology & Product Innovator known for his work on Agile methods and software design.",
+                "linkedin": "https://www.linkedin.com/in/nareshjain/",
+                "twitter": "https://twitter.com/nareshjain",
+                "expertise": ["API Design", "Contract Development", "Devops"]
+            },
 			{
+				"name": "Tamimi Ahmad",
+				"title": "Senior Developer Advocate at Solace",
+				"img": "/img/london-speakers/Tamimi.webp",
+                "bio": "Lukasz is leading the AsyncAPI Initiative and is deeply involved in the open-source API tooling ecosystem.",
+                "linkedin": "https://www.linkedin.com/in/atamimi1/",
+                "twitter": "https://twitter.com/tamimi",
+                "expertise": ["Senior Developer Advocate", "Speaker"]
+            },
+            {
+                "name": "Ankit Kumar",
+                "title": "Head of Developer and Customer Success at Aklivity",
+                "img": "/img/london-speakers/Ankit.webp",
+                "bio": "Ankit specializes in building developer ecosystems and creating successful customer experiences.",
+                "linkedin": "https://www.linkedin.com/in/ankit28/",
+                "twitter": "https://twitter.com/AnkitKumarLive",
+                "expertise": ["Event-Driven API Design", "Speaker", "Engineer"]
+
+
+            }
+        ],
+        "agenda": [
+            {
                 "time": "11:10 AM SGT - 11:35 AM SGT",
                 "session": "Multi-Protocol Async APIs: Designing a Unified Interface for EDA",
                 "speaker": 2,
@@ -39,7 +57,7 @@
             {
                 "time": "11:35 AM SGT - 12:00 PM SGT",
                 "session": "The Untapped Potentials of AsyncAPI Studio",
-				"speaker": 3,
+                "speaker": 3,
                 "type": "Technical Speaker"
             },
             {
@@ -51,15 +69,15 @@
             {
                 "time": "12:25 PM SGT - 12:50 PM SGT",
                 "session": "AsyncAPI v3: Streamlining Event-Driven API Design",
-				"speaker": 4,
+                "speaker": 4,
                 "type": "Technical Speaker"
             }
-		]
-	},
-	{
-		"city": "Munich",
-		"location": "Munich, Germany",
-		"lists": [
+        ]
+    },
+    {
+        "city": "Munich",
+        "location": "Munich, Germany",
+        "lists": [
 		{
 			"name": "Dr. Annegret Junker",
 			"title": "Chief Software Architect at codecentric AG",
@@ -86,12 +104,12 @@
 			"img": "/img/speaker-images/munich/Fabrizio.webp"
 		}
 	],
-		"agenda": null
-	},
-	{
-		"city": "Lagos",
-		"location": "Lagos, Nigeria",
-		"lists": [
+        "agenda": null
+    },
+    {
+        "city": "Lagos",
+        "location": "Lagos, Nigeria",
+        "lists": [
 		{
 			"name": "Azeez Elegbede",
 			"title": "Developer Advocate at AsyncAPI Initiative",
@@ -118,33 +136,30 @@
 			"img": "/img/speaker-images/lagos/Ezinne.webp"
 		}
 	],
-		"agenda": null
-	},
-	{
-		"city": "London",
-		"location": "London, UK",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Bangalore",
-		"location": "Bangalore, India",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Online",
-		"location": "AsyncAPI YouTube Channel",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Paris",
-		"location": "Paris, France",
-		"lists": [],
-		"agenda": null
-	}
-
-	
-	
+        "agenda": null
+    },
+    {
+        "city": "London",
+        "location": "London, UK",
+        "lists": [],
+        "agenda": null
+    },
+    {
+        "city": "Bangalore",
+        "location": "Bangalore, India",
+        "lists": [],
+        "agenda": null
+    },
+    {
+        "city": "Online",
+        "location": "AsyncAPI YouTube Channel",
+        "lists": [],
+        "agenda": null
+    },
+    {
+        "city": "Paris",
+        "location": "Paris, France",
+        "lists": [],
+        "agenda": null
+    }
 ]

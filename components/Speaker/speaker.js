@@ -1,37 +1,71 @@
-import Image from 'next/image';
-import React from 'react'
+import React from 'react';
 
-function Speaker({details, location, className}) {
+export default function SpeakerCard({ details, className = '' }) {
   return (
-		<div
-			className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
-			data-test="speakers-section"
-		>
-			<div className='w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800'>
-				<Image src={details.img} alt={details.name} width={0} height={0} sizes='100vw' className='rounded-full object-cover transition-all duration-300 hover:scale-110 w-[100%] h-[100%]' />
+    <div
+      className={`relative w-80 rounded-2xl overflow-hidden group p-1 ring-2 ring-white/90 ${className}`}
+      data-test="speakers-section"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-2xl ring-1 ring-white/30"></div>
+      <div className="relative flex flex-col justify-between p-6 rounded-2xl h-full overflow-hidden">
+
+        <div>
+          <div className="flex items-center mb-5">
+		  <div className="w-16 h-16 aspect-square rounded-full overflow-hidden border-4 border-white/90 mr-4 shrink-0">
+  			<img
+    			src={details.img || "/api/placeholder/150/150"}
+    			alt={details.name}
+    			className="w-full h-full object-cover"
+ 			/>
 			</div>
-			<div className='mt-[19px]'>
-				<h3 className='text-[23px] text-white'>{details.name}</h3>
-				<div
-					className={`flex flex-col ${
-						location && 'min-h-[150px]'
-					} justify-between`}
-				>
-					<div>
-						{' '}
-						<p className='mt-[6.6px] text-[18px] text-gray-500'>{details.title}</p>
-					</div>
-					<div>
-						<p className='mt-[6.6px] text-[20px] text-gradient'>
-							{location?.location}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+            <div>
+              <h4 className="text-white text-lg font-bold">{details.name}</h4>
+              <p className="text-white text-xs">{details.title}</p>
+            </div>
+          </div>
+
+          <div className="text-gray-100 text-sm mb-5 h-20 overflow-hidden">
+          <p className="text-white text-sm font-medium mb-0">Bio</p>
+            {details.bio || `${details.name} is a featured speaker. Bio coming soon.`}
+          </div>
+
+          {details.expertise && details.expertise.length > 0 && (
+            <div className="mt-4">
+              <p className="text-white text-sm font-medium mb-2">Expertise</p>
+              <div className="flex flex-wrap gap-2">
+                {details.expertise.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-white/10 text-white text-xs rounded-full border border-white/5"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="mt-6">
+          <p className="text-white text-sm font-medium mb-2">Connect</p>
+          <div className="flex items-center gap-5 mt-2">
+            {details.twitter && (
+              <a href={details.twitter} target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" className="w-6 h-5">
+                  <path d="M711 573l473-573h-110L662 505 305 0H0l500 720L0 1227h110l431-522 377 522h305L711 573zm-152 185l-50-69L148 82h120l329 456 50 69 389 539h-120l-357-508z" />
+                </svg>
+              </a>
+            )}
+            {details.linkedin && (
+              <a href={details.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 19h-2.5v-9h2.5v9zm-1.25-10.29c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13 10.29h-2.5v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-2.5v-9h2.5v1.28c.69-.89 1.76-1.28 2.83-1.28 2.21 0 4 1.79 4 4v5z"/>
+                </svg>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default Speaker
-
-
