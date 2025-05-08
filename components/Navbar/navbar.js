@@ -94,7 +94,7 @@ function Navbar() {
             </Link>
           </div>
           {isTablet ? (
-            <div data-test="nav-Hamberger">
+            <div data-test="nav-Hamberger" className="z-[99]">
               {drop ? (
                 <button>
                   <Cancel />
@@ -136,7 +136,7 @@ function Navbar() {
                     <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
                     {show === link.title && link.subMenu && (
                       <div
-                        className="subMenu absolute z-[9] mt-8 w-[150px] rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
+                        className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
                         onMouseEnter={handleSubMenuEnter}
                         onMouseLeave={handleSubMenuLeave}
                       >
@@ -162,7 +162,14 @@ function Navbar() {
               ))}
             </div>
           )}
-          {isTablet && drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+          {isTablet && (
+            <div
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop ? "opacity-100" : "opacity-0 -translate-y-full pointer-events-none"
+                }`}
+            >
+              {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+            </div>
+          )}
         </div>
       </div>
     </div>
