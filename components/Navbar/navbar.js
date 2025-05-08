@@ -79,7 +79,7 @@ function Navbar() {
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
-            className="flex items-center"
+            className="flex items-center sm:justify-between sm:w-full z-[99]"
             data-test="nav-Home"
           >
             <Link href="/">
