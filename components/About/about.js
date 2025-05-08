@@ -6,7 +6,7 @@ import Button from '../Buttons/button';
 import Image from 'next/image';
 function About() {
     return (
-		<div className='p-24 container flex items-center justify-center w-full' data-test="about-section">
+		<div className='p-24 lg:pt-8 container flex items-center justify-center w-full' data-test="about-section">
 			<div className='w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
 				<div style={{'--image-url': `url('/img/about.jpeg')`}} className='lg:mt-16 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]' >
 			</div>

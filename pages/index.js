@@ -52,11 +52,11 @@ export default function Home() {
       <div id="about" className="mt-20">
         <About />
       </div>
-      <div id="register" className="container mt-20">
+      <div id="register" className="container mt-20 lg:mt-0">
         <div className="flex items-center flex-col justify-center">
           <div
             id="speakers"
-            className="relative flex flex-col items-center justify-center pt-20"
+            className="relative flex flex-col items-center justify-center pt-20 lg:pt-8"
           >
             <div className="text-center">
               <div className="flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function Home() {
               </Paragraph>
             </div>
             <div className="lg:py-20 w-[1130px] lg:w-full">
-              <div className="mt-[64px] ">
+              <div className="mt-[64px] lg:mt-0">
                 {isTablet ? (
                   <div className="w-full">
                     <Dropdown
@@ -130,7 +130,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <div className="mt-[64px] pb-[181px]">
+              <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
 				{Object.keys(speakersList).length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
                     {speakersList.map((speaker, i) => {
@@ -175,7 +175,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div id="tickets" className="flex items-center flex-col justify-center pt-20">
+          <div id="tickets" className="flex items-center flex-col justify-center pt-20 lg:pt-0">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               Tickets
             </div>
