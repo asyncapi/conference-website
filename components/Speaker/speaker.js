@@ -5,7 +5,7 @@ export default function SpeakerCard({ details, className = '' }) {
 
   return (
     <div
-      className={`relative w-80 rounded-2xl overflow-hidden group p-1 ring-2 ring-white/90 ${className}`}
+      className={`relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-md mx-auto rounded-2xl overflow-hidden group p-1 ring-2 ring-white/90 ${className}`}
       data-test="speakers-section"
     >
       <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-2xl ring-1 ring-white/30"></div>
@@ -13,7 +13,7 @@ export default function SpeakerCard({ details, className = '' }) {
       <div className="relative flex flex-col justify-between p-6 rounded-2xl h-full overflow-hidden">
         <div className="flex flex-col items-center mb-5 text-center">
           <div
-            className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/90 mb-3 cursor-pointer relative"
+            className="w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/90 mb-3 cursor-pointer relative"
             onClick={() => setShowDetails(true)}
           >
             <img
@@ -26,15 +26,15 @@ export default function SpeakerCard({ details, className = '' }) {
             </div>
           </div>
 
-          <h4 className="text-white text-xl font-bold">{details.name}</h4>
-          <p className="text-white text-m">{details.title}</p>
+          <h4 className="text-white text-lg sm:text-xl font-bold">{details.name}</h4>
+          <p className="text-white text-sm sm:text-base">{details.title}</p>
         </div>
       </div>
 
-      {/* Modal for displaying bio and more details */}
+      {/* Modal */}
       {showDetails && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="bg-gray-900 rounded-2xl border border-white/20 p-6 max-w-md w-full relative">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 overflow-y-auto">
+          <div className="bg-gray-900 rounded-2xl border border-white/20 p-6 w-full max-w-md relative mx-auto">
             <button
               onClick={() => setShowDetails(false)}
               className="absolute top-4 right-4 text-white hover:text-gray-300"
@@ -55,15 +55,15 @@ export default function SpeakerCard({ details, className = '' }) {
               </svg>
             </button>
 
-            <div className="flex items-center mb-6">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/90 mr-4 shrink-0">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/90 mr-0 sm:mr-4 mb-4 sm:mb-0">
                 <img
                   src={details.img || "/api/placeholder/150/150"}
                   alt={details.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="text-white text-xl font-bold">{details.name}</h3>
                 <p className="text-white text-sm">{details.title}</p>
               </div>
