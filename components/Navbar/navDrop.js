@@ -16,16 +16,18 @@ const NavDrop = forwardRef((props, ref)=> {
 							<div
 								className='min-h-[50px] cursor-pointer'
 								data-test={`nav-${link.title}`}
-								onClick={() =>
+								onClick={(e) =>
 									show === link.title ? setShow(null) : setShow(link.title)
 								}
 							>
 								{link.subMenu ? (
 									<div>
-										<div className='flex'>
+										<div className='flex items-center' onClick={(e) => e.preventDefault()}>
 											<div className='text-white'>{link.title}</div>
 											<Dropdown
-												className={`transition-transform duration-700`}
+												color="white"
+												className={`ml-2 transition-transform duration-500 ${show === link.title ? "rotate-180" : "rotate-0"
+													}`}
 											/>
 										</div>
 										{show && show === link.title && (
