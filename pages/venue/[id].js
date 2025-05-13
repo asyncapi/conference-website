@@ -10,6 +10,8 @@ import { isEventEnded } from '../../components/Venue/venue';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from "../../config/cfp-data.json"
+import { checkCFPStatus } from '../../utils/cfpStatus';
+
 export async function getStaticProps({ params }) {
 	let res = {};
 	const data = cities.filter((p) => p.name === params.id);
@@ -17,9 +19,12 @@ export async function getStaticProps({ params }) {
 	const getSpeakers = speakers.filter((s) => s.city === res?.name);
 	res.speakers = getSpeakers[0].lists;
 	res.agenda = getSpeakers[0].agenda || null;
+
+	const updatedCity = checkCFPStatus([res])[0];
+	
 	return {
 		props: {
-			city: res,
+			city: updatedCity,
 		},
 	};
 }

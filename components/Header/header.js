@@ -1,4 +1,3 @@
-
 import React from "react";
 import Heading from "../Typography/heading";
 import Paragraph from "../Typography/paragraph";
@@ -8,8 +7,11 @@ import cities from "../../config/city-lists.json";
 import Venue from "../Venue/venue";
 import Announcement from "../announcement";
 import Link from "next/link";
+import { checkCFPStatus } from '../../utils/cfpStatus';
 
 function Header() {
+  const updatedCities = checkCFPStatus(cities);
+
   return (
     <div className="relative">
       <div className="container w-full flex items-center justify-center">
@@ -48,14 +50,13 @@ function Header() {
       </div>
       <div className="mt-24">
         <ReactSlider>
-          {cities.map((city) => {
+          {updatedCities.map((city) => {
             return <Venue key={city.name} city={city} />;
           })}
         </ReactSlider>
       </div>
     </div>
   );
-
 }
 
 export default Header;
