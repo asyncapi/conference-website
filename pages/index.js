@@ -237,7 +237,7 @@ export default function Home() {
           financialSponsor={
           [ {
               image: "/img/logos/IBM.png",
-              websiteUrl: "https://www.apidays.global/",
+              websiteUrl: "https://www.ibm.com/",
             }
           ] 
           }
