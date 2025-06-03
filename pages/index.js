@@ -234,6 +234,13 @@ export default function Home() {
       </div>
       <div id="sponsors" className="mt-20">
       <Sponsors
+          financialSponsor={
+          [ {
+              image: "/img/logos/IBM.png",
+              websiteUrl: "https://www.apidays.global/",
+            }
+          ] 
+          }
           eventSponsors={[
             {
               image: "/img/logos/apidays.png",
