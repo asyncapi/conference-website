@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
-import cities from '../config/city-lists.json';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
 import TicketCards from '../components/Tickets/ticketCards';

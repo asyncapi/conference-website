@@ -10,7 +10,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function ILink({ className, fill }: SVGTypes) {
+function ILink({ className, fill }: SVGTypes): JSX.Element {
   return (
     <svg
       className={className}

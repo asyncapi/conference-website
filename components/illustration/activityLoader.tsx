@@ -9,7 +9,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function ActivityLoader({ className, fill }: SVGTypes) {
+function ActivityLoader({ className, fill }: SVGTypes): JSX.Element {
   return (
     <svg
       style={{

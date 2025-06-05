@@ -9,7 +9,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function Plus({ className }: SVGTypes) {
+function Plus({ className }: SVGTypes): JSX.Element {
   return (
     <svg
       viewBox="0 0 256 256"

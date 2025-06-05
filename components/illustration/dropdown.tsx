@@ -10,7 +10,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function Dropdown({ className, fill }: SVGTypes) {
+function Dropdown({ className, fill }: SVGTypes): JSX.Element {
   return (
     <svg
       width="11"

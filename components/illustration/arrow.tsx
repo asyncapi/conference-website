@@ -10,7 +10,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function Arrow({ className, fill }: SVGTypes) {
+function Arrow({ className, fill }: SVGTypes): JSX.Element {
   return (
     <svg
       className={className}

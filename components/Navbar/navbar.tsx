@@ -7,19 +7,23 @@ import Hamburger from '../illustration/hamburger';
 import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
+import { LinkItem } from '../../types/types';
 
-function Navbar() {
+function Navbar(): JSX.Element {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
-  const [drop, setDrop] = useState(false);
-  const [show, setShow] = useState(null);
-  const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
-  const menuRef = useRef(null);
-  const svg = useRef(null);
-  let closeTimeout = useRef(null);
+  const [drop, setDrop] = useState<boolean>(false);
+  const [show, setShow] = useState<string | null>(null);
+  const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const svg = useRef<SVGSVGElement>(null);
+
+  //TODO: Refactor Navbar Code
+  let closeTimeout = useRef<NodeJS.Timeout>(null);
 
   const handleClosing = useCallback(
-    (event) => {
-      if (show && !event.target.closest('.subMenu')) {
+    (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (show && !target.closest('.subMenu')) {
         setShow(null);
       }
     },
@@ -33,8 +37,9 @@ function Navbar() {
     };
   }, [handleClosing]);
 
-  const handleCloseMenu = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+  const handleCloseMenu = (event: MouseEvent) => {
+    const target = event.target as Element;
+    if (menuRef.current && !menuRef.current.contains(target)) {
       setDrop(false);
     }
     if (svg.current && event.target === svg.current) {
@@ -49,12 +54,14 @@ function Navbar() {
     };
   }, [menuRef]);
 
-  const handleMouseEnter = (title) => {
-    clearTimeout(closeTimeout.current);
+  const handleMouseEnter = (title: string): void => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+    }
     setShow(title);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (): void => {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
         setShow(null);
@@ -62,12 +69,14 @@ function Navbar() {
     }, 300);
   };
 
-  const handleSubMenuEnter = () => {
-    clearTimeout(closeTimeout.current);
+  const handleSubMenuEnter = (): void => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+    }
     setIsSubMenuHovered(true);
   };
 
-  const handleSubMenuLeave = () => {
+  const handleSubMenuLeave = (): void => {
     setIsSubMenuHovered(false);
     setShow(null);
   };
@@ -107,8 +116,8 @@ function Navbar() {
             </div>
           ) : (
             <div className="flex items-center">
-              {links.map((link) => (
-                <div href={link.ref} key={link.title}>
+              {links.map((link: LinkItem) => (
+                <div key={link.title}>
                   <div
                     onMouseEnter={() => handleMouseEnter(link.title)}
                     onMouseLeave={handleMouseLeave}
@@ -121,7 +130,7 @@ function Navbar() {
                           {link.title}{' '}
                           {link.subMenu && (
                             <Dropdown
-                              color="white"
+                              fill="white"
                               className={`ml-2 transition-transform duration-700 ${
                                 show === link.title ? 'rotate-180' : 'rotate-0'
                               }`}
@@ -140,15 +149,14 @@ function Navbar() {
                         onMouseEnter={handleSubMenuEnter}
                         onMouseLeave={handleSubMenuLeave}
                       >
-                        {link.subMenu.map((subL) => (
+                        {link.subMenu.map((subL: LinkItem) => (
                           <Link
                             href={subL.ref}
-                            target={subL.target}
                             key={subL.title}
                             rel="noopener noreferrer"
                           >
                             <div
-                              className={`flex items-center ${link.subMenu.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
+                              className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
                               data-test={`nav-sub-${subL.title}`}
                             >
                               {subL.title}

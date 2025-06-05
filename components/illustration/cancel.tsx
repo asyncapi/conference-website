@@ -10,7 +10,7 @@ import { SVGTypes } from '../../types/types';
  * @returns {JSX.Element}
  */
 
-function Cancel({ className, fill }: SVGTypes) {
+function Cancel({ className, fill }: SVGTypes): JSX.Element {
   return (
     <svg
       height="23px"

@@ -2,14 +2,12 @@ import React from 'react';
 import { SVGTypes } from '../../types/types';
 
 /**
- *
- *
  * @param {Object} props
  * @param {string} [props.className]
  * @returns {JSX.Element}
  */
 
-function Ticket({ className }: SVGTypes) {
+function Ticket({ className }: SVGTypes): JSX.Element {
   return (
     <svg
       className={className}
