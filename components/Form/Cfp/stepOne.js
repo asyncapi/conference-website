@@ -1,10 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
-import Button from "../../Buttons/button";
+import React from 'react';
+import Button from '../../Buttons/button';
 
 function StepOne({ setStep, setForm, data }) {
   return (
-    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => setStep(e, 2)} data-test="step-one">
+    <form
+      className="mt-3 w-[30rem] lg:w-[auto]"
+      onSubmit={(e) => setStep(e, 2)}
+      data-test="step-one"
+    >
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Let's start with your name
       </h1>
@@ -18,7 +22,7 @@ function StepOne({ setStep, setForm, data }) {
           required
           className="mt-3 w-full p-4 rounded-md focus:outline-none"
           style={{
-            border: "1px solid #E50E99",
+            border: '1px solid #E50E99',
           }}
           onChange={(e) => setForm({ ...data, Fullname: e.target.value })}
           data-test="step-one-name"
@@ -29,36 +33,43 @@ function StepOne({ setStep, setForm, data }) {
           type="email"
           className="mt-3 w-full p-4 rounded-md focus:outline-none"
           style={{
-            border: "1px solid #E50E99",
+            border: '1px solid #E50E99',
           }}
           onChange={(e) => setForm({ ...data, Email: e.target.value })}
           data-test="step-one-email"
         />
-         <div className="text-dark-600 text-lg mt-5">Bio</div>
+        <div className="text-dark-600 text-lg mt-5">Bio</div>
         <textarea
           required
           type="text"
           className="mt-3 w-full p-4 rounded-md focus:outline-none"
           style={{
-            border: "1px solid #E50E99",
+            border: '1px solid #E50E99',
           }}
           onChange={(e) => setForm({ ...data, Bio: e.target.value })}
           data-test="step-one-bio"
         />
-        <div className="text-dark-600 text-lg mt-5">Github/LinkedIn/Twitter</div>
+        <div className="text-dark-600 text-lg mt-5">
+          Github/LinkedIn/Twitter
+        </div>
         <input
           required
           type="url"
           className="mt-3 w-full p-4 rounded-md focus:outline-none"
           style={{
-            border: "1px solid #E50E99",
+            border: '1px solid #E50E99',
           }}
           onChange={(e) => setForm({ ...data, Social: e.target.value })}
           data-test="step-one-social"
         />
-        <Button type="submit"
+        <Button
+          type="submit"
           className="bg-tetiary-pink p-3 rounded-md text-white mt-6 float-right w-36 lg:w-full lg:mt-8"
-          disabled={!data.Fullname && true} test="step-one-next">Next</Button>
+          disabled={!data.Fullname && true}
+          test="step-one-next"
+        >
+          Next
+        </Button>
       </div>
     </form>
   );

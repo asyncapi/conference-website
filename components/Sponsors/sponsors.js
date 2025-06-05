@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Heading from "../Typography/heading";
-import Paragraph from "../Typography/paragraph";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Heading from '../Typography/heading';
+import Paragraph from '../Typography/paragraph';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function Sponsors({ eventSponsors, financialSponsor }) {
   //eventSponsors,financialSponsor = [{image: 'url', websiteUrl: 'url' , className: 'string'}] //className for additional styling if needed
@@ -20,13 +20,18 @@ function Sponsors({ eventSponsors, financialSponsor }) {
             we orchestrate an unforgettable celebration.
           </Paragraph>
         </div>
-        <Heading typeStyle='heading-md' className='text-gray-800 mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
+        <Heading
+          typeStyle="heading-md"
+          className="text-gray-800 mt-10 sm:text-2xl sm:mt-5"
+        >
+          Event and Host Sponsor
+        </Heading>
         <div className="flex justify-center  w-[650px] sm:w-full flex-col  items-center">
           {eventSponsors &&
             eventSponsors.map((sponsor) => (
               <div
                 key={sponsor.image}
-                className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${sponsor.className ? sponsor.className : ""}`}
+                className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${sponsor.className ? sponsor.className : ''}`}
               >
                 <Link href={sponsor.websiteUrl} target="_blank">
                   <Image
@@ -43,11 +48,16 @@ function Sponsors({ eventSponsors, financialSponsor }) {
           <div className="flex flex-col space-y-6">
             {financialSponsor && (
               <div>
-              <Heading typeStyle='heading-md' className='text-gray-800 mb-12 sm:text-2xl'>Financial Sponsor</Heading>
+                <Heading
+                  typeStyle="heading-md"
+                  className="text-gray-800 mb-12 sm:text-2xl"
+                >
+                  Financial Sponsor
+                </Heading>
                 {financialSponsor.map((sponsor) => (
                   <div
                     key={sponsor.image}
-                    className={`${sponsor.className ? sponsor.className : ""}`}
+                    className={`${sponsor.className ? sponsor.className : ''}`}
                   >
                     <Link href={sponsor.websiteUrl} target="_blank">
                       <Image

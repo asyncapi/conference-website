@@ -1,13 +1,12 @@
-
-import React from "react";
-import Heading from "../Typography/heading";
-import Paragraph from "../Typography/paragraph";
-import Button from "../Buttons/button";
-import ReactSlider from "../Slider/slider";
-import cities from "../../config/city-lists.json";
-import Venue from "../Venue/venue";
-import Announcement from "../announcement";
-import Link from "next/link";
+import React from 'react';
+import Heading from '../Typography/heading';
+import Paragraph from '../Typography/paragraph';
+import Button from '../Buttons/button';
+import ReactSlider from '../Slider/slider';
+import cities from '../../config/city-lists.json';
+import Venue from '../Venue/venue';
+import Announcement from '../announcement';
+import Link from 'next/link';
 
 function Header() {
   return (
@@ -55,7 +54,6 @@ function Header() {
       </div>
     </div>
   );
-
 }
 
 export default Header;

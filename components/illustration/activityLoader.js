@@ -2,10 +2,10 @@ function ActivityLoader() {
   return (
     <svg
       style={{
-        margin: "auto",
-        background: "none",
-        display: "block",
-        shapeRendering: "auto",
+        margin: 'auto',
+        background: 'none',
+        display: 'block',
+        shapeRendering: 'auto',
       }}
       width="20px"
       height="20px"

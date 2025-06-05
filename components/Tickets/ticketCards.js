@@ -17,7 +17,12 @@ const Tickets = () => {
       status: 'Get Your Free Ticket',
       available: 50,
       eventDate: new Date('2025-01-20'),
-      benefits: ['AsyncAPI Track', 'Workshop access', 'Lunch included', 'All talks']
+      benefits: [
+        'AsyncAPI Track',
+        'Workshop access',
+        'Lunch included',
+        'All talks',
+      ],
     },
     {
       id: 2,
@@ -28,7 +33,12 @@ const Tickets = () => {
       status: 'Opening Soon',
       available: 50,
       eventDate: new Date('2025-07-2'),
-      benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth']
+      benefits: [
+        'All talks',
+        'Workshop access',
+        'Lunch included',
+        'API Standards booth',
+      ],
     },
     {
       id: 3,
@@ -39,7 +49,7 @@ const Tickets = () => {
       status: 'Not Yet Available',
       available: 50,
       eventDate: new Date('2025-07-18'),
-      benefits: ['All talks', 'Workshop access', 'Lunch included']
+      benefits: ['All talks', 'Workshop access', 'Lunch included'],
     },
     {
       id: 4,
@@ -50,7 +60,7 @@ const Tickets = () => {
       status: 'Not Yet Available',
       available: 100,
       eventDate: new Date('2025-09-22'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking', 'Lunch included']
+      benefits: ['AsyncAPI Track', 'All talks', 'Networking', 'Lunch included'],
     },
     {
       id: 5,
@@ -61,7 +71,12 @@ const Tickets = () => {
       status: 'Not Yet Available',
       available: 80,
       eventDate: new Date('2025-09-15'),
-      benefits: ['All talks', 'AsyncAPI Track', 'Workshop access', 'Lunch included']
+      benefits: [
+        'All talks',
+        'AsyncAPI Track',
+        'Workshop access',
+        'Lunch included',
+      ],
     },
     {
       id: 6,
@@ -72,7 +87,7 @@ const Tickets = () => {
       status: 'Not Yet Available',
       available: 100,
       eventDate: new Date('2025-09-15'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking']
+      benefits: ['AsyncAPI Track', 'All talks', 'Networking'],
     },
     {
       id: 7,
@@ -83,18 +98,20 @@ const Tickets = () => {
       status: 'Not Yet Available',
       available: 100,
       eventDate: new Date('2025-12-9'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking']
+      benefits: ['AsyncAPI Track', 'All talks', 'Networking'],
     },
   ];
 
-  const availableTickets = tickets.filter(ticket => ticket.eventDate > today);
+  const availableTickets = tickets.filter((ticket) => ticket.eventDate > today);
 
   const nextTicket = () => {
     setCurrentIndex((prev) => (prev + 1) % availableTickets.length);
   };
 
   const prevTicket = () => {
-    setCurrentIndex((prev) => (prev - 1 + availableTickets.length) % availableTickets.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + availableTickets.length) % availableTickets.length
+    );
   };
 
   return (
@@ -119,8 +136,12 @@ const Tickets = () => {
       <div className="relative h-96">
         {availableTickets.map((ticket, index) => {
           const isCurrentCard = index === currentIndex;
-          const isPrevCard = index === (currentIndex - 1 + availableTickets.length) % availableTickets.length;
-          const isNextCard = index === (currentIndex + 1) % availableTickets.length;
+          const isPrevCard =
+            index ===
+            (currentIndex - 1 + availableTickets.length) %
+              availableTickets.length;
+          const isNextCard =
+            index === (currentIndex + 1) % availableTickets.length;
           const isEnded = today > ticket.eventDate;
 
           let zIndex = 0;
@@ -148,14 +169,16 @@ const Tickets = () => {
               style={{
                 transform,
                 opacity,
-                zIndex
+                zIndex,
               }}
             >
               <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                 <div className="p-6">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{ticket.type}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {ticket.type}
+                      </h3>
                       <p className="text-gray-500 mt-1">{ticket.description}</p>
                     </div>
                     <div className="px-2 py-1 rounded-full text-sm font-medium text-gradient">
@@ -164,7 +187,9 @@ const Tickets = () => {
                   </div>
 
                   <div className="mt-4">
-                    <span className="text-3xl font-bold text-gray-900">${ticket.price}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      ${ticket.price}
+                    </span>
                     <span className="text-gray-500 ml-2">/person</span>
                   </div>
 
@@ -182,7 +207,11 @@ const Tickets = () => {
                       <Button className="mt-8 w-full">Get a Ticket</Button>
                     </a>
                   ) : (
-                    <Button disabled={true} overlay={true} className="mt-8 w-full bg-gray-300">
+                    <Button
+                      disabled={true}
+                      overlay={true}
+                      className="mt-8 w-full bg-gray-300"
+                    >
                       {isEnded ? 'Event Ended' : 'Get a Ticket'}
                     </Button>
                   )}

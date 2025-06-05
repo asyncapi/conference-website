@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, {useState} from "react";
-import { toast } from "react-hot-toast";
-import axios from "axios";
-import ActivityLoader from "../../illustration/activityLoader";
-import Button from "../../Buttons/button";
+import React, { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import axios from 'axios';
+import ActivityLoader from '../../illustration/activityLoader';
+import Button from '../../Buttons/button';
 
 function StepFour({ setStep, setForm, data }) {
   const [submitting, setSubmitting] = useState(false);
@@ -13,22 +13,19 @@ function StepFour({ setStep, setForm, data }) {
     e.preventDefault();
     setSubmitting(true);
     axios
-      .post(
-        `/api/speakers/register`,
-        data
-      )
+      .post(`/api/speakers/register`, data)
       .then((res) => {
         setSubmitting(false);
         if (res.status === 200) {
           setDisabled(true);
-          setStep(e, 'successful')
+          setStep(e, 'successful');
         }
       })
       .catch((err) => {
         setSubmitting(false);
-        toast.error("Failed to submit feedback. Try again", {
-            duration: '5600'
-          });
+        toast.error('Failed to submit feedback. Try again', {
+          duration: '5600',
+        });
       });
   };
   return (
@@ -37,7 +34,9 @@ function StepFour({ setStep, setForm, data }) {
         Additional Information
       </h1>
       <p className="mt-3 text-dark-600">
-        Notes will only be seen by reviewers during the CFP process. Therefore, it is important to use this space to explain any technical requirements or why you are best suited to speak on the subject, etc...  
+        Notes will only be seen by reviewers during the CFP process. Therefore,
+        it is important to use this space to explain any technical requirements
+        or why you are best suited to speak on the subject, etc...
       </p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
       <div className="mt-10">
@@ -45,14 +44,22 @@ function StepFour({ setStep, setForm, data }) {
         <textarea
           className="mt-3 w-full p-4 rounded-md focus:outline-none"
           style={{
-            border: "1px solid #E50E99",
+            border: '1px solid #E50E99',
           }}
           onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
           data-test="step-four-additional"
         />
-        
+
         <div className="mt-6 text-dark-600 text-md">
-          By clicking submit, this means you agree to follow the <a className="underline" href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">AsyncAPI Initiative Code of Conduct</a>
+          By clicking submit, this means you agree to follow the{' '}
+          <a
+            className="underline"
+            href="https://github.com/asyncapi/spec/blob/master/CODE_OF_CONDUCT.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            AsyncAPI Initiative Code of Conduct
+          </a>
         </div>
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
@@ -65,9 +72,10 @@ function StepFour({ setStep, setForm, data }) {
             type="submit"
             disabled={submitting || disabled}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
-            test="step-four-next">
-            {submitting ? <ActivityLoader /> : "Submit"}
-            </Button>
+            test="step-four-next"
+          >
+            {submitting ? <ActivityLoader /> : 'Submit'}
+          </Button>
         </div>
       </div>
     </form>

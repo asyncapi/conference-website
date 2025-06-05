@@ -1,7 +1,7 @@
-import React from "react";
-import Heading from "../Typography/heading";
-import Paragraph from "../Typography/paragraph";
-import Image from "next/image";
+import React from 'react';
+import Heading from '../Typography/heading';
+import Paragraph from '../Typography/paragraph';
+import Image from 'next/image';
 
 function Agenda({ city }) {
   return (
@@ -33,7 +33,7 @@ function Agenda({ city }) {
               return (
                 <div
                   key={talk.time}
-                  className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && "countdown-text-gradient"}`}
+                  className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker && 'countdown-text-gradient'}`}
                 >
                   <Paragraph typeStyle="body-md">{talk.time}</Paragraph>
                   <div className="flex justify-between lg:flex-col w-[75%] lg:w-full">
@@ -49,7 +49,7 @@ function Agenda({ city }) {
                         {talk.session}
                       </Heading>
                     </div>
-                    {talk.speaker && typeof talk.speaker === "number" ? (
+                    {talk.speaker && typeof talk.speaker === 'number' ? (
                       <div className="flex items-center lg:mt-4">
                         <div className="w-[94px] h-[94px]">
                           <Image
@@ -75,7 +75,7 @@ function Agenda({ city }) {
                     ) : (
                       <div></div>
                     )}
-                    {talk.speaker && typeof talk.speaker === "object" && (
+                    {talk.speaker && typeof talk.speaker === 'object' && (
                       <div className="flex flex-col">
                         {talk.speaker.map((speak, i) => (
                           <div key={i} className="mt-6">

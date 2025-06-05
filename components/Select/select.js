@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
-import Select from "react-select";
+import React, { useState, useEffect } from 'react';
+import Select from 'react-select';
 
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
-    color: state.isSelected ? "white" : "black",
-    background: state.isSelected && "#E50E99",
+    color: state.isSelected ? 'white' : 'black',
+    background: state.isSelected && '#E50E99',
     padding: 10,
   }),
   multiValue: () => ({
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    background: "white",
-    textOverflow: "ellipsis",
-    width: "150px",
-    display: "flex",
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    background: 'white',
+    textOverflow: 'ellipsis',
+    width: '150px',
+    display: 'flex',
   }),
   control: (_, { selectProps: { width } }) => ({
     // none of react-select's styles are passed to <Control />
-    display: "flex",
-    padding: "10px",
-    borderRadius: "5px",
-    background: "#2e2344",
-    border: "2px solid #E50E99",
+    display: 'flex',
+    padding: '10px',
+    borderRadius: '5px',
+    background: '#2e2344',
+    border: '2px solid #E50E99',
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
-    const transition = "opacity 300ms";
-    const color = "white";
+    const transition = 'opacity 300ms';
+    const color = 'white';
 
     return { ...provided, opacity, transition, color };
   },
@@ -41,7 +41,7 @@ function Dropdown({ options, title, setValue, multi }) {
       selectedOption.map((option) => {
         newValue.push(option.value);
       });
-      setValue(newValue)
+      setValue(newValue);
     } else {
       setValue(selectedOption.value);
     }

@@ -13,17 +13,17 @@ function MyApp({ Component, pageProps }) {
   if (!showChild) {
     return null;
   }
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return <></>;
   }
   return (
-      <div>
+    <div>
       <Navbar />
-      
+
       <Component {...pageProps} />
       <Footer />
-      </div>
+    </div>
   );
 }
 
-export default MyApp
+export default MyApp;

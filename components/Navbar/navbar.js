@@ -1,15 +1,15 @@
-import Link from "next/link";
-import Dropdown from "../illustration/dropdown";
-import { useState, useEffect, useRef, useCallback } from "react";
-import links from "../../config/links.json";
-import NavDrop from "./navDrop";
-import Hamburger from "../illustration/hamburger";
-import { useMediaQuery } from "react-responsive";
-import Cancel from "../illustration/cancel";
-import Image from "next/image";
+import Link from 'next/link';
+import Dropdown from '../illustration/dropdown';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import links from '../../config/links.json';
+import NavDrop from './navDrop';
+import Hamburger from '../illustration/hamburger';
+import { useMediaQuery } from 'react-responsive';
+import Cancel from '../illustration/cancel';
+import Image from 'next/image';
 
 function Navbar() {
-  const isTablet = useMediaQuery({ maxWidth: "1118px" });
+  const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [drop, setDrop] = useState(false);
   const [show, setShow] = useState(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState(false);
@@ -19,17 +19,17 @@ function Navbar() {
 
   const handleClosing = useCallback(
     (event) => {
-      if (show && !event.target.closest(".subMenu")) {
+      if (show && !event.target.closest('.subMenu')) {
         setShow(null);
       }
     },
-    [show],
+    [show]
   );
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClosing);
+    document.addEventListener('mousedown', handleClosing);
     return () => {
-      document.removeEventListener("mousedown", handleClosing);
+      document.removeEventListener('mousedown', handleClosing);
     };
   }, [handleClosing]);
 
@@ -43,9 +43,9 @@ function Navbar() {
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleCloseMenu);
+    document.addEventListener('click', handleCloseMenu);
     return () => {
-      document.removeEventListener("click", handleCloseMenu);
+      document.removeEventListener('click', handleCloseMenu);
     };
   }, [menuRef]);
 
@@ -75,7 +75,7 @@ function Navbar() {
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && "bg-[#1B1130]/90"} top-0 z-[99] text-white`}
+        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
@@ -118,12 +118,12 @@ function Navbar() {
                     <div>
                       {link.subMenu ? (
                         <div className="flex items-center">
-                          {link.title}{" "}
+                          {link.title}{' '}
                           {link.subMenu && (
                             <Dropdown
                               color="white"
                               className={`ml-2 transition-transform duration-700 ${
-                                show === link.title ? "rotate-180" : "rotate-0"
+                                show === link.title ? 'rotate-180' : 'rotate-0'
                               }`}
                             />
                           )}
@@ -148,7 +148,7 @@ function Navbar() {
                             rel="noopener noreferrer"
                           >
                             <div
-                              className={`flex items-center ${link.subMenu.length === 1 ? "justify-center" : "justify-start"} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
+                              className={`flex items-center ${link.subMenu.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
                               data-test={`nav-sub-${subL.title}`}
                             >
                               {subL.title}
@@ -164,8 +164,11 @@ function Navbar() {
           )}
           {isTablet && (
             <div
-              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop ? "opacity-100" : "opacity-0 -translate-y-full pointer-events-none"
-                }`}
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${
+                drop
+                  ? 'opacity-100'
+                  : 'opacity-0 -translate-y-full pointer-events-none'
+              }`}
             >
               {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
             </div>
