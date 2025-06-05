@@ -1,6 +1,16 @@
 import React from 'react';
+import { SVGTypes } from '../../types/types';
 
-function Cancel() {
+/**
+ *
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @param {string} [props.fill]
+ * @returns {JSX.Element}
+ */
+
+function Cancel({ className, fill }: SVGTypes) {
   return (
     <svg
       height="23px"
@@ -8,7 +18,8 @@ function Cancel() {
       version="1.1"
       id="Layer_1"
       viewBox="0 0 512.001 512.001"
-      fill="#ffffff"
+      className={className}
+      fill={fill}
       stroke="#ffffff"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />

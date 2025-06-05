@@ -1,6 +1,25 @@
 import React from 'react';
+import { SVGTypes } from '../../types/types';
 
-function Arrows({ className, direction = 'right', fill = 'currentColor' }) {
+interface IArrows extends SVGTypes {
+  direction: string;
+}
+
+/**
+ *
+ *
+ * @param {IArrows} param0
+ * @param {string} param0.className
+ * @param {string} [param0.direction='right']
+ * @param {string} [param0.fill='currentColor']
+ * @returns {JSX.Element}
+ */
+
+function Arrows({
+  className,
+  direction = 'right',
+  fill = 'currentColor',
+}: IArrows) {
   const getRotation = () => {
     switch (direction) {
       case 'right':

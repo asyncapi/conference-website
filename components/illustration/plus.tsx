@@ -1,6 +1,15 @@
 import React from 'react';
+import { SVGTypes } from '../../types/types';
 
-function Plus({ className }) {
+/**
+ *
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @returns {JSX.Element}
+ */
+
+function Plus({ className }: SVGTypes) {
   return (
     <svg
       viewBox="0 0 256 256"

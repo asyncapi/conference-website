@@ -1,4 +1,15 @@
-function ActivityLoader() {
+import { SVGTypes } from '../../types/types';
+
+/**
+ *
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @param {string} [props.fill]
+ * @returns {JSX.Element}
+ */
+
+function ActivityLoader({ className, fill }: SVGTypes) {
   return (
     <svg
       style={{
@@ -7,6 +18,7 @@ function ActivityLoader() {
         display: 'block',
         shapeRendering: 'auto',
       }}
+      className={className}
       width="20px"
       height="20px"
       viewBox="0 0 100 100"
@@ -15,7 +27,7 @@ function ActivityLoader() {
       <circle
         cx="50"
         cy="50"
-        fill="none"
+        fill={fill}
         stroke="white"
         strokeWidth="4"
         r="31"

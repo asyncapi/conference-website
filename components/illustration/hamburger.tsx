@@ -1,6 +1,10 @@
 import React, { forwardRef } from 'react';
 
-const Hamburger = forwardRef((props, ref) => {
+interface HamburgerProps {
+  className?: string;
+}
+
+const Hamburger = forwardRef<SVGSVGElement, HamburgerProps>((props, ref) => {
   const { className } = props;
   return (
     <svg

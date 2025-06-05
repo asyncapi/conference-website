@@ -1,21 +1,16 @@
-// @ts-check
 import React from 'react';
-
-interface IArrow {
-  className: string;
-  fill: string;
-}
+import { SVGTypes } from '../../types/types';
 
 /**
- * A reusable SVG arrow icon component.
  *
- * @param {Object} props - The component props.
- * @param {string} [props.className] - Optional CSS class for styling the SVG.
- * @param {string} [props.fill] - Optional fill color for the arrow path. Defaults to 'white' if not provided.
- * @returns {JSX.Element} The rendered SVG arrow.
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @param {string} [props.fill]
+ * @returns {JSX.Element}
  */
 
-function Arrow({ className, fill }: IArrow) {
+function Arrow({ className, fill }: SVGTypes) {
   return (
     <svg
       className={className}

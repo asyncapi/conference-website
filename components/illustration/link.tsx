@@ -1,6 +1,16 @@
 import React from 'react';
+import { SVGTypes } from '../../types/types';
 
-function ILink({ className, fill }) {
+/**
+ *
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @param {string} [props.fill]
+ * @returns {JSX.Element}
+ */
+
+function ILink({ className, fill }: SVGTypes) {
   return (
     <svg
       className={className}
