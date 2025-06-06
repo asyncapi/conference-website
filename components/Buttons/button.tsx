@@ -1,4 +1,14 @@
-import React from 'react';
+type ButtonType = 'button' | 'submit' | 'reset' | undefined;
+
+interface IButton {
+  className?: string;
+  children: React.ReactNode;
+  overlay?: boolean;
+  onClick?: React.MouseEventHandler;
+  type: ButtonType;
+  disabled?: boolean;
+  test?: string;
+}
 
 function Button({
   className,
@@ -8,7 +18,7 @@ function Button({
   type,
   disabled,
   test,
-}) {
+}: IButton): JSX.Element {
   return (
     <button
       disabled={disabled}

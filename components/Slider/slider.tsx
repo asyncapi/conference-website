@@ -2,9 +2,13 @@ import Slider from 'react-slick';
 import React, { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-function ReactSlider({ children }) {
+interface ISlider {
+  children: React.ReactNode[];
+}
+
+function ReactSlider({ children }: ISlider): JSX.Element {
   const isMobile = useMediaQuery({ maxWidth: '260px' });
-  const [slides, setSlides] = useState(1);
+  const [slides, setSlides] = useState<number>(1);
 
   useEffect(() => {
     if (isMobile) {

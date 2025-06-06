@@ -1,12 +1,34 @@
+type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+type TypeStyle =
+  | 'heading-lg'
+  | 'heading-md'
+  | 'heading-md-semibold'
+  | 'heading-sm'
+  | 'heading-sm-semibold'
+  | 'heading-xs'
+  | 'heading-xs-semibold'
+  | 'body-lg'
+  | 'body-md'
+  | 'body-sm';
+
+interface IHeading {
+  typeStyle?: TypeStyle;
+  level?: HeadingLevel;
+  textColor?: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
 export default function Heading({
   typeStyle = 'heading-lg',
   level = 'h2',
   textColor = 'text-primary-800',
   className,
   children,
-}) {
+}: IHeading): JSX.Element {
   let classNames = '';
-  const Tag = `${level}`;
+  const Tag = level as keyof JSX.IntrinsicElements;
   switch (typeStyle) {
     case 'heading-lg':
       classNames = `font-heading text-heading-md font-bold text-[60px] tracking-heading sm:text-[30px] lg:text-[40px] ${

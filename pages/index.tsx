@@ -11,30 +11,31 @@ import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
 import Speaker from '../components/Speaker/speaker';
+import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
+import { City, ConferenceStatus } from '../types/types';
+import { getEventStatus } from '../utils/status';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
-  const [speakersList, setSpeakersList] = useState([]);
-  const [city, setCity] = useState('');
-  speakers[0].lists = [];
-  speakers.map((speaker) => {
-    if (Array.isArray(speaker.lists) && Object.keys(speaker.lists).length > 0) {
-      speakers[0].lists.push(...speaker.lists);
-    }
-  });
-  const list = speakers[0].lists.filter((obj, index) => {
-    return index === speakers[0].lists.findIndex((o) => obj.name === o.name);
-  });
-  speakers[0].lists = [...list];
+  const [speakersList, setSpeakersList] = useState(speakers);
+  const [currentCity, setCurrentCity] = useState<City | string>('All');
 
-  useEffect(() => {
-    setCity(speakers[0]);
-    setSpeakersList(speakers[0].lists);
-  }, []);
+  const handleSpeakers = (city: string) => {
+    if (city && city !== 'all') {
+      const citySpeaker = speakers.filter((speaker) =>
+        speaker.city.includes(city)
+      );
+      setSpeakersList(citySpeaker);
+    } else if (city === 'all') {
+      setSpeakersList(speakers);
+    } else {
+      setSpeakersList([]);
+    }
+  };
   return (
     <div>
       <Head>
@@ -86,41 +87,61 @@ export default function Home() {
                 {isTablet ? (
                   <div className="w-full">
                     <Dropdown
-                      active={city.city}
-                      items={speakers}
-                      setOptions={setCity}
-                      setOptions2={setSpeakersList}
+                      city={currentCity}
+                      cities={cities}
+                      setCity={setCurrentCity}
+                      handleSpeakers={handleSpeakers}
                     />
                   </div>
                 ) : (
                   <div className="flex justify-center">
                     <div className="space-x-4 lg:w-full flex justify-between">
-                      {speakers.map((speaker) => {
+                      <Button
+                        type="button"
+                        onClick={() => {
+                          handleSpeakers('all');
+                          setCurrentCity('all');
+                        }}
+                        className={`w-[120px] ${
+                          currentCity === 'All'
+                            ? 'gradient-bg'
+                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                        }`}
+                        overlay={true}
+                      >
+                        All
+                      </Button>
+                      {cities.map((city) => {
                         return (
                           <div
-                            key={speaker.location}
+                            key={city.name}
                             onClick={() => {
-                              setCity(speaker);
-                              setSpeakersList(speaker.lists);
+                              setCurrentCity(city);
+                              handleSpeakers(city.name);
+                              // setSpeakersList(speaker.lists);
                             }}
                           >
                             <Button
+                              type="button"
                               className={`w-[120px] ${
-                                city.city === speaker.city
+                                typeof currentCity !== 'string' &&
+                                currentCity.name === city.name
                                   ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5 '
+                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                               }`}
                               overlay={true}
                             >
-                              {city.city !== speaker.city && (
+                              {currentCity.name !== city.name && (
                                 <>
                                   <span className="transparent-bg "></span>
                                   <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {speaker.city}
+                                    {city.name}
                                   </span>
                                 </>
                               )}
-                              {city.city === speaker.city && speaker.city}
+                              {typeof currentCity !== 'string' &&
+                                currentCity.name === city.name &&
+                                city.name}
                             </Button>
                           </div>
                         );
@@ -129,24 +150,29 @@ export default function Home() {
                   </div>
                 )}
               </div>
+
               <div className="mt-[64px] pb-[181px]">
-                {Object.keys(speakersList).length > 0 ? (
+                {speakersList.length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
-                    {speakersList.map((speaker, i) => {
+                    {speakersList.map((speaker) => {
                       return (
                         <Speaker
-                          key={i}
+                          key={speaker.id}
                           details={speaker}
-                          location={city}
+                          location={
+                            typeof currentCity === 'object'
+                              ? `${currentCity.name},${currentCity.country}`
+                              : undefined
+                          }
                           className="mt-10"
                         />
                       );
                     })}
                   </div>
                 ) : (
-                  <div className="mt-12 flex items-center justify-center text-center">
+                  <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
                     <div className="w-[720px] lg:w-full">
-                      {city.cfp ? (
+                      {typeof currentCity !== 'string' && currentCity.cfp ? (
                         <div>
                           <Paragraph className="text-gray-200">
                             We are actively accepting speaker applications, and
@@ -154,12 +180,12 @@ export default function Home() {
                             below. Join us on stage and share your valuable
                             insights with our enthusiastic audience!
                           </Paragraph>
-                          <Link
-                            legacyBehavior
-                            href="https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx"
-                          >
+                          <Link legacyBehavior href={currentCity.cfp}>
                             <a className="flex justify-center" target="_blank">
-                              <Button className="mt-[80px] w-[244px] border border-gray card-bg">
+                              <Button
+                                type="button"
+                                className="mt-[80px] w-[244px] border border-gray"
+                              >
                                 Apply as a speaker
                               </Button>
                             </a>
@@ -171,7 +197,9 @@ export default function Home() {
                             typeStyle="heading-md-semibold"
                             className="text-gray-200"
                           >
-                            {city.city} Speakers Coming Soon - Stay Tuned!
+                            {typeof currentCity !== 'string' &&
+                              currentCity.name}{' '}
+                            Speakers Coming Soon - Stay Tuned!
                           </Heading>
                         </div>
                       )}
@@ -213,7 +241,7 @@ export default function Home() {
               <TicketCards />
             </div>
           </div>
-          {/* <div data-test="ticket-section">
+          <div data-test="ticket-section">
             <Heading
               typeStyle="heading-md"
               className="text-gradient text-center lg:mt-10"
@@ -232,7 +260,7 @@ export default function Home() {
             </div>
             <div className="w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col">
               {cities.map((city) => {
-                if (city.ended === false) {
+                if (getEventStatus(city.date) !== ConferenceStatus.ENDED) {
                   return (
                     <TicketCards
                       key={city.name}
@@ -243,7 +271,7 @@ export default function Home() {
                 }
               })}
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       <div id="sponsors" className="mt-20">

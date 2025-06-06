@@ -4,9 +4,14 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Image from 'next/image';
 import Link from 'next/link';
+import { EventSponsor } from '../../types/types';
 
-function Sponsors({ eventSponsors, financialSponsor }) {
-  //eventSponsors,financialSponsor = [{image: 'url', websiteUrl: 'url' , className: 'string'}] //className for additional styling if needed
+interface ISponsors {
+  eventSponsors: EventSponsor[];
+  financialSponsor?: EventSponsor[];
+}
+
+function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
   return (
     <div
       className="sponsor-bg container text-center"
@@ -54,11 +59,8 @@ function Sponsors({ eventSponsors, financialSponsor }) {
                 >
                   Financial Sponsor
                 </Heading>
-                {financialSponsor.map((sponsor) => (
-                  <div
-                    key={sponsor.image}
-                    className={`${sponsor.className ? sponsor.className : ''}`}
-                  >
+                {financialSponsor.map((sponsor: EventSponsor) => (
+                  <div key={sponsor.image}>
                     <Link href={sponsor.websiteUrl} target="_blank">
                       <Image
                         src={sponsor.image}

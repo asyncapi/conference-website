@@ -2,29 +2,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { City, ConferenceStatus } from '../../types/types';
+import { getEventStatus } from '../../utils/status';
 
-export function getEventStatus(dates) {
-  const today = new Date();
-  const eventDates = dates.split('-').map((date) => new Date(date));
-
-  if (
-    eventDates.some((event) => event.toDateString() === today.toDateString())
-  ) {
-    return 'Ongoing';
-  } else if (eventDates.some((event) => event > today)) {
-    return 'Upcoming';
-  } else {
-    return 'Ended';
-  }
+interface IVenue {
+  city: City;
 }
 
-export function isEventEnded(dates) {
-  return getEventStatus(dates) === 'Ended';
-}
-
-function Venue({ city }) {
-  const eventEnded = isEventEnded(city.date);
-  const textColor = eventEnded ? 'text-white' : 'text-white';
+function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
 
   return (
@@ -40,7 +25,7 @@ function Venue({ city }) {
           <div className="flex items-center">
             {city.cfp && (
               <div
-                className={`border ${textColor} text-md rounded-lg px-2 py-1 text-center mt-2`}
+                className={`border text-white text-md rounded-lg px-2 py-1 text-center mt-2`}
               >
                 cfp is open
               </div>
@@ -48,7 +33,7 @@ function Venue({ city }) {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                window.open(city.map, '_blank', 'noopener');
+                window.open(city.mapUrl, '_blank', 'noopener');
               }}
               className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
             >
@@ -61,7 +46,7 @@ function Venue({ city }) {
             </button>
           </div>
 
-          <div className={textColor}>
+          <div className="text-white">
             <div className="text-lg font-bold">
               {city.name === 'Online' ? (
                 <span>

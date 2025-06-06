@@ -8,7 +8,7 @@ import Venue from '../Venue/venue';
 import Announcement from '../announcement';
 import Link from 'next/link';
 
-function Header() {
+function Header(): JSX.Element {
   return (
     <div className="relative">
       <div className="container w-full flex items-center justify-center">
@@ -23,9 +23,9 @@ function Header() {
                 data-test="landing-heading"
               >
                 <Heading
-                  className="text-6xl sm:text-4xl leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient"
+                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient"
                   level="h1"
-                  typeStyle="heading"
+                  typeStyle="heading-lg"
                 >
                   AsyncAPI Conference 2025
                 </Heading>
@@ -38,7 +38,9 @@ function Header() {
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
                 <Link href="#tickets">
-                  <Button className="w-[250px]">Register Now</Button>
+                  <Button type="button" className="w-[250px]">
+                    Register Now
+                  </Button>
                 </Link>
               </div>
             </div>

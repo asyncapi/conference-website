@@ -1,7 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
+import { SpeakerTypes } from '../../types/types';
 
-function Speaker({ details, location, className }) {
+interface ISpeaker {
+  details: SpeakerTypes;
+  location?: string | undefined;
+  className?: string;
+}
+
+function Speaker({ details, location, className }: ISpeaker): JSX.Element {
   return (
     <div
       className={`w-auto text-center flex flex-col items-center card h-auto rounded-md p-[27px] ${className}`}
@@ -19,11 +26,7 @@ function Speaker({ details, location, className }) {
       </div>
       <div className="mt-[19px]">
         <h3 className="text-[23px] text-white">{details.name}</h3>
-        <div
-          className={`flex flex-col ${
-            location && 'min-h-[150px]'
-          } justify-between`}
-        >
+        <div className={`flex flex-col ${'min-h-[150px]'} justify-between`}>
           <div>
             {' '}
             <p className="mt-[6.6px] text-[18px] text-gray-500">
@@ -31,9 +34,7 @@ function Speaker({ details, location, className }) {
             </p>
           </div>
           <div>
-            <p className="mt-[6.6px] text-[20px] text-gradient">
-              {location?.location}
-            </p>
+            <p className="mt-[6.6px] text-[20px] text-gradient">{location}</p>
           </div>
         </div>
       </div>

@@ -1,12 +1,29 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, SetStateAction } from 'react';
+import { City } from '../../types/types';
 
-function Dropdown({ active, items, setOptions, setOptions2 }) {
-  const [show, setShow] = useState(false);
-  const dropdownRef = useRef(null);
+interface IDropdown {
+  city: string | City;
+  cities: City[];
+  setCity: React.Dispatch<SetStateAction<string | City>>;
+  handleSpeakers: (arg0: string) => void;
+}
+
+function Dropdown({
+  city,
+  cities,
+  setCity,
+  handleSpeakers,
+}: IDropdown): JSX.Element {
+  const [show, setShow] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     //  This checks if the click event occurred outside the dropdown, if true we closes the dropdown.
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setShow(false);
       }
     }
@@ -15,6 +32,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [dropdownRef]);
+
   return (
     <div className="relative inline-block w-full" ref={dropdownRef}>
       <div className="w-full">
@@ -26,7 +44,7 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
           aria-haspopup="true"
           onClick={() => setShow(!show)}
         >
-          <div>{active}</div>
+          <div>{typeof city === 'string' ? city : city.name}</div>
           <svg
             className="-mr-1 h-5 w-5 text-gray-400"
             viewBox="0 0 20 20"
@@ -41,42 +59,32 @@ function Dropdown({ active, items, setOptions, setOptions2 }) {
           </svg>
         </button>
       </div>
-      {/* 
-  <!--
-    Dropdown menu, show/hide based on menu state.
 
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  --> */}
       {show && (
         <div
           className="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
-          tabIndex="-1"
+          tabIndex={-1}
         >
           <div className="rounded-md gradient-bg" role="none">
-            {items &&
-              items.map((item) => {
+            {cities &&
+              cities.map((item) => {
                 return (
                   <div
-                    key={item.city}
+                    key={item.name}
                     onClick={() => {
-                      setOptions(item);
-                      setOptions2(item.lists);
+                      setCity(item);
+                      handleSpeakers(item.name);
                       setShow(false);
                     }}
                     className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
                     role="menuitem"
-                    tabIndex="-1"
+                    tabIndex={-1}
                     id="menu-item-0"
                   >
-                    {item.city}
+                    {item.name}
                   </div>
                 );
               })}

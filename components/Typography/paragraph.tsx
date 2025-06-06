@@ -1,10 +1,18 @@
+interface IParagraph {
+  typeStyle?: string;
+  textColor?: string;
+  fontWeight?: string;
+  className?: string;
+  children: React.ReactNode;
+}
+
 export default function Paragraph({
   typeStyle = 'body-lg',
   textColor = 'text-gray-400',
   fontWeight,
   className,
   children,
-}) {
+}: IParagraph): JSX.Element {
   let classNames = '';
   switch (typeStyle) {
     case 'body-lg':
