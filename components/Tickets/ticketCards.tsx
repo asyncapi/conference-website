@@ -2,113 +2,22 @@ import React, { useState } from 'react';
 import Button from '../Buttons/button';
 import Arrows from '../illustration/arrows';
 import Ticket from '../illustration/ticket';
+import tickets from '../../config/tickets.json';
+import { Ticket as ITicket } from '../../types/types';
 
-const Tickets = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Tickets = (): JSX.Element => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
   const today = new Date();
 
-  const tickets = [
-    {
-      id: 1,
-      type: 'Singapore',
-      price: 0,
-      url: 'https://ticket.apidays.global/event/apidays-singapore-2025/4c745e62-0e52-4c4a-9221-29f47bc57128/cart?coupon=ASYNCAPICOMMUNITY',
-      description: 'Access to all conference talks and workshops',
-      status: 'Get Your Free Ticket',
-      available: 50,
-      eventDate: new Date('2025-01-20'),
-      benefits: [
-        'AsyncAPI Track',
-        'Workshop access',
-        'Lunch included',
-        'All talks',
-      ],
-    },
-    {
-      id: 2,
-      type: 'Munich, Germany',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Opening Soon',
-      available: 50,
-      eventDate: new Date('2025-07-2'),
-      benefits: [
-        'All talks',
-        'Workshop access',
-        'Lunch included',
-        'API Standards booth',
-      ],
-    },
-    {
-      id: 3,
-      type: 'Lagos, Nigeria',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
-      available: 50,
-      eventDate: new Date('2025-07-18'),
-      benefits: ['All talks', 'Workshop access', 'Lunch included'],
-    },
-    {
-      id: 4,
-      type: 'London, UK',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
-      available: 100,
-      eventDate: new Date('2025-09-22'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking', 'Lunch included'],
-    },
-    {
-      id: 5,
-      type: 'Bangalore, India',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
-      available: 80,
-      eventDate: new Date('2025-09-15'),
-      benefits: [
-        'All talks',
-        'AsyncAPI Track',
-        'Workshop access',
-        'Lunch included',
-      ],
-    },
-    {
-      id: 6,
-      type: 'Online',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
-      available: 100,
-      eventDate: new Date('2025-09-15'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking'],
-    },
-    {
-      id: 7,
-      type: 'Paris, France',
-      price: 0,
-      url: false,
-      description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
-      available: 100,
-      eventDate: new Date('2025-12-9'),
-      benefits: ['AsyncAPI Track', 'All talks', 'Networking'],
-    },
-  ];
+  const availableTickets: ITicket[] = tickets.filter(
+    (ticket: ITicket) => new Date(ticket.eventDate) > today
+  );
 
-  const availableTickets = tickets.filter((ticket) => ticket.eventDate > today);
-
-  const nextTicket = () => {
+  const nextTicket = (): void => {
     setCurrentIndex((prev) => (prev + 1) % availableTickets.length);
   };
 
-  const prevTicket = () => {
+  const prevTicket = (): void => {
     setCurrentIndex(
       (prev) => (prev - 1 + availableTickets.length) % availableTickets.length
     );
@@ -135,18 +44,18 @@ const Tickets = () => {
 
       <div className="relative h-96">
         {availableTickets.map((ticket, index) => {
-          const isCurrentCard = index === currentIndex;
-          const isPrevCard =
+          const isCurrentCard: boolean = index === currentIndex;
+          const isPrevCard: boolean =
             index ===
             (currentIndex - 1 + availableTickets.length) %
               availableTickets.length;
-          const isNextCard =
+          const isNextCard: boolean =
             index === (currentIndex + 1) % availableTickets.length;
-          const isEnded = today > ticket.eventDate;
+          const isEnded: boolean = today > new Date(ticket.eventDate);
 
-          let zIndex = 0;
-          let transform = 'scale(0.9) translateX(-100%) rotate(-5deg)';
-          let opacity = '0';
+          let zIndex: number = 0;
+          let transform: string = 'scale(0.9) translateX(-100%) rotate(-5deg)';
+          let opacity: string = '0';
 
           if (isCurrentCard) {
             zIndex = 10;
@@ -204,10 +113,13 @@ const Tickets = () => {
 
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
-                      <Button className="mt-8 w-full">Get a Ticket</Button>
+                      <Button type="button" className="mt-8 w-full">
+                        Get a Ticket
+                      </Button>
                     </a>
                   ) : (
                     <Button
+                      type="button"
                       disabled={true}
                       overlay={true}
                       className="mt-8 w-full bg-gray-300"
@@ -223,16 +135,18 @@ const Tickets = () => {
       </div>
 
       <div className="flex justify-center mt-6 gap-2">
-        {availableTickets.map((_, index) => (
-          <button
-            key={index}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
-            }`}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Go to ticket ${index + 1}`}
-          />
-        ))}
+        {availableTickets.map((_, index: number) => {
+          return (
+            <button
+              key={index}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
+              }`}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to ticket ${index + 1}`}
+            />
+          );
+        })}
       </div>
     </div>
   );

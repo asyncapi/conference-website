@@ -118,7 +118,6 @@ export default function Home() {
                             onClick={() => {
                               setCurrentCity(city);
                               handleSpeakers(city.name);
-                              // setSpeakersList(speaker.lists);
                             }}
                           >
                             <Button
@@ -239,37 +238,6 @@ export default function Home() {
             </div>
             <div className="w-full mt-12">
               <TicketCards />
-            </div>
-          </div>
-          <div data-test="ticket-section">
-            <Heading
-              typeStyle="heading-md"
-              className="text-gradient text-center lg:mt-10"
-            >
-              Get Tickets
-            </Heading>
-            <div className="max-w-3xl sm:w-full text-center">
-              <Paragraph
-                typeStyle="body-lg"
-                className="mt-6"
-                textColor="text-gray-200"
-              >
-                Experience the Future of Asynchronous Communication: Get Tickets
-                for the AsyncAPI Conference!
-              </Paragraph>
-            </div>
-            <div className="w-[1000px] lg:w-full mt-10 flex justify-between lg:flex-col">
-              {cities.map((city) => {
-                if (getEventStatus(city.date) !== ConferenceStatus.ENDED) {
-                  return (
-                    <TicketCards
-                      key={city.name}
-                      city={city}
-                      className="lg:mt-10"
-                    />
-                  );
-                }
-              })}
             </div>
           </div>
         </div>
