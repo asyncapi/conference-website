@@ -20,7 +20,6 @@ import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from '../../config/cfp-data.json';
 import { GetStaticPropsContext } from 'next';
-import { TicketCard } from '../../components/Tickets/ticketCard';
 
 interface IVenue {
   city: ExtendedCity;
@@ -36,10 +35,10 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
     speaker.city.includes(cityName)
   );
   const cityAgenda = agenda.filter((a) => a.city === cityName);
-  const cityTicket = tickets.filter((ticket) => ticket.type === cityName);
+  const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
-  currentCity.ticket = cityTicket;
+  currentCity.ticket = cityTicket[0];
   return {
     props: {
       city: currentCity,
@@ -61,7 +60,7 @@ function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
-
+  console.log(city.agenda);
   return (
     <div data-test={`venue-${city.name}`}>
       <div
@@ -113,7 +112,15 @@ function Venue({ city }: IVenue) {
               )
             ) : (
               <div className="m-[30px]">
-                {city.ticket && <TicketCard ticket={city.ticket} />}
+                {city.ticket && city.ticket.url && (
+                  <a href={city.ticket.url} target="_blank" rel="noreferrer">
+                    <Button type="button" className="px-8 m-2 w-[250px]">
+                      {city.ticket.price
+                        ? 'Get Your Free Ticket'
+                        : 'Register Now'}
+                    </Button>
+                  </a>
+                )}
                 {eventStatus !== ConferenceStatus.ENDED && city.cfp && (
                   <a
                     href={
