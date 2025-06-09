@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { SpeakerTypes } from '../../types/types';
+import { Speaker as SpeakerTypes } from '../../types/types';
 
 interface ISpeaker {
   details: SpeakerTypes;

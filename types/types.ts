@@ -40,7 +40,7 @@ export enum ConferenceStatus {
   ENDED = 'Ended',
 }
 
-export interface SpeakerTypes {
+export interface Speaker {
   name: string;
   title: string;
   img: string;
@@ -51,7 +51,9 @@ export interface SpeakerTypes {
 export interface Agenda {
   time: string;
   session: string;
-  speaker: number;
+  speaker: number | number[];
+  type: string;
+  city: string;
 }
 
 export interface Ticket {
@@ -64,4 +66,10 @@ export interface Ticket {
   available: number;
   eventDate: string;
   benefits: string[];
+}
+
+export interface ExtendedCity extends City {
+  speakers: Speaker[];
+  agenda: Agenda[];
+  ticket?: Ticket;
 }

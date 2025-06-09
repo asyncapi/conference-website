@@ -1,25 +1,48 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import cities from '../../config/city-lists.json';
 import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
-import speakers from '../../config/speakers.json';
 import Sponsors from '../../components/Sponsors/sponsors';
-import { isEventEnded } from '../../components/Venue/venue';
+import {
+  Agenda as AgendaType,
+  City,
+  ConferenceStatus,
+  ExtendedCity,
+  Speaker as SpeakerTypes,
+} from '../../types/types';
+import { getEventStatus } from '../../utils/status';
+import agenda from '../../config/agenda.json';
+import speakers from '../../config/speakers.json';
+import cities from '../../config/city-lists.json';
+import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from '../../config/cfp-data.json';
-export async function getStaticProps({ params }) {
-  let res = {};
-  const data = cities.filter((p) => p.name === params.id);
-  res = data[0];
-  const getSpeakers = speakers.filter((s) => s.city === res?.name);
-  res.speakers = getSpeakers[0].lists;
-  res.agenda = getSpeakers[0].agenda || null;
+import { GetStaticPropsContext } from 'next';
+import { TicketCard } from '../../components/Tickets/ticketCard';
+
+interface IVenue {
+  city: ExtendedCity;
+}
+
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  //temporary type
+  let currentCity: any;
+  const cityName = params?.id as string;
+  const city = cities.filter((city) => city.name === cityName);
+  currentCity = city[0];
+  const citySpeakers = speakers.filter((speaker) =>
+    speaker.city.includes(cityName)
+  );
+  const cityAgenda = agenda.filter((a) => a.city === cityName);
+  const cityTicket = tickets.filter((ticket) => ticket.type === cityName);
+  currentCity.speakers = citySpeakers;
+  currentCity.agenda = cityAgenda;
+  currentCity.ticket = cityTicket;
   return {
     props: {
-      city: res,
+      city: currentCity,
     },
   };
 }
@@ -34,9 +57,10 @@ export async function getStaticPaths() {
   };
 }
 
-function Venue({ city }) {
-  const eventEnded = isEventEnded(city.date);
-  const textColor = eventEnded ? 'text-gray-400' : 'text-white';
+function Venue({ city }: IVenue) {
+  const eventStatus = getEventStatus(city.date);
+  const textColor: string =
+    eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
 
   return (
     <div data-test={`venue-${city.name}`}>
@@ -56,7 +80,7 @@ function Venue({ city }) {
                 {city.name} {city.country}
               </Heading>
             ) : (
-              <Heading className={textColor}>
+              <Heading typeStyle="heading-lg" className={`${textColor}`}>
                 {city.name}, {city.country}
               </Heading>
             )}
@@ -65,35 +89,32 @@ function Venue({ city }) {
               {city.description}
             </Paragraph>
 
-            <Heading
-              typeStyle="lg"
-              className={`${textColor} mt-[24px] underline`}
+            <Paragraph
+              typeStyle="body-md"
+              className={`${textColor} mt-[24px] underline font-bold`}
             >
-              <a href={city.map} target="_blank" rel="noreferrer">
+              <a href={city.mapUrl} target="_blank" rel="noreferrer">
                 {city.address}
               </a>
-            </Heading>
-            <Heading typeStyle="lg" className={`${textColor} mt-[24px]`}>
+            </Paragraph>
+            <Paragraph
+              typeStyle="body-lg"
+              className={`${textColor} mt-[24px] font-bold`}
+            >
               {city.date}
-            </Heading>
-            {city.ended ? (
+            </Paragraph>
+            {eventStatus === ConferenceStatus.ENDED ? (
               city.playlist && (
                 <a href="#recordings">
-                  <Button className="w-[250px] h-[50px] m-8">
+                  <Button type="button" className="w-[250px] h-[50px] m-8">
                     Watch Recordings
                   </Button>
                 </a>
               )
             ) : (
               <div className="m-[30px]">
-                {city.ticket && (
-                  <a href={city.ticket} target="_blank" rel="noreferrer">
-                    <Button className="px-8 m-2 w-[250px]">
-                      {city.isFree ? 'Get Your Free Ticket' : 'Register Now'}
-                    </Button>
-                  </a>
-                )}
-                {!eventEnded && city.cfp && (
+                {city.ticket && <TicketCard ticket={city.ticket} />}
+                {eventStatus !== ConferenceStatus.ENDED && city.cfp && (
                   <a
                     href={
                       city.name === 'online'
@@ -103,7 +124,7 @@ function Venue({ city }) {
                     target={city.name == 'Online' ? '' : '_blank'}
                     rel="noreferrer"
                   >
-                    <Button className="px-8 m-2 w-[250px]">
+                    <Button type="submit" className="px-8 m-2 w-[250px]">
                       Apply to be a speaker
                     </Button>
                   </a>
@@ -121,7 +142,7 @@ function Venue({ city }) {
           <div className="w-[1090px] lg:w-full">
             <Guidelines
               talkDeadLine={
-                (city.name == 'Online' && CFPdata.CallEndDate) || city.cfpdate
+                (city.name == 'Online' && CFPdata.CallEndDate) || city.cfpDate
               }
               virtual={city.name == 'Online'}
               name={city.name}
@@ -135,7 +156,7 @@ function Venue({ city }) {
         )}
       </div>
       <div id="recordings" className="flex justify-center">
-        {city.ended ? (
+        {eventStatus === ConferenceStatus.ENDED ? (
           city.playlist && (
             <div className=" pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72">
               <h1 className="text-white font-bold text-5xl mb-10">
@@ -146,10 +167,10 @@ function Venue({ city }) {
                 height="100%"
                 src={city.playlist}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
               ></iframe>
             </div>
           )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Buttons/button';
 import Arrows from '../illustration/arrows';
-import Ticket from '../illustration/ticket';
+import TicketIcon from '../illustration/ticket';
 import tickets from '../../config/tickets.json';
 import { Ticket as ITicket } from '../../types/types';
 
@@ -105,7 +105,7 @@ const Tickets = (): JSX.Element => {
                   <ul className="mt-6 space-y-2">
                     {ticket.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-center text-gray-600">
-                        <Ticket className="h-4 w-4 mr-2 text-blue-500" />
+                        <TicketIcon className="h-4 w-4 mr-2 text-blue-500" />
                         {benefit}
                       </li>
                     ))}

@@ -1,5 +1,7 @@
+type TypeStyle = 'body-lg' | 'body-md' | 'body-sm';
+
 interface IParagraph {
-  typeStyle?: string;
+  typeStyle?: TypeStyle;
   textColor?: string;
   fontWeight?: string;
   className?: string;

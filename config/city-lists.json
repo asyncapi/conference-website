@@ -17,7 +17,6 @@
       ]
     },
     "freeEntry": true,
-    "status": "ended",
     "cfp": null,
     "recordings": null,
     "playlist": null
@@ -40,7 +39,6 @@
       ]
     },
     "freeEntry": true,
-    "status": "upcoming",
     "cfp": null,
     "recordings": null,
     "playlist": null
@@ -85,7 +83,6 @@
       ]
     },
     "freeEntry": true,
-    "status": "upcoming",
     "cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
     "recordings": null,
     "playlist": null

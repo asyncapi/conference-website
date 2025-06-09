@@ -1,15 +1,20 @@
 import React from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
+import { Agenda as AgendaType, ExtendedCity } from '../../types/types';
 import Image from 'next/image';
 
-function Agenda({ city }) {
+interface IAgenda {
+  city: ExtendedCity;
+}
+
+function Agenda({ city }: IAgenda): JSX.Element {
   return (
     <div className="" data-test="agenda-com">
       <div className="flex flex-col justify-center items-center">
         {!city.agenda ? (
           <div className="w-[720px] lg:w-full mt-[10px] text-center">
-            <Heading typeStyle="lg" className="text-white text-[30px]">
+            <Heading typeStyle="heading-lg" className="text-white text-[30px]">
               Agenda Coming Soon - Stay Tuned!
             </Heading>
           </div>
@@ -29,7 +34,7 @@ function Agenda({ city }) {
           </Heading>
 
           <div className="mt-[40px]">
-            {city.agenda.map((talk) => {
+            {city.agenda.map((talk: AgendaType) => {
               return (
                 <div
                   key={talk.time}

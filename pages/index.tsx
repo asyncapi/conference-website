@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
-import TicketCards from '../components/Tickets/ticketCards';
+import Tickets from '../components/Tickets/tickets';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
@@ -16,8 +15,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
-import { City, ConferenceStatus } from '../types/types';
-import { getEventStatus } from '../utils/status';
+import { City } from '../types/types';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -237,7 +235,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full mt-12">
-              <TicketCards />
+              <Tickets />
             </div>
           </div>
         </div>
