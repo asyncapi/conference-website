@@ -60,7 +60,6 @@ function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
-  console.log(city.agenda);
   return (
     <div data-test={`venue-${city.name}`}>
       <div
