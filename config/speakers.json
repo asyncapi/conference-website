@@ -11,22 +11,22 @@
 		{
 			"name": "Hugo Guerrero",
 			"title": "Head of Technical Marketing at Kong",
-			"img": "/img/london-speakers/Hugo Guerrero.webp"
+			"img": "/img/speaker-images/london/Hugo Guerrero.webp"
 		},
 		{
 			"name": "Naresh Jain",
 			"title": "Founder & CEO at Specmatic",
-			"img": "/img/paris-images/Naresh.webp"
+			"img": "/img/speaker-images/paris/Naresh.webp"
 		},
 		{
 			"name": "Tamimi Ahmad",
 			"title": "Senior Developer Advocate at Solace",
-			"img": "/img/london-speakers/Tamimi.webp"
+			"img": "/img/speaker-images/london/Tamimi.webp"
 		},
 		{
 			"name": "Ankit Kumar",
 			"title": "Head of Developer and Customer Success at Aklivity",
-			"img": "/img/london-speakers/Ankit.webp"
+			"img": "/img/speaker-images/london/Ankit.webp"
 		}
 	],
 		"agenda": [
@@ -59,13 +59,65 @@
 	{
 		"city": "Munich",
 		"location": "Munich, Germany",
-		"lists": [],
+		"lists": [
+		{
+			"name": "Dr. Annegret Junker",
+			"title": "Chief Software Architect at codecentric AG",
+			"img": "/img/speaker-images/paris/Annegret.webp"
+		},
+		{
+			"name": "Naresh Jain",
+			"title": "Founder & CEO at Specmatic",
+			"img": "/img/speaker-images/paris/Naresh.webp"
+		},
+		{
+			"name": "Eduardo Maldonado Fonseca Silva",
+			"title": "Senior Platform Engineer at The LEGO Group",
+			"img": "/img/speaker-images/london/Eduardo.webp"
+		},
+		{
+			"name": "Andreas Habel",
+			"title": "Executive Professional for Enterprise Integration at Schwarz IT KG",
+			"img": "/img/speaker-images/munich/Andreas.webp"
+		},
+		{
+			"name": "Fabrizio Lazzaretti",
+			"title": "Managing Consultant at Wavestone",
+			"img": "/img/speaker-images/munich/Fabrizio.webp"
+		}
+	],
 		"agenda": null
 	},
 	{
 		"city": "Lagos",
 		"location": "Lagos, Nigeria",
-		"lists": [],
+		"lists": [
+		{
+			"name": "Azeez Elegbede",
+			"title": "Developer Advocate at AsyncAPI Initiative",
+			"img": "/img/speaker-images/lagos/Azeez.webp"
+		},
+		{
+			"name": "Thulisile Sibanda",
+			"title": "Senior Community Manager at AsyncAPI Initiative",
+			"img": "/img/speaker-images/london/Thulisile Sibanda.webp"
+		},
+		{
+			"name": "Prince Onyeanuna",
+			"title": "Technical Writer at Pi Squared",
+			"img": "/img/speaker-images/lagos/Prince.webp"
+		},
+		{
+			"name": "Aishat Muibudeen",
+			"title": "Lead Design Maintainer at AsyncAPI Initiative",
+			"img": "/img/speaker-images/online-conf/Maya.webp"
+		},
+		{
+			"name": "Ezinne Anne Emilia",
+			"title": "Documentation Mentee at AsyncAPI Initiative",
+			"img": "/img/speaker-images/lagos/Ezinne.webp"
+		}
+	],
 		"agenda": null
 	},
 	{
