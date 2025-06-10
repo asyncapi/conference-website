@@ -34,9 +34,9 @@ const Tickets = () => {
       id: 3,
       type: 'Lagos, Nigeria',
       price: 0,
-      url: false,
+      url: 'https://apiconf.net/register',
       description: 'Access to all conference talks and workshops',
-      status: 'Not Yet Available',
+      status: 'Register Now',
       available: 50,
       eventDate: new Date('2025-07-18'),
       benefits: ['All talks', 'Workshop access', 'Lunch included']
