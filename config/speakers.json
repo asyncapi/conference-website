@@ -11,28 +11,28 @@
             {
                 "name": "Hugo Guerrero",
                 "title": "Head of Technical Marketing at Kong",
-                "img": "/img/london-speakers/Hugo Guerrero.webp",
+                "img": "/img/speaker-images/london/Hugo Guerrero.webp",
                 "bio": "Hugo is passionate about APIs, cloud native technologies, and community building.",
                 "linkedin": "https://www.linkedin.com/in/hugoguerrero/"
             },
             {
                 "name": "Naresh Jain",
                 "title": "Founder & CEO at Specmatic",
-                "img": "/img/paris-images/Naresh.webp",
+                "img": "/img/speaker-images/paris/Naresh.webp",
                 "bio": "Naresh is an internationally recognized Technology & Product Innovator known for his work on Agile methods and software design.",
                 "linkedin": "https://www.linkedin.com/in/nareshjain/"
             },
 			{
 				"name": "Tamimi Ahmad",
 				"title": "Senior Developer Advocate at Solace",
-				"img": "/img/london-speakers/Tamimi.webp",
+				"img": "/img/speaker-images/london/Tamimi.webp",
                 "bio": "Tamimi Ahmad is a Senior Developer Advocate at Solace, focused on empowering developer communities.",
                 "linkedin": "https://www.linkedin.com/in/atamimi1/"
             },
             {
                 "name": "Ankit Kumar",
                 "title": "Head of Developer and Customer Success at Aklivity",
-                "img": "/img/london-speakers/Ankit.webp",
+                "img": "/img/speaker-images/london/Ankit.webp",
                 "bio": "Ankit specializes in building developer ecosystems and creating successful customer experiences.",
                 "linkedin": "https://www.linkedin.com/in/ankit28/"
             }
@@ -71,27 +71,37 @@
 		{
 			"name": "Dr. Annegret Junker",
 			"title": "Chief Software Architect at codecentric AG",
-			"img": "/img/speaker-images/paris/Annegret.webp"
+			"img": "/img/speaker-images/paris/Annegret.webp",
+            "bio": "Ankit specializes in building developer ecosystems and creating successful customer experiences.",
+            "linkedin": "https://www.linkedin.com/in/ankit28/"
 		},
 		{
 			"name": "Naresh Jain",
 			"title": "Founder & CEO at Specmatic",
-			"img": "/img/speaker-images/paris/Naresh.webp"
+			"img": "/img/speaker-images/paris/Naresh.webp",
+            "bio": "Naresh is an internationally recognized Technology & Product Innovator known for his work on Agile methods and software design.",
+            "linkedin": "https://www.linkedin.com/in/nareshjain/"
 		},
 		{
 			"name": "Eduardo Maldonado Fonseca Silva",
 			"title": "Senior Platform Engineer at The LEGO Group",
-			"img": "/img/speaker-images/london/Eduardo.webp"
+			"img": "/img/speaker-images/london/Eduardo.webp",
+            "bio": "Senior Platform Engineer at The LEGO Group | Speaker at apidays",
+            "linkedin": "https://www.linkedin.com/in/eduardofesilva/"
 		},
 		{
 			"name": "Andreas Habel",
 			"title": "Executive Professional for Enterprise Integration at Schwarz IT KG",
-			"img": "/img/speaker-images/munich/Andreas.webp"
+			"img": "/img/speaker-images/munich/Andreas.webp",
+            "bio": "Executive Professional for Enterprise Integration at Schwarz IT KG",
+            "linkedin": "https://www.linkedin.com/in/andreashabel/"
 		},
 		{
 			"name": "Fabrizio Lazzaretti",
 			"title": "Managing Consultant at Wavestone",
-			"img": "/img/speaker-images/munich/Fabrizio.webp"
+			"img": "/img/speaker-images/munich/Fabrizio.webp",
+            "bio": "Managing Consultant at Wavestone",
+            "linkedin": "https://www.linkedin.com/in/fabrizio-lazzaretti/"
 		}
 	],
         "agenda": null
@@ -103,27 +113,37 @@
 		{
 			"name": "Azeez Elegbede",
 			"title": "Developer Advocate at AsyncAPI Initiative",
-			"img": "/img/speaker-images/lagos/Azeez.webp"
+			"img": "/img/speaker-images/lagos/Azeez.webp",
+            "bio": "Software Engineer | Developer Advocate | Technical Content Developer | Open Source Enthusiast | Passionate about Community Building and Mentorship",
+            "linkedin": "https://www.linkedin.com/in/aelegbede/"
 		},
 		{
 			"name": "Thulisile Sibanda",
 			"title": "Senior Community Manager at AsyncAPI Initiative",
-			"img": "/img/speaker-images/london/Thulisile Sibanda.webp"
+			"img": "/img/speaker-images/london/Thulisile Sibanda.webp",
+            "bio": "Open Source | Community Building | Developer Documentation | DevRel",
+            "linkedin": "https://www.linkedin.com/in/v-thulisile-sibanda/"
 		},
 		{
 			"name": "Prince Onyeanuna",
 			"title": "Technical Writer at Pi Squared",
-			"img": "/img/speaker-images/lagos/Prince.webp"
+			"img": "/img/speaker-images/lagos/Prince.webp",
+            "bio": "Technical Writer",
+            "linkedin": "https://www.linkedin.com/in/prince-onyeanuna-607352246/"
 		},
 		{
 			"name": "Aishat Muibudeen",
 			"title": "Lead Design Maintainer at AsyncAPI Initiative",
-			"img": "/img/speaker-images/online-conf/Maya.webp"
+			"img": "/img/speaker-images/online-conf/Maya.webp",
+            "bio":"Open Source Maintainer | Product Designer | Community Manager | Public Speaker | DEI Advocate | Web Accessibility | Founder, OpenNest-Africa",
+            "linkedin": "https://www.linkedin.com/in/aishatmuibudeen/"
 		},
 		{
 			"name": "Ezinne Anne Emilia",
 			"title": "Documentation Mentee at AsyncAPI Initiative",
-			"img": "/img/speaker-images/lagos/Ezinne.webp"
+			"img": "/img/speaker-images/lagos/Ezinne.webp",
+            "bio": "Technical writer, ML engineer, open source contributor",
+            "linkedin": "https://www.linkedin.com/in/ezinneanneemilia/"
 		}
 	],
         "agenda": null
