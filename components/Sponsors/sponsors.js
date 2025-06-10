@@ -48,14 +48,15 @@ function Sponsors({ eventSponsors, financialSponsor }) {
                  {financialSponsor.map((sponsor) => (
                   <div
                     key={sponsor.image}
-                    className={`${sponsor.className ? sponsor.className : ""}`}
+                     className={`w-[300px] h-[150px] flex justify-center items-center ${sponsor.className ?? ""}`}
                   >
                     <Link href={sponsor.websiteUrl} target="_blank">
                       <Image
                         src={sponsor.image}
                         alt={sponsor.image}
-                        height={210}
-                        width={300}
+                        height={120}
+                        width={260}
+                        className="object-contain"
                       />
                     </Link>
                   </div>
