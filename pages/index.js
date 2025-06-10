@@ -240,7 +240,8 @@ export default function Home() {
               websiteUrl: "https://www.ibm.com/",
             },
             {
-              image: "/img/logos/graviteeio.svg",
+              image: "/img/logos/graviteeio-logo.webp",
+            
               websiteUrl: "https://www.gravitee.io/",
             },
           ] 
