@@ -10,7 +10,8 @@
     "lint": "next lint",
     "export": "next export",
     "generate:assets": "echo \"No assets to configure\"",
-    "test": "cypress open",
+    "test": "echo \"No tests configured yet\"",
+    "cy:open": "cypress open",
     "release": "echo \"No release to npm for this project\""
   },
   "dependencies": {
