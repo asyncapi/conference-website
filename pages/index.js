@@ -10,7 +10,6 @@ import About from "../components/About/about";
 import TicketCards from "../components/Tickets/ticketCards";
 import Heading from "../components/Typography/heading";
 import Paragraph from "../components/Typography/paragraph";
-import Subscription from "../components/Form/subscription";
 import Speaker from "../components/Speaker/speaker";
 import speakers from "../config/speakers.json";
 import Link from "next/link";
@@ -257,9 +256,6 @@ export default function Home() {
             },
           ]}/>
                 </div>
-      <div className="mt-5">
-        <Subscription />
-      </div>
     </div>
   );
 }
