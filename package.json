@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "lint": "next lint",
@@ -17,7 +18,6 @@
   "dependencies": {
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.8.2",
-    "d3": "^7.8.5",
     "net": "^1.0.2",
     "next": "^14.2.26",
     "next-on-netlify": "^3.0.1",
