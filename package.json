@@ -17,6 +17,7 @@
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.8.2",
     "d3": "^7.8.5",
+    "lucide-react": "^0.487.0",
     "net": "^1.0.2",
     "next": "^14.2.26",
     "next-on-netlify": "^3.0.1",

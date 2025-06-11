@@ -4,11 +4,12 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Image from 'next/image';
+
 function About() {
     return (
 		<div className='p-24 container flex items-center justify-center w-full' data-test="about-section">
 			<div className='w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between'>
-				<div style={{'--image-url': `url('/img/about.jpeg')`}} className='lg:mt-16 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]' >
+				<div style={{'--image-url': `url('/img/about.webp')`}} className='lg:mt-16 bg-[image:var(--image-url)] bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]' >
 			</div>
 				<div className='w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center'>
 				<div className='flex items-center lg:justify-center'>
@@ -38,7 +39,7 @@ function About() {
 						<a className='flex justify-center ' href='/pdf/conf-2025.pdf' download={`conf ${new Date().getFullYear()}.pdf`} >
 							<Button overlay={true} className='w-[240px] border'>
 								<div className='flex gap-2 justify-center items-center'>
-									<Image src="/img/Download_icon.png" height={20} width={20} alt='Download-icon' objectFit='contain'  />
+									<Image src="/img/Download_icon.webp" height={20} width={20} alt='Download-icon' objectFit='contain'  />
 									<div>
 										Sponsorship prospectus
 									</div>

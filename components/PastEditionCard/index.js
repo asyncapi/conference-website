@@ -1,5 +1,5 @@
 import React from 'react'
-import ILink from '../illustration/link'
+import {ExternalLink} from 'lucide-react'
 const PastEditonCard = ({ url }) => {
     let year = url.split('.')[1]
     return (
@@ -9,7 +9,7 @@ const PastEditonCard = ({ url }) => {
                 <div>
                     <a href={url} rel='noreferrer' target='_blank' className='flex hover:scale-95 transiti items-center justify-center'>
                        <p className='mr-2 text-white text-sm'>View Website</p> 
-                       <ILink className='w-5 ' fill='white' />
+                       <ExternalLink color='white' size={19} />
                     </a>
                 </div>
             </div>
