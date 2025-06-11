@@ -32,7 +32,7 @@ function StepTwo({ setStep, setForm, data }: CfpStepProps): JSX.Element {
           onChange={(e) => setForm({ ...data, Description: e.target.value })}
           data-test="step-two-description"
         />
-        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
+        <div className="float-right flex items-center lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
             onClick={(e) => setStep(null, 1)}

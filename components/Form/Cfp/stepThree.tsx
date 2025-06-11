@@ -67,7 +67,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
           multi={undefined}
           dataTest="step-three-level"
         />
-        <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
+        <div className="float-right mt-3 flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
             onClick={() => setStep(null, 2)}
