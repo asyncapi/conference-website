@@ -1,7 +1,8 @@
 import React from 'react';
 import PastEditonCard from '../../components/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
-const PastEditions = () => {
+
+const PastEditions = (): JSX.Element => {
   return (
     <div>
       <title>Past Editions | AACoT</title>
@@ -15,7 +16,7 @@ const PastEditions = () => {
       </div>
 
       <div className="w-3/4 sm:w-10/12 my-10 mx-auto grid grid-cols-2 lg:grid-cols-1 gap-[60px]">
-        {pastEditionsArchiveLinks.map((item, index) => {
+        {pastEditionsArchiveLinks.map((item: string, index) => {
           return <PastEditonCard key={index} url={item} />;
         })}
       </div>

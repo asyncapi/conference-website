@@ -31,12 +31,12 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
         >
           Event and Host Sponsor
         </Heading>
-        <div className="flex justify-center  w-[650px] sm:w-full flex-col  items-center">
+        <div className="flex justify-center w-[650px] sm:w-full flex-col  items-center">
           {eventSponsors &&
             eventSponsors.map((sponsor) => (
               <div
                 key={sponsor.image}
-                className={`w-[300px] h-[150px] flex flex-col justify-center items-center ${sponsor.className ? sponsor.className : ''}`}
+                className={`w-[300px] h-[150px] flex flex-col justify-center items-center`}
               >
                 <Link href={sponsor.websiteUrl} target="_blank">
                   <Image

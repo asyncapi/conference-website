@@ -30,7 +30,7 @@ const options2: SelectOptions[] = [
   },
 ];
 
-function StepThree({ setStep, setForm, data }: CfpStepProps) {
+function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   const [value, setValue] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -70,7 +70,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps) {
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={(e) => setStep(e, 2)}
+            onClick={() => setStep(null, 2)}
           >
             Back
           </a>

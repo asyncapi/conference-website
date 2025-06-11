@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
-function StepOne({ setStep, setForm, data }: CfpStepProps) {
+function StepOne({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 2)} data-test="step-one">
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
@@ -32,7 +32,6 @@ function StepOne({ setStep, setForm, data }: CfpStepProps) {
         <div className="text-dark-600 text-lg mt-5">Bio</div>
         <textarea
           required
-          type="text"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Bio: e.target.value })}
           data-test="step-one-bio"

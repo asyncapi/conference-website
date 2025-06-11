@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
-function StepTwo({ setStep, setForm, data }: CfpStepProps) {
+function StepTwo({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   return (
     <form
       className="mt-3 w-[30rem] lg:w-[auto]"

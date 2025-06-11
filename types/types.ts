@@ -104,3 +104,8 @@ export interface SelectOptions {
   value: string;
   label: string;
 }
+
+export type FaqTypes = {
+  q: string;
+  a: string;
+};

@@ -45,7 +45,7 @@ function SelectDropdown({
   setValue,
   multi,
   dataTest,
-}: SelectDropDownProps) {
+}: SelectDropDownProps): JSX.Element {
   const [selectedOption, setSelectedOption] = useState<Partial<SelectOptions>>(
     {}
   );

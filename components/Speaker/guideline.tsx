@@ -2,37 +2,17 @@ import React, { useState } from 'react';
 import Plus from '../illustration/plus';
 import Heading from '../Typography/heading';
 import Button from '../Buttons/button';
-const faqs = [
-  {
-    q: 'What is AsyncAPI Conf?',
-    a: 'AsyncAPI Conference is a way for you to experience the excitement and energy of this series of micro-conferences hosted around the globe, where the brightest minds and most passionate enthusiasts gather to share their knowledge and explore the latest developments in the field.',
-  },
-  {
-    q: 'Who can submit a talk?',
-    a: "We're excited to have speakers from different parts of the globe sharing how they apply the AsyncAPI Specification in their practical use cases. We encourage proposals from all individuals, regardless of their expertise level, to promote a diverse content track that welcomes everyone.",
-  },
-  {
-    q: 'When is the deadline to submit a talk?',
-    a1: 'The deadline date for submitting a talk is on ',
-    a2: ' at 12pm UTC',
-  },
-  {
-    q: "Talks we don't recommend",
-    a: 'Marketing/Sales - rather share your experience or use case using our tools or specification.',
-  },
-  {
-    q: 'Talks Review',
-    a: 'Reviews will be kept anonymous, and reviewers will not have access to speaker information such as name, gender or company, etc.',
-  },
-  {
-    q: 'Can I send a virtual talk?',
-    ai: 'No, this is an in-person event; all speakers must deliver their sessions in person.',
-    av: 'Yes, you can send a virtual talk as this is an online event.',
-  },
-];
+import faqs from '../../config/faqs.json';
 
-function Guidelines({ talkDeadLine, virtual, name, cfp }) {
-  const [show, setShow] = useState(null);
+interface GuidelinesProps {
+  talkDeadLine: string;
+  virtual: boolean;
+  name: string;
+  cfp: string;
+}
+
+function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
+  const [show, setShow] = useState<number | null>(null);
   return (
     <div className="z-[9]" data-test="guideline-com">
       <div className="flex flex-col justify-center">
@@ -92,12 +72,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }) {
                     }
                   }}
                 >
-                  <div
-                    className="pb-4 cursor-pointer mt-4 "
-                    style={{
-                      borderBottom: '1px solid #333',
-                    }}
-                  >
+                  <div className="pb-4 cursor-pointer mt-4 border-b border-b-[#333]">
                     <div
                       className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                     >
@@ -137,12 +112,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }) {
                   }
                 }}
               >
-                <div
-                  className="pb-4 cursor-pointer mt-4 "
-                  style={{
-                    borderBottom: '1px solid #333',
-                  }}
-                >
+                <div className="pb-4 cursor-pointer mt-4 border-b border-b-[#333]">
                   <div
                     className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                   >
@@ -172,7 +142,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }) {
               target={name == 'Online' ? '' : '_blank'}
               rel="noreferrer"
             >
-              <Button className="x-8 m-2 w-[250px] text-center">
+              <Button type="button" className="x-8 m-2 w-[250px] text-center">
                 Submit Talk Proposal
               </Button>
             </a>

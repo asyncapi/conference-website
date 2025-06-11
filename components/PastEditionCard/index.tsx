@@ -1,6 +1,11 @@
 import React from 'react';
 import ILink from '../illustration/link';
-const PastEditonCard = ({ url }) => {
+
+interface PastEditonCardProp {
+  url: string;
+}
+
+const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
   let year = url.split('.')[1];
   return (
     <div className="bg-white bg-opacity-10 backdrop-blur-lg bg-clip-padding shadow-lg p-4 w-full mx-auto border-[1.66px] border-[#FFFFFF66] rounded-xl ">

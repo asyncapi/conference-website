@@ -62,7 +62,7 @@ function StepFour({ setStep, setForm, data }: CfpStepProps) {
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={(e) => !disabled && setStep(e, 3)}
+            onClick={() => !disabled && setStep(null, 3)}
           >
             Back
           </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Buttons/button';
 
-function Subscription() {
+function Subscription(): JSX.Element {
   return (
     <div className="mt-0 md:mt-[106px] subscription container flex justify-center">
       <div className="mt-[106px] lg:mt-0 w-[1024px] min-h-[253px] lg:py-10 lg:w-full flex flex-col items-center">

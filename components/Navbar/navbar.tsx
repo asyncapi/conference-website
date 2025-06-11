@@ -18,7 +18,7 @@ function Navbar(): JSX.Element {
   const svg = useRef<SVGSVGElement>(null);
 
   //TODO: Refactor Navbar Code
-  let closeTimeout = useRef<NodeJS.Timeout>(null);
+  let closeTimeout = useRef<ReturnType<typeof window.setTimeout> | null>(null);
 
   const handleClosing = useCallback(
     (event: MouseEvent) => {
