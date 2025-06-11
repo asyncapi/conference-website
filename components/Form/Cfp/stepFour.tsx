@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import axios from 'axios';
 import ActivityLoader from '../../illustration/activityLoader';
 import Button from '../../Buttons/button';
+import { CfpStepProps } from '../../../types/types';
 
-function StepFour({ setStep, setForm, data }) {
-  const [submitting, setSubmitting] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+function StepFour({ setStep, setForm, data }: CfpStepProps) {
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [disabled, setDisabled] = useState<boolean>(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
     axios
@@ -18,13 +19,13 @@ function StepFour({ setStep, setForm, data }) {
         setSubmitting(false);
         if (res.status === 200) {
           setDisabled(true);
-          setStep(e, 'successful');
+          setStep(e, 0);
         }
       })
       .catch((err) => {
         setSubmitting(false);
         toast.error('Failed to submit feedback. Try again', {
-          duration: '5600',
+          duration: 5600,
         });
       });
   };
@@ -42,10 +43,7 @@ function StepFour({ setStep, setForm, data }) {
       <div className="mt-10">
         <div className="text-dark-600 text-lg">Additional Information</div>
         <textarea
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
           data-test="step-four-additional"
         />
@@ -64,7 +62,7 @@ function StepFour({ setStep, setForm, data }) {
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={() => !disabled && setStep(null, 3)}
+            onClick={(e) => !disabled && setStep(e, 3)}
           >
             Back
           </a>

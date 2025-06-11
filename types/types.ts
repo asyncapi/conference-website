@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface SVGTypes {
   className?: string;
   fill?: string;
@@ -72,4 +74,33 @@ export interface ExtendedCity extends City {
   speakers: Speaker[];
   agenda: Agenda[];
   ticket?: Ticket;
+}
+
+export interface Social {
+  name: string;
+  href: string;
+  imgUrl: string;
+}
+
+export interface CfpForm {
+  Fullname: string;
+  Email: string;
+  Bio: string;
+  Social: string;
+  Title: string;
+  Description: string;
+  Format: string;
+  Level: string;
+  AdditionalInfo: string;
+}
+
+export interface CfpStepProps {
+  setStep: (e: React.FormEvent<HTMLFormElement> | null, step: number) => void;
+  setForm: React.Dispatch<React.SetStateAction<Partial<CfpForm>>>;
+  data: Partial<CfpForm>;
+}
+
+export interface SelectOptions {
+  value: string;
+  label: string;
 }

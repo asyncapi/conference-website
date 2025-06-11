@@ -1,14 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Button from '../../Buttons/button';
+import { CfpStepProps } from '../../../types/types';
 
-function StepOne({ setStep, setForm, data }) {
+function StepOne({ setStep, setForm, data }: CfpStepProps) {
   return (
-    <form
-      className="mt-3 w-[30rem] lg:w-[auto]"
-      onSubmit={(e) => setStep(e, 2)}
-      data-test="step-one"
-    >
+    <form className="mt-3" onSubmit={(e) => setStep(e, 2)} data-test="step-one">
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Let's start with your name
       </h1>
@@ -20,10 +17,7 @@ function StepOne({ setStep, setForm, data }) {
         <div className="text-dark-600 text-lg">Full name</div>
         <input
           required
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Fullname: e.target.value })}
           data-test="step-one-name"
         />
@@ -31,10 +25,7 @@ function StepOne({ setStep, setForm, data }) {
         <input
           required
           type="email"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Email: e.target.value })}
           data-test="step-one-email"
         />
@@ -42,10 +33,7 @@ function StepOne({ setStep, setForm, data }) {
         <textarea
           required
           type="text"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Bio: e.target.value })}
           data-test="step-one-bio"
         />
@@ -55,10 +43,7 @@ function StepOne({ setStep, setForm, data }) {
         <input
           required
           type="url"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Social: e.target.value })}
           data-test="step-one-social"
         />

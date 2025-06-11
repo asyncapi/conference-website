@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Button from '../../Buttons/button';
+import { CfpStepProps } from '../../../types/types';
 
-function StepTwo({ setStep, setForm, data }) {
+function StepTwo({ setStep, setForm, data }: CfpStepProps) {
   return (
     <form
       className="mt-3 w-[30rem] lg:w-[auto]"
@@ -20,27 +21,21 @@ function StepTwo({ setStep, setForm, data }) {
         <div className="text-dark-600 text-lg">Session Title</div>
         <input
           required
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Title: e.target.value })}
           data-test="step-two-title"
         />
         <div className="text-dark-600 text-lg mt-4">Session Description</div>
         <textarea
           required
-          className="mt-3 w-full p-4 rounded-md focus:outline-none"
-          style={{
-            border: '1px solid #E50E99',
-          }}
+          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm({ ...data, Description: e.target.value })}
           data-test="step-two-description"
         />
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={() => setStep(null, 1)}
+            onClick={(e) => setStep(null, 1)}
           >
             Back
           </a>

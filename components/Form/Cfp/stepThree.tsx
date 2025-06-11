@@ -2,15 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import Select from '../select';
 import Button from '../../Buttons/button';
+import { CfpStepProps, SelectOptions } from '../../../types/types';
 
-const options1 = [
+const options1: SelectOptions[] = [
   {
     value: 'Session',
     label: 'Session(20 - 25mins)',
   },
 ];
 
-const options2 = [
+const options2: SelectOptions[] = [
   {
     value: 'Introductory and overview',
     label: 'Introductory and overview',
@@ -29,11 +30,13 @@ const options2 = [
   },
 ];
 
-function StepThree({ setStep, setForm, data }) {
-  const [value, setValue] = useState({});
+function StepThree({ setStep, setForm, data }: CfpStepProps) {
+  const [value, setValue] = useState<Record<string, string>>({});
+
   useEffect(() => {
     setForm({ ...data, ...value });
-  }, [value, data, setForm]);
+  }, [value]);
+
   return (
     <form
       className="mt-3 w-[30rem] lg:w-[auto]"
@@ -53,23 +56,21 @@ function StepThree({ setStep, setForm, data }) {
         <div className="text-dark-600 text-lg mb-4">Session Format</div>
         <Select
           options={options1}
-          title="Select session format"
-          setValue={(val) => setValue({ ...value, Format: val })}
-          multi={false}
+          setValue={(val: string) => setValue({ ...value, Format: val })}
+          multi={undefined}
           dataTest="step-three-format"
         />
         <div className="text-dark-600 text-lg mt-4 mb-4">Session Level</div>
         <Select
           options={options2}
-          title="Select session level"
           setValue={(val) => setValue({ ...value, Level: val })}
-          multi={false}
+          multi={undefined}
           dataTest="step-three-level"
         />
         <div className="float-right mt-3 lg:flex lg:flex-col-reverse lg:w-full">
           <a
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={() => setStep(null, 2)}
+            onClick={(e) => setStep(e, 2)}
           >
             Back
           </a>

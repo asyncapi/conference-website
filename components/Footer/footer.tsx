@@ -1,30 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import ILink from '../illustration/link';
+import { Social } from '../../types/types';
+import socials from '../../config/socials.json';
 
-function Footer() {
-  const socials = [
-    {
-      name: 'Github',
-      href: 'https://github.com/asyncapi',
-      imgUrl: '/img/Github.png',
-    },
-    {
-      name: 'Linkedin',
-      href: 'https://www.linkedin.com/company/asyncapi/',
-      imgUrl: '/img/Linkedln.png',
-    },
-    {
-      name: 'Twitter(X)',
-      href: 'https://x.com/asyncapispec',
-      imgUrl: '/img/twitter_new.png',
-    },
-    {
-      name: 'YouTube',
-      href: 'https://www.youtube.com/@AsyncAPI',
-      imgUrl: '/img/youtube.png',
-    },
-  ];
+function Footer(): JSX.Element {
   return (
     <div className="container" data-test="footer">
       <div
@@ -53,7 +33,7 @@ function Footer() {
           </div>
           <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
           <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">
-            {socials.map((social, index) => {
+            {socials.map((social: Social, index) => {
               return (
                 <a
                   key={index}

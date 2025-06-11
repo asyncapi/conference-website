@@ -127,7 +127,7 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://conference.asyncapi.com/venue/online/register",
+    "cfp": "/venue/online/register",
     "recordings": null,
     "playlist": null
   },

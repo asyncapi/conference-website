@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Select from 'react-select';
+import Select, { MultiValue, StylesConfig } from 'react-select';
+import { SelectOptions } from '../../types/types';
 
-const customStyles = {
+const customStyles: StylesConfig<Partial<SelectOptions>, true> = {
   option: (provided, state) => ({
     ...provided,
     color: state.isSelected ? 'white' : 'black',
-    background: state.isSelected && '#E50E99',
+    background: state.isSelected ? '#E50E99' : undefined,
     padding: 10,
   }),
   multiValue: () => ({
@@ -16,8 +17,7 @@ const customStyles = {
     width: '150px',
     display: 'flex',
   }),
-  control: (_, { selectProps: { width } }) => ({
-    // none of react-select's styles are passed to <Control />
+  control: () => ({
     display: 'flex',
     padding: '10px',
     borderRadius: '5px',
@@ -33,26 +33,34 @@ const customStyles = {
   },
 };
 
-function Dropdown({ options, title, setValue, multi, dataTest }) {
-  const [selectedOption, setSelectedOption] = useState(title);
+interface SelectDropDownProps {
+  options: SelectOptions[];
+  setValue: (val: string) => void;
+  multi: undefined;
+  dataTest: string;
+}
+
+function SelectDropdown({
+  options,
+  setValue,
+  multi,
+  dataTest,
+}: SelectDropDownProps) {
+  const [selectedOption, setSelectedOption] = useState<Partial<SelectOptions>>(
+    {}
+  );
   useEffect(() => {
-    if (multi && Array.isArray(selectedOption)) {
-      const newValue = [];
-      selectedOption.map((option) => {
-        newValue.push(option.value);
-      });
-      setValue(newValue);
-    } else {
+    if (selectedOption?.value) {
       setValue(selectedOption.value);
     }
-  }, [selectedOption, multi, setValue]);
+  }, [selectedOption]);
   return (
     <div className="relative inline-block w-full">
       <Select
         className={`${dataTest || ''}`}
         styles={customStyles}
         defaultValue={selectedOption}
-        onChange={setSelectedOption}
+        onChange={(option) => setSelectedOption(option as any)}
         options={options}
         isMulti={multi}
       />
@@ -60,4 +68,4 @@ function Dropdown({ options, title, setValue, multi, dataTest }) {
   );
 }
 
-export default Dropdown;
+export default SelectDropdown;

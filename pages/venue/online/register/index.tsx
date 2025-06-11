@@ -1,10 +1,10 @@
 import Paper from '../../../../components/Form/paper';
 import Sponsors from '../../../../components/Sponsors/sponsors';
 
-export default function SpeakersForm() {
+export default function SpeakersForm(): JSX.Element {
   return (
     <div>
-      <div className="flex justify-center border  border-x-0 border-b-0 border-[#333]">
+      <div className="container">
         <Paper />
       </div>
       <div>

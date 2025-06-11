@@ -53,14 +53,16 @@ function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button className="w-[200px]">Become a sponsor now</Button>
+              <Button type="button" className="w-[200px]">
+                Become a sponsor now
+              </Button>
             </a>
             <a
               className="flex justify-center "
               href="/pdf/conf-2025.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
-              <Button overlay={true} className="w-[240px] border">
+              <Button type="button" overlay={true} className="w-[240px] border">
                 <div className="flex gap-2 justify-center items-center">
                   <Image
                     src="/img/Download_icon.png"
