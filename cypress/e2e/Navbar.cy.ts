@@ -1,10 +1,11 @@
 import navData from '../../config/links.json';
 import speakers from '../../config/speakers.json';
+import { LinkItem } from '../../types/types';
 
-let venueData = navData.filter((idx) => {
+let venueData = (navData as LinkItem[]).filter((idx) => {
   return idx.title == 'Venue';
 });
-let resourcesData = navData.filter((idx) => {
+let resourcesData = (navData as LinkItem[]).filter((idx) => {
   return idx.title == 'Resources Hub';
 });
 
@@ -26,7 +27,7 @@ describe('Navbar links', () => {
     cy.getTestData('nav-Speakers').click();
 
     cy.url().should('eq', 'http://localhost:3000/#speakers');
-    if (speakers && speakers.length > 0 && speakers[0]?.lists?.length > 0) {
+    if (Array.isArray(speakers) && speakers.length > 0) {
       cy.getTestData('sponsor-section').should('be.visible');
     } else {
       cy.log(
@@ -55,8 +56,8 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to venues', () => {
-    let data = venueData[0].subMenu;
-    cy.wrap(data).each((val, idx) => {
+    let data = venueData[0]?.subMenu;
+    cy.wrap(data).each((val: LinkItem, idx) => {
       cy.getTestData('nav-Venue').trigger('mouseover');
       cy.getTestData(`nav-sub-${val.title}`).click();
       cy.url().should('eq', `http://localhost:3000${val.ref}`);
@@ -66,7 +67,7 @@ describe('Navbar links', () => {
   it('should redirect to resource hub', () => {
     let data = resourcesData[0]?.subMenu;
     if (data) {
-      cy.wrap(data).each((val, idx) => {
+      cy.wrap(data).each((val: LinkItem, idx) => {
         cy.getTestData('nav-Resources Hub').trigger('mouseover');
         cy.wrap(val.ref).should(
           'match',
@@ -96,7 +97,7 @@ describe('Navbar links', () => {
     cy.getTestData('nav-Speakers').click();
 
     cy.url().should('eq', 'http://localhost:3000/#speakers');
-    if (speakers && speakers.length > 0 && speakers[0]?.lists?.length > 0) {
+    if (Array.isArray(speakers) && speakers.length > 0) {
       cy.getTestData('sponsor-section').should('be.visible');
     } else {
       cy.log(
@@ -137,7 +138,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
 
     let data = venueData[0].subMenu;
-    cy.wrap(data).each((val, idx) => {
+    cy.wrap(data).each((val: LinkItem, idx) => {
       cy.getTestData('nav-Hamberger').click();
       cy.getTestData('nav-Venue').click();
       cy.getTestData(`nav-sub-${val.title}`).click();
@@ -151,7 +152,7 @@ describe('Navbar links', () => {
 
     let data = resourcesData[0]?.subMenu;
     if (data) {
-      cy.wrap(data).each((val, idx) => {
+      cy.wrap(data).each((val: LinkItem, idx) => {
         cy.wrap(val.ref).should(
           'match',
           /.*(drive\.google\.com|youtube\.com).*/

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "target": "esnext",
+    "types":["cypress"],
     "module": "commonjs",
     "allowJs": true,
     "checkJs": true,        

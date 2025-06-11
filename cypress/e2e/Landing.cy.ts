@@ -22,12 +22,12 @@ describe('Landing Page Tests', () => {
     cy.getTestData('prospectus-download').should('be.visible');
     cy.getTestData('prospectus-download').click();
 
-    const downloadsFolder = Cypress.config('downloadsFolder');
+    const downloadsFolder = Cypress.config('downloadsFolder') as string;
     cy.readFile(path.join(downloadsFolder, `conf ${Year}.pdf`)).should('exist');
   });
 
   it('Should contain Speakers section', () => {
-    if (speakers && speakers.length > 0 && speakers[0]?.lists?.length > 0) {
+    if (Array.isArray(speakers) && speakers.length > 0) {
       cy.getTestData('sponsor-section').should('be.visible');
     } else {
       cy.log(

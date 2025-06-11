@@ -1,11 +1,12 @@
 import cities from '../../config/city-lists.json';
+import { City } from '../../types/types';
 
 it('should render guideline if cfp is open, and agenda otherwise', () => {
-  cy.wrap(cities).each((city) => {
+  cy.wrap(cities).each((city: City) => {
     cy.visit(`http://localhost:3000/venue/${city.name}`);
 
     cy.getTestData(`venue-${city.name}`).then((val) => {
-      if (city.cfp && !city.ended) {
+      if (city.cfp) {
         cy.getTestData('guideline-com').should('be.visible');
       } else {
         cy.getTestData('agenda-com').should('be.visible');
