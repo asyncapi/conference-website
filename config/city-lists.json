@@ -17,15 +17,15 @@
 			
 		},
 		"isFree": true,
-		"ended": false,
+		"ended": true,
 		"cfp": false,
-		"recordings":"",
-		"playlist":""
+		"recordings":"https://youtube.com/playlist?list=PLbi1gRlP7pihQ5DsS1v2lWs63tWEA6jGn&si=AoskGHoIn8bjtIIJ",
+		"playlist":"https://www.youtube.com/embed/videoseries?si=AoskGHoIn8bjtIIJ&amp;list=PLbi1gRlP7pihQ5DsS1v2lWs63tWEA6jGn"
 	},
 	{
 		"name": "Munich",
 		"country": "Germany",
-		"date": "2 - 3 July, 2025",
+		"date": "3 July, 2025",
 		"cfpdate":"11 May 2025",
 		"description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
 		"img": "/img/locations/munich.webp",

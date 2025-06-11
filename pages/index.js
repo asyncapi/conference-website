@@ -234,6 +234,18 @@ export default function Home() {
       </div>
       <div id="sponsors" className="mt-20">
       <Sponsors
+          financialSponsor={
+          [ {
+              image: "/img/logos/IBM.png",
+              websiteUrl: "https://www.ibm.com/",
+            },
+            {
+              image: "/img/logos/graviteeio-logo.webp",
+            
+              websiteUrl: "https://www.gravitee.io/",
+            },
+          ] 
+          }
           eventSponsors={[
             {
               image: "/img/logos/apidays.png",

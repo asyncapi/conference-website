@@ -20,7 +20,7 @@ function Sponsors({ eventSponsors, financialSponsor }) {
             we orchestrate an unforgettable celebration.
           </Paragraph>
         </div>
-        <Heading typeStyle='heading-md' className='text-gray-800 mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
+        <Heading typeStyle='heading-md' className='text-slate-200 mt-10 sm:text-2xl sm:mt-5'>Event and Host Sponsor</Heading>
         <div className="flex justify-center  w-[650px] sm:w-full flex-col  items-center">
           {eventSponsors &&
             eventSponsors.map((sponsor) => (
@@ -39,30 +39,32 @@ function Sponsors({ eventSponsors, financialSponsor }) {
               </div>
             ))}
         </div>
-        <div className=" flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold">
-          <div className="flex flex-col space-y-6">
+        <div>
             {financialSponsor && (
               <div>
-              <Heading typeStyle='heading-md' className='text-gray-800 mb-12 sm:text-2xl'>Financial Sponsor</Heading>
-                {financialSponsor.map((sponsor) => (
+              <Heading typeStyle='heading-md' className='text-slate-200 mb-12 sm:text-2xl'>Financial Sponsor</Heading>
+               
+               <div className=" flex items-center justify-center flex-col">
+                 {financialSponsor.map((sponsor) => (
                   <div
                     key={sponsor.image}
-                    className={`${sponsor.className ? sponsor.className : ""}`}
+                     className={`w-[300px] h-[150px] flex justify-center items-center ${sponsor.className ?? ""}`}
                   >
                     <Link href={sponsor.websiteUrl} target="_blank">
                       <Image
                         src={sponsor.image}
                         alt={sponsor.image}
-                        height={210}
-                        width={300}
+                        height={120}
+                        width={260}
+                        className="object-contain"
                       />
                     </Link>
                   </div>
                 ))}
+                </div>
               </div>
             )}
           </div>
-        </div>
       </div>
     </div>
   );
