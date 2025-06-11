@@ -23,9 +23,9 @@ const Tickets = () => {
       id: 2,
       type: 'Munich, Germany',
       price: 0,
-      url: false,
+      url: 'https://ticket.apidays.global/event/apidays-munich-2025/d6e0279c-a0f9-49c9-ab25-3caba9b31943/cart?coupon=ASYNCAPIMUNICH',
       description: 'Access to all conference talks and workshops',
-      status: 'Opening Soon',
+      status: 'Get Your Free Ticket',
       available: 50,
       eventDate: new Date('2025-07-2'),
       benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth']
