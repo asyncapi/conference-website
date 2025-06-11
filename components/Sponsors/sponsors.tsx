@@ -27,7 +27,7 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
         </div>
         <Heading
           typeStyle="heading-md"
-          className="text-gray-800 mt-10 sm:text-2xl sm:mt-5"
+          className="text-slate-200 mt-10 sm:text-2xl sm:mt-5"
         >
           Event and Host Sponsor
         </Heading>
@@ -54,26 +54,28 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
             <div>
               <Heading
                 typeStyle="heading-md"
-                className="text-gray-800 mb-12 sm:text-2xl"
+                className="text-slate-200 mb-12 sm:text-2xl"
               >
                 Financial Sponsor
               </Heading>
-              {financialSponsor.map((sponsor: EventSponsor) => (
-                <div
-                  key={sponsor.image}
-                  className="w-[300px] h-[150px] flex justify-center items-center"
-                >
-                  <Link href={sponsor.websiteUrl} target="_blank">
-                    <Image
-                      src={sponsor.image}
-                      alt={sponsor.image}
-                      height={120}
-                      width={260}
-                      className="object-contain"
-                    />
-                  </Link>
-                </div>
-              ))}
+              <div className="flex items-center justify-center flex-col">
+                {financialSponsor.map((sponsor: EventSponsor) => (
+                  <div
+                    key={sponsor.image}
+                    className="w-[300px] h-[150px] flex justify-center items-center"
+                  >
+                    <Link href={sponsor.websiteUrl} target="_blank">
+                      <Image
+                        src={sponsor.image}
+                        alt={sponsor.image}
+                        height={120}
+                        width={260}
+                        className="object-contain"
+                      />
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
