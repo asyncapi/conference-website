@@ -5,11 +5,7 @@ import { CfpStepProps } from '../../../types/types';
 
 function StepTwo({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   return (
-    <form
-      className="mt-3 w-[30rem] lg:w-[auto]"
-      onSubmit={(e) => setStep(e, 3)}
-      data-test="step-two"
-    >
+    <form className="mt-3" onSubmit={(e) => setStep(e, 3)} data-test="step-two">
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Session Info
       </h1>

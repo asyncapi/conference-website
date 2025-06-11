@@ -30,7 +30,7 @@ function StepFour({ setStep, setForm, data }: CfpStepProps) {
       });
   };
   return (
-    <form className="mt-3 w-[30rem] lg:w-[auto]" onSubmit={(e) => onSubmit(e)}>
+    <form className="mt-3" onSubmit={(e) => onSubmit(e)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Additional Information
       </h1>

@@ -38,10 +38,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   }, [value]);
 
   return (
-    <form
-      className="mt-3 w-[30rem] lg:w-[auto]"
-      onSubmit={(e) => setStep(e, 4)}
-    >
+    <form className="mt-3" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
         Session Info
       </h1>
