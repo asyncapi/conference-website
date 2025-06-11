@@ -269,7 +269,6 @@ export default function Home() {
             },
             {
               image: '/img/logos/graviteeio-logo.webp',
-
               websiteUrl: 'https://www.gravitee.io/',
             },
           ]}
