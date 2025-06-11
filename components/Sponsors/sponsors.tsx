@@ -49,31 +49,33 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
               </div>
             ))}
         </div>
-        <div className=" flex space-y-2 flex-col items-center justify-center text-white text-2xl font-bold">
-          <div className="flex flex-col space-y-6">
-            {financialSponsor && (
-              <div>
-                <Heading
-                  typeStyle="heading-md"
-                  className="text-gray-800 mb-12 sm:text-2xl"
+        <div>
+          {financialSponsor && (
+            <div>
+              <Heading
+                typeStyle="heading-md"
+                className="text-gray-800 mb-12 sm:text-2xl"
+              >
+                Financial Sponsor
+              </Heading>
+              {financialSponsor.map((sponsor: EventSponsor) => (
+                <div
+                  key={sponsor.image}
+                  className="w-[300px] h-[150px] flex justify-center items-center"
                 >
-                  Financial Sponsor
-                </Heading>
-                {financialSponsor.map((sponsor: EventSponsor) => (
-                  <div key={sponsor.image}>
-                    <Link href={sponsor.websiteUrl} target="_blank">
-                      <Image
-                        src={sponsor.image}
-                        alt={sponsor.image}
-                        height={210}
-                        width={300}
-                      />
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+                  <Link href={sponsor.websiteUrl} target="_blank">
+                    <Image
+                      src={sponsor.image}
+                      alt={sponsor.image}
+                      height={120}
+                      width={260}
+                      className="object-contain"
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

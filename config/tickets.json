@@ -35,7 +35,7 @@
     "id": 3,
     "type": "Lagos, Nigeria",
     "price": 0,
-    "url": null,
+    "url": "https://apiconf.net/register",
     "description": "Access to all conference talks and workshops",
     "status": "Not Yet Available",
     "available": 50,
