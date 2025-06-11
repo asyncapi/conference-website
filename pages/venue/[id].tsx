@@ -27,7 +27,7 @@ interface IVenue {
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   //temporary type
-  let currentCity: any;
+  let currentCity: Partial<ExtendedCity>;
   const cityName = params?.id as string;
   const city = cities.filter((city) => city.name === cityName);
   currentCity = city[0];
@@ -120,7 +120,7 @@ function Venue({ city }: IVenue) {
                     </Button>
                   </a>
                 )}
-                {eventStatus !== ConferenceStatus.ENDED && city.cfp && (
+                {city.cfp && (
                   <a
                     href={
                       city.name === 'online'

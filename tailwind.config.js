@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 const dark = {
   300: '#E8E2F4',
   400: '#C6BED9',

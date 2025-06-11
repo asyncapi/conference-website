@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect, SetStateAction } from 'react';
 import { City } from '../../types/types';
 
 interface IDropdown {
-  city: string | City;
+  city: Partial<City>;
   cities: City[];
-  setCity: React.Dispatch<SetStateAction<string | City>>;
+  setCity: React.Dispatch<SetStateAction<Partial<City>>>;
   handleSpeakers: (arg0: string) => void;
 }
 

@@ -20,7 +20,9 @@ import { City } from '../types/types';
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [speakersList, setSpeakersList] = useState(speakers);
-  const [currentCity, setCurrentCity] = useState<City | string>('All');
+  const [currentCity, setCurrentCity] = useState<Partial<City>>({
+    name: 'All',
+  });
 
   const handleSpeakers = (city: string) => {
     if (city && city !== 'all') {
@@ -98,16 +100,19 @@ export default function Home() {
                         type="button"
                         onClick={() => {
                           handleSpeakers('all');
-                          setCurrentCity('all');
+                          setCurrentCity({ name: 'All' });
                         }}
                         className={`w-[120px] ${
-                          currentCity === 'All'
+                          currentCity.name === 'All'
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                         }`}
                         overlay={true}
                       >
-                        All
+                        <span className="transparent-bg "></span>
+                        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                          All
+                        </span>
                       </Button>
                       {cities.map((city) => {
                         return (
@@ -137,8 +142,11 @@ export default function Home() {
                                 </>
                               )}
                               {typeof currentCity !== 'string' &&
-                                currentCity.name === city.name &&
-                                city.name}
+                                currentCity.name === city.name && (
+                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                                    {city.name}
+                                  </span>
+                                )}
                             </Button>
                           </div>
                         );
@@ -157,9 +165,11 @@ export default function Home() {
                           key={speaker.id}
                           details={speaker}
                           location={
-                            typeof currentCity === 'object'
-                              ? `${currentCity.name},${currentCity.country}`
-                              : undefined
+                            currentCity.name !== 'All'
+                              ? `${currentCity.name}, ${currentCity.country}`
+                              : speaker.city[1]
+                                ? `${speaker.city[0]} & ${speaker.city[1]}`
+                                : `${speaker.city[0]}`
                           }
                           className="mt-10"
                         />
