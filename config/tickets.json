@@ -21,7 +21,7 @@
     "price": 0,
     "url": "https://ticket.apidays.global/event/apidays-munich-2025/d6e0279c-a0f9-49c9-ab25-3caba9b31943/cart?coupon=ASYNCAPIMUNICH",
     "description": "Access to all conference talks and workshops",
-    "status": "Opening Soon",
+    "status": "Get Your Free Ticket",
     "available": 50,
     "eventDate": "2025-07-02T00:00:00.000Z",
     "benefits": [
@@ -37,7 +37,7 @@
     "price": 0,
     "url": "https://apiconf.net/register",
     "description": "Access to all conference talks and workshops",
-    "status": "Not Yet Available",
+    "status": "Register Now",
     "available": 50,
     "eventDate": "2025-07-18T00:00:00.000Z",
     "benefits": ["All talks", "Workshop access", "Lunch included"]
