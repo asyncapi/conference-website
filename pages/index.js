@@ -238,7 +238,12 @@ export default function Home() {
           [ {
               image: "/img/logos/IBM.png",
               websiteUrl: "https://www.ibm.com/",
-            }
+            },
+            {
+              image: "/img/logos/graviteeio-logo.webp",
+            
+              websiteUrl: "https://www.gravitee.io/",
+            },
           ] 
           }
           eventSponsors={[

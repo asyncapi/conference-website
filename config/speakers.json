@@ -104,12 +104,38 @@
             "linkedin": "https://www.linkedin.com/in/fabrizio-lazzaretti/"
 		}
 	],
-        "agenda": null
-    },
-    {
-        "city": "Lagos",
-        "location": "Lagos, Nigeria",
-        "lists": [
+		"agenda": 
+		[
+			{
+                "time": "14:00 PM CEST - 14:25 PM CEST",
+                "session": "Insights How Schwarz IT built a Self Service EDA Powered by AsyncAPI",
+                "speaker": 4,
+                "type": "Technical Speaker"
+            },
+            {
+                "time": "14:25 PM CEST - 14:40 PM CEST",
+                "session": "How To Design AsyncAPIs in Workshops: The API Product Canvas",
+				"speaker": [1,5],
+                "type": "Technical Speaker"
+            },
+            {
+                "time": "14:40 PM CEST - 15:15 PM CEST",
+                "session": "Enhance Event Observability with AsyncAPI and OpenTelemetry",
+                "speaker": 3,
+                "type": "Technical Speaker"
+            },
+            {
+                "time": "15:15 PM CEST - 15:40 PM CEST",
+                "session": "Reliable Kafka-Lambda Data Pipelines with AsyncAPI and Specmatic",
+				"speaker": 2,
+                "type": "Technical Speaker"
+            }
+		]
+	},
+	{
+		"city": "Lagos",
+		"location": "Lagos, Nigeria",
+		"lists": [
 		{
 			"name": "Azeez Elegbede",
 			"title": "Developer Advocate at AsyncAPI Initiative",
