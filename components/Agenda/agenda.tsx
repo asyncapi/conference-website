@@ -33,6 +33,12 @@ function Agenda({ city }: IAgenda): JSX.Element {
 
             <div className="mt-[40px]">
               {city.agenda.map((talk: AgendaType) => {
+                const getSpeaker = city.speakers.filter((speaker) => {
+                  if (typeof talk.speaker === 'object') {
+                    return talk.speaker.includes(speaker.id);
+                  }
+                  return speaker.id === talk.speaker;
+                });
                 return (
                   <div
                     key={talk.time}
@@ -56,8 +62,8 @@ function Agenda({ city }: IAgenda): JSX.Element {
                         <div className="flex items-center lg:mt-4">
                           <div className="w-[94px] h-[94px]">
                             <Image
-                              src={city.speakers[talk.speaker - 1].img}
-                              alt={city.speakers[talk.speaker - 1].name}
+                              src={getSpeaker[0].img}
+                              alt={getSpeaker[0].name}
                               width={0}
                               height={0}
                               className="object-cover rounded-full w-[100%] h-[100%]"
@@ -68,10 +74,10 @@ function Agenda({ city }: IAgenda): JSX.Element {
                               typeStyle="heading-sm-semibold"
                               className="text-white"
                             >
-                              {city.speakers[talk.speaker - 1].name}
+                              {getSpeaker[0].name}
                             </Heading>
                             <Paragraph typeStyle="body-sm" className="mt-2">
-                              {city.speakers[talk.speaker - 1].title}
+                              {getSpeaker[0].title}
                             </Paragraph>
                           </div>
                         </div>
@@ -80,35 +86,38 @@ function Agenda({ city }: IAgenda): JSX.Element {
                       )}
                       {talk.speaker && typeof talk.speaker === 'object' && (
                         <div className="flex flex-col">
-                          {talk.speaker.map((speak, i) => (
-                            <div key={i} className="mt-6">
-                              <div className="flex items-center lg:mt-4">
-                                <div className="w-[94px] h-[94px]">
-                                  <Image
-                                    src={city.speakers[speak - 1].img}
-                                    alt={city.speakers[speak - 1].name}
-                                    width={0}
-                                    height={0}
-                                    className="object-cover rounded-full w-[100%] h-[100%]"
-                                  />
+                          {getSpeaker.length > 1 &&
+                            getSpeaker.map((speaker, i) => {
+                              return (
+                                <div key={i} className="mt-6">
+                                  <div className="flex items-center lg:mt-4">
+                                    <div className="w-[94px] h-[94px]">
+                                      <Image
+                                        src={speaker.img}
+                                        alt={speaker.name}
+                                        width={0}
+                                        height={0}
+                                        className="object-cover rounded-full w-[100%] h-[100%]"
+                                      />
+                                    </div>
+                                    <div className="ml-4 w-[300px] sm:w-[250px]">
+                                      <Heading
+                                        typeStyle="heading-sm-semibold"
+                                        className="text-white"
+                                      >
+                                        {speaker.name}
+                                      </Heading>
+                                      <Paragraph
+                                        typeStyle="body-sm"
+                                        className="mt-2"
+                                      >
+                                        {speaker.title}
+                                      </Paragraph>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div className="ml-4 w-[300px] sm:w-[250px]">
-                                  <Heading
-                                    typeStyle="heading-sm-semibold"
-                                    className="text-white"
-                                  >
-                                    {city.speakers[speak - 1].name}
-                                  </Heading>
-                                  <Paragraph
-                                    typeStyle="body-sm"
-                                    className="mt-2"
-                                  >
-                                    {city.speakers[speak - 1].title}
-                                  </Paragraph>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
+                              );
+                            })}
                         </div>
                       )}
                     </div>
