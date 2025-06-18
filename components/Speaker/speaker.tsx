@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { Speaker as SpeakerTypes } from '../../types/types';
-import { get } from 'cypress/types/lodash';
 
 interface ISpeaker {
   details: SpeakerTypes;
@@ -10,11 +9,12 @@ interface ISpeaker {
 }
 
 function Speaker({ details, location, className }: ISpeaker): JSX.Element {
-
+  
   function getName(names: string[]){
     return `${names[0]} ${names[1]}`;
   }
   const shortenedName = details.name.length > 20 ? getName(details.name.split(' ')) : details.name;
+
   return (
     <div
       className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
