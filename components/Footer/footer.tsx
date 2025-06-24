@@ -11,7 +11,7 @@ function Footer(): JSX.Element {
         className="w-full flex justify-between items-center p-4 sm:flex-col sm:gap-3"
         data-test="footer-asyncAPI-logo"
       >
-        <div className="mt-2 text-[14px] text-gray-100 sm:hidden">
+        <div className="mt-2 text-[14px] text-gray-100 ">
           <a
             href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
@@ -31,7 +31,7 @@ function Footer(): JSX.Element {
             Made with ❤️ by AsyncAPI contributors. By the community for the
             community!
           </div>
-          <div className="w-[0.9px] h-4 bg-white ml-4" />
+          <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
           <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">
             {socials.map((social: Social, index) => {
               return (
