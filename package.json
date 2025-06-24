@@ -6,24 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "lint": "next lint",
     "export": "next export",
     "generate:assets": "echo \"No assets to configure\"",
     "test": "echo \"No tests configured yet\"",
-    "release": "echo \"No release to npm for this project\"",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "release": "echo \"No release to npm for this project\""
   },
   "dependencies": {
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.8.2",
-    "d3": "^7.8.5",
     "net": "^1.0.2",
-    "next": "^14.2.26",
+    "next": "^15.2.4",
     "next-on-netlify": "^3.0.1",
     "nodemailer": "^6.9.13",
     "react": "^18.2.1",
     "react-confetti": "^6.1.0",
-    "react-countdown": "^2.3.5",
     "react-dom": "^18.2.1",
     "react-ga": "^3.3.1",
     "react-globe.gl": "^2.24.2",
@@ -32,15 +32,18 @@
     "react-responsive": "^9.0.0",
     "react-select": "^5.7.5",
     "react-slick": "^0.29.0",
-    "react-youtube-embed": "^1.0.3",
-    "slick-carousel": "^1.8.1"
+    "react-youtube-embed": "^1.0.3"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.7",
     "cypress": "^13.11.0",
     "eslint": "8.15.0",
     "eslint-config-next": "13.1.1",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.0.24"
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^5.8.3"
   }
 }

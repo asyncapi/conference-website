@@ -1,98 +1,93 @@
 [
-	{
-		"location": "",
-		"city": "All",
-		"lists": []
-	},
-	{
-		"city": "Singapore",
-		"location": "Singapore, Singapore",
-		"lists": [
-		{
-			"name": "Hugo Guerrero",
-			"title": "Head of Technical Marketing at Kong",
-			"img": "/img/london-speakers/Hugo Guerrero.webp"
-		},
-		{
-			"name": "Naresh Jain",
-			"title": "Founder & CEO at Specmatic",
-			"img": "/img/paris-images/Naresh.webp"
-		},
-		{
-			"name": "Tamimi Ahmad",
-			"title": "Senior Developer Advocate at Solace",
-			"img": "/img/london-speakers/Tamimi.webp"
-		},
-		{
-			"name": "Ankit Kumar",
-			"title": "Head of Developer and Customer Success at Aklivity",
-			"img": "/img/london-speakers/Ankit.webp"
-		}
-	],
-		"agenda": [
-			{
-                "time": "11:10 AM SGT - 11:35 AM SGT",
-                "session": "Multi-Protocol Async APIs: Designing a Unified Interface for EDA",
-                "speaker": 2,
-                "type": "Technical Speaker"
-            },
-            {
-                "time": "11:35 AM SGT - 12:00 PM SGT",
-                "session": "The Untapped Potentials of AsyncAPI Studio",
-				"speaker": 3,
-                "type": "Technical Speaker"
-            },
-            {
-                "time": "12:00 PM SGT - 12:25 PM SGT",
-                "session": "Enhancing Kafka Security and Control with Event Gateways",
-                "speaker": 1,
-                "type": "Technical Speaker"
-            },
-            {
-                "time": "12:25 PM SGT - 12:50 PM SGT",
-                "session": "AsyncAPI v3: Streamlining Event-Driven API Design",
-				"speaker": 4,
-                "type": "Technical Speaker"
-            }
-		]
-	},
-	{
-		"city": "Munich",
-		"location": "Munich, Germany",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Lagos",
-		"location": "Lagos, Nigeria",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "London",
-		"location": "London, UK",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Bangalore",
-		"location": "Bangalore, India",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Online",
-		"location": "AsyncAPI YouTube Channel",
-		"lists": [],
-		"agenda": null
-	},
-	{
-		"city": "Paris",
-		"location": "Paris, France",
-		"lists": [],
-		"agenda": null
-	}
-
-	
-	
+  {
+    "name": "Hugo Guerrero",
+    "title": "Head of Technical Marketing at Kong",
+    "img": "/img/speaker-images/london/Hugo Guerrero.webp",
+    "id": 1,
+    "city": ["Singapore"]
+  },
+  {
+    "name": "Naresh Jain",
+    "title": "Founder & CEO at Specmatic",
+    "img": "/img/speaker-images/paris/Naresh.webp",
+    "id": 2,
+    "city": ["Singapore", "Munich"]
+  },
+  {
+    "name": "Tamimi Ahmad",
+    "title": "Senior Developer Advocate at Solace",
+    "img": "/img/speaker-images/london/Tamimi.webp",
+    "id": 3,
+    "city": ["Singapore"]
+  },
+  {
+    "name": "Ankit Kumar",
+    "title": "Head of Developer and Customer Success at Aklivity",
+    "img": "/img/speaker-images/london/Ankit.webp",
+    "id": 4,
+    "city": ["Singapore"]
+  },
+  {
+    "name": "Dr. Annegret Junker",
+    "title": "Chief Software Architect at codecentric AG",
+    "img": "/img/speaker-images/paris/Annegret.webp",
+    "id": 5,
+    "city": ["Munich"]
+  },
+  {
+    "name": "Eduardo Maldonado Fonseca Silva",
+    "title": "Senior Platform Engineer at The LEGO Group",
+    "img": "/img/speaker-images/london/Eduardo.webp",
+    "id": 6,
+    "city": ["Munich"]
+  },
+  {
+    "name": "Andreas Habel",
+    "title": "Executive Professional for Enterprise Integration at Schwarz IT KG",
+    "img": "/img/speaker-images/munich/Andreas.webp",
+    "id": 7,
+    "city": ["Munich"]
+  },
+  {
+    "name": "Fabrizio Lazzaretti",
+    "title": "Managing Consultant at Wavestone",
+    "img": "/img/speaker-images/munich/Fabrizio.webp",
+    "id": 8,
+    "city": ["Munich"]
+  },
+  {
+    "name": "Azeez Elegbede",
+    "title": "Developer Advocate at AsyncAPI Initiative",
+    "img": "/img/speaker-images/lagos/Azeez.webp",
+    "id": 9,
+    "city": ["Lagos"]
+  },
+  {
+    "name": "Thulisile Sibanda",
+    "title": "Senior Community Manager at AsyncAPI Initiative",
+    "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
+    "id": 10,
+    "city": ["Lagos"]
+  },
+  {
+    "name": "Prince Onyeanuna",
+    "title": "Technical Writer at Pi Squared",
+    "img": "/img/speaker-images/lagos/Prince.webp",
+    "id": 11,
+    "city": ["Lagos"]
+  },
+  {
+    "name": "Aishat Muibudeen",
+    "title": "Lead Design Maintainer at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Maya.webp",
+    "id": 12,
+    "city": ["Lagos"]
+  },
+  {
+    "name": "Ezinne Anne Emilia",
+    "title": "Documentation Mentee at AsyncAPI Initiative",
+    "img": "/img/speaker-images/lagos/Ezinne.webp",
+    "id": 13,
+    "city": ["Lagos"]
+  }
 ]
