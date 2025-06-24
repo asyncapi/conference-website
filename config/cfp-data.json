@@ -1,13 +1,10 @@
 {
-    "EventStartDate": "30th October 2024",
-    "EventEndDate": "30th October 2024",
-    "CallStartDate": "21st August 2024",
-    "CallEndDate": "20th September 2024",
-    "Edition": "Online Edition",
-    "sponsors":[
-        "/img/apidays.png"
-    ],
-    "ended": true,
-    "agenda":null
-
+  "EventStartDate": "15th April 2025",
+  "EventEndDate": "16th April 2025",
+  "CallStartDate": "29th January 2025",
+  "CallEndDate": "7th September 2025",
+  "Edition": "Online",
+  "sponsors": ["/img/apidays.png"],
+  "ended": false,
+  "agenda": null
 }
