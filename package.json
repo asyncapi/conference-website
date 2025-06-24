@@ -29,8 +29,7 @@
     "react-hot-toast": "^2.4.1",
     "react-responsive": "^9.0.0",
     "react-select": "^5.7.5",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "react-slick": "^0.29.0"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.17",
