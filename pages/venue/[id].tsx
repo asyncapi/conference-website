@@ -20,6 +20,7 @@ import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from '../../config/cfp-data.json';
 import { GetStaticPropsContext } from 'next';
+import { HeadComponent as Head } from '../../components/Head';
 
 interface IVenue {
   city: ExtendedCity;
@@ -60,8 +61,14 @@ function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
+   const venueTitle = `${city.name} | AsyncAPI Conference`;
   return (
     <div data-test={`venue-${city.name}`}>
+      <Head 
+			title={venueTitle}
+			description={city.description}
+			image={city.img}
+		/>
       <div
         style={{
           backgroundImage: city.name == 'Online' ? '' : `url(${city.img})`,
