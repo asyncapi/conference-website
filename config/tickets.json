@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "type": "Singapore",
+    "price": 0,
+    "url": "https://ticket.apidays.global/event/apidays-singapore-2025/4c745e62-0e52-4c4a-9221-29f47bc57128/cart?coupon=ASYNCAPICOMMUNITY",
+    "description": "Access to all conference talks and workshops",
+    "status": "Get Your Free Ticket",
+    "available": 50,
+    "eventDate": "2025-01-20T00:00:00.000Z",
+    "benefits": [
+      "AsyncAPI Track",
+      "Workshop access",
+      "Lunch included",
+      "All talks"
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Munich, Germany",
+    "price": 0,
+    "url": "https://ticket.apidays.global/event/apidays-munich-2025/d6e0279c-a0f9-49c9-ab25-3caba9b31943/cart?coupon=ASYNCAPIMUNICH",
+    "description": "Access to all conference talks and workshops",
+    "status": "Get Your Free Ticket",
+    "available": 50,
+    "eventDate": "2025-07-02T00:00:00.000Z",
+    "benefits": [
+      "All talks",
+      "Workshop access",
+      "Lunch included",
+      "API Standards booth"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "Lagos, Nigeria",
+    "price": 0,
+    "url": "https://apiconf.net/register",
+    "description": "Access to all conference talks and workshops",
+    "status": "Register Now",
+    "available": 50,
+    "eventDate": "2025-07-18T00:00:00.000Z",
+    "benefits": ["All talks", "Workshop access", "Lunch included"]
+  },
+  {
+    "id": 4,
+    "type": "London, UK",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2025-09-22T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking", "Lunch included"]
+  },
+  {
+    "id": 5,
+    "type": "Bangalore, India",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 80,
+    "eventDate": "2025-09-15T00:00:00.000Z",
+    "benefits": [
+      "All talks",
+      "AsyncAPI Track",
+      "Workshop access",
+      "Lunch included"
+    ]
+  },
+  {
+    "id": 6,
+    "type": "Online",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2025-09-15T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+  },
+  {
+    "id": 7,
+    "type": "Paris, France",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2025-12-09T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+  }
+]
