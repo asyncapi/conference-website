@@ -8,7 +8,7 @@ import Image from 'next/image';
 function About(): JSX.Element {
   return (
     <div
-      className="p-24 container flex items-center justify-center w-full"
+      className="p-24 lg:pt-8 container flex items-center justify-center w-full"
       data-test="about-section"
     >
       <div className="w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between">
