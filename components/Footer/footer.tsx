@@ -27,7 +27,7 @@ function Footer(): JSX.Element {
         </div>
         <div></div>
         <div className="flex items-center justify-between sm:flex-col sm:items-center">
-          <div className="text-white">
+          <div className="text-white text-center">
             Made with ❤️ by AsyncAPI contributors. By the community for the
             community!
           </div>
