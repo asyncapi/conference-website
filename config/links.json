@@ -1,4 +1,5 @@
-	{
+	[
+		{
 		"title": "About",
 		"ref": "/#about"
 	},
@@ -57,3 +58,4 @@
 		"title":"Past Editions",
 		"ref":"/editions"
 	}
+	]
