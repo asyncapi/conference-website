@@ -2,7 +2,7 @@ import navData from "../../config/links.json";
 import speakers from "../../config/speakers.json";
 
 let venueData = navData.filter((idx) => {
-  return idx.title == "Conferences";
+  return idx.title == "Venue";
 });
 let resourcesData = navData.filter((idx) => {
   return idx.title == "Resources Hub";
