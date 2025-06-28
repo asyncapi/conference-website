@@ -14,8 +14,10 @@ function Navbar(): JSX.Element {
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
+  const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
+  const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   //TODO: Refactor Navbar Code
   let closeTimeout = useRef<ReturnType<typeof window.setTimeout> | null>(null);
@@ -25,6 +27,7 @@ function Navbar(): JSX.Element {
       const target = event.target as Element;
       if (show && !target.closest('.subMenu')) {
         setShow(null);
+        setFocusedSubMenuItem(-1);
       }
     },
     [show]
@@ -65,6 +68,7 @@ function Navbar(): JSX.Element {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
         setShow(null);
+        setFocusedSubMenuItem(-1);
       }
     }, 300);
   };
@@ -79,6 +83,7 @@ function Navbar(): JSX.Element {
   const handleSubMenuLeave = (): void => {
     setIsSubMenuHovered(false);
     setShow(null);
+    setFocusedSubMenuItem(-1);
   };
 
   return (
@@ -126,7 +131,45 @@ function Navbar(): JSX.Element {
                   >
                     <div>
                       {link.subMenu ? (
-                        <div className="flex items-center">
+                        <button
+                          className="flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded px-1 py-1"
+                          onClick={() => setShow(show === link.title ? null : link.title)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              setShow(show === link.title ? null : link.title);
+                              if (show !== link.title) {
+                                setFocusedSubMenuItem(0);
+                                setTimeout(() => {
+                                  subMenuRefs.current[0]?.focus();
+                                }, 50);
+                              }
+                            }
+                            if (e.key === 'ArrowDown') {
+                              e.preventDefault();
+                              setShow(link.title);
+                              setFocusedSubMenuItem(0);
+                              setTimeout(() => {
+                                subMenuRefs.current[0]?.focus();
+                              }, 50);
+                            }
+                            if (e.key === 'ArrowUp') {
+                              e.preventDefault();
+                              setShow(link.title);
+                              const lastIndex = link.subMenu!.length - 1;
+                              setFocusedSubMenuItem(lastIndex);
+                              setTimeout(() => {
+                                subMenuRefs.current[lastIndex]?.focus();
+                              }, 50);
+                            }
+                            if (e.key === 'Escape') {
+                              setShow(null);
+                              setFocusedSubMenuItem(-1);
+                            }
+                          }}
+                          aria-expanded={show === link.title}
+                          aria-haspopup="true"
+                        >
                           {link.title}{' '}
                           {link.subMenu && (
                             <Dropdown
@@ -136,7 +179,7 @@ function Navbar(): JSX.Element {
                               }`}
                             />
                           )}
-                        </div>
+                        </button>
                       ) : (
                         <Link href={link.ref}>{link.title}</Link>
                       )}
@@ -149,18 +192,50 @@ function Navbar(): JSX.Element {
                         onMouseEnter={handleSubMenuEnter}
                         onMouseLeave={handleSubMenuLeave}
                       >
-                        {link.subMenu.map((subL: LinkItem) => (
+                        {link.subMenu.map((subL: LinkItem, index: number) => (
                           <Link
                             href={subL.ref}
                             key={subL.title}
                             rel="noopener noreferrer"
+                            ref={(el) => {
+                              subMenuRefs.current[index] = el;
+                            }}
+                            className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1`}
+                            data-test={`nav-sub-${subL.title}`}
+                            onKeyDown={(e) => {
+                              const currentIndex = index;
+                              const maxIndex = link.subMenu!.length - 1;
+                              
+                              if (e.key === 'ArrowDown') {
+                                e.preventDefault();
+                                const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+                                setFocusedSubMenuItem(nextIndex);
+                                subMenuRefs.current[nextIndex]?.focus();
+                              }
+                              
+                              if (e.key === 'ArrowUp') {
+                                e.preventDefault();
+                                const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+                                setFocusedSubMenuItem(prevIndex);
+                                subMenuRefs.current[prevIndex]?.focus();
+                              }
+                              
+                              if (e.key === 'Escape') {
+                                e.preventDefault();
+                                setShow(null);
+                                setFocusedSubMenuItem(-1);
+                                // Focus back to the main menu button
+                                const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
+                                (button as HTMLButtonElement)?.focus();
+                              }
+                              
+                              if (e.key === 'Tab') {
+                                setShow(null);
+                                setFocusedSubMenuItem(-1);
+                              }
+                            }}
                           >
-                            <div
-                              className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all`}
-                              data-test={`nav-sub-${subL.title}`}
-                            >
-                              {subL.title}
-                            </div>
+                            {subL.title}
                           </Link>
                         ))}
                       </div>
