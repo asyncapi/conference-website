@@ -1,0 +1,58 @@
+[
+  {
+    "time": "11:10 AM SGT - 11:35 AM SGT",
+    "session": "Multi-Protocol Async APIs: Designing a Unified Interface for EDA",
+    "speaker": 2,
+    "type": "Technical Speaker",
+    "city": "Singapore"
+  },
+  {
+    "time": "11:35 AM SGT - 12:00 PM SGT",
+    "session": "The Untapped Potentials of AsyncAPI Studio",
+    "speaker": 3,
+    "type": "Technical Speaker",
+    "city": "Singapore"
+  },
+  {
+    "time": "12:00 PM SGT - 12:25 PM SGT",
+    "session": "Enhancing Kafka Security and Control with Event Gateways",
+    "speaker": 1,
+    "type": "Technical Speaker",
+    "city": "Singapore"
+  },
+  {
+    "time": "12:25 PM SGT - 12:50 PM SGT",
+    "session": "AsyncAPI v3: Streamlining Event-Driven API Design",
+    "speaker": 4,
+    "type": "Technical Speaker",
+    "city": "Singapore"
+  },
+  {
+    "time": "14:00 PM CEST - 14:25 PM CEST",
+    "session": "Insights How Schwarz IT built a Self Service EDA Powered by AsyncAPI",
+    "speaker": 7,
+    "type": "Technical Speaker",
+    "city": "Munich"
+  },
+  {
+    "time": "14:25 PM CEST - 14:40 PM CEST",
+    "session": "How To Design AsyncAPIs in Workshops: The API Product Canvas",
+    "speaker": [5, 8],
+    "type": "Technical Speaker",
+    "city": "Munich"
+  },
+  {
+    "time": "14:40 PM CEST - 15:15 PM CEST",
+    "session": "Enhance Event Observability with AsyncAPI and OpenTelemetry",
+    "speaker": 6,
+    "type": "Technical Speaker",
+    "city": "Munich"
+  },
+  {
+    "time": "15:15 PM CEST - 15:40 PM CEST",
+    "session": "Reliable Kafka-Lambda Data Pipelines with AsyncAPI and Specmatic",
+    "speaker": 2,
+    "type": "Technical Speaker",
+    "city": "Munich"
+  }
+]
