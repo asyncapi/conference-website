@@ -89,5 +89,12 @@
     "img": "/img/speaker-images/lagos/Ezinne.webp",
     "id": 13,
     "city": ["Lagos"]
+  },
+  {
+    "name": "Dale Lane",
+    "title": "Chief Architect at IBM",
+    "img": "/img/speaker-images/london/Dale Lane.webp",
+    "id": 14,
+    "city": ["Paris"]
   }
 ]
