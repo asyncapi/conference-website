@@ -16,6 +16,7 @@ import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City } from '../types/types';
+import Popup from '../components/Popup/popup';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -277,6 +278,7 @@ export default function Home() {
       <div className="mt-5">
         <Subscription />
       </div>
+      <Popup />
     </div>
   );
 }
