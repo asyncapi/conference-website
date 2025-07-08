@@ -6,11 +6,11 @@ function Footer() {
   return (
     <div className="container" data-test="footer">
       <div
-        className="w-full flex flex-col md:flex-row justify-between items-center p-4 gap-6"
+        className="w-full flex flex-row justify-between items-center p-4 gap-6 lg:flex-col lg:gap-6 lg:justify-center"
         data-test="footer-asyncAPI-logo"
       >
         {/* Code of Conduct Section */}
-        <div className="text-[20px] text-gray-100 flex items-center">
+        <div className="text-[20px] text-gray-100 flex items-center flex-shrink-0">
           <a
             href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
@@ -23,13 +23,14 @@ function Footer() {
           </a>
         </div>
 
-        {/* "Made with ❤️" and Socials Section */}
-        <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-          <span className="text-white text-[20px]">
-            Made with ❤️ by AsyncAPI contributors. By the community for the community!
-          </span>
-          <div className="w-full md:w-[1px] h-[1px] md:h-6 bg-white md:block hidden" />
-          <div className="flex items-center gap-2">
+        {/* "Made with ❤️" and Socials Section - Grouped together */}
+        <div className="flex items-center gap-6 lg:flex-col lg:gap-4">
+          <div className="flex items-center text-center">
+            <span className="text-white text-[16px] lg:text-[20px]">
+              Made with ❤️ by AsyncAPI contributors. By the community for the community!
+            </span>
+          </div>
+          <div className="flex items-center gap-2 flex-shrink-0">
             <Socials />
           </div>
         </div>
