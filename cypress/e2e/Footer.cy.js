@@ -84,7 +84,7 @@ describe("Footer links", () => {
     it("Should display tooltip when hovering over YouTube icon", () => {
       cy.get(".social-wrapper .youtube .tooltip").invoke('addClass', 'show-for-test');
       cy.get(".social-wrapper .youtube .tooltip").should("be.visible");
-      cy.get(".social-wrapper .youtube .tooltip").should("contain", "YouTube"); 
+      cy.get(".social-wrapper .youtube .tooltip").should("contain", "YouTube");
     });
   });
 });
