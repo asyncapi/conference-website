@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import Cancel from '../illustration/cancel';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
+import Link from 'next/link';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -34,14 +34,13 @@ function Popup() {
             onClick={handleClose}
           >
             <div
-              className={`w-[600px] h-[700px] card p-4 transition-all duration-300 ease-out transform ${
+              className={`w-[650px] h-[750px] sm:w-[400px] sm:h-[700px] card p-6 transition-all duration-300 ease-out transform fixed top-[150px]${
                 isVisible
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
               }`}
               style={{
-                position: 'fixed',
-                top: '200px',
+                top: '150px',
                 left: '50%',
                 transform: `translateX(-50%) ${isVisible ? 'translateY(0) scale(1)' : 'translateY(2rem) scale(0.95)'}`,
                 zIndex: 51,
@@ -84,9 +83,17 @@ function Popup() {
                   </svg>
                 </div>
               </div>
-              <div className="my-12">fff</div>
+              <div className="my-10 flex justify-center">
+                <Image
+                  src="/img/rocket.gif"
+                  alt="rocket"
+                  width={0}
+                  height={0}
+                  className="w-[230px] h-[230px] sm:w-[150px] sm:h-[150px]"
+                />
+              </div>
               <div className="flex flex-col items-center text-center space-y-6">
-                <h1 className="text-[32px] font-bold text-white">
+                <h1 className="text-[32px] sm:text-[25px] font-bold text-white">
                   AsyncAPI Is Headed to
                   <br />
                   DeveloperWeek <span className="text-[#B31942]">U</span>
@@ -94,20 +101,21 @@ function Popup() {
                   <span className="text-[#0A3161]">A</span> 2026!
                 </h1>
                 <Paragraph typeStyle="body-md">
-                  For the first time ever, we're bringing the AsyncAPI community
-                  to
+                  For the first time ever, we&apos;re bringing the AsyncAPI
+                  community to
                   <br />
                   DeveloperWeek USA in San Jose, CA
                 </Paragraph>
 
                 <Paragraph typeStyle="body-md" className="text-white font-bold">
                   Be a part of the journey as we build the future of
-                  eveent-driven APIs!
+                  event-driven APIs!
                 </Paragraph>
-
-                <Button type="button" className="w-[200px]">
-                  See What's Next
-                </Button>
+                <Link href="/venue/California">
+                  <Button type="button" className="w-[200px]">
+                    See What&apos;s Next
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>,

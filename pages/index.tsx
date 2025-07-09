@@ -116,6 +116,10 @@ export default function Home() {
                         </span>
                       </Button>
                       {cities.map((city) => {
+                        // Temporary condition and should be removed next year
+                        if (city.name === 'California') {
+                          return null;
+                        }
                         return (
                           <div
                             key={city.name}
