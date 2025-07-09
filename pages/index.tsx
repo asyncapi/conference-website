@@ -50,6 +50,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
+      <Popup />
       <div id="about" className="mt-20">
         <About />
       </div>
@@ -282,7 +283,6 @@ export default function Home() {
       <div className="mt-5">
         <Subscription />
       </div>
-      <Popup />
     </div>
   );
 }

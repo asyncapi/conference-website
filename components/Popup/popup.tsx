@@ -20,7 +20,7 @@ function Popup() {
     setIsVisible(false);
     setTimeout(() => {
       setIsOpen(false);
-    }, 300);
+    }, 350);
   };
 
   return (
@@ -28,6 +28,7 @@ function Popup() {
       {isOpen &&
         createPortal(
           <div
+            data-test="popup-container"
             className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 ${
               isVisible ? 'bg-opacity-90 ' : 'bg-opacity-0'
             }`}
@@ -57,7 +58,8 @@ function Popup() {
                     height={150}
                   />
                 </div>
-                <div
+                <button
+                  data-test="close-button"
                   className="p-2 hover:bg-gray-400 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200"
                   onClick={handleClose}
                 >
@@ -81,7 +83,7 @@ function Popup() {
                       strokeLinecap="round"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
               <div className="my-10 flex justify-center">
                 <Image
