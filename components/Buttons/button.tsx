@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 type ButtonType = 'button' | 'submit' | 'reset' | undefined;
 
 interface IButton {
