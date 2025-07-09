@@ -28,8 +28,8 @@ function Popup() {
       {isOpen &&
         createPortal(
           <div
-            data-test="popup-container"
-            className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 ${
+            data-testid="popup-container"
+            className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 z-[100] ${
               isVisible ? 'bg-opacity-90 ' : 'bg-opacity-0'
             }`}
             onClick={handleClose}
