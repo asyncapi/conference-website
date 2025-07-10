@@ -78,6 +78,6 @@ function About(): JSX.Element {
       </div>
     </div>
   );
-};
+}
 
 export default About;
