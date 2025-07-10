@@ -49,8 +49,6 @@ body {
   pointer-events: auto;
   top: -45px;
 }
-
-
 .social-wrapper .icon .tooltip.show-for-test {
   opacity: 1 !important;
   pointer-events: auto;
