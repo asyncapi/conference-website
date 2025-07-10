@@ -1,3 +1,4 @@
+import React, { JSX } from 'react';
 import { SVGTypes } from '../../types/types';
 
 /**

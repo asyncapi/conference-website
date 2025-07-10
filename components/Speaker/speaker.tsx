@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { JSX } from 'react';
 import { Speaker as SpeakerTypes } from '../../types/types';
 
 interface ISpeaker {
