@@ -54,5 +54,40 @@
     "speaker": 2,
     "type": "Technical Speaker",
     "city": "Munich"
+  },
+  {
+    "time": "13:30 PM WAT - 14:00 PM WAT",
+    "session": "An Intro to AsyncAPI Without The Technical Jargon",
+    "speaker": [10,9],
+    "type": "Community Speakers",
+    "city": "Lagos"
+  },
+  {
+    "time": "14:00 PM WAT - 14:30 PM WAT",
+    "session": "From Ingredients to Output: The AsyncAPI Generator 101",
+    "speaker": 10,
+    "type": "Technical Speaker",
+    "city": "Lagos"
+  },
+  {
+    "time": "14:30 PM WAT - 15:00 PM WAT",
+    "session": "I Came to Design, I Ended Up Leading a Movement",
+    "speaker": 12,
+    "type": "Community Speaker",
+    "city": "Lagos"
+  },
+  {
+    "time": "15:00 PM WAT - 15:45 PM WAT",
+    "session": "Preventing API Drift",
+    "speaker": 9,
+    "type": "Technical Speaker",
+    "city": "Lagos"
+  },
+  {
+    "time": "15:45 PM WAT - 16:15 PM WAT",
+    "session": "Contributing to AsyncAPI from a Technical Writers POV",
+    "speaker": [11,13],
+    "type": "Community Speakers",
+    "city": "Lagos"
   }
 ]
