@@ -157,7 +157,7 @@
     "name": "California",
     "country": "USA",
     "date": "18-20, Feburary 2026",
-    "cfpDate": "9 July, 2025",
+    "cfpDate": "7 November, 2025",
     "description": "Join the AsyncAPI Summit as an integral part of DeveloperWeek 2026.",
     "img": "/img/locations/san-jose.webp",
     "address": "150 W San Carlos St, San Jose, CA 95113",
@@ -165,8 +165,8 @@
     "sponsors": {
       "eventSponsors": [
         {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
+          "image": "/img/logos/developerweek-logo.webp",
+          "websiteUrl": "https://www.developerweek.com/"
         }
       ]
     },
