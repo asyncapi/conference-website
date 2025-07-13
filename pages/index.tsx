@@ -10,6 +10,7 @@ import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
 import Speaker from '../components/Speaker/speaker';
+import WorldMapContainer from '../components/WorldMap';
 import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import Link from 'next/link';
@@ -51,6 +52,9 @@ export default function Home() {
       <Header />
       <div id="about" className="mt-20">
         <About />
+      </div>
+      <div id="worldmap" className="mt-20">
+        <WorldMapContainer />
       </div>
       <div id="register" className="container mt-20 lg:mt-0">
         <div className="flex items-center flex-col justify-center">
