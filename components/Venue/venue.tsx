@@ -4,12 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { City, ConferenceStatus } from '../../types/types';
 import { getEventStatus } from '../../utils/status';
+import { useTranslation } from 'next-i18next';
 
 interface IVenue {
   city: City;
 }
 
 function Venue({ city }: IVenue) {
+  const { t } = useTranslation('common');
   const eventStatus = getEventStatus(city.date);
 
   return (
@@ -27,7 +29,7 @@ function Venue({ city }: IVenue) {
               <div
                 className={`border text-white text-md rounded-lg px-2 py-1 text-center mt-2`}
               >
-                cfp is open
+                {t('venue.cfpOpen')}
               </div>
             )}
             <button
@@ -39,7 +41,7 @@ function Venue({ city }: IVenue) {
             >
               <Image
                 src="/img/mapIcon.svg"
-                alt="Map Icon"
+                alt={t('venue.mapIcon')}
                 width={24}
                 height={24}
               />

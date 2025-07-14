@@ -3,6 +3,7 @@ import React, { useState, useEffect, JSX } from 'react';
 import Select from '../../Select/select';
 import Button from '../../Buttons/button';
 import { CfpStepProps, SelectOptions } from '../../../types/types';
+import { useTranslation } from 'next-i18next';
 
 const options1: SelectOptions[] = [
   {
@@ -31,6 +32,7 @@ const options2: SelectOptions[] = [
 ];
 
 function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
+  const { t } = useTranslation('common');
   const [value, setValue] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -40,24 +42,24 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 4)}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">
-        Session Info
+        {t('cfp.stepThree.title')}
       </h1>
       <p className="mt-3 text-dark-600">
-        Please provide your session title and description.
+        {t('cfp.stepThree.subtitle')}
       </p>
       <p className="mt-4 text-sm text-dark-600">
-        The sessions are expected to feature in-person presentations.
+        {t('cfp.stepThree.inPersonNote')}
       </p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
       <div className="mt-10">
-        <div className="text-dark-600 text-lg mb-4">Session Format</div>
+        <div className="text-dark-600 text-lg mb-4">{t('cfp.stepThree.sessionFormat')}</div>
         <Select
           options={options1}
           setValue={(val: string) => setValue({ ...value, Format: val })}
           multi={undefined}
           dataTest="step-three-format"
         />
-        <div className="text-dark-600 text-lg mt-4 mb-4">Session Level</div>
+        <div className="text-dark-600 text-lg mt-4 mb-4">{t('cfp.stepThree.sessionLevel')}</div>
         <Select
           options={options2}
           setValue={(val) => setValue({ ...value, Level: val })}
@@ -69,7 +71,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
             className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
             onClick={() => setStep(null, 2)}
           >
-            Back
+            {t('cfp.steps.back')}
           </a>
           <Button
             type="submit"
@@ -77,7 +79,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
             test="step-three-next"
           >
-            Next
+            {t('cfp.steps.next')}
           </Button>
         </div>
       </div>

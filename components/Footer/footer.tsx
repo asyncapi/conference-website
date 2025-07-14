@@ -3,8 +3,10 @@ import Image from 'next/image';
 import ILink from '../illustration/link';
 import { Social } from '../../types/types';
 import socials from '../../config/socials.json';
+import { useTranslation } from 'next-i18next';
 
 function Footer(): JSX.Element {
+  const { t } = useTranslation('common');
   return (
     <div className="container" data-test="footer">
       <div
@@ -19,7 +21,7 @@ function Footer(): JSX.Element {
             className="hover:underline text-white duration-200 ease-in-out flex items-center"
             data-test="code-of-conduct"
           >
-            <span> Code of Conduct </span>
+            <span> {t('footer.codeOfConduct')} </span>
             <span>
               <ILink className="w-4 ml-2" fill="white" />
             </span>
@@ -28,8 +30,7 @@ function Footer(): JSX.Element {
         <div></div>
         <div className="flex items-center justify-between sm:flex-col sm:items-center">
           <div className="text-white">
-            Made with ❤️ by AsyncAPI contributors. By the community for the
-            community!
+            {t('footer.madeWithLove')}
           </div>
           <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
           <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">

@@ -7,8 +7,10 @@ import cities from '../../config/city-lists.json';
 import Venue from '../Venue/venue';
 import Announcement from '../announcement';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 function Header(): JSX.Element {
+  const { t } = useTranslation('common');
   return (
     <div className="relative">
       <div className="container w-full flex items-center justify-center">
@@ -27,19 +29,18 @@ function Header(): JSX.Element {
                   level="h1"
                   typeStyle="heading-lg"
                 >
-                  AsyncAPI Conference 2025
+                  {t('header.title')}
                 </Heading>
               </div>
               <div className="w-[624px] sm:w-full text-center">
                 <Paragraph className="mt-[16px]" textColor="text-gray-200">
-                  Join us for the AsyncAPI Conference, bringing the latest in
-                  AsyncAPI technology to locations worldwide!
+                  {t('header.subtitle')}
                 </Paragraph>
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
                 <Link href="#tickets">
                   <Button type="button" className="w-[250px]">
-                    Register Now
+                    {t('header.registerNow')}
                   </Button>
                 </Link>
               </div>

@@ -19,13 +19,15 @@ import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Speaker/guideline';
 import CFPdata from '../../config/cfp-data.json';
-import { GetStaticPropsContext } from 'next';
+import { GetStaticPropsContext, GetStaticProps } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 interface IVenue {
   city: ExtendedCity;
 }
 
-export async function getStaticProps({ params }: GetStaticPropsContext) {
+export async function getStaticProps({ params, locale }: GetStaticPropsContext) {
   //temporary type
   let currentCity: Partial<ExtendedCity>;
   const cityName = params?.id as string;
@@ -42,6 +44,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   return {
     props: {
       city: currentCity,
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
     },
   };
 }
@@ -57,6 +60,7 @@ export async function getStaticPaths() {
 }
 
 function Venue({ city }: IVenue) {
+  const { t } = useTranslation('common');
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
@@ -105,7 +109,7 @@ function Venue({ city }: IVenue) {
               city.playlist && (
                 <a href="#recordings">
                   <Button type="button" className="w-[250px] h-[50px] m-8">
-                    Watch Recordings
+                    {t('venue.watchRecordings')}
                   </Button>
                 </a>
               )
@@ -115,8 +119,8 @@ function Venue({ city }: IVenue) {
                   <a href={city.ticket.url} target="_blank" rel="noreferrer">
                     <Button type="button" className="px-8 m-2 w-[250px]">
                       {city.ticket.price
-                        ? 'Get Your Free Ticket'
-                        : 'Register Now'}
+                        ? t('venue.getFreeTicket')
+                        : t('venue.registerNow')}
                     </Button>
                   </a>
                 )}
@@ -131,7 +135,7 @@ function Venue({ city }: IVenue) {
                     rel="noreferrer"
                   >
                     <Button type="submit" className="px-8 m-2 w-[250px]">
-                      Apply to be a speaker
+                      {t('venue.applyToBeSpeaker')}
                     </Button>
                   </a>
                 )}
@@ -166,7 +170,7 @@ function Venue({ city }: IVenue) {
           city.playlist && (
             <div className=" pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72">
               <h1 className="text-white font-bold text-5xl mb-10">
-                Recordings
+                {t('venue.recordings')}
               </h1>
               <iframe
                 width="100%"

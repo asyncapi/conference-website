@@ -1,0 +1,258 @@
+{
+  "navigation": {
+    "about": "À propos",
+    "venue": "Lieu",
+    "speakers": "Intervenants",
+    "tickets": "Billets",
+    "sponsors": "Sponsors",
+    "pastEditions": "Éditions Précédentes",
+    "venues": {
+      "singapore": "Singapour",
+      "munich": "Munich, Allemagne",
+      "lagos": "Lagos, Nigeria",
+      "london": "Londres, Royaume-Uni",
+      "bangalore": "Bangalore, Inde",
+      "online": "En ligne",
+      "paris": "Paris, France"
+    }
+  },
+  "header": {
+    "title": "Conférence AsyncAPI 2025",
+    "subtitle": "Rejoignez-nous pour la Conférence AsyncAPI, apportant les dernières technologies AsyncAPI dans des lieux du monde entier !",
+    "registerNow": "S'inscrire Maintenant"
+  },
+  "about": {
+    "sectionTitle": "À propos de l'Événement",
+    "title": "Conférence AsyncAPI",
+    "description1": "La Conférence AsyncAPI est un événement officiel créé par l'Initiative AsyncAPI. Cette conférence est principalement destinée à la communauté pour partager et échanger des expériences entre utilisateurs existants et nouveaux membres. Nous prévoyons d'intégrer de nouveaux membres dans la communauté et d'élargir leurs connaissances sur le projet.",
+    "description2": "Nous recherchons actuellement des sponsors, pour plus de détails, veuillez lire notre Prospectus de Sponsoring.",
+    "becomeSponsor": "Devenir sponsor maintenant",
+    "sponsorshipProspectus": "Prospectus de sponsoring"
+  },
+  "speakers": {
+    "sectionTitle": "Intervenants",
+    "title": "Rencontrez les Intervenants",
+    "description": "Découvrez les voix inspirantes qui façonnent notre événement, chacune apportant des perspectives uniques et une expertise à l'avant-garde de leurs domaines respectifs.",
+    "all": "Tous",
+    "noSpeakers": "Nous acceptons activement les candidatures d'intervenants, et vous pouvez commencer votre parcours en cliquant sur le bouton ci-dessous. Rejoignez-nous sur scène et partagez vos précieuses perspectives avec notre public enthousiaste !",
+    "applyToSpeak": "Postuler pour Intervenir",
+    "noSpeakersFound": "Aucun intervenant trouvé pour cette localisation"
+  },
+  "tickets": {
+    "sectionTitle": "Billets",
+    "title": "Obtenez vos Billets",
+    "description": "Assurez votre place à la Conférence AsyncAPI et rejoignez-nous pour une expérience inoubliable.",
+    "registerNow": "S'inscrire Maintenant",
+    "getTicket": "Obtenir un Billet",
+    "eventEnded": "Événement Terminé",
+    "perPerson": "/personne",
+    "ended": "Terminé",
+    "previousTicket": "Billet précédent",
+    "nextTicket": "Billet suivant",
+    "goToTicket": "Aller au billet",
+    "price": "Prix",
+    "available": "Disponible",
+    "eventDate": "Date de l'Événement",
+    "benefits": "Avantages",
+    "free": "Gratuit",
+    "tickets": "billets",
+    "noTicketsAvailable": "Aucun billet disponible pour le moment"
+  },
+  "sponsors": {
+    "sectionTitle": "Sponsors",
+    "title": "Nos Sponsors",
+    "description": "Élever l'avenir des APIs. Nos précieux partenaires et sponsors jouent un rôle central dans la concrétisation de notre vision. Avec leur soutien, nous orchestrons une célébration inoubliable.",
+    "becomeSponsor": "Devenir Sponsor",
+    "eventAndHost": "Sponsor de l'Événement et de l'Hôte",
+    "financial": "Sponsor Financier"
+  },
+  "footer": {
+    "description": "La Conférence AsyncAPI est un événement officiel créé par l'Initiative AsyncAPI.",
+    "links": {
+      "about": "À propos",
+      "venue": "Lieu",
+      "speakers": "Intervenants",
+      "tickets": "Billets",
+      "sponsors": "Sponsors",
+      "pastEditions": "Éditions Précédentes"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "youtube": "YouTube"
+    },
+    "copyright": "© 2025 Conférence AsyncAPI. Tous droits réservés.",
+    "codeOfConduct": "Code de Conduite",
+    "madeWithLove": "Fait avec ❤️ par les contributeurs AsyncAPI. Par la communauté pour la communauté !"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "close": "Fermer",
+    "download": "Télécharger",
+    "learnMore": "En savoir plus",
+    "readMore": "Lire plus",
+    "viewAll": "Voir tout",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "language": "Langue",
+    "selectLanguage": "Sélectionner la Langue",
+    "languageNote": "Choisissez votre langue préférée"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh": "中文",
+    "ar": "العربية"
+  },
+  "meta": {
+    "title": "Conférence AsyncAPI",
+    "description": "Généré par create next app",
+    "pastEditionsTitle": "Éditions Précédentes | AACoT"
+  },
+  "announcement": {
+    "callForSpeakers": "Appel à Orateurs Londres !"
+  },
+  "cfp": {
+    "title": "Soumettez votre conférence !",
+    "subtitle": "Nous acceptons activement les candidatures d'orateurs, Remplissez le formulaire pour postuler comme orateur.",
+    "noTravelSupport": "N.B. Nous n'offrons pas de bourses de voyage ni de soutien financier.",
+    "applicationCloses": "La candidature se termine le",
+    "successMessage": "Votre conférence a été soumise avec succès",
+    "fields": {
+      "yourInformation": "Votre Information",
+      "yourDetails": "Vos détails",
+      "sessionInformation": "Information de Session",
+      "sessionTitleAndDescription": "Titre et description de la session",
+      "sessionFormat": "Format de Session",
+      "sessionFormatAndLevel": "Format et niveau de session",
+      "additionalInformation": "Information Supplémentaire",
+      "specialRequestToOrganizers": "Demande spéciale aux organisateurs"
+    },
+    "steps": {
+      "step": "Étape",
+      "of": "sur",
+      "next": "Suivant",
+      "back": "Retour",
+      "submit": "Soumettre"
+    },
+    "stepOne": {
+      "title": "Commençons par votre nom",
+      "subtitle": "Veuillez remplir les détails ci-dessous avec votre nom complet",
+      "fullName": "Nom complet",
+      "emailAddress": "Adresse e-mail",
+      "bio": "Biographie",
+      "socialLinks": "Github/LinkedIn/Twitter"
+    },
+    "stepTwo": {
+      "title": "Information de Session",
+      "subtitle": "Veuillez fournir le titre et la description de votre session",
+      "sessionTitle": "Titre de la Session",
+      "sessionDescription": "Description de la Session"
+    },
+    "stepThree": {
+      "title": "Information de Session",
+      "subtitle": "Veuillez fournir le titre et la description de votre session.",
+      "inPersonNote": "Les sessions devraient présenter des présentations en personne.",
+      "sessionFormat": "Format de Session",
+      "sessionLevel": "Niveau de Session",
+      "formatOptions": {
+        "session": "Session(20 - 25mins)"
+      },
+      "levelOptions": {
+        "introductory": "Introductif et aperçu",
+        "intermediate": "Intermédiaire",
+        "advance": "Avancé",
+        "expert": "Expert"
+      }
+    },
+    "stepFour": {
+      "title": "Information Supplémentaire",
+      "subtitle": "Les notes ne seront vues que par les examinateurs pendant le processus CFP. Il est donc important d'utiliser cet espace pour expliquer toute exigence technique ou pourquoi vous êtes le mieux placé pour parler du sujet, etc...",
+      "additionalInformation": "Information Supplémentaire",
+      "codeOfConductNote": "En cliquant sur soumettre, cela signifie que vous acceptez de suivre le",
+      "codeOfConductLink": "Code de Conduite de l'Initiative AsyncAPI",
+      "submitError": "Échec de la soumission des commentaires. Réessayez"
+    },
+    "guidelines": {
+      "title": "Directives pour les Orateurs",
+      "submitTalkProposal": "Soumettre une Proposition de Conférence"
+    }
+  },
+  "venue": {
+    "viewWebsite": "Voir le Site Web",
+    "mapIcon": "Icône de Carte",
+    "watchRecordings": "Regarder les Enregistrements",
+    "getFreeTicket": "Obtenir votre Billet Gratuit",
+    "registerNow": "S'inscrire Maintenant",
+    "applyToBeSpeaker": "Postuler pour être intervenant",
+    "recordings": "Enregistrements",
+    "cfpOpen": "CFP est ouvert",
+    "pastEditions": {
+      "title": "Éditions Précédentes de",
+      "subtitle": "AsyncAPI Conf"
+    }
+  },
+  "index": {
+    "applyAsSpeaker": "Postuler comme orateur",
+    "speakersComingSoon": "Orateurs Bientôt Disponibles - Restez à l'Écoute !",
+    "getTickets": "Obtenir des Billets",
+    "ticketsDescription": "Découvrez l'Avenir de la Communication Asynchrone : Obtenez des Billets pour la Conférence AsyncAPI !"
+  },
+  "guidelines": {
+    "title": "Directives pour les Orateurs",
+    "submitProposal": "Soumettre une Proposition de Conférence"
+  },
+  "popup": {
+    "title": "AsyncAPI se dirige vers",
+    "developerWeek": "DeveloperWeek",
+    "description": "Pour la première fois, nous amenons la communauté AsyncAPI à",
+    "location": "DeveloperWeek USA à San Jose, CA",
+    "callToAction": "Faites partie du voyage alors que nous construisons l'avenir des APIs orientées événements !",
+    "seeWhatsNext": "Voir ce qui suit"
+  },
+  "subscription": {
+    "title": "Abonnez-vous aux mises à jour d'AsyncAPI Conf !",
+    "subscribe": "S'abonner"
+  },
+  "paper": {
+    "title": "Soumettez votre conférence !",
+    "subtitle": "Nous acceptons activement les candidatures d'orateurs, Remplissez le formulaire pour postuler comme orateur.",
+    "noSupport": "N.B. Nous n'offrons pas de bourses de voyage ni de soutien financier.",
+    "applicationCloses": "La candidature se termine le",
+    "step": "Étape {{step}}/{{total}}",
+    "successMessage": "Votre conférence a été soumise avec succès",
+    "fields": {
+      "yourInfo": {
+        "title": "Vos Informations",
+        "description": "Vos détails"
+      },
+      "sessionInfo": {
+        "title": "Informations de Session",
+        "description": "Titre et description de la session"
+      },
+      "sessionFormat": {
+        "title": "Format de Session",
+        "description": "Format et niveau de session"
+      },
+      "additionalInfo": {
+        "title": "Informations Supplémentaires",
+        "description": "Demande spéciale aux organisateurs"
+      }
+    }
+  }
+} 

@@ -4,8 +4,10 @@ import Arrows from '../illustration/arrows';
 import TicketIcon from '../illustration/ticket';
 import tickets from '../../config/tickets.json';
 import { Ticket as ITicket } from '../../types/types';
+import { useTranslation } from 'next-i18next';
 
 const Tickets = (): JSX.Element => {
+  const { t } = useTranslation('common');
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const today = new Date();
 
@@ -29,14 +31,14 @@ const Tickets = (): JSX.Element => {
         <button
           onClick={prevTicket}
           className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-          aria-label="Previous ticket"
+          aria-label={t('tickets.previousTicket')}
         >
           <Arrows direction="left" className="w-6 h-6" fill="#4B5563" />
         </button>
         <button
           onClick={nextTicket}
           className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-          aria-label="Next ticket"
+          aria-label={t('tickets.nextTicket')}
         >
           <Arrows direction="right" className="w-6 h-6" fill="#4B5563" />
         </button>
@@ -91,7 +93,7 @@ const Tickets = (): JSX.Element => {
                       <p className="text-gray-500 mt-1">{ticket.description}</p>
                     </div>
                     <div className="px-2 py-1 rounded-full text-sm font-medium text-gradient">
-                      {isEnded ? 'Ended' : ticket.status}
+                      {isEnded ? t('tickets.ended') : ticket.status}
                     </div>
                   </div>
 
@@ -99,7 +101,7 @@ const Tickets = (): JSX.Element => {
                     <span className="text-3xl font-bold text-gray-900">
                       ${ticket.price}
                     </span>
-                    <span className="text-gray-500 ml-2">/person</span>
+                    <span className="text-gray-500 ml-2">{t('tickets.perPerson')}</span>
                   </div>
 
                   <ul className="mt-6 space-y-2">
@@ -114,7 +116,7 @@ const Tickets = (): JSX.Element => {
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
                       <Button type="button" className="mt-8 w-full">
-                        Get a Ticket
+                        {t('tickets.getTicket')}
                       </Button>
                     </a>
                   ) : (
@@ -124,7 +126,7 @@ const Tickets = (): JSX.Element => {
                       overlay={true}
                       className="mt-8 w-full bg-gray-300"
                     >
-                      {isEnded ? 'Event Ended' : 'Get a Ticket'}
+                      {isEnded ? t('tickets.eventEnded') : t('tickets.getTicket')}
                     </Button>
                   )}
                 </div>
@@ -143,7 +145,7 @@ const Tickets = (): JSX.Element => {
                 index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
               }`}
               onClick={() => setCurrentIndex(index)}
-              aria-label={`Go to ticket ${index + 1}`}
+              aria-label={`${t('tickets.goToTicket')} ${index + 1}`}
             />
           );
         })}

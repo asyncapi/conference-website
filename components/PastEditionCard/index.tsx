@@ -1,11 +1,13 @@
 import React, { JSX } from 'react';
 import ILink from '../illustration/link';
+import { useTranslation } from 'next-i18next';
 
 interface PastEditonCardProp {
   url: string;
 }
 
 const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
+  const { t } = useTranslation('common');
   let year = url.split('.')[1];
   return (
     <div className="bg-white bg-opacity-10 backdrop-blur-lg bg-clip-padding shadow-lg p-4 w-full mx-auto border-[1.66px] border-[#FFFFFF66] rounded-xl ">
@@ -18,7 +20,7 @@ const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
             target="_blank"
             className="flex hover:scale-95 transiti items-center justify-center"
           >
-            <p className="mr-2 text-white text-sm">View Website</p>
+            <p className="mr-2 text-white text-sm">{t('venue.viewWebsite')}</p>
             <ILink className="w-5 " fill="white" />
           </a>
         </div>

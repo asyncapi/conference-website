@@ -4,8 +4,10 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 function About(): JSX.Element {
+  const { t } = useTranslation('common');
   return (
     <div
       className="p-24 lg:pt-8 container flex items-center justify-center w-full"
@@ -16,30 +18,25 @@ function About(): JSX.Element {
         <div className="w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center">
           <div className="flex items-center lg:justify-center">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
-              About The Event
+              {t('about.sectionTitle')}
             </div>
           </div>
           <Heading typeStyle="heading-md" className="text-gradient lg:mt-10">
-            AsyncAPI Conference
+            {t('about.title')}
           </Heading>
           <Paragraph
             typeStyle="body-lg"
             className="mt-6"
             textColor="text-gray-200"
           >
-            The AsyncAPI Conference is an official event created by the AsyncAPI
-            Initiative. This conference is aimed primarily at the community to
-            share and exchange experiences between existing users and new
-            members. We plan to integrate new members into the community and
-            expand their knowledge about the project.
+            {t('about.description1')}
           </Paragraph>
           <Paragraph
             typeStyle="body-lg"
             className="mt-6"
             textColor="text-gray-200"
           >
-            We are currently looking for sponsors, for more details please read
-            our Sponsorship Prospectus.
+            {t('about.description2')}
           </Paragraph>
           <div
             className="mt-10 flex gap-4 sm:flex-col lg:justify-center"
@@ -52,7 +49,7 @@ function About(): JSX.Element {
               rel="noreferrer"
             >
               <Button type="button" className="w-[200px]">
-                Become a sponsor now
+                {t('about.becomeSponsor')}
               </Button>
             </a>
             <a
@@ -69,7 +66,7 @@ function About(): JSX.Element {
                     alt="Download-icon"
                     objectFit="contain"
                   />
-                  <div>Sponsorship prospectus</div>
+                  <div>{t('about.sponsorshipProspectus')}</div>
                 </div>
               </Button>
             </a>
