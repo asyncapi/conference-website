@@ -12,8 +12,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Work Sans', sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  scroll-behavior: smooth;s
   background: #1b1130;
 }
 
@@ -72,7 +71,8 @@ body {
   background-image: linear-gradient(
     225deg,
     #2dccfd 9.35%,
-    #ad20e2 88.41%
+    #ad20e2 88.4git status
+    1%
   ) !important;
   -webkit-mask-image: linear-gradient(
     45deg,
