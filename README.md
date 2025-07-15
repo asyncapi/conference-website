@@ -38,6 +38,12 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Testing
+
+This project includes automated testing:
+- **Cypress**: End-to-end testing (`npm run cy:run`)
+- **Lighthouse**: Performance, accessibility, and SEO auditing (runs automatically in CI)
+
 ## AsyncAPI Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
