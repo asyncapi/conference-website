@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 Running pre-commit checks..."
+
+# Run lint-staged for staged files
+echo "📝 Formatting and linting staged files..."
+npx lint-staged
+
+# Run type checking on the entire project
+echo "🔍 Running TypeScript type checking..."
+npm run type-check
+
+# Run ESLint on the entire project
+echo "🧹 Running ESLint on entire project..."
+npm run lint
+
+# Run Cypress tests in headless mode
+echo "🧪 Running Cypress E2E tests..."
+npm run test:e2e:headless
+
+echo "✅ All pre-commit checks passed! Ready to commit."
