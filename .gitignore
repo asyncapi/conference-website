@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+# lighthouse
+/.lighthouseci
+/lighthouse-reports
+
 # next.js
 /.next/
 /out/
