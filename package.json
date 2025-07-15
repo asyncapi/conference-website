@@ -42,6 +42,7 @@
   "devDependencies": {
     "@lhci/cli": "^0.13.0",
     "@types/nodemailer": "^6.4.17",
+    "@types/react-dom": "^19.1.6",
     "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.4.7",
     "cypress": "^13.11.0",
