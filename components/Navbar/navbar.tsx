@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
 import { LinkItem } from '../../types/types';
+import LanguageSwitcher from '../LanguageSwitcher/languageSwitcher';
 
 function Navbar(): JSX.Element {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -168,6 +169,9 @@ function Navbar(): JSX.Element {
                   </div>
                 </div>
               ))}
+              <div className="ml-8">
+                <LanguageSwitcher />
+              </div>
             </div>
           )}
           {isTablet && (

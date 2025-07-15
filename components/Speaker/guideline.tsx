@@ -3,6 +3,7 @@ import Plus from '../illustration/plus';
 import Heading from '../Typography/heading';
 import Button from '../Buttons/button';
 import faqs from '../../config/faqs.json';
+import { useTranslation } from 'next-i18next';
 
 interface GuidelinesProps {
   talkDeadLine: string;
@@ -12,12 +13,13 @@ interface GuidelinesProps {
 }
 
 function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
+  const { t } = useTranslation('common');
   const [show, setShow] = useState<number | null>(null);
   return (
     <div className="z-[9]" data-test="guideline-com">
       <div className="flex flex-col justify-center">
         <Heading className="text-[30px] text-white text-center">
-          Speakers Guideline
+          {t('guidelines.title')}
         </Heading>
         <div className="mt-20">
           {faqs.map((faq, i) => {
@@ -143,7 +145,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
               rel="noreferrer"
             >
               <Button type="button" className="x-8 m-2 w-[250px] text-center">
-                Submit Talk Proposal
+                {t('guidelines.submitProposal')}
               </Button>
             </a>
           )}

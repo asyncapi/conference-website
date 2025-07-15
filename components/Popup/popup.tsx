@@ -6,8 +6,10 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 function Popup() {
+  const { t } = useTranslation('common');
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
@@ -96,26 +98,24 @@ function Popup() {
               </div>
               <div className="flex flex-col items-center text-center space-y-6">
                 <h1 className="text-[32px] sm:text-[25px] font-bold text-white">
-                  AsyncAPI Is Headed to
+                  {t('popup.title')}
                   <br />
-                  DeveloperWeek <span className="text-[#B31942]">U</span>
+                  {t('popup.developerWeek')} <span className="text-[#B31942]">U</span>
                   <span>S</span>
                   <span className="text-[#0A3161]">A</span> 2026!
                 </h1>
                 <Paragraph typeStyle="body-md">
-                  For the first time ever, we&apos;re bringing the AsyncAPI
-                  community to
+                  {t('popup.description')}
                   <br />
-                  DeveloperWeek USA in San Jose, CA
+                  {t('popup.location')}
                 </Paragraph>
 
                 <Paragraph typeStyle="body-md" className="text-white font-bold">
-                  Be a part of the journey as we build the future of
-                  event-driven APIs!
+                  {t('popup.callToAction')}
                 </Paragraph>
                 <Link href="/venue/California">
                   <Button type="button" className="w-[200px]">
-                    See What&apos;s Next
+                    {t('popup.seeWhatsNext')}
                   </Button>
                 </Link>
               </div>

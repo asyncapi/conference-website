@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/footer';
 import { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
+import { appWithTranslation } from 'next-i18next';
+import nextI18NextConfig from '../next-i18next.config.js';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -22,4 +24,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);

@@ -6,6 +6,7 @@ import StepThree from './Cfp/stepThree';
 import StepFour from './Cfp/stepFour';
 import cfpData from '../../config/cfp-data.json';
 import { CfpForm } from '../../types/types';
+import { useTranslation } from 'next-i18next';
 
 type Field = {
   title: string;
@@ -13,35 +14,36 @@ type Field = {
   icon: string;
 };
 
-const fields: Field[] = [
-  {
-    title: 'Your Information',
-    description: 'Your details',
-    icon: '',
-  },
-  {
-    title: 'Session Information',
-    description: 'Session title and description',
-    icon: '',
-  },
-  {
-    title: 'Session Format',
-    description: 'Session format and level',
-    icon: '',
-  },
-  {
-    title: 'Additional Information',
-    description: 'Special request to organizers',
-    icon: '',
-  },
-];
-
 function Paper(): JSX.Element {
+  const { t } = useTranslation('common');
   const [step, setStep] = useState<number>(1);
   const confetiRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | undefined>(undefined);
   const [width, setWidth] = useState<number | undefined>(undefined);
   const [formData, setFormData] = useState<Partial<CfpForm>>({});
+
+  const fields: Field[] = [
+    {
+      title: t('paper.fields.yourInfo.title'),
+      description: t('paper.fields.yourInfo.description'),
+      icon: '',
+    },
+    {
+      title: t('paper.fields.sessionInfo.title'),
+      description: t('paper.fields.sessionInfo.description'),
+      icon: '',
+    },
+    {
+      title: t('paper.fields.sessionFormat.title'),
+      description: t('paper.fields.sessionFormat.description'),
+      icon: '',
+    },
+    {
+      title: t('paper.fields.additionalInfo.title'),
+      description: t('paper.fields.additionalInfo.description'),
+      icon: '',
+    },
+  ];
 
   const onStepUpdate = (
     e: FormEvent<HTMLFormElement> | null,
@@ -85,7 +87,7 @@ function Paper(): JSX.Element {
       <div className="flex items-center h-full">
         <div>
           <h1 className="text-2xl text-white font-bold mt-6">
-            Your talk have been submitted successfully
+            {t('paper.successMessage')}
           </h1>
         </div>
         <Confetti
@@ -108,18 +110,17 @@ function Paper(): JSX.Element {
       <div>
         <div className="lg:px-6 mt-5">
           <h1 className="text-white font-bold text-5xl lg:text-3xl">
-            Submit your talk!
+            {t('paper.title')}
           </h1>
           <p className="mt-2 text-dark-500 text-lg">
-            We are actively accepting speaker applications, <br /> Fill up the
-            form to apply as a speaker.
+            {t('paper.subtitle')}
           </p>
           <div className="flex mt-8 justify-between sm:flex-col items-center sm:items-start text-dark-500 text-sm">
             <p>
-              P.S. We do not offer travel scholarships or financial support.
+              {t('paper.noSupport')}
             </p>
             <p className="sm:mt-4">
-              Application closes on {cfpData.CallEndDate}
+              {t('paper.applicationCloses')} {cfpData.CallEndDate}
             </p>
           </div>
         </div>
@@ -147,7 +148,7 @@ function Paper(): JSX.Element {
             </div>
           </div>
           <div className="p-10 ml-24 lg:ml-0 w-full px-20 lg:px-0">
-            <p className="text-dark-400">{step !== 0 && `Step ${step}/4`}</p>
+            <p className="text-dark-400">{step !== 0 && t('paper.step', { step, total: 4 })}</p>
             {view}
             <div className="absolute bottom-0 right-0 rotate-0 opacity-50 sm:hidden scale-x-[-1]"></div>
           </div>

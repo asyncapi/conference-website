@@ -1,17 +1,21 @@
 import React, { JSX } from 'react';
 import PastEditonCard from '../../components/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
+import { useTranslation } from 'next-i18next';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const PastEditions = (): JSX.Element => {
+  const { t } = useTranslation('common');
   return (
     <div>
-      <title>Past Editions | AACoT</title>
+      <title>{t('meta.pastEditionsTitle')}</title>
       <div className="my-[70px]">
         <h1 className="text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold">
-          Past Editions of
+          {t('venue.pastEditions.title')}
         </h1>
         <h1 className="text-5xl sm:text-4xl px-10 py-4 rounded-full bg-violet-700 text-white my-4 text-center w-fit mx-auto font-bold">
-          AsyncAPI Conf
+          {t('venue.pastEditions.subtitle')}
         </h1>
       </div>
 
@@ -25,3 +29,11 @@ const PastEditions = (): JSX.Element => {
 };
 
 export default PastEditions;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+};

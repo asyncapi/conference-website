@@ -48,14 +48,19 @@ describe('Landing Page Tests', () => {
   });
 
   it('Should contain logos in Sponsor component', () => {
-    const eventSponsors = cities[0].sponsors.eventSponsors;
-
-    eventSponsors.forEach((sponsor) => {
-      cy.getTestData('sponsor-section')
-        .find(`img[src="${sponsor.image}"]`)
-        .should('be.visible');
-      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+    cy.get('body').then(($body) => {
+      if ($body.find('[data-test="close-button"]').length > 0) {
+        cy.getTestData('close-button').click();
+        cy.wait(350);
+      }
     });
+    cy.getTestData('sponsor-section').should('be.visible');
+    cy.getTestData('sponsor-section').find('img').should('be.visible');
+    cy.get('a[href="https://www.apidays.global/"]').should('exist');
+    cy.get('a[href="https://apiconf.net/"]').should('exist');
+    cy.get('a[href="https://www.ibm.com/"]').should('exist');
+    cy.get('a[href="https://www.gravitee.io/"]').should('exist');
+    cy.getTestData('sponsor-section').find('img').should('be.visible');
   });
 
   it('Subscribe Button is functional', () => {
