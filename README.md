@@ -17,8 +17,10 @@ cd conference-website
 Install Dependencies
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
+
+> **Note:** This project uses motion v12.0.0-alpha.2 which has a peer dependency on React 19, but the project runs on React 18. The `--legacy-peer-deps` flag is required for installation.
 
 Run the development server:
 
