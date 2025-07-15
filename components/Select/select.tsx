@@ -1,4 +1,4 @@
-import React, { useState, useEffect,JSX } from 'react';
+import React, { useState, useEffect, JSX } from 'react';
 import Select, { MultiValue, StylesConfig } from 'react-select';
 import { SelectOptions } from '../../types/types';
 
@@ -60,7 +60,7 @@ function SelectDropdown({
         className={`${dataTest || ''}`}
         styles={customStyles}
         defaultValue={selectedOption}
-        onChange={(option) => setSelectedOption(option as any)}
+        onChange={(option: any) => setSelectedOption(option as any)}
         options={options}
         isMulti={multi}
       />

@@ -1,4 +1,5 @@
-import React, { JSX } from 'react';
+import React from 'react';
+
 type ButtonType = 'button' | 'submit' | 'reset' | undefined;
 
 interface IButton {
@@ -19,7 +20,7 @@ function Button({
   type,
   disabled,
   test,
-}: IButton): JSX.Element {
+}: IButton): React.JSX.Element {
   return (
     <button
       disabled={disabled}

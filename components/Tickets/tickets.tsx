@@ -1,4 +1,4 @@
-import React, { useState, JSX } from 'react';
+import React, { JSX, useState } from 'react';
 import Button from '../Buttons/button';
 import Arrows from '../illustration/arrows';
 import TicketIcon from '../illustration/ticket';

@@ -36,7 +36,7 @@ module.exports = {
     screens: {
       xl: { max: '1279px' },
       lg: { max: '1118px' },
-      sm: { max: '590px' },
+      sm: { max: '715px' },
     },
     fontFamily: {
       secondary: ['Fira Code', 'monospace'],
