@@ -1,4 +1,10 @@
-import React, { useState, forwardRef, Dispatch, SetStateAction } from 'react';
+import React, {
+  useState,
+  forwardRef,
+  Dispatch,
+  SetStateAction,
+  JSX,
+} from 'react';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
