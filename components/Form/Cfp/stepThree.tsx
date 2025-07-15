@@ -37,7 +37,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
 
   useEffect(() => {
     setForm({ ...data, ...value });
-  }, [value]);
+  }, [value, data, setForm]);
 
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 4)}>
