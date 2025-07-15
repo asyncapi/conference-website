@@ -1,5 +1,6 @@
 import path from 'path';
 import speakers from '../../config/speakers.json';
+import cities from '../../config/city-lists.json';
 
 describe('Landing Page Tests', () => {
   beforeEach(() => {
@@ -18,6 +19,8 @@ describe('Landing Page Tests', () => {
   });
 
   it('Verify the downloaded file', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     const Year = new Date().getFullYear();
     cy.getTestData('prospectus-download').should('be.visible');
     cy.getTestData('prospectus-download').click();
@@ -44,26 +47,20 @@ describe('Landing Page Tests', () => {
     cy.getTestData('sponsor-section').should('be.visible');
   });
 
-  //   it("Should contain logos in Sponsor component", () => {
-  //     const eventSponsors = cities[0].sponsors.eventSponsors;
-  //     const financialSponsors = cities[0].sponsors.financialSponsors;
+  it('Should contain logos in Sponsor component', () => {
+    const eventSponsors = cities[0].sponsors.eventSponsors;
 
-  //     eventSponsors.forEach((sponsor) => {
-  //       cy.getTestData("sponsor-section")
-  //         .find(`img[src="${sponsor.image}"]`)
-  //         .should("be.visible");
-  //       cy.get(`a[href="${sponsor.websiteUrl}"]`).should("exist");
-  //     });
-
-  //     financialSponsors.forEach((sponsor) => {
-  //       cy.getTestData("sponsor-section")
-  //         .find(`img[src="${sponsor.image}"]`)
-  //         .should("be.visible");
-  //       cy.get(`a[href="${sponsor.websiteUrl}"]`).should("exist");
-  //     });
-  //   });
+    eventSponsors.forEach((sponsor) => {
+      cy.getTestData('sponsor-section')
+        .find(`img[src="${sponsor.image}"]`)
+        .should('be.visible');
+      cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
+    });
+  });
 
   it('Subscribe Button is functional', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('subscribe-button').invoke('removeAttr', 'target').click();
 
     cy.origin('https://www.asyncapi.com/newsletter', () => {
