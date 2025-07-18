@@ -21,7 +21,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      theme: themes.light,
+      theme: themes.dark,
       toc: {
         title: 'Table of contents',
       },
