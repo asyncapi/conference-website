@@ -22,9 +22,6 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.dark,
-      toc: {
-        title: 'Table of contents',
-      },
       page: () => (
         <>
           <Title />
