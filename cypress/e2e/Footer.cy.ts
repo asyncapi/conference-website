@@ -12,6 +12,8 @@ describe('Footer links', () => {
   });
 
   it('Code of Conduct should redirect to the correct page', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('code-of-conduct').invoke('removeAttr', 'target').click();
 
     cy.origin(
@@ -26,6 +28,8 @@ describe('Footer links', () => {
   });
 
   it('Github should redirect to correct page', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('footer-Github').invoke('removeAttr', 'target').click();
 
     cy.origin('https://github.com/asyncapi', () => {
@@ -34,6 +38,8 @@ describe('Footer links', () => {
   });
 
   it('Linkedin should redirect to correct page', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('footer-Linkedin').invoke('removeAttr', 'target').click();
 
     cy.origin('https://www.linkedin.com/company/asyncapi/', () => {
@@ -42,6 +48,8 @@ describe('Footer links', () => {
   });
 
   it('Twitter(X) should redirect to correct page', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('footer-Twitter(X)').invoke('removeAttr', 'target').click();
 
     cy.origin('https://x.com/asyncapispec', () => {
