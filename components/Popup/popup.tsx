@@ -30,37 +30,33 @@ function Popup() {
         createPortal(
           <div
             data-testid="popup-container"
-            className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 z-[100] ${
+            className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 z-[100] p-4 ${
               isVisible ? 'bg-opacity-90 ' : 'bg-opacity-0'
             }`}
             onClick={handleClose}
           >
             <div
-              className={`w-[650px] h-[750px] sm:w-[400px] sm:h-[700px] card p-6 transition-all duration-300 ease-out transform fixed top-[150px]${
+              className={`w-full max-w-[650px] max-h-[85vh] h-auto lg:max-w-[500px] sm:max-w-[400px] card p-5 lg:p-4 sm:p-4 transition-all duration-300 ease-out transform relative ${
                 isVisible
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
               }`}
               style={{
-                top: '150px',
-                left: '50%',
-                transform: `translateX(-50%) ${isVisible ? 'translateY(0) scale(1)' : 'translateY(2rem) scale(0.95)'}`,
-                zIndex: 51,
                 borderRadius: '30px',
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between gap-2 mb-8">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              <div className="flex items-center justify-between gap-2 mb-4">
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center p-2">
                   <img
                     src="/img/logos/2025-logo.png"
                     alt="conference logo"
-                    className="w-[150px]"
+                    className="w-[130px] lg:w-[110px] sm:w-[100px]"
                   />
                 </div>
                 <button
                   data-test="close-button"
-                  className="p-2 hover:bg-gray-400 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200"
+                  className="p-2 hover:bg-gray-400 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 flex-shrink-0"
                   onClick={handleClose}
                 >
                   <svg
@@ -85,39 +81,39 @@ function Popup() {
                   </svg>
                 </button>
               </div>
-              <div className="my-10 flex justify-center">
+              <div className="my-4 lg:my-3 sm:my-2 flex justify-center">
                 <Image
                   src="/img/rocket.gif"
                   alt="rocket"
                   width={0}
                   height={0}
-                  className="w-[230px] h-[230px] sm:w-[150px] sm:h-[150px]"
+                  className="w-[180px] h-[180px] lg:w-[150px] lg:h-[150px] sm:w-[120px] sm:h-[120px]"
                 />
               </div>
-              <div className="flex flex-col items-center text-center space-y-6">
-                <h1 className="text-[32px] sm:text-[25px] font-bold text-white">
+              <div className="flex flex-col items-center text-center space-y-4 lg:space-y-3 sm:space-y-2">
+                <h1 className="text-[28px] lg:text-[24px] sm:text-[22px] font-bold text-white leading-tight">
                   AsyncAPI Is Headed to
                   <br />
                   DeveloperWeek <span className="text-[#B31942]">U</span>
                   <span>S</span>
                   <span className="text-[#0A3161]">A</span> 2026!
                 </h1>
-                <Paragraph typeStyle="body-md">
+                <Paragraph typeStyle="body-md" className="lg:text-sm">
                   For the first time ever, we&apos;re bringing the AsyncAPI
-                  community to
-                  <br />
-                  DeveloperWeek USA in San Jose, CA
+                  community to DeveloperWeek USA in San Jose, CA
                 </Paragraph>
 
-                <Paragraph typeStyle="body-md" className="text-white font-bold">
+                <Paragraph typeStyle="body-md" className="text-white font-bold lg:text-sm">
                   Be a part of the journey as we build the future of
                   event-driven APIs!
                 </Paragraph>
-                <Link href="/venue/California">
-                  <Button type="button" className="w-[200px]">
-                    See What&apos;s Next
-                  </Button>
-                </Link>
+                <div className="pt-2">
+                  <Link href="/venue/California">
+                    <Button type="button" className="w-[200px] lg:w-[180px] sm:w-[160px]">
+                      See What&apos;s Next
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>,

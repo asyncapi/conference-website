@@ -32,7 +32,7 @@
     "title": "Chief Software Architect at codecentric AG",
     "img": "/img/speaker-images/paris/Annegret.webp",
     "id": 5,
-    "city": ["Munich"]
+    "city": ["Munich", "London"]
   },
   {
     "name": "Eduardo Maldonado Fonseca Silva",
@@ -53,7 +53,7 @@
     "title": "Managing Consultant at Wavestone",
     "img": "/img/speaker-images/munich/Fabrizio.webp",
     "id": 8,
-    "city": ["Munich"]
+    "city": ["Munich", "London"]
   },
   {
     "name": "Azeez Elegbede",
@@ -95,6 +95,13 @@
     "title": "Chief Architect at IBM",
     "img": "/img/speaker-images/london/Dale Lane.webp",
     "id": 14,
-    "city": ["Paris"]
+    "city": ["Paris", "London"]
+  },
+  {
+    "name": "David Boyne",
+    "title": "Founder of EventCatalog",
+    "img": "/img/speaker-images/london/David Boyne.webp",
+    "id": 15,
+    "city": ["London"]
   }
 ]
