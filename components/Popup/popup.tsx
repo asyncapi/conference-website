@@ -36,7 +36,7 @@ function Popup() {
             onClick={handleClose}
           >
             <div
-              className={`w-full max-w-[650px] sm:max-w-[400px] max-h-full my-auto card p-6 transition-all duration-300 ease-out transform ${
+              className={`w-full max-w-[650px] sm:max-w-[400px] h-auto my-auto card p-6 transition-all duration-300 ease-out transform ${
                 isVisible
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
@@ -90,13 +90,14 @@ function Popup() {
                     alt="rocket"
                     width={0}
                     height={0}
-                    className="w-[230px] h-[230px] sm:w-[150px] sm:h-[150px] max-w-full"
+                    className="w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] max-w-full"
                   />
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">
                   <Heading
                     typeStyle="heading-md"
+                    level="h4"
                     className="sm:text-[25px] font-bold text-white leading-tight"
                   >
                     AsyncAPI Is Headed to
