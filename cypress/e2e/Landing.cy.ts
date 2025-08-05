@@ -71,4 +71,3 @@ describe('Landing Page Tests', () => {
     });
   });
 });
-
