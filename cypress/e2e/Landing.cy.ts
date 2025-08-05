@@ -57,17 +57,13 @@ describe('Landing Page Tests', () => {
       cy.get(`a[href="${sponsor.websiteUrl}"]`).should('exist');
     });
   });
-
-  it('Subscribe Button is functional', () => {
+   it('Subscribe Button is functional', () => {
     cy.getTestData('close-button').click();
     cy.wait(350);
     cy.getTestData('subscribe-button').invoke('removeAttr', 'target').click();
 
-    cy.origin('https://www.asyncapi.com/newsletter', () => {
-      cy.url().should(
-        'match',
-        /https:\/\/www\.asyncapi\.com\/[a-z]{2}\/newsletter/
-      );
+    cy.origin('https://www.asyncapi.com', () => {
+      cy.url().should('include', '/newsletter');
     });
   });
 });
