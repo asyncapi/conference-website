@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Image from 'next/image';
 import ILink from '../illustration/link';
 import { Social } from '../../types/types';

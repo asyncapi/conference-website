@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, JSX } from 'react';
 import links from '../../config/links.json';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
