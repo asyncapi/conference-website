@@ -48,7 +48,7 @@ function Popup() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="">
-                <div className="flex items-center justify-between gap-2 mb-8">
+                <div className="flex items-center justify-between">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                     <img
                       src="/img/logos/2025-logo.png"
@@ -90,22 +90,18 @@ function Popup() {
                     alt="rocket"
                     width={0}
                     height={0}
-                    className="w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] max-w-full"
+                    className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
                   />
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">
-                  <Heading
-                    typeStyle="heading-md"
-                    level="h4"
-                    className="sm:text-[25px] font-bold text-white leading-tight"
-                  >
+                  <h1 className=" text-[30px] sm:text-[25px] font-bold text-white leading-tight">
                     AsyncAPI Is Headed to
                     <br />
                     DeveloperWeek <span className="text-[#B31942]">U</span>
                     <span>S</span>
                     <span className="text-[#0A3161]">A</span> 2026!
-                  </Heading>
+                  </h1>
                   <Paragraph typeStyle="body-md">
                     For the first time ever, we&apos;re bringing the AsyncAPI
                     community to
