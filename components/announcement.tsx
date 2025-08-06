@@ -14,4 +14,3 @@ function Announcement(): JSX.Element {
 }
 
 export default Announcement;
-
