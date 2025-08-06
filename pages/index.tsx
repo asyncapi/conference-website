@@ -16,6 +16,8 @@ import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City } from '../types/types';
 import { HeadComponent as Head} from "../components/Head";
+import Popup from '../components/Popup/popup';
+
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [speakersList, setSpeakersList] = useState(speakers);
@@ -44,6 +46,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
+      <Popup />
       <div id="about" className="mt-20">
         <About />
       </div>
@@ -110,6 +113,10 @@ export default function Home() {
                         </span>
                       </Button>
                       {cities.map((city) => {
+                        // Temporary condition and should be removed next year
+                        if (city.name === 'California') {
+                          return null;
+                        }
                         return (
                           <div
                             key={city.name}
