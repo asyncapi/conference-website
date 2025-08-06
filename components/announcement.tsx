@@ -12,5 +12,4 @@ function Announcement(): JSX.Element {
     </Link>
   );
 }
-
 export default Announcement;
