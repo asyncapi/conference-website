@@ -87,9 +87,9 @@ function Navbar(): JSX.Element {
   };
 
   return (
-    <div className="relative">
+    <div>
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
+        className={`flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
