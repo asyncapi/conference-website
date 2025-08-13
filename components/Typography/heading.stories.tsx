@@ -50,7 +50,6 @@ type Story = StoryObj<typeof Heading>;
 export const Headings: Story = {
   args: {
     level: 'h1',
-    typeStyle: 'heading-lg',
     children: 'AsyncAPI Conference',
     textColor: 'text-white',
   }
