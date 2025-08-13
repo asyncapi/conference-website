@@ -14,6 +14,14 @@ type TypeStyle =
   | 'body-md'
   | 'body-sm';
 
+const levelToTypeStyle: Record<HeadingLevel, TypeStyle> = {
+  h1: 'heading-lg',
+  h2: 'heading-md',
+  h3: 'heading-md-semibold',
+  h4: 'heading-sm',
+  h5: 'heading-xs',
+  h6: 'heading-xs-semibold',
+};
 interface IHeading {
   typeStyle?: TypeStyle;
   level?: HeadingLevel;
@@ -23,7 +31,7 @@ interface IHeading {
 }
 
 export default function Heading({
-  typeStyle = 'heading-lg',
+  typeStyle,
   level = 'h2',
   textColor = 'text-primary-800',
   className,
@@ -31,7 +39,8 @@ export default function Heading({
 }: IHeading): JSX.Element {
   let classNames = '';
   const Tag = level as keyof JSX.IntrinsicElements;
-  switch (typeStyle) {
+  const resolvedTypeStyle: TypeStyle = typeStyle ?? levelToTypeStyle[level];
+  switch (resolvedTypeStyle) {
     case 'heading-lg':
       classNames = `font-heading text-heading-md font-bold text-[60px] tracking-heading sm:text-[30px] lg:text-[40px] ${
         className || ''
@@ -78,7 +87,7 @@ export default function Heading({
       }`;
       break;
     case 'body-sm':
-      classNames = `font-heading text-body-lg tracking-body font-regular ${
+      classNames = `font-heading text-body-sm tracking-body font-regular ${
         className || ''
       }`;
       break;
