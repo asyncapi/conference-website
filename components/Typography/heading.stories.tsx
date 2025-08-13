@@ -20,20 +20,33 @@ const typeStyles = [
 const meta: Meta<typeof Heading> = {
   title: 'Typography/Heading',
   component: Heading,
+  parameters: {
+    docs: {
+      description: {
+        component: `An audit of this component confirms that the \`level\` prop is semantic only; it selects the HTML heading tag (h1–h6) and does not affect visual styling. Visual presentation is controlled by \`typeStyle\`. This separation prevents multiple props from competing over typographic scale.
+
+To verify, change \`level\` from \`h1\` to \`h3\` or \`h4\`—the appearance remains unchanged. Adjusting \`typeStyle\` will alter the size/weight as expected. The \`level\` prop primarily serves semantic HTML, SEO, and accessibility purposes.`
+      }
+    }
+  },
   argTypes: {
     level: {
       options: headingLevels,
-      control: { type: 'select' }
+      control: { type: 'select' },
+      description: 'Sets the semantic HTML tag (h1–h6). Does not affect visual style; use `typeStyle` to control size/weight. Useful for SEO and accessibility.'
     },
     typeStyle: {
       options: typeStyles,
-      control: { type: 'select' }
+      control: { type: 'select' },
+      description: 'Controls the visual style (e.g., size and weight) of the heading.'
     },
     children: {
-      control: { type: 'text' }
+      control: { type: 'text' },
+      description: 'Heading content.'
     },
     className: {
-      control: { type: 'text' }
+      control: { type: 'text' },
+      description: 'Additional class names to extend/override styles.'
     },
     textColor: {
       table: {
