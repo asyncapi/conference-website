@@ -1,5 +1,5 @@
-import React from "react";
-import ILink from "../illustration/link";
+import React, { JSX } from 'react';
+import ILink from '../illustration/link';
 import Socials from "./socials";
 
 function Footer(): JSX.Element {

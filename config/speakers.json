@@ -25,14 +25,14 @@
     "title": "Head of Developer and Customer Success at Aklivity",
     "img": "/img/speaker-images/london/Ankit.webp",
     "id": 4,
-    "city": ["Singapore"]
+    "city": ["Singapore", "Bangalore"]
   },
   {
     "name": "Dr. Annegret Junker",
     "title": "Chief Software Architect at codecentric AG",
     "img": "/img/speaker-images/paris/Annegret.webp",
     "id": 5,
-    "city": ["Munich"]
+    "city": ["Munich", "London"]
   },
   {
     "name": "Eduardo Maldonado Fonseca Silva",
@@ -53,7 +53,7 @@
     "title": "Managing Consultant at Wavestone",
     "img": "/img/speaker-images/munich/Fabrizio.webp",
     "id": 8,
-    "city": ["Munich"]
+    "city": ["Munich", "London"]
   },
   {
     "name": "Azeez Elegbede",
@@ -67,7 +67,7 @@
     "title": "Senior Community Manager at AsyncAPI Initiative",
     "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
     "id": 10,
-    "city": ["Lagos"]
+    "city": ["Lagos", "Bangalore"]
   },
   {
     "name": "Prince Onyeanuna",
@@ -95,6 +95,69 @@
     "title": "Chief Architect at IBM",
     "img": "/img/speaker-images/london/Dale Lane.webp",
     "id": 14,
-    "city": ["Paris"]
+    "city": ["Paris", "London"]
+  },
+  {
+    "name": "David Boyne",
+    "title": "Founder of EventCatalog",
+    "img": "/img/speaker-images/london/David Boyne.webp",
+    "id": 15,
+    "city": ["London"]
+  },
+  {
+    "name": "Daniel Kocot",
+    "title": "Head of API Consulting at codecentric AG",
+    "img": "/img/speaker-images/online-conf/Daniel.webp",
+    "id": 16,
+    "city": ["London"]
+  },
+  {
+    "name": "Fran Mendez",
+    "title": "Creator of AsyncAPI",
+    "img": "/img/speaker-images/bangalore/Fran.webp",
+    "id": 17,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Garima Srivastava",
+    "title": "Chief Development Architect at SAP Labs India ",
+    "img": "/img/speaker-images/bangalore/Garima.webp",
+    "id": 18,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Hari Krishnan",
+    "title": "Co-founder, CTO at Specmatic",
+    "img": "/img/speaker-images/online-conf/Hari.webp",
+    "id": 19,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Dakshitha Ratnayake",
+    "title": "Director of Developer Relations at WSO2",
+    "img": "/img/speaker-images/bangalore/Dakshita.webp",
+    "id": 20,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Abijith Yogendranath Kamath",
+    "title": "Software Developer at IBM",
+    "img": "/img/speaker-images/bangalore/Abijith.webp",
+    "id": 21,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Ruchi Pakhle",
+    "title": "Software Engineer at Red Hat",
+    "img": "/img/speaker-images/bangalore/Ruchi.webp",
+    "id": 22,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Łukasz Górnicki",
+    "title": "Open Source Fanatic at BrainFart",
+    "img": "/img/speaker-images/online-conf/Lukasz.webp",
+    "id": 23,
+    "city": ["Bangalore"]
   }
 ]
