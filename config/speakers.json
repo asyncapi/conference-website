@@ -112,52 +112,45 @@
     "city": ["London"]
   },
   {
-    "name": "Fran Mendez",
-    "title": "Creator of AsyncAPI",
-    "img": "/img/speaker-images/bangalore/Fran.webp",
-    "id": 17,
-    "city": ["Bangalore"]
-  },
-  {
     "name": "Garima Srivastava",
     "title": "Chief Development Architect at SAP Labs India ",
     "img": "/img/speaker-images/bangalore/Garima.webp",
-    "id": 18,
+    "id": 17,
     "city": ["Bangalore"]
   },
   {
     "name": "Hari Krishnan",
     "title": "Co-founder, CTO at Specmatic",
     "img": "/img/speaker-images/online-conf/Hari.webp",
-    "id": 19,
+    "id": 18,
     "city": ["Bangalore"]
   },
   {
     "name": "Dakshitha Ratnayake",
     "title": "Director of Developer Relations at WSO2",
     "img": "/img/speaker-images/bangalore/Dakshita.webp",
-    "id": 20,
+    "id": 19,
     "city": ["Bangalore"]
   },
   {
     "name": "Abijith Yogendranath Kamath",
     "title": "Software Developer at IBM",
     "img": "/img/speaker-images/bangalore/Abijith.webp",
-    "id": 21,
+    "id": 20,
     "city": ["Bangalore"]
   },
   {
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
-    "id": 22,
+    "id": 21,
     "city": ["Bangalore"]
   },
   {
     "name": "Łukasz Górnicki",
     "title": "Open Source Fanatic at BrainFart",
     "img": "/img/speaker-images/online-conf/Lukasz.webp",
-    "id": 23,
+    "id": 22,
     "city": ["Bangalore"]
   }
 ]
