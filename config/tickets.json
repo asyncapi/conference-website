@@ -46,12 +46,12 @@
     "id": 4,
     "type": "London, UK",
     "price": 0,
-    "url": null,
-    "description": "Access to all conference talks and workshops",
-    "status": "Not Yet Available",
-    "available": 100,
+    "url": "https://ticket.apidays.global/event/apidays-london-2025/72d72730-dbf4-47d0-aa07-aa9da87d28ca/cart?coupon=ASYNCAPIVIP",
+    "description": "Access to all APIdays talks",
+    "status": "Get Your Free Ticket",
+    "available": 50,
     "eventDate": "2025-09-22T00:00:00.000Z",
-    "benefits": ["AsyncAPI Track", "All talks", "Networking", "Lunch included"]
+    "benefits": ["AsyncAPI Track", "All talks", "Lunch included"]
   },
   {
     "id": 5,
