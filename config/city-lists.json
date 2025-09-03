@@ -68,7 +68,7 @@
   {
     "name": "London",
     "country": "UK",
-    "date": "22 - 24 September, 2025",
+    "date": "24 September, 2025",
     "cfpDate": "27 July 2025",
     "description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
     "img": "/img/locations/london.webp",
