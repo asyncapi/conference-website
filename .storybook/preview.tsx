@@ -1,6 +1,6 @@
-import React from "react";
-import "../styles/globals.css";
-import type { Preview } from "@storybook/nextjs";
+import React from 'react';
+import '../styles/globals.css';
+import type { Preview } from '@storybook/nextjs';
 import { themes } from 'storybook/theming';
 import {
   Title,
@@ -25,9 +25,9 @@ const preview: Preview = {
           <Controls />
           <Stories />
         </>
-      )
-    }
-  }
+      ),
+    },
+  },
 };
 
 export default preview;
