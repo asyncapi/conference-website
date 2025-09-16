@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/footer';
+import ScrollToTop from '../components/ScrollToTop';
 import { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Component {...pageProps} />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
