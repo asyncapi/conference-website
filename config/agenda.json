@@ -89,5 +89,33 @@
     "speaker": [11,13],
     "type": "Community Speakers",
     "city": "Lagos"
+  },
+  {
+    "time": "14:00 PM BST - 14:25 PM BST",
+    "session": "Bringing Avro and AsyncAPI Together: Pitfalls and Learnings",
+    "speaker": [5,8],
+    "type": "Technical Speakers",
+    "city": "London"
+  },
+  {
+    "time": "14:25 PM BST - 14:50 PM BST",
+    "session": "Documenting your Event-Driven Architectures with OpenAPI and AsyncAPI",
+    "speaker": 15,
+    "type": "Technical Speaker",
+    "city": "London"
+  },
+  {
+    "time": "14:50 PM BST - 15:15 PM BST",
+    "session": "What Are We Missing in AsyncAPI?",
+    "speaker": 14,
+    "type": "Technical Speaker",
+    "city": "London"
+  },
+  {
+    "time": "15:15 PM BST - 15:40 PM BST",
+    "session": "Lost in Translation: Unlocking Integration Success Beyond AsyncAPI",
+    "speaker": 16,
+    "type": "Technical Speaker",
+    "city": "London"
   }
 ]
