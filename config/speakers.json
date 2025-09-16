@@ -152,5 +152,26 @@
     "img": "/img/speaker-images/online-conf/Lukasz.webp",
     "id": 22,
     "city": ["Bangalore"]
+  },
+  {
+    "name": "Shilpa Prabhu Nagavara",
+    "title": "Software Architect at Globalization Partners",
+    "img": "/img/speaker-images/bangalore/Shilpa.webp",
+    "id": 23,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Harshvardhan Parmar",
+    "title": "Software Engineer at Yosemite Crew",
+    "img": "/img/speaker-images/bangalore/Harsh.webp",
+    "id": 24,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Sneha Bagri",
+    "title": "Solution Consultant at Sahaj Software",
+    "img": "/img/speaker-images/bangalore/Sneha.webp",
+    "id": 25,
+    "city": ["Bangalore"]
   }
 ]
