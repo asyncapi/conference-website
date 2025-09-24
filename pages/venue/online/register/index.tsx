@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import Paper from '../../../../components/Form/paper';
 import Sponsors from '../../../../components/Sponsors/sponsors';
 

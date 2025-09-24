@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 type TypeStyle = 'body-lg' | 'body-md' | 'body-sm';
 
 interface IParagraph {

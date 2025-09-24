@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import PastEditonCard from '../../components/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
 

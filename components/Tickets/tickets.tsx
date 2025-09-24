@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { JSX, useState } from 'react';
 import Button from '../Buttons/button';
 import Arrows from '../illustration/arrows';
 import TicketIcon from '../illustration/ticket';
@@ -114,7 +114,7 @@ const Tickets = (): JSX.Element => {
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
                       <Button type="button" className="mt-8 w-full">
-                        Get a Ticket
+                        Get a Free Ticket
                       </Button>
                     </a>
                   ) : (

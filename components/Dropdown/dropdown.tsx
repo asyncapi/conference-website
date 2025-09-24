@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, SetStateAction } from 'react';
+import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
 import { City } from '../../types/types';
 
 interface IDropdown {

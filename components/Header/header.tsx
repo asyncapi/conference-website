@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';

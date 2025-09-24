@@ -89,5 +89,110 @@
     "speaker": [11,13],
     "type": "Community Speakers",
     "city": "Lagos"
+  },
+  {
+    "time": "14:00 PM BST - 14:25 PM BST",
+    "session": "Lost in Translation: Unlocking Integration Success Beyond AsyncAPI",
+    "speaker": 16,
+    "type": "Technical Speakers",
+    "city": "London"
+  },
+  {
+    "time": "14:25 PM BST - 14:50 PM BST",
+    "session": "Documenting your Event-Driven Architectures with OpenAPI and AsyncAPI",
+    "speaker": 15,
+    "type": "Technical Speaker",
+    "city": "London"
+  },
+  {
+    "time": "14:50 PM BST - 15:15 PM BST",
+    "session": "What Are We Missing in AsyncAPI?",
+    "speaker": 14,
+    "type": "Technical Speaker",
+    "city": "London"
+  },
+  {
+    "time": "15:15 PM BST - 15:40 PM BST",
+    "session": "Bringing Avro and AsyncAPI Together: Pitfalls and Learnings",
+    "speaker": [5,8],
+    "type": "Technical Speaker",
+    "city": "London"
+  },
+  {
+    "time": " 11:00 - 11:20 AM IST",
+    "session": "How Companies Actually Use AsyncAPI",
+    "speaker": 22,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "11:30 - 11:50 AM IST",
+    "session": "AsyncAPI 2.6 to 3.0: Migrating Safely with No-Code Backward Compatibility Checks",
+    "speaker": 18,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": " 12:00 - 12:20 PM IST",
+    "session": "Event-First Thinking: Building Data-Driven Integration Architectures",
+    "speaker": 17,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "12:30 - 12:50 PM IST",
+    "session": "A Shared Responsibility: How You Can Get Involved in Sustaining The Initiative",
+    "speaker": 10,
+    "type": "Community Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "14:00 - 14:20 PM IST",
+    "session": "AsyncAPI's Role in Shift Left Streaming Architectures",
+    "speaker": 4,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "14:30 - 14:50 PM IST",
+    "session": "Bringing Structure to Streams: Applying Full-Lifecycle API Management to Event-Driven Systems",
+    "speaker": 19,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "15:00 - 15:20 PM IST",
+    "session": "Spec Authoring Made Intuitive: A Developer’s Journey with AsyncAPI and VS-Async-Preview Extension",
+    "speaker": 21,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "16:00 - 16:20 PM IST",
+    "session": "Schema-Driven Redaction of sensitive fields in Kafka Events Using AsyncAPI",
+    "speaker": 20,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "16:30 - 16:50 PM IST",
+    "session": "Good CoP, Bad CoP: A Community-Driven EDA Transformation",
+    "speaker": 23,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "17:00 - 17:20 PM IST",
+    "session": "Kafka Is Not Always the Answer: Making Smart AsyncAPI Architecture Decisions",
+    "speaker": 25,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
+  },
+  {
+    "time": "17:30 - 17:50 PM IST",
+    "session": "Strategies for Generating Dynamic, Realistic Mocks for Messaging APIs",
+    "speaker": 24,
+    "type": "Technical Speaker",
+    "city": "Bangalore"
   }
 ]

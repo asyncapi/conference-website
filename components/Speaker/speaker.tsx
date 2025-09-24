@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { JSX } from 'react';
 import { Speaker as SpeakerTypes } from '../../types/types';
 
 interface ISpeaker {
@@ -9,11 +9,11 @@ interface ISpeaker {
 }
 
 function Speaker({ details, location, className }: ISpeaker): JSX.Element {
-  
-  function getName(names: string[]){
+  function getName(names: string[]) {
     return `${names[0]} ${names[1]}`;
   }
-  const shortenedName = details.name.length > 20 ? getName(details.name.split(' ')) : details.name;
+  const shortenedName =
+    details.name.length > 20 ? getName(details.name.split(' ')) : details.name;
 
   return (
     <div
