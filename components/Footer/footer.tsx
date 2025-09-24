@@ -1,5 +1,4 @@
 import React, { JSX } from 'react';
-import Image from 'next/image';
 import ILink from '../illustration/link';
 import socials, { SocialWithIcon } from '../../config/socials';
 
