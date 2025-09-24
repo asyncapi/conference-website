@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
@@ -21,9 +21,19 @@ import Popup from '../components/Popup/popup';
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [speakersList, setSpeakersList] = useState(speakers);
+  const [ showpopup, setshowpopup ] = useState<boolean>(true);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
   });
+
+  useEffect(() => {
+    const hasShown = sessionStorage.getItem("popupShown");
+    if (hasShown === "true") {
+      setshowpopup(false);
+    } else {
+      sessionStorage.setItem("popupShown", "true");
+    }
+  }, []);
 
   const handleSpeakers = (city: string) => {
     if (city && city !== 'all') {
@@ -50,7 +60,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
-      <Popup />
+      {showpopup && <Popup />}
       <div id="about" className="mt-20">
         <About />
       </div>
