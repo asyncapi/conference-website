@@ -26,20 +26,26 @@ const Tickets = (): JSX.Element => {
   return (
     <div className="relative max-w-2xl mx-auto p-6">
       <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">
-        <button
+        < Button 
+          type="button"
           onClick={prevTicket}
-          className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+          className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Previous ticket"
-        >
-          <Arrows direction="left" className="w-6 h-6" fill="#4B5563" />
-        </button>
-        <button
+          overlay={true}
+          icon={<Arrows direction="left" className="w-6 h-6" fill="#4B5563" />}
+          iconPosition="left"
+        />
+
+        < Button 
+         type="button"
           onClick={nextTicket}
-          className="bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+          className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Next ticket"
-        >
-          <Arrows direction="right" className="w-6 h-6" fill="#4B5563" />
-        </button>
+          overlay={true}
+          icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
+          iconPosition="right"
+        />
+
       </div>
 
       <div className="relative h-96">
@@ -113,9 +119,7 @@ const Tickets = (): JSX.Element => {
 
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
-                      <Button type="button" className="mt-8 w-full">
-                        Get a Free Ticket
-                      </Button>
+                      <Button type="button" className="mt-8 w-full" text="Get a Free Ticket" />
                     </a>
                   ) : (
                     <Button
@@ -123,9 +127,9 @@ const Tickets = (): JSX.Element => {
                       disabled={true}
                       overlay={true}
                       className="mt-8 w-full bg-gray-300"
-                    >
-                      {isEnded ? 'Event Ended' : 'Get a Ticket'}
-                    </Button>
+                      text={isEnded ? 'Event Ended' : 'Get a Ticket'}
+                    />
+
                   )}
                 </div>
               </div>

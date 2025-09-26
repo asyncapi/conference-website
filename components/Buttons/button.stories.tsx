@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
 import Button from './button';
+import Download from '../illustration/download';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Buttons',
@@ -7,8 +8,12 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     children: {
       control: { type: 'text' },
-      description: 'Button label',
+      description: 'Button content (alternative to text prop)',
       defaultValue: 'Button',
+    },
+    text: {
+      control: { type: 'text' },
+      description: 'Button text (alternative to children)',
     },
     type: {
       options: ['button', 'submit', 'reset'],
@@ -31,6 +36,16 @@ const meta: Meta<typeof Button> = {
       control: { type: 'text' },
       description: 'Test attribute',
     },
+    icon: {
+      control: { type: 'object' },
+      description: 'Icon component to display',
+    },
+    iconPosition: {
+      options: ['left', 'right', 'center'],
+      control: { type: 'select' },
+      description: 'Position of the icon relative to text',
+      defaultValue: 'right',
+    },
     onClick: { action: 'clicked' },
   },
 };
@@ -41,14 +56,14 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: 'Default Button',
+    text: 'Default Button',
     type: 'button',
   },
 };
 
 export const Primary: Story = {
   args: {
-    children: 'Primary Button',
+    text: 'Primary Button',
     className: 'bg-blue-600 hover:bg-blue-700',
     type: 'button',
   },
@@ -56,7 +71,7 @@ export const Primary: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: 'Disabled Button',
+    text: 'Disabled Button',
     disabled: true,
     type: 'button',
   },
@@ -64,7 +79,7 @@ export const Disabled: Story = {
 
 export const WithOverlay: Story = {
   args: {
-    children: 'Overlay Button',
+    text: 'Overlay Button',
     overlay: true,
     className: 'bg-gray-500',
     type: 'button',
@@ -73,14 +88,51 @@ export const WithOverlay: Story = {
 
 export const Submit: Story = {
   args: {
-    children: 'Submit Button',
+    text: 'Submit Button',
     type: 'submit',
   },
 };
 
 export const Reset: Story = {
   args: {
-    children: 'Reset Button',
+    text: 'Reset Button',
     type: 'reset',
+  },
+};
+
+export const WithIconRight: Story = {
+  args: {
+    text: 'Download File',
+    icon: <Download />,
+    iconPosition: 'right',
+    type: 'button',
+  },
+};
+
+export const WithIconLeft: Story = {
+  args: {
+    text: 'Download File',
+    icon: <Download />,
+    iconPosition: 'left',
+    type: 'button',
+  },
+};
+
+export const WithIconCenter: Story = {
+  args: {
+    icon: <Download />,
+    iconPosition: 'center',
+    type: 'button',
+  },
+};
+
+export const IconWithOverlay: Story = {
+  args: {
+    text: 'Sponsorship Prospectus',
+    icon: <Download />,
+    iconPosition: 'left',
+    overlay: true,
+    className: 'w-[240px] border',
+    type: 'button',
   },
 };
