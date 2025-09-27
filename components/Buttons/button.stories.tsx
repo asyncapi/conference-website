@@ -61,27 +61,11 @@ export const Default: Story = {
   },
 };
 
-export const Primary: Story = {
-  args: {
-    text: 'Primary Button',
-    className: 'bg-blue-600 hover:bg-blue-700',
-    type: 'button',
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    text: 'Disabled Button',
-    disabled: true,
-    type: 'button',
-  },
-};
-
 export const WithOverlay: Story = {
   args: {
     text: 'Overlay Button',
     overlay: true,
-    className: 'bg-gray-500',
+    className: 'border',
     type: 'button',
   },
 };

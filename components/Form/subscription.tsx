@@ -15,9 +15,7 @@ function Subscription(): JSX.Element {
           className="sm:w-full"
           data-test="subscribe-button"
         >
-          <Button type="submit" className="w-full md:w-[200px] mt-8 px-10">
-            Subscribe
-          </Button>
+          <Button type="submit" className="w-full md:w-[200px] mt-8 px-10" text="Subscribe" />
         </a>
       </div>
     </div>
