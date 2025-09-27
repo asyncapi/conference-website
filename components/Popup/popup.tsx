@@ -60,7 +60,7 @@ function Popup() {
                   <Button
                     type="button"
                     overlay={true}
-                    data-test="close-button"
+                    test="close-button"
                     className="p-2 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0"
                     onClick={handleClose}
                     icon={<Cancel />}
