@@ -1,49 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Arrows from '../illustration/arrows';
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled down
-  const toggleVisibility = () => {
+  const toggleVisibility = useCallback(() => {
     if (window.pageYOffset > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
-  };
+  }, []);
+
+  const throttle = useCallback((func: () => void, limit: number) => {
+    let inThrottle: boolean;
+    return () => {
+      if (!inThrottle) {
+        func();
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  }, []);
 
   // Scroll to top smoothly
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    // Throttle to 150ms (6.7 calls/sec) for optimal performance without sacrificing UX
+    const throttledToggleVisibility = throttle(toggleVisibility, 150);
+
+    window.addEventListener('scroll', throttledToggleVisibility);
 
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener('scroll', throttledToggleVisibility);
     };
-  }, []);
+  }, [throttle, toggleVisibility]);
 
-  return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="back-to-top-button"
-          aria-label="Back to top"
-        >
-          <svg className="back-to-top-icon" viewBox="0 0 384 512">
-            <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-          </svg>
-          <span className="back-to-top-text">Back to Top</span>
-        </button>
-      )}
-    </>
-  );
+  return isVisible ? (
+    <button
+      onClick={scrollToTop}
+      className="back-to-top-button fixed bottom-8 right-8 w-12 h-12 rounded-full border-none font-semibold flex items-center justify-center cursor-pointer overflow-hidden z-50 outline-none transition-all duration-300 ease-in-out transform hover:scale-95 active:scale-90"
+      aria-label="Back to top"
+    >
+      <Arrows
+        className="back-to-top-icon w-3 h-3 transition-all duration-300 ease-in-out"
+        direction="up"
+        fill="white"
+      />
+      <span className="back-to-top-text absolute text-white text-xs opacity-0 whitespace-nowrap transition-all duration-300 ease-in-out">
+        Back to Top
+      </span>
+    </button>
+  ) : null;
 };
 
 export default BackToTopButton;

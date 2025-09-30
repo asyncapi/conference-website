@@ -260,42 +260,10 @@ backdrop-filter: blur(10px); */
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
 
-/* Back to Top Button Styles */
+/* Back to Top Button Styles - Custom animations not handled by Tailwind */
 .back-to-top-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
   background-color: rgb(20, 20, 20);
-  border: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  z-index: 1000;
-  outline: none;
-}
-
-.back-to-top-icon {
-  width: 12px;
-  height: 12px;
-  transition: all 0.3s ease;
-  fill: white;
-}
-
-.back-to-top-text {
-  position: absolute;
-  color: white;
-  font-size: 0px;
-  opacity: 0;
-  transition: all 0.3s ease;
-  white-space: nowrap;
 }
 
 .back-to-top-button:hover {
@@ -312,8 +280,4 @@ backdrop-filter: blur(10px); */
 .back-to-top-button:hover .back-to-top-text {
   font-size: 13px;
   opacity: 1;
-}
-
-.back-to-top-button:active {
-  transform: scale(0.95);
 }
