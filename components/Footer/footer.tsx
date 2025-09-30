@@ -1,8 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { JSX } from 'react';
 import ILink from '../illustration/link';
-import { Social } from '../../types/types';
-import socials from '../../config/socials.json';
+import socials, { SocialWithIcon } from '../../config/socials';
 
 function Footer(): JSX.Element {
   return (
@@ -33,22 +31,18 @@ function Footer(): JSX.Element {
           </div>
           <div className="w-[0.9px] h-4 bg-white ml-4 sm:hidden" />
           <div className="ml-4 flex justify-between items-center gap-2 sm:mt-4">
-            {socials.map((social: Social, index) => {
+            {socials.map((social: SocialWithIcon) => {
+              const IconComponent = social.icon;
               return (
                 <a
-                  key={index}
+                  key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-lg flex items-center justify-center hover:border-[#AD20E2] duration-150 ease-in-out"
                   data-test={`footer-${social.name}`}
                 >
-                  <Image
-                    src={social.imgUrl}
-                    alt={social.name}
-                    height={23}
-                    width={23}
-                  />
+                  <IconComponent className="w-[20px] h-[20px]" fill="white" />
                 </a>
               );
             })}
