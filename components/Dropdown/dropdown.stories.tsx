@@ -21,17 +21,26 @@ const meta: Meta<typeof Dropdown> = {
     handleSpeakers: { control: false },
   },
 };
-export default meta;
 
+export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
+const DropdownWrapper = (args: any) => {
+  const [city, setCity] = useState<Partial<City>>(cities[0]);
+  
+  return (
+    <div style={{ maxWidth: 320, height: 400 }}>
+      <Dropdown 
+        {...args} 
+        city={city} 
+        cities={cities as City[]} 
+        setCity={setCity} 
+        handleSpeakers={() => {}} 
+      />
+    </div>
+  );
+};
+
 export const Default: Story = {
-  render: (args) => {
-    const [city, setCity] = useState<Partial<City>>(cities[0]);
-    return (
-      <div style={{ maxWidth: 320, height: 400 }}>
-        <Dropdown {...args} city={city} cities={cities as City[]} setCity={setCity} handleSpeakers={() => {}} />
-      </div>
-    );
-  },
+  render: (args) => <DropdownWrapper {...args} />,
 };
