@@ -17,7 +17,7 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
 
   return (
     <div
-      className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
+      className={` w-fit text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
       data-test="speakers-section"
     >
       <div className="w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
