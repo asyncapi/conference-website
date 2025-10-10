@@ -4,43 +4,40 @@ import Arrows from '../illustration/arrows';
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = useCallback(() => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  }, []);
+  useEffect(() => {
+    let inThrottle = false;
 
-  const throttle = useCallback((func: () => void, limit: number) => {
-    let inThrottle: boolean;
-    return () => {
-      if (!inThrottle) {
-        func();
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
       }
     };
-  }, []);
 
-  // Scroll to top smoothly
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    // Throttle to 150ms (6.7 calls/sec) for optimal performance without sacrificing UX
-    const throttledToggleVisibility = throttle(toggleVisibility, 150);
+    const throttledToggleVisibility = () => {
+      if (!inThrottle) {
+        toggleVisibility();
+        inThrottle = true;
+        setTimeout(() => {
+          inThrottle = false;
+        }, 150);
+      }
+    };
 
     window.addEventListener('scroll', throttledToggleVisibility);
 
     return () => {
       window.removeEventListener('scroll', throttledToggleVisibility);
     };
-  }, [throttle, toggleVisibility]);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return isVisible ? (
     <button
