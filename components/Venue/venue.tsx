@@ -31,17 +31,11 @@ function Venue({ city }: IVenue) {
                 cfp is open
               </div>
             )}
-            <Button
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(city.mapUrl, '_blank', 'noopener');
-              }}
-              overlay={true}
-              className=" bg-white rounded-xl flex items-center justify-center ml-auto"
-              type="button"
-              icon={<MapPointer className="w-6 h-6" />}
-              iconPosition="center"
-            />
+            <a href={city.mapUrl}  target="_blank" rel="noreferrer" 
+            className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300" 
+            onClick={e => e.stopPropagation()}>
+            <MapPointer className="w-6 h-6" />
+            </a>
           </div>
 
           <div className="text-white">
