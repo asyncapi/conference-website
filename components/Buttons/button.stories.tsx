@@ -102,10 +102,10 @@ export const WithIconLeft: Story = {
   },
 };
 
-export const WithIconCenter: Story = {
+export const WithIconOnly: Story = {
   args: {
     icon: <Download />,
-    iconPosition: 'center',
+    iconPosition: 'left',
     type: 'button',
   },
 };

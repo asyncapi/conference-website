@@ -33,7 +33,7 @@ const Tickets = (): JSX.Element => {
           aria-label="Previous ticket"
           overlay={true}
           icon={<Arrows direction="left" className="w-6 h-6" fill="#4B5563" />}
-          iconPosition="center"
+          iconPosition="left"
         />
 
         < Button 
@@ -43,7 +43,7 @@ const Tickets = (): JSX.Element => {
           aria-label="Next ticket"
           overlay={true}
           icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
-          iconPosition="center"
+          iconPosition="left"
         />
 
       </div>

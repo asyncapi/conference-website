@@ -1,7 +1,7 @@
 import React from 'react';
 
 type ButtonType = 'button' | 'submit' | 'reset' | undefined;
-type IconPosition = 'left' | 'right' | 'center';
+type IconPosition = 'left' | 'right';
 
 interface IButton {
   className?: string;
@@ -36,21 +36,16 @@ function Button({
       {...(test && { 'data-test': test })}
       type={type}
       onClick={onClick}
-      className={`${overlay ? '' : 'gradient-bg'} ${disabled && 'cursor-not-allowed'} flex items-center justify-center text-white h-[54px] rounded-md p-[8px] ${iconPosition === 'center' ? 'justify-center' : iconPosition === 'left' ? 'justify-start' : 'justify-end'} ${className}`}
+      className={`${!overlay && 'gradient-bg'} ${disabled && 'cursor-not-allowed'} flex items-center justify-center text-white  h-14 rounded-md p-2 ${iconPosition === 'left' ? 'justify-start' : 'justify-end'} ${className}`}
     >
-      {icon && iconPosition === 'center' && (
-        <span className="inline-block">
-          {icon}
-        </span>
-      )}
       {icon && iconPosition === 'left' && (
-        <span className="mr-2 inline-block">
+        <span className="inline-block">
           {icon}
         </span>
       )}
       <span className="inline-block">{content}</span>
       {icon && iconPosition === 'right' && (
-        <span className="ml-2 inline-block">
+        <span className="inline-block">
           {icon}
         </span>
       )}
