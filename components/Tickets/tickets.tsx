@@ -98,7 +98,7 @@ const Tickets = (): JSX.Element => {
                         isEnded ? 'bg-red-100 text-red-600' : 'text-gradient'
                       }`}
                     >
-                      {isEnded ? 'Ended' : ticket.status}
+                      {isEnded ? 'Closed' : ticket.status}
                     </div>
                   </div>
 
@@ -131,7 +131,7 @@ const Tickets = (): JSX.Element => {
                       overlay={true}
                       className="mt-8 w-full bg-gray-300"
                     >
-                      {isEnded ? 'Event Ended' : 'Get a Ticket'}
+                      {isEnded ? 'Event Closed' : 'Get a Ticket'}
                     </Button>
                   )}
                 </div>
