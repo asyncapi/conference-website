@@ -9,9 +9,12 @@ const Tickets = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const today = new Date();
 
-  const availableTickets: ITicket[] = tickets.filter(
-    (ticket: ITicket) => new Date(ticket.eventDate) > today
-  );
+  const availableTickets: ITicket[] = tickets.sort((a, b) => {
+    const aEnded = new Date(a.eventDate) < today;
+    const bEnded = new Date(b.eventDate) < today;
+    if (aEnded === bEnded) return 0;
+    return aEnded ? 1 : -1; 
+  });
 
   const nextTicket = (): void => {
     setCurrentIndex((prev) => (prev + 1) % availableTickets.length);
@@ -90,8 +93,12 @@ const Tickets = (): JSX.Element => {
                       </h3>
                       <p className="text-gray-500 mt-1">{ticket.description}</p>
                     </div>
-                    <div className="px-2 py-1 rounded-full text-sm font-medium text-gradient">
-                      {isEnded ? 'Ended' : ticket.status}
+                    <div
+                      className={`px-2 py-1 rounded-full text-sm font-medium ${
+                        isEnded ? 'bg-red-100 text-red-600' : 'text-gradient'
+                      }`}
+                    >
+                      {isEnded ? 'Closed' : ticket.status}
                     </div>
                   </div>
 
@@ -124,7 +131,7 @@ const Tickets = (): JSX.Element => {
                       overlay={true}
                       className="mt-8 w-full bg-gray-300"
                     >
-                      {isEnded ? 'Event Ended' : 'Get a Ticket'}
+                      {isEnded ? 'Event Closed' : 'Get a Ticket'}
                     </Button>
                   )}
                 </div>
