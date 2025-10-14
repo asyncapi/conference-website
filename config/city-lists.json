@@ -90,7 +90,7 @@
   {
     "name": "Bangalore",
     "country": "India",
-    "date": "8 - 9 October, 2025",
+    "date": "8 October, 2025",
     "cfpDate": "29 June 2025",
     "description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
     "img": "/img/locations/bangalore.webp",
@@ -113,7 +113,7 @@
     "name": "Online",
     "country": " Edition",
     "date": "29 October, 2025",
-    "cfpDate": "7th September, 2025",
+    "cfpDate": "28th September, 2025",
     "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
     "img": "/img/locations/testMic.webp",
     "address": "AsyncAPI YouTube Channel",
