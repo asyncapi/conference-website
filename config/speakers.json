@@ -60,7 +60,7 @@
     "title": "Developer Advocate at AsyncAPI Initiative",
     "img": "/img/speaker-images/lagos/Azeez.webp",
     "id": 9,
-    "city": ["Lagos"]
+    "city": ["Lagos", "Online"]
   },
   {
     "name": "Thulisile Sibanda",
@@ -172,6 +172,62 @@
     "title": "Solution Consultant at Sahaj Software",
     "img": "/img/speaker-images/bangalore/Sneha.webp",
     "id": 25,
-    "city": ["Bangalore"]
+    "city": ["Bangalore", "Online"]
+  },
+  {
+    "name": "Matthew Tso",
+    "title": "Software Engineer at Ironclad",
+    "img": "/img/speaker-images/online-conf/Matthew.webp",
+    "id": 26,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Anushka Sharan",
+    "title": "Undergraduate Student at NSUT, Delhi",
+    "img": "/img/speaker-images/online-conf/Sharan.webp",
+    "id": 27,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Ashish Dibouliya",
+    "title": "Sr Enterprise Data Architect at Webster Bank",
+    "img": "/img/speaker-images/online-conf/Ashish.webp",
+    "id": 28,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Nkeiruka Ifeonu",
+    "title": "Lead Product Designer atonehealthng.com",
+    "img": "/img/speaker-images/online-conf/Nkeiruka.webp",
+    "id": 29,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Adi Boghawala",
+    "title": "Maintainer at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Adi.webp",
+    "id": 30,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Funmilola Chidinma Jones",
+    "title": "Finacle API Developer at Guaranty Trust",
+    "img": "/img/speaker-images/online-conf/Funmilola.webp",
+    "id": 31,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Oluwabamikemi Kayode",
+    "title": "Community Marketing Specialist at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Atinuke.webp",
+    "id": 32,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Lemeri Festus",
+    "title": "Open Source Contributor at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Lemeri.webp",
+    "id": 33,
+    "city": ["Online"]
   }
 ]
