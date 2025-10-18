@@ -59,7 +59,7 @@ function Popup() {
                   </div>
                   <Button
                     type="button"
-                    overlay={true}
+                    outline={true}
                     test="close-button"
                     className="p-2 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0"
                     onClick={handleClose}

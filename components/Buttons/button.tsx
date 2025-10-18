@@ -7,7 +7,7 @@ interface IButton {
   className?: string;
   children?: React.ReactNode;
   text?: string;
-  overlay?: boolean;
+  outline?: boolean;
   onClick?: React.MouseEventHandler;
   type: ButtonType;
   disabled?: boolean;
@@ -20,7 +20,7 @@ function Button({
   className,
   children,
   text,
-  overlay,
+  outline,
   onClick,
   type,
   disabled,
@@ -36,7 +36,7 @@ function Button({
       {...(test && { 'data-test': test })}
       type={type}
       onClick={onClick}
-      className={`${!overlay && 'gradient-bg'} ${disabled && 'cursor-not-allowed'} flex items-center justify-center text-white  h-14 rounded-md p-2 ${iconPosition === 'left' ? 'justify-start' : 'justify-end'} ${className}`}
+      className={`${!outline && 'gradient-bg'} ${disabled && 'cursor-not-allowed'} flex items-center justify-center text-white  h-14 rounded-md p-2 ${iconPosition === 'left' ? 'justify-start' : 'justify-end'} ${className}`}
     >
       {icon && iconPosition === 'left' && (
         <span className="inline-block">

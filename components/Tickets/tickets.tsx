@@ -34,7 +34,7 @@ const Tickets = (): JSX.Element => {
           onClick={prevTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Previous ticket"
-          overlay={true}
+          outline={true}
           icon={<Arrows direction="left" className="w-6 h-6" fill="#4B5563" />}
           iconPosition="left"
         />
@@ -44,7 +44,7 @@ const Tickets = (): JSX.Element => {
           onClick={nextTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Next ticket"
-          overlay={true}
+          outline={true}
           icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
           iconPosition="left"
         />
@@ -132,7 +132,7 @@ const Tickets = (): JSX.Element => {
                     <Button
                       type="button"
                       disabled={true}
-                      overlay={true}
+                      outline={true}
                       className="mt-8 w-full bg-gray-300"
                     >
                       {isEnded ? 'Event Closed' : 'Get a Ticket'}

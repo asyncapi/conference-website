@@ -61,7 +61,7 @@ function About(): JSX.Element {
             >
               <Button 
                 type="button" 
-                overlay={true} 
+                outline={true} 
                 className="w-[240px] border"
                 text="Sponsorship prospectus"
                 icon={<Download />}

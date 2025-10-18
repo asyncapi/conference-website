@@ -109,7 +109,7 @@ export default function Home() {
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                         }`}
-                        overlay={true}
+                        outline={true}
                       >
                         <span className="transparent-bg "></span>
                         <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -137,7 +137,7 @@ export default function Home() {
                                   ? 'gradient-bg'
                                   : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                               }`}
-                              overlay={true}
+                              outline={true}
                             >
                               {currentCity.name !== city.name && (
                                 <>

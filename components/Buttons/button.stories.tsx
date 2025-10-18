@@ -24,7 +24,7 @@ const meta: Meta<typeof Button> = {
       control: { type: 'text' },
       description: 'Custom CSS classes',
     },
-    overlay: {
+    outline: {
       control: { type: 'boolean' },
       description: 'Remove gradient background if true',
     },
@@ -61,10 +61,10 @@ export const Default: Story = {
   },
 };
 
-export const WithOverlay: Story = {
+export const Outline: Story = {
   args: {
-    text: 'Overlay Button',
-    overlay: true,
+    text: 'Outline Button',
+    outline: true,
     className: 'border',
     type: 'button',
   },
@@ -110,12 +110,12 @@ export const WithIconOnly: Story = {
   },
 };
 
-export const IconWithOverlay: Story = {
+export const IconWithOutline: Story = {
   args: {
     text: 'Sponsorship Prospectus',
     icon: <Download />,
     iconPosition: 'left',
-    overlay: true,
+    outline: true,
     className: 'w-[240px] border',
     type: 'button',
   },
