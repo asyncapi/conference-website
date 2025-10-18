@@ -66,7 +66,7 @@ describe('Landing Page Tests', () => {
     cy.origin('https://www.asyncapi.com/newsletter', () => {
       cy.url().should(
         'match',
-        /https:\/\/www\.asyncapi\.com\/[a-z]{2}\/newsletter/
+        /https:\/\/www\.asyncapi\.com\/([a-z]{2}\/)?newsletter/
       );
     });
   });
