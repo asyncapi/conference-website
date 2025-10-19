@@ -60,7 +60,7 @@
     "title": "Developer Advocate at AsyncAPI Initiative",
     "img": "/img/speaker-images/lagos/Azeez.webp",
     "id": 9,
-    "city": ["Lagos"]
+    "city": ["Lagos", "Online"]
   },
   {
     "name": "Thulisile Sibanda",
@@ -112,52 +112,122 @@
     "city": ["London"]
   },
   {
-    "name": "Fran Mendez",
-    "title": "Creator of AsyncAPI",
-    "img": "/img/speaker-images/bangalore/Fran.webp",
-    "id": 17,
-    "city": ["Bangalore"]
-  },
-  {
     "name": "Garima Srivastava",
     "title": "Chief Development Architect at SAP Labs India ",
     "img": "/img/speaker-images/bangalore/Garima.webp",
-    "id": 18,
+    "id": 17,
     "city": ["Bangalore"]
   },
   {
     "name": "Hari Krishnan",
     "title": "Co-founder, CTO at Specmatic",
     "img": "/img/speaker-images/online-conf/Hari.webp",
-    "id": 19,
+    "id": 18,
     "city": ["Bangalore"]
   },
   {
     "name": "Dakshitha Ratnayake",
     "title": "Director of Developer Relations at WSO2",
     "img": "/img/speaker-images/bangalore/Dakshita.webp",
-    "id": 20,
+    "id": 19,
     "city": ["Bangalore"]
   },
   {
     "name": "Abijith Yogendranath Kamath",
     "title": "Software Developer at IBM",
     "img": "/img/speaker-images/bangalore/Abijith.webp",
-    "id": 21,
+    "id": 20,
     "city": ["Bangalore"]
   },
   {
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
-    "id": 22,
+    "id": 21,
     "city": ["Bangalore"]
   },
   {
     "name": "Łukasz Górnicki",
     "title": "Open Source Fanatic at BrainFart",
     "img": "/img/speaker-images/online-conf/Lukasz.webp",
+    "id": 22,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Shilpa Prabhu Nagavara",
+    "title": "Software Architect at Globalization Partners",
+    "img": "/img/speaker-images/bangalore/Shilpa.webp",
     "id": 23,
     "city": ["Bangalore"]
+  },
+  {
+    "name": "Harshvardhan Parmar",
+    "title": "Software Engineer at Yosemite Crew",
+    "img": "/img/speaker-images/bangalore/Harsh.webp",
+    "id": 24,
+    "city": ["Bangalore"]
+  },
+  {
+    "name": "Sneha Bagri",
+    "title": "Solution Consultant at Sahaj Software",
+    "img": "/img/speaker-images/bangalore/Sneha.webp",
+    "id": 25,
+    "city": ["Bangalore", "Online"]
+  },
+  {
+    "name": "Matthew Tso",
+    "title": "Software Engineer at Ironclad",
+    "img": "/img/speaker-images/online-conf/Matthew.webp",
+    "id": 26,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Anushka Sharan",
+    "title": "Undergraduate Student at NSUT, Delhi",
+    "img": "/img/speaker-images/online-conf/Sharan.webp",
+    "id": 27,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Ashish Dibouliya",
+    "title": "Sr Enterprise Data Architect at Webster Bank",
+    "img": "/img/speaker-images/online-conf/Ashish.webp",
+    "id": 28,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Nkeiruka Ifeonu",
+    "title": "Lead Product Designer atonehealthng.com",
+    "img": "/img/speaker-images/online-conf/Nkeiruka.webp",
+    "id": 29,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Adi Boghawala",
+    "title": "Maintainer at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Adi.webp",
+    "id": 30,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Funmilola Chidinma Jones",
+    "title": "Finacle API Developer at Guaranty Trust",
+    "img": "/img/speaker-images/online-conf/Funmilola.webp",
+    "id": 31,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Oluwabamikemi Kayode",
+    "title": "Community Marketing Specialist at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Atinuke.webp",
+    "id": 32,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Lemeri Festus",
+    "title": "Open Source Contributor at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Lemeri.webp",
+    "id": 33,
+    "city": ["Online"]
   }
 ]
