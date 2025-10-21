@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { City, ConferenceStatus } from '../../types/types';
+import { City } from '../../types/types';
 import { getEventStatus } from '../../utils/status';
+import MapPointer from '../illustration/mapPointer';
 
 interface IVenue {
   city: City;
@@ -37,12 +37,7 @@ function Venue({ city }: IVenue) {
               }}
               className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
             >
-              <Image
-                src="/img/mapIcon.svg"
-                alt="Map Icon"
-                width={24}
-                height={24}
-              />
+              <MapPointer className="w-6 h-6" />
             </button>
           </div>
 
