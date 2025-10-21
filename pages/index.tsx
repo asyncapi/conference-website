@@ -18,6 +18,7 @@ import Dropdown from '../components/Dropdown/dropdown';
 import { City } from '../types/types';
 import Popup from '../components/Popup/popup';
 import Image from 'next/image'; 
+import { customImageLoader } from '../utils/imageLoader';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -46,14 +47,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Image
-      src="/img/illustra.png"
-      alt="background-illustration"
-      width={1920}
-      height={1080}
-      className="color-effect"
-      priority
-    />
+      <Image
+  loader={customImageLoader}
+  src="/img/illustra.png"
+  alt="background-illustration"
+  width={1920}
+  height={1080}
+  className="color-effect"
+  priority
+  placeholder="blur"
+  blurDataURL="/img/illustrablur.png"
+/>
+
       
       <Header />
       <Popup />

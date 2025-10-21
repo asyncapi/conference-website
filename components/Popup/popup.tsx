@@ -6,6 +6,7 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
+import { customImageLoader } from '../../utils/imageLoader';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -51,12 +52,15 @@ function Popup() {
                 <div className="flex items-center justify-between">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                     <Image
-                      src="/img/logos/2025-logo.png"
-                      alt="conference logo"
-                      width={150}
-                      height={150}
-                      className="w-[150px] h-auto"
-                      priority
+                    loader={customImageLoader}
+                    src="/img/logos/2025-logo.png"
+                    alt="conference logo"
+                    width={150}
+                    height={150}
+                    className="w-[150px] h-auto"
+                    priority
+                    placeholder="blur"
+                    blurDataURL="/img/logos/2025-logo-blur.png"
                     />
                   </div>
 
@@ -90,13 +94,17 @@ function Popup() {
 
                 <div className="my-10 flex justify-center">
                   <Image
-                    src="/img/rocket.gif"
-                    alt="rocket"
-                    width={180}
-                    height={180}
-                    className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
-                    priority
-                  />
+  loader={customImageLoader}
+  src="/img/rocket.gif"
+  alt="rocket"
+  width={180}
+  height={180}
+  className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
+  priority
+  placeholder="blur"
+  blurDataURL="/img/rocket-blur.gif"
+/>
+
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">
