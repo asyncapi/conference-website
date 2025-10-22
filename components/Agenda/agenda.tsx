@@ -130,7 +130,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
         )}
       </div>
           <div className="mt-[60px]">
-            <PdfDownloadButton city={city} />
+          <PdfDownloadButton city={city} />
           </div>
     </div>
   );
