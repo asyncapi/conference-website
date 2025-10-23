@@ -43,11 +43,8 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
                       className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                     >
                       <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                      <button className="pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1">
-                        <Plus
-                          className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`}
-                        />
-                      </button>
+                      <Button outline={true} type="button" className="pointer h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1" icon={<Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} />} iconPosition="left" />
+                     
                     </div>
 
                     <p
@@ -77,11 +74,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
                       className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                     >
                       <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                      <button className="pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1">
-                        <Plus
-                          className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`}
-                        />
-                      </button>
+                      <Button type="button" outline={true} className="pointer h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1" icon={<Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} />} iconPosition="left" />
                     </div>
                     {virtual ? (
                       <p
@@ -117,11 +110,9 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
                     className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                   >
                     <h2 className={`text-xl w-[90%]`}>{faq.q}</h2>
-                    <button className="pointer border h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1">
-                      <Plus
-                        className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`}
-                      />
-                    </button>
+                    <Button type="button" outline={true} className="pointer h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1" 
+                    icon={<Plus className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`} />} iconPosition="left" />
+                   
                   </div>
                   {
                     <p
@@ -142,9 +133,7 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
               target={name == 'Online' ? '' : '_blank'}
               rel="noreferrer"
             >
-              <Button type="button" className="x-8 m-2 w-[250px] text-center">
-                Submit Talk Proposal
-              </Button>
+              <Button type="button"  className="x-8 m-2 w-[250px] text-center" text="Submit Talk Proposal" />
             </a>
           )}
         </div>

@@ -104,20 +104,14 @@ function Venue({ city }: IVenue) {
             {eventStatus === ConferenceStatus.ENDED ? (
               city.playlist && (
                 <a href="#recordings">
-                  <Button type="button" className="w-[250px] h-[50px] m-8">
-                    Watch Recordings
-                  </Button>
+                  <Button type="button" className="w-[250px] h-[50px] m-8" text="Watch Recordings" />
                 </a>
               )
             ) : (
               <div className="m-[30px]">
                 {city.ticket && city.ticket.url && (
                   <a href={city.ticket.url} target="_blank" rel="noreferrer">
-                    <Button type="button" className="px-8 m-2 w-[250px]">
-                      {city.ticket.price
-                        ? 'Get Your Free Ticket'
-                        : 'Register Now'}
-                    </Button>
+                    <Button type="button" className="px-8 m-2 w-[250px]" text={city.ticket.price ? 'Get Your Free Ticket' : 'Register Now'} />
                   </a>
                 )}
                 {city.cfp && (
@@ -130,9 +124,7 @@ function Venue({ city }: IVenue) {
                     target={city.name == 'Online' ? '' : '_blank'}
                     rel="noreferrer"
                   >
-                    <Button type="submit" className="px-8 m-2 w-[250px]">
-                      Apply to be a speaker
-                    </Button>
+                    <Button type="submit" className="px-8 m-2 w-[250px]" text="Apply to be a speaker" />
                   </a>
                 )}
               </div>
