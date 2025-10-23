@@ -68,7 +68,7 @@
   {
     "name": "London",
     "country": "UK",
-    "date": "22 - 24 September, 2025",
+    "date": "24 September, 2025",
     "cfpDate": "27 July 2025",
     "description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
     "img": "/img/locations/london.webp",
@@ -90,7 +90,7 @@
   {
     "name": "Bangalore",
     "country": "India",
-    "date": "8 - 9 October, 2025",
+    "date": "8 October, 2025",
     "cfpDate": "29 June 2025",
     "description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
     "img": "/img/locations/bangalore.webp",
@@ -113,7 +113,7 @@
     "name": "Online",
     "country": " Edition",
     "date": "29 October, 2025",
-    "cfpDate": "7th September, 2025",
+    "cfpDate": "28th September, 2025",
     "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
     "img": "/img/locations/testMic.webp",
     "address": "AsyncAPI YouTube Channel",
@@ -127,7 +127,7 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "/venue/online/register",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },
@@ -135,7 +135,7 @@
     "name": "Paris",
     "country": "France",
     "date": "9 - 11 December, 2025",
-    "cfpDate": "5 October 2025",
+    "cfpDate": "31 October 2025",
     "description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
     "img": "/img/locations/paris.webp",
     "address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",

@@ -259,3 +259,25 @@ backdrop-filter: blur(10px); */
 .hoverEffect:hover {
   transform: scale(1.1); /* Scale the image by 10% on hover */
 }
+
+/* Back to Top Button Styles - Custom animations not handled by Tailwind */
+.back-to-top-button {
+  background-color: rgb(20, 20, 20);
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+}
+
+.back-to-top-button:hover {
+  width: 140px;
+  border-radius: 50px;
+  background-color: rgb(181, 160, 255);
+}
+
+.back-to-top-button:hover .back-to-top-icon {
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.back-to-top-button:hover .back-to-top-text {
+  font-size: 13px;
+  opacity: 1;
+}
