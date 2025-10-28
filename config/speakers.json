@@ -4,7 +4,7 @@
     "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/london/Hugo Guerrero.webp",
     "id": 1,
-    "city": ["Singapore"]
+    "city": ["Singapore", "Online"]
   },
   {
     "name": "Naresh Jain",
@@ -67,7 +67,7 @@
     "title": "Senior Community Manager at AsyncAPI Initiative",
     "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
     "id": 10,
-    "city": ["Lagos", "Bangalore"]
+    "city": ["Lagos", "Bangalore", "Online"]
   },
   {
     "name": "Prince Onyeanuna",
@@ -182,13 +182,6 @@
     "city": ["Online"]
   },  
   {
-    "name": "Anushka Sharan",
-    "title": "Undergraduate Student at NSUT, Delhi",
-    "img": "/img/speaker-images/online-conf/Sharan.webp",
-    "id": 27,
-    "city": ["Online"]
-  },  
-  {
     "name": "Ashish Dibouliya",
     "title": "Sr Enterprise Data Architect at Webster Bank",
     "img": "/img/speaker-images/online-conf/Ashish.webp",
@@ -228,6 +221,14 @@
     "title": "Open Source Contributor at AsyncAPI Initiative",
     "img": "/img/speaker-images/online-conf/Lemeri.webp",
     "id": 33,
+    "city": ["Online"]
+  }
+  ,  
+  {
+    "name": "Fran Mendez",
+    "title": "Creator of AsyncAPI",
+    "img": "/img/speaker-images/bangalore/Fran.webp",
+    "id": 34,
     "city": ["Online"]
   }
 ]
