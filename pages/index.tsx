@@ -6,6 +6,7 @@ import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
 import Tickets from '../components/Tickets/tickets';
+import ConferenceReviews from '../components/ConferenceReviews/ConferenceReviews';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
@@ -255,6 +256,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div id="reviews">
+        <ConferenceReviews />
       </div>
       <div id="sponsors" className="mt-20">
         <Sponsors
