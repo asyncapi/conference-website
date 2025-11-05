@@ -252,7 +252,7 @@
     "city": ["Paris"]
   },  
   {
-    "name": "JLaurent Broudoux",
+    "name": "Laurent Broudoux",
     "title": "Co-founder of Microcks",
     "img": "/img/speaker-images/paris/Laurent.webp",
     "id": 38,
@@ -260,7 +260,7 @@
   },  
   {
     "name": "Swen-Helge Huber",
-    "title": "Senior Software Engineer at APIDeck",
+    "title": "Senior Director, Office of the CTO at Solace",
     "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
     "id": 39,
     "city": ["Paris"]
