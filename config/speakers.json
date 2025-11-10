@@ -4,7 +4,7 @@
     "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/london/Hugo Guerrero.webp",
     "id": 1,
-    "city": ["Singapore"]
+    "city": ["Singapore", "Online","Paris"]
   },
   {
     "name": "Naresh Jain",
@@ -60,14 +60,14 @@
     "title": "Developer Advocate at AsyncAPI Initiative",
     "img": "/img/speaker-images/lagos/Azeez.webp",
     "id": 9,
-    "city": ["Lagos"]
+    "city": ["Lagos", "Online"]
   },
   {
     "name": "Thulisile Sibanda",
     "title": "Senior Community Manager at AsyncAPI Initiative",
     "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
     "id": 10,
-    "city": ["Lagos", "Bangalore"]
+    "city": ["Lagos", "Bangalore", "Online"]
   },
   {
     "name": "Prince Onyeanuna",
@@ -109,7 +109,7 @@
     "title": "Head of API Consulting at codecentric AG",
     "img": "/img/speaker-images/online-conf/Daniel.webp",
     "id": 16,
-    "city": ["London"]
+    "city": ["London","Paris"]
   },
   {
     "name": "Garima Srivastava",
@@ -172,6 +172,97 @@
     "title": "Solution Consultant at Sahaj Software",
     "img": "/img/speaker-images/bangalore/Sneha.webp",
     "id": 25,
-    "city": ["Bangalore"]
+    "city": ["Bangalore", "Online"]
+  },
+  {
+    "name": "Matthew Tso",
+    "title": "Software Engineer at Ironclad",
+    "img": "/img/speaker-images/online-conf/Matthew.webp",
+    "id": 26,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Ashish Dibouliya",
+    "title": "Sr Enterprise Data Architect at Webster Bank",
+    "img": "/img/speaker-images/online-conf/Ashish.webp",
+    "id": 28,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Nkeiruka Ifeonu",
+    "title": "Lead Product Designer atonehealthng.com",
+    "img": "/img/speaker-images/online-conf/Nkeiruka.webp",
+    "id": 29,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Adi Boghawala",
+    "title": "Maintainer at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Adi.webp",
+    "id": 30,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Funmilola Chidinma Jones",
+    "title": "Finacle API Developer at Guaranty Trust",
+    "img": "/img/speaker-images/online-conf/Funmilola.webp",
+    "id": 31,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Oluwabamikemi Kayode",
+    "title": "Community Marketing Specialist at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Atinuke.webp",
+    "id": 32,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Lemeri Festus",
+    "title": "Open Source Contributor at AsyncAPI Initiative",
+    "img": "/img/speaker-images/online-conf/Lemeri.webp",
+    "id": 33,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Fran Mendez",
+    "title": "Creator of AsyncAPI",
+    "img": "/img/speaker-images/bangalore/Fran.webp",
+    "id": 34,
+    "city": ["Online"]
+  },  
+  {
+    "name": "Jonas Lagoni",
+    "title": "Senior Software Engineer at APIDeck",
+    "img": "/img/speaker-images/london/Jonas Lagoni.webp",
+    "id": 35,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Alessandro Cagnetti",
+    "title": "Customer Engineering at Solace",
+    "img": "/img/speaker-images/paris/Alessandro.webp",
+    "id": 36,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Julien Testut",
+    "title": "Senior Principal Product Manager at Oracle",
+    "img": "/img/speaker-images/paris/Julien.webp",
+    "id": 37,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Laurent Broudoux",
+    "title": "Co-founder of Microcks",
+    "img": "/img/speaker-images/paris/Laurent.webp",
+    "id": 38,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Swen-Helge Huber",
+    "title": "Senior Director, Office of the CTO at Solace",
+    "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
+    "id": 39,
+    "city": ["Paris"]
   }
 ]

@@ -19,7 +19,7 @@
     "freeEntry": true,
     "cfp": null,
     "recordings": null,
-    "playlist": null
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pihQ5DsS1v2lWs63tWEA6jGn"
   },
   {
     "name": "Munich",
@@ -107,7 +107,7 @@
     "freeEntry": true,
     "cfp": null,
     "recordings": null,
-    "playlist": null
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pig_nA0tRlr0hU_h5sB2HXcq"
   },
   {
     "name": "Online",
@@ -127,7 +127,7 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "/venue/online/register",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },
@@ -135,7 +135,7 @@
     "name": "Paris",
     "country": "France",
     "date": "9 - 11 December, 2025",
-    "cfpDate": "5 October 2025",
+    "cfpDate": "31 October 2025",
     "description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
     "img": "/img/locations/paris.webp",
     "address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
@@ -149,7 +149,7 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },
@@ -157,7 +157,7 @@
     "name": "California",
     "country": "USA",
     "date": "18-20, Feburary 2026",
-    "cfpDate": "7 November, 2025",
+    "cfpDate": "21 November, 2025",
     "description": "Join the AsyncAPI Summit as an integral part of DeveloperWeek 2026.",
     "img": "/img/locations/san-jose.webp",
     "address": "150 W San Carlos St, San Jose, CA 95113",
