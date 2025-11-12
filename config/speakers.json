@@ -228,7 +228,7 @@
     "title": "Creator of AsyncAPI",
     "img": "/img/speaker-images/bangalore/Fran.webp",
     "id": 34,
-    "city": ["Online"]
+    "city": ["Online","Paris"]
   },  
   {
     "name": "Jonas Lagoni",
@@ -263,6 +263,13 @@
     "title": "Senior Director, Office of the CTO at Solace",
     "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
     "id": 39,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "TBA",
+    "title": "TBA",
+    "img": "/img/speaker-images/paris/TBA.webp",
+    "id": 40,
     "city": ["Paris"]
   }
 ]
