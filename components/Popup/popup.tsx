@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
@@ -10,13 +9,16 @@ import { customImageLoader } from '../../utils/imageLoader';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (isOpen) {
+    const hasShown = sessionStorage.getItem('popupShown');
+    if (!hasShown) {
+      setIsOpen(true);
       setIsVisible(true);
+      sessionStorage.setItem('popupShown', 'true');
     }
-  }, [isOpen]);
+  }, []);
 
   const handleClose = () => {
     setIsVisible(false);
