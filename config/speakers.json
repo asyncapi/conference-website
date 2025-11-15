@@ -4,7 +4,7 @@
     "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/london/Hugo Guerrero.webp",
     "id": 1,
-    "city": ["Singapore", "Online"]
+    "city": ["Singapore", "Online","Paris"]
   },
   {
     "name": "Naresh Jain",
@@ -109,7 +109,7 @@
     "title": "Head of API Consulting at codecentric AG",
     "img": "/img/speaker-images/online-conf/Daniel.webp",
     "id": 16,
-    "city": ["London"]
+    "city": ["London","Paris"]
   },
   {
     "name": "Garima Srivastava",
@@ -222,13 +222,54 @@
     "img": "/img/speaker-images/online-conf/Lemeri.webp",
     "id": 33,
     "city": ["Online"]
-  }
-  ,  
+  },  
   {
     "name": "Fran Mendez",
     "title": "Creator of AsyncAPI",
     "img": "/img/speaker-images/bangalore/Fran.webp",
     "id": 34,
-    "city": ["Online"]
+    "city": ["Online","Paris"]
+  },  
+  {
+    "name": "Jonas Lagoni",
+    "title": "Senior Software Engineer at APIDeck",
+    "img": "/img/speaker-images/london/Jonas Lagoni.webp",
+    "id": 35,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Alessandro Cagnetti",
+    "title": "Customer Engineering at Solace",
+    "img": "/img/speaker-images/paris/Alessandro.webp",
+    "id": 36,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Julien Testut",
+    "title": "Senior Principal Product Manager at Oracle",
+    "img": "/img/speaker-images/paris/Julien.webp",
+    "id": 37,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Laurent Broudoux",
+    "title": "Co-founder of Microcks",
+    "img": "/img/speaker-images/paris/Laurent.webp",
+    "id": 38,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Swen-Helge Huber",
+    "title": "Senior Director, Office of the CTO at Solace",
+    "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
+    "id": 39,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "TBA",
+    "title": "TBA",
+    "img": "/img/speaker-images/paris/TBA.webp",
+    "id": 40,
+    "city": ["Paris"]
   }
 ]
