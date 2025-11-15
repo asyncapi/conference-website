@@ -1,7 +1,7 @@
-import React, { JSX } from 'react';
+import React ,{JSX}from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
-import { Agenda as AgendaType, ExtendedCity } from '../../types/types';
+import { Agenda as AgendaType, ExtendedCity, Speaker } from '../../types/types';
 import Image from 'next/image';
 import { PdfDownloadButton } from './DownloadAgenda';
 
@@ -34,12 +34,13 @@ function Agenda({ city }: IAgenda): JSX.Element {
 
             <div className="mt-[40px]">
               {city.agenda.map((talk: AgendaType) => {
-                const getSpeaker = city.speakers.filter((speaker) => {
-                  if (typeof talk.speaker === 'object') {
+                const getSpeaker = city.speakers.filter((speaker: Speaker) => {
+                  if (Array.isArray(talk.speaker)) {
                     return talk.speaker.includes(speaker.id);
                   }
                   return speaker.id === talk.speaker;
                 });
+
                 return (
                   <div
                     key={talk.time}
@@ -59,6 +60,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
                           {talk.session}
                         </Heading>
                       </div>
+
                       {talk.speaker && typeof talk.speaker === 'number' ? (
                         <div className="flex items-center lg:mt-4">
                           <div className="w-[94px] h-[94px]">
@@ -85,12 +87,13 @@ function Agenda({ city }: IAgenda): JSX.Element {
                       ) : (
                         <div></div>
                       )}
-                      {talk.speaker && typeof talk.speaker === 'object' && (
+
+                      {talk.speaker && Array.isArray(talk.speaker) && (
                         <div className="flex flex-col">
                           {getSpeaker.length > 1 &&
-                            getSpeaker.map((speaker, i) => {
+                            getSpeaker.map((speaker: Speaker) => {
                               return (
-                                <div key={i} className="mt-6">
+                                <div key={speaker.id} className="mt-6">
                                   <div className="flex items-center lg:mt-4">
                                     <div className="w-[94px] h-[94px]">
                                       <Image
@@ -129,9 +132,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
           </div>
         )}
       </div>
-          <div className="mt-[60px]">
-          <PdfDownloadButton city={city} />
-          </div>
+      <div className="mt-[60px]">
+        <PdfDownloadButton city={city} />
+      </div>
     </div>
   );
 }

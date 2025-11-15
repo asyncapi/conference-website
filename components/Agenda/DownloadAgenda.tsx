@@ -12,6 +12,7 @@ import {
   PDFViewer,
 } from '@react-pdf/renderer';
 import Button from '../Buttons/button';
+import { ExtendedCity, Speaker, Agenda as AgendaType } from '../../types/types';
 
 Font.register({
   family: 'Open Sans',
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#666',
     paddingVertical: 8,
   },
-  
+
   timeCol: { width: '17%', fontSize: 12, paddingRight: 6 },
   sessionCol: { width: '50%', paddingHorizontal: 10 },
   speakerCol: { width: '33%', fontSize: 12, paddingLeft: 6 },
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
   sessionType: { fontSize: 10, color: '#bbb' },
   speakerName: { fontSize: 12, fontWeight: 600, color: '#fff' },
   speakerTitle: { fontSize: 10, color: '#ccc' },
- 
+
   footer: {
     position: 'absolute',
     bottom: 25,
@@ -99,8 +100,7 @@ const styles = StyleSheet.create({
   },
 });
 
-
-const cleanAgenda = (agenda: any[]) => {
+const cleanAgenda = (agenda: AgendaType[]) => {
   let tz: string | null = null;
   const processed = agenda.map((item) => {
     const tzMatch = item.time.match(/\b(?!AM|PM)([A-Z]{2,4})\b/g);
@@ -110,12 +110,11 @@ const cleanAgenda = (agenda: any[]) => {
   return { processed, tz };
 };
 
-const AgendaPDF = ({ city }: { city: any }) => {
+const AgendaPDF = ({ city }: { city: ExtendedCity }) => {
   const { processed, tz } = cleanAgenda(city.agenda);
   return (
     <Document>
       <Page style={styles.page}>
-        
         <View style={styles.header}>
           <Image src="/img/logos/2025-logo.png" style={styles.logo} />
           <Text style={styles.title}>
@@ -126,13 +125,13 @@ const AgendaPDF = ({ city }: { city: any }) => {
             {city.date} {tz && `(${tz})`}
           </Text>
         </View>
-        
+
         <View style={styles.tableHeader}>
           <Text style={[styles.headerText, { width: '17%' }]}>Time</Text>
           <Text style={[styles.headerText, { width: '50%' }]}>Session</Text>
           <Text style={[styles.headerText, { width: '33%' }]}>Speaker</Text>
         </View>
-     
+
         {processed.map((item, i) => (
           <View style={styles.row} key={i} wrap={false}>
             <Text style={styles.timeCol}>{item.time}</Text>
@@ -142,10 +141,10 @@ const AgendaPDF = ({ city }: { city: any }) => {
             </View>
             <View style={styles.speakerCol}>
               {Array.isArray(item.speaker)
-                ? item.speaker.map((id: any, j: React.Key | null | undefined) => {
-                    const sp = city.speakers.find((s: any) => s.id === id);
+                ? item.speaker.map((id: number) => {
+                    const sp = city.speakers.find((s: Speaker) => s.id === id);
                     return (
-                      <View key={j}>
+                      <View key={id}>
                         <Text style={styles.speakerName}>{sp?.name}</Text>
                         <Text style={styles.speakerTitle}>{sp?.title}</Text>
                       </View>
@@ -153,7 +152,7 @@ const AgendaPDF = ({ city }: { city: any }) => {
                   })
                 : (() => {
                     const sp = city.speakers.find(
-                      (s: any) => s.id === item.speaker
+                      (s: Speaker) => s.id === item.speaker
                     );
                     return (
                       <>
@@ -165,16 +164,16 @@ const AgendaPDF = ({ city }: { city: any }) => {
             </View>
           </View>
         ))}
-     
+
         <Text style={styles.footer}>
-        AsyncAPI Conference © {new Date().getFullYear()}
+          AsyncAPI Conference © {new Date().getFullYear()}
         </Text>
       </Page>
     </Document>
   );
 };
 
-export const PdfViewer = ({ city }: { city: any }) => (
+export const PdfViewer = ({ city }: { city: ExtendedCity }) => (
   <div className="w-full flex justify-center h-full">
     <PDFViewer className="w-[85%] h-[90vh]">
       <AgendaPDF city={city} />
@@ -182,7 +181,7 @@ export const PdfViewer = ({ city }: { city: any }) => (
   </div>
 );
 
-export const PdfDownloadButton = ({ city }: { city: any }) => (
+export const PdfDownloadButton = ({ city }: { city: ExtendedCity }) => (
   <div className="w-full flex justify-center mt-6">
     <PDFDownloadLink
       document={<AgendaPDF city={city} />}
@@ -195,7 +194,7 @@ export const PdfDownloadButton = ({ city }: { city: any }) => (
           className="w-full md:w-[200px] px-10 py-3"
           disabled={loading}
         >
-          {loading ? 'Preparing PDF…' : 'Download PDF'}
+          {loading ? 'Preparing Agenda…' : 'Download Agenda'}
         </Button>
       )}
     </PDFDownloadLink>
