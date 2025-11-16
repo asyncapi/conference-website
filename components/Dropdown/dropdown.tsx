@@ -1,19 +1,24 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
-import { City } from '../../types/types';
 
-interface IDropdown {
-  city: Partial<City>;
-  cities: City[];
-  setCity: React.Dispatch<SetStateAction<Partial<City>>>;
-  handleSpeakers: (arg0: string) => void;
+interface IDropdown<T> {
+  selectedItem: T | null;
+  items: T[];
+  onSelect: (item: T) => void;
+  getDisplayValue: (item: T | null) => string;
+  placeholder?: string;
+  className?: string;
+  disabled?: boolean;
 }
 
-function Dropdown({
-  city,
-  cities,
-  setCity,
-  handleSpeakers,
-}: IDropdown): JSX.Element {
+function Dropdown<T>({
+  selectedItem,
+  items,
+  onSelect,
+  getDisplayValue,
+  placeholder = "Select an option",
+  className = "",
+  disabled = false,
+}: IDropdown<T>): JSX.Element {
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -33,20 +38,32 @@ function Dropdown({
     };
   }, [dropdownRef]);
 
+  const handleItemSelect = (item: T) => {
+    onSelect(item);
+    setShow(false);
+  };
+
+  const displayValue = getDisplayValue(selectedItem) || placeholder;
+
   return (
-    <div className="relative inline-block w-full" ref={dropdownRef}>
+    <div className={`relative inline-block w-full ${className}`} ref={dropdownRef}>
       <div className="w-full">
         <button
           type="button"
-          className="flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md"
+          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md ${
+            disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+          }`}
           id="menu-button"
-          aria-expanded="true"
+          aria-expanded={show}
           aria-haspopup="true"
-          onClick={() => setShow(!show)}
+          onClick={() => !disabled && setShow(!show)}
+          disabled={disabled}
         >
-          <div>{typeof city === 'string' ? city : city.name}</div>
+          <div>{displayValue}</div>
           <svg
-            className="-mr-1 h-5 w-5 text-gray-400"
+            className={`-mr-1 h-5 w-5 text-gray-400 transition-transform ${
+              show ? 'rotate-180' : ''
+            }`}
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"
@@ -60,7 +77,7 @@ function Dropdown({
         </button>
       </div>
 
-      {show && (
+      {show && !disabled && (
         <div
           className="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
@@ -69,22 +86,19 @@ function Dropdown({
           tabIndex={-1}
         >
           <div className="rounded-md gradient-bg" role="none">
-            {cities &&
-              cities.map((item) => {
+            {items &&
+              items.map((item, i) => {
+                const displayText = getDisplayValue(item);
                 return (
                   <div
-                    key={item.name}
-                    onClick={() => {
-                      setCity(item);
-                      handleSpeakers(item.name);
-                      setShow(false);
-                    }}
+                    key={i}
+                    onClick={() => handleItemSelect(item)}
                     className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
                     role="menuitem"
                     tabIndex={-1}
-                    id="menu-item-0"
+                    id={`menu-item-${i}`}
                   >
-                    {item.name}
+                    {displayText}
                   </div>
                 );
               })}
