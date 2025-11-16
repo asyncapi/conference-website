@@ -7,7 +7,6 @@ interface IDropdown<T> {
   getDisplayValue: (item: T | null) => string;
   placeholder?: string;
   className?: string;
-  disabled?: boolean;
 }
 
 function Dropdown<T>({
@@ -17,7 +16,6 @@ function Dropdown<T>({
   getDisplayValue,
   placeholder = "Select an option",
   className = "",
-  disabled = false,
 }: IDropdown<T>): JSX.Element {
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -50,14 +48,11 @@ function Dropdown<T>({
       <div className="w-full">
         <button
           type="button"
-          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md ${
-            disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
-          }`}
+          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md cursor-pointer`}
           id="menu-button"
           aria-expanded={show}
           aria-haspopup="true"
-          onClick={() => !disabled && setShow(!show)}
-          disabled={disabled}
+          onClick={() => setShow(!show)}
         >
           <div>{displayValue}</div>
           <svg
@@ -77,7 +72,7 @@ function Dropdown<T>({
         </button>
       </div>
 
-      {show && !disabled && (
+      {show && (
         <div
           className="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
