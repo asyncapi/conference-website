@@ -266,18 +266,20 @@ backdrop-filter: blur(10px); */
   box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
 }
 
-.back-to-top-button:hover {
-  width: 140px;
-  border-radius: 50px;
-  background-color: rgb(181, 160, 255);
-}
+@media (min-width: 640px) {
+  .back-to-top-button:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: rgb(181, 160, 255);
+  }
 
-.back-to-top-button:hover .back-to-top-icon {
-  transform: translateY(-200%);
-  opacity: 0;
-}
+  .back-to-top-button:hover .back-to-top-icon {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
 
-.back-to-top-button:hover .back-to-top-text {
-  font-size: 13px;
-  opacity: 1;
+  .back-to-top-button:hover .back-to-top-text {
+    font-size: 13px;
+    opacity: 1;
+  }
 }

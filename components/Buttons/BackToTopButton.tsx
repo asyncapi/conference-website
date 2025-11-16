@@ -42,7 +42,7 @@ const BackToTopButton: React.FC = () => {
   return isVisible ? (
     <button
       onClick={scrollToTop}
-      className="back-to-top-button fixed bottom-8 right-8 w-12 h-12 rounded-full border-none font-semibold flex items-center justify-center cursor-pointer overflow-hidden z-50 outline-none transition-all duration-300 ease-in-out transform hover:scale-95 active:scale-90"
+      className="back-to-top-button fixed bottom-8 right-8 w-12 h-12 rounded-full border-none font-semibold flex items-center justify-center cursor-pointer overflow-hidden z-50 outline-none transition-all duration-300 ease-in-out transform active:scale-90 sm:hover:scale-95"
       aria-label="Back to top"
     >
       <Arrows
