@@ -288,8 +288,8 @@
 },
 {
     "time": "10:15 AM CET - 10:40 AM CET",
-    "session": "TBC",
-    "speaker": 40,
+    "session": "AsyncAPI Bindings and Developer Experience",
+    "speaker": 39,
     "type": "Technical Talk",
      "city": "Paris"
 },
@@ -308,24 +308,24 @@
      "city": "Paris"
 },
 {
-    "time": "14:00 PM CET - 14:55 PM CET",
+    "time": "14:00 PM CET - 14:25 PM CET",
     "session": "Lost in Translation: Unlocking Integration Success Beyond AsyncAPI",
     "speaker": 16,
     "type": "Technical Talk",
      "city": "Paris"
 },
 {
-    "time": "15:00 PM CET - 15:25 PM CET",
-    "session": "TBC",
-    "speaker": 40,
-    "type": "Technical Talk",
+    "time": "14:30 PM CET - 15:25 PM CET",
+    "session": "AsyncAPI Ambassador Panel",
+    "speaker": [16,34,1,38],
+    "type": "Panel Discussion",
      "city": "Paris"
 },
 {
     "time": "15:55 PM CET - 16:50 PM CET",
-    "session": "AsyncAPI Ambassador Panel",
-    "speaker": [16,34,1,38],
-    "type": "Panel Discussion",
+    "session": "AsyncAPI + Overlays: Testing Event Flows with Triggers and Side-Effects",
+    "speaker": 2,
+    "type": "Technical Talk",
      "city": "Paris"
 }
 ]

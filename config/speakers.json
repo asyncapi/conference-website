@@ -11,7 +11,7 @@
     "title": "Founder & CEO at Specmatic",
     "img": "/img/speaker-images/paris/Naresh.webp",
     "id": 2,
-    "city": ["Singapore", "Munich"]
+    "city": ["Singapore", "Munich","Paris"]
   },
   {
     "name": "Tamimi Ahmad",
@@ -263,13 +263,6 @@
     "title": "Senior Director, Office of the CTO at Solace",
     "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
     "id": 39,
-    "city": ["Paris"]
-  },  
-  {
-    "name": "TBA",
-    "title": "TBA",
-    "img": "/img/speaker-images/paris/TBA.webp",
-    "id": 40,
     "city": ["Paris"]
   }
 ]
