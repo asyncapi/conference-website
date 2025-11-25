@@ -120,7 +120,7 @@
   },
   {
     "name": "Hari Krishnan",
-    "title": "Co-founder, CTO at Specmatic",
+    "title": "Founder and CEO at Polarizer Technologies",
     "img": "/img/speaker-images/online-conf/Hari.webp",
     "id": 18,
     "city": ["Bangalore"]
@@ -263,6 +263,13 @@
     "title": "Senior Director, Office of the CTO at Solace",
     "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
     "id": 39,
+    "city": ["Paris"]
+  },  
+  {
+    "name": "Ludovic Dussart",
+    "title": "Deputy CTO and Solution Architect at zatsit",
+    "img": "/img/speaker-images/paris/Ludovic.webp",
+    "id": 40,
     "city": ["Paris"]
   }
 ]
