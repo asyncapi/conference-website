@@ -11,7 +11,7 @@
     "title": "Founder & CEO at Specmatic",
     "img": "/img/speaker-images/paris/Naresh.webp",
     "id": 2,
-    "city": ["Singapore", "Munich"]
+    "city": ["Singapore", "Munich","Paris"]
   },
   {
     "name": "Tamimi Ahmad",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Hari Krishnan",
-    "title": "Co-founder, CTO at Specmatic",
+    "title": "Founder and CEO at Polarizer Technologies",
     "img": "/img/speaker-images/online-conf/Hari.webp",
     "id": 18,
     "city": ["Bangalore"]
@@ -266,9 +266,9 @@
     "city": ["Paris"]
   },  
   {
-    "name": "TBA",
-    "title": "TBA",
-    "img": "/img/speaker-images/paris/TBA.webp",
+    "name": "Ludovic Dussart",
+    "title": "Deputy CTO and Solution Architect at zatsit",
+    "img": "/img/speaker-images/paris/Ludovic.webp",
     "id": 40,
     "city": ["Paris"]
   }
