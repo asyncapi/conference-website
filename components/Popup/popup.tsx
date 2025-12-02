@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
@@ -6,11 +7,13 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
-import { customImageLoader } from '../../utils/imageLoader';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
+
+  const [isLogoLoading, setLogoLoading] = useState<boolean>(true);
+  const [isRocketLoading, setRocketLoading] = useState<boolean>(true);
 
   useEffect(() => {
     if (isOpen) {
@@ -32,7 +35,7 @@ function Popup() {
           <div
             data-testid="popup-container"
             className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 z-[100] p-4 overflow-y-auto ${
-              isVisible ? 'bg-opacity-90 ' : 'bg-opacity-0'
+              isVisible ? 'bg-opacity-90' : 'bg-opacity-0'
             }`}
             onClick={handleClose}
           >
@@ -42,25 +45,21 @@ function Popup() {
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
               }`}
-              style={{
-                borderRadius: '30px',
-                minHeight: 'fit-content',
-              }}
+              style={{ borderRadius: '30px', minHeight: 'fit-content' }}
               onClick={(e) => e.stopPropagation()}
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center p-2">
                     <Image
-                    loader={customImageLoader}
-                    src="/img/logos/2025-logo.png"
-                    alt="conference logo"
-                    width={150}
-                    height={150}
-                    className="w-[150px] h-auto"
-                    priority
-                    placeholder="blur"
-                    blurDataURL="/img/logos/2025-logo-blur.png"
+                      src="/img/logos/2025-logo.png"
+                      alt="conference logo"
+                      width={150}
+                      height={150}
+                      priority
+                      onLoad={() => setLogoLoading(false)}
+                      className={`w-[150px] h-auto transition-all duration-300 
+                        ${isLogoLoading ? 'blur-sm scale-105' : 'blur-0 scale-100'}`}
                     />
                   </div>
 
@@ -94,17 +93,15 @@ function Popup() {
 
                 <div className="my-10 flex justify-center">
                   <Image
-  loader={customImageLoader}
-  src="/img/rocket.gif"
-  alt="rocket"
-  width={180}
-  height={180}
-  className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
-  priority
-  placeholder="blur"
-  blurDataURL="/img/rocket-blur.gif"
-/>
-
+                    src="/img/rocket.gif"
+                    alt="rocket"
+                    width={180}
+                    height={180}
+                    priority
+                    onLoad={() => setRocketLoading(false)}
+                    className={`w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full transition-all duration-300
+                      ${isRocketLoading ? 'blur-sm scale-105' : 'blur-0 scale-100'}`}
+                  />
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">

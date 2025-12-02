@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import Head from 'next/head';
@@ -17,8 +18,7 @@ import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City } from '../types/types';
 import Popup from '../components/Popup/popup';
-import Image from 'next/image'; 
-import { customImageLoader } from '../utils/imageLoader';
+import Image from 'next/image';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -26,6 +26,8 @@ export default function Home() {
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
   });
+
+  const [isBGLoading, setBGLoading] = useState(true);
 
   const handleSpeakers = (city: string) => {
     if (city && city !== 'all') {
@@ -39,6 +41,7 @@ export default function Home() {
       setSpeakersList([]);
     }
   };
+
   return (
     <div>
       <Head>
@@ -48,18 +51,16 @@ export default function Home() {
       </Head>
 
       <Image
-  loader={customImageLoader}
-  src="/img/illustra.png"
-  alt="background-illustration"
-  width={1920}
-  height={1080}
-  className="color-effect"
-  priority
-  placeholder="blur"
-  blurDataURL="/img/illustrablur.png"
-/>
+        src="/img/illustra.png"
+        alt="background-illustration"
+        width={1920}
+        height={1080}
+        priority
+        onLoad={() => setBGLoading(false)}
+        className={`w-full h-auto color-effect transition-all duration-500
+          ${isBGLoading ? 'blur-lg scale-105' : 'blur-0 scale-100'}`}
+      />
 
-      
       <Header />
       <Popup />
       <div id="about" className="mt-20">
@@ -98,14 +99,12 @@ export default function Home() {
             <div className="lg:py-20 w-[1130px] lg:w-full">
               <div className="mt-[64px] lg:mt-0">
                 {isTablet ? (
-                  <div className="w-full">
-                    <Dropdown
-                      city={currentCity}
-                      cities={cities}
-                      setCity={setCurrentCity}
-                      handleSpeakers={handleSpeakers}
-                    />
-                  </div>
+                  <Dropdown
+                    city={currentCity}
+                    cities={cities}
+                    setCity={setCurrentCity}
+                    handleSpeakers={handleSpeakers}
+                  />
                 ) : (
                   <div className="flex justify-center">
                     <div className="space-x-4 lg:w-full flex justify-between">
@@ -118,20 +117,16 @@ export default function Home() {
                         className={`w-[120px] ${
                           currentCity.name === 'All'
                             ? 'gradient-bg'
-                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                            : 'border border-gray btn relative overflow-hidden transition-all rounded group py-1.5 px-2.5'
                         }`}
-                        overlay={true}
+                        overlay
                       >
-                        <span className="transparent-bg "></span>
-                        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                          All
-                        </span>
+                        <span className="relative">All</span>
                       </Button>
+
                       {cities.map((city) => {
-                        // Temporary condition and should be removed next year
-                        if (city.name === 'California') {
-                          return null;
-                        }
+                        if (city.name === 'California') return null;
+
                         return (
                           <div
                             key={city.name}
@@ -146,24 +141,11 @@ export default function Home() {
                                 typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
                                   ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                                  : 'border border-gray btn relative overflow-hidden transition-all rounded group py-1.5 px-2.5'
                               }`}
-                              overlay={true}
+                              overlay
                             >
-                              {currentCity.name !== city.name && (
-                                <>
-                                  <span className="transparent-bg "></span>
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                </>
-                              )}
-                              {typeof currentCity !== 'string' &&
-                                currentCity.name === city.name && (
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                )}
+                              <span className="relative">{city.name}</span>
                             </Button>
                           </div>
                         );
@@ -176,32 +158,30 @@ export default function Home() {
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
                 {speakersList.length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
-                    {speakersList.map((speaker) => {
-                      return (
-                        <Speaker
-                          key={speaker.id}
-                          details={speaker}
-                          location={
-                            currentCity.name !== 'All'
-                              ? `${currentCity.name}, ${currentCity.country}`
-                              : speaker.city[1]
-                                ? `${speaker.city[0]} & ${speaker.city[1]}`
-                                : `${speaker.city[0]}`
-                          }
-                          className="mt-10"
-                        />
-                      );
-                    })}
+                    {speakersList.map((speaker) => (
+                      <Speaker
+                        key={speaker.id}
+                        details={speaker}
+                        location={
+                          currentCity.name !== 'All'
+                            ? `${currentCity.name}, ${currentCity.country}`
+                            : speaker.city[1]
+                              ? `${speaker.city[0]} & ${speaker.city[1]}`
+                              : `${speaker.city[0]}`
+                        }
+                        className="mt-10"
+                      />
+                    ))}
                   </div>
                 ) : (
                   <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
                     <div className="w-[720px] lg:w-full">
                       {typeof currentCity !== 'string' && currentCity.cfp ? (
-                        <div>
+                        <>
                           <Paragraph className="text-gray-200">
                             We are actively accepting speaker applications, and
                             you can start your journey by clicking the button
-                            below. Join us on stage and share your valuable
+                            below. Join us on stage and share your valuable 
                             insights with our enthusiastic audience!
                           </Paragraph>
                           <Link legacyBehavior href={currentCity.cfp}>
@@ -214,18 +194,16 @@ export default function Home() {
                               </Button>
                             </a>
                           </Link>
-                        </div>
+                        </>
                       ) : (
-                        <div>
-                          <Heading
-                            typeStyle="heading-md-semibold"
-                            className="text-gray-200"
-                          >
-                            {typeof currentCity !== 'string' &&
-                              currentCity.name}{' '}
-                            Speakers Coming Soon - Stay Tuned!
-                          </Heading>
-                        </div>
+                        <Heading
+                          typeStyle="heading-md-semibold"
+                          className="text-gray-200"
+                        >
+                          {typeof currentCity !== 'string' &&
+                            currentCity.name}{' '}
+                          Speakers Coming Soon - Stay Tuned!
+                        </Heading>
                       )}
                     </div>
                   </div>
@@ -240,10 +218,8 @@ export default function Home() {
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               Tickets
             </div>
-            <div
-              data-test="ticket-section"
-              className="flex flex-col items-center "
-            >
+
+            <div data-test="ticket-section" className="flex flex-col items-center">
               <Heading
                 typeStyle="heading-md"
                 className="text-gradient text-center lg:mt-10"
