@@ -2,20 +2,22 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (isOpen) {
+    const hasShown = sessionStorage.getItem('popupShown');
+    if (!hasShown) {
+      setIsOpen(true);
       setIsVisible(true);
+      sessionStorage.setItem('popupShown', 'true');
     }
-  }, [isOpen]);
+  }, []);
 
   const handleClose = () => {
     setIsVisible(false);
@@ -47,7 +49,7 @@ function Popup() {
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="">
+              <div>
                 <div className="flex items-center justify-between">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                     <img
