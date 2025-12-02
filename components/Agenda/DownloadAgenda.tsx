@@ -190,11 +190,11 @@ export const PdfDownloadButton = ({ city }: { city: ExtendedCity }) => (
     >
       {({ loading }) => (
         <Button
-          type="button"
-          className="w-full md:w-[200px] px-10 py-3"
-          disabled={loading}
-        >
-          {loading ? 'Preparing Agenda…' : 'Download Agenda'}
+         type="button"
+        className="w-full min-w-[200px] px-10 py-3 whitespace-nowrap"
+        disabled={loading}
+    >
+        {loading ? 'Preparing Agenda…' : 'Download Agenda'}
         </Button>
       )}
     </PDFDownloadLink>
