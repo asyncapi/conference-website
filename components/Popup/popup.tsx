@@ -21,7 +21,7 @@ function Popup() {
 
   useEffect(() => {
     if (isOpen) {
-        document.body.classList.add('popup-open');
+      document.body.classList.add('popup-open');
     } else {
       document.body.classList.remove('popup-open');
     }
