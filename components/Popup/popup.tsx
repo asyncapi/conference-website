@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
@@ -9,6 +10,9 @@ import Link from 'next/link';
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const [isLogoLoading, setLogoLoading] = useState<boolean>(true);
+  const [isRocketLoading, setRocketLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const hasShown = sessionStorage.getItem('popupShown');
@@ -33,7 +37,7 @@ function Popup() {
           <div
             data-testid="popup-container"
             className={`fixed inset-0 bg-black flex items-center justify-center transition-opacity duration-300 z-[100] p-4 overflow-y-auto ${
-              isVisible ? 'bg-opacity-90 ' : 'bg-opacity-0'
+              isVisible ? 'bg-opacity-90' : 'bg-opacity-0'
             }`}
             onClick={handleClose}
           >
@@ -43,21 +47,24 @@ function Popup() {
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
               }`}
-              style={{
-                borderRadius: '30px',
-                minHeight: 'fit-content',
-              }}
+              style={{ borderRadius: '30px', minHeight: 'fit-content' }}
               onClick={(e) => e.stopPropagation()}
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <img
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center p-2">
+                    <Image
                       src="/img/logos/2025-logo.png"
                       alt="conference logo"
-                      className="w-[150px]"
+                      width={150}
+                      height={150}
+                      priority
+                      onLoad={() => setLogoLoading(false)}
+                      className={`w-[150px] h-auto transition-all duration-300 
+                        ${isLogoLoading ? 'blur-sm scale-105' : 'blur-0 scale-100'}`}
                     />
                   </div>
+
                   <button
                     data-test="close-button"
                     className="p-2 hover:bg-gray-400 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 flex-shrink-0"
@@ -90,14 +97,17 @@ function Popup() {
                   <Image
                     src="/img/rocket.gif"
                     alt="rocket"
-                    width={0}
-                    height={0}
-                    className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
+                    width={180}
+                    height={180}
+                    priority
+                    onLoad={() => setRocketLoading(false)}
+                    className={`w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full transition-all duration-300
+                      ${isRocketLoading ? 'blur-sm scale-105' : 'blur-0 scale-100'}`}
                   />
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">
-                  <h1 className=" text-[30px] sm:text-[25px] font-bold text-white leading-tight">
+                  <h1 className="text-[30px] sm:text-[25px] font-bold text-white leading-tight">
                     AsyncAPI Is Headed to
                     <br />
                     DeveloperWeek <span className="text-[#B31942]">U</span>
