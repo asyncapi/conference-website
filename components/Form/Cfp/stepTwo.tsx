@@ -40,9 +40,8 @@ function StepTwo({ setStep, setForm, data }: CfpStepProps): JSX.Element {
             disabled={!data.Description || (!data.Title && true)}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-3"
             test="step-two-next"
-          >
-            Next
-          </Button>
+            text="Next"
+          />
         </div>
       </div>
     </form>
