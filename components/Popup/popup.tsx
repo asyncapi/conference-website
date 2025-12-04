@@ -19,6 +19,17 @@ function Popup() {
     }
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+        document.body.classList.add('popup-open');
+    } else {
+      document.body.classList.remove('popup-open');
+    }
+    return () => {
+      document.body.classList.remove('popup-open');
+    };
+  }, [isOpen]);
+
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => {
