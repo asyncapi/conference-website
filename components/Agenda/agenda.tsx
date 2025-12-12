@@ -9,6 +9,16 @@ interface IAgenda {
   city: ExtendedCity;
 }
 
+const isPastEvent = (dateString: string): boolean => {
+  if (dateString.includes('-')) {
+    const parts = dateString.split('-').map(p => p.trim());
+    const endDateString = parts[parts.length - 1];
+    const endDate = new Date(endDateString);
+    return endDate < new Date();
+  }
+  return new Date(dateString) < new Date();
+};
+
 function Agenda({ city }: IAgenda): JSX.Element {
   return (
     <div className="" data-test="agenda-com">
@@ -132,8 +142,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
           </div>
         )}
       </div>
+
       <div className="mt-[60px]">
-        <PdfDownloadButton city={city} />
+        {!isPastEvent(city.date) && <PdfDownloadButton city={city} />}
       </div>
     </div>
   );
