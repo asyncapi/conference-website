@@ -156,20 +156,23 @@ function Venue({ city }: IVenue) {
       <div id="recordings" className="flex justify-center">
         {eventStatus === ConferenceStatus.ENDED ? (
           city.playlist && (
-            <div className=" pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72">
+            <div className="pt-10 mb-24 container flex justify-center flex-col items-center">
               <h1 className="text-white font-bold text-5xl mb-10">
                 Recordings
               </h1>
-              <iframe
-                width="100%"
-                height="100%"
-                src={city.playlist}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <div className="w-full max-w-4xl aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={city.playlist}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           )
         ) : (
