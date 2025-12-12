@@ -15,6 +15,7 @@ function Navbar(): JSX.Element {
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
   const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -86,10 +87,24 @@ function Navbar(): JSX.Element {
     setFocusedSubMenuItem(-1);
   };
 
+  useEffect(() => {
+    const handleScroll = (): void => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const shouldBlur = isScrolled || drop;
+
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
+        className={`container flex justify-center fixed items-center w-full top-0 z-[99] text-white transition-all duration-300 ${
+          shouldBlur ? 'backdrop-blur-md bg-[#1B1130]/80' : 'bg-transparent'
+        }`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
