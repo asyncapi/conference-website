@@ -95,7 +95,7 @@ export default function Home() {
                         setCurrentCity(city);
                         handleSpeakers(city.name);
                       }}
-                      getDisplayValue={(city) => city?.name || 'Select a city'}
+                      getDisplayValue={(city) => city?.name}
                       placeholder="Select a city"
                     />
                   </div>

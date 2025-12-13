@@ -4,7 +4,7 @@ interface IDropdown<T> {
   selectedItem: T | null;
   items: T[];
   onSelect: (item: T) => void;
-  getDisplayValue: (item: T | null) => string;
+  getDisplayValue: (item: T | null) => string | undefined;
   placeholder?: string;
   className?: string;
 }
@@ -56,9 +56,8 @@ function Dropdown<T>({
         >
           <div>{displayValue}</div>
           <svg
-            className={`-mr-1 h-5 w-5 text-gray-400 transition-transform ${
-              show ? 'rotate-180' : ''
-            }`}
+            className={`-mr-1 h-5 w-5 text-gray-400 transition-transform ${show ? 'rotate-180' : ''
+              }`}
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"
