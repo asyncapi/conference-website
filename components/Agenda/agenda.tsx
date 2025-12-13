@@ -4,20 +4,11 @@ import Paragraph from '../Typography/paragraph';
 import { Agenda as AgendaType, ExtendedCity, Speaker } from '../../types/types';
 import Image from 'next/image';
 import { PdfDownloadButton } from './DownloadAgenda';
+import { isPastEvent } from '../../utils/isPastEvent';
 
 interface IAgenda {
   city: ExtendedCity;
 }
-
-const isPastEvent = (dateString: string): boolean => {
-  if (dateString.includes('-')) {
-    const parts = dateString.split('-').map(p => p.trim());
-    const endDateString = parts[parts.length - 1];
-    const endDate = new Date(endDateString);
-    return endDate < new Date();
-  }
-  return new Date(dateString) < new Date();
-};
 
 function Agenda({ city }: IAgenda): JSX.Element {
   return (
