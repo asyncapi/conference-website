@@ -8,7 +8,7 @@ import { isPastEvent } from '../../utils/isPastEvent';
 
 interface IAgenda {
   city: ExtendedCity;
-}
+} 
 
 function Agenda({ city }: IAgenda): JSX.Element {
   return (
