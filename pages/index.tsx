@@ -5,11 +5,11 @@ import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
-import Tickets from '../components/Tickets/tickets';
+import TicketCard from '../components/Cards/TicketsCard/TicketCard';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
-import Speaker from '../components/Speaker/speaker';
+import SpeakerCard from '../components/Cards/SpeakerCard/SpeakerCard';
 import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import Link from 'next/link';
@@ -104,11 +104,10 @@ export default function Home() {
                           handleSpeakers('all');
                           setCurrentCity({ name: 'All' });
                         }}
-                        className={`w-[120px] ${
-                          currentCity.name === 'All'
-                            ? 'gradient-bg'
-                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                        }`}
+                        className={`w-[120px] ${currentCity.name === 'All'
+                          ? 'gradient-bg'
+                          : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                          }`}
                         overlay={true}
                       >
                         <span className="transparent-bg "></span>
@@ -131,12 +130,11 @@ export default function Home() {
                           >
                             <Button
                               type="button"
-                              className={`w-[120px] ${
-                                typeof currentCity !== 'string' &&
+                              className={`w-[120px] ${typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
-                                  ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                              }`}
+                                ? 'gradient-bg'
+                                : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                                }`}
                               overlay={true}
                             >
                               {currentCity.name !== city.name && (
@@ -167,7 +165,7 @@ export default function Home() {
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
                     {speakersList.map((speaker) => {
                       return (
-                        <Speaker
+                        <SpeakerCard
                           key={speaker.id}
                           details={speaker}
                           location={
@@ -251,7 +249,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full mt-12">
-              <Tickets />
+              <TicketCard />
             </div>
           </div>
         </div>

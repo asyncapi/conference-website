@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { JSX } from 'react';
-import { Speaker as SpeakerTypes } from '../../types/types';
+import { Speaker as SpeakerTypes } from '../../../types/types';
 
 interface ISpeaker {
   details: SpeakerTypes;
@@ -8,7 +8,7 @@ interface ISpeaker {
   className?: string;
 }
 
-function Speaker({ details, location, className }: ISpeaker): JSX.Element {
+function SpeakerCard({ details, location, className }: ISpeaker): JSX.Element {
   function getName(names: string[]) {
     return `${names[0]} ${names[1]}`;
   }
@@ -48,4 +48,4 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
   );
 }
 
-export default Speaker;
+export default SpeakerCard;

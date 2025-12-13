@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
 import React from 'react';
 
-import Venue from './venue';
-import { City } from '../../types/types';
+import Venue from './VenueCard';
+import { City } from '../../../types/types';
 
 const meta: Meta<typeof Venue> = {
   title: 'Components/Card/VenueCard',

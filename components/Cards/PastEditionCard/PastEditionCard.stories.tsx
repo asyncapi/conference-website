@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
 import React from 'react';
 
-import PastEditionCard from './index';
+import PastEditionCard from './PastEditionCard';
 
 const meta: Meta<typeof PastEditionCard> = {
   title: 'Components/Card/PastEditionCard',

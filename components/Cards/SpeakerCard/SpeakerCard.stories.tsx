@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/nextjs';
 import React from 'react';
 
-import Speaker from './speaker';
-import { Speaker as SpeakerTypes } from '../../types/types';
+import Speaker from './SpeakerCard';
+import { Speaker as SpeakerTypes } from '../../../types/types';
 
 const meta: Meta = {
   title: 'Components/Card/SpeakerCard',
@@ -65,10 +65,10 @@ export const Default = {
       id: 1,
       city: ['Bangalore']
     };
-    
+
     return (
-      <Speaker 
-        details={speakerDetails} 
+      <Speaker
+        details={speakerDetails}
         location={hasLocation ? locationText : undefined}
       />
     );
