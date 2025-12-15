@@ -13,7 +13,7 @@ const Tickets = (): JSX.Element => {
     const aEnded = new Date(a.eventDate) < today;
     const bEnded = new Date(b.eventDate) < today;
     if (aEnded === bEnded) return 0;
-    return aEnded ? 1 : -1; 
+    return aEnded ? 1 : -1;
   });
 
   const nextTicket = (): void => {
@@ -45,7 +45,7 @@ const Tickets = (): JSX.Element => {
         </button>
       </div>
 
-      <div className="relative h-96">
+      <div className="relative min-h-[500px] sm:min-h-[550px] pb-8">
         {availableTickets.map((ticket, index) => {
           const isCurrentCard: boolean = index === currentIndex;
           const isPrevCard: boolean =
@@ -84,8 +84,8 @@ const Tickets = (): JSX.Element => {
                 zIndex,
               }}
             >
-              <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-                <div className="p-6">
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 h-full flex flex-col">
+                <div className="p-6 flex flex-col flex-grow min-h-[450px] sm:min-h-[480px]">
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">
@@ -109,7 +109,7 @@ const Tickets = (): JSX.Element => {
                     <span className="text-gray-500 ml-2">/person</span>
                   </div>
 
-                  <ul className="mt-6 space-y-2">
+                  <ul className="mt-6 space-y-2 flex-grow">
                     {ticket.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-center text-gray-600">
                         <TicketIcon className="h-4 w-4 mr-2 text-blue-500" />
@@ -118,22 +118,24 @@ const Tickets = (): JSX.Element => {
                     ))}
                   </ul>
 
-                  {ticket.url && !isEnded ? (
-                    <a href={ticket.url} target="_blank" rel="noreferrer">
-                      <Button type="button" className="mt-8 w-full">
-                        Get a Free Ticket
+                  <div className="mt-auto pt-4">
+                    {ticket.url && !isEnded ? (
+                      <a href={ticket.url} target="_blank" rel="noreferrer">
+                        <Button type="button" className="w-full">
+                          Get a Free Ticket
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button
+                        type="button"
+                        disabled={true}
+                        overlay={true}
+                        className="w-full bg-gray-300"
+                      >
+                        {isEnded ? 'Event Closed' : 'Get a Ticket'}
                       </Button>
-                    </a>
-                  ) : (
-                    <Button
-                      type="button"
-                      disabled={true}
-                      overlay={true}
-                      className="mt-8 w-full bg-gray-300"
-                    >
-                      {isEnded ? 'Event Closed' : 'Get a Ticket'}
-                    </Button>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,7 +143,7 @@ const Tickets = (): JSX.Element => {
         })}
       </div>
 
-      <div className="flex justify-center mt-6 gap-2">
+      <div className="flex justify-center mt-4 gap-2">
         {availableTickets.map((_, index: number) => {
           return (
             <button
