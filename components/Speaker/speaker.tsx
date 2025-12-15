@@ -17,10 +17,10 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
 
   return (
     <div
-      className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
+      className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] sm:p-[15px] ${className}`}
       data-test="speakers-section"
     >
-      <div className="w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
+      <div className="w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] sm:w-[150px] sm:h-[150px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
         <Image
           src={details.img}
           alt={details.name}
@@ -30,17 +30,23 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
           className="rounded-full object-cover transition-all duration-300 hover:scale-110 w-[100%] h-[100%]"
         />
       </div>
-      <div className="mt-[19px]">
-        <h3 className="text-[23px] text-white">{shortenedName}</h3>
-        <div className={`flex flex-col ${'min-h-[150px]'} justify-between`}>
+      <div className="mt-[19px] sm:mt-[10px]">
+        <h3 className="text-[23px] sm:text-[16px] text-white">
+          {shortenedName}
+        </h3>
+        <div
+          className={`flex flex-col ${'min-h-[150px] sm:min-h-[100px]'} justify-between`}
+        >
           <div>
             {' '}
-            <p className="mt-[6.6px] text-[18px] text-gray-500">
+            <p className="mt-[6.6px] text-[18px] sm:text-[13px] text-gray-500">
               {details.title}
             </p>
           </div>
           <div>
-            <p className="mt-[6.6px] text-[20px] text-gradient">{location}</p>
+            <p className="mt-[6.6px] text-[20px] sm:text-[14px] text-gradient">
+              {location}
+            </p>
           </div>
         </div>
       </div>

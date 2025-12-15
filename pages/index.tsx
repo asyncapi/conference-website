@@ -164,7 +164,7 @@ export default function Home() {
 
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
                 {speakersList.length > 0 ? (
-                  <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
+                  <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-2 gap-4">
                     {speakersList.map((speaker) => {
                       return (
                         <Speaker
