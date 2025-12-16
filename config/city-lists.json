@@ -19,7 +19,7 @@
     "freeEntry": true,
     "cfp": null,
     "recordings": null,
-    "playlist": null
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pihQ5DsS1v2lWs63tWEA6jGn"
   },
   {
     "name": "Munich",
@@ -46,7 +46,7 @@
   {
     "name": "Lagos",
     "country": "Nigeria",
-    "date": "18 - 19 July, 2025",
+    "date": "18 July, 2025",
     "cfpDate": "17 May 2025",
     "description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
     "img": "/img/locations/lagos.webp",
@@ -68,8 +68,8 @@
   {
     "name": "London",
     "country": "UK",
-    "date": "22 - 24 September, 2025",
-    "cfpDate": "13 July 2025",
+    "date": "24 September, 2025",
+    "cfpDate": "27 July 2025",
     "description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
     "img": "/img/locations/london.webp",
     "address": "155 Bishopsgate, London EC2M 3YD",
@@ -83,14 +83,14 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },
   {
     "name": "Bangalore",
     "country": "India",
-    "date": "8 - 9 October, 2025",
+    "date": "8 October, 2025",
     "cfpDate": "29 June 2025",
     "description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
     "img": "/img/locations/bangalore.webp",
@@ -105,15 +105,15 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://confengine.com/conferences/apidays-india-2025",
+    "cfp": null,
     "recordings": null,
-    "playlist": null
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pig_nA0tRlr0hU_h5sB2HXcq"
   },
   {
     "name": "Online",
     "country": " Edition",
     "date": "29 October, 2025",
-    "cfpDate": "7th September, 2025",
+    "cfpDate": "28th September, 2025",
     "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
     "img": "/img/locations/testMic.webp",
     "address": "AsyncAPI YouTube Channel",
@@ -127,15 +127,15 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "/venue/online/register",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },
   {
     "name": "Paris",
     "country": "France",
-    "date": "9 - 11 December, 2025",
-    "cfpDate": "5 October 2025",
+    "date": "11 December, 2025",
+    "cfpDate": "31 October 2025",
     "description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
     "img": "/img/locations/paris.webp",
     "address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
@@ -149,7 +149,29 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://apidays.typeform.com/to/ILJeAaV8?typeform-source=www.apidays.global#event_name=xxxxx",
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "California",
+    "country": "USA",
+    "date": "18-20, Feburary 2026",
+    "cfpDate": "21 November, 2025",
+    "description": "Join the AsyncAPI Summit as an integral part of DeveloperWeek 2026.",
+    "img": "/img/locations/san-jose.webp",
+    "address": "150 W San Carlos St, San Jose, CA 95113",
+    "mapUrl": "https://maps.app.goo.gl/29C6zbBjzNMuxUi4A",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/developerweek-logo.webp",
+          "websiteUrl": "https://www.developerweek.com/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": null,
     "recordings": null,
     "playlist": null
   }
