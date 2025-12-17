@@ -260,23 +260,9 @@ export default function Home() {
         <Sponsors
           eventSponsors={[
             {
-              image: '/img/logos/apidays.png',
+              image: '/img/logos/developerweek-logo.webp',
               websiteUrl: 'https://www.apidays.global/',
-            },
-            {
-              image: '/img/logos/APICONF-LOGO-White.png',
-              websiteUrl: 'https://apiconf.net/',
-            },
-          ]}
-          financialSponsor={[
-            {
-              image: '/img/logos/IBM.png',
-              websiteUrl: 'https://www.ibm.com/',
-            },
-            {
-              image: '/img/logos/graviteeio-logo.webp',
-              websiteUrl: 'https://www.gravitee.io/',
-            },
+            }
           ]}
         />
       </div>
