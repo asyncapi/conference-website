@@ -4,6 +4,8 @@ describe('Footer links', () => {
   });
 
   it('Footer Should be visible', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('footer').should('be.visible');
   });
 
@@ -58,6 +60,8 @@ describe('Footer links', () => {
   });
 
   it('Should Contain AsycAPI Conference Logo', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('footer-asyncAPI-logo').should('be.visible');
   });
 });
