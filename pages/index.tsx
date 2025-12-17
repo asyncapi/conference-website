@@ -89,10 +89,14 @@ export default function Home() {
                 {isTablet ? (
                   <div className="w-full">
                     <Dropdown
-                      city={currentCity}
-                      cities={cities}
-                      setCity={setCurrentCity}
-                      handleSpeakers={handleSpeakers}
+                      selectedItem={currentCity as City}
+                      items={cities}
+                      onSelect={(city) => {
+                        setCurrentCity(city);
+                        handleSpeakers(city.name);
+                      }}
+                      getDisplayValue={(city) => city?.name}
+                      placeholder="Select a city"
                     />
                   </div>
                 ) : (
