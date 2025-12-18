@@ -4,203 +4,232 @@
     "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/london/Hugo Guerrero.webp",
     "id": 1,
-    "city": ["Singapore", "Online","Paris"]
+    "city": ["Singapore", "Online","Paris"],
+    "linkedin":"https://www.linkedin.com/in/hugoguerrero/"
   },
   {
     "name": "Naresh Jain",
     "title": "Founder & CEO at Specmatic",
     "img": "/img/speaker-images/paris/Naresh.webp",
     "id": 2,
-    "city": ["Singapore", "Munich","Paris"]
+    "city": ["Singapore", "Munich","Paris"],
+    "linkedin":"https://www.linkedin.com/in/nareshjain/"
   },
   {
     "name": "Tamimi Ahmad",
     "title": "Senior Developer Advocate at Solace",
     "img": "/img/speaker-images/london/Tamimi.webp",
     "id": 3,
-    "city": ["Singapore"]
+    "city": ["Singapore"],
+    "linkedin":"https://www.linkedin.com/in/atamimi1/"
   },
   {
     "name": "Ankit Kumar",
     "title": "Head of Developer and Customer Success at Aklivity",
     "img": "/img/speaker-images/london/Ankit.webp",
     "id": 4,
-    "city": ["Singapore", "Bangalore"]
+    "city": ["Singapore", "Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/ankit28/"
   },
   {
     "name": "Dr. Annegret Junker",
     "title": "Chief Software Architect at codecentric AG",
     "img": "/img/speaker-images/paris/Annegret.webp",
     "id": 5,
-    "city": ["Munich", "London"]
+    "city": ["Munich", "London"],
+    "linkedin":"https://www.linkedin.com/in/dr-annegret-junker-141a99a4/"
   },
   {
     "name": "Eduardo Maldonado Fonseca Silva",
     "title": "Senior Platform Engineer at The LEGO Group",
     "img": "/img/speaker-images/london/Eduardo.webp",
     "id": 6,
-    "city": ["Munich"]
+    "city": ["Munich"],
+    "linkedin":"https://www.linkedin.com/in/eduardofesilva/"
   },
   {
     "name": "Andreas Habel",
     "title": "Executive Professional for Enterprise Integration at Schwarz IT KG",
     "img": "/img/speaker-images/munich/Andreas.webp",
     "id": 7,
-    "city": ["Munich"]
+    "city": ["Munich"],
+    "linkedin":"https://www.linkedin.com/in/andreashabel/"
   },
   {
     "name": "Fabrizio Lazzaretti",
     "title": "Managing Consultant at Wavestone",
     "img": "/img/speaker-images/munich/Fabrizio.webp",
     "id": 8,
-    "city": ["Munich", "London"]
+    "city": ["Munich", "London"],
+    "linkedin":"https://www.linkedin.com/in/fabrizio-lazzaretti/"
   },
   {
     "name": "Azeez Elegbede",
     "title": "Developer Advocate at AsyncAPI Initiative",
     "img": "/img/speaker-images/lagos/Azeez.webp",
     "id": 9,
-    "city": ["Lagos", "Online"]
+    "city": ["Lagos", "Online"],
+    "linkedin":"https://www.linkedin.com/in/aelegbede/"
   },
   {
     "name": "Thulisile Sibanda",
     "title": "Senior Community Manager at AsyncAPI Initiative",
     "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
     "id": 10,
-    "city": ["Lagos", "Bangalore", "Online"]
+    "city": ["Lagos", "Bangalore", "Online"],
+    "linkedin":"https://www.linkedin.com/in/v-thulisile-sibanda/"
   },
   {
     "name": "Prince Onyeanuna",
     "title": "Technical Writer at Pi Squared",
     "img": "/img/speaker-images/lagos/Prince.webp",
     "id": 11,
-    "city": ["Lagos"]
+    "city": ["Lagos"],
+    "linkedin":"https://www.linkedin.com/in/prince-onyeanuna-607352246/"
   },
   {
     "name": "Aishat Muibudeen",
     "title": "Lead Design Maintainer at AsyncAPI Initiative",
     "img": "/img/speaker-images/online-conf/Maya.webp",
     "id": 12,
-    "city": ["Lagos"]
+    "city": ["Lagos"],
+    "linkedin":"https://www.linkedin.com/in/aishatmuibudeen/"
   },
   {
     "name": "Ezinne Anne Emilia",
     "title": "Documentation Mentee at AsyncAPI Initiative",
     "img": "/img/speaker-images/lagos/Ezinne.webp",
     "id": 13,
-    "city": ["Lagos"]
+    "city": ["Lagos"],
+    "linkedin":"https://www.linkedin.com/in/ezinneanneemilia/"
   },
   {
     "name": "Dale Lane",
     "title": "Chief Architect at IBM",
     "img": "/img/speaker-images/london/Dale Lane.webp",
     "id": 14,
-    "city": ["Paris", "London"]
+    "city": ["Paris", "London"],
+    "linkedin":"https://www.linkedin.com/in/dalelane/"
   },
   {
     "name": "David Boyne",
     "title": "Founder of EventCatalog",
     "img": "/img/speaker-images/london/David Boyne.webp",
     "id": 15,
-    "city": ["London"]
+    "city": ["London"],
+    "linkedin":"https://www.linkedin.com/in/david-boyne/"
   },
   {
     "name": "Daniel Kocot",
     "title": "Head of API Consulting at codecentric AG",
     "img": "/img/speaker-images/online-conf/Daniel.webp",
     "id": 16,
-    "city": ["London","Paris"]
+    "city": ["London","Paris"],
+    "linkedin":"https://www.linkedin.com/in/danielkocot/"
   },
   {
     "name": "Garima Srivastava",
     "title": "Chief Development Architect at SAP Labs India ",
     "img": "/img/speaker-images/bangalore/Garima.webp",
     "id": 17,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/garima-srivastava-bb02449/"
   },
   {
     "name": "Hari Krishnan",
     "title": "Founder and CEO at Polarizer Technologies",
     "img": "/img/speaker-images/online-conf/Hari.webp",
     "id": 18,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/harikrishnan83/"
   },
   {
     "name": "Dakshitha Ratnayake",
     "title": "Director of Developer Relations at WSO2",
     "img": "/img/speaker-images/bangalore/Dakshita.webp",
     "id": 19,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/dakshitha-ratnayake-3197181a/"
   },
   {
     "name": "Abijith Yogendranath Kamath",
     "title": "Software Developer at IBM",
     "img": "/img/speaker-images/bangalore/Abijith.webp",
     "id": 20,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/abijith-kamath-3b4a40205/"
   },
   {
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
     "id": 21,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/ruchipakhle/"
   },
   {
     "name": "Łukasz Górnicki",
     "title": "Open Source Fanatic at BrainFart",
     "img": "/img/speaker-images/online-conf/Lukasz.webp",
     "id": 22,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/lukasz-gornicki-a621914/"
   },
   {
     "name": "Shilpa Prabhu Nagavara",
     "title": "Software Architect at Globalization Partners",
     "img": "/img/speaker-images/bangalore/Shilpa.webp",
     "id": 23,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/shilpaprabhun/"
   },
   {
     "name": "Harshvardhan Parmar",
     "title": "Software Engineer at Yosemite Crew",
     "img": "/img/speaker-images/bangalore/Harsh.webp",
     "id": 24,
-    "city": ["Bangalore"]
+    "city": ["Bangalore"],
+    "linkedin":"https://www.linkedin.com/in/harshvardhan-parmar/"
   },
   {
     "name": "Sneha Bagri",
     "title": "Solution Consultant at Sahaj Software",
     "img": "/img/speaker-images/bangalore/Sneha.webp",
     "id": 25,
-    "city": ["Bangalore", "Online"]
+    "city": ["Bangalore", "Online"],
+    "linkedin":"https://www.linkedin.com/in/sneha-bagri/"
   },
   {
     "name": "Matthew Tso",
     "title": "Software Engineer at Ironclad",
     "img": "/img/speaker-images/online-conf/Matthew.webp",
     "id": 26,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/matthewtso/"
   },  
   {
     "name": "Ashish Dibouliya",
     "title": "Sr Enterprise Data Architect at Webster Bank",
     "img": "/img/speaker-images/online-conf/Ashish.webp",
     "id": 28,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/ashishdibouliya/"
   },  
   {
     "name": "Nkeiruka Ifeonu",
-    "title": "Lead Product Designer atonehealthng.com",
+    "title": "Lead Product Designer at onehealthng.com",
     "img": "/img/speaker-images/online-conf/Nkeiruka.webp",
     "id": 29,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/nkeiruka-ifeonu-product-uiux-designer-593335257/"
   },  
   {
     "name": "Adi Boghawala",
     "title": "Maintainer at AsyncAPI Initiative",
     "img": "/img/speaker-images/online-conf/Adi.webp",
     "id": 30,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/adi-boghawala/"
   },  
   {
     "name": "Funmilola Chidinma Jones",
@@ -214,62 +243,71 @@
     "title": "Community Marketing Specialist at AsyncAPI Initiative",
     "img": "/img/speaker-images/online-conf/Atinuke.webp",
     "id": 32,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/atinuke-oluwabamikemi-kayode-5b838b1b7/"
   },  
   {
     "name": "Lemeri Festus",
     "title": "Open Source Contributor at AsyncAPI Initiative",
     "img": "/img/speaker-images/online-conf/Lemeri.webp",
     "id": 33,
-    "city": ["Online"]
+    "city": ["Online"],
+    "linkedin":"https://www.linkedin.com/in/lemeri-festus/"
   },  
   {
     "name": "Fran Mendez",
     "title": "Creator of AsyncAPI",
     "img": "/img/speaker-images/bangalore/Fran.webp",
     "id": 34,
-    "city": ["Online","Paris"]
+    "city": ["Online","Paris"],
+    "linkedin":"https://www.linkedin.com/in/fmvilas/"
   },  
   {
     "name": "Jonas Lagoni",
     "title": "Senior Software Engineer at APIDeck",
     "img": "/img/speaker-images/london/Jonas Lagoni.webp",
     "id": 35,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin":"https://www.linkedin.com/in/jonaslagoni/"
   },  
   {
     "name": "Alessandro Cagnetti",
     "title": "Customer Engineering at Solace",
     "img": "/img/speaker-images/paris/Alessandro.webp",
     "id": 36,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin":"https://www.linkedin.com/in/cagnetti/"
   },  
   {
     "name": "Julien Testut",
     "title": "Senior Principal Product Manager at Oracle",
     "img": "/img/speaker-images/paris/Julien.webp",
     "id": 37,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin":"https://www.linkedin.com/in/julientestut/"
   },  
   {
     "name": "Laurent Broudoux",
     "title": "Co-founder of Microcks",
     "img": "/img/speaker-images/paris/Laurent.webp",
     "id": 38,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin":"https://www.linkedin.com/in/laurentbroudoux/"
   },  
   {
     "name": "Swen-Helge Huber",
     "title": "Senior Director, Office of the CTO at Solace",
     "img": "/img/speaker-images/london/Swen-Helge Huber.webp",
     "id": 39,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin": "https://www.linkedin.com/in/swenhelge/"
   },  
   {
     "name": "Ludovic Dussart",
     "title": "Deputy CTO and Solution Architect at zatsit",
     "img": "/img/speaker-images/paris/Ludovic.webp",
     "id": 40,
-    "city": ["Paris"]
+    "city": ["Paris"],
+    "linkedin":"https://www.linkedin.com/in/ludovic-dussart-846a8063/"
   }
 ]

@@ -48,6 +48,7 @@ export interface Speaker {
   img: string;
   id: number;
   city: string[];
+  linkedin?: string;
 }
 
 export interface Agenda {
