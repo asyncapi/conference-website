@@ -1,5 +1,4 @@
 [
-  
   {
     "name": "California",
     "country": "USA",
@@ -14,6 +13,28 @@
         {
           "image": "/img/logos/developerweek-logo.webp",
           "websiteUrl": "https://www.developerweek.com/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "Online",
+    "country": " Edition",
+    "date": "October, 2026",
+    "cfpDate": "28th September, 2026",
+    "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+    "img": "/img/locations/testMic.webp",
+    "address": "AsyncAPI YouTube Channel",
+    "mapUrl": "https://www.youtube.com/@AsyncAPI",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/asyncapi-logo--white.png",
+          "websiteUrl": "https://asyncapi.com"
         }
       ]
     },
