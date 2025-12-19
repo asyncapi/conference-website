@@ -1,6 +1,17 @@
 [ 
   {
     "id": 1,
+    "type": "California, USA",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2026-02-18T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All OPEN Talks", "Networking", "Expo Hall"]
+  },
+  {
+    "id": 2,
     "type": "Online",
     "price": 0,
     "url": null,
@@ -9,16 +20,5 @@
     "available": 100,
     "eventDate": "2026-10-28T00:00:00.000Z",
     "benefits": ["AsyncAPI Track", "All talks", "Networking"]
-  },
-  {
-    "id": 2,
-    "type": "California, USA",
-    "price": 0,
-    "url": null,
-    "description": "Access to all conference talks and workshops",
-    "status": "Not Yet Available",
-    "available": 100,
-    "eventDate": "2026-02-18T00:00:00.000Z",
-    "benefits": ["AsyncAPI Track", "All OPEN talks", "Networking", "Expo Hall"]
   }
 ]
