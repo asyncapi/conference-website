@@ -7,7 +7,7 @@
     "description": "Access to all conference talks and workshops",
     "status": "Not Yet Available",
     "available": 100,
-    "eventDate": "2025-09-15T00:00:00.000Z",
+    "eventDate": "2026-10-28T00:00:00.000Z",
     "benefits": ["AsyncAPI Track", "All talks", "Networking"]
   },
   {
@@ -19,7 +19,6 @@
     "status": "Not Yet Available",
     "available": 100,
     "eventDate": "2026-02-18T00:00:00.000Z",
-    "benefits": ["AsyncAPI Track", "All talks", "Networking", "Lunch included"]
+    "benefits": ["AsyncAPI Track", "All OPEN talks", "Networking", "Expo Hall"]
   }
-   
 ]

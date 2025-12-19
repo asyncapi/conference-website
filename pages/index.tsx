@@ -50,7 +50,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
-      <Popup />
+      {/* <Popup /> */}
       <div id="about" className="mt-20">
         <About />
       </div>
@@ -265,7 +265,7 @@ export default function Home() {
           eventSponsors={[
             {
               image: '/img/logos/developerweek-logo.webp',
-              websiteUrl: 'https://www.apidays.global/',
+              websiteUrl: 'https://www.developerweek.com/',
             }
           ]}
         />
