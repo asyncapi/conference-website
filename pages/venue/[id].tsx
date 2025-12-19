@@ -9,7 +9,7 @@ import {
   City,
   ConferenceStatus,
   ExtendedCity,
-  Speaker as SpeakerTypes,
+  Speaker as SpeakerType,
 } from '../../types/types';
 import { getEventStatus } from '../../utils/status';
 import agenda from '../../config/agenda.json';
@@ -31,10 +31,10 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   const cityName = params?.id as string;
   const city = cities.filter((city) => city.name === cityName);
   currentCity = city[0];
-  const citySpeakers = speakers.filter((speaker) =>
+  const citySpeakers = speakers.filter((speaker: SpeakerType) =>
     speaker.city.includes(cityName)
   );
-  const cityAgenda = agenda.filter((a) => a.city === cityName);
+  const cityAgenda = agenda.filter((a: AgendaType) => a.city === cityName);
   const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
