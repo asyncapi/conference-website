@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
-import { City } from '../../types/types';
-import { getEventStatus } from '../../utils/status';
-import MapPointer from '../illustration/mapPointer';
+import { City } from '../../../types/types';
+import { getEventStatus } from '../../../utils/status';
+import MapPointer from '../../illustration/mapPointer';
 
 interface IVenue {
   city: City;
 }
 
-function Venue({ city }: IVenue) {
+function VenueCard({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
 
   return (
@@ -69,4 +69,4 @@ function Venue({ city }: IVenue) {
   );
 }
 
-export default Venue;
+export default VenueCard;
