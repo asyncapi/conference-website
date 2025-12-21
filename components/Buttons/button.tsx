@@ -6,7 +6,7 @@ type IconPosition = 'left' | 'right';
 interface IButton {
   className?: string;
   children?: React.ReactNode;
-  text?: string;
+  text?: string | React.ReactNode;
   outline?: boolean;
   onClick?: React.MouseEventHandler;
   type: ButtonType;

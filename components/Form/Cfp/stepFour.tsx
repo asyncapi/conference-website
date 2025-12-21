@@ -4,6 +4,7 @@ import { toast } from 'react-hot-toast';
 import axios from 'axios';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
+import ActivityLoader from '../../illustration/activityLoader';
 
 function StepFour({ setStep, setForm, data }: CfpStepProps) {
   const [submitting, setSubmitting] = useState<boolean>(false);
@@ -70,7 +71,7 @@ function StepFour({ setStep, setForm, data }: CfpStepProps) {
             disabled={submitting || disabled}
             className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
             test="step-four-next"
-            text={submitting ? "submitting" : 'Submit'}
+            text={submitting ? <ActivityLoader /> : 'Submit'}
           />
         </div>
       </div>
