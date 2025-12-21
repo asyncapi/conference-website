@@ -108,7 +108,7 @@ function Popup() {
                     For the first time ever, we&apos;re bringing the AsyncAPI
                     community to
                     <br className="hidden sm:block" />
-                    DeveloperWeek USA in San Jose, CA
+                    {" "}DeveloperWeek USA in San Jose, CA
                   </Paragraph>
 
                   <Paragraph
