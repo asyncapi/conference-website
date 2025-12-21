@@ -35,6 +35,7 @@ function StepThree({ setStep, setForm, data }: CfpStepProps): JSX.Element {
 
   useEffect(() => {
     setForm({ ...data, ...value });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   return (

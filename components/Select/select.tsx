@@ -53,6 +53,7 @@ function SelectDropdown({
     if (selectedOption?.value) {
       setValue(selectedOption.value);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedOption]);
   return (
     <div className="relative inline-block w-full">
