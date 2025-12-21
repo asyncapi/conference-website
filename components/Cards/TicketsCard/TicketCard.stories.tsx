@@ -1,18 +1,12 @@
-import type { Meta } from '@storybook/nextjs';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import React, { useState } from 'react';
 
 import TicketCard from './TicketCard';
 import { Ticket as ITicket } from '../../../types/types';
 
-const meta: Meta = {
+const meta: Meta<typeof TicketCard> = {
     title: 'Components/Card/TicketCard',
     component: TicketCard,
-    argTypes: {
-        currentIndex: {
-            control: { type: 'number', min: 0, max: 2 },
-            description: 'Current ticket index in the carousel',
-        },
-    },
     decorators: [
         (Story) => (
             <div className="max-w-4xl mx-auto p-8">
@@ -23,6 +17,8 @@ const meta: Meta = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof TicketCard>;
 
 const mockTickets: ITicket[] = [
     {
@@ -77,84 +73,83 @@ const expiredTicket: ITicket = {
     benefits: ['All talks', 'Workshop access'],
 };
 
-type StoryArgs = {
-    currentIndex: number;
+const DefaultWrapper = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const today = new Date();
+
+    const nextTicket = () => {
+        setCurrentIndex((prev) => (prev + 1) % mockTickets.length);
+    };
+
+    const prevTicket = () => {
+        setCurrentIndex(
+            (prev) => (prev - 1 + mockTickets.length) % mockTickets.length
+        );
+    };
+
+    return (
+        <TicketCard
+            availableTickets={mockTickets}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            nextTicket={nextTicket}
+            prevTicket={prevTicket}
+            today={today}
+        />
+    );
 };
 
-export const Default = {
-    args: {
-        currentIndex: 0,
-    },
-    render: ({ currentIndex: initialIndex }: StoryArgs) => {
-        const [currentIndex, setCurrentIndex] = useState(initialIndex);
-        const today = new Date();
+const SingleTicketWrapper = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const today = new Date();
 
-        const nextTicket = () => {
-            setCurrentIndex((prev) => (prev + 1) % mockTickets.length);
-        };
-
-        const prevTicket = () => {
-            setCurrentIndex(
-                (prev) => (prev - 1 + mockTickets.length) % mockTickets.length
-            );
-        };
-
-        return (
-            <TicketCard
-                availableTickets={mockTickets}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-                nextTicket={nextTicket}
-                prevTicket={prevTicket}
-                today={today}
-            />
-        );
-    },
+    return (
+        <TicketCard
+            availableTickets={[mockTickets[0]]}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            nextTicket={() => { }}
+            prevTicket={() => { }}
+            today={today}
+        />
+    );
 };
 
-export const SingleTicket = {
-    render: () => {
-        const [currentIndex, setCurrentIndex] = useState(0);
-        const today = new Date();
+const WithExpiredTicketWrapper = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const today = new Date();
+    const ticketsWithExpired = [...mockTickets, expiredTicket];
 
-        return (
-            <TicketCard
-                availableTickets={[mockTickets[0]]}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-                nextTicket={() => { }}
-                prevTicket={() => { }}
-                today={today}
-            />
+    const nextTicket = () => {
+        setCurrentIndex((prev) => (prev + 1) % ticketsWithExpired.length);
+    };
+
+    const prevTicket = () => {
+        setCurrentIndex(
+            (prev) => (prev - 1 + ticketsWithExpired.length) % ticketsWithExpired.length
         );
-    },
+    };
+
+    return (
+        <TicketCard
+            availableTickets={ticketsWithExpired}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            nextTicket={nextTicket}
+            prevTicket={prevTicket}
+            today={today}
+        />
+    );
 };
 
-export const WithExpiredTicket = {
-    render: () => {
-        const [currentIndex, setCurrentIndex] = useState(0);
-        const today = new Date();
-        const ticketsWithExpired = [...mockTickets, expiredTicket];
+export const Default: Story = {
+    render: () => <DefaultWrapper />,
+};
 
-        const nextTicket = () => {
-            setCurrentIndex((prev) => (prev + 1) % ticketsWithExpired.length);
-        };
+export const SingleTicket: Story = {
+    render: () => <SingleTicketWrapper />,
+};
 
-        const prevTicket = () => {
-            setCurrentIndex(
-                (prev) => (prev - 1 + ticketsWithExpired.length) % ticketsWithExpired.length
-            );
-        };
-
-        return (
-            <TicketCard
-                availableTickets={ticketsWithExpired}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-                nextTicket={nextTicket}
-                prevTicket={prevTicket}
-                today={today}
-            />
-        );
-    },
+export const WithExpiredTicket: Story = {
+    render: () => <WithExpiredTicketWrapper />,
 };
