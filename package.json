@@ -47,7 +47,7 @@
     "eslint-plugin-storybook": "^9.1.5",
     "postcss": "^8.4.31",
     "prettier": "^3.5.3",
-    "storybook": "^9.1.5",
+    "storybook": "^9.1.17",
     "tailwindcss": "^3.0.24",
     "typescript": "^5.8.3",
     "@storybook/addon-docs": "^9.1.5"
