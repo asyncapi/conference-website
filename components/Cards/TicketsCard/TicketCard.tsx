@@ -1,31 +1,26 @@
-import React, { JSX, useState } from 'react';
+import React, { JSX } from 'react';
 import Button from '../../Buttons/button';
 import Arrows from '../../illustration/arrows';
 import TicketIcon from '../../illustration/ticket';
-import tickets from '../../../config/tickets.json';
 import { Ticket as ITicket } from '../../../types/types';
 
-const TicketCard = (): JSX.Element => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const today = new Date();
+interface TicketCardProps {
+  availableTickets: ITicket[];
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
+  nextTicket: () => void;
+  prevTicket: () => void;
+  today: Date;
+}
 
-  const availableTickets: ITicket[] = tickets.sort((a, b) => {
-    const aEnded = new Date(a.eventDate) < today;
-    const bEnded = new Date(b.eventDate) < today;
-    if (aEnded === bEnded) return 0;
-    return aEnded ? 1 : -1;
-  });
-
-  const nextTicket = (): void => {
-    setCurrentIndex((prev) => (prev + 1) % availableTickets.length);
-  };
-
-  const prevTicket = (): void => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + availableTickets.length) % availableTickets.length
-    );
-  };
-
+const TicketCard = ({
+  availableTickets,
+  currentIndex,
+  setCurrentIndex,
+  nextTicket,
+  prevTicket,
+  today,
+}: TicketCardProps): JSX.Element => {
   return (
     <div className="relative max-w-2xl mx-auto p-6">
       <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">

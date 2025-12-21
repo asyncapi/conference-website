@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
-import TicketCard from '../components/Cards/TicketsCard/TicketCard';
+import Ticket from '../components/Ticket/Ticket';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
@@ -167,7 +167,9 @@ export default function Home() {
                       return (
                         <SpeakerCard
                           key={speaker.id}
-                          details={speaker}
+                          name={speaker.name}
+                          title={speaker.title}
+                          image={speaker.img}
                           location={
                             currentCity.name !== 'All'
                               ? `${currentCity.name}, ${currentCity.country}`
@@ -249,7 +251,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full mt-12">
-              <TicketCard />
+              <Ticket />
             </div>
           </div>
         </div>

@@ -1,38 +1,32 @@
-import type { Meta } from '@storybook/nextjs';
+import type { Meta, StoryObj } from '@storybook/nextjs';
 import React from 'react';
 
 import Speaker from './SpeakerCard';
-import { Speaker as SpeakerTypes } from '../../../types/types';
 
-const meta: Meta = {
+const meta: Meta<typeof Speaker> = {
   title: 'Components/Card/SpeakerCard',
   component: Speaker,
   argTypes: {
-    speakerName: {
+    name: {
       control: { type: 'text' },
       description: 'Speaker name',
     },
-    speakerTitle: {
+    title: {
       control: { type: 'text' },
       description: 'Speaker job title',
     },
-    speakerImage: {
+    image: {
       control: { type: 'text' },
       description: 'Speaker image URL',
     },
-    hasLocation: {
-      control: { type: 'boolean' },
-      description: 'Toggle to show/hide location',
-    },
-    locationText: {
+    location: {
       control: { type: 'text' },
-      description: 'Location text to display',
-      if: { arg: 'hasLocation', eq: true },
+      description: 'Speaker location',
     }
   },
   decorators: [
     (Story) => (
-      <div >
+      <div>
         <Story />
       </div>
     ),
@@ -41,36 +35,30 @@ const meta: Meta = {
 
 export default meta;
 
-type StoryArgs = {
-  speakerName: string;
-  speakerTitle: string;
-  speakerImage: string;
-  hasLocation: boolean;
-  locationText: string;
+type Story = StoryObj<typeof Speaker>;
+
+export const Default: Story = {
+  args: {
+    name: 'Łukasz Górnicki',
+    title: 'Open Source Fanatic at BrainFart',
+    image: '/img/speaker-images/online-conf/Lukasz.webp',
+    location: 'Bangalore',
+  },
 };
 
-export const Default = {
+export const WithoutLocation: Story = {
   args: {
-    speakerName: 'Łukasz Górnicki',
-    speakerTitle: 'Open Source Fanatic at BrainFart',
-    speakerImage: '/img/speaker-images/online-conf/Lukasz.webp',
-    hasLocation: true,
-    locationText: 'Bangalore',
+    name: 'Łukasz Górnicki',
+    title: 'Open Source Fanatic at BrainFart',
+    image: '/img/speaker-images/online-conf/Lukasz.webp',
   },
-  render: ({ speakerName, speakerTitle, speakerImage, hasLocation, locationText }: StoryArgs) => {
-    const speakerDetails: SpeakerTypes = {
-      name: speakerName,
-      title: speakerTitle,
-      img: speakerImage,
-      id: 1,
-      city: ['Bangalore']
-    };
+};
 
-    return (
-      <Speaker
-        details={speakerDetails}
-        location={hasLocation ? locationText : undefined}
-      />
-    );
+export const LongName: Story = {
+  args: {
+    name: 'Łukasz Górnicki',
+    title: 'Open Source Fanatic at BrainFart',
+    image: '/img/speaker-images/online-conf/Lukasz.webp',
+    location: 'San Francisco',
   },
 };

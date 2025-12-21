@@ -26,11 +26,11 @@ export default meta;
 
 type Story = StoryObj<typeof Venue>;
 
-const sampleCity: City = {
+const upcomingCity: City = {
   name: 'Singapore',
   country: 'Singapore',
-  date: '9 - 11 December, 2025',
-  cfpDate: '5 October 2025',
+  date: '9 - 11 December, 2026',
+  cfpDate: '5 October 2026',
   description: "Let's talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
   img: '/img/locations/singapore.webp',
   address: 'Marina Bay Sands, Singapore',
@@ -72,34 +72,11 @@ const pastEventCity: City = {
   playlist: 'https://youtube.com/playlist?list=PLbi1gRlP7pijUwZJErzyYf_Rc-PWu4lXS'
 };
 
-const onlineCity: City = {
-  name: 'Online',
-  country: ' Edition',
-  date: '29 October, 2025',
-  cfpDate: '28th September, 2025',
-  description: 'Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.',
-  img: '/img/locations/testMic.webp',
-  address: 'AsyncAPI YouTube Channel',
-  mapUrl: 'https://www.youtube.com/@AsyncAPI',
-  sponsors: {
-    eventSponsors: [
-      {
-        image: '/img/logos/asyncapi-logo--white.png',
-        websiteUrl: 'https://asyncapi.com'
-      }
-    ]
-  },
-  freeEntry: true,
-  cfp: '/venue/online/register',
-  recordings: null,
-  playlist: null
-};
-
 const cfpOpenCity: City = {
   name: 'Paris',
   country: 'France',
-  date: '9 - 11 December, 2025',
-  cfpDate: '5 October 2025',
+  date: '9 - 11 December, 2026',
+  cfpDate: '5 October 2026',
   description: 'Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community',
   img: '/img/locations/paris.webp',
   address: 'CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux',
@@ -118,22 +95,15 @@ const cfpOpenCity: City = {
   playlist: null
 };
 
-
 export const UpcomingEvent: Story = {
   args: {
-    city: sampleCity,
+    city: upcomingCity,
   },
 };
 
 export const PastEvent: Story = {
   args: {
     city: pastEventCity,
-  },
-};
-
-export const OnlineEdition: Story = {
-  args: {
-    city: onlineCity,
   },
 };
 
