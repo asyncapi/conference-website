@@ -102,14 +102,6 @@ export const WithIconLeft: Story = {
   },
 };
 
-export const WithIconOnly: Story = {
-  args: {
-    icon: <Download />,
-    iconPosition: 'left',
-    type: 'button',
-  },
-};
-
 export const IconWithOutline: Story = {
   args: {
     text: 'Sponsorship Prospectus',
