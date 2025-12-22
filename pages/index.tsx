@@ -105,6 +105,18 @@ export default function Home() {
                     setCity={setCurrentCity}
                     handleSpeakers={handleSpeakers}
                   />
+                  <div className="w-full">
+                    <Dropdown
+                      selectedItem={currentCity as City}
+                      items={cities}
+                      onSelect={(city) => {
+                        setCurrentCity(city);
+                        handleSpeakers(city.name);
+                      }}
+                      getDisplayValue={(city) => city?.name}
+                      placeholder="Select a city"
+                    />
+                  </div>
                 ) : (
                   <div className="flex justify-center">
                     <div className="space-x-4 lg:w-full flex justify-between">
