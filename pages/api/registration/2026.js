@@ -1,7 +1,7 @@
 /**
  * API route: /api/registration/2026
  */
-
+import nodemailer from 'nodemailer';
 import { appendRegistrationRow } from "../../../lib/registration2026/googleSheets";
 
 function isValidEmail(email) {
@@ -85,4 +85,34 @@ export default async function handler(req, res) {
       error: 'Failed to store registration. Please try again later.',
     });
   } 
+
+// -------- Confirmation Email (optional) --------
+  try {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.ASYNCAPI_EMAIL,
+        pass: process.env.GOOGLE_APP_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      to: payload.email,
+      subject: 'Conference 2026 Registration Received',
+      html: `
+        <p>Hi <b>${payload.fullName}</b>,</p>
+        <p>Thank you for registering for <b>Conference 2026</b>.</p>
+        <p>Your registration has been received successfully.</p>
+        <p>Ticket activation details will be shared with you soon.</p>
+        <br />
+        <p>AsyncAPI Team</p>
+      `,
+    });
+  } catch (emailError) {
+    console.warn('Confirmation email failed:', emailError);
+  }
+
+  return res.status(200).json({ success: true });
 }
