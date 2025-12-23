@@ -27,8 +27,8 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
         <div className="text-dark-600 text-lg">Notes</div>
         <textarea
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
-          onChange={(e) => setForm({ ...data, AdditionalInfo: e.target.value })}
-          data-test="reg-step-four-additional"
+          onChange={(e) => setForm({ ...data, notes: e.target.value })}
+          data-test="reg-step-four-notes"
         />
 
         <div className="mt-6 text-dark-600 text-md">

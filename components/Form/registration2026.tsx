@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, FormEvent, JSX } from 'react';
 import Confetti from 'react-confetti';
-import StepOne from './Cfp/stepOne';
-import StepTwo from './Cfp/stepTwo';
-import StepThree from './Cfp/stepThree';
+import StepOne from './Registration/stepOne';
+import StepTwo from './Registration/stepTwo';
+import StepThree from './Registration/stepThree';
 import StepFourRegistration from './Registration/stepFour';
 import { CfpForm } from '../../types/types';
 
