@@ -2,11 +2,13 @@
  * API route: /api/registration/2026
  */
 
+import { appendRegistrationRow } from "../../../lib/registration2026/googleSheets";
+
 function isValidEmail(email) {
   return typeof email === 'string' && /\S+@\S+\.\S+/.test(email);
 }
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -39,7 +41,7 @@ export default function handler(req, res) {
     });
   }
 
-  // ---- Normalize optional fields ----
+  // ---- Normalize payload ----
   const payload = {
     fullName: fullName.trim(),
     email: email.trim().toLowerCase(),
@@ -54,8 +56,33 @@ export default function handler(req, res) {
     sponsorDataSharing: Boolean(sponsorDataSharing),
   };
 
-  return res.status(200).json({
-    success: true,
-    data: payload,
-  });
+    // ---- Prepare Google Sheet row ----
+  const rowValues = [
+    new Date().toISOString(),        // timestamp
+    payload.fullName,
+    payload.email,
+    payload.company,
+    payload.role,
+    payload.preferredCity,
+    payload.attendanceType,
+    payload.timezone,
+    payload.dietaryAccessibility,
+    payload.updatesOptIn,
+    payload.sponsorDataSharing,
+    payload.notes,
+  ];
+
+  try {
+    await appendRegistrationRow(rowValues);
+
+    return res.status(200).json({
+      success: true,
+    });
+  } catch (error) {
+    console.error('Failed to append registration row:', error);
+
+    return res.status(500).json({
+      error: 'Failed to store registration. Please try again later.',
+    });
+  } 
 }
