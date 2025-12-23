@@ -58,6 +58,10 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           </label>
         </div>
 
+        <div className="mt-3 text-sm text-dark-600">
+          We process your data according to our <a href="/privacy" className="underline">Privacy Policy</a>. By submitting you agree to the <a href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer" className="underline">Code of Conduct</a> and Privacy Policy.
+        </div>
+
         <div className="text-dark-600 text-lg mt-5">Notes (optional)</div>
         <textarea
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
@@ -66,14 +70,26 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           data-test="reg-step-three-notes"
         />
 
-        <div className="float-right mt-3 flex lg:flex-col-reverse lg:w-full">
-          <a className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5" onClick={() => setStep(null, 2)}>
-            Back
-          </a>
-          <Button type="submit" className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5" test="reg-step-three-next">
-            Next
-          </Button>
+        <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
+        {/* Back */}
+                <button
+                    type="button"
+                    onClick={() => setStep(null, 2)}
+                    className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center"
+                >
+                    Back
+                </button>
+
+                {/* Next */}
+                <Button
+                    type="submit"
+                    className="bg-tetiary-pink px-6 py-3 rounded-md text-white w-36 lg:w-full"
+                    test="reg-step-three-next"
+                >
+                    Next
+                </Button>
         </div>
+
       </div>
     </form>
   );

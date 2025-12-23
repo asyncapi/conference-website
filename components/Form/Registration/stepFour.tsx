@@ -69,26 +69,32 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
         <div className="mt-6 text-dark-600 text-md">
           By clicking submit, you confirm the information is correct.
         </div>
-        <div className="float-right mt-3 flex lg:flex-col-reverse lg:w-full">
-          <a
-            className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5"
-            onClick={() => !disabled && setStep(null, 3)}
-          >
-            Back
-          </a>
-          <div className="flex flex-col items-end lg:items-stretch w-full lg:w-auto">
-            <Button
-              type="submit"
-              disabled={submitting || disabled}
-              className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
-              test="reg-step-four-next"
-            >
-              {submitting ? 'Submitting...' : 'Submit'}
-            </Button>
+        <div className="mt-3 w-full flex items-center justify-between lg:flex-col-reverse lg:items-start">
+            <div className="mt-3 w-full flex items-center justify-end lg:flex-col-reverse lg:items-start gap-4">
+                {/* Back button */}
+                <button
+                    type="button"
+                    disabled={disabled}
+                    onClick={() => !disabled && setStep(null, 3)}
+                    className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50"
+                >
+                    Back
+                </button>
+
+                {/* Submit button */}
+                <Button
+                    type="submit"
+                    disabled={submitting || disabled}
+                    className="bg-tetiary-pink px-6 py-3 rounded-md text-white w-36 lg:w-full"
+                    test="reg-step-four-next"
+                >
+                    {submitting ? 'Submitting...' : 'Submit'}
+                </Button>
+</div>
+
             {error && <div className="text-red-400 mt-2">{error}</div>}
           </div>
         </div>
-      </div>
     </form>
   );
 }

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '../../components/Header/header';
-import Footer from '../../components/Footer/footer';
 import Registration2026 from '../../components/Form/registration2026';
 
 export default function Register2026() {
@@ -17,7 +16,7 @@ export default function Register2026() {
         <Registration2026 />
       </main>
 
-      <Footer />
+      {/* Footer is rendered globally in pages/_app.tsx; avoid duplicate here */}
     </div>
   );
 }

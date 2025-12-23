@@ -55,11 +55,9 @@ export default function Registration2026(): JSX.Element {
         <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
         <div className="mt-4">
           <Link href="/">
-            <a>
-              <Button className="bg-tetiary-pink p-3 rounded-md text-white" type="button">
-                Back to Conference 2026
-              </Button>
-            </a>
+            <Button className="bg-tetiary-pink p-3 rounded-md text-white" type="button">
+              Back to Conference 2025
+            </Button>
           </Link>
         </div>
       </div>

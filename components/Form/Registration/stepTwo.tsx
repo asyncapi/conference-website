@@ -58,14 +58,26 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           data-test="reg-step-two-timezone"
         />
 
-        <div className="float-right mt-3 flex lg:flex-col-reverse lg:w-full">
-          <a className="mr-10 text-dark-600 cursor-pointer lg:text-center lg:pl-10 lg:mt-5" onClick={(e) => setStep(null, 1)}>
+        <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
+        {/* Back */}
+        <button
+            type="button"
+            onClick={() => setStep(null, 1)}
+            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center"
+        >
             Back
-          </a>
-          <Button type="submit" disabled={!isValid} className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-3" test="reg-step-two-next">
+        </button>
+
+        {/* Next */}
+        <Button
+            type="submit"
+            className="bg-tetiary-pink px-6 py-3 rounded-md text-white w-36 lg:w-full"
+            test="reg-step-three-next"
+        >
             Next
-          </Button>
+        </Button>
         </div>
+
       </div>
     </form>
   );
