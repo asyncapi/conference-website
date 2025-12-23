@@ -3,19 +3,54 @@ import React, { FormEvent, useState, JSX } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
+type ApiResponse = { success?: boolean; error?: string };
+
 function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    // No API integration yet — simulate submission
-    setTimeout(() => {
-      setSubmitting(false);
-      setDisabled(true);
-      setStep(e, 0);
-    }, 600);
+    setError('');
+
+    const payload = {
+      fullName: (data as any).fullName || (data as any).Fullname || '',
+      email: (data as any).email || (data as any).Email || '',
+      company: (data as any).company || '',
+      role: (data as any).role || '',
+      preferredCity: (data as any).preferredCity || '',
+      attendanceType: (data as any).attendanceType || '',
+      timezone: (data as any).timezone || '',
+      dietaryAccessibility: (data as any).dietaryAccessibility || '',
+      updatesOptIn: Boolean((data as any).updatesOptIn),
+      sponsorDataSharing: Boolean((data as any).sponsorDataSharing),
+      notes: (data as any).notes || '',
+    };
+
+    fetch('/api/registration/2026', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(async (res) => {
+        const body: ApiResponse = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          const message = body.error || `Submission failed (${res.status})`;
+          throw new Error(message);
+        }
+        return body;
+      })
+      .then(() => {
+        setSubmitting(false);
+        setDisabled(true);
+        setStep(e, 0);
+      })
+      .catch((err: Error) => {
+        setSubmitting(false);
+        setError(err.message || 'Submission failed');
+      });
   };
 
   return (
@@ -41,14 +76,17 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
           >
             Back
           </a>
-          <Button
-            type="submit"
-            disabled={submitting || disabled}
-            className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
-            test="reg-step-four-next"
-          >
-            {submitting ? 'Submitting...' : 'Submit'}
-          </Button>
+          <div className="flex flex-col items-end lg:items-stretch w-full lg:w-auto">
+            <Button
+              type="submit"
+              disabled={submitting || disabled}
+              className="bg-tetiary-pink p-3 rounded-md text-white mt-3 w-36 lg:w-full lg:mt-5"
+              test="reg-step-four-next"
+            >
+              {submitting ? 'Submitting...' : 'Submit'}
+            </Button>
+            {error && <div className="text-red-400 mt-2">{error}</div>}
+          </div>
         </div>
       </div>
     </form>

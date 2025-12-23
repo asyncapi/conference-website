@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef, FormEvent, JSX } from 'react';
 import Confetti from 'react-confetti';
+import Link from 'next/link';
+import Button from '../Buttons/button';
 import StepOne from './Registration/stepOne';
 import StepTwo from './Registration/stepTwo';
 import StepThree from './Registration/stepThree';
@@ -46,11 +48,20 @@ export default function Registration2026(): JSX.Element {
   if (step === 4) view = <StepFourRegistration setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 0)
     view = (
-      <div className="flex items-center h-full">
+      <div className="flex flex-col items-center h-full gap-6">
         <div>
           <h1 className="text-2xl text-white font-bold mt-6">Registration submitted successfully</h1>
         </div>
         <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
+        <div className="mt-4">
+          <Link href="/">
+            <a>
+              <Button className="bg-tetiary-pink p-3 rounded-md text-white" type="button">
+                Back to Conference 2026
+              </Button>
+            </a>
+          </Link>
+        </div>
       </div>
     );
 
