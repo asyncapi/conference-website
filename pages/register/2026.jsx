@@ -10,6 +10,11 @@ export default function Register2026() {
         <meta name="description" content="Register for Conference 2026" />
       </Head>
 
+      <img
+        src="/img/illustra.png"
+        className="color-effect"
+        alt="background-illustration"
+      />
       <Header />
 
       <main className="container mt-20 mb-20">
