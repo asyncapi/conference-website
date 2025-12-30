@@ -34,3 +34,13 @@ yarn-error.log*
 credentials.json
 *storybook.log
 storybook-static
+
+# Yarn (Berry)
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Ignore unplugged dependencies
+.yarn/unplugged
