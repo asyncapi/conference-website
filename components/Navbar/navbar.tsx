@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
+import { useRouter } from 'next/router';
 import links from '../../config/links.json';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
@@ -10,11 +11,13 @@ import Image from 'next/image';
 import { LinkItem } from '../../types/types';
 
 function Navbar(): JSX.Element {
+  const router = useRouter();
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
   const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
+  const [activeSection, setActiveSection] = useState<string>('about');
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -57,6 +60,38 @@ function Navbar(): JSX.Element {
     };
   }, [menuRef]);
 
+  // Scroll spy for active section detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['about', 'speakers', 'tickets', 'sponsors'];
+      const scrollPosition = window.scrollY + 150; // Offset for navbar height
+
+      // Default to first section if at top of page
+      if (window.scrollY < 100) {
+        setActiveSection('about');
+        return;
+      }
+
+      // Find which section is currently in view
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sectionId = sections[i];
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop } = element;
+          if (scrollPosition >= offsetTop) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleMouseEnter = (title: string): void => {
     if (closeTimeout.current) {
       clearTimeout(closeTimeout.current);
@@ -84,6 +119,30 @@ function Navbar(): JSX.Element {
     setIsSubMenuHovered(false);
     setShow(null);
     setFocusedSubMenuItem(-1);
+  };
+
+  // Helper function to extract section ID from href
+  const getSectionId = (href: string): string => {
+    if (href.startsWith('/#')) {
+      return href.substring(2); // Remove /# prefix
+    }
+    return '';
+  };
+
+  // Helper function to check if link is active
+  const isLinkActive = (href: string): boolean => {
+    // Check if it's a hash-based link (section on homepage)
+    const sectionId = getSectionId(href);
+    if (sectionId !== '') {
+      return sectionId === activeSection;
+    }
+
+    // Check if it's a route-based link (different page like /editions)
+    if (href.startsWith('/') && !href.startsWith('/#')) {
+      return router.pathname === href;
+    }
+
+    return false;
   };
 
   return (
@@ -174,18 +233,33 @@ function Navbar(): JSX.Element {
                           {link.subMenu && (
                             <Dropdown
                               fill="white"
-                              className={`ml-2 transition-transform duration-700 ${
-                                show === link.title ? 'rotate-180' : 'rotate-0'
-                              }`}
+                              className={`ml-2 transition-transform duration-700 ${show === link.title ? 'rotate-180' : 'rotate-0'
+                                }`}
                             />
                           )}
                         </button>
                       ) : (
-                        <Link href={link.ref}>{link.title}</Link>
+                        <Link
+                          href={link.ref}
+                          className={`transition-all ${isLinkActive(link.ref) ? 'font-bold' : ''}`}
+                        >
+                          {link.title}
+                        </Link>
                       )}
                     </div>
-                    <span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
-                    <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
+                    {isLinkActive(link.ref) ? (
+                      // Show permanent underline when active
+                      <>
+                        <span className="absolute -bottom-1 left-1/2 w-3/6 h-0.5 bg-white"></span>
+                        <span className="absolute -bottom-1 right-1/2 w-3/6 h-0.5 bg-white"></span>
+                      </>
+                    ) : (
+                      // Show hover underline when inactive
+                      <>
+                        <span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
+                        <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
+                      </>
+                    )}
                     {show === link.title && link.subMenu && (
                       <div
                         className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
@@ -205,21 +279,21 @@ function Navbar(): JSX.Element {
                             onKeyDown={(e) => {
                               const currentIndex = index;
                               const maxIndex = link.subMenu!.length - 1;
-                              
+
                               if (e.key === 'ArrowDown') {
                                 e.preventDefault();
                                 const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
                                 setFocusedSubMenuItem(nextIndex);
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'ArrowUp') {
                                 e.preventDefault();
                                 const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
                                 setFocusedSubMenuItem(prevIndex);
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
@@ -228,7 +302,7 @@ function Navbar(): JSX.Element {
                                 const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
                                 (button as HTMLButtonElement)?.focus();
                               }
-                              
+
                               if (e.key === 'Tab') {
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
@@ -247,13 +321,12 @@ function Navbar(): JSX.Element {
           )}
           {isTablet && (
             <div
-              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${
-                drop
-                  ? 'opacity-100'
-                  : 'opacity-0 -translate-y-full pointer-events-none'
-              }`}
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${drop
+                ? 'opacity-100'
+                : 'opacity-0 -translate-y-full pointer-events-none'
+                }`}
             >
-              {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+              {drop && <NavDrop setDrop={setDrop} activeSection={activeSection} ref={menuRef} />}
             </div>
           )}
         </div>

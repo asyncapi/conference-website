@@ -5,6 +5,7 @@ import React, {
   SetStateAction,
   JSX,
 } from 'react';
+import { useRouter } from 'next/router';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
@@ -12,11 +13,38 @@ import { LinkItem } from '../../types/types';
 
 interface INavDropProp {
   setDrop: Dispatch<SetStateAction<boolean>>;
+  activeSection: string;
 }
 
 const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
-  ({ setDrop }, ref): JSX.Element => {
+  ({ setDrop, activeSection }, ref): JSX.Element => {
+    const router = useRouter();
     const [show, setShow] = useState<string | null>(null);
+
+    // Helper function to extract section ID from href
+    const getSectionId = (href: string): string => {
+      if (href.startsWith('/#')) {
+        return href.substring(2);
+      }
+      return '';
+    };
+
+    // Helper function to check if link is active
+    const isLinkActive = (href: string): boolean => {
+      // Check if it's a hash-based link (section on homepage)
+      const sectionId = getSectionId(href);
+      if (sectionId !== '') {
+        return sectionId === activeSection;
+      }
+
+      // Check if it's a route-based link (different page like /editions)
+      if (href.startsWith('/') && !href.startsWith('/#')) {
+        return router.pathname === href;
+      }
+
+      return false;
+    };
+
     return (
       <div
         ref={ref}
@@ -42,9 +70,8 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                         <div className="text-white">{link.title}</div>
                         <Dropdown
                           fill="white"
-                          className={`ml-2 transition-transform duration-500 ${
-                            show === link.title ? 'rotate-180' : 'rotate-0'
-                          }`}
+                          className={`ml-2 transition-transform duration-500 ${show === link.title ? 'rotate-180' : 'rotate-0'
+                            }`}
                         />
                       </div>
                       {show && show === link.title && (
@@ -64,7 +91,10 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                       )}
                     </div>
                   ) : (
-                    <div className="text-white" onClick={() => setDrop(false)}>
+                    <div
+                      className={`text-white ${isLinkActive(link.ref) ? 'font-bold' : ''}`}
+                      onClick={() => setDrop(false)}
+                    >
                       {link.title}
                     </div>
                   )}
