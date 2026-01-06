@@ -16,7 +16,6 @@ import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../types/types';
-import Popup from '../components/Popup/popup';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -50,7 +49,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
-      {/* <Popup /> */}
+      {/* Popup removed for 2026 migration */}
       <div id="about" className="mt-20">
         <About />
       </div>

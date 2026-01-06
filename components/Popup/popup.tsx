@@ -2,6 +2,12 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+
+// Popup component code commented out for 2026 migration. Uncomment to restore in the future.
+/*
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
@@ -134,3 +140,4 @@ function Popup() {
 }
 
 export default Popup;
+*/
