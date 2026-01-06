@@ -1,159 +1,5 @@
 [
   {
-    "name": "Singapore",
-    "country": "Singapore",
-    "date": "16 April, 2025",
-    "cfpDate": "24 February, 2025",
-    "description": "Let’s talk event-driven architecture at the AsyncAPI Conference in Singapore! Join the open-source community and learn how to speak fluent API.",
-    "img": "/img/locations/singapore.webp",
-    "address": "Marina Bay Sands, Singapore",
-    "mapUrl": "https://maps.app.goo.gl/9fG91E7Y24zmWSqP9",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pihQ5DsS1v2lWs63tWEA6jGn"
-  },
-  {
-    "name": "Munich",
-    "country": "Germany",
-    "date": "2 - 3 July, 2025",
-    "cfpDate": "11 May 2025",
-    "description": "Dive into event-driven architecture at the AsyncAPI Conference in Munich. Let’s build the future of messaging together!",
-    "img": "/img/locations/munich.webp",
-    "address": "Smartvillage Bogenhausen, München, Germany",
-    "mapUrl": "https://maps.app.goo.gl/xUCnXb11sSJTECV5A",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
-    "name": "Lagos",
-    "country": "Nigeria",
-    "date": "18 July, 2025",
-    "cfpDate": "17 May 2025",
-    "description": "Naija, level up your event-driven architecture skills at AsyncAPI Conference Lagos",
-    "img": "/img/locations/lagos.webp",
-    "address": "The Zone Gbagada",
-    "mapUrl": "https://maps.app.goo.gl/Ws7QXSZg9L8euG8p8",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/APICONF-LOGO-White.png",
-          "websiteUrl": "https://apiconf.net/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
-    "name": "London",
-    "country": "UK",
-    "date": "24 September, 2025",
-    "cfpDate": "27 July 2025",
-    "description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
-    "img": "/img/locations/london.webp",
-    "address": "155 Bishopsgate, London EC2M 3YD",
-    "mapUrl": "https://maps.app.goo.gl/b2Vb5H2mM41F9nQA6",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
-    "name": "Bangalore",
-    "country": "India",
-    "date": "8 October, 2025",
-    "cfpDate": "29 June 2025",
-    "description": "Hey Bangalore! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source.",
-    "img": "/img/locations/bangalore.webp",
-    "address": "The Chancery Pavilion, Bangalore",
-    "mapUrl": "https://maps.app.goo.gl/ANeaUDVVHKeEzLkv7",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": "https://www.youtube.com/embed/videoseries?list=PLbi1gRlP7pig_nA0tRlr0hU_h5sB2HXcq"
-  },
-  {
-    "name": "Online",
-    "country": " Edition",
-    "date": "29 October, 2025",
-    "cfpDate": "28th September, 2025",
-    "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
-    "img": "/img/locations/testMic.webp",
-    "address": "AsyncAPI YouTube Channel",
-    "mapUrl": "https://www.youtube.com/@AsyncAPI",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/asyncapi-logo--white.png",
-          "websiteUrl": "https://asyncapi.com"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
-    "name": "Paris",
-    "country": "France",
-    "date": "11 December, 2025",
-    "cfpDate": "31 October 2025",
-    "description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community",
-    "img": "/img/locations/paris.webp",
-    "address": "CNIT (Centre des Nouvelles Industries et Technologies), Paris 2 Place de la Défense, 92092 Puteaux",
-    "mapUrl": "https://maps.app.goo.gl/5te8WRM9Rb8B6vNd9",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
     "name": "California",
     "country": "USA",
     "date": "18-20, February 2026",
@@ -167,6 +13,28 @@
         {
           "image": "/img/logos/developerweek-logo.webp",
           "websiteUrl": "https://www.developerweek.com/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "Online",
+    "country": " Edition",
+    "date": "28 October, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "Join us for the AsyncAPI Online Conference Edition as the community unites across the globe to share experiences, collaborate, and foster meaningful connections.",
+    "img": "/img/locations/testMic.webp",
+    "address": "AsyncAPI YouTube Channel",
+    "mapUrl": "https://www.youtube.com/@AsyncAPI",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/asyncapi-logo--white.png",
+          "websiteUrl": "https://asyncapi.com"
         }
       ]
     },

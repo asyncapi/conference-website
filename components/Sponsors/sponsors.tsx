@@ -32,7 +32,7 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
             typeStyle="heading-md"
             className="text-white mb-12 sm:text-2xl sm:mb-8"
           >
-            Event and Host Sponsor
+            Host Sponsor
           </Heading>
           <div className="flex justify-center items-center gap-12 flex-wrap sm:gap-8">
             {eventSponsors &&
