@@ -3,6 +3,7 @@
 import Heading from '../Typography/heading';
 import Button from '../Buttons/button';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 type Image = {
   url: string;
@@ -10,15 +11,9 @@ type Image = {
   height: number;
 };
 
-function getRandomImages(images: Image[], count: number) {
-  const shuffled = [...images].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-}
-
 export function Gallery() {
   const [images, setImages] = useState<Image[]>([]);
-  const [visibleImages, setVisibleImages] = useState<Image[]>([]);
-  const [fade, setFade] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchImages() {
@@ -26,27 +21,11 @@ export function Gallery() {
       if (!res.ok) return;
 
       const data: Image[] = await res.json();
-      setImages(data);
-      setVisibleImages(getRandomImages(data, 9));
+      setImages(data.slice(0, 9)); 
     }
 
     fetchImages();
   }, []);
-
-  useEffect(() => {
-    if (images.length === 0) return;
-
-    const interval = setInterval(() => {
-      setFade(false);
-
-      setTimeout(() => {
-        setVisibleImages(getRandomImages(images, 9));
-        setFade(true);
-      }, 400);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [images]);
 
   return (
     <div className="flex flex-col items-center py-12">
@@ -62,7 +41,7 @@ export function Gallery() {
       </Heading>
 
       <div
-        className={`
+        className="
           max-w-6xl
           w-full
           mx-auto
@@ -73,12 +52,9 @@ export function Gallery() {
           gap-4
           my-6
           px-4
-          transition-opacity
-          duration-500
-          ${fade ? 'opacity-100' : 'opacity-0'}
-        `}
+        "
       >
-        {visibleImages.map((image) => (
+        {images.map((image) => (
           <div
             key={image.url}
             className="relative rounded-xl overflow-hidden bg-black/10 hover:scale-[1.02] transition-transform duration-300"
@@ -93,7 +69,11 @@ export function Gallery() {
         ))}
       </div>
 
-      <Button type="button" className="w-[200px] mt-6 px-10">
+      <Button
+        type="button"
+        className="w-[200px] mt-6 px-10"
+        onClick={() => router.push('/gallery')}
+      >
         Browse
       </Button>
     </div>
