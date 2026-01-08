@@ -9,7 +9,7 @@ import {
   City,
   ConferenceStatus,
   ExtendedCity,
-  Speaker as SpeakerTypes,
+  Speaker as SpeakerType,
 } from '../../types/types';
 import { getEventStatus } from '../../utils/status';
 import agenda from '../../config/agenda.json';
@@ -31,10 +31,10 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   const cityName = params?.id as string;
   const city = cities.filter((city) => city.name === cityName);
   currentCity = city[0];
-  const citySpeakers = speakers.filter((speaker) =>
+  const citySpeakers = speakers.filter((speaker: SpeakerType) =>
     speaker.city.includes(cityName)
   );
-  const cityAgenda = agenda.filter((a) => a.city === cityName);
+  const cityAgenda = agenda.filter((a: AgendaType) => a.city === cityName);
   const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
@@ -104,20 +104,14 @@ function Venue({ city }: IVenue) {
             {eventStatus === ConferenceStatus.ENDED ? (
               city.playlist && (
                 <a href="#recordings">
-                  <Button type="button" className="w-[250px] h-[50px] m-8">
-                    Watch Recordings
-                  </Button>
+                  <Button type="button" className="w-[250px] h-[50px] m-8" text="Watch Recordings" />
                 </a>
               )
             ) : (
               <div className="m-[30px]">
                 {city.ticket && city.ticket.url && (
                   <a href={city.ticket.url} target="_blank" rel="noreferrer">
-                    <Button type="button" className="px-8 m-2 w-[250px]">
-                      {city.ticket.price
-                        ? 'Get Your Free Ticket'
-                        : 'Register Now'}
-                    </Button>
+                    <Button type="button" className="px-8 m-2 w-[250px]" text={city.ticket.price ? 'Get Your Free Ticket' : 'Register Now'} />
                   </a>
                 )}
                 {city.cfp && (
@@ -130,9 +124,7 @@ function Venue({ city }: IVenue) {
                     target={city.name == 'Online' ? '' : '_blank'}
                     rel="noreferrer"
                   >
-                    <Button type="submit" className="px-8 m-2 w-[250px]">
-                      Apply to be a speaker
-                    </Button>
+                    <Button type="submit" className="px-8 m-2 w-[250px]" text="Apply to be a speaker" />
                   </a>
                 )}
               </div>
@@ -164,20 +156,23 @@ function Venue({ city }: IVenue) {
       <div id="recordings" className="flex justify-center">
         {eventStatus === ConferenceStatus.ENDED ? (
           city.playlist && (
-            <div className=" pt-10 mb-24 mx-44 lg:mx-7 flex justify-center flex-col items-center w-[90%] h-[550px] sm:h-72">
+            <div className="pt-10 mb-24 container flex justify-center flex-col items-center">
               <h1 className="text-white font-bold text-5xl mb-10">
                 Recordings
               </h1>
-              <iframe
-                width="100%"
-                height="100%"
-                src={city.playlist}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <div className="w-full max-w-4xl aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={city.playlist}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           )
         ) : (
