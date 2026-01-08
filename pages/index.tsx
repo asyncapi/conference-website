@@ -15,8 +15,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
-import { City } from '../types/types';
-import Popup from '../components/Popup/popup';
+import { City, Speaker as SpeakerType } from '../types/types';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -27,7 +26,7 @@ export default function Home() {
 
   const handleSpeakers = (city: string) => {
     if (city && city !== 'all') {
-      const citySpeaker = speakers.filter((speaker) =>
+      const citySpeaker = speakers.filter((speaker: SpeakerType) =>
         speaker.city.includes(city)
       );
       setSpeakersList(citySpeaker);
@@ -50,7 +49,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
-      <Popup />
+      {/* Popup removed for 2026 migration */}
       <div id="about" className="mt-20">
         <About />
       </div>
@@ -169,7 +168,7 @@ export default function Home() {
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
                 {speakersList.length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
-                    {speakersList.map((speaker) => {
+                    {speakersList.map((speaker: SpeakerType) => {
                       return (
                         <Speaker
                           key={speaker.id}
@@ -211,7 +210,7 @@ export default function Home() {
                       ) : (
                         <div>
                           <Heading
-                            typeStyle="heading-md-semibold"
+                            typeStyle="heading-md"
                             className="text-gray-200"
                           >
                             {typeof currentCity !== 'string' &&
@@ -264,23 +263,9 @@ export default function Home() {
         <Sponsors
           eventSponsors={[
             {
-              image: '/img/logos/apidays.png',
-              websiteUrl: 'https://www.apidays.global/',
-            },
-            {
-              image: '/img/logos/APICONF-LOGO-White.png',
-              websiteUrl: 'https://apiconf.net/',
-            },
-          ]}
-          financialSponsor={[
-            {
-              image: '/img/logos/IBM.png',
-              websiteUrl: 'https://www.ibm.com/',
-            },
-            {
-              image: '/img/logos/graviteeio-logo.webp',
-              websiteUrl: 'https://www.gravitee.io/',
-            },
+              image: '/img/logos/developerweek-logo.webp',
+              websiteUrl: 'https://www.developerweek.com/',
+            }
           ]}
         />
       </div>
