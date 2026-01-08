@@ -112,7 +112,7 @@ export default function Home() {
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                         }`}
-                        overlay={true}
+                        outline={true}
                       >
                         <span className="transparent-bg "></span>
                         <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -140,7 +140,7 @@ export default function Home() {
                                   ? 'gradient-bg'
                                   : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                               }`}
-                              overlay={true}
+                              outline={true}
                             >
                               {currentCity.name !== city.name && (
                                 <>
@@ -196,15 +196,12 @@ export default function Home() {
                             below. Join us on stage and share your valuable
                             insights with our enthusiastic audience!
                           </Paragraph>
-                          <Link legacyBehavior href={currentCity.cfp}>
-                            <a className="flex justify-center" target="_blank">
+                          <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
                               <Button
                                 type="button"
                                 className="mt-[80px] w-[244px] border border-gray"
-                              >
-                                Apply as a speaker
-                              </Button>
-                            </a>
+                                text="Apply as a speaker"
+                              />
                           </Link>
                         </div>
                       ) : (
