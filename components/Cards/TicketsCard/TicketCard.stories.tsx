@@ -46,7 +46,7 @@ const mockTickets: ITicket[] = [
         status: 'Get Your Free Ticket',
         available: 50,
         eventDate: '2025-12-02T00:00:00.000Z',
-        benefits: ['All talks', 'Workshop access', 'Lunch included', 'API Standards booth'],
+        benefits: ["AsyncAPI Track", "All OPEN Talks", "Networking", "Expo Hall"],
     },
     {
         id: 3,
@@ -70,7 +70,7 @@ const expiredTicket: ITicket = {
     status: 'Closed',
     available: 0,
     eventDate: '2024-01-15T00:00:00.000Z',
-    benefits: ['All talks', 'Workshop access'],
+    benefits: ["AsyncAPI Track", "All talks", "Networking"],
 };
 
 const DefaultWrapper = () => {
