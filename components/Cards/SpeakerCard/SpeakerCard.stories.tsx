@@ -42,7 +42,7 @@ export const Default: Story = {
     name: 'Łukasz Górnicki',
     title: 'Open Source Fanatic at BrainFart',
     image: '/img/speaker-images/online-conf/Lukasz.webp',
-    location: 'Bangalore',
+    location: 'San Francisco',
   },
 };
 
@@ -54,11 +54,3 @@ export const WithoutLocation: Story = {
   },
 };
 
-export const LongName: Story = {
-  args: {
-    name: 'Łukasz Górnicki',
-    title: 'Open Source Fanatic at BrainFart',
-    image: '/img/speaker-images/online-conf/Lukasz.webp',
-    location: 'San Francisco',
-  },
-};
