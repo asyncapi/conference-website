@@ -1,1 +1,65 @@
-[]
+[
+    {
+        "time": "01:00 PM SGT - 01:25 PM SGT",
+        "session": "AsyncAPI Conference: From Side Project to Industry Standard",
+        "speaker": 5,
+        "type": "",
+        "city": "California"
+    },
+    {
+        "time": "01:30 PM SGT - 01:55 PM SGT",
+        "session": "AsyncAPI Conference: Your API Is Lying to You - Turning Domain Stories Into Honest API Designs",
+        "speaker": 8,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "02:00 PM SGT - 02:50 PM SGT",
+        "session": "AsyncAPI Conference: The EDA Journey at The New York Time's Commerce Platform",
+        "speaker": 1,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "03:00 PM SGT - 03:50 PM SGT",
+        "session": "AsyncAPI Conference: Supercharging Spec-Driven Development for Event-Driven Architectures",
+        "speaker": 6,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "01:00 PM SGT - 01:25 PM SGT",
+        "session": "AsyncAPI Conference: Building the Open Standard for Event Driven APIs Together",
+        "speaker": 2,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "01:30 PM SGT - 01:55 PM SGT",
+        "session": "AsyncAPI Conference: Spec Authoring Made Intuitive",
+        "speaker": 3,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "02:00 PM SGT - 02:25 PM SGT",
+        "session": "AsyncAPI Conference: Building an Enterprise-wide AsyncAPI Catalog",
+        "speaker": 7,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "02:30 PM SGT - 02:55 PM SGT",
+        "session": "AsyncAPI Conference: Event-Driven Architecture 101: From REST to Streams",
+        "speaker": 4,
+        "type": "Technical Speaker",
+        "city": "California"
+    },
+    {
+        "time": "03:00 PM SGT - 03:25 PM SGT",
+        "session": "AsyncAPI Conference: Documenting and Testing MongoDB Change Streams with AsyncAPI and Microcks",
+        "speaker": 9,
+        "type": "Technical Speaker",
+        "city": "California"
+    }
+]

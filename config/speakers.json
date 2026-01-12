@@ -1,529 +1,92 @@
 [
   {
     "id": 1,
-    "name": "Erez Yalon",
-    "title": "VP of Security Research @ Checkmarx",
-    "img": "img/speaker-images/february 2026/Erez Yalon.webp",
-    "city": []
-  },
-  {
-    "id": 2,
-    "name": "Julia Morgado",
-    "title": "Principal Developer Relations Engineer @ Dash0",
-    "img": "img/speaker-images/february 2026/Julia Morgado.webp",
-    "city": []
-  },
-  {
-    "id": 3,
-    "name": "Aditya Rohit",
-    "title": "Founder @ SwytchCode",
-    "img": "img/speaker-images/february 2026/Aditya Rohit.webp",
-    "city": []
-  },
-  {
-    "id": 4,
-    "name": "Artur Ciocanu",
-    "title": "Lead Senior Computer Scientist @ Adobe",
-    "img": "img/speaker-images/february 2026/Artur Ciocanu.webp",
-    "days": ["Friday"],
-    "city": []
-  },
-  {
-    "id": 5,
-    "name": "Jeff Fan",
-    "title": "Senior Solutions Architect @ DigitalOcean",
-    "img": "img/speaker-images/february 2026/Jeff Fan.webp",
-    "city": []
-  },
-  {
-    "id": 6,
-    "name": "Mohd Asher",
-    "title": "Senior Manager, Digital Analytics, Personalization and Marketing Technology @ Air Canada",
-    "img": "img/speaker-images/february 2026/Mohd Asher.webp",
-    "city": []
-  },
-  {
-    "id": 7,
-    "name": "Shubhojeet Sarkar",
-    "title": "Product Manager",
-    "img": "img/speaker-images/february 2026/Shubhojeet Sarkar.webp",
-    "city": []
-  },
-  {
-    "id": 8,
-    "name": "David Farah",
-    "title": "Head of Product @ Appfire Flow",
-    "img": "img/speaker-images/february 2026/David Farah.webp",
-    "city": []
-  },
-  {
-    "id": 9,
-    "name": "Budhaditya Bhattacharya",
-    "title": "Director of Product Ecosystem @ Tyk",
-    "img": "img/speaker-images/february 2026/Budhaditya Bhattacharya.webp",
-    "city": []
-  },
-  {
-    "id": 10,
-    "name": "David Parry",
-    "title": "Principal Architect @ Qodo.ai",
-    "img": "img/speaker-images/february 2026/David Parry.webp",
-    "city": []
-  },
-  {
-    "id": 11,
-    "name": "Vidya Dinamani",
-    "title": "Product Executive & Coach @ Product Rebels",
-    "img": "img/speaker-images/february 2026/Vidya Dinamani.webp",
-    "city": []
-  },
-  {
-    "id": 12,
-    "name": "Frank Kilcommins",
-    "title": "Head of Enterprise Architecture @ Jentic/OAI",
-    "img": "img/speaker-images/february 2026/Frank Kilcommins.webp",
-    "city": []
-  },
-  {
-    "id": 13,
-    "name": "Jonathan Pasky",
-    "title": "Co-founder, Executive Producer @ DevNetwork",
-    "img": "img/speaker-images/february 2026/Jonathan Pasky.webp",
-    "city": []
-  },
-  {
-    "id": 14,
-    "name": "Aaron Lieber",
-    "title": "Program Director, Product Management, API Connect  @ IBM",
-    "img": "img/speaker-images/february 2026/Aaron Lieber.webp",
-    "city": []
-  },
-  {
-    "id": 15,
-    "name": "Manideep Galala",
-    "title": "Software Engineer @ Microsoft",
-    "img": "img/speaker-images/february 2026/Manideep Galala.webp",
-    "city": []
-  },
-  {
-    "id": 16,
-    "name": "Prachi Jamdade",
-    "title": "Developer Advocate @ Gravitee",
-    "img": "img/speaker-images/february 2026/Prachi Jamdade.webp",
-    "days": ["Friday"],
-    "city": []
-  },
-  {
-    "id": 17,
-    "name": "Aditya Tangirala",
-    "title": "Senior Staff Software Engineer @ Venmo",
-    "img": "img/speaker-images/february 2026/Aditya Tangirala.webp",
-    "city": []
-  },
-  {
-    "id": 18,
-    "name": "Bishal Dasgupta",
-    "title": "Specialist",
-    "img": "img/speaker-images/february 2026/Bishal Dasgupta.webp",
-    "city": []
-  },
-  {
-    "id": 19,
-    "name": "Louis Imershein",
-    "title": "Principal Product Manager @ Red Hat",
-    "img": "img/speaker-images/february 2026/Louis Imershein.webp",
-    "city": []
-  },
-  {
-    "id": 20,
-    "name": "Venkat Thiruvengadam",
-    "title": "Founder & CEO @ DuploCloud",
-    "img": "img/speaker-images/february 2026/Venkat Thiruvengadam.webp",
-    "city": []
-  },
-  {
-    "id": 21,
-    "name": "Ivar Grimstad",
-    "title": "Jakarta EE Developer Advocate @ Eclipse Foundation",
-    "img": "img/speaker-images/february 2026/Ivar Grimstad.webp",
-    "city": []
-  },
-  {
-    "id": 22,
-    "name": "Jody Bailey",
-    "title": "Chief Product & Technology Officer @ Stack Overflow",
-    "img": "img/speaker-images/february 2026/Jody Bailey.webp",
-    "city": []
-  },
-  {
-    "id": 23,
-    "name": "Jiachen Jiang",
-    "title": "Senior Product Manager @ Coder",
-    "img": "img/speaker-images/february 2026/Jiachen Jiang.webp",
-    "city": []
-  },
-  {
-    "id": 24,
-    "name": "Hari Krishnan",
-    "title": "Polyglot Full Stack Developer and Architecture Consultant @ Polarizer Technologies",
-    "img": "img/speaker-images/february 2026/Hari Krishnan.webp",
-    "days": ["Thursday"],
-    "city": []
-  },
-  {
-    "id": 25,
-    "name": "Siddharth Shah",
-    "title": "Senior Staff Software Engineer, Online Infrastructure @ LinkedIn",
-    "img": "img/speaker-images/february 2026/Siddharth Shah.webp",
-    "city": []
-  },
-  {
-    "id": 26,
-    "name": "Mudassir Syed",
-    "title": "Lead Security Software Engineer @ Autodesk",
-    "img": "img/speaker-images/february 2026/Mudassir Syed.webp",
-    "city": []
-  },
-  {
-    "id": 27,
-    "name": "Legare Kerrison",
-    "title": "Developer Advocate @ Red Hat",
-    "img": "img/speaker-images/february 2026/Legare Kerrison.webp",
-    "city": []
-  },
-  {
-    "id": 28,
-    "name": "Anil Inamdar",
-    "title": "Global Head of Data Services @ NetApp Instaclustrt",
-    "img": "img/speaker-images/february 2026/Anil Inamdar.webp",
-    "city": []
-  },
-  {
-    "id": 29,
-    "name": "Kuldeepak Angrish",
-    "title": "Solution Architect @ Tyk",
-    "img": "img/speaker-images/february 2026/Kuldeepak Angrish.webp",
-    "city": []
-  },
-  {
-    "id": 30,
-    "name": "Lena Hall",
-    "title": "Senior Director of Developer Relations @ Akamai Technologies",
-    "img": "img/speaker-images/february 2026/Lena Hall.webp",
-    "city": []
-  },
-  {
-    "id": 31,
-    "name": "Yoni Michael",
-    "title": "Co-founder and CEO @ Typedef",
-    "img": "img/speaker-images/february 2026/Yoni Michael.webp",
-    "city": []
-  },
-  {
-    "id": 32,
-    "name": "Rita Okonkwo",
-    "title": "Software Engineer @ Microsoft",
-    "img": "img/speaker-images/february 2026/Rita Okonkwo.webp",
-    "city": []
-  },
-  {
-    "id": 33,
-    "name": "Banu Muthukumar",
-    "title": "Software Engineer @ Microsoft",
-    "img": "img/speaker-images/february 2026/Banu Muthukumar.webp",
-    "city": []
-  },
-  {
-    "id": 34,
-    "name": "Ellen Linardi",
-    "title": "Chief Product & Technology Officer @ Synctera",
-    "img": "img/speaker-images/february 2026/Ellen Linardi.webp",
-    "city": []
-  },
-  {
-    "id": 35,
-    "name": "Yufei Gu",
-    "title": "Senior software engineer @ Snowflake",
-    "img": "img/speaker-images/february 2026/Yufei Gu.webp",
-    "city": []
-  },
-  {
-    "id": 36,
-    "name": "Amit Kumar Padhy",
-    "title": "Senior Computer Scientist II @ Adobe",
-    "img": "img/speaker-images/february 2026/Amit Kumar Padhy.webp",
-    "city": []
-  },
-  {
-    "id": 37,
-    "name": "Hugo Guerrero",
-    "title": "Head of Techincal Marketing @ Kong",
-    "img": "img/speaker-images/february 2026/Hugo Guerrero.webp",
-    "days": ["Friday"],
-    "city": []
-  },
-  {
-    "id": 38,
-    "name": "Billy Thompson",
-    "title": "Sr. Developer Advocate for Akamai Cloud",
-    "img": "img/speaker-images/february 2026/Billy Thompson.webp",
-    "city": []
-  },
-  {
-    "id": 39,
-    "name": "Alvaro Montoro",
-    "title": "Senior Software Engineer @ General Motors",
-    "img": "img/speaker-images/february 2026/Alvaro Montoro.webp",
-    "city": []
-  },
-  {
-    "id": 40,
-    "name": "Annegret Junker",
-    "title": "Passionate Architect @ codecentric AG",
-    "img": "img/speaker-images/february 2026/Annegret Junker.webp",
-    "days": ["Thursday"],
-    "city": []
-  },
-  {
-    "id": 41,
-    "name": "Meryem Arik",
-    "title": "CEO @ Doubleword",
-    "img": "img/speaker-images/february 2026/Meryem Arik.webp",
-    "city": []
-  },
-  {
-    "id": 42,
-    "name": "Taylor Jordan Smith",
-    "title": "Senior AI Developer Advocate @ Red Hat",
-    "img": "img/speaker-images/february 2026/Taylor Jordan Smith.webp",
-    "city": []
-  },
-  {
-    "id": 43,
-    "name": "Salman Munaf",
-    "title": "Lead Site Reliability Engineer @ TikTok",
-    "img": "img/speaker-images/february 2026/Salman Munaf.webp",
-    "city": []
-  },
-  {
-    "id": 44,
-    "name": "Cassandra Chin",
-    "title": "Book Author, Keynote Speaker, Podcast Host, DEI Intern, Computer Science Student",
-    "img": "img/speaker-images/february 2026/Cassandra Chin.webp",
-    "city": []
-  },
-  {
-    "id": 45,
-    "name": "David Fraley",
-    "title": "Product Manager @ Coder",
-    "img": "img/speaker-images/february 2026/David Fraley.webp",
-    "city": []
-  },
-  {
-    "id": 46,
-    "name": "Balazs Barna",
-    "title": "Head of Engineering @ Wise",
-    "img": "img/speaker-images/february 2026/Balazs Barna.webp",
-    "city": []
-  },
-  {
-    "id": 47,
-    "name": "Stephen Chin",
-    "title": "VP of Developer Relations @ Neo4j",
-    "img": "img/speaker-images/february 2026/Stephen Chin.webp",
-    "city": []
-  },
-  {
-    "id": 48,
-    "name": "Jose Platero",
-    "title": "Director, Digital Product & Design @ Air Canada",
-    "img": "img/speaker-images/february 2026/Jose Platero.webp",
-    "city": []
-  },
-  {
-    "id": 49,
-    "name": "Ajita Kanchivakam Ananth",
-    "title": "Director, Digital Product & Design @ Air Canada",
-    "img": "img/speaker-images/february 2026/Ajita Kanchivakam Ananth.webp",
-    "city": []
-  },
-  {
-    "id": 50,
-    "name": "Ivan Tarin",
-    "title": "Technical Product Marketing @ SUSE",
-    "img": "img/speaker-images/february 2026/Ivan Tarin.webp",
-    "city": []
-  },
-  {
-    "id": 51,
-    "name": "Paul Klein IV",
-    "title": "Founder, CEO @ Browserbase",
-    "img": "img/speaker-images/february 2026/Paul Klein IV.webp",
-    "city": []
-  },
-  {
-    "id": 52,
-    "name": "Rakshana Balakrishnan",
-    "title": "Principal Product Manager @ Oracle",
-    "img": "img/speaker-images/february 2026/Rakshana Balakrishnan.webp",
-    "city": []
-  },
-  {
-    "id": 53,
-    "name": "Erik Wilde",
-    "title": "Head of Enterprise Strategy @ Jentic/OAI",
-    "img": "img/speaker-images/february 2026/Erik Wilde.webp",
-    "city": []
-  },
-  {
-    "id": 54,
-    "name": "Heather Samarin",
-    "title": "Co-founder @ Product Rebels",
-    "img": "img/speaker-images/february 2026/Heather Samarin.webp",
-    "city": []
-  },
-  {
-    "id": 55,
-    "name": "Ghanshyam Bhatt",
-    "title": "Frontend Engineering Manager @ SoFi",
-    "img": "img/speaker-images/february 2026/Ghanshyam Bhatt.webp",
-    "city": []
-  },
-  {
-    "id": 56,
-    "name": "Derric Gilling",
-    "title": "Vice President and General Manager, APIM BU @ WSO2",
-    "img": "img/speaker-images/february 2026/Derric Gilling.webp",
-    "city": []
-  },
-  {
-    "id": 57,
-    "name": "Christina Dahlén",
-    "title": "Developer and Area Lead @ LavinMQ",
-    "img": "img/speaker-images/february 2026/Christina Dahlén.webp",
-    "city": []
-  },
-  {
-    "id": 58,
-    "name": "Ruchi Pakhle",
-    "title": "Software Engineer @ Red Hat",
-    "img": "img/speaker-images/february 2026/Ruchi Pakhle.webp",
-    "days": ["Friday"],
-    "city": []
-  },
-  {
-    "id": 59,
-    "name": "Ignacio Riesgo",
-    "title": "VP, Hybrid Integrations & Runtimes @ IBM",
-    "img": "img/speaker-images/february 2026/Ignacio Riesgo.webp",
-    "city": []
-  },
-  {
-    "id": 60,
-    "name": "Emmanuel Paraskakis",
-    "title": "Chief Executive Officer @ Level 250",
-    "img": "img/speaker-images/february 2026/Emmanuel Paraskakis.webp",
-    "city": []
-  },
-  {
-    "id": 61,
-    "name": "Sajal Nigam",
-    "title": "Expert Application Engineer @ Discover Financial Services",
-    "img": "img/speaker-images/february 2026/Sajal Nigam.webp",
-    "city": []
-  },
-  {
-    "id": 62,
-    "name": "Snow Zhao",
-    "title": "Founder & CEO @ AIgentic",
-    "img": "img/speaker-images/february 2026/Snow Zhao.webp",
-    "city": []
-  },
-  {
-    "id": 63,
-    "name": "David Rocha",
-    "title": "Senior Partner Solutions Architect @ Amazon Web Services",
-    "img": "img/speaker-images/february 2026/David Rocha.webp",
-    "city": []
-  },
-  {
-    "id": 64,
-    "name": "Lital Shalev",
-    "title": "Co-founder @ Shalev Innovations",
-    "img": "img/speaker-images/february 2026/Lital Shalev.webp",
-    "city": []
-  },
-  {
-    "id": 65,
-    "name": "Ankit Kumar",
-    "title": "Head of Developer and Customer Success @ Aklivity",
-    "img": "img/speaker-images/february 2026/Ankit Kumar.webp",
-    "days": ["Friday"],
-    "city": []
-  },
-  {
-    "id": 66,
-    "name": "Sumit Amar",
-    "title": "Vice President of Engineering @ WEX",
-    "img": "img/speaker-images/february 2026/Sumit Amar.webp",
-    "city": []
-  },
-  {
-    "id": 67,
-    "name": "V. Thulisile Sibanda",
-    "title": "Open Source Community Manager @ AsyncAPI Initiative",
-    "img": "img/speaker-images/london/Thulisile Sibanda.webp",
-    "days": ["Thursday"],
-    "city": []
-  },
-  {
-    "id": 68,
-    "name": "Shawn Ahmed",
-    "title": "CPO @ CloudBees",
-    "img": "img/speaker-images/february 2026/Shawn Ahmed.webp",
-    "city": []
-  },
-  {
-    "id": 69,
     "name": "Ignacio Castillejos",
     "title": "Staff Engineer @ NYT",
     "img": "img/speaker-images/february 2026/Ignacio Castillejos.webp",
-    "days": ["Thursday"],
-    "city": []
+    "days": [
+      "Thursday"
+    ],
+    "city": ["California"]
   },
   {
-    "id": 70,
-    "name": "Kody Low",
-    "title": "Technical Lead @ Replit",
-    "img": "img/speaker-images/february 2026/Kody Low.webp",
-    "city": []
+    "id": 2,
+    "name": "Hugo Guerrero",
+    "title": "Head of Techincal Marketing @ Kong",
+    "img": "img/speaker-images/london/Hugo Guerrero.webp",
+    "days": [
+      "Friday"
+    ],
+    "city": ["California"]
   },
   {
-    "id": 71,
-    "name": "Jiri De Jagere",
-    "title": "Product Manager, Strategy & AI @ IBM",
-    "img": "img/speaker-images/february 2026/Jiri De Jagere.webp",
-    "city": []
+    "id": 3,
+    "name": "Ruchi Pakhle",
+    "title": "Software Engineer @ Red Hat",
+    "img": "img/speaker-images/february 2026/Ruchi Pakhle.webp",
+    "days": [
+      "Friday"
+    ],
+    "city": ["California"]
   },
   {
-    "id": 72,
-    "name": "Daniel Oh",
-    "title": "Java Champion, Senior Technical Staff Member, Developer Advocate @ Red Hat",
-    "img": "img/speaker-images/february 2026/Daniel Oh.webp",
-    "city": []
+    "id": 4,
+    "name": "Ankit Kumar",
+    "title": "Head of Developer and Customer Success @ Aklivity",
+    "img": "img/speaker-images/february 2026/Ankit Kumar.webp",
+    "days": [
+      "Friday"
+    ],
+    "city": ["California"]
   },
   {
-    "id": 73,
-    "name": "Indu P Chaube",
-    "title": "Senior Software Engineer @ Cisco Systems",
-    "img": "img/speaker-images/february 2026/Indu Chaube.webp",
-    "city": []
+    "id": 5,
+    "name": "V. Thulisile Sibanda",
+    "title": "Open Source Community Manager @ AsyncAPI Initiative",
+    "img": "img/speaker-images/london/Thulisile Sibanda.webp",
+    "days": [
+      "Thursday"
+    ],
+    "city": ["California"]
   },
   {
-    "id": 74,
-    "name": "Jim Bennett",
-    "title": "Principal Developer Advocate @ Galileo",
-    "img": "img/speaker-images/february 2026/Jim Bennett.webp",
-    "city": []
+    "id": 6,
+    "name": "Hari Krishnan",
+    "title": "Polyglot Full Stack Developer and Architecture Consultant @ Polarizer Technologies",
+    "img": "img/speaker-images/online-conf/Hari.webp",
+    "days": [
+      "Thursday"
+    ],
+    "city": ["California"]
+  },
+  {
+    "id": 7,
+    "name": "Prachi Jamdade",
+    "title": "Developer Advocate @ Gravitee",
+    "img": "img/speaker-images/february 2026/Prachi Jamdade.webp",
+    "days": [
+      "Friday"
+    ],
+    "city": ["California"]
+  },
+  {
+    "id": 8,
+    "name": "Annegret Junker",
+    "title": "Passionate Architect @ codecentric AG",
+    "img": "img/speaker-images/online-conf/Annegret.webp",
+    "days": [
+      "Thursday"
+    ],
+    "city": ["California"]
+  },
+    {
+    "id": 9,
+    "name": "Artur Ciocanu",
+    "title": "Lead Senior Computer Scientist @ Adobe",
+    "img": "img/speaker-images/february 2026/Artur Ciocanu.webp",
+    "days": [
+      "Friday"
+    ],
+    "city": ["California"]
   }
 ]
