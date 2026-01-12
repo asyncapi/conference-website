@@ -2,9 +2,16 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+
+// Popup component code commented out for 2026 migration. Uncomment to restore in the future.
+/*
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
+import Cancel from '../illustration/cancel';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -58,32 +65,15 @@ function Popup() {
                       className="w-[150px]"
                     />
                   </div>
-                  <button
-                    data-test="close-button"
-                    className="p-2 hover:bg-gray-400 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 flex-shrink-0"
+                  <Button
+                    type="button"
+                    outline={true}
+                    test="close-button"
+                    className="p-2 cursor-pointer w-10 h-10 flex items-center justify-center rounded-full flex-shrink-0"
                     onClick={handleClose}
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1L17 17"
-                        stroke="#E9EAEA"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M17 1L0.999999 17"
-                        stroke="#E9EAEA"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </button>
+                    icon={<Cancel />}
+                    iconPosition="left"
+                  />
                 </div>
 
                 <div className="my-10 flex justify-center">
@@ -119,9 +109,7 @@ function Popup() {
                     event-driven APIs!
                   </Paragraph>
                   <Link href="/venue/California">
-                    <Button type="button" className="w-[200px]">
-                      See What&apos;s Next
-                    </Button>
+                    <Button type="button" className="w-[200px]" text="See What&apos;s Next" />
                   </Link>
                 </div>
               </div>
@@ -134,3 +122,4 @@ function Popup() {
 }
 
 export default Popup;
+*/

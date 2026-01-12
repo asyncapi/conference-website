@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { City } from '../../../types/types';
 import { getEventStatus } from '../../../utils/status';
 import MapPointer from '../../illustration/mapPointer';
+import Button from '../../Buttons/button';
 
 interface IVenue {
   city: City;
@@ -30,15 +31,11 @@ function VenueCard({ city }: IVenue) {
                 cfp is open
               </div>
             )}
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(city.mapUrl, '_blank', 'noopener');
-              }}
+            <a href={city.mapUrl} target="_blank" rel="noreferrer"
               className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
-            >
+              onClick={e => e.stopPropagation()}>
               <MapPointer className="w-6 h-6" />
-            </button>
+            </a>
           </div>
 
           <div className="text-white">
