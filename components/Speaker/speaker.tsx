@@ -20,7 +20,7 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
       className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
       data-test="speakers-section"
     >
-      <div className="w-[146px] h-[146px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
+      <div className="w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
         <Image
           src={details.img}
           alt={details.name}
@@ -38,6 +38,9 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
             <p className="mt-[6.6px] text-[18px] text-gray-500">
               {details.title}
             </p>
+          </div>
+          <div>
+            <p className="mt-[6.6px] text-[20px] text-gradient">{location}</p>
           </div>
         </div>
       </div>

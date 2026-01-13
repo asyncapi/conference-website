@@ -1,92 +1,65 @@
 [
-  {
+    {
     "id": 1,
-    "name": "Ignacio Castillejos",
-    "title": "Staff Engineer @ NYT",
-    "img": "img/speaker-images/february 2026/Ignacio Castillejos.webp",
-    "days": [
-      "Thursday"
-    ],
+    "name": "V. Thulisile Sibanda",
+    "title": "Senior Community Manager at AsyncAPI Initiative",
+    "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
     "city": ["California"]
   },
   {
     "id": 2,
-    "name": "Hugo Guerrero",
-    "title": "Head of Techincal Marketing @ Kong",
-    "img": "img/speaker-images/london/Hugo Guerrero.webp",
-    "days": [
-      "Friday"
-    ],
+    "name": "Annegret Junker",
+    "title": "Chief Software Architect at codecentric AG",
+    "img": "/img/speaker-images/online-conf/Annegret.webp",
     "city": ["California"]
   },
   {
     "id": 3,
-    "name": "Ruchi Pakhle",
-    "title": "Software Engineer @ Red Hat",
-    "img": "img/speaker-images/february 2026/Ruchi Pakhle.webp",
-    "days": [
-      "Friday"
-    ],
+    "name": "Ignacio Castillejos",
+    "title": "Staff Engineer at The New York Times",
+    "img": "/img/speaker-images/san-jose/Ignacio.webp",
     "city": ["California"]
   },
   {
     "id": 4,
-    "name": "Ankit Kumar",
-    "title": "Head of Developer and Customer Success @ Aklivity",
-    "img": "img/speaker-images/february 2026/Ankit Kumar.webp",
-    "days": [
-      "Friday"
-    ],
+    "name": "Hari Krishnan",
+    "title": "Founder and CEO at Polarizer Technologies",
+    "img": "/img/speaker-images/online-conf/Hari.webp",
     "city": ["California"]
   },
   {
     "id": 5,
-    "name": "V. Thulisile Sibanda",
-    "title": "Open Source Community Manager @ AsyncAPI Initiative",
-    "img": "img/speaker-images/london/Thulisile Sibanda.webp",
-    "days": [
-      "Thursday"
-    ],
+    "name": "Hugo Guerrero",
+    "title": "Head of Techincal Marketing at Kong",
+    "img": "/img/speaker-images/san-jose/Hugo.webp",
     "city": ["California"]
-  },
+  },  
   {
     "id": 6,
-    "name": "Hari Krishnan",
-    "title": "Polyglot Full Stack Developer and Architecture Consultant @ Polarizer Technologies",
-    "img": "img/speaker-images/online-conf/Hari.webp",
-    "days": [
-      "Thursday"
-    ],
+    "name": "Ruchi Pakhle",
+    "title": "Software Engineer at Red Hat",
+    "img": "/img/speaker-images/bangalore/Ruchi.webp",
     "city": ["California"]
-  },
+  },  
   {
     "id": 7,
     "name": "Prachi Jamdade",
-    "title": "Developer Advocate @ Gravitee",
-    "img": "img/speaker-images/february 2026/Prachi Jamdade.webp",
-    "days": [
-      "Friday"
-    ],
+    "title": "Developer Advocate at Gravitee",
+    "img": "/img/speaker-images/san-jose/Prachi.webp",
     "city": ["California"]
   },
   {
     "id": 8,
-    "name": "Annegret Junker",
-    "title": "Passionate Architect @ codecentric AG",
-    "img": "img/speaker-images/online-conf/Annegret.webp",
-    "days": [
-      "Thursday"
-    ],
+    "name": "Ankit Kumar",
+    "title": "Head of Developer and Customer Success at Aklivity",
+    "img": "/img/speaker-images/london/Ankit.webp",
     "city": ["California"]
   },
-    {
+  {
     "id": 9,
     "name": "Artur Ciocanu",
-    "title": "Lead Senior Computer Scientist @ Adobe",
-    "img": "img/speaker-images/february 2026/Artur Ciocanu.webp",
-    "days": [
-      "Friday"
-    ],
+    "title": "Lead Senior Computer Scientist at Adobe",
+    "img": "/img/speaker-images/london/Artur Ciocanu.webp",
     "city": ["California"]
   }
 ]
