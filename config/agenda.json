@@ -5,7 +5,7 @@
         "speaker": 1,
         "type": "Community Talk",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "13:30 PM PST - 13:55 PM PST",
@@ -13,7 +13,7 @@
         "speaker": 2,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "14:00 PM PST - 14:50 PM PST",
@@ -21,7 +21,7 @@
         "speaker": 3,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "15:00 PM PST - 15:50 PM PST",
@@ -29,7 +29,7 @@
         "speaker": 4,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "13:00 PM PST - 13:25 PM PST",
@@ -37,7 +37,7 @@
         "speaker": 5,
         "type": "Community Talk",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "13:30 PM PST - 13:55 PM PST",
@@ -45,7 +45,7 @@
         "speaker": 6,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "14:00 PM PST - 14:25 PM PST",
@@ -53,7 +53,7 @@
         "speaker": 7,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "14:30 PM PST - 14:55 PM PST",
@@ -61,7 +61,7 @@
         "speaker": 8,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "15:00 PM PST - 15:25 PM PST",
@@ -69,6 +69,6 @@
         "speaker": 9,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     }
 ]
