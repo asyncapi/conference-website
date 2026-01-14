@@ -33,7 +33,7 @@ function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX
       </div>
       <div className="mt-[19px]">
         <h3 className="text-[23px] text-white">{shortenedName}</h3>
-        <div className={`flex flex-col ${'min-h-[150px]'} justify-between`}>
+        <div className="flex flex-col ${'min-h-[100px]'} justify-between`}">
           <div>
             {' '}
             <p className="mt-[6.6px] text-[18px] text-gray-500">

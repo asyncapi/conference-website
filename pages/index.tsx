@@ -26,7 +26,7 @@ export default function Home() {
 
   const handleSpeakers = (city: string) => {
     if (city && city !== 'all') {
-      const citySpeaker = speakers.filter((speaker: SpeakerType) =>
+      const citySpeaker = speakers.filter((speaker) =>
         speaker.city.includes(city)
       );
       setSpeakersList(citySpeaker);
@@ -119,10 +119,6 @@ export default function Home() {
                         </span>
                       </Button>
                       {cities.map((city) => {
-                        // Temporary condition and should be removed next year
-                        if (city.name === 'California') {
-                          return null;
-                        }
                         return (
                           <div
                             key={city.name}
@@ -166,7 +162,7 @@ export default function Home() {
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
                 {speakersList.length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
-                    {speakersList.map((speaker: SpeakerType) => {
+                    {speakersList.map((speaker) => {
                       return (
                         <SpeakerCard
                           key={speaker.id}
@@ -207,7 +203,7 @@ export default function Home() {
                       ) : (
                         <div>
                           <Heading
-                            typeStyle="heading-md"
+                            typeStyle="heading-md-semibold"
                             className="text-gray-200"
                           >
                             {typeof currentCity !== 'string' &&
