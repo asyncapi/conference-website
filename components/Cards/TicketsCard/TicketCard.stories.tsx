@@ -50,28 +50,16 @@ const mockTickets: ITicket[] = [
     },
     {
         id: 3,
-        type: 'Paris, France',
+        type: "California, USA",
         price: 0,
-        url: null,
-        description: 'Access to all conference talks and workshops',
-        status: 'Not Yet Available',
-        available: 25,
-        eventDate: '2026-02-09T00:00:00.000Z',
-        benefits: ['AsyncAPI Track', 'All talks', 'Networking'],
+        url: "https://link.devnetwork.com/1Uvd6FUb",
+        description: "Access to the conference talks and Expo Hall",
+        status: "Get a Free Open Pass",
+        available: 50,
+        eventDate: "2026-02-18T00:00:00.000Z",
+        benefits: ["AsyncAPI Track", "All OPEN Talks", "Networking", "Expo Hall"]
     },
 ];
-
-const expiredTicket: ITicket = {
-    id: 4,
-    type: 'Past Event',
-    price: 0,
-    url: 'https://example.com',
-    description: 'This event has ended',
-    status: 'Closed',
-    available: 0,
-    eventDate: '2024-01-15T00:00:00.000Z',
-    benefits: ["AsyncAPI Track", "All talks", "Networking"],
-};
 
 const DefaultWrapper = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -115,41 +103,10 @@ const SingleTicketWrapper = () => {
     );
 };
 
-const WithExpiredTicketWrapper = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const today = new Date();
-    const ticketsWithExpired = [...mockTickets, expiredTicket];
-
-    const nextTicket = () => {
-        setCurrentIndex((prev) => (prev + 1) % ticketsWithExpired.length);
-    };
-
-    const prevTicket = () => {
-        setCurrentIndex(
-            (prev) => (prev - 1 + ticketsWithExpired.length) % ticketsWithExpired.length
-        );
-    };
-
-    return (
-        <TicketCard
-            availableTickets={ticketsWithExpired}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-            nextTicket={nextTicket}
-            prevTicket={prevTicket}
-            today={today}
-        />
-    );
-};
-
 export const Default: Story = {
     render: () => <DefaultWrapper />,
 };
 
 export const SingleTicket: Story = {
     render: () => <SingleTicketWrapper />,
-};
-
-export const WithExpiredTicket: Story = {
-    render: () => <WithExpiredTicketWrapper />,
 };
