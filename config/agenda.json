@@ -1,74 +1,74 @@
 [
     {
         "time": "13:00 PM PST - 13:25 PM PST",
-        "session": "AsyncAPI Conference: From Side Project to Industry Standard",
+        "session": "From Side Project to Industry Standard: How AsyncAPI is Powering the Future of Event-Driven Systems",
         "speaker": 1,
         "type": "Community Talk",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "13:30 PM PST - 13:55 PM PST",
-        "session": "AsyncAPI Conference: Your API Is Lying to You - Turning Domain Stories Into Honest API Designs",
+        "session": "Your API Is Lying to You - Turning Domain Stories Into Honest API Designs",
         "speaker": 2,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "14:00 PM PST - 14:50 PM PST",
-        "session": "AsyncAPI Conference: The EDA Journey at The New York Time's Commerce Platform",
+        "session": "The EDA Journey at The New York Time's Commerce Platform",
         "speaker": 3,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "15:00 PM PST - 15:50 PM PST",
-        "session": "AsyncAPI Conference: Supercharging Spec-Driven Development for Event-Driven Architectures",
+        "session": "Supercharging Spec-Driven Development for Event-Driven Architectures",
         "speaker": 4,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 1"
+        "day": "Thursday, February 19th"
     },
     {
         "time": "13:00 PM PST - 13:25 PM PST",
-        "session": "AsyncAPI Conference: Building the Open Standard for Event Driven APIs Together",
+        "session": "Building the Open Standard for Event Driven APIs Together",
         "speaker": 5,
         "type": "Community Talk",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "13:30 PM PST - 13:55 PM PST",
-        "session": "AsyncAPI Conference: Spec Authoring Made Intuitive",
+        "session": "Spec Authoring Made Intuitive: A Developer’s Journey with AsyncAPI and VS-Async-Preview Extension",
         "speaker": 6,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "14:00 PM PST - 14:25 PM PST",
-        "session": "AsyncAPI Conference: Building an Enterprise-wide AsyncAPI Catalog",
+        "session": "Building an Enterprise-wide AsyncAPI Catalog",
         "speaker": 7,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "14:30 PM PST - 14:55 PM PST",
-        "session": "AsyncAPI Conference: Event-Driven Architecture 101: From REST to Streams",
+        "session": "Event-Driven Architecture 101: From REST to Streams",
         "speaker": 8,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     },
     {
         "time": "15:00 PM PST - 15:25 PM PST",
-        "session": "AsyncAPI Conference: Documenting and Testing MongoDB Change Streams with AsyncAPI and Microcks",
+        "session": "Documenting and Testing MongoDB Change Streams with AsyncAPI and Microcks",
         "speaker": 9,
         "type": "Technical Speaker",
         "city": "California",
-        "day": "Day 2"
+        "day": "Friday, February 20th"
     }
 ]
