@@ -281,3 +281,9 @@ backdrop-filter: blur(10px); */
   font-size: 13px;
   opacity: 1;
 }
+
+body.popup-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
