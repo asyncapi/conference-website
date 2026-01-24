@@ -4,8 +4,9 @@ export const isPastEvent = (dateString: string): boolean => {
 
   if (dateString.includes('-')) {
     const parts = dateString.split('-').map((p) => p.trim());
-    const endDateString = parts[parts.length - 1]; 
+    const endDateString = parts[parts.length - 1];
     const endDate = new Date(endDateString);
+
     if (isNaN(endDate.getTime())) {
       return false;
     }
