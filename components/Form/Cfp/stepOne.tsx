@@ -51,9 +51,8 @@ function StepOne({ setStep, setForm, data }: CfpStepProps): JSX.Element {
           className="bg-tetiary-pink p-3 rounded-md text-white mt-6 float-right w-36 lg:w-full lg:mt-8"
           disabled={!data.Fullname && true}
           test="step-one-next"
-        >
-          Next
-        </Button>
+          text="Next"
+        />
       </div>
     </form>
   );

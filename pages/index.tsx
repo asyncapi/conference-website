@@ -15,8 +15,7 @@ import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
-import { City } from '../types/types';
-import Popup from '../components/Popup/popup';
+import { City, Speaker as SpeakerType } from '../types/types';
 
 export default function Home() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -50,7 +49,7 @@ export default function Home() {
         alt="background-illustration"
       />
       <Header />
-      <Popup />
+      {/* Popup removed for 2026 migration */}
       <div id="about" className="mt-20">
         <About />
       </div>
@@ -113,7 +112,7 @@ export default function Home() {
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                         }`}
-                        overlay={true}
+                        outline={true}
                       >
                         <span className="transparent-bg "></span>
                         <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
@@ -121,10 +120,6 @@ export default function Home() {
                         </span>
                       </Button>
                       {cities.map((city) => {
-                        // Temporary condition and should be removed next year
-                        if (city.name === 'California') {
-                          return null;
-                        }
                         return (
                           <div
                             key={city.name}
@@ -141,7 +136,7 @@ export default function Home() {
                                   ? 'gradient-bg'
                                   : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                               }`}
-                              overlay={true}
+                              outline={true}
                             >
                               {currentCity.name !== city.name && (
                                 <>
@@ -197,15 +192,12 @@ export default function Home() {
                             below. Join us on stage and share your valuable
                             insights with our enthusiastic audience!
                           </Paragraph>
-                          <Link legacyBehavior href={currentCity.cfp}>
-                            <a className="flex justify-center" target="_blank">
+                          <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
                               <Button
                                 type="button"
                                 className="mt-[80px] w-[244px] border border-gray"
-                              >
-                                Apply as a speaker
-                              </Button>
-                            </a>
+                                text="Apply as a speaker"
+                              />
                           </Link>
                         </div>
                       ) : (
@@ -264,23 +256,9 @@ export default function Home() {
         <Sponsors
           eventSponsors={[
             {
-              image: '/img/logos/apidays.png',
-              websiteUrl: 'https://www.apidays.global/',
-            },
-            {
-              image: '/img/logos/APICONF-LOGO-White.png',
-              websiteUrl: 'https://apiconf.net/',
-            },
-          ]}
-          financialSponsor={[
-            {
-              image: '/img/logos/IBM.png',
-              websiteUrl: 'https://www.ibm.com/',
-            },
-            {
-              image: '/img/logos/graviteeio-logo.webp',
-              websiteUrl: 'https://www.gravitee.io/',
-            },
+              image: '/img/logos/developerweek-logo.webp',
+              websiteUrl: 'https://www.developerweek.com/',
+            }
           ]}
         />
       </div>

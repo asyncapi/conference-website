@@ -4,6 +4,7 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Image from 'next/image';
+import Download from '../illustration/download';
 
 function About(): JSX.Element {
   return (
@@ -51,27 +52,21 @@ function About(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <Button type="button" className="w-[200px]">
-                Become a sponsor now
-              </Button>
+              <Button type="button" className="w-[200px]" text="Become a sponsor now"/>
             </a>
             <a
               className="flex justify-center "
               href="/pdf/conf-2025.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
-              <Button type="button" overlay={true} className="w-[240px] border">
-                <div className="flex gap-2 justify-center items-center">
-                  <Image
-                    src="/img/Download_icon.png"
-                    height={20}
-                    width={20}
-                    alt="Download-icon"
-                    objectFit="contain"
-                  />
-                  <div>Sponsorship prospectus</div>
-                </div>
-              </Button>
+              <Button 
+                type="button" 
+                outline={true} 
+                className="w-[240px] border"
+                text="Sponsorship prospectus"
+                icon={<Download />}
+                iconPosition="left"
+              />
             </a>
           </div>
         </div>
