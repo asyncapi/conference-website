@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { JSX } from 'react';
+import cityLists from '../../../config/city-lists.json';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
@@ -35,12 +36,19 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         />
 
         <div className="text-dark-600 text-lg mt-5">Preferred city</div>
-        <input
+        <select
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={preferredCity}
           onChange={(e) => setForm((prev: any) => ({ ...prev, preferredCity: e.target.value }))}
           data-test="reg-step-two-city"
-        />
+        >
+          <option value="">Select (optional)</option>
+          {((cityLists as any) || []).map((c: any) => (
+            <option key={c.name} value={c.name}>
+              {c.name}
+            </option>
+          ))}
+        </select>
 
         <div className="text-dark-600 text-lg mt-5">Attendance type</div>
         <input
