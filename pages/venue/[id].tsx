@@ -17,7 +17,7 @@ import speakers from '../../config/speakers.json';
 import cities from '../../config/city-lists.json';
 import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
-import Guidelines from '../../components/Guidelines/Guidelines';
+import Guidelines from '../../components/Guidelines/guidelines';
 import CFPdata from '../../config/cfp-data.json';
 import { GetStaticPropsContext } from 'next';
 
