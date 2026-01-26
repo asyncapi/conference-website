@@ -1,29 +1,30 @@
 import Image from 'next/image';
 import React, { JSX } from 'react';
-import { Speaker as SpeakerTypes } from '../../types/types';
 
 interface ISpeaker {
-  details: SpeakerTypes;
-  location?: string | undefined;
+  name: string;
+  title: string;
+  image: string;
+  location?: string;
   className?: string;
 }
 
-function Speaker({ details, location, className }: ISpeaker): JSX.Element {
+function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX.Element {
   function getName(names: string[]) {
     return `${names[0]} ${names[1]}`;
   }
   const shortenedName =
-    details.name.length > 20 ? getName(details.name.split(' ')) : details.name;
+    name.length > 20 ? getName(name.split(' ')) : name;
 
   return (
     <div
-      className={`w-auto text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
+      className={` w-fit text-center flex flex-col items-center card rounded-md p-[27px] ${className}`}
       data-test="speakers-section"
     >
       <div className="w-[300px] h-[300px] lg:w-[250px] lg:h-[250px] relative overflow-hidden  rounded-full border-2 border-gray-300 bg-gray-800">
         <Image
-          src={details.img}
-          alt={details.name}
+          src={image}
+          alt={name}
           width={0}
           height={0}
           sizes="100vw"
@@ -36,7 +37,7 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
           <div>
             {' '}
             <p className="mt-[6.6px] text-[18px] text-gray-500">
-              {details.title}
+              {title}
             </p>
           </div>
           <div>
@@ -48,4 +49,4 @@ function Speaker({ details, location, className }: ISpeaker): JSX.Element {
   );
 }
 
-export default Speaker;
+export default SpeakerCard;
