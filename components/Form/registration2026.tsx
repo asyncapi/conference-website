@@ -56,7 +56,7 @@ export default function Registration2026(): JSX.Element {
         <div className="mt-4">
           <Link href="/">
             <Button className="bg-tetiary-pink p-3 rounded-md text-white" type="button">
-              Back to Conference 2025
+              Back to Conference {new Date().getFullYear()}
             </Button>
           </Link>
         </div>
