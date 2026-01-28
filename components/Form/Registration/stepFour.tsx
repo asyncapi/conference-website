@@ -72,14 +72,14 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
         <div className="mt-3 w-full flex items-center justify-between lg:flex-col-reverse lg:items-start">
             <div className="mt-3 w-full flex items-center justify-end lg:flex-col-reverse lg:items-start gap-4">
                 {/* Back button */}
-                <button
+                <Button
                     type="button"
                     disabled={disabled}
                     onClick={() => !disabled && setStep(null, 3)}
                     className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50"
                 >
                     Back
-                </button>
+                </Button>
 
                 {/* Submit button */}
                 <Button
