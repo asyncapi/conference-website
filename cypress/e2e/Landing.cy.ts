@@ -19,8 +19,6 @@ describe('Landing Page Tests', () => {
   });
 
   it('Verify the downloaded file', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     const Year = new Date().getFullYear();
     cy.getTestData('prospectus-download').should('be.visible');
     cy.getTestData('prospectus-download').click();
@@ -59,8 +57,6 @@ describe('Landing Page Tests', () => {
   });
 
   it('Subscribe Button is functional', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
 
     cy.getTestData('subscribe-button')
       .should('have.attr', 'href')
