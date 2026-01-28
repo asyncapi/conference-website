@@ -6,8 +6,8 @@ export default function Register2026() {
   return (
     <div>
       <Head>
-        <title>Conference 2026 Registration</title>
-        <meta name="description" content="Register for Conference 2026" />
+        <title>Conference Registration</title>
+        <meta name="description" content="Register for the Conference" />
       </Head>
 
       <img
