@@ -2,7 +2,7 @@
  * API route: /api/registration/2026
  */
 import nodemailer from 'nodemailer';
-import { appendRegistrationRow } from "../../../../lib/registration2026/googleSheets";
+import { appendRegistrationRow } from "../../../../lib/registration/googleSheets";
 
 function isValidEmail(email: any): boolean {
     return typeof email === 'string' && /\S+@\S+\.\S+/.test(email);
