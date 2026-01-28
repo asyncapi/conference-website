@@ -68,13 +68,13 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
 
         <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
         {/* Back */}
-        <button
+        <Button
             type="button"
             onClick={() => setStep(null, 1)}
             className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center"
         >
             Back
-        </button>
+        </Button>
 
         {/* Next */}
         <Button
