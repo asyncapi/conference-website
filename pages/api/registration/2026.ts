@@ -4,11 +4,11 @@
 import nodemailer from 'nodemailer';
 import { appendRegistrationRow } from "../../../lib/registration2026/googleSheets";
 
-function isValidEmail(email) {
+function isValidEmail(email:any): boolean {
   return typeof email === 'string' && /\S+@\S+\.\S+/.test(email);
 }
 
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });

@@ -14,16 +14,16 @@ async function getSheetsClient() {
   return google.sheets({ version: 'v4', auth: client });
 }
 
-export async function appendRegistrationRow(rowValues) {
-  if (!REGISTRATION_2026_SHEET_ID || !REGISTRATION_2026_TAB) {
+export async function appendRegistrationRow(rowValues: string[]) {
+  if (!REGISTRATION_SHEET_ID || !REGISTRATION_TAB) {
     throw new Error('Registration 2026 spreadsheet config not set');
   }
 
   const sheets = await getSheetsClient();
 
   const res = await sheets.spreadsheets.values.append({
-    spreadsheetId: REGISTRATION_2026_SHEET_ID,
-    range: REGISTRATION_2026_TAB,
+    spreadsheetId: REGISTRATION_SHEET_ID,
+    range: REGISTRATION_TAB,
     valueInputOption: 'USER_ENTERED',
     insertDataOption: 'INSERT_ROWS',
     requestBody: {
