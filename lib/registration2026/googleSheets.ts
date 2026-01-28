@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 import path from 'path';
-import { REGISTRATION_2026_SHEET_ID, REGISTRATION_2026_TAB } from './config';
+import { REGISTRATION_SHEET_ID, REGISTRATION_TAB } from './config';
 
 const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 
