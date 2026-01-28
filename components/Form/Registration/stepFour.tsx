@@ -70,31 +70,31 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
           By clicking submit, you confirm the information is correct.
         </div>
         <div className="mt-3 w-full flex items-center justify-between lg:flex-col-reverse lg:items-start">
-            <div className="mt-3 w-full flex items-center justify-end lg:flex-col-reverse lg:items-start gap-4">
-                {/* Back button */}
-                <Button
-                    type="button"
-                    disabled={disabled}
-                    onClick={() => !disabled && setStep(null, 3)}
-                    className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50"
-                >
-                    Back
-                </Button>
+          <div className="mt-3 w-full flex items-center justify-end lg:flex-col-reverse lg:items-start gap-4">
+            {/* Back button */}
+            <Button
+              type="button"
+              disabled={disabled}
+              onClick={() => !disabled && setStep(null, 3)}
+              className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50 w-36 lg:w-full"
+            >
+              Back
+            </Button>
 
-                {/* Submit button */}
-                <Button
-                    type="submit"
-                    disabled={submitting || disabled}
-                    className="bg-tetiary-pink px-6 py-3 rounded-md text-white w-36 lg:w-full"
-                    test="reg-step-four-next"
-                >
-                    {submitting ? 'Submitting...' : 'Submit'}
-                </Button>
-</div>
-
-            {error && <div className="text-red-400 mt-2">{error}</div>}
+            {/* Submit button */}
+            <Button
+              type="submit"
+              disabled={submitting || disabled}
+              className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50 w-36 lg:w-full"
+              test="reg-step-four-next"
+            >
+              {submitting ? 'Submitting...' : 'Submit'}
+            </Button>
           </div>
+
+          {error && <div className="text-red-400 mt-2">{error}</div>}
         </div>
+      </div>
     </form>
   );
 }

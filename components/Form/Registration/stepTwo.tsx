@@ -67,23 +67,23 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         />
 
         <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
-        {/* Back */}
-        <Button
+          {/* Back */}
+          <Button
             type="button"
             onClick={() => setStep(null, 1)}
-            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center"
-        >
+            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
+          >
             Back
-        </Button>
+          </Button>
 
-        {/* Next */}
-        <Button
+          {/* Next */}
+          <Button
             type="submit"
-            className="bg-tetiary-pink px-6 py-3 rounded-md text-white w-36 lg:w-full"
+            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
             test="reg-step-three-next"
-        >
+          >
             Next
-        </Button>
+          </Button>
         </div>
 
       </div>
