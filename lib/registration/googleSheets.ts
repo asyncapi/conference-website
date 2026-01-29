@@ -11,7 +11,7 @@ async function getSheetsClient() {
   });
 
   const client = await auth.getClient();
-  return google.sheets({ version: 'v4', auth: client });
+  return google.sheets({ version: 'v4', auth: client as any });
 }
 
 export async function appendRegistrationRow(rowValues: string[]) {
