@@ -18,8 +18,9 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
       <p className="mt-3 text-dark-600">Tell us any dietary or accessibility needs and consent preferences.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10">
-        <div className="text-dark-600 text-lg">Dietary / Accessibility needs</div>
+        <label htmlFor="dietaryAccessibility" className="text-dark-600 text-lg">Dietary / Accessibility needs</label>
         <textarea
+          id="dietaryAccessibility"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={dietary}
           onChange={(e) => setForm((prev: any) => ({ ...prev, dietaryAccessibility: e.target.value }))}
@@ -62,8 +63,9 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           We process your data according to our <a href="/privacy" className="underline">Privacy Policy</a>. By submitting you agree to the <a href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer" className="underline">Code of Conduct</a> and Privacy Policy.
         </div>
 
-        <div className="text-dark-600 text-lg mt-5">Notes (optional)</div>
+        <label htmlFor="notes" className="text-dark-600 text-lg mt-5">Notes (optional)</label>
         <textarea
+          id="notes"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={notes}
           onChange={(e) => setForm((prev: any) => ({ ...prev, notes: e.target.value }))}
