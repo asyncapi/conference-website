@@ -4,9 +4,7 @@
 import nodemailer from 'nodemailer';
 import { appendRegistrationRow } from "../../../../lib/registration/googleSheets";
 
-function isValidEmail(email: string): boolean {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-}
+import { isValidEmail } from "../../../../utils/validation";
 
 
 export default async function handler(req: any, res: any) {
@@ -36,7 +34,7 @@ export default async function handler(req: any, res: any) {
         });
     }
 
-    if (!email || !isValidEmail(email)) {
+    if (!email || !isValidEmail(email.trim())) {
         return res.status(400).json({
             error: 'A valid email address is required',
         });

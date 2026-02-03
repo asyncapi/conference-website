@@ -3,9 +3,7 @@ import React, { JSX, useState } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
-function isValidEmail(email?: string) {
-  return typeof email === 'string' && /\S+@\S+\.\S+/.test(email);
-}
+import { isValidEmail } from '../../../utils/validation';
 
 function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   const [touched, setTouched] = useState(false);
@@ -13,7 +11,7 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
   const fullName = (data as any).fullName || (data as any).Fullname || '';
   const email = (data as any).email || (data as any).Email || '';
 
-  const isValid = fullName.trim().length > 0 && isValidEmail(email);
+  const isValid = fullName.trim().length > 0 && isValidEmail(email.trim());
 
   return (
     <form
