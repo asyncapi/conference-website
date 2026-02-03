@@ -28,7 +28,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           data-test="reg-step-two-company"
         />
 
-        <label htmlFor="role" className="text-dark-600 text-lg mt-5">Role</label>
+        <label htmlFor="role" className="text-dark-600 text-lg mt-6 block">Role</label>
         <input
           id="role"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
@@ -37,7 +37,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           data-test="reg-step-two-role"
         />
 
-        <label htmlFor="preferredCity" className="text-dark-600 text-lg mt-5">Preferred city</label>
+        <label htmlFor="preferredCity" className="text-dark-600 text-lg mt-6 block">Preferred city</label>
         <select
           id="preferredCity"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
@@ -53,7 +53,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           ))}
         </select>
 
-        <label htmlFor="attendanceType" className="text-dark-600 text-lg mt-5">Attendance type</label>
+        <label htmlFor="attendanceType" className="text-dark-600 text-lg mt-6 block">Attendance type</label>
         <input
           id="attendanceType"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
@@ -62,7 +62,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           data-test="reg-step-two-attendance"
         />
 
-        <label htmlFor="timezone" className="text-dark-600 text-lg mt-5">Timezone</label>
+        <label htmlFor="timezone" className="text-dark-600 text-lg mt-6 block">Timezone</label>
         <input
           id="timezone"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
