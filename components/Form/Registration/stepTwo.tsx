@@ -19,24 +19,27 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
       <p className="mt-3 text-dark-600">Tell us how you'll attend so we can reserve your place.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10">
-        <div className="text-dark-600 text-lg">Company</div>
+        <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
         <input
+          id="company"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={company}
           onChange={(e) => setForm((prev: any) => ({ ...prev, company: e.target.value }))}
           data-test="reg-step-two-company"
         />
 
-        <div className="text-dark-600 text-lg mt-5">Role</div>
+        <label htmlFor="role" className="text-dark-600 text-lg mt-5">Role</label>
         <input
+          id="role"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={role}
           onChange={(e) => setForm((prev: any) => ({ ...prev, role: e.target.value }))}
           data-test="reg-step-two-role"
         />
 
-        <div className="text-dark-600 text-lg mt-5">Preferred city</div>
+        <label htmlFor="preferredCity" className="text-dark-600 text-lg mt-5">Preferred city</label>
         <select
+          id="preferredCity"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={preferredCity}
           onChange={(e) => setForm((prev: any) => ({ ...prev, preferredCity: e.target.value }))}
@@ -50,16 +53,18 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           ))}
         </select>
 
-        <div className="text-dark-600 text-lg mt-5">Attendance type</div>
+        <label htmlFor="attendanceType" className="text-dark-600 text-lg mt-5">Attendance type</label>
         <input
+          id="attendanceType"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={attendanceType}
           onChange={(e) => setForm((prev: any) => ({ ...prev, attendanceType: e.target.value }))}
           data-test="reg-step-two-attendance"
         />
 
-        <div className="text-dark-600 text-lg mt-5">Timezone</div>
+        <label htmlFor="timezone" className="text-dark-600 text-lg mt-5">Timezone</label>
         <input
+          id="timezone"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={timezone}
           onChange={(e) => setForm((prev: any) => ({ ...prev, timezone: e.target.value }))}
