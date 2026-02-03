@@ -59,8 +59,9 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
       <p className="mt-3 text-dark-600">Review your details and submit your registration.</p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
       <div className="mt-10">
-        <div className="text-dark-600 text-lg">Notes</div>
+        <label htmlFor="notes" className="text-dark-600 text-lg">Notes</label>
         <textarea
+          id="notes"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm((prev: any) => ({ ...prev, notes: e.target.value }))}
           data-test="reg-step-four-notes"
