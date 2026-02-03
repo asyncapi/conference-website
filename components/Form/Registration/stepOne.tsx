@@ -24,16 +24,18 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
       <p className="mt-3 text-dark-600">Tell us who you are so we can prepare your ticket.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10">
-        <div className="text-dark-600 text-lg">Full name</div>
+        <label htmlFor="fullName" className="text-dark-600 text-lg">Full name</label>
         <input
+          id="fullName"
           required
           value={fullName}
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           onChange={(e) => setForm((prev: any) => ({ ...prev, fullName: e.target.value }))}
           data-test="reg-step-one-name"
         />
-        <div className="text-dark-600 text-lg mt-5">Email address</div>
+        <label htmlFor="email" className="text-dark-600 text-lg mt-5">Email address</label>
         <input
+          id="email"
           required
           type="email"
           value={email}
