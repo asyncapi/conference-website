@@ -4,9 +4,10 @@
 import nodemailer from 'nodemailer';
 import { appendRegistrationRow } from "../../../../lib/registration/googleSheets";
 
-function isValidEmail(email: any): boolean {
-    return typeof email === 'string' && /\S+@\S+\.\S+/.test(email);
+function isValidEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
+
 
 export default async function handler(req: any, res: any) {
     if (req.method !== 'POST') {
