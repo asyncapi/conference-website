@@ -1,30 +1,106 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { auth, sheets } from '@googleapis/sheets';
 import nodemailer from 'nodemailer';
-import { CfpForm } from '../../../../types/types';
-import { JWT } from 'google-auth-library';
+import { LRUCache } from 'lru-cache';
+import { z } from 'zod';
+
+// Validation schema for CFP submission
+
+const cfpSchema = z.object({
+  Fullname: z.string().min(2),
+  Email: z.string().email(),
+  Bio: z.string().min(10),
+  Social: z.string().optional(),
+  Title: z.string().min(3),
+  Description: z.string().min(20),
+  Format: z.string().min(2),
+  Level: z.string().min(2),
+  AdditionalInfo: z.string().optional(),
+});
+
+// Simple in-memory rate limiter
+const rateLimit = new LRUCache<string, number>({
+  max: 500,
+  ttl: 1000 * 60,
+});
+
+
+
+// Apply basic rate limiting per IP
+function applyRateLimit(req: NextApiRequest, res: NextApiResponse) {
+  const forwarded = req.headers['x-forwarded-for'] as string | undefined;
+
+  const ip =
+    forwarded?.split(',')[0]?.trim() ||
+    req.socket.remoteAddress ||
+    '';
+
+  if (!ip) return;
+  if (rateLimit.get(ip)) {
+    res.status(429).json({ message: 'Too many requests. Please try again later.' });
+    throw new Error('Rate limited');
+  }
+
+  rateLimit.set(ip, Date.now());
+}
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> {
   try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', 'POST');
+      return res
+        .status(405)
+        .json({ message: 'Method Not Allowed. Only POST requests are supported.' });
+    }
+
+    //  Apply rate limit
+    applyRateLimit(req, res);
+
+      // Validate request body
+    const parseResult = cfpSchema.safeParse(req.body);
+
+    if (!parseResult.success) {
+      return res.status(400).json({
+        message: 'Invalid submission data',
+        errors: parseResult.error.format(),
+      });
+    }
+
+    const submission = parseResult.data;
+
+    
+    // Parse Google credentials safely
+    let credentials: Record<string, unknown> | undefined;
+
+    if (process.env.GOOGLE_SHEET_SERVICE_ACCOUNT) {
+      try {
+        credentials = JSON.parse(process.env.GOOGLE_SHEET_SERVICE_ACCOUNT);
+      } catch (err) {
+        console.error('Invalid GOOGLE_SHEET_SERVICE_ACCOUNT JSON:', err);
+
+        return res.status(500).json({
+          message: 'Invalid Google credentials configuration',
+        });
+      }
+    }
+
+    // Initialize Google Sheets client
     const authClient = new auth.GoogleAuth({
-      // keyFile: './credentials.json', // uncomment this line to run locally
-      credentials: JSON.parse(process.env.GOOGLE_SHEET_SERVICE_ACCOUNT!), // comment this line to run locally
+      keyFile: process.env.GSHEET_KEY_FILE,
+      credentials,
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
-    const client = (await authClient.getClient()) as JWT;
-
     const googleSheets = sheets({
       version: 'v4',
-      auth: client,
+      auth: authClient,
     });
 
-    const submission: CfpForm = req.body;
-
-    let response = await googleSheets.spreadsheets.values.append({
+    // Append submission to Google Sheet
+    await googleSheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       range: 'Sheet2',
       valueInputOption: 'USER_ENTERED',
@@ -45,9 +121,11 @@ export default async function handler(
       },
     });
 
+
+    // Configure mail transporter
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com', // configure sender service here
-      port: 465,
+      host: process.env.SMTP_HOST ?? 'smtp.gmail.com',
+      port: Number(process.env.SMTP_PORT ?? 465),
       secure: true,
       auth: {
         user: process.env.ASYNCAPI_EMAIL,
@@ -55,14 +133,38 @@ export default async function handler(
       },
     });
 
-    await transporter.sendMail({
-      to: submission.Email, // list of receivers
-      subject: 'Confirmation for registeration of your talk with AsyncAPI!', // Subject line
-      html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
-    });
 
-    res.status(200).json(response.data);
-  } catch (error) {
-    res.status(500).json({ message: 'Internal Server Error', error: error });
+    // Send confirmation email
+    try {
+      await transporter.sendMail({
+        from: `"AsyncAPI Conference" <${process.env.ASYNCAPI_EMAIL}>`,
+        to: submission.Email,
+        subject: 'Confirmation for your talk registration',
+        html: `
+          <p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p>
+          <p>This email confirms that we have received it.</p>
+          <p>You will receive a status update after the Call for Speakers closes.</p>
+        `,
+      });
+    } catch (mailError) {
+      console.error('Email sending error:', mailError);
+
+      // Do not fail entire request if email fails
+      return res.status(200).json({
+        message:
+          'Submission received successfully, but confirmation email could not be sent.',
+      });
+    }
+
+    // Success response
+    return res.status(200).json({
+      message: 'Submission received successfully',
+    });
+  } catch (err) {
+    console.error('CFP handler error:', err);
+
+    return res.status(500).json({
+      message: 'Internal Server Error',
+    });
   }
 }
