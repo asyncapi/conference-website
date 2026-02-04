@@ -27,7 +27,7 @@ const rateLimit = new LRUCache<string, number>({
 
 
 // Apply basic rate limiting per IP
-function applyRateLimit(req: NextApiRequest, res: NextApiResponse) {
+function applyRateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const forwarded = req.headers['x-forwarded-for'] as string | undefined;
 
   const ip =
@@ -35,14 +35,19 @@ function applyRateLimit(req: NextApiRequest, res: NextApiResponse) {
     req.socket.remoteAddress ||
     '';
 
-  if (!ip) return;
+  if (!ip) return false;
+
   if (rateLimit.get(ip)) {
-    res.status(429).json({ message: 'Too many requests. Please try again later.' });
-    throw new Error('Rate limited');
+    res.status(429).json({
+      message: 'Too many requests. Please try again later.',
+    });
+    return true; // STOPs
   }
 
   rateLimit.set(ip, Date.now());
+  return false; // OK
 }
+
 
 export default async function handler(
   req: NextApiRequest,
@@ -57,7 +62,9 @@ export default async function handler(
     }
 
     //  Apply rate limit
-    applyRateLimit(req, res);
+    if (applyRateLimit(req, res)){
+      return ;
+    }
 
       // Validate request body
     const parseResult = cfpSchema.safeParse(req.body);
@@ -102,7 +109,7 @@ export default async function handler(
     // Append submission to Google Sheet
     await googleSheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
-      range: 'Sheet2',
+      range: process.env.SHEET_RANGE ?? 'Sheet2',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [
@@ -121,11 +128,24 @@ export default async function handler(
       },
     });
 
+        // Parse SMTP port safely
+    let smtpPort = 465; // default
 
+    if (process.env.SMTP_PORT) {
+      const parsedPort = parseInt(process.env.SMTP_PORT, 10);
+
+      if (!Number.isNaN(parsedPort) && parsedPort > 0) {
+        smtpPort = parsedPort;
+      } else {
+        console.warn(
+          'Invalid SMTP_PORT value, falling back to default 465'
+        );
+      }
+    }
     // Configure mail transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST ?? 'smtp.gmail.com',
-      port: Number(process.env.SMTP_PORT ?? 465),
+      port: smtpPort,
       secure: true,
       auth: {
         user: process.env.ASYNCAPI_EMAIL,
