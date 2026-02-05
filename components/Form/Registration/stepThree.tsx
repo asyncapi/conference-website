@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { JSX, useState } from 'react';
 import Button from '../../Buttons/button';
-import { CfpStepProps, CfpForm } from '../../../types/types';
+import { CfpStepProps } from '../../../types/types';
 
 function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
 
