@@ -16,17 +16,17 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
     setError('');
 
     const payload = {
-      fullName: (data as any).fullName || (data as any).Fullname || '',
-      email: (data as any).email || (data as any).Email || '',
-      company: (data as any).company || '',
-      role: (data as any).role || '',
-      preferredCity: (data as any).preferredCity || '',
-      attendanceType: (data as any).attendanceType || '',
-      timezone: (data as any).timezone || '',
-      dietaryAccessibility: (data as any).dietaryAccessibility || '',
-      updatesOptIn: Boolean((data as any).updatesOptIn),
-      sponsorDataSharing: Boolean((data as any).sponsorDataSharing),
-      notes: (data as any).notes || '',
+      fullName: data.fullName || '',
+      email: data.email || '',
+      company: data.company || '',
+      role: data.role || '',
+      preferredCity: data.preferredCity || '',
+      attendanceType: data.attendanceType || '',
+      timezone: data.timezone || '',
+      dietaryAccessibility: data.dietaryAccessibility || '',
+      updatesOptIn: Boolean(data.updatesOptIn),
+      sponsorDataSharing: Boolean(data.sponsorDataSharing),
+      notes: data.notes || '',
     };
 
     fetch('/api/registration/2026', {
@@ -63,7 +63,7 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
         <textarea
           id="notes"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
-          onChange={(e) => setForm((prev: any) => ({ ...prev, notes: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
           data-test="reg-step-four-notes"
         />
 
