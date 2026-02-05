@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { JSX, useState } from 'react';
 import Button from '../../Buttons/button';
-import { CfpStepProps } from '../../../types/types';
+import { CfpStepProps, CfpForm } from '../../../types/types';
 
 function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
-  const dietary = (data as any).dietaryAccessibility || '';
-  const updatesOptIn = !!(data as any).updatesOptIn;
-  const sponsorDataSharing = !!(data as any).sponsorDataSharing;
-  const notes = (data as any).notes || '';
+
+  const dietary = data.dietaryAccessibility || '';
+  const updatesOptIn = !!data.updatesOptIn;
+  const sponsorDataSharing = !!data.sponsorDataSharing;
+  const notes = data.notes || '';
 
   const [localUpdates, setLocalUpdates] = useState(updatesOptIn);
   const [localSponsor, setLocalSponsor] = useState(sponsorDataSharing);
@@ -23,7 +24,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           id="dietaryAccessibility"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={dietary}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, dietaryAccessibility: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, dietaryAccessibility: e.target.value }))}
           data-test="reg-step-three-dietary"
         />
 
@@ -34,7 +35,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
               checked={localUpdates}
               onChange={(e) => {
                 setLocalUpdates(e.target.checked);
-                setForm((prev: any) => ({ ...prev, updatesOptIn: e.target.checked }));
+                setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
               }}
               data-test="reg-step-three-updates"
               className="mr-2"
@@ -50,7 +51,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
               checked={localSponsor}
               onChange={(e) => {
                 setLocalSponsor(e.target.checked);
-                setForm((prev: any) => ({ ...prev, sponsorDataSharing: e.target.checked }));
+                setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
               }}
               data-test="reg-step-three-sponsor"
               className="mr-2"
@@ -68,7 +69,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           id="notes"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={notes}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, notes: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
           data-test="reg-step-three-notes"
         />
 
