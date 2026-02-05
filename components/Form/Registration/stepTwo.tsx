@@ -5,11 +5,11 @@ import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
 function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
-  const company = (data as any).company || '';
-  const role = (data as any).role || '';
-  const preferredCity = (data as any).preferredCity || '';
-  const attendanceType = (data as any).attendanceType || '';
-  const timezone = (data as any).timezone || '';
+  const company = data.company || '';
+  const role = data.role || '';
+  const preferredCity = data.preferredCity || '';
+  const attendanceType = data.attendanceType || '';
+  const timezone = data.timezone || '';
 
   const isValid = true; // no strictly required fields on this step
 
@@ -24,7 +24,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           id="company"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={company}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, company: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
           data-test="reg-step-two-company"
         />
 
@@ -33,7 +33,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           id="role"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={role}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, role: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, role: e.target.value }))}
           data-test="reg-step-two-role"
         />
 
@@ -42,7 +42,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           id="preferredCity"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={preferredCity}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, preferredCity: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, preferredCity: e.target.value }))}
           data-test="reg-step-two-city"
         >
           <option value="">Select (optional)</option>
@@ -58,7 +58,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           id="attendanceType"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={attendanceType}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, attendanceType: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, attendanceType: e.target.value }))}
           data-test="reg-step-two-attendance"
         />
 
@@ -67,7 +67,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           id="timezone"
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
           value={timezone}
-          onChange={(e) => setForm((prev: any) => ({ ...prev, timezone: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, timezone: e.target.value }))}
           data-test="reg-step-two-timezone"
         />
 
