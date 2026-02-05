@@ -8,8 +8,8 @@ import { isValidEmail } from '../../../utils/validation';
 function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
   const [touched, setTouched] = useState(false);
 
-  const fullName = (data as any).fullName || (data as any).Fullname || '';
-  const email = (data as any).email || (data as any).Email || '';
+  const fullName = data.fullName ?? '';
+  const email = data.email ?? '';
 
   const isValid = fullName.trim().length > 0 && isValidEmail(email.trim());
 
@@ -30,7 +30,7 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           required
           value={fullName}
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
-          onChange={(e) => setForm((prev: any) => ({ ...prev, fullName: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, fullName: e.target.value }))}
           data-test="reg-step-one-name"
         />
         <label htmlFor="email" className="text-dark-600 text-lg mt-6 block">Email address</label>
@@ -40,7 +40,7 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           type="email"
           value={email}
           className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
-          onChange={(e) => setForm((prev: any) => ({ ...prev, email: e.target.value }))}
+          onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
           data-test="reg-step-one-email"
         />
 
