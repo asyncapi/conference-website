@@ -237,11 +237,13 @@ backdrop-filter: blur(10px); */
     transform-style: preserve-3d;
     vertical-align: middle;
     display: inline-block;
+    z-index: 0;
 }
 
 @media (max-width: 780px) {
   .color-effect {
-    bottom: 700px;
+    bottom: 900px;
+    opacity: 0.7;
   }
 }
 

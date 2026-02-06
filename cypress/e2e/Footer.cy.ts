@@ -57,6 +57,16 @@ describe('Footer links', () => {
     });
   });
 
+  it('YouTube should redirect to correct page', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
+    cy.getTestData('footer-youtube').invoke('removeAttr', 'target').click();
+
+    cy.origin('https://www.youtube.com', () => {
+      cy.url().should('include', 'youtube.com/asyncapi');
+    });
+  });
+
   it('Should Contain AsyncAPI Conference Logo', () => {
     cy.getTestData('footer-asyncAPI-logo').should('be.visible');
   });
@@ -67,27 +77,30 @@ describe('Footer links', () => {
     });
 
     it('Should display social media icons', () => {
-      cy.get('.social-wrapper').should('exist');
-      cy.get('.social-wrapper .icon').should('have.length.at.least', 4);
+      cy.getTestData('social-wrapper').should('exist');
+      cy.getTestData('footer-icon-linkedin').should('exist');
+      cy.getTestData('footer-icon-github').should('exist');
+      cy.getTestData('footer-icon-twitter').should('exist');
+      cy.getTestData('footer-icon-youtube').should('exist');
     });
 
     const socialPlatforms = [
-      { class: 'linkedin', name: 'LinkedIn' },
-      { class: 'github', name: 'GitHub' },
-      { class: 'twitter', name: 'Twitter' },
-      { class: 'youtube', name: 'YouTube' },
+      { dataTest: 'footer-tooltip-linkedin', name: 'LinkedIn' },
+      { dataTest: 'footer-tooltip-github', name: 'GitHub' },
+      { dataTest: 'footer-tooltip-twitter', name: 'Twitter' },
+      { dataTest: 'footer-tooltip-youtube', name: 'YouTube' },
     ];
 
     socialPlatforms.forEach((platform) => {
       it(`Should display tooltip when hovering over ${platform.name} icon`, () => {
-        cy.get(`.social-wrapper .${platform.class} .tooltip`).invoke(
+        cy.getTestData(platform.dataTest).invoke(
           'addClass',
           'show-for-test'
         );
-        cy.get(`.social-wrapper .${platform.class} .tooltip`).should(
+        cy.getTestData(platform.dataTest).should(
           'be.visible'
         );
-        cy.get(`.social-wrapper .${platform.class} .tooltip`).should(
+        cy.getTestData(platform.dataTest).should(
           'contain',
           platform.name
         );
