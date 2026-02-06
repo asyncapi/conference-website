@@ -27,7 +27,7 @@ function Header(): JSX.Element {
                   level="h1"
                   typeStyle="heading-lg"
                 >
-                  AsyncAPI Conference 2025
+                  AsyncAPI Conference 2026
                 </Heading>
               </div>
               <div className="w-[624px] sm:w-full text-center">
@@ -38,9 +38,7 @@ function Header(): JSX.Element {
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
                 <Link href="#tickets">
-                  <Button type="button" className="w-[250px]">
-                    Register Now
-                  </Button>
+                  <Button type="button" className="w-[250px]" text="Register Now" />
                 </Link>
               </div>
             </div>
