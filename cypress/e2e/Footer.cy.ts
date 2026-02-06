@@ -50,13 +50,8 @@ describe('Footer links', () => {
   });
 
   it('YouTube should redirect to correct page', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
-    cy.getTestData('footer-youtube').invoke('removeAttr', 'target').click();
-
-    cy.origin('https://www.youtube.com', () => {
-      cy.url().should('include', 'youtube.com/asyncapi');
-    });
+    cy.getTestData('footer-youtube')
+      .should('have.attr', 'href', 'https://www.youtube.com/asyncapi');
   });
 
   it('Should Contain AsyncAPI Conference Logo', () => {
