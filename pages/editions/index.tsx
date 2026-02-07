@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import PastEditonCard from '../../components/PastEditionCard';
+import PastEditonCard from '../../components/Cards/PastEditionCard/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
 
 const PastEditions = (): JSX.Element => {

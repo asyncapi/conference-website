@@ -5,11 +5,11 @@ import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
-import Tickets from '../components/Tickets/tickets';
+import Ticket from '../components/Ticket/Ticket';
 import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
-import Speaker from '../components/Speaker/speaker';
+import SpeakerCard from '../components/Cards/SpeakerCard/SpeakerCard';
 import cities from '../config/city-lists.json';
 import speakers from '../config/speakers.json';
 import Link from 'next/link';
@@ -107,11 +107,10 @@ export default function Home() {
                           handleSpeakers('all');
                           setCurrentCity({ name: 'All' });
                         }}
-                        className={`w-[120px] ${
-                          currentCity.name === 'All'
+                        className={`w-[120px] ${currentCity.name === 'All'
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                        }`}
+                          }`}
                         outline={true}
                       >
                         <span className="transparent-bg "></span>
@@ -130,12 +129,11 @@ export default function Home() {
                           >
                             <Button
                               type="button"
-                              className={`w-[120px] ${
-                                typeof currentCity !== 'string' &&
+                              className={`w-[120px] ${typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
-                                  ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                              }`}
+                                ? 'gradient-bg'
+                                : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                                }`}
                               outline={true}
                             >
                               {currentCity.name !== city.name && (
@@ -166,9 +164,11 @@ export default function Home() {
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
                     {speakersList.map((speaker) => {
                       return (
-                        <Speaker
+                        <SpeakerCard
                           key={speaker.id}
-                          details={speaker}
+                          name={speaker.name}
+                          title={speaker.title}
+                          image={speaker.img}
                           location={
                             currentCity.name !== 'All'
                               ? `${currentCity.name}, ${currentCity.country}`
@@ -193,11 +193,11 @@ export default function Home() {
                             insights with our enthusiastic audience!
                           </Paragraph>
                           <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
-                              <Button
-                                type="button"
-                                className="mt-[80px] w-[244px] border border-gray"
-                                text="Apply as a speaker"
-                              />
+                            <Button
+                              type="button"
+                              className="mt-[80px] w-[244px] border border-gray"
+                              text="Apply as a speaker"
+                            />
                           </Link>
                         </div>
                       ) : (
@@ -247,7 +247,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full mt-12">
-              <Tickets />
+              <Ticket />
             </div>
           </div>
         </div>

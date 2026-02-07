@@ -17,7 +17,7 @@ import speakers from '../../config/speakers.json';
 import cities from '../../config/city-lists.json';
 import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
-import Guidelines from '../../components/Speaker/guideline';
+import Guidelines from '../../components/Guidelines/guidelines';
 import CFPdata from '../../config/cfp-data.json';
 import { GetStaticPropsContext } from 'next';
 
@@ -136,6 +136,7 @@ function Venue({ city }: IVenue) {
         id="agenda"
         className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
       >
+
         {city.cfp ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
