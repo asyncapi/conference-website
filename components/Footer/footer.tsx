@@ -41,8 +41,14 @@ function Footer(): JSX.Element {
                   rel="noreferrer"
                   className="rounded-lg flex items-center justify-center hover:border-[#AD20E2] duration-150 ease-in-out"
                   data-test={`footer-${social.name}`}
+                  aria-label={social.name}
                 >
-                  <IconComponent className="w-[20px] h-[20px]" fill="white" />
+                  <span className="sr-only">{social.name}</span>
+                  <IconComponent
+                    className="w-[20px] h-[20px]"
+                    fill="white"
+                    aria-hidden="true"
+                  />
                 </a>
               );
             })}
