@@ -27,7 +27,7 @@ function Header(): JSX.Element {
                   level="h1"
                   typeStyle="heading-lg"
                 >
-                  AsyncAPI Conference 2026
+                  AsyncAPI Conference {new Date().getFullYear()}
                 </Heading>
               </div>
               <div className="w-[624px] sm:w-full text-center">
