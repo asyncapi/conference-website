@@ -5,6 +5,7 @@ import React, {
   SetStateAction,
   JSX,
 } from 'react';
+import { useRouter } from 'next/router';
 import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
@@ -16,7 +17,28 @@ interface INavDropProp {
 
 const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
   ({ setDrop }, ref): JSX.Element => {
+    const router = useRouter();
     const [show, setShow] = useState<string | null>(null);
+
+    // Helper function to determine if a link is active
+    const isLinkActive = (linkRef: string): boolean => {
+      const currentPath = router.pathname;
+      const currentHash = router.asPath.split('#')[1];
+
+      // Handle hash-based links (e.g., /#about, /#speakers)
+      if (linkRef.startsWith('/#')) {
+        const linkHash = linkRef.substring(2); // Remove '/#'
+        return currentPath === '/' && currentHash === linkHash;
+      }
+
+      // Handle route-based links (e.g., /editions, /venue/California)
+      if (linkRef.startsWith('/') && !linkRef.includes('#')) {
+        return currentPath === linkRef || currentPath.startsWith(linkRef + '/');
+      }
+
+      return false;
+    };
+
     return (
       <div
         ref={ref}
@@ -39,7 +61,17 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                         className="flex items-center"
                         onClick={(e) => e.preventDefault()}
                       >
-                        <div className="text-white">{link.title}</div>
+                        <div
+                          className={`text-white ${
+                            link.subMenu.some((subLink) =>
+                              isLinkActive(subLink.ref)
+                            )
+                              ? 'font-bold'
+                              : ''
+                          }`}
+                        >
+                          {link.title}
+                        </div>
                         <Dropdown
                           fill="white"
                           className={`ml-2 transition-transform duration-500 ${
@@ -54,7 +86,11 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                               <div
                                 data-test={`nav-sub-${sub.title}`}
                                 onClick={() => setDrop(false)}
-                                className="h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer"
+                                className={`h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer ${
+                                  isLinkActive(sub.ref)
+                                    ? 'font-bold border-l-4 border-white'
+                                    : ''
+                                }`}
                               >
                                 {sub.title}
                               </div>
@@ -64,7 +100,12 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                       )}
                     </div>
                   ) : (
-                    <div className="text-white" onClick={() => setDrop(false)}>
+                    <div
+                      className={`text-white ${
+                        link.ref && isLinkActive(link.ref) ? 'font-bold' : ''
+                      }`}
+                      onClick={() => setDrop(false)}
+                    >
                       {link.title}
                     </div>
                   )}

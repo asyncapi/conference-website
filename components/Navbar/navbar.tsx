@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
 import links from '../../config/links.json';
@@ -10,6 +11,7 @@ import Image from 'next/image';
 import { LinkItem } from '../../types/types';
 
 function Navbar(): JSX.Element {
+  const router = useRouter();
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
@@ -21,6 +23,26 @@ function Navbar(): JSX.Element {
 
   //TODO: Refactor Navbar Code
   let closeTimeout = useRef<ReturnType<typeof window.setTimeout> | null>(null);
+
+  // Helper function to determine if a link is active
+  const isLinkActive = (linkRef: string): boolean => {
+    const currentPath = router.pathname;
+    const currentHash = router.asPath.split('#')[1];
+
+    // Handle hash-based links (e.g., /#about, /#speakers)
+    if (linkRef.startsWith('/#')) {
+      const linkHash = linkRef.substring(2); // Remove '/#'
+      return currentPath === '/' && currentHash === linkHash;
+    }
+
+    // Handle route-based links (e.g., /editions, /venue/California)
+    if (linkRef.startsWith('/') && !linkRef.includes('#')) {
+      // Check for exact match or if current path starts with the link (for nested routes)
+      return currentPath === linkRef || currentPath.startsWith(linkRef + '/');
+    }
+
+    return false;
+  };
 
   const handleClosing = useCallback(
     (event: MouseEvent) => {
@@ -132,8 +154,16 @@ function Navbar(): JSX.Element {
                     <div>
                       {link.subMenu ? (
                         <button
-                          className="flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded px-1 py-1"
-                          onClick={() => setShow(show === link.title ? null : link.title)}
+                          className={`flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded px-1 py-1 ${
+                            link.subMenu.some((subLink) =>
+                              isLinkActive(subLink.ref)
+                            )
+                              ? 'font-bold'
+                              : ''
+                          }`}
+                          onClick={() =>
+                            setShow(show === link.title ? null : link.title)
+                          }
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault();
@@ -181,11 +211,40 @@ function Navbar(): JSX.Element {
                           )}
                         </button>
                       ) : (
-                        <Link href={link.ref}>{link.title}</Link>
+                        <Link
+                          href={link.ref}
+                          className={isLinkActive(link.ref) ? 'font-bold' : ''}
+                        >
+                          {link.title}
+                        </Link>
                       )}
                     </div>
-                    <span className="after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6  "></span>
-                    <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
+                    <span
+                      className={`after:absolute after:-bottom-1 after:left-1/2 after:transition-all after:h-0.5 after:bg-white ${
+                        (
+                          link.subMenu
+                            ? link.subMenu.some((subLink) =>
+                                isLinkActive(subLink.ref)
+                              )
+                            : isLinkActive(link.ref)
+                        )
+                          ? 'after:w-3/6'
+                          : 'after:w-0 after:group-hover:w-3/6'
+                      }`}
+                    ></span>
+                    <span
+                      className={`after:absolute after:-bottom-1 after:right-1/2 after:transition-all after:h-0.5 after:bg-white ${
+                        (
+                          link.subMenu
+                            ? link.subMenu.some((subLink) =>
+                                isLinkActive(subLink.ref)
+                              )
+                            : isLinkActive(link.ref)
+                        )
+                          ? 'after:w-3/6'
+                          : 'after:w-0 after:group-hover:w-3/6'
+                      }`}
+                    ></span>
                     {show === link.title && link.subMenu && (
                       <div
                         className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
@@ -200,35 +259,47 @@ function Navbar(): JSX.Element {
                             ref={(el) => {
                               subMenuRefs.current[index] = el;
                             }}
-                            className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1`}
+                            className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1 ${
+                              isLinkActive(subL.ref)
+                                ? 'font-bold underline'
+                                : ''
+                            }`}
                             data-test={`nav-sub-${subL.title}`}
                             onKeyDown={(e) => {
                               const currentIndex = index;
                               const maxIndex = link.subMenu!.length - 1;
-                              
+
                               if (e.key === 'ArrowDown') {
                                 e.preventDefault();
-                                const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+                                const nextIndex =
+                                  currentIndex === maxIndex
+                                    ? 0
+                                    : currentIndex + 1;
                                 setFocusedSubMenuItem(nextIndex);
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'ArrowUp') {
                                 e.preventDefault();
-                                const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+                                const prevIndex =
+                                  currentIndex === 0
+                                    ? maxIndex
+                                    : currentIndex - 1;
                                 setFocusedSubMenuItem(prevIndex);
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
                                 // Focus back to the main menu button
-                                const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
+                                const button = e.currentTarget
+                                  .closest('.subMenu')
+                                  ?.parentElement?.querySelector('button');
                                 (button as HTMLButtonElement)?.focus();
                               }
-                              
+
                               if (e.key === 'Tab') {
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
