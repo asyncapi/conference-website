@@ -54,7 +54,7 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
   };
 
   return (
-    <form className="mt-3" onSubmit={(e) => onSubmit(e)}>
+    <form className="mt-3" onSubmit={(e) => onSubmit(e)} aria-busy={submitting}>
       <h1 className="text-white font-bold text-4xl lg:text-3xl">Review & Submit</h1>
       <p className="mt-3 text-dark-600">Review your details and submit your registration.</p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
@@ -93,7 +93,15 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
             </Button>
           </div>
 
-          {error && <div className="text-red-400 mt-2">{error}</div>}
+          {error && (
+            <div
+              className="text-red-400 mt-2"
+              role="alert"
+              aria-live="assertive"
+            >
+              {error}
+            </div>
+          )}
         </div>
       </div>
     </form>
