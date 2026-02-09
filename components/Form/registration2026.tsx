@@ -55,7 +55,12 @@ export default function Registration2026(): JSX.Element {
   if (step === 4) view = <StepFourRegistration setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 0)
     view = (
-      <div className="flex flex-col items-center h-full gap-6">
+      <div
+        className="flex flex-col items-center h-full gap-6"
+        role="status"
+        aria-live="polite"
+        tabIndex={-1}
+      >
         <div>
           <h1 className="text-2xl text-white font-bold mt-6">Registration submitted successfully</h1>
         </div>
