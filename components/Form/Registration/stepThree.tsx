@@ -67,7 +67,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
         </fieldset>
 
         <div className="mt-3 text-sm text-dark-600">
-          We process your data according to our <a href="/privacy" className="underline">Privacy Policy</a>. By submitting you agree to the <a href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer" className="underline">Code of Conduct</a> and Privacy Policy.
+          We process your data according to our <a href="/privacy" className="underline">Privacy Policy</a>. By submitting you agree to the <a href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer" className="underline" aria-label="Code of Conduct (opens in new tab)">Code of Conduct<span className="sr-only"> (opens in new tab)</span></a> and Privacy Policy.
         </div>
 
         <label htmlFor="notes" className="text-dark-600 text-lg mt-6 block">Notes (optional)</label>
