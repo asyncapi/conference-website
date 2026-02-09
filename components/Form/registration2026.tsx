@@ -59,7 +59,9 @@ export default function Registration2026(): JSX.Element {
         <div>
           <h1 className="text-2xl text-white font-bold mt-6">Registration submitted successfully</h1>
         </div>
-        <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
+        <div aria-hidden="true">
+          <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
+        </div>
         <div className="mt-4">
           <Link href="/">
             <Button className="bg-tetiary-pink p-3 rounded-md text-white" type="button">
