@@ -22,7 +22,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
         <label htmlFor="dietaryAccessibility" className="text-dark-600 text-lg">Dietary / Accessibility needs</label>
         <textarea
           id="dietaryAccessibility"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={dietary}
           onChange={(e) => setForm((prev) => ({ ...prev, dietaryAccessibility: e.target.value }))}
           data-test="reg-step-three-dietary"
@@ -67,7 +67,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
         <label htmlFor="notes" className="text-dark-600 text-lg mt-6 block">Notes (optional)</label>
         <textarea
           id="notes"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={notes}
           onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
           data-test="reg-step-three-notes"

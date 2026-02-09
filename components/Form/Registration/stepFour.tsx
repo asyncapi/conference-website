@@ -62,7 +62,7 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
         <label htmlFor="notes" className="text-dark-600 text-lg">Notes</label>
         <textarea
           id="notes"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
           data-test="reg-step-four-notes"
         />

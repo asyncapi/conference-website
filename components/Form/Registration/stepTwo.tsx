@@ -22,7 +22,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
         <input
           id="company"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={company}
           onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
           data-test="reg-step-two-company"
@@ -31,7 +31,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         <label htmlFor="role" className="text-dark-600 text-lg mt-6 block">Role</label>
         <input
           id="role"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={role}
           onChange={(e) => setForm((prev) => ({ ...prev, role: e.target.value }))}
           data-test="reg-step-two-role"
@@ -40,7 +40,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         <label htmlFor="preferredCity" className="text-dark-600 text-lg mt-6 block">Preferred city</label>
         <select
           id="preferredCity"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={preferredCity}
           onChange={(e) => setForm((prev) => ({ ...prev, preferredCity: e.target.value }))}
           data-test="reg-step-two-city"
@@ -56,7 +56,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         <label htmlFor="attendanceType" className="text-dark-600 text-lg mt-6 block">Attendance type</label>
         <input
           id="attendanceType"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={attendanceType}
           onChange={(e) => setForm((prev) => ({ ...prev, attendanceType: e.target.value }))}
           data-test="reg-step-two-attendance"
@@ -65,7 +65,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
         <label htmlFor="timezone" className="text-dark-600 text-lg mt-6 block">Timezone</label>
         <input
           id="timezone"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none border border-[#E50E99]"
+          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
           value={timezone}
           onChange={(e) => setForm((prev) => ({ ...prev, timezone: e.target.value }))}
           data-test="reg-step-two-timezone"
