@@ -15,10 +15,10 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
 
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 4)} data-test="reg-step-three">
-      <h1 className="text-white font-bold text-4xl lg:text-3xl">Consents & Notes</h1>
+      <h1 id="step-three-heading" className="text-white font-bold text-4xl lg:text-3xl">Consents & Notes</h1>
       <p className="mt-3 text-dark-600">Tell us any dietary or accessibility needs and consent preferences.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
-      <div className="mt-10">
+      <div className="mt-10" role="group" aria-labelledby="step-three-heading">
         <label htmlFor="dietaryAccessibility" className="text-dark-600 text-lg">Dietary / Accessibility needs</label>
         <textarea
           id="dietaryAccessibility"

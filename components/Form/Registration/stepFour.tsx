@@ -55,10 +55,10 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
 
   return (
     <form className="mt-3" onSubmit={(e) => onSubmit(e)} aria-busy={submitting}>
-      <h1 className="text-white font-bold text-4xl lg:text-3xl">Review & Submit</h1>
+      <h1 id="step-four-heading" className="text-white font-bold text-4xl lg:text-3xl">Review & Submit</h1>
       <p className="mt-3 text-dark-600">Review your details and submit your registration.</p>
       <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
-      <div className="mt-10">
+      <div className="mt-10" role="group" aria-labelledby="step-four-heading">
         <label htmlFor="notes" className="text-dark-600 text-lg">Notes</label>
         <textarea
           id="notes"

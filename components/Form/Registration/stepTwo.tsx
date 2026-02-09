@@ -15,10 +15,10 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
 
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 3)} data-test="reg-step-two">
-      <h1 className="text-white font-bold text-4xl lg:text-3xl">Event Details</h1>
+      <h1 id="step-two-heading" className="text-white font-bold text-4xl lg:text-3xl">Event Details</h1>
       <p className="mt-3 text-dark-600">Tell us how you'll attend so we can reserve your place.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
-      <div className="mt-10">
+      <div className="mt-10" role="group" aria-labelledby="step-two-heading">
         <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
         <input
           id="company"

@@ -20,10 +20,10 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
       data-test="reg-step-one"
       onBlur={() => setTouched(true)}
     >
-      <h1 className="text-white font-bold text-4xl lg:text-3xl">Personal Info</h1>
+      <h1 id="step-one-heading" className="text-white font-bold text-4xl lg:text-3xl">Personal Info</h1>
       <p className="mt-3 text-dark-600">Tell us who you are so we can prepare your ticket.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
-      <div className="mt-10">
+      <div className="mt-10" role="group" aria-labelledby="step-one-heading">
         <label htmlFor="fullName" className="text-dark-600 text-lg">
           Full name <span aria-hidden="true">*</span>
         </label>
