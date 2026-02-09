@@ -91,12 +91,17 @@ export default function Registration2026(): JSX.Element {
       </div>
       <div className="mt-5 border-b border-[#333]" />
       <div className="flex lg:flex-col">
-        <div className="lg:hidden border-r w-[30rem] border-[#333] min-h-[50vh]">
-          <div className="p-6 pr-14 lg:p-0 lg:py-2 lg:pr-4 mt-12">
+        <nav className="lg:hidden border-r w-[30rem] border-[#333] min-h-[50vh]" aria-label="Registration progress">
+          <ol className="p-6 pr-14 lg:p-0 lg:py-2 lg:pr-4 mt-12 list-none">
             {fields.map((field, i) => {
               const index = i + 1;
+              const isCurrent = index === step;
               return (
-                <div key={field.title} className=" w-full">
+                <li
+                  key={field.title}
+                  className="w-full"
+                  aria-current={isCurrent ? "step" : undefined}
+                >
                   <div className="flex justify-between">
                     <div className="sm:hidden my-4">
                       <h3 className={`font-bold text-lg ${(index <= step && 'text-[#E50E99]') || 'text-white'}`}>
@@ -105,11 +110,11 @@ export default function Registration2026(): JSX.Element {
                       <p className="text-dark-600">{field.description}</p>
                     </div>
                   </div>
-                </div>
+                </li>
               );
             })}
-          </div>
-        </div>
+          </ol>
+        </nav>
         <div className="p-10 ml-24 lg:ml-0 w-full px-20 lg:px-0" id="registration-form">
           <p className="text-dark-400" aria-live="polite">{step !== 0 && `Step ${step}/4`}</p>
           <div ref={stepHeadingRef} tabIndex={-1} className="outline-none">
