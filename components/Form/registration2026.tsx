@@ -41,7 +41,6 @@ export default function Registration2026(): JSX.Element {
     }
   }, []);
 
-  // Focus management: move focus to step heading on step change
   useEffect(() => {
     if (stepHeadingRef.current && step !== 0) {
       stepHeadingRef.current.focus();
@@ -73,6 +72,14 @@ export default function Registration2026(): JSX.Element {
 
   return (
     <div className="py-28 px-6" id="registration-2026" ref={confetiRef}>
+      {/* Skip link for keyboard users */}
+      <a
+        href="#registration-form"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-[#E50E99] focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
+      >
+        Skip to registration form
+      </a>
+
       <div className="lg:px-6 mt-5">
         <h1 className="text-white font-bold text-5xl lg:text-3xl">Conference 2026 Registration</h1>
         <p className="mt-2 text-dark-500 text-lg">Please provide your details to register for the event.</p>
@@ -101,7 +108,7 @@ export default function Registration2026(): JSX.Element {
             })}
           </div>
         </div>
-        <div className="p-10 ml-24 lg:ml-0 w-full px-20 lg:px-0">
+        <div className="p-10 ml-24 lg:ml-0 w-full px-20 lg:px-0" id="registration-form">
           <p className="text-dark-400" aria-live="polite">{step !== 0 && `Step ${step}/4`}</p>
           <div ref={stepHeadingRef} tabIndex={-1} className="outline-none">
             {view}
