@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import Head from 'next/head';
-import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
@@ -18,19 +17,19 @@ import Dropdown from '../components/Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../types/types';
 
 export default function Home() {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
-  const [speakersList, setSpeakersList] = useState(speakers);
+  const [speakersList, setSpeakersList] = useState<SpeakerType[]>(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
   });
+  const dropdownItems: Partial<City>[] = [{ name: 'All', country: '' }, ...cities];
 
   const handleSpeakers = (city: string) => {
-    if (city && city !== 'all') {
+    if (city && city.toLowerCase() !== 'all') {
       const citySpeaker = speakers.filter((speaker) =>
-        speaker.city.includes(city)
+        speaker.city?.includes(city)
       );
       setSpeakersList(citySpeaker);
-    } else if (city === 'all') {
+    } else if (city && city.toLowerCase() === 'all') {
       setSpeakersList(speakers);
     } else {
       setSpeakersList([]);
@@ -85,80 +84,18 @@ export default function Home() {
             </div>
             <div className="lg:py-20 w-[1130px] lg:w-full">
               <div className="mt-[64px] lg:mt-0">
-                {isTablet ? (
-                  <div className="w-full">
-                    <Dropdown
-                      selectedItem={currentCity as City}
-                      items={cities}
-                      onSelect={(city) => {
-                        setCurrentCity(city);
-                        handleSpeakers(city.name);
-                      }}
-                      getDisplayValue={(city) => city?.name}
-                      placeholder="Select a city"
-                    />
-                  </div>
-                ) : (
-                  <div className="flex justify-center">
-                    <div className="space-x-4 lg:w-full flex justify-between">
-                      <Button
-                        type="button"
-                        onClick={() => {
-                          handleSpeakers('all');
-                          setCurrentCity({ name: 'All' });
-                        }}
-                        className={`w-[120px] ${
-                          currentCity.name === 'All'
-                            ? 'gradient-bg'
-                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                        }`}
-                        outline={true}
-                      >
-                        <span className="transparent-bg "></span>
-                        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                          All
-                        </span>
-                      </Button>
-                      {cities.map((city) => {
-                        return (
-                          <div
-                            key={city.name}
-                            onClick={() => {
-                              setCurrentCity(city);
-                              handleSpeakers(city.name);
-                            }}
-                          >
-                            <Button
-                              type="button"
-                              className={`w-[120px] ${
-                                typeof currentCity !== 'string' &&
-                                currentCity.name === city.name
-                                  ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                              }`}
-                              outline={true}
-                            >
-                              {currentCity.name !== city.name && (
-                                <>
-                                  <span className="transparent-bg "></span>
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                </>
-                              )}
-                              {typeof currentCity !== 'string' &&
-                                currentCity.name === city.name && (
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                )}
-                            </Button>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
+                <div className="w-full max-w-xs mx-auto">
+                  <Dropdown
+                    selectedItem={currentCity}
+                    items={dropdownItems}
+                    onSelect={(city) => {
+                      setCurrentCity(city);
+                      handleSpeakers(city.name || 'All');
+                    }}
+                    getDisplayValue={(city) => city?.name}
+                    placeholder="All"
+                  />
+                </div>
               </div>
 
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
@@ -184,7 +121,7 @@ export default function Home() {
                 ) : (
                   <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
                     <div className="w-[720px] lg:w-full">
-                      {typeof currentCity !== 'string' && currentCity.cfp ? (
+                      {currentCity.cfp ? (
                         <div>
                           <Paragraph className="text-gray-200">
                             We are actively accepting speaker applications, and
@@ -192,7 +129,7 @@ export default function Home() {
                             below. Join us on stage and share your valuable
                             insights with our enthusiastic audience!
                           </Paragraph>
-                          <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
+                          <Link className='flex justify-center' href={currentCity.cfp} target="_blank" rel="noopener noreferrer">
                               <Button
                                 type="button"
                                 className="mt-[80px] w-[244px] border border-gray"
@@ -206,8 +143,7 @@ export default function Home() {
                             typeStyle="heading-md-semibold"
                             className="text-gray-200"
                           >
-                            {typeof currentCity !== 'string' &&
-                              currentCity.name}{' '}
+                            {currentCity.name}{' '}
                             Speakers Coming Soon - Stay Tuned!
                           </Heading>
                         </div>
