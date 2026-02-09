@@ -24,6 +24,7 @@ const fields: Field[] = [
 export default function Registration2026(): JSX.Element {
   const [step, setStep] = useState<number>(1);
   const confetiRef = useRef<HTMLDivElement>(null);
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null);
   const [height, setHeight] = useState<number | undefined>(undefined);
   const [width, setWidth] = useState<number | undefined>(undefined);
   const [formData, setFormData] = useState<Partial<CfpForm>>({});
@@ -39,6 +40,13 @@ export default function Registration2026(): JSX.Element {
       setWidth(confetiRef.current.clientWidth);
     }
   }, []);
+
+  // Focus management: move focus to step heading on step change
+  useEffect(() => {
+    if (stepHeadingRef.current && step !== 0) {
+      stepHeadingRef.current.focus();
+    }
+  }, [step]);
 
   const stepOne = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   let view: JSX.Element = stepOne;
@@ -94,8 +102,10 @@ export default function Registration2026(): JSX.Element {
           </div>
         </div>
         <div className="p-10 ml-24 lg:ml-0 w-full px-20 lg:px-0">
-          <p className="text-dark-400">{step !== 0 && `Step ${step}/4`}</p>
-          {view}
+          <p className="text-dark-400" aria-live="polite">{step !== 0 && `Step ${step}/4`}</p>
+          <div ref={stepHeadingRef} tabIndex={-1} className="outline-none">
+            {view}
+          </div>
         </div>
       </div>
     </div>
