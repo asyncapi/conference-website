@@ -28,37 +28,43 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           data-test="reg-step-three-dietary"
         />
 
-        <div className="mt-5 text-dark-600">
-          <label className="inline-flex items-center">
-            <input
-              type="checkbox"
-              checked={localUpdates}
-              onChange={(e) => {
-                setLocalUpdates(e.target.checked);
-                setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
-              }}
-              data-test="reg-step-three-updates"
-              className="mr-2"
-            />
-            Receive occasional updates about the event
-          </label>
-        </div>
+        <fieldset className="mt-5 border-0 p-0">
+          <legend className="text-dark-600 text-lg mb-3">Communication Preferences</legend>
 
-        <div className="mt-3 text-dark-600">
-          <label className="inline-flex items-center">
-            <input
-              type="checkbox"
-              checked={localSponsor}
-              onChange={(e) => {
-                setLocalSponsor(e.target.checked);
-                setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
-              }}
-              data-test="reg-step-three-sponsor"
-              className="mr-2"
-            />
-            Share my contact with sponsors (optional)
-          </label>
-        </div>
+          <div className="text-dark-600">
+            <label className="inline-flex items-center">
+              <input
+                type="checkbox"
+                id="updatesOptIn"
+                checked={localUpdates}
+                onChange={(e) => {
+                  setLocalUpdates(e.target.checked);
+                  setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
+                }}
+                data-test="reg-step-three-updates"
+                className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+              />
+              Receive occasional updates about the event
+            </label>
+          </div>
+
+          <div className="mt-3 text-dark-600">
+            <label className="inline-flex items-center">
+              <input
+                type="checkbox"
+                id="sponsorDataSharing"
+                checked={localSponsor}
+                onChange={(e) => {
+                  setLocalSponsor(e.target.checked);
+                  setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
+                }}
+                data-test="reg-step-three-sponsor"
+                className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+              />
+              Share my contact with sponsors (optional)
+            </label>
+          </div>
+        </fieldset>
 
         <div className="mt-3 text-sm text-dark-600">
           We process your data according to our <a href="/privacy" className="underline">Privacy Policy</a>. By submitting you agree to the <a href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer" className="underline">Code of Conduct</a> and Privacy Policy.
