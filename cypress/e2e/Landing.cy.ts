@@ -15,6 +15,8 @@ describe('Landing Page Tests', () => {
   });
 
   it('Should contain About Section', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('about-section').should('be.visible');
   });
 
@@ -28,6 +30,8 @@ describe('Landing Page Tests', () => {
   });
 
   it('Should contain Speakers section', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     if (Array.isArray(speakers) && speakers.length > 0) {
       cy.getTestData('sponsor-section').should('be.visible');
     } else {
@@ -38,14 +42,20 @@ describe('Landing Page Tests', () => {
   });
 
   it('Should contain Ticket section', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('ticket-section').should('be.visible');
   });
 
   it('Should contain Sponsor component', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     cy.getTestData('sponsor-section').should('be.visible');
   });
 
   it('Should contain logos in Sponsor component', () => {
+    cy.getTestData('close-button').click();
+    cy.wait(350);
     const eventSponsors = cities[0].sponsors.eventSponsors;
 
     eventSponsors.forEach((sponsor) => {
