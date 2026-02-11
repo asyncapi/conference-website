@@ -47,7 +47,11 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                           }`}
                         />
                       </div>
-                      {show && show === link.title && (
+                      <div 
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          show === link.title ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                      >
                         <div className="flex flex-col py-6 w-full">
                           {link.subMenu.map((sub) => (
                             <Link href={sub.ref} key={sub.ref}>
@@ -61,7 +65,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                             </Link>
                           ))}
                         </div>
-                      )}
+                      </div>
                     </div>
                   ) : (
                     <div className="text-white" onClick={() => setDrop(false)}>
