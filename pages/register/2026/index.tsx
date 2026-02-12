@@ -9,8 +9,6 @@ export default function Register2026() {
             <main className="container mt-20 mb-20">
                 <Registration2026 />
             </main>
-
-            {/* Footer is rendered globally in pages/_app.tsx; avoid duplicate here */}
         </div>
     );
 }
