@@ -1,65 +1,83 @@
 [
-    {
+  {
     "id": 1,
     "name": "V. Thulisile Sibanda",
     "title": "Senior Community Manager at AsyncAPI Initiative",
     "img": "/img/speaker-images/london/Thulisile Sibanda.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 2,
     "name": "Annegret Junker",
     "title": "Chief Software Architect at codecentric AG",
     "img": "/img/speaker-images/online-conf/Annegret.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 3,
     "name": "Ignacio Castillejos",
     "title": "Staff Engineer at The New York Times",
     "img": "/img/speaker-images/san-jose/Ignacio.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 4,
     "name": "John Fallows",
     "title": "CTO at Aklivity",
     "img": "/img/speaker-images/san-jose/JohnFallows.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 5,
     "name": "Hugo Guerrero",
-    "title": "Head of Techincal Marketing at Kong",
+    "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/san-jose/Hugo.webp",
-    "city": ["California"]
-  },  
+    "city": [
+      "California"
+    ]
+  },
   {
     "id": 6,
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
-    "city": ["California"]
-  },  
+    "city": [
+      "California"
+    ]
+  },
   {
     "id": 7,
     "name": "Kay James",
     "title": "Product Marketing Manager at Gravitee",
     "img": "/img/speaker-images/san-jose/Kay.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 8,
     "name": "Leonid Lukyanov",
     "title": "CEO at Aklivity",
     "img": "/img/speaker-images/paris/Leonid.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   },
   {
     "id": 9,
     "name": "Artur Ciocanu",
     "title": "Lead Senior Computer Scientist at Adobe",
     "img": "/img/speaker-images/london/Artur Ciocanu.webp",
-    "city": ["California"]
+    "city": [
+      "California"
+    ]
   }
 ]
