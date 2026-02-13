@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import Image from 'next/image';
-import ILink from '../illustration/link';
+import ILink from '../../illustration/link';
 
 interface PastEditonCardProp {
   url: string;
@@ -27,7 +27,7 @@ const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
 
       <div className="relative w-full h-[250px] my-4 rounded-lg overflow-hidden">
         <Image
-          src={`/img/past-editions/${year}.png`}
+          src={`/img/past-editions/${year}.webp`}
           alt={`AsyncAPI Conference ${year}`}
           fill
           className="object-cover"
