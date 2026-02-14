@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
-import { City } from '../../types/types';
-import Arrows from '../illustration/arrows';
 
 interface IDropdown<T> {
   selectedItem: T | null;
@@ -57,38 +55,50 @@ function Dropdown<T>({
           onClick={() => setShow(!show)}
         >
           <div>{displayValue}</div>
-          <Arrows direction='down' className='w-5 h-5' />
+          <svg
+            className={`-mr-1 h-5 w-5 text-gray-400 transition-transform ${show ? 'rotate-180' : ''
+              }`}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
       </div>
 
-      {show && (
-        <div
-          className="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabIndex={-1}
-        >
-          <div className="rounded-md gradient-bg" role="none">
-            {items &&
-              items.map((item, i) => {
-                const displayText = getDisplayValue(item);
-                return (
-                  <div
-                    key={i}
-                    onClick={() => handleItemSelect(item)}
-                    className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
-                    role="menuitem"
-                    tabIndex={-1}
-                    id={`menu-item-${i}`}
-                  >
-                    {displayText}
-                  </div>
-                );
-              })}
-          </div>
+      <div
+        className={`w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-300 ease-in-out ${
+          show ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
+        }`}
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+        tabIndex={-1}
+      >
+        <div className="rounded-md gradient-bg" role="none">
+          {items &&
+            items.map((item, i) => {
+              const displayText = getDisplayValue(item);
+              return (
+                <div
+                  key={i}
+                  onClick={() => handleItemSelect(item)}
+                  className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
+                  role="menuitem"
+                  tabIndex={-1}
+                  id={`menu-item-${i}`}
+                >
+                  {displayText}
+                </div>
+              );
+            })}
         </div>
-      )}
+      </div>
     </div>
   );
 }
