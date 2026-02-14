@@ -1,3 +1,5 @@
+'use client';
+
 import Slider from 'react-slick';
 import React, { useEffect, useState, useRef, JSX } from 'react';
 import { useMediaQuery } from 'react-responsive';

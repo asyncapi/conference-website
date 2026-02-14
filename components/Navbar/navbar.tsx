@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
