@@ -17,6 +17,64 @@ body {
   background: #1b1130;
 }
 
+/* Social media icon tooltip */
+.social-wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  background: #fff;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.social-wrapper .icon .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.social-wrapper .icon:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  top: -45px;
+}
+.social-wrapper .icon .tooltip.show-for-test {
+  opacity: 1 !important;
+  pointer-events: auto;
+  top: -45px;
+}
+
+.social-wrapper .linkedin:hover .tooltip,
+.social-wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+}
+
+.social-wrapper .github:hover .tooltip,
+.social-wrapper .github:hover .tooltip::before {
+  background: #333;
+}
+
+.social-wrapper .twitter:hover .tooltip,
+.social-wrapper .twitter:hover .tooltip::before {
+  background: #333;
+}
+
+.social-wrapper .youtube:hover .tooltip,
+.social-wrapper .youtube:hover .tooltip::before {
+  background: #ff0000;
+}
+
 .text-gradient {
   background: linear-gradient(
     230deg,
@@ -168,22 +226,24 @@ backdrop-filter: blur(10px); */
   mix-blend-mode: lighten;
 }
 
+
 .color-effect {
-  position: absolute;
-  width: 100vw;
-  max-width: none;
-  bottom: 400px;
-  will-change: transform;
-  transform: translate3d(0%, 9.9964%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  vertical-align: middle;
-  display: inline-block;
+    position: absolute;
+    width: 100vw;
+    max-width: none;
+    bottom: 400px;
+    will-change: transform;
+    transform: translate3d(0%, 9.9964%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    vertical-align: middle;
+    display: inline-block;
+    z-index: 0;
 }
 
 @media (max-width: 780px) {
   .color-effect {
-    bottom: 700px;
+    bottom: 900px;
+    opacity: 0.7;
   }
 }
 
