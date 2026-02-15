@@ -1,65 +1,81 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from 'next';
 import React from 'react';
-import Button from '../../components/Buttons/button';
-import Heading from '../../components/Typography/heading';
-import Paragraph from '../../components/Typography/paragraph';
-import Sponsors from '../../components/Sponsors/sponsors';
+import Button from '../../../components/Buttons/button';
+import Heading from '../../../components/Typography/heading';
+import Paragraph from '../../../components/Typography/paragraph';
+import Sponsors from '../../../components/Sponsors/sponsors';
 import {
   Agenda as AgendaType,
-  City,
   ConferenceStatus,
   ExtendedCity,
   Speaker as SpeakerType,
-} from '../../types/types';
-import { getEventStatus } from '../../utils/status';
-import agenda from '../../config/agenda.json';
-import speakers from '../../config/speakers.json';
-import cities from '../../config/city-lists.json';
-import tickets from '../../config/tickets.json';
-import Agenda from '../../components/Agenda/agenda';
-import Guidelines from '../../components/Speaker/guideline';
-import CFPdata from '../../config/cfp-data.json';
-import { GetStaticPropsContext } from 'next';
+} from '../../../types/types';
+import { getEventStatus } from '../../../utils/status';
+import agenda from '../../../config/agenda.json';
+import speakers from '../../../config/speakers.json';
+import cities from '../../../config/city-lists.json';
+import tickets from '../../../config/tickets.json';
+import Agenda from '../../../components/Agenda/agenda';
+import Guidelines from '../../../components/Speaker/guideline';
+import CFPdata from '../../../config/cfp-data.json';
 
-interface IVenue {
-  city: ExtendedCity;
+// Replaces getStaticPaths
+export function generateStaticParams() {
+  return cities.map((city) => ({
+    id: city.name,
+  }));
 }
 
-export async function getStaticProps({ params }: GetStaticPropsContext) {
-  //temporary type
-  let currentCity: Partial<ExtendedCity>;
-  const cityName = params?.id as string;
-  const city = cities.filter((city) => city.name === cityName);
-  currentCity = city[0];
+// Replaces <Head> with dynamic metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const city = cities.find((c) => c.name === id);
+  if (!city) {
+    return { title: 'Venue Not Found' };
+  }
+  return {
+    title: `${city.name}, ${city.country}`,
+    description: city.description,
+  };
+}
+
+// Helper: replaces getStaticProps logic
+function getCityData(cityName: string): ExtendedCity {
+  const city = cities.find((c) => c.name === cityName);
+  if (!city) {
+    throw new Error(`City not found: ${cityName}`);
+  }
   const citySpeakers = speakers.filter((speaker: SpeakerType) =>
     speaker.city.includes(cityName)
   );
   const cityAgenda = agenda.filter((a: AgendaType) => a.city === cityName);
-  const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
-  currentCity.speakers = citySpeakers;
-  currentCity.agenda = cityAgenda;
-  currentCity.ticket = cityTicket[0];
+  const cityTicket = tickets.filter((ticket) =>
+    ticket.type.includes(cityName)
+  );
   return {
-    props: {
-      city: currentCity,
-    },
-  };
+    ...city,
+    speakers: citySpeakers,
+    agenda: cityAgenda,
+    ticket: cityTicket[0],
+  } as ExtendedCity;
 }
 
-export async function getStaticPaths() {
-  const paths = cities.map((city) => ({
-    params: { id: city.name },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-function Venue({ city }: IVenue) {
+export default async function VenuePage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const city = getCityData(id);
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
+
   return (
     <div data-test={`venue-${city.name}`}>
       <div
@@ -104,14 +120,26 @@ function Venue({ city }: IVenue) {
             {eventStatus === ConferenceStatus.ENDED ? (
               city.playlist && (
                 <a href="#recordings">
-                  <Button type="button" className="w-[250px] h-[50px] m-8" text="Watch Recordings" />
+                  <Button
+                    type="button"
+                    className="w-[250px] h-[50px] m-8"
+                    text="Watch Recordings"
+                  />
                 </a>
               )
             ) : (
               <div className="m-[30px]">
                 {city.ticket && city.ticket.url && (
                   <a href={city.ticket.url} target="_blank" rel="noreferrer">
-                    <Button type="button" className="px-8 m-2 w-[250px]" text={city.ticket.price ? 'Get Your Free Ticket' : 'Register Now'} />
+                    <Button
+                      type="button"
+                      className="px-8 m-2 w-[250px]"
+                      text={
+                        city.ticket.price
+                          ? 'Get Your Free Ticket'
+                          : 'Register Now'
+                      }
+                    />
                   </a>
                 )}
                 {city.cfp && (
@@ -124,7 +152,11 @@ function Venue({ city }: IVenue) {
                     target={city.name == 'Online' ? '' : '_blank'}
                     rel="noreferrer"
                   >
-                    <Button type="submit" className="px-8 m-2 w-[250px]" text="Apply to be a speaker" />
+                    <Button
+                      type="submit"
+                      className="px-8 m-2 w-[250px]"
+                      text="Apply to be a speaker"
+                    />
                   </a>
                 )}
               </div>
@@ -185,5 +217,3 @@ function Venue({ city }: IVenue) {
     </div>
   );
 }
-
-export default Venue;
