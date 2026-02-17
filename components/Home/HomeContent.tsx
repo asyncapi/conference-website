@@ -2,7 +2,6 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import Header from '../Header/header';
 import Sponsors from '../Sponsors/sponsors';
 import About from '../About/about';
@@ -19,7 +18,6 @@ import Dropdown from '../Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../../types/types';
 
 export default function HomeContent() {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [speakersList, setSpeakersList] = useState(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
@@ -82,80 +80,80 @@ export default function HomeContent() {
             </div>
             <div className="lg:py-20 w-[1130px] lg:w-full">
               <div className="mt-[64px] lg:mt-0">
-                {isTablet ? (
-                  <div className="w-full">
-                    <Dropdown
-                      selectedItem={currentCity as City}
-                      items={cities}
-                      onSelect={(city) => {
-                        setCurrentCity(city);
-                        handleSpeakers(city.name);
+                {/* Mobile: city dropdown — visible at ≤1118px */}
+                <div className="w-full hidden lg:block">
+                  <Dropdown
+                    selectedItem={currentCity as City}
+                    items={cities}
+                    onSelect={(city) => {
+                      setCurrentCity(city);
+                      handleSpeakers(city.name);
+                    }}
+                    getDisplayValue={(city) => city?.name}
+                    placeholder="Select a city"
+                  />
+                </div>
+
+                {/* Desktop: city buttons — hidden at ≤1118px */}
+                <div className="flex justify-center lg:hidden">
+                  <div className="space-x-4 lg:w-full flex justify-between">
+                    <Button
+                      type="button"
+                      onClick={() => {
+                        handleSpeakers('all');
+                        setCurrentCity({ name: 'All' });
                       }}
-                      getDisplayValue={(city) => city?.name}
-                      placeholder="Select a city"
-                    />
-                  </div>
-                ) : (
-                  <div className="flex justify-center">
-                    <div className="space-x-4 lg:w-full flex justify-between">
-                      <Button
-                        type="button"
-                        onClick={() => {
-                          handleSpeakers('all');
-                          setCurrentCity({ name: 'All' });
-                        }}
-                        className={`w-[120px] ${
-                          currentCity.name === 'All'
-                            ? 'gradient-bg'
-                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                        }`}
-                        outline={true}
-                      >
-                        <span className="transparent-bg "></span>
-                        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                          All
-                        </span>
-                      </Button>
-                      {cities.map((city) => {
-                        return (
-                          <div
-                            key={city.name}
-                            onClick={() => {
-                              setCurrentCity(city);
-                              handleSpeakers(city.name);
-                            }}
+                      className={`w-[120px] ${
+                        currentCity.name === 'All'
+                          ? 'gradient-bg'
+                          : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                      }`}
+                      outline={true}
+                    >
+                      <span className="transparent-bg "></span>
+                      <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                        All
+                      </span>
+                    </Button>
+                    {cities.map((city) => {
+                      return (
+                        <div
+                          key={city.name}
+                          onClick={() => {
+                            setCurrentCity(city);
+                            handleSpeakers(city.name);
+                          }}
+                        >
+                          <Button
+                            type="button"
+                            className={`w-[120px] ${
+                              typeof currentCity !== 'string' &&
+                              currentCity.name === city.name
+                                ? 'gradient-bg'
+                                : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                            }`}
+                            outline={true}
                           >
-                            <Button
-                              type="button"
-                              className={`w-[120px] ${
-                                typeof currentCity !== 'string' &&
-                                currentCity.name === city.name
-                                  ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                              }`}
-                              outline={true}
-                            >
-                              {currentCity.name !== city.name && (
-                                <>
-                                  <span className="transparent-bg "></span>
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                </>
+                            {currentCity.name !== city.name && (
+                              <>
+                                <span className="transparent-bg "></span>
+                                <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                                  {city.name}
+                                </span>
+                              </>
+                            )}
+                            {typeof currentCity !== 'string' &&
+                              currentCity.name === city.name && (
+                                <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                                  {city.name}
+                                </span>
                               )}
-                              {typeof currentCity !== 'string' &&
-                                currentCity.name === city.name && (
-                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
-                                    {city.name}
-                                  </span>
-                                )}
-                            </Button>
-                          </div>
-                        );
-                      })}
-                    </div>
+                          </Button>
+                        </div>
+                      );
+                    })}
                   </div>
-                )}
+                </div>
               </div>
 
               <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
