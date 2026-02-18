@@ -1,13 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import { auth, sheets } from '@googleapis/sheets';
 import nodemailer from 'nodemailer';
 import { CfpForm } from '../../../../types/types';
 import { JWT } from 'google-auth-library';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> {
+export async function POST(request: Request) {
   try {
     const authClient = new auth.GoogleAuth({
       // keyFile: './credentials.json', // uncomment this line to run locally
@@ -22,9 +18,9 @@ export default async function handler(
       auth: client,
     });
 
-    const submission: CfpForm = req.body;
+    const submission: CfpForm = await request.json();
 
-    let response = await googleSheets.spreadsheets.values.append({
+    const response = await googleSheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       range: 'Sheet2',
       valueInputOption: 'USER_ENTERED',
@@ -56,13 +52,16 @@ export default async function handler(
     });
 
     await transporter.sendMail({
-      to: submission.Email, // list of receivers
-      subject: 'Confirmation for registeration of your talk with AsyncAPI!', // Subject line
+      to: submission.Email,
+      subject: 'Confirmation for registeration of your talk with AsyncAPI!',
       html: "<p>Thank you for submitting your proposal to the <b>AsyncAPI Online Edition</b>.</p> <p> This email confirms that we have received it.</p> <p>You'll receive a status update a week after we close the <b> Call for Speakers</b>.</p><br>",
     });
 
-    res.status(200).json(response.data);
+    return Response.json(response.data, { status: 200 });
   } catch (error) {
-    res.status(500).json({ message: 'Internal Server Error', error: error });
+    return Response.json(
+      { message: 'Internal Server Error', error: error },
+      { status: 500 }
+    );
   }
 }

@@ -1,16 +1,19 @@
+'use client';
+
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
+
 import links from '../../config/links.json';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
-import { useMediaQuery } from 'react-responsive';
+
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
 import { LinkItem } from '../../types/types';
 
 function Navbar(): JSX.Element {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const [mounted, setMounted] = useState(false);
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
@@ -32,6 +35,10 @@ function Navbar(): JSX.Element {
     },
     [show]
   );
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClosing);
@@ -107,19 +114,21 @@ function Navbar(): JSX.Element {
               </div>
             </Link>
           </div>
-          {isTablet ? (
-            <div data-test="nav-Hamberger" className="z-[99]">
-              {drop ? (
-                <button>
-                  <Cancel />
-                </button>
-              ) : (
-                <button>
-                  <Hamburger ref={svg} />
-                </button>
-              )}
-            </div>
-          ) : (
+          {/* Mobile hamburger — visible at ≤1118px (lg breakpoint) */}
+          <div data-test="nav-Hamberger" className="z-[99] hidden lg:block">
+            {drop ? (
+              <button>
+                <Cancel />
+              </button>
+            ) : (
+              <button>
+                <Hamburger ref={svg} />
+              </button>
+            )}
+          </div>
+
+          {/* Desktop nav — hidden at ≤1118px (lg breakpoint) */}
+          <div className="flex items-center lg:hidden">
             <div className="flex items-center">
               {links.map((link: LinkItem) => (
                 <div key={link.title}>
@@ -244,10 +253,12 @@ function Navbar(): JSX.Element {
                 </div>
               ))}
             </div>
-          )}
-          {isTablet && (
+          </div>
+
+          {/* Mobile overlay — only renders after mount to avoid SSR mismatch */}
+          {mounted && (
             <div
-              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${
+              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 hidden lg:block ${
                 drop
                   ? 'opacity-100'
                   : 'opacity-0 -translate-y-full pointer-events-none'

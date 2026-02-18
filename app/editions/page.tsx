@@ -1,11 +1,17 @@
+import type { Metadata } from 'next';
 import React, { JSX } from 'react';
 import PastEditonCard from '../../components/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
 
+export const metadata: Metadata = {
+  title: 'Past Editions',
+  description:
+    'Browse past editions of the AsyncAPI Conference — watch recordings, view archives, and explore the history of the event.',
+};
+
 const PastEditions = (): JSX.Element => {
   return (
     <div>
-      <title>Past Editions | AACoT</title>
       <div className="my-[70px]">
         <h1 className="text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold">
           Past Editions of

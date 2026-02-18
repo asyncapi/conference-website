@@ -27,4 +27,4 @@
    6. Copy this and save somewhere safe as its only visible once, if you missed it, delete the old app password and create a new one.
    7. In the `.env.local` paste the App password in designated key with your email id.
    8. **NOTE**:- Always be careful with app passwords, if exposed by accident, delete them immediately!
-   9. Configure your sender SMTP service in `./register/index.js` (To be ignored if its gmail).
+   9. Configure your sender SMTP service in `app/api/speakers/register/route.ts` (To be ignored if its gmail).
