@@ -1,15 +1,11 @@
 import { google } from 'googleapis';
-import path from 'path';
 import { REGISTRATION_SHEET_ID, REGISTRATION_TAB } from './config';
-
-const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 
 async function getSheetsClient() {
   const auth = new google.auth.GoogleAuth({
-    keyFile: CREDENTIALS_PATH,
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+   credentials: JSON.parse(process.env.GOOGLE_SHEET_SERVICE_ACCOUNT!),
+   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   });
-
   const client = await auth.getClient();
   return google.sheets({ version: 'v4', auth: client as any });
 }
