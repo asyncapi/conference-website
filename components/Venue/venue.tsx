@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
@@ -31,11 +33,18 @@ function Venue({ city }: IVenue) {
                 cfp is open
               </div>
             )}
-            <a href={city.mapUrl}  target="_blank" rel="noreferrer" 
-            className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300" 
-            onClick={e => e.stopPropagation()}>
-            <MapPointer className="w-6 h-6" />
-            </a>
+            <button
+              type="button"
+              className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(city.mapUrl, '_blank', 'noopener,noreferrer');
+              }}
+              aria-label={`Open map for ${city.name}`}
+            >
+              <MapPointer className="w-6 h-6" />
+            </button>
           </div>
 
           <div className="text-white">

@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import { JSX } from 'react';
 import Paper from '../../../../components/Form/paper';
 import Sponsors from '../../../../components/Sponsors/sponsors';
+
+export const metadata: Metadata = {
+  title: 'Apply to Speak',
+  description:
+    'Submit your talk proposal for the AsyncAPI Conference Online edition. Share your expertise on event-driven architectures, AsyncAPI tooling, and more.',
+};
 
 export default function SpeakersForm(): JSX.Element {
   return (
@@ -16,7 +23,6 @@ export default function SpeakersForm(): JSX.Element {
               websiteUrl: 'https://www.asyncapi.com',
             },
           ]}
-          // financialSponsor={[{image:"/img/graviteeio.svg" , websiteUrl: "https://www.gravitee.io/",className:"w-[250px] h-[50px]" } , {image:"/img/postman.png" ,websiteUrl:"https://www.postman.com/",className:"w-[240px] h-[70px]"}]}
         />
       </div>
     </div>

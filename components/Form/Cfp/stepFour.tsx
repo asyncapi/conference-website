@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable react/no-unescaped-entities */
 import React, { FormEvent, useState } from 'react';
 import { toast } from 'react-hot-toast';

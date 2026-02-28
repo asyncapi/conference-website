@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import Plus from '../illustration/plus';
 import Heading from '../Typography/heading';

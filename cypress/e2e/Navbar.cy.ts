@@ -83,7 +83,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
     // Click on the navbar link that you want to test
-    cy.getTestData('nav-About').click();
+    cy.getTestData('nav-About').filter(':visible').click();
 
     // Assert that the current URL matches the expected URL
     cy.url().should('eq', 'http://localhost:3000/#about');
@@ -94,7 +94,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Speakers').click();
+    cy.getTestData('nav-Speakers').filter(':visible').click();
 
     cy.url().should('eq', 'http://localhost:3000/#speakers');
     if (Array.isArray(speakers) && speakers.length > 0) {
@@ -110,7 +110,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Sponsors').click();
+    cy.getTestData('nav-Sponsors').filter(':visible').click();
 
     cy.url().should('eq', 'http://localhost:3000/#sponsors');
     cy.getTestData('sponsor-section').should('be.visible');
@@ -120,7 +120,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Home').click();
+    cy.getTestData('nav-Home').filter(':visible').click();
 
     cy.url().should('eq', 'http://localhost:3000/');
   });
@@ -129,7 +129,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Tickets').click();
+    cy.getTestData('nav-Tickets').filter(':visible').click();
 
     cy.url().should('eq', 'http://localhost:3000/#tickets');
   });
@@ -139,8 +139,8 @@ describe('Navbar links', () => {
     let data = venueData[0].subMenu;
     cy.wrap(data).each((val: LinkItem, idx) => {
       cy.getTestData('nav-Hamberger').click();
-      cy.getTestData('nav-Venue').click();
-      cy.getTestData(`nav-sub-${val.title}`).click();
+      cy.getTestData('nav-Venue').filter(':visible').click();
+      cy.getTestData(`nav-sub-${val.title}`).filter(':visible').click();
       cy.url().should('eq', `http://localhost:3000${val.ref}`);
     });
   });

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, JSX } from 'react';
 import Select, { MultiValue, StylesConfig } from 'react-select';
 import { SelectOptions } from '../../types/types';
