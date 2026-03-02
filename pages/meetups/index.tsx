@@ -297,11 +297,11 @@ const Meetups = () => {
       </motion.div>
 
       <motion.div
-        className="container -mt-[100px] pt-20 flex justify-center px-4 text-center lg:-mt-20 sm:mt-20"
+        className="container -mt-[200px] pt-20 flex justify-center px-4 text-center lg:-mt-20 sm:mt-20"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
-        id="find-meetup"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="w-full max-w-5xl">
           <motion.div variants={itemVariants}>
