@@ -31,10 +31,14 @@ function Venue({ city }: IVenue) {
                 cfp is open
               </div>
             )}
-            <a href={city.mapUrl}  target="_blank" rel="noreferrer" 
-            className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300" 
-            onClick={e => e.stopPropagation()}>
-            <MapPointer className="w-6 h-6" />
+            <a
+              href={city.mapUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <MapPointer className="w-6 h-6" />
             </a>
           </div>
 

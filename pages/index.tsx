@@ -192,12 +192,16 @@ export default function Home() {
                             below. Join us on stage and share your valuable
                             insights with our enthusiastic audience!
                           </Paragraph>
-                          <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
-                              <Button
-                                type="button"
-                                className="mt-[80px] w-[244px] border border-gray"
-                                text="Apply as a speaker"
-                              />
+                          <Link
+                            className="flex justify-center"
+                            href={currentCity.cfp}
+                            target="_blank"
+                          >
+                            <Button
+                              type="button"
+                              className="mt-[80px] w-[244px] border border-gray"
+                              text="Apply as a speaker"
+                            />
                           </Link>
                         </div>
                       ) : (
@@ -258,7 +262,7 @@ export default function Home() {
             {
               image: '/img/logos/developerweek-logo.webp',
               websiteUrl: 'https://www.developerweek.com/',
-            }
+            },
           ]}
         />
       </div>
