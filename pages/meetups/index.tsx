@@ -312,7 +312,7 @@ const Meetups = () => {
           <motion.div variants={itemVariants}>
             <Paragraph className="mt-4 text-gray-300">
               Spots are limited and filling quickly. Find your city below and
-              RSVP before they're gone.
+              RSVP before they&apos;re gone.
             </Paragraph>
           </motion.div>
 
