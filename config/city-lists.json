@@ -22,6 +22,40 @@
     "playlist": null
   },
   {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "date": "9 - 10 June, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "Join us at the AsyncAPI Conference in Amsterdam and explore event-driven architecture with the global open-source community.",
+    "img": "/img/locations/amsterdam.webp",
+    "address": "Amsterdam, Netherlands",
+    "mapUrl": "",
+    "sponsors": {
+      "eventSponsors": []
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "London",
+    "country": "UK",
+    "date": "30 September - 1 October, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "API enthusiasts in London! Join the AsyncAPI Conference for deep dives into event-driven architecture and open-source collaboration.",
+    "img": "/img/locations/london.webp",
+    "address": "London, UK",
+    "mapUrl": "",
+    "sponsors": {
+      "eventSponsors": []
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
     "name": "Online",
     "country": " Edition",
     "date": "28 October, 2026",
@@ -37,6 +71,23 @@
           "websiteUrl": "https://asyncapi.com"
         }
       ]
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "Paris",
+    "country": "France",
+    "date": "1 - 3 December, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "Join us at the AsyncAPI Conference in Paris and explore event-driven architecture with the global open-source community.",
+    "img": "/img/locations/paris.webp",
+    "address": "Paris, France",
+    "mapUrl": "",
+    "sponsors": {
+      "eventSponsors": []
     },
     "freeEntry": true,
     "cfp": null,
