@@ -38,7 +38,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
-  currentCity.ticket = cityTicket[0] ?? null;
+  currentCity.ticket = cityTicket[0];
   return {
     props: {
       city: currentCity,
