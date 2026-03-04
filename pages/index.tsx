@@ -50,10 +50,10 @@ export default function Home() {
       />
       <Header />
       {/* Popup removed for 2026 migration */}
-      <div id="about" className="mt-20">
+      <div id="about" className="mt-20" style={{ animation: 'fadeIn 0.8s ease-out forwards' }}>
         <About />
       </div>
-      <div id="register" className="container mt-20 lg:mt-0">
+      <div id="register" className="container mt-20 lg:mt-0" style={{ animation: 'fadeIn 1s ease-out 0.2s forwards', opacity: 0 }}>
         <div className="flex items-center flex-col justify-center">
           <div
             id="speakers"
@@ -107,11 +107,10 @@ export default function Home() {
                           handleSpeakers('all');
                           setCurrentCity({ name: 'All' });
                         }}
-                        className={`w-[120px] ${
-                          currentCity.name === 'All'
-                            ? 'gradient-bg'
-                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                        }`}
+                        className={`w-[120px] ${currentCity.name === 'All'
+                          ? 'gradient-bg'
+                          : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                          }`}
                         outline={true}
                       >
                         <span className="transparent-bg "></span>
@@ -130,12 +129,11 @@ export default function Home() {
                           >
                             <Button
                               type="button"
-                              className={`w-[120px] ${
-                                typeof currentCity !== 'string' &&
+                              className={`w-[120px] ${typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
-                                  ? 'gradient-bg'
-                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                              }`}
+                                ? 'gradient-bg'
+                                : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                                }`}
                               outline={true}
                             >
                               {currentCity.name !== city.name && (
@@ -193,11 +191,11 @@ export default function Home() {
                             insights with our enthusiastic audience!
                           </Paragraph>
                           <Link className='flex justify-center' href={currentCity.cfp} target="_blank">
-                              <Button
-                                type="button"
-                                className="mt-[80px] w-[244px] border border-gray"
-                                text="Apply as a speaker"
-                              />
+                            <Button
+                              type="button"
+                              className="mt-[80px] w-[244px] border border-gray"
+                              text="Apply as a speaker"
+                            />
                           </Link>
                         </div>
                       ) : (
@@ -246,7 +244,10 @@ export default function Home() {
                 </Paragraph>
               </div>
             </div>
-            <div className="w-full mt-12">
+            <div className="relative w-full mt-12 py-12 px-4 rounded-3xl bg-gradient-to-b from-transparent via-blue-900/5 to-purple-900/5">
+              {/* Decorative gradient orbs */}
+              <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
               <Tickets />
             </div>
           </div>

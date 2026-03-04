@@ -13,7 +13,7 @@ function About(): JSX.Element {
       data-test="about-section"
     >
       <div className="w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between">
-        <div className="lg:mt-16 bg-[url('/img/about.jpeg')]  bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]"></div>
+        <div className="lg:mt-16 bg-[url('/img/about.jpeg')] bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px] transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 hover:brightness-110"></div>
         <div className="w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center">
           <div className="flex items-center lg:justify-center">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
@@ -52,16 +52,16 @@ function About(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <Button type="button" className="w-[200px]" text="Become a sponsor now"/>
+              <Button type="button" className="w-[200px]" text="Become a sponsor now" />
             </a>
             <a
               className="flex justify-center "
               href="/pdf/conf-2025.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
-              <Button 
-                type="button" 
-                outline={true} 
+              <Button
+                type="button"
+                outline={true}
                 className="w-[240px] border"
                 text="Sponsorship prospectus"
                 icon={<Download />}

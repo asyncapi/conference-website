@@ -15,12 +15,22 @@ function Navbar(): JSX.Element {
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
   const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
+  const [scrolled, setScrolled] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   //TODO: Refactor Navbar Code
   let closeTimeout = useRef<ReturnType<typeof window.setTimeout> | null>(null);
+
+  // Handle scroll for navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleClosing = useCallback(
     (event: MouseEvent) => {
@@ -89,7 +99,8 @@ function Navbar(): JSX.Element {
   return (
     <div className="relative">
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
+        className={`container flex justify-center fixed items-center w-full backdrop-blur transition-all duration-300 ${drop || scrolled ? 'bg-[#1B1130]/95 shadow-lg' : 'bg-transparent'
+          } top-0 z-[99] text-white`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
@@ -174,9 +185,8 @@ function Navbar(): JSX.Element {
                           {link.subMenu && (
                             <Dropdown
                               fill="white"
-                              className={`ml-2 transition-transform duration-700 ${
-                                show === link.title ? 'rotate-180' : 'rotate-0'
-                              }`}
+                              className={`ml-2 transition-transform duration-700 ${show === link.title ? 'rotate-180' : 'rotate-0'
+                                }`}
                             />
                           )}
                         </button>
@@ -188,7 +198,7 @@ function Navbar(): JSX.Element {
                     <span className="after:absolute after:-bottom-1 after:right-1/2 after:w-0 after:transition-all after:h-0.5 after:bg-white after:group-hover:w-3/6"></span>
                     {show === link.title && link.subMenu && (
                       <div
-                        className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
+                        className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-xl left-[-15px] bg-[#1B1130]/98 backdrop-blur-md border border-purple-500/30 shadow-2xl shadow-purple-500/20 px-3 py-2 flex flex-col justify-center space-y-1"
                         onMouseEnter={handleSubMenuEnter}
                         onMouseLeave={handleSubMenuLeave}
                       >
@@ -200,26 +210,26 @@ function Navbar(): JSX.Element {
                             ref={(el) => {
                               subMenuRefs.current[index] = el;
                             }}
-                            className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1`}
+                            className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[40px] text-[15px] font-medium hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 hover:translate-x-1 transition-all focus:outline-none focus:bg-gradient-to-r focus:from-blue-500/30 focus:to-purple-500/30 focus:translate-x-1 rounded-lg px-3 py-2`}
                             data-test={`nav-sub-${subL.title}`}
                             onKeyDown={(e) => {
                               const currentIndex = index;
                               const maxIndex = link.subMenu!.length - 1;
-                              
+
                               if (e.key === 'ArrowDown') {
                                 e.preventDefault();
                                 const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
                                 setFocusedSubMenuItem(nextIndex);
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'ArrowUp') {
                                 e.preventDefault();
                                 const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
                                 setFocusedSubMenuItem(prevIndex);
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
@@ -228,7 +238,7 @@ function Navbar(): JSX.Element {
                                 const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
                                 (button as HTMLButtonElement)?.focus();
                               }
-                              
+
                               if (e.key === 'Tab') {
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
@@ -247,11 +257,10 @@ function Navbar(): JSX.Element {
           )}
           {isTablet && (
             <div
-              className={`fixed inset-0 z-[98] bg-[#1B1130]/90 backdrop-blur-md transition-all duration-500 ${
-                drop
+              className={`fixed inset-0 z-[98] bg-[#0A0515]/98 backdrop-blur-lg transition-all duration-500 ${drop
                   ? 'opacity-100'
                   : 'opacity-0 -translate-y-full pointer-events-none'
-              }`}
+                }`}
             >
               {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
             </div>
