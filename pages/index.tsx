@@ -258,6 +258,10 @@ export default function Home() {
             {
               image: '/img/logos/developerweek-logo.webp',
               websiteUrl: 'https://www.developerweek.com/',
+            },
+            {
+              image: '/img/logos/apidays.png',
+              websiteUrl: 'https://www.apidays.global/',
             }
           ]}
         />
