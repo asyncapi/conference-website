@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import ILink from '../illustration/link';
+import ILink from '../../illustration/link';
 
 interface PastEditonCardProp {
   url: string;
