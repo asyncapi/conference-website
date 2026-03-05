@@ -9,7 +9,7 @@ interface ISpeaker {
   className?: string;
 }
 
-function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX.Element {
+function SpeakerCard({ name, title, image, location, className = '' }: ISpeaker): JSX.Element {
   function getName(names: string[]) {
     return `${names[0]} ${names[1]}`;
   }
