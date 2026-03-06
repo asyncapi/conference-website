@@ -8,8 +8,6 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
   const company = data.company || '';
   const role = data.role || '';
   const preferredCity = data.preferredCity || '';
-  const attendanceType = data.attendanceType || '';
-  const timezone = data.timezone || '';
 
   const isValid = true; // no strictly required fields on this step
 
@@ -52,24 +50,6 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
             </option>
           ))}
         </select>
-
-        <label htmlFor="attendanceType" className="text-dark-600 text-lg mt-6 block">Attendance type</label>
-        <input
-          id="attendanceType"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={attendanceType}
-          onChange={(e) => setForm((prev) => ({ ...prev, attendanceType: e.target.value }))}
-          data-test="reg-step-two-attendance"
-        />
-
-        <label htmlFor="timezone" className="text-dark-600 text-lg mt-6 block">Timezone</label>
-        <input
-          id="timezone"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={timezone}
-          onChange={(e) => setForm((prev) => ({ ...prev, timezone: e.target.value }))}
-          data-test="reg-step-two-timezone"
-        />
 
         <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
           {/* Back */}

@@ -5,7 +5,6 @@ import { CfpStepProps } from '../../../types/types';
 
 function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Element {
 
-  const dietary = data.dietaryAccessibility || '';
   const updatesOptIn = !!data.updatesOptIn;
   const sponsorDataSharing = !!data.sponsorDataSharing;
   const notes = data.notes || '';
@@ -16,19 +15,9 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
   return (
     <form className="mt-3" onSubmit={(e) => setStep(e, 4)} data-test="reg-step-three">
       <h1 id="step-three-heading" className="text-white font-bold text-4xl lg:text-3xl">Consents & Notes</h1>
-      <p className="mt-3 text-dark-600">Tell us any dietary or accessibility needs and consent preferences.</p>
+      <p className="mt-3 text-dark-600">Tell us your consent preferences and any additional notes.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10" role="group" aria-labelledby="step-three-heading">
-        <label htmlFor="dietaryAccessibility" className="text-dark-600 text-lg">Dietary / Accessibility needs</label>
-        <textarea
-          id="dietaryAccessibility"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={dietary}
-          onChange={(e) => setForm((prev) => ({ ...prev, dietaryAccessibility: e.target.value }))}
-          data-test="reg-step-three-dietary"
-        />
-
-        <fieldset className="mt-5 border-0 p-0">
           <legend className="text-dark-600 text-lg mb-3">Communication Preferences</legend>
 
           <div className="text-dark-600">
