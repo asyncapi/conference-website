@@ -18,6 +18,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
       <p className="mt-3 text-dark-600">Tell us your consent preferences and any additional notes.</p>
       <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
       <div className="mt-10" role="group" aria-labelledby="step-three-heading">
+        <fieldset>
           <legend className="text-dark-600 text-lg mb-3">Communication Preferences</legend>
 
           <div className="text-dark-600">
@@ -33,7 +34,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
                 data-test="reg-step-three-updates"
                 className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
               />
-              Receive occasional updates about the event
+              Subscribe to our newsletter and be notified when community tickets are available
             </label>
           </div>
 
@@ -50,7 +51,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
                 data-test="reg-step-three-sponsor"
                 className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
               />
-              Share my contact with sponsors (optional)
+              I understand my information will be shared with conference sponsors, but I can opt out anytime
             </label>
           </div>
         </fieldset>
