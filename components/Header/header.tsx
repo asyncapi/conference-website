@@ -23,7 +23,7 @@ function Header(): JSX.Element {
                 data-test="landing-heading"
               >
                 <Heading
-                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient"
+                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient px-2 pb-2"
                   level="h1"
                   typeStyle="heading-lg"
                 >
