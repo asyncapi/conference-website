@@ -4,7 +4,7 @@ import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import ReactSlider from '../Slider/slider';
 import cities from '../../config/city-lists.json';
-import Venue from '../Venue/venue';
+import VenueCard from '../Cards/VenueCard/VenueCard';
 import Announcement from '../announcement';
 import Link from 'next/link';
 
@@ -48,7 +48,7 @@ function Header(): JSX.Element {
       <div className="mt-24">
         <ReactSlider>
           {cities.map((city) => {
-            return <Venue key={city.name} city={city} />;
+            return <VenueCard key={city.name} city={city} />;
           })}
         </ReactSlider>
       </div>
