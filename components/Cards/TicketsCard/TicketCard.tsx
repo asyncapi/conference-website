@@ -24,7 +24,7 @@ const TicketCard = ({
   return (
     <div className="relative max-w-2xl mx-auto p-6">
       <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">
-        < Button 
+        <Button
           type="button"
           onClick={prevTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
@@ -34,8 +34,8 @@ const TicketCard = ({
           iconPosition="left"
         />
 
-        < Button 
-         type="button"
+        <Button
+          type="button"
           onClick={nextTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Next ticket"
@@ -43,7 +43,6 @@ const TicketCard = ({
           icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
           iconPosition="left"
         />
-
       </div>
 
       <div className="relative h-96">
@@ -120,7 +119,11 @@ const TicketCard = ({
 
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
-                      <Button type="button" className="mt-8 w-full" text="Get a Free Ticket" />
+                      <Button
+                        type="button"
+                        className="mt-8 w-full"
+                        text="Get a Free Ticket"
+                      />
                     </a>
                   ) : (
                     <Button
