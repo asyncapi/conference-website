@@ -53,7 +53,7 @@ function SelectDropdown({
     if (selectedOption?.value) {
       setValue(selectedOption.value);
     }
-  }, [selectedOption]);
+  }, [selectedOption, setValue]);
   return (
     <div className="relative inline-block w-full">
       <Select
