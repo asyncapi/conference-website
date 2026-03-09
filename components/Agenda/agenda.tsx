@@ -1,12 +1,14 @@
-import React, { JSX } from 'react';
+import React ,{JSX}from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
-import { Agenda as AgendaType, ExtendedCity } from '../../types/types';
+import { Agenda as AgendaType, ExtendedCity, Speaker } from '../../types/types';
 import Image from 'next/image';
+import { PdfDownloadButton } from './DownloadAgenda';
+import { isPastEvent } from '../../utils/isPastEvent';
 
 interface IAgenda {
   city: ExtendedCity;
-}
+} 
 
 
 function Agenda({ city }: IAgenda): JSX.Element {
@@ -126,6 +128,10 @@ function Agenda({ city }: IAgenda): JSX.Element {
             })}
           </div>
         ))}
+      </div>
+
+      <div className="mt-[60px]">
+        {!isPastEvent(city.date) && <PdfDownloadButton city={city} />}
       </div>
     </div>
   );
