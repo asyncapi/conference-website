@@ -49,7 +49,7 @@ function Header(): JSX.Element {
           </div>
         </div>
       </div>
-      <div className="mt-24">
+      <div className="mt-24 overflow-hidden">
         <ReactSlider>
           {cities.map((city) => {
             return <VenueCard key={city.name} city={city} />;

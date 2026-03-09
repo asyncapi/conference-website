@@ -107,10 +107,11 @@ export default function Home() {
                           handleSpeakers('all');
                           setCurrentCity({ name: 'All' });
                         }}
-                        className={`w-[120px] ${currentCity.name === 'All'
+                        className={`w-[120px] ${
+                          currentCity.name === 'All'
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                          }`}
+                        }`}
                         outline={true}
                       >
                         <span className="transparent-bg "></span>
@@ -129,11 +130,12 @@ export default function Home() {
                           >
                             <Button
                               type="button"
-                              className={`w-[120px] ${typeof currentCity !== 'string' &&
+                              className={`w-[120px] ${
+                                typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
-                                ? 'gradient-bg'
-                                : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
-                                }`}
+                                  ? 'gradient-bg'
+                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                              }`}
                               outline={true}
                             >
                               {currentCity.name !== city.name && (
@@ -266,7 +268,7 @@ export default function Home() {
             {
               image: '/img/logos/apidays.png',
               websiteUrl: 'https://www.apidays.global/',
-            }
+            },
           ]}
         />
       </div>

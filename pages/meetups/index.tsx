@@ -57,7 +57,7 @@ const items = [
     label: 'Small Groups',
     description:
       'Work in intimate groups to maximize learning, encourage open discussions, and ensure everyone has a chance to contribute their ideas and experiences.',
-    image: '/img/meetup/small-groups.jpg',
+    image: '/img/meetup/small-groups.webp',
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const items = [
     label: 'Real Connections',
     description:
       'Build meaningful relationships with fellow community members, exchange knowledge, and discover potential collaborations that go beyond the meetup.',
-    image: '/img/meetup/real-connections.jpg',
+    image: '/img/meetup/real-connections.webp',
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ const items = [
     label: 'Optional Challenges',
     description:
       'Participate in optional challenges designed to test your skills, encourage creative problem-solving, and push the boundaries of what you can achieve.',
-    image: '/img/meetup/optional.jpg',
+    image: '/img/meetup/optional.webp',
   },
 ];
 

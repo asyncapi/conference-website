@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { City } from '../../../types/types';
 import { getEventStatus } from '../../../utils/status';
 import MapPointer from '../../illustration/mapPointer';
-import Button from '../../Buttons/button';
 
 interface IVenue {
   city: City;
@@ -20,7 +19,7 @@ function VenueCard({ city }: IVenue) {
           background: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0, .3)), url(${city.img})`,
           backgroundSize: 'cover',
         }}
-        className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-2xl flex items-center justify-center p-4 cursor-pointer m-3 hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
+        className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-2xl flex items-center justify-center p-4 cursor-pointer m-3 hover:scale-[1.03] hover:shadow-xl transition-transform duration-300 ease-in-out"
       >
         <div className="flex justify-between flex-col w-full h-full">
           <div className="flex items-center">
