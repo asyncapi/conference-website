@@ -49,7 +49,7 @@ const items = [
     label: 'Creative Sessions',
     description:
       'Engage in hands-on sessions designed to spark creativity, foster collaboration, and inspire new ways of thinking about event-driven systems.',
-    image: '/img/meetup/creative-sessions.jpg',
+    image: '/img/meetup/creative-sessions.webp',
   },
   {
     id: 2,
