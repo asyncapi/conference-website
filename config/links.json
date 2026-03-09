@@ -12,8 +12,20 @@
         "ref": "/venue/California"
       },
       {
+        "title": "Amsterdam, Netherlands",
+        "ref": "/venue/Amsterdam"
+      },
+      {
+        "title": "London, UK",
+        "ref": "/venue/London"
+      },
+      {
         "title": "Online",
         "ref": "/venue/Online"
+      },
+      {
+        "title": "Paris, France",
+        "ref": "/venue/Paris"
       }
     ]
   },
