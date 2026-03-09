@@ -141,7 +141,7 @@ const Meetups = () => {
   return (
     <div className="relative">
       <motion.div
-        className="container mt-[150px] min-h-[45vh] justify-center lg:min-h-[38vh] sm:min-h-[32vh] sm:py-6"
+        className="container mt-[150px] justify-center sm:py-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -197,7 +197,7 @@ const Meetups = () => {
         </div>
       </motion.div>
 
-      <div className="p-12 -mt-20 lg:p-8 sm:px-4 sm:py-6">
+      <div className="p-12 lg:p-8 sm:px-4 sm:py-6">
         <div className="relative h-[400px] overflow-hidden rounded-2xl bg-white/10 lg:h-[340px] sm:h-[260px]">
           <motion.div
             animate={{ y: [0, -20, 0] }}
@@ -209,7 +209,7 @@ const Meetups = () => {
       </div>
 
       <motion.div
-        className="mt-[200px] w-full lg:mt-28 sm:mt-20"
+        className="mt-24 w-full lg:mt-28 sm:mt-20"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -233,11 +233,10 @@ const Meetups = () => {
             className="relative w-full"
             style={{ height: scrollHeight }}
           >
-            <div className="sticky top-[100px] flex h-screen w-full items-start overflow-hidden pt-8 lg:top-20">
+            <div className="sticky top-[100px] flex w-full items-start overflow-hidden pt-8 lg:top-20">
               <motion.div
                 className="flex gap-[30px] pl-[10vw] will-change-transform lg:gap-5 lg:pl-[6vw]"
                 style={{ x }}
-                variants={itemVariants}
               >
                 {items.map((item) => (
                   <div
@@ -297,9 +296,10 @@ const Meetups = () => {
       </motion.div>
 
       <motion.div
-        className="container -mt-[200px] pt-20 flex justify-center px-4 text-center lg:-mt-20 sm:mt-20"
+        className="container pt-20 flex justify-center px-4 text-center lg:-mt-20 sm:mt-20"
         variants={containerVariants}
         initial="hidden"
+        id="find-meetup"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
@@ -381,10 +381,14 @@ const Meetups = () => {
           <motion.div variants={itemVariants}>
             <Paragraph className="mt-10" typeStyle="body-md">
               Please be sure to read and understand our Terms & Conditions for{' '}
-              <a href="" className="text-blue-400">
-                Hosts
-              </a>{' '}
-              and <a className="text-blue-400">Attendees</a>.
+              <a
+                href="https://github.com/asyncapi/conference-website/blob/master/docs/meetup/GUIDELINE.md"
+                className="text-blue-400"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hosts.
+              </a>
             </Paragraph>
           </motion.div>
         </div>
@@ -436,23 +440,29 @@ const Meetups = () => {
               className="flex justify-center mt-20"
               variants={itemVariants}
             >
-              <Button className="w-auto px-8" type="button">
-                <div className="flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-5 h-5 mr-2"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Propose a Meetup
-                </div>
-              </Button>
+              <a
+                href="https://github.com/asyncapi/conference-website/discussions/new/choose"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-auto px-8" type="button">
+                  <div className="flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5 mr-2"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Propose a Meetup
+                  </div>
+                </Button>
+              </a>
             </motion.div>
           </div>
         </motion.div>
