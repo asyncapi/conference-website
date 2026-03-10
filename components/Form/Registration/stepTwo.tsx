@@ -34,15 +34,16 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           />
         </div>
         <div className='space-y-1'>
-          <label htmlFor="preferredCity" className="text-dark-600 text-lg block">Preferred city</label>
+          <label htmlFor="preferredCity" className="text-dark-600 text-lg block">Preferred city <span className="text-red-500">*</span></label>
           <select
             id="preferredCity"
             className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
             value={preferredCity}
             onChange={(e) => setForm((prev) => ({ ...prev, preferredCity: e.target.value }))}
+            required
             data-test="reg-step-two-city"
           >
-            <option value="">Select (optional)</option>
+            <option value="" disabled>Select</option>
             {((cityLists as any) || []).map((c: any) => (
               <option key={c.name} value={c.name}>
                 {c.name}

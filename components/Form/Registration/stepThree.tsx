@@ -13,51 +13,48 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
   const [localSponsor, setLocalSponsor] = useState(sponsorDataSharing);
 
   return (
-    <form className="mt-3" onSubmit={(e) => setStep(e, 4)} data-test="reg-step-three">
+    <form onSubmit={(e) => setStep(e, 4)} data-test="reg-step-three">
       <h1 id="step-three-heading" className="text-white font-bold text-4xl lg:text-3xl">Consents & Notes</h1>
-      <p className="mt-3 text-dark-600">Tell us your consent preferences and any additional notes.</p>
-      <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
-      <div className="mt-10" role="group" aria-labelledby="step-three-heading">
-        <fieldset>
-          <legend className="text-dark-600 text-lg mb-3">Communication Preferences</legend>
-
-          <div className="text-dark-600">
-            <label className="inline-flex items-center">
-              <input
-                type="checkbox"
-                id="updatesOptIn"
-                checked={localUpdates}
-                onChange={(e) => {
-                  setLocalUpdates(e.target.checked);
-                  setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
-                }}
-                data-test="reg-step-three-updates"
-                className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
-              />
+      <p className=" text-dark-600 border-b border-dark-700 pb-2 mb-2">Tell us your consent preferences and any additional notes.</p>
+      <div role="group" className='space-y-2' aria-labelledby="step-three-heading">
+        <fieldset className='space-y-2'>
+          <legend className="text-white text-lg">Communication Preferences</legend>
+          <div className="text-white">
+            <input
+              type="checkbox"
+              id="updatesOptIn"
+              checked={localUpdates}
+              onChange={(e) => {
+                setLocalUpdates(e.target.checked);
+                setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
+              }}
+              data-test="reg-step-three-updates"
+              className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+            />
+            <label className="items-start">
               Subscribe to our newsletter and be notified when community tickets are available
             </label>
           </div>
-
-          <div className="mt-3 text-dark-600">
-            <label className="inline-flex items-center">
-              <input
-                type="checkbox"
-                id="sponsorDataSharing"
-                checked={localSponsor}
-                onChange={(e) => {
-                  setLocalSponsor(e.target.checked);
-                  setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
-                }}
-                data-test="reg-step-three-sponsor"
-                className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
-              />
+          <div className='text-white'>
+            <input
+              type="checkbox"
+              id="sponsorDataSharing"
+              checked={localSponsor}
+              onChange={(e) => {
+                setLocalSponsor(e.target.checked);
+                setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
+              }}
+              data-test="reg-step-three-sponsor"
+              className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+            />
+            <label className="items-start">
               I understand my information will be shared with conference sponsors, but I can opt out anytime
             </label>
           </div>
         </fieldset>
 
-        <div className="mt-3 text-sm text-dark-600">
-          By submitting you agree to the{" "}
+        <div className="text-sm text-dark-400">
+          By submitting you agree to the {''}
           <a
             href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
@@ -70,29 +67,28 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           </a>.
         </div>
 
-        <label htmlFor="notes" className="text-dark-600 text-lg mt-6 block">Notes (optional)</label>
-        <textarea
-          id="notes"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={notes}
-          onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
-          data-test="reg-step-three-notes"
-        />
+        <div className='space-y-1'>
+          <label htmlFor="notes" className="text-dark-600  block">Notes (optional)</label>
+          <textarea
+            id="notes"
+            className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            value={notes}
+            onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
+            data-test="reg-step-three-notes"
+          />
+        </div>
 
-        <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
-          {/* Back */}
+        <div className="flex items-center space-x-2 w-full">
           <Button
             type="button"
             onClick={() => setStep(null, 2)}
-            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
+            className='flex-1'
           >
             Back
           </Button>
-
-          {/* Next */}
           <Button
             type="submit"
-            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
+            className='flex-1'
             test="reg-step-three-next"
           >
             Next

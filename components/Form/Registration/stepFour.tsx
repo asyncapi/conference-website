@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { FormEvent, useState, JSX } from 'react';
+import React, { FormEvent, useState } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
 
@@ -51,11 +51,10 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
   };
 
   return (
-    <form className="mt-3" onSubmit={(e) => onSubmit(e)} aria-busy={submitting}>
+    <form onSubmit={(e) => onSubmit(e)} aria-busy={submitting}>
       <h1 id="step-four-heading" className="text-white font-bold text-4xl lg:text-3xl">Review & Submit</h1>
-      <p className="mt-3 text-dark-600">Review your details and submit your registration.</p>
-      <div className="mt-3 border w-full border-solid border-y-dark-600 divide-y" />
-      <div className="mt-10" role="group" aria-labelledby="step-four-heading">
+      <p className="text-dark-600 border-b border-dark-700 pb-2 mb-2">Review your details and submit your registration.</p>
+      <div role="group" aria-labelledby="step-four-heading">
         <label htmlFor="notes" className="text-dark-600 text-lg">Notes</label>
         <textarea
           id="notes"
@@ -64,42 +63,37 @@ function StepFourRegistration({ setStep, setForm, data }: CfpStepProps) {
           data-test="reg-step-four-notes"
         />
 
-        <div className="mt-6 text-dark-600 text-md">
+        <div className="text-dark-400 mt-4">
           By clicking submit, you confirm the information is correct.
         </div>
-        <div className="mt-3 w-full flex items-center justify-between lg:flex-col-reverse lg:items-start">
-          <div className="mt-3 w-full flex items-center justify-end lg:flex-col-reverse lg:items-start gap-4">
-            {/* Back button */}
-            <Button
-              type="button"
-              disabled={disabled}
-              onClick={() => !disabled && setStep(null, 3)}
-              className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50 w-36 lg:w-full"
-            >
-              Back
-            </Button>
+        <div className="flex items-center space-x-2 w-full">
+          <Button
+            type="button"
+            disabled={disabled}
+            onClick={() => !disabled && setStep(null, 3)}
+            className='flex-1'
+          >
+            Back
+          </Button>
 
-            {/* Submit button */}
-            <Button
-              type="submit"
-              disabled={submitting || disabled}
-              className="text-gray-500 hover:text-gray-700 transition-colors disabled:opacity-50 w-36 lg:w-full"
-              test="reg-step-four-next"
-            >
-              {submitting ? 'Submitting...' : 'Submit'}
-            </Button>
-          </div>
-
-          {error && (
-            <div
-              className="text-red-400 mt-2"
-              role="alert"
-              aria-live="assertive"
-            >
-              {error}
-            </div>
-          )}
+          <Button
+            type="submit"
+            disabled={submitting || disabled}
+            className='flex-1'
+            test="reg-step-four-next"
+          >
+            {submitting ? 'Submitting...' : 'Submit'}
+          </Button>
         </div>
+        {error && (
+          <div
+            className="text-red-400 mt-2"
+            role="alert"
+            aria-live="assertive"
+          >
+            {error}
+          </div>
+        )}
       </div>
     </form>
   );
