@@ -52,16 +52,20 @@ function About(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <Button type="button" className="w-[200px]" text="Become a sponsor now"/>
+              <Button
+                type="button"
+                className="w-[200px]"
+                text="Become a sponsor now"
+              />
             </a>
             <a
               className="flex justify-center "
               href="/pdf/conf-2025.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
-              <Button 
-                type="button" 
-                outline={true} 
+              <Button
+                type="button"
+                outline={true}
                 className="w-[240px] border"
                 text="Sponsorship prospectus"
                 icon={<Download />}
