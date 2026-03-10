@@ -47,9 +47,8 @@ export default function Registration2026(): JSX.Element {
     }
   }, [step]);
 
-  const stepOne = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
-  let view: JSX.Element = stepOne;
-  if (step === 1) view = stepOne;
+  let view;
+  if (step === 1) view = <StepOne setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 2) view = <StepTwo setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 3) view = <StepThree setStep={onStepUpdate} setForm={setFormData} data={formData} />;
   if (step === 4) view = <StepFourRegistration setStep={onStepUpdate} setForm={setFormData} data={formData} />;

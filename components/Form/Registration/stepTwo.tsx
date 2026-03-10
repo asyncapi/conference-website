@@ -8,55 +8,53 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
   const company = data.company || '';
   const role = data.role || '';
   const preferredCity = data.preferredCity || '';
-
-  const isValid = true; // no strictly required fields on this step
-
   return (
-    <form className="mt-3" onSubmit={(e) => setStep(e, 3)} data-test="reg-step-two">
+    <form onSubmit={(e) => setStep(e, 3)} data-test="reg-step-two">
       <h1 id="step-two-heading" className="text-white font-bold text-4xl lg:text-3xl">Event Details</h1>
-      <p className="mt-3 text-dark-600">Tell us how you'll attend so we can reserve your place.</p>
-      <div className="mt-3 border w-full border-solid border-dark-400 divide-y" />
-      <div className="mt-10" role="group" aria-labelledby="step-two-heading">
-        <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
-        <input
-          id="company"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={company}
-          onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
-          data-test="reg-step-two-company"
-        />
-
-        <label htmlFor="role" className="text-dark-600 text-lg mt-6 block">Role</label>
-        <input
-          id="role"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={role}
-          onChange={(e) => setForm((prev) => ({ ...prev, role: e.target.value }))}
-          data-test="reg-step-two-role"
-        />
-
-        <label htmlFor="preferredCity" className="text-dark-600 text-lg mt-6 block">Preferred city</label>
-        <select
-          id="preferredCity"
-          className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
-          value={preferredCity}
-          onChange={(e) => setForm((prev) => ({ ...prev, preferredCity: e.target.value }))}
-          data-test="reg-step-two-city"
-        >
-          <option value="">Select (optional)</option>
-          {((cityLists as any) || []).map((c: any) => (
-            <option key={c.name} value={c.name}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-
-        <div className="mt-3 flex items-center justify-end gap-6 lg:flex-col-reverse lg:w-full lg:items-stretch">
-          {/* Back */}
+      <p className="text-dark-600 border-b border-dark-700 pb-2 mb-2">Tell us how you'll attend so we can reserve your place.</p>
+      <div className='space-y-2 last:space-y-6' role="group" aria-labelledby="step-two-heading">
+        <div className='space-y-1'>
+          <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
+          <input
+            id="company"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            value={company}
+            onChange={(e) => setForm((prev) => ({ ...prev, company: e.target.value }))}
+            data-test="reg-step-two-company"
+          />
+        </div>
+        <div className='space-y-1'>
+          <label htmlFor="role" className="text-dark-600 text-lg block">Role</label>
+          <input
+            id="role"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            value={role}
+            onChange={(e) => setForm((prev) => ({ ...prev, role: e.target.value }))}
+            data-test="reg-step-two-role"
+          />
+        </div>
+        <div className='space-y-1'>
+          <label htmlFor="preferredCity" className="text-dark-600 text-lg block">Preferred city</label>
+          <select
+            id="preferredCity"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            value={preferredCity}
+            onChange={(e) => setForm((prev) => ({ ...prev, preferredCity: e.target.value }))}
+            data-test="reg-step-two-city"
+          >
+            <option value="">Select (optional)</option>
+            {((cityLists as any) || []).map((c: any) => (
+              <option key={c.name} value={c.name}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="flex items-center space-x-2 w-full">
           <Button
             type="button"
             onClick={() => setStep(null, 1)}
-            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
+            className='flex-1'
           >
             Back
           </Button>
@@ -64,13 +62,12 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
           {/* Next */}
           <Button
             type="submit"
-            className="text-gray-500 hover:text-gray-700 transition-colors lg:text-center w-36 lg:w-full"
+            className='flex-1'
             test="reg-step-three-next"
           >
             Next
           </Button>
         </div>
-
       </div>
     </form>
   );
