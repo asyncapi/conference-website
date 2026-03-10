@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "name": "V. Thulisile Sibanda",
     "title": "Senior Community Manager at AsyncAPI Initiative",
@@ -33,14 +33,14 @@
     "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/san-jose/Hugo.webp",
     "city": ["California"]
-  },  
+  },
   {
     "id": 6,
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
     "city": ["California"]
-  },  
+  },
   {
     "id": 7,
     "name": "Kay James",

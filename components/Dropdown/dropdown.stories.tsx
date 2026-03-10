@@ -14,9 +14,10 @@ const meta: Meta<typeof Dropdown> = {
   parameters: {
     docs: {
       description: {
-        component: 'A generic dropdown component for selecting items from a list.'
-      }
-    }
+        component:
+          'A generic dropdown component for selecting items from a list.',
+      },
+    },
   },
   argTypes: {
     selectedItem: { control: false },
@@ -41,7 +42,9 @@ const DropdownWrapper = (args: any) => {
         selectedItem={selectedCity}
         items={cities as City[]}
         onSelect={setSelectedCity}
-        getDisplayValue={(city) => city ? `${city.name}, ${city.country}` : ''}
+        getDisplayValue={(city) =>
+          city ? `${city.name}, ${city.country}` : ''
+        }
       />
     </div>
   );
@@ -50,13 +53,13 @@ const DropdownWrapper = (args: any) => {
 export const Default: Story = {
   render: (args) => <DropdownWrapper {...args} />,
   args: {
-    placeholder: "Select a city",
+    placeholder: 'Select a city',
   },
 };
 
 export const WithCustomPlaceholder: Story = {
   render: (args) => <DropdownWrapper {...args} />,
   args: {
-    placeholder: "Choose your conference location",
+    placeholder: 'Choose your conference location',
   },
 };

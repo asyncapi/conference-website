@@ -50,8 +50,11 @@ describe('Footer links', () => {
   });
 
   it('YouTube should redirect to correct page', () => {
-    cy.getTestData('footer-youtube')
-      .should('have.attr', 'href', 'https://www.youtube.com/asyncapi');
+    cy.getTestData('footer-youtube').should(
+      'have.attr',
+      'href',
+      'https://www.youtube.com/asyncapi'
+    );
   });
 
   it('Should Contain AsyncAPI Conference Logo', () => {
@@ -80,17 +83,9 @@ describe('Footer links', () => {
 
     socialPlatforms.forEach((platform) => {
       it(`Should display tooltip when hovering over ${platform.name} icon`, () => {
-        cy.getTestData(platform.dataTest).invoke(
-          'addClass',
-          'show-for-test'
-        );
-        cy.getTestData(platform.dataTest).should(
-          'be.visible'
-        );
-        cy.getTestData(platform.dataTest).should(
-          'contain',
-          platform.name
-        );
+        cy.getTestData(platform.dataTest).invoke('addClass', 'show-for-test');
+        cy.getTestData(platform.dataTest).should('be.visible');
+        cy.getTestData(platform.dataTest).should('contain', platform.name);
       });
     });
   });

@@ -13,7 +13,6 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   background: #1b1130;
 }
 
@@ -34,7 +33,7 @@ body {
 
 .social-wrapper .icon .tooltip::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 8px;
   width: 8px;
   background: #fff;
@@ -226,18 +225,19 @@ backdrop-filter: blur(10px); */
   mix-blend-mode: lighten;
 }
 
-
 .color-effect {
-    position: absolute;
-    width: 100vw;
-    max-width: none;
-    bottom: 400px;
-    will-change: transform;
-    transform: translate3d(0%, 9.9964%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    vertical-align: middle;
-    display: inline-block;
-    z-index: 0;
+  position: absolute;
+  width: 100vw;
+  max-width: none;
+  
+  bottom: 500px;
+  will-change: transform;
+  transform: translate3d(0%, 9.9964%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  vertical-align: middle;
+  display: inline-block;
+  z-index: 0;
 }
 
 @media (max-width: 780px) {

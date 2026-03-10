@@ -38,14 +38,18 @@ function Header(): JSX.Element {
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
                 <Link href="#tickets">
-                  <Button type="button" className="w-[250px]" text="Register Now" />
+                  <Button
+                    type="button"
+                    className="w-[250px]"
+                    text="Register Now"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-24">
+      <div className="mt-24 overflow-hidden">
         <ReactSlider>
           {cities.map((city) => {
             return <VenueCard key={city.name} city={city} />;
