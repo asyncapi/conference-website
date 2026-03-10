@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { JSX } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';

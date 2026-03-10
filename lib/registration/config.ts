@@ -1,9 +1,3 @@
-/**
- * Registration 2026 configuration helper.
- * Reads environment variables and exports them as constants.
- * Throws in non-production environments if any required value is missing.
- */
-
 const sheetId = process.env.REGISTRATION_SHEET_ID?.trim();
 const tab = process.env.REGISTRATION_TAB?.trim();
 

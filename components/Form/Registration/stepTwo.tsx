@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { JSX } from 'react';
 import cityLists from '../../../config/city-lists.json';
 import Button from '../../Buttons/button';
@@ -11,7 +10,7 @@ function StepTwoRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
   return (
     <form onSubmit={(e) => setStep(e, 3)} data-test="reg-step-two">
       <h1 id="step-two-heading" className="text-white font-bold text-4xl lg:text-3xl">Event Details</h1>
-      <p className="text-dark-600 border-b border-dark-700 pb-2 mb-2">Tell us how you'll attend so we can reserve your place.</p>
+      <p className="text-dark-600 border-b border-dark-700 pb-2 mb-2">Tell us how you&apos;ll attend so we can reserve your place.</p>
       <div className='space-y-2 last:space-y-6' role="group" aria-labelledby="step-two-heading">
         <div className='space-y-1'>
           <label htmlFor="company" className="text-dark-600 text-lg">Company</label>
