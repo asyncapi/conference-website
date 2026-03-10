@@ -4,7 +4,7 @@ import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import ReactSlider from '../Slider/slider';
 import cities from '../../config/city-lists.json';
-import Venue from '../Venue/venue';
+import VenueCard from '../Cards/VenueCard/VenueCard';
 import Announcement from '../announcement';
 import Link from 'next/link';
 
@@ -23,7 +23,7 @@ function Header(): JSX.Element {
                 data-test="landing-heading"
               >
                 <Heading
-                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient"
+                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient px-2 pb-2"
                   level="h1"
                   typeStyle="heading-lg"
                 >
@@ -48,7 +48,7 @@ function Header(): JSX.Element {
       <div className="mt-24">
         <ReactSlider>
           {cities.map((city) => {
-            return <Venue key={city.name} city={city} />;
+            return <VenueCard key={city.name} city={city} />;
           })}
         </ReactSlider>
       </div>
