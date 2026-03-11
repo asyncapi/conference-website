@@ -63,7 +63,7 @@ export default function Registration2026(): JSX.Element {
         <div aria-hidden="true">
           <Confetti numberOfPieces={50} width={width} height={height} tweenDuration={40} />
         </div>
-        <Link href="/" className=' w-full'>
+        <Link href="/" className='flex items-center justify-center w-full'>
           <Button type="button">
             Back to Conference {new Date().getFullYear()}
           </Button>
