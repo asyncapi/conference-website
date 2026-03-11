@@ -56,6 +56,7 @@ export interface Agenda {
   speaker: number | number[];
   type: string;
   city: string;
+  day?: string;
 }
 
 export interface Ticket {

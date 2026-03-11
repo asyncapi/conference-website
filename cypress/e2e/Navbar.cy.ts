@@ -15,8 +15,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to about', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     // Click on the navbar link that you want to test
     cy.getTestData('nav-About').click();
 
@@ -26,8 +24,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to speakers', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.getTestData('nav-Speakers').click();
 
     cy.url().should('eq', 'http://localhost:3000/#speakers');
@@ -41,8 +37,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to sponsors', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.getTestData('nav-Sponsors').click();
 
     cy.url().should('eq', 'http://localhost:3000/#sponsors');
@@ -50,24 +44,18 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to home', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.getTestData('nav-Home').click();
 
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
   it('should redirect to tickets', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.getTestData('nav-Tickets').click();
 
     cy.url().should('eq', 'http://localhost:3000/#tickets');
   });
 
   it('should redirect to venues', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     let data = venueData[0]?.subMenu;
     cy.wrap(data).each((val: LinkItem, idx) => {
       cy.getTestData('nav-Venue').trigger('mouseover');
@@ -92,8 +80,6 @@ describe('Navbar links', () => {
   // To check for mobile view
 
   it('should redirect to about mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
     // Click on the navbar link that you want to test
@@ -105,8 +91,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to speakers mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
@@ -123,8 +107,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to sponsors mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
@@ -135,8 +117,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to home mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
@@ -146,8 +126,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to tickets mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
@@ -157,8 +135,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to venues mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     let data = venueData[0].subMenu;
     cy.wrap(data).each((val: LinkItem, idx) => {
@@ -170,8 +146,6 @@ describe('Navbar links', () => {
   });
 
   it('should redirect to resource hub mobile view', () => {
-    cy.getTestData('close-button').click();
-    cy.wait(350);
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 

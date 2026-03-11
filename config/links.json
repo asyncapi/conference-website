@@ -8,24 +8,16 @@
     "ref": "",
     "subMenu": [
       {
-        "title": "Singapore",
-        "ref": "/venue/Singapore"
+        "title": "California, USA",
+        "ref": "/venue/California"
       },
       {
-        "title": "Munich, Germany",
-        "ref": "/venue/Munich"
-      },
-      {
-        "title": "Lagos, Nigeria",
-        "ref": "/venue/Lagos"
+        "title": "Amsterdam, Netherlands",
+        "ref": "/venue/Amsterdam"
       },
       {
         "title": "London, UK",
         "ref": "/venue/London"
-      },
-      {
-        "title": "Bangalore, India",
-        "ref": "/venue/Bangalore"
       },
       {
         "title": "Online",
@@ -36,6 +28,10 @@
         "ref": "/venue/Paris"
       }
     ]
+  },
+  {
+    "title": "Meetups",
+    "ref": "/meetups"
   },
   {
     "title": "Speakers",
