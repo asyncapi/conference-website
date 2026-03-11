@@ -89,18 +89,29 @@ export default async function handler(req: any, res: any) {
             },
         });
 
+        const firstName = payload.fullName.split(/\s+/)[0] || payload.fullName;
+
         await transporter.sendMail({
             from: process.env.ASYNCAPI_EMAIL,
             to: payload.email,
             subject: 'Conference 2026 Registration Received',
-            html: `
-                <p>Hi <b>${payload.fullName}</b>,</p>
-                <p>Thank you for registering for <b>Conference 2026</b>.</p>
-                <p>Your registration has been received successfully.</p>
-                <p>Ticket activation details will be shared with you soon.</p>
-                <br />
-                <p>AsyncAPI Team</p>
-            `,
+            text: `Hi ${firstName},
+
+Thank you for registering. Your registration has been successfully received and confirmed.
+
+We're excited to have you join us and appreciate you taking the time to be part of the event.
+
+In the meantime, feel free to explore the community, connect with others, and keep an eye on your inbox for upcoming announcements.
+
+You can also join our Slack workspace for real-time updates, follow us on social media, or visit our website to stay up to date with the latest news.
+
+If you have any questions or need assistance, don't hesitate to reach out.
+
+Thanks again for registering.
+
+Best regards,
+
+AsyncAPI Conference`,
         });
     } catch (emailError) {
         console.warn('Confirmation email failed:', emailError);
