@@ -13,6 +13,7 @@ import Accordion from '../../components/Accordion/Accordion';
 import Button from '../../components/Buttons/button';
 import Arrow from '../../components/illustration/arrow';
 import Link from 'next/link';
+import Head from 'next/head';
 import faqs from '../../config/meetup-faqs.json';
 import meetups from '../../config/meetups.json';
 
@@ -140,6 +141,14 @@ const Meetups = () => {
 
   return (
     <div className="relative">
+      <Head>
+        <title>AsyncAPI Meetups</title>
+        <style>{`
+          html, body {
+            overflow-x: visible !important;
+          }
+        `}</style>
+      </Head>
       <motion.div
         className="container mt-[150px] justify-center sm:py-6"
         variants={containerVariants}
