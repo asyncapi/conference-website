@@ -11,7 +11,7 @@ import Link from 'next/link';
 function Header(): JSX.Element {
   return (
     <div className="relative">
-      <div className="container w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center">
         <div className="">
           <div className="flex justify-center w-full mt-32">
             <div className="flex flex-col justify-center items-center w-full">
@@ -30,7 +30,7 @@ function Header(): JSX.Element {
                   AsyncAPI Conference {new Date().getFullYear()}
                 </Heading>
               </div>
-              <div className="w-[624px] sm:w-full text-center">
+              <div className="w-full max-w-[624px] text-center px-2">
                 <Paragraph className="mt-[16px]" textColor="text-gray-200">
                   Join us for the AsyncAPI Conference, bringing the latest in
                   AsyncAPI technology to locations worldwide!
@@ -40,7 +40,7 @@ function Header(): JSX.Element {
                 <Link href="#tickets">
                   <Button
                     type="button"
-                    className="w-[250px]"
+                    className="w-full max-w-[250px]"
                     text="Register Now"
                   />
                 </Link>
