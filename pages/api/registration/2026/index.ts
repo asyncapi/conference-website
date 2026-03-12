@@ -2,7 +2,7 @@
  * API route: /api/registration/2026
  */
 import nodemailer from 'nodemailer';
-import { appendRegistrationRow } from "../../../../lib/registration/googleSheets";
+import { insertRegistration } from "../../../../lib/registration/supabase";
 
 import { isValidEmail } from "../../../../utils/validation";
 
@@ -49,23 +49,22 @@ export default async function handler(req: any, res: any) {
         sponsorDataSharing: Boolean(sponsorDataSharing),
     };
 
-    // ---- Prepare Google Sheet row ----
-    const rowValues = [
-        new Date().toISOString(),        // timestamp
-        payload.fullName,
-        payload.email,
-        payload.company,
-        payload.role,
-        payload.preferredCity,
-        payload.updatesOptIn,
-        payload.sponsorDataSharing,
-        payload.notes,
-    ];
+    const registrationRecord = {
+        submitted_at: new Date().toISOString(),
+        full_name: payload.fullName,
+        email: payload.email,
+        company: payload.company,
+        role: payload.role,
+        preferred_city: payload.preferredCity,
+        updates_opt_in: payload.updatesOptIn,
+        sponsor_data_sharing: payload.sponsorDataSharing,
+        notes: payload.notes,
+    };
 
     try {
-        await appendRegistrationRow(rowValues);
+        await insertRegistration(registrationRecord);
     } catch (error) {
-        console.error('Failed to append registration row:', error);
+        console.error('Failed to insert registration row:', error);
 
         return res.status(500).json({
             error: 'Failed to store registration. Please try again later.',
