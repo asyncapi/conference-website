@@ -20,6 +20,7 @@
   "dependencies": {
     "@googleapis/sheets": "^7.0.0",
     "axios": "^1.13.5",
+    "cloudinary": "^2.8.0",
     "framer-motion": "^12.34.3",
     "net": "^1.0.2",
     "next": "^15.5.12",
