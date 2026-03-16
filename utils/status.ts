@@ -13,7 +13,6 @@ function parseStartDate(parts: string[]): Date {
       month: 'long',
       year: 'numeric',
     });
-
     return new Date(`${startPart} ${monthYear}`);
   }
   return new Date(startPart);
