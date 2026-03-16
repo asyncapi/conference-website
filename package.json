@@ -17,7 +17,9 @@
   },
   "dependencies": {
     "@googleapis/sheets": "^7.0.0",
+    "@react-pdf/renderer": "^4.3.2",
     "axios": "^1.8.2",
+    "framer-motion": "^12.37.0",
     "net": "^1.0.2",
     "next": "^15.2.4",
     "next-on-netlify": "^3.0.1",
