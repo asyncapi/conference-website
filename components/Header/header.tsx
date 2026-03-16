@@ -23,7 +23,7 @@ function Header(): JSX.Element {
                 data-test="landing-heading"
               >
                 <Heading
-                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient"
+                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient px-2 pb-2"
                   level="h1"
                   typeStyle="heading-lg"
                 >
@@ -38,14 +38,18 @@ function Header(): JSX.Element {
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
                 <Link href="#tickets">
-                  <Button type="button" className="w-[250px]" text="Register Now" />
+                  <Button
+                    type="button"
+                    className="w-[250px]"
+                    text="Register Now"
+                  />
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-24">
+      <div className="mt-24 overflow-hidden">
         <ReactSlider>
           {cities.map((city) => {
             return <VenueCard key={city.name} city={city} />;

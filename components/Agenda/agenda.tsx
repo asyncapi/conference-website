@@ -10,9 +10,8 @@ interface IAgenda {
   city: ExtendedCity;
 } 
 
-
 function Agenda({ city }: IAgenda): JSX.Element {
-  const hasMultiDayAgenda = city.agenda.some(talk => talk.day);
+  const hasMultiDayAgenda = city.agenda.some((talk) => talk.day);
   const agendaByDay = hasMultiDayAgenda
     ? city.agenda.reduce<Record<string, AgendaType[]>>((acc, talk) => {
         const dayKey = talk.day ?? 'Agenda';
@@ -23,7 +22,10 @@ function Agenda({ city }: IAgenda): JSX.Element {
 
   if (city.agenda.length < 1) {
     return (
-      <div data-test="agenda-com" className="flex flex-col justify-center items-center">
+      <div
+        data-test="agenda-com"
+        className="flex flex-col justify-center items-center"
+      >
         <div className="w-[720px] lg:w-full mt-[10px] text-center">
           <Heading typeStyle="heading-md" className="text-white">
             Agenda Coming Soon - Stay Tuned!
@@ -34,9 +36,14 @@ function Agenda({ city }: IAgenda): JSX.Element {
   }
 
   return (
-    <div data-test="agenda-com" className="flex flex-col justify-center items-center">
+    <div
+      data-test="agenda-com"
+      className="flex flex-col justify-center items-center"
+    >
       <div className="w-full">
-        <Heading className="text-[30px] text-white text-center mb-[40px]">Agenda</Heading>
+        <Heading className="text-[30px] text-white text-center mb-[40px]">
+          Agenda
+        </Heading>
         {Object.entries(agendaByDay).map(([day, talks]) => (
           <div key={day} className="mb-[80px]">
             {hasMultiDayAgenda && (
@@ -49,7 +56,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
               </Heading>
             )}
             {talks.map((talk: AgendaType) => {
-              const getSpeaker = city.speakers.filter(speaker =>
+              const getSpeaker = city.speakers.filter((speaker) =>
                 Array.isArray(talk.speaker)
                   ? talk.speaker.includes(speaker.id)
                   : speaker.id === talk.speaker
@@ -85,7 +92,10 @@ function Agenda({ city }: IAgenda): JSX.Element {
                           />
                         </div>
                         <div className="ml-4 w-[300px] sm:w-[250px]">
-                          <Heading typeStyle="heading-sm-semibold" className="text-white">
+                          <Heading
+                            typeStyle="heading-sm-semibold"
+                            className="text-white"
+                          >
                             {getSpeaker[0].name}
                           </Heading>
                           <Paragraph typeStyle="body-sm" className="mt-2">
@@ -110,7 +120,10 @@ function Agenda({ city }: IAgenda): JSX.Element {
                                 />
                               </div>
                               <div className="ml-4 w-[300px] sm:w-[250px]">
-                                <Heading typeStyle="heading-sm-semibold" className="text-white">
+                                <Heading
+                                  typeStyle="heading-sm-semibold"
+                                  className="text-white"
+                                >
                                   {speaker.name}
                                 </Heading>
                                 <Paragraph typeStyle="body-sm" className="mt-2">

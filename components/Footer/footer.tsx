@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import ILink from '../illustration/link';
-import Socials from "./socials";
+import Socials from './socials';
 
 function Footer(): JSX.Element {
   return (
@@ -26,7 +26,8 @@ function Footer(): JSX.Element {
         {/* "Made with ❤️" and Socials Section - Grouped together */}
         <div className="flex flex-row items-center gap-4 text-center sm:flex-col sm:items-center">
           <span className="text-white text-[16px] md:text-[18px] leading-tight">
-            Made with ❤️ by AsyncAPI contributors. By the community for the community!
+            Made with ❤️ by AsyncAPI contributors. By the community for the
+            community!
           </span>
           <div className="w-[1px] h-6 bg-white sm:hidden" />
           <div className="flex items-center gap-2 flex-shrink-0">
