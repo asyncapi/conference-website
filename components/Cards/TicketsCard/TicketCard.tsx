@@ -1,35 +1,30 @@
-import React, { JSX, useState } from 'react';
-import Button from '../Buttons/button';
-import Arrows from '../illustration/arrows';
-import TicketIcon from '../illustration/ticket';
-import tickets from '../../config/tickets.json';
-import { Ticket as ITicket } from '../../types/types';
+import React, { JSX } from 'react';
+import Button from '../../Buttons/button';
+import Arrows from '../../illustration/arrows';
+import TicketIcon from '../../illustration/ticket';
+import { Ticket as ITicket } from '../../../types/types';
 
-const Tickets = (): JSX.Element => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const today = new Date();
+interface TicketCardProps {
+  availableTickets: ITicket[];
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
+  nextTicket: () => void;
+  prevTicket: () => void;
+  today: Date;
+}
 
-  const availableTickets: ITicket[] = tickets.sort((a, b) => {
-    const aEnded = new Date(a.eventDate) < today;
-    const bEnded = new Date(b.eventDate) < today;
-    if (aEnded === bEnded) return 0;
-    return aEnded ? 1 : -1; 
-  });
-
-  const nextTicket = (): void => {
-    setCurrentIndex((prev) => (prev + 1) % availableTickets.length);
-  };
-
-  const prevTicket = (): void => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + availableTickets.length) % availableTickets.length
-    );
-  };
-
+const TicketCard = ({
+  availableTickets,
+  currentIndex,
+  setCurrentIndex,
+  nextTicket,
+  prevTicket,
+  today,
+}: TicketCardProps): JSX.Element => {
   return (
     <div className="relative max-w-2xl mx-auto p-6">
       <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">
-        < Button 
+        <Button
           type="button"
           onClick={prevTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
@@ -39,8 +34,8 @@ const Tickets = (): JSX.Element => {
           iconPosition="left"
         />
 
-        < Button 
-         type="button"
+        <Button
+          type="button"
           onClick={nextTicket}
           className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Next ticket"
@@ -48,7 +43,6 @@ const Tickets = (): JSX.Element => {
           icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
           iconPosition="left"
         />
-
       </div>
 
       <div className="relative h-96">
@@ -57,7 +51,7 @@ const Tickets = (): JSX.Element => {
           const isPrevCard: boolean =
             index ===
             (currentIndex - 1 + availableTickets.length) %
-              availableTickets.length;
+            availableTickets.length;
           const isNextCard: boolean =
             index === (currentIndex + 1) % availableTickets.length;
           const isEnded: boolean = today > new Date(ticket.eventDate);
@@ -100,9 +94,8 @@ const Tickets = (): JSX.Element => {
                       <p className="text-gray-500 mt-1">{ticket.description}</p>
                     </div>
                     <div
-                      className={`px-2 py-1 rounded-full text-sm font-medium ${
-                        isEnded ? 'bg-red-100 text-red-600' : 'text-gradient'
-                      }`}
+                      className={`px-2 py-1 rounded-full text-sm font-medium ${isEnded ? 'bg-red-100 text-red-600' : 'text-gradient'
+                        }`}
                     >
                       {isEnded ? 'Closed' : ticket.status}
                     </div>
@@ -126,7 +119,11 @@ const Tickets = (): JSX.Element => {
 
                   {ticket.url && !isEnded ? (
                     <a href={ticket.url} target="_blank" rel="noreferrer">
-                      <Button type="button" className="mt-8 w-full" text="Get a Free Ticket" />
+                      <Button
+                        type="button"
+                        className="mt-8 w-full"
+                        text="Get a Free Ticket"
+                      />
                     </a>
                   ) : (
                     <Button
@@ -150,9 +147,8 @@ const Tickets = (): JSX.Element => {
           return (
             <button
               key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
-              }`}
+              className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
+                }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to ticket ${index + 1}`}
             />
@@ -163,4 +159,4 @@ const Tickets = (): JSX.Element => {
   );
 };
 
-export default Tickets;
+export default TicketCard;

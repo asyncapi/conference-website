@@ -39,15 +39,11 @@ function Button({
       className={`${!outline && 'gradient-bg'} ${disabled && 'cursor-not-allowed'} flex items-center justify-center text-white  h-14 rounded-md p-2 ${iconPosition === 'left' ? 'justify-start' : 'justify-end'} ${className}`}
     >
       {icon && iconPosition === 'left' && (
-        <span className="inline-block">
-          {icon}
-        </span>
+        <span className="inline-block">{icon}</span>
       )}
       <span className="inline-block">{content}</span>
       {icon && iconPosition === 'right' && (
-        <span className="inline-block">
-          {icon}
-        </span>
+        <span className="inline-block">{icon}</span>
       )}
     </button>
   );

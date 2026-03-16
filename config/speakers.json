@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "name": "V. Thulisile Sibanda",
     "title": "Senior Community Manager at AsyncAPI Initiative",
@@ -22,37 +22,37 @@
   },
   {
     "id": 4,
-    "name": "Hari Krishnan",
-    "title": "Founder and CEO at Polarizer Technologies",
-    "img": "/img/speaker-images/online-conf/Hari.webp",
+    "name": "John Fallows",
+    "title": "CTO at Aklivity",
+    "img": "/img/speaker-images/san-jose/JohnFallows.webp",
     "city": ["California"]
   },
   {
     "id": 5,
     "name": "Hugo Guerrero",
-    "title": "Head of Techincal Marketing at Kong",
+    "title": "Head of Technical Marketing at Kong",
     "img": "/img/speaker-images/san-jose/Hugo.webp",
     "city": ["California"]
-  },  
+  },
   {
     "id": 6,
     "name": "Ruchi Pakhle",
     "title": "Software Engineer at Red Hat",
     "img": "/img/speaker-images/bangalore/Ruchi.webp",
     "city": ["California"]
-  },  
+  },
   {
     "id": 7,
-    "name": "Prachi Jamdade",
-    "title": "Developer Advocate at Gravitee",
-    "img": "/img/speaker-images/san-jose/Prachi.webp",
+    "name": "Kay James",
+    "title": "Product Marketing Manager at Gravitee",
+    "img": "/img/speaker-images/san-jose/Kay.webp",
     "city": ["California"]
   },
   {
     "id": 8,
-    "name": "Ankit Kumar",
-    "title": "Head of Developer and Customer Success at Aklivity",
-    "img": "/img/speaker-images/london/Ankit.webp",
+    "name": "Leonid Lukyanov",
+    "title": "CEO at Aklivity",
+    "img": "/img/speaker-images/paris/Leonid.webp",
     "city": ["California"]
   },
   {
