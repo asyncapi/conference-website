@@ -60,7 +60,7 @@ function About(): JSX.Element {
             </a>
             <a
               className="flex justify-center "
-              href="/pdf/conf-2025.pdf"
+              href="/pdf/conf-2026.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
               <Button
