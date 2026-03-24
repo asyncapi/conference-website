@@ -133,7 +133,9 @@ function Navbar(): JSX.Element {
                       {link.subMenu ? (
                         <button
                           className="flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded px-1 py-1"
-                          onClick={() => setShow(show === link.title ? null : link.title)}
+                          onClick={() =>
+                            setShow(show === link.title ? null : link.title)
+                          }
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault();
@@ -205,30 +207,38 @@ function Navbar(): JSX.Element {
                             onKeyDown={(e) => {
                               const currentIndex = index;
                               const maxIndex = link.subMenu!.length - 1;
-                              
+
                               if (e.key === 'ArrowDown') {
                                 e.preventDefault();
-                                const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+                                const nextIndex =
+                                  currentIndex === maxIndex
+                                    ? 0
+                                    : currentIndex + 1;
                                 setFocusedSubMenuItem(nextIndex);
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'ArrowUp') {
                                 e.preventDefault();
-                                const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+                                const prevIndex =
+                                  currentIndex === 0
+                                    ? maxIndex
+                                    : currentIndex - 1;
                                 setFocusedSubMenuItem(prevIndex);
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
                                 // Focus back to the main menu button
-                                const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
+                                const button = e.currentTarget
+                                  .closest('.subMenu')
+                                  ?.parentElement?.querySelector('button');
                                 (button as HTMLButtonElement)?.focus();
                               }
-                              
+
                               if (e.key === 'Tab') {
                                 setShow(null);
                                 setFocusedSubMenuItem(-1);
