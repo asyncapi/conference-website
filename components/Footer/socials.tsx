@@ -63,6 +63,7 @@ function Socials(): JSX.Element {
               rel="noreferrer"
               className="w-full h-full flex justify-center items-center"
               data-test={linkTest}
+              aria-label={name}
             >
               <span
                 className={`absolute -top-11 left-1/2 -translate-x-1/2 text-sm p-2 rounded-md  opacity-0 pointer-events-none transition-all duration-300 whitespace-nowrap group-hover:opacity-100 group-hover:pointer-events-auto ${tooltipHoverClass}`}
@@ -70,7 +71,8 @@ function Socials(): JSX.Element {
               >
                 {name}
               </span>
-              <Icon className="h-[1em]" fill="currentColor" />
+              <Icon className="h-[1em]" fill="currentColor" aria-hidden="true" aria-label={name}
+              />
             </a>
           </li>
         )
