@@ -107,6 +107,19 @@ body {
   }
 }
 
+.slick-slide {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.slick-track {
+  display: flex !important;
+}
+
+.slick-dots {
+  position: relative !important;
+  bottom: 0 !important;
+}
+
 .gradient-bg {
   background-image: linear-gradient(
     225deg,
