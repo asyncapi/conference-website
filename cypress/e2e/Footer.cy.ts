@@ -83,7 +83,9 @@ describe('Footer links', () => {
 
     socialPlatforms.forEach((platform) => {
       it(`Should display tooltip when hovering over ${platform.name} icon`, () => {
-        cy.getTestData(platform.dataTest).invoke('addClass', 'show-for-test');
+        cy.getTestData(platform.dataTest)
+          .invoke('css', 'opacity', '1')
+          .invoke('css', 'pointer-events', 'auto');
         cy.getTestData(platform.dataTest).should('be.visible');
         cy.getTestData(platform.dataTest).should('contain', platform.name);
       });
