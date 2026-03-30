@@ -1,10 +1,11 @@
+'use client';
+
 import { useRef, useEffect, useState } from 'react';
 import {
   AnimatePresence,
   motion,
   useScroll,
   useTransform,
-  Variant,
   Variants,
 } from 'framer-motion';
 import Heading from '../../components/Typography/heading';
@@ -96,7 +97,7 @@ type Venue = {
 
 const venues: Venue[] = meetups;
 
-const Meetups = () => {
+export default function MeetupsPage() {
   const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -124,7 +125,7 @@ const Meetups = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, // animate children one after another
+        staggerChildren: 0.2,
       },
     },
   };
@@ -491,6 +492,4 @@ const Meetups = () => {
       </div>
     </div>
   );
-};
-
-export default Meetups;
+}

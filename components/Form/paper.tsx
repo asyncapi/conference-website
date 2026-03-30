@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef, FormEvent, JSX } from 'react';
 import Confetti from 'react-confetti';
 import StepOne from './Cfp/stepOne';

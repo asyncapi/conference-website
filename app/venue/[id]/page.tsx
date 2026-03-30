@@ -1,36 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import Button from '../../components/Buttons/button';
-import Heading from '../../components/Typography/heading';
-import Paragraph from '../../components/Typography/paragraph';
-import Sponsors from '../../components/Sponsors/sponsors';
+import Button from '../../../components/Buttons/button';
+import Heading from '../../../components/Typography/heading';
+import Paragraph from '../../../components/Typography/paragraph';
+import Sponsors from '../../../components/Sponsors/sponsors';
 import {
   Agenda as AgendaType,
-  City,
   ConferenceStatus,
   ExtendedCity,
   Speaker as SpeakerType,
-} from '../../types/types';
-import { getEventStatus } from '../../utils/status';
-import agenda from '../../config/agenda.json';
-import speakers from '../../config/speakers.json';
-import cities from '../../config/city-lists.json';
-import tickets from '../../config/tickets.json';
-import Agenda from '../../components/Agenda/agenda';
-import Guidelines from '../../components/Guidelines/guidelines';
-import CFPdata from '../../config/cfp-data.json';
-import { GetStaticPropsContext } from 'next';
+} from '../../../types/types';
+import { getEventStatus } from '../../../utils/status';
+import agenda from '../../../config/agenda.json';
+import speakers from '../../../config/speakers.json';
+import cities from '../../../config/city-lists.json';
+import tickets from '../../../config/tickets.json';
+import AgendaComponent from '../../../components/Agenda/agenda';
+import Guidelines from '../../../components/Guidelines/guidelines';
+import CFPdata from '../../../config/cfp-data.json';
 
-interface IVenue {
-  city: ExtendedCity;
+export async function generateStaticParams() {
+  return cities.map((city) => ({
+    id: city.name,
+  }));
 }
 
-export async function getStaticProps({ params }: GetStaticPropsContext) {
-  //temporary type
-  let currentCity: Partial<ExtendedCity>;
-  const cityName = params?.id as string;
+function getCityData(cityName: string): ExtendedCity {
   const city = cities.filter((city) => city.name === cityName);
-  currentCity = city[0];
+  const currentCity: Partial<ExtendedCity> = city[0];
   const citySpeakers = speakers.filter((speaker: SpeakerType) =>
     speaker.city.includes(cityName)
   );
@@ -39,27 +35,20 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
   currentCity.ticket = cityTicket[0];
-  return {
-    props: {
-      city: currentCity,
-    },
-  };
+  return currentCity as ExtendedCity;
 }
 
-export async function getStaticPaths() {
-  const paths = cities.map((city) => ({
-    params: { id: city.name },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-function Venue({ city }: IVenue) {
+export default async function VenuePage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const city = getCityData(id);
   const eventStatus = getEventStatus(city.date);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
+
   return (
     <div data-test={`venue-${city.name}`}>
       <div
@@ -152,7 +141,6 @@ function Venue({ city }: IVenue) {
         id="agenda"
         className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
       >
-
         {city.cfp ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
@@ -166,7 +154,7 @@ function Venue({ city }: IVenue) {
           </div>
         ) : (
           <div className="w-[1130px] lg:w-full">
-            <Agenda city={city} />
+            <AgendaComponent city={city} />
           </div>
         )}
       </div>
@@ -202,5 +190,3 @@ function Venue({ city }: IVenue) {
     </div>
   );
 }
-
-export default Venue;

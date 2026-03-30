@@ -1,11 +1,14 @@
-import React, { JSX } from 'react';
+import type { Metadata } from 'next';
 import PastEditonCard from '../../components/Cards/PastEditionCard/PastEditionCard';
 import pastEditionsArchiveLinks from '../../config/editions.json';
 
-const PastEditions = (): JSX.Element => {
+export const metadata: Metadata = {
+  title: 'Past Editions | AACoT',
+};
+
+export default function PastEditions() {
   return (
     <div>
-      <title>Past Editions | AACoT</title>
       <div className="my-[70px]">
         <h1 className="text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold">
           Past Editions of
@@ -22,6 +25,4 @@ const PastEditions = (): JSX.Element => {
       </div>
     </div>
   );
-};
-
-export default PastEditions;
+}
