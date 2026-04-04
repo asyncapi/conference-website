@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Arrows from '../illustration/arrows';
 
 const BackToTopButton: React.FC = () => {
@@ -6,22 +6,26 @@ const BackToTopButton: React.FC = () => {
 
   useEffect(() => {
     let inThrottle = false;
+    let pendingCheck = false;
 
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
     const throttledToggleVisibility = () => {
       if (!inThrottle) {
         toggleVisibility();
         inThrottle = true;
+        pendingCheck = false;
         setTimeout(() => {
           inThrottle = false;
+          if (pendingCheck) {
+            toggleVisibility();
+            pendingCheck = false;
+          }
         }, 150);
+      } else {
+        pendingCheck = true;
       }
     };
 
