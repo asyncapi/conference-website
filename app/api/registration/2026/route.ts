@@ -1,16 +1,14 @@
-/**
- * API route: /api/registration/2026
- */
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { insertRegistration } from "../../../../lib/registration/supabase";
+import { insertRegistration } from '../../../../lib/registration/supabase';
+import { isValidEmail } from '../../../../utils/validation';
 
-import { isValidEmail } from "../../../../utils/validation";
-
-
-export default async function handler(req: any, res: any) {
-    if (req.method !== 'POST') {
-        res.setHeader('Allow', 'POST');
-        return res.status(405).json({ error: 'Method Not Allowed' });
+export async function POST(req: NextRequest): Promise<NextResponse> {
+    let body: Record<string, unknown>;
+    try {
+        body = await req.json();
+    } catch {
+        return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
 
     const {
@@ -22,29 +20,29 @@ export default async function handler(req: any, res: any) {
         updatesOptIn,
         sponsorDataSharing,
         notes,
-    } = req.body || {};
+    } = body;
 
-    // ---- Required field validation ----
     if (!fullName || typeof fullName !== 'string') {
-        return res.status(400).json({
-            error: 'Full name is required',
-        });
+        return NextResponse.json(
+            { error: 'Full name is required' },
+            { status: 400 },
+        );
     }
 
-    if (!email || !isValidEmail(email.trim())) {
-        return res.status(400).json({
-            error: 'A valid email address is required',
-        });
+    if (!email || typeof email !== 'string' || !isValidEmail(email.trim())) {
+        return NextResponse.json(
+            { error: 'A valid email address is required' },
+            { status: 400 },
+        );
     }
 
-    // ---- Normalize payload ----
     const payload = {
         fullName: fullName.trim(),
         email: email.trim().toLowerCase(),
-        company: company?.trim() || '',
-        role: role?.trim() || '',
-        preferredCity: preferredCity?.trim() || '',
-        notes: notes?.trim() || '',
+        company: typeof company === 'string' ? company.trim() : '',
+        role: typeof role === 'string' ? role.trim() : '',
+        preferredCity: typeof preferredCity === 'string' ? preferredCity.trim() : '',
+        notes: typeof notes === 'string' ? notes.trim() : '',
         updatesOptIn: Boolean(updatesOptIn),
         sponsorDataSharing: Boolean(sponsorDataSharing),
     };
@@ -65,17 +63,16 @@ export default async function handler(req: any, res: any) {
         await insertRegistration(registrationRecord);
     } catch (error) {
         console.error('Failed to insert registration row:', error);
-
-        return res.status(500).json({
-            error: 'Failed to store registration. Please try again later.',
-        });
+        return NextResponse.json(
+            { error: 'Failed to store registration. Please try again later.' },
+            { status: 500 },
+        );
     }
 
-    // -------- Confirmation Email (optional) --------
     try {
         if (!process.env.ASYNCAPI_EMAIL || !process.env.GOOGLE_APP_PASSWORD) {
             console.warn('Confirmation email skipped: missing SMTP env vars.');
-            return res.status(200).json({ success: true });
+            return NextResponse.json({ success: true });
         }
 
         const transporter = nodemailer.createTransport({
@@ -116,5 +113,5 @@ AsyncAPI Conference`,
         console.warn('Confirmation email failed:', emailError);
     }
 
-    return res.status(200).json({ success: true });
+    return NextResponse.json({ success: true });
 }

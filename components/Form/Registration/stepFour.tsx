@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FormEvent, useState } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';
