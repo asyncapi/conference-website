@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from 'next';
 import Button from '../../../components/Buttons/button';
 import Heading from '../../../components/Typography/heading';
 import Paragraph from '../../../components/Typography/paragraph';
@@ -22,6 +23,24 @@ export async function generateStaticParams() {
   return cities.map((city) => ({
     id: city.name,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const city = cities.find((c) => c.name === id);
+
+  return {
+    title: city
+      ? `${city.name}, ${city.country} | AsyncAPI Conference`
+      : 'AsyncAPI Conference',
+    description:
+      city?.description ??
+      'AsyncAPI Conference - The conference for the AsyncAPI community',
+  };
 }
 
 function getCityData(cityName: string): ExtendedCity {

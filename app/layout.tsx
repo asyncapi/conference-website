@@ -3,6 +3,9 @@ import '../styles/globals.css';
 import ClientLayout from './client-layout';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://conference.asyncapi.com',
+  ),
   title: 'AsyncAPI Conference',
   description: 'AsyncAPI Conference - The conference for the AsyncAPI community',
   icons: {
