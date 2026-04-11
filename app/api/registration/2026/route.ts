@@ -94,15 +94,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             text: `Hi ${firstName},
 
 Thank you for registering. Your registration has been successfully received and confirmed.
-
 We're excited to have you join us and appreciate you taking the time to be part of the event.
-
 In the meantime, feel free to explore the community, connect with others, and keep an eye on your inbox for upcoming announcements.
-
 You can also join our Slack workspace for real-time updates, follow us on social media, or visit our website to stay up to date with the latest news.
-
 If you have any questions or need assistance, don't hesitate to reach out.
-
 Thanks again for registering.
 
 Best regards,

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
-import { City } from '../../types/types';
 import Arrows from '../illustration/arrows';
 
 interface IDropdown<T> {

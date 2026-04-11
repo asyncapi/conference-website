@@ -1,5 +1,5 @@
 import React, { useState, useEffect, JSX } from 'react';
-import Select, { MultiValue, StylesConfig } from 'react-select';
+import Select, { StylesConfig } from 'react-select';
 import { SelectOptions } from '../../types/types';
 
 const customStyles: StylesConfig<Partial<SelectOptions>, true> = {
