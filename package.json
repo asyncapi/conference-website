@@ -24,7 +24,7 @@
     "framer-motion": "^12.34.3",
     "googleapis": "^169.0.0",
     "net": "^1.0.2",
-    "next": "^15.5.14",
+    "next": "^15.5.15",
     "next-on-netlify": "^3.0.1",
     "nodemailer": "^8.0.5",
     "react": "^18.2.1",
