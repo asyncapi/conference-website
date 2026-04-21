@@ -11,7 +11,7 @@
     "name": "Annegret Junker",
     "title": "Chief Software Architect at codecentric AG",
     "img": "/img/speaker-images/online-conf/Annegret.webp",
-    "city": ["California"]
+    "city": ["California", "Amsterdam"]
   },
   {
     "id": 3,
@@ -61,5 +61,19 @@
     "title": "Lead Senior Computer Scientist at Adobe",
     "img": "/img/speaker-images/london/Artur Ciocanu.webp",
     "city": ["California"]
+  },
+  {
+    "id": 10,
+    "name": "Łukasz Górnicki",
+    "title": "Founder of BrainFart",
+    "img": "/img/speaker-images/online-conf/Lukasz.webp",
+    "city": ["Amsterdam"]
+  },
+  {
+    "id": 11,
+    "name": "Charles d'Avernas",
+    "title": "Co-founder at Neuroglia",
+    "img": "/img/speaker-images/online-conf/Charles.webp",
+    "city": ["Amsterdam"]
   }
 ]
