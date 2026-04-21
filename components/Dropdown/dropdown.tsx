@@ -16,8 +16,8 @@ function Dropdown<T>({
   items,
   onSelect,
   getDisplayValue,
-  placeholder = "Select an option",
-  className = "",
+  placeholder = 'Select an option',
+  className = '',
 }: IDropdown<T>): JSX.Element {
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -46,7 +46,10 @@ function Dropdown<T>({
   const displayValue = getDisplayValue(selectedItem) || placeholder;
 
   return (
-    <div className={`relative inline-block w-full ${className}`} ref={dropdownRef}>
+    <div
+      className={`relative inline-block w-full ${className}`}
+      ref={dropdownRef}
+    >
       <div className="w-full">
         <button
           type="button"
@@ -57,7 +60,7 @@ function Dropdown<T>({
           onClick={() => setShow(!show)}
         >
           <div>{displayValue}</div>
-          <Arrows direction='down' className='w-5 h-5' />
+          <Arrows direction="down" className="w-5 h-5" />
         </button>
       </div>
 

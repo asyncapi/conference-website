@@ -1,16 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Link from 'next/link';
-import { City } from '../../types/types';
-import { getEventStatus } from '../../utils/status';
-import MapPointer from '../illustration/mapPointer';
-import Button from '../Buttons/button';
+import { City } from '../../../types/types';
+import { getEventStatus } from '../../../utils/status';
+import MapPointer from '../../illustration/mapPointer';
 
 interface IVenue {
   city: City;
 }
 
-function Venue({ city }: IVenue) {
+function VenueCard({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
 
   return (
@@ -20,7 +19,7 @@ function Venue({ city }: IVenue) {
           background: `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0, .3)), url(${city.img})`,
           backgroundSize: 'cover',
         }}
-        className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-2xl flex items-center justify-center p-4 cursor-pointer m-3 hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
+        className="relative w-[300px] h-[400px] sm:w-[250px] sm:h-[350px] card-bg rounded-2xl flex items-center justify-center p-4 cursor-pointer m-3 hover:scale-[1.03] hover:shadow-xl transition-transform duration-300 ease-in-out"
       >
         <div className="flex justify-between flex-col w-full h-full">
           <div className="flex items-center">
@@ -31,10 +30,14 @@ function Venue({ city }: IVenue) {
                 cfp is open
               </div>
             )}
-            <a href={city.mapUrl}  target="_blank" rel="noreferrer" 
-            className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300" 
-            onClick={e => e.stopPropagation()}>
-            <MapPointer className="w-6 h-6" />
+            <a
+              href={city.mapUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-8 h-8 bg-white rounded-xl flex items-center justify-center ml-auto hover:bg-gray-400 transition-colors duration-300"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <MapPointer className="w-6 h-6" />
             </a>
           </div>
 
@@ -66,4 +69,4 @@ function Venue({ city }: IVenue) {
   );
 }
 
-export default Venue;
+export default VenueCard;

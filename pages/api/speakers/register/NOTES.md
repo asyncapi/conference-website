@@ -1,7 +1,6 @@
 # Steps to Initialize the speaker registration API (Locally)
 
 1. In the google cloud console
-
    1. Create a new project and enable the <a href="https://console.cloud.google.com/apis/api/sheets.googleapis.com/metrics?project=auth-testing-399611">`Google Sheets API`</a>.
    2. In the credentials option of the service create new credentials, creating a new service account
    3. After creating the service account, create a new Key for the service account in JSON format.
@@ -9,7 +8,6 @@
    5. Place the `credentials.json` file at the root of the project. It will be automatically gitignored.
 
 2. In Google Sheets
-
    1. Create a new Google Sheets spreadsheet name the sheet `Sheet1` (Its the default name in a new spredsheet).
    2. Open the credentials.json file and copy the value of the key named `client_email`.
    3. In the share option of the spreadsheet add the copied email as an Editor for the spreadsheet.
@@ -17,7 +15,6 @@
    5. Create `.env.local` file at the root of the project. Refer the `example.env.local` file and past the copied Sheet Id to designated key.
 
 3. Initializing app password
-
    1. Visit https://myaccount.google.com/
    2. Enable 2FA (Just a step to increase security of the account)
    3. In the search bar above search for `App Password`.

@@ -93,6 +93,14 @@ export interface CfpForm {
   Format: string;
   Level: string;
   AdditionalInfo: string;
+  updatesOptIn?: boolean;
+  sponsorDataSharing?: boolean;
+  notes?: string;
+  company?: string;
+  role?: string;
+  preferredCity?: string;
+  fullName?: string;
+  email?: string;
 }
 
 export interface CfpStepProps {
