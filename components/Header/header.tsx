@@ -37,7 +37,7 @@ function Header(): JSX.Element {
                 </Paragraph>
               </div>
               <div className="mt-[54px] relative flex items-center justify-center">
-                <Link href="#tickets">
+                <Link href="http://localhost:3000/register/2026">
                   <Button
                     type="button"
                     className="w-[250px]"
