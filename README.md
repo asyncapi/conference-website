@@ -30,11 +30,70 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying files in the `app` directory. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Testing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Running E2E Tests with Cypress
+
+This project uses [Cypress](https://www.cypress.io/) for end-to-end testing.
+
+**Interactive Mode (Recommended for Development)**
+
+```bash
+# Make sure the dev server is running
+npm run dev
+
+# In another terminal, open Cypress UI
+npm run cy:open
+```
+
+Then in the Cypress UI:
+1. Select "E2E Testing"
+2. Choose your browser
+3. Click on any test file to run tests
+
+**Headless Mode (CI/CD)**
+
+```bash
+# Make sure the dev server is running
+npm run dev
+
+# In another terminal, run all tests
+npx cypress run
+
+# Run specific test file
+npx cypress run --spec "cypress/e2e/Navbar.cy.ts"
+```
+
+### Available Test Suites
+
+- `cypress/e2e/Navbar.cy.ts` - Navigation tests (desktop & mobile)
+- `cypress/e2e/Footer.cy.ts` - Footer component tests
+- `cypress/e2e/Landing.cy.ts` - Landing page tests
+- `cypress/e2e/Venue.cy.ts` - Venue page tests
+
+## Storybook
+
+This project uses [Storybook](https://storybook.js.org/) for component development and documentation.
+
+**Running Storybook**
+
+```bash
+# Start Storybook development server
+npm run storybook
+```
+
+This will start Storybook on [http://localhost:6006](http://localhost:6006).
+
+**Building Storybook**
+
+```bash
+# Build static Storybook for deployment
+npm run build-storybook
+```
+
+The static files will be generated in the `storybook-static` directory.
 
 ## AsyncAPI Contributors ✨
 
