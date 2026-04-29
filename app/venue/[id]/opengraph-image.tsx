@@ -23,7 +23,7 @@ export default async function Image({
           justifyContent: 'center',
           width: '100%',
           height: '100%',
-          backgroundColor: '#1a1a2e',
+          backgroundColor: '#1B1130',
           color: 'white',
           fontFamily: 'sans-serif',
           padding: '60px',
