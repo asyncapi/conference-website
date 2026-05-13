@@ -30,7 +30,7 @@ export default async function Image({
         }}
       >
         <div style={{ fontSize: 32, color: '#875ae0', marginBottom: 16 }}>
-          AsyncAPI Conference 2026
+          {`AsyncAPI Conference ${new Date().getFullYear()}`}
         </div>
         <div
           style={{

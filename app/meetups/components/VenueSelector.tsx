@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import Heading from '../../../components/Typography/heading';
 import Paragraph from '../../../components/Typography/paragraph';
@@ -124,4 +123,4 @@ function VenueSelector({
   );
 }
 
-export default memo(VenueSelector);
+export default VenueSelector;
