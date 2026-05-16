@@ -1,4 +1,4 @@
-[ 
+[
   {
     "id": 1,
     "type": "California, USA",
@@ -12,6 +12,28 @@
   },
   {
     "id": 2,
+    "type": "Amsterdam",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2026-06-09T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+  },
+  {
+    "id": 3,
+    "type": "London",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2026-09-30T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+  },
+  {
+    "id": 4,
     "type": "Online",
     "price": 0,
     "url": null,
@@ -19,6 +41,17 @@
     "status": "Not Yet Available",
     "available": 100,
     "eventDate": "2026-10-28T00:00:00.000Z",
+    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+  },
+  {
+    "id": 5,
+    "type": "Paris",
+    "price": 0,
+    "url": null,
+    "description": "Access to all conference talks and workshops",
+    "status": "Not Yet Available",
+    "available": 100,
+    "eventDate": "2026-12-01T00:00:00.000Z",
     "benefits": ["AsyncAPI Track", "All talks", "Networking"]
   }
 ]

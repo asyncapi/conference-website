@@ -14,7 +14,6 @@ function Navbar(): JSX.Element {
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
-  const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -27,7 +26,6 @@ function Navbar(): JSX.Element {
       const target = event.target as Element;
       if (show && !target.closest('.subMenu')) {
         setShow(null);
-        setFocusedSubMenuItem(-1);
       }
     },
     [show]
@@ -68,7 +66,6 @@ function Navbar(): JSX.Element {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
         setShow(null);
-        setFocusedSubMenuItem(-1);
       }
     }, 300);
   };
@@ -83,13 +80,12 @@ function Navbar(): JSX.Element {
   const handleSubMenuLeave = (): void => {
     setIsSubMenuHovered(false);
     setShow(null);
-    setFocusedSubMenuItem(-1);
   };
 
   return (
-    <div className="relative">
+    <div>
       <div
-        className={`container flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
+        className={`flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
       >
         <div className="p-5 flex justify-between h-[75px] w-full items-center">
           <div
@@ -133,13 +129,14 @@ function Navbar(): JSX.Element {
                       {link.subMenu ? (
                         <button
                           className="flex items-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded px-1 py-1"
-                          onClick={() => setShow(show === link.title ? null : link.title)}
+                          onClick={() =>
+                            setShow(show === link.title ? null : link.title)
+                          }
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault();
                               setShow(show === link.title ? null : link.title);
                               if (show !== link.title) {
-                                setFocusedSubMenuItem(0);
                                 setTimeout(() => {
                                   subMenuRefs.current[0]?.focus();
                                 }, 50);
@@ -148,7 +145,6 @@ function Navbar(): JSX.Element {
                             if (e.key === 'ArrowDown') {
                               e.preventDefault();
                               setShow(link.title);
-                              setFocusedSubMenuItem(0);
                               setTimeout(() => {
                                 subMenuRefs.current[0]?.focus();
                               }, 50);
@@ -157,14 +153,12 @@ function Navbar(): JSX.Element {
                               e.preventDefault();
                               setShow(link.title);
                               const lastIndex = link.subMenu!.length - 1;
-                              setFocusedSubMenuItem(lastIndex);
                               setTimeout(() => {
                                 subMenuRefs.current[lastIndex]?.focus();
                               }, 50);
                             }
                             if (e.key === 'Escape') {
                               setShow(null);
-                              setFocusedSubMenuItem(-1);
                             }
                           }}
                           aria-expanded={show === link.title}
@@ -205,33 +199,37 @@ function Navbar(): JSX.Element {
                             onKeyDown={(e) => {
                               const currentIndex = index;
                               const maxIndex = link.subMenu!.length - 1;
-                              
+
                               if (e.key === 'ArrowDown') {
                                 e.preventDefault();
-                                const nextIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
-                                setFocusedSubMenuItem(nextIndex);
+                                const nextIndex =
+                                  currentIndex === maxIndex
+                                    ? 0
+                                    : currentIndex + 1;
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'ArrowUp') {
                                 e.preventDefault();
-                                const prevIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
-                                setFocusedSubMenuItem(prevIndex);
+                                const prevIndex =
+                                  currentIndex === 0
+                                    ? maxIndex
+                                    : currentIndex - 1;
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
-                              
+
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
-                                setFocusedSubMenuItem(-1);
                                 // Focus back to the main menu button
-                                const button = e.currentTarget.closest('.subMenu')?.parentElement?.querySelector('button');
+                                const button = e.currentTarget
+                                  .closest('.subMenu')
+                                  ?.parentElement?.querySelector('button');
                                 (button as HTMLButtonElement)?.focus();
                               }
-                              
+
                               if (e.key === 'Tab') {
                                 setShow(null);
-                                setFocusedSubMenuItem(-1);
                               }
                             }}
                           >

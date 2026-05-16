@@ -12,10 +12,26 @@
         "ref": "/venue/California"
       },
       {
+        "title": "Amsterdam, Netherlands",
+        "ref": "/venue/Amsterdam"
+      },
+      {
+        "title": "London, UK",
+        "ref": "/venue/London"
+      },
+      {
         "title": "Online",
         "ref": "/venue/Online"
+      },
+      {
+        "title": "Paris, France",
+        "ref": "/venue/Paris"
       }
     ]
+  },
+  {
+    "title": "Meetups",
+    "ref": "/meetups"
   },
   {
     "title": "Speakers",
@@ -24,6 +40,10 @@
   {
     "title": "Tickets",
     "ref": "/#tickets"
+  },
+  {
+    "title": "Register",
+    "ref": "/register/2026"
   },
   {
     "title": "Sponsors",

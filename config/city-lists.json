@@ -22,6 +22,50 @@
     "playlist": null
   },
   {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "date": "9 - 10 June, 2026",
+    "cfpDate": "12 April, 2026",
+    "description": "Join us at apidays Amsterdam for the AsyncAPI Conference and explore event-driven architecture with the global open-source community.",
+    "img": "/img/locations/amsterdam.webp",
+    "address": "Tolhuistuin, Amsterdam",
+    "mapUrl": "https://maps.app.goo.gl/utuwRBmnBpiG8gWM7",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/apidays.png",
+          "websiteUrl": "https://www.apidays.global/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": "https://apidays.typeform.com/speak",
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "London",
+    "country": "UK",
+    "date": "30 September - 1 October, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "Join us at apidays London for the AsyncAPI Conference and explore event-driven architecture with the global open-source community.",
+    "img": "/img/locations/london.webp",
+    "address": "Convene Sancroft, St. Paul's, London",
+    "mapUrl": "https://maps.app.goo.gl/vu9KaqbZkZQCj6F48",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/apidays.png",
+          "websiteUrl": "https://www.apidays.global/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
     "name": "Online",
     "country": " Edition",
     "date": "28 October, 2026",
@@ -35,6 +79,28 @@
         {
           "image": "/img/logos/asyncapi-logo--white.png",
           "websiteUrl": "https://asyncapi.com"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "cfp": null,
+    "recordings": null,
+    "playlist": null
+  },
+  {
+    "name": "Paris",
+    "country": "France",
+    "date": "1 - 3 December, 2026",
+    "cfpDate": "Not announced yet",
+    "description": "Join us at apidays Paris for the AsyncAPI Conference and explore event-driven architecture with the global open-source community.",
+    "img": "/img/locations/paris.webp",
+    "address": "CNIT Forest, Paris",
+    "mapUrl": "https://maps.app.goo.gl/B7kxsPgSGZ9xkW3x7",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/apidays.png",
+          "websiteUrl": "https://www.apidays.global/"
         }
       ]
     },

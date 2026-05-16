@@ -57,7 +57,6 @@ describe('Landing Page Tests', () => {
   });
 
   it('Subscribe Button is functional', () => {
-
     cy.getTestData('subscribe-button')
       .should('have.attr', 'href')
       .and('match', /https:\/\/www\.asyncapi\.com\/.*newsletter/);

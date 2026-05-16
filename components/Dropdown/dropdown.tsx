@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
-import { City } from '../../types/types';
 import Arrows from '../illustration/arrows';
 
 interface IDropdown<T> {
@@ -16,8 +15,8 @@ function Dropdown<T>({
   items,
   onSelect,
   getDisplayValue,
-  placeholder = "Select an option",
-  className = "",
+  placeholder = 'Select an option',
+  className = '',
 }: IDropdown<T>): JSX.Element {
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -46,18 +45,21 @@ function Dropdown<T>({
   const displayValue = getDisplayValue(selectedItem) || placeholder;
 
   return (
-    <div className={`relative inline-block w-full ${className}`} ref={dropdownRef}>
+    <div
+      className={`relative inline-block w-full ${className}`}
+      ref={dropdownRef}
+    >
       <div className="w-full">
         <button
           type="button"
-          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md cursor-pointer`}
+          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg border-none rounded-md cursor-pointer`}
           id="menu-button"
           aria-expanded={show}
           aria-haspopup="true"
           onClick={() => setShow(!show)}
         >
           <div>{displayValue}</div>
-          <Arrows direction='down' className='w-5 h-5' />
+          <Arrows direction="down" className="w-5 h-5" />
         </button>
       </div>
 
