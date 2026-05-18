@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
@@ -9,9 +11,13 @@ import Image from 'next/image';
 import { LinkItem } from '../../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { links } from '../../config/navigation';
+import { usePathname } from 'next/navigation';
+import { useSectionTracker } from '../../hooks/useSectionTracker';
 
 function Navbar(): JSX.Element {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const pathname = usePathname();
+  const { isActive } = useSectionTracker(pathname);
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
