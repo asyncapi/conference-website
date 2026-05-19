@@ -23,7 +23,6 @@ function Footer(): JSX.Element {
           </a>
         </div>
 
-        {/* "Made with ❤️" and Socials Section - Grouped together */}
         <div className="flex flex-row items-center gap-4 text-center sm:flex-col sm:items-center">
           <span className="text-white text-[16px] md:text-[18px] leading-tight">
             Made with ❤️ by AsyncAPI contributors. By the community for the

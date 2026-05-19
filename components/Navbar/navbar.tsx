@@ -14,7 +14,6 @@ function Navbar(): JSX.Element {
   const [drop, setDrop] = useState<boolean>(false);
   const [show, setShow] = useState<string | null>(null);
   const [isSubMenuHovered, setIsSubMenuHovered] = useState<boolean>(false);
-  const [focusedSubMenuItem, setFocusedSubMenuItem] = useState<number>(-1);
   const menuRef = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const subMenuRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -27,7 +26,6 @@ function Navbar(): JSX.Element {
       const target = event.target as Element;
       if (show && !target.closest('.subMenu')) {
         setShow(null);
-        setFocusedSubMenuItem(-1);
       }
     },
     [show]
@@ -68,7 +66,6 @@ function Navbar(): JSX.Element {
     closeTimeout.current = setTimeout(() => {
       if (!isSubMenuHovered) {
         setShow(null);
-        setFocusedSubMenuItem(-1);
       }
     }, 300);
   };
@@ -83,7 +80,6 @@ function Navbar(): JSX.Element {
   const handleSubMenuLeave = (): void => {
     setIsSubMenuHovered(false);
     setShow(null);
-    setFocusedSubMenuItem(-1);
   };
 
   return (
@@ -141,7 +137,6 @@ function Navbar(): JSX.Element {
                               e.preventDefault();
                               setShow(show === link.title ? null : link.title);
                               if (show !== link.title) {
-                                setFocusedSubMenuItem(0);
                                 setTimeout(() => {
                                   subMenuRefs.current[0]?.focus();
                                 }, 50);
@@ -150,7 +145,6 @@ function Navbar(): JSX.Element {
                             if (e.key === 'ArrowDown') {
                               e.preventDefault();
                               setShow(link.title);
-                              setFocusedSubMenuItem(0);
                               setTimeout(() => {
                                 subMenuRefs.current[0]?.focus();
                               }, 50);
@@ -159,14 +153,12 @@ function Navbar(): JSX.Element {
                               e.preventDefault();
                               setShow(link.title);
                               const lastIndex = link.subMenu!.length - 1;
-                              setFocusedSubMenuItem(lastIndex);
                               setTimeout(() => {
                                 subMenuRefs.current[lastIndex]?.focus();
                               }, 50);
                             }
                             if (e.key === 'Escape') {
                               setShow(null);
-                              setFocusedSubMenuItem(-1);
                             }
                           }}
                           aria-expanded={show === link.title}
@@ -214,7 +206,6 @@ function Navbar(): JSX.Element {
                                   currentIndex === maxIndex
                                     ? 0
                                     : currentIndex + 1;
-                                setFocusedSubMenuItem(nextIndex);
                                 subMenuRefs.current[nextIndex]?.focus();
                               }
 
@@ -224,14 +215,12 @@ function Navbar(): JSX.Element {
                                   currentIndex === 0
                                     ? maxIndex
                                     : currentIndex - 1;
-                                setFocusedSubMenuItem(prevIndex);
                                 subMenuRefs.current[prevIndex]?.focus();
                               }
 
                               if (e.key === 'Escape') {
                                 e.preventDefault();
                                 setShow(null);
-                                setFocusedSubMenuItem(-1);
                                 // Focus back to the main menu button
                                 const button = e.currentTarget
                                   .closest('.subMenu')
@@ -241,7 +230,6 @@ function Navbar(): JSX.Element {
 
                               if (e.key === 'Tab') {
                                 setShow(null);
-                                setFocusedSubMenuItem(-1);
                               }
                             }}
                           >
