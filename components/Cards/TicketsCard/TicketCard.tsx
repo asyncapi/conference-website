@@ -22,7 +22,7 @@ const TicketCard = ({
   today,
 }: TicketCardProps): JSX.Element => {
   return (
-    <div className="relative max-w-2xl mx-auto p-6">
+    <div className="relative max-w-2xl mx-auto p-6 sm:overflow-x-clip">
       <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">
         <Button
           type="button"

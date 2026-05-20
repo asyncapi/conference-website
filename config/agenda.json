@@ -70,5 +70,33 @@
     "type": "Technical Speaker",
     "city": "California",
     "day": "Friday, February 20th"
+  },
+  {
+    "time": "15:45 PM CEST - 16:10 PM CEST",
+    "session": "AsyncAPI: Standardizing Event-Driven APIs",
+    "speaker": 10,
+    "type": "Technical Speaker",
+    "city": "Amsterdam"
+  },
+  {
+    "time": "16:10 PM CEST - 16:35 PM CEST",
+    "session": "Executable Event Streams with AsyncAPI",
+    "speaker": 11,
+    "type": "Technical Speaker",
+    "city": "Amsterdam"
+  },
+  {
+    "time": "16:35 PM CEST - 17:00 PM CEST",
+    "session": "From Sticky Notes to AsyncAPI: How EventStorming Gives LLMs the Context They Need",
+    "speaker": 2,
+    "type": "Technical Speaker",
+    "city": "Amsterdam"
+  },
+  {
+    "time": "17:00 PM CEST - 17:25 PM CEST",
+    "session": "TBC",
+    "speaker": 0,
+    "type": "Technical Speaker",
+    "city": "Amsterdam"
   }
 ]

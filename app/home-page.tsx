@@ -1,0 +1,270 @@
+'use client';
+
+/* eslint-disable @next/next/no-img-element */
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Header from '../components/Header/header';
+import Sponsors from '../components/Sponsors/sponsors';
+import About from '../components/About/about';
+import Ticket from '../components/Ticket/Ticket';
+import Heading from '../components/Typography/heading';
+import Paragraph from '../components/Typography/paragraph';
+import Subscription from '../components/Form/subscription';
+import SpeakerCard from '../components/Cards/SpeakerCard/SpeakerCard';
+import cities from '../config/city-lists.json';
+import speakers from '../config/speakers.json';
+import Link from 'next/link';
+import Button from '../components/Buttons/button';
+import Dropdown from '../components/Dropdown/dropdown';
+import { City, Speaker as SpeakerType } from '../types/types';
+
+export default function HomePage() {
+  const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const [speakersList, setSpeakersList] = useState(speakers);
+  const [currentCity, setCurrentCity] = useState<Partial<City>>({
+    name: 'All',
+  });
+
+  const handleSpeakers = (city: string) => {
+    if (city && city !== 'all') {
+      const citySpeaker = speakers.filter((speaker) =>
+        speaker.city.includes(city)
+      );
+      setSpeakersList(citySpeaker);
+    } else if (city === 'all') {
+      setSpeakersList(speakers);
+    } else {
+      setSpeakersList([]);
+    }
+  };
+  return (
+    <div className="relative">
+      <Header />
+      <div id="about" className="mt-20">
+        <About />
+      </div>
+      <div id="register" className="container mt-20 lg:mt-0">
+        <div className="flex items-center flex-col justify-center">
+          <div
+            id="speakers"
+            className="relative flex flex-col items-center justify-center pt-20 lg:pt-8"
+          >
+            <div className="text-center">
+              <div className="flex items-center justify-center">
+                <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
+                  Speakers
+                </div>
+              </div>
+            </div>
+            <Heading
+              typeStyle="heading-md"
+              className="text-gradient text-center lg:mt-10"
+            >
+              Meet The Speakers
+            </Heading>
+            <div className="max-w-3xl sm:w-full text-center">
+              <Paragraph
+                typeStyle="body-lg"
+                className="mt-6"
+                textColor="text-gray-200"
+              >
+                Discover the inspiring voices shaping our event, each bringing
+                unique insights and expertise to the forefront of their
+                respective fields.
+              </Paragraph>
+            </div>
+            <div className="lg:py-20 w-[1130px] lg:w-full">
+              <div className="mt-[64px] lg:mt-0">
+                {isTablet ? (
+                  <div className="w-full">
+                    <Dropdown
+                      selectedItem={currentCity as City}
+                      items={cities}
+                      onSelect={(city) => {
+                        setCurrentCity(city);
+                        handleSpeakers(city.name);
+                      }}
+                      getDisplayValue={(city) => city?.name}
+                      placeholder="Select a city"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex justify-center">
+                    <div className="space-x-4 lg:w-full flex justify-between">
+                      <Button
+                        type="button"
+                        onClick={() => {
+                          handleSpeakers('all');
+                          setCurrentCity({ name: 'All' });
+                        }}
+                        className={`w-[120px] ${
+                          currentCity.name === 'All'
+                            ? 'gradient-bg'
+                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                        }`}
+                        outline={true}
+                      >
+                        <span className="transparent-bg "></span>
+                        <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                          All
+                        </span>
+                      </Button>
+                      {cities.map((city) => {
+                        return (
+                          <div
+                            key={city.name}
+                            onClick={() => {
+                              setCurrentCity(city);
+                              handleSpeakers(city.name);
+                            }}
+                          >
+                            <Button
+                              type="button"
+                              className={`w-[120px] ${
+                                typeof currentCity !== 'string' &&
+                                currentCity.name === city.name
+                                  ? 'gradient-bg'
+                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                              }`}
+                              outline={true}
+                            >
+                              {currentCity.name !== city.name && (
+                                <>
+                                  <span className="transparent-bg "></span>
+                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                                    {city.name}
+                                  </span>
+                                </>
+                              )}
+                              {typeof currentCity !== 'string' &&
+                                currentCity.name === city.name && (
+                                  <span className="relative w-full  rounded transition-colors duration-300 ease-in-out group-hover:text-white">
+                                    {city.name}
+                                  </span>
+                                )}
+                            </Button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
+                {speakersList.length > 0 ? (
+                  <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
+                    {speakersList.map((speaker) => {
+                      return (
+                        <SpeakerCard
+                          key={speaker.id}
+                          name={speaker.name}
+                          title={speaker.title}
+                          image={speaker.img}
+                          location={
+                            currentCity.name !== 'All'
+                              ? `${currentCity.name}, ${currentCity.country}`
+                              : speaker.city[1]
+                                ? `${speaker.city[0]} & ${speaker.city[1]}`
+                                : `${speaker.city[0]}`
+                          }
+                          className="mt-10"
+                        />
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
+                    <div className="w-[720px] lg:w-full">
+                      {typeof currentCity !== 'string' && currentCity.cfp ? (
+                        <div>
+                          <Paragraph className="text-gray-200">
+                            We are actively accepting speaker applications, and
+                            you can start your journey by clicking the button
+                            below. Join us on stage and share your valuable
+                            insights with our enthusiastic audience!
+                          </Paragraph>
+                          <Link
+                            className="flex justify-center"
+                            href={currentCity.cfp}
+                            target="_blank"
+                          >
+                            <Button
+                              type="button"
+                              className="mt-[80px] w-[244px] border border-gray"
+                              text="Apply as a speaker"
+                            />
+                          </Link>
+                        </div>
+                      ) : (
+                        <div>
+                          <Heading
+                            typeStyle="heading-md-semibold"
+                            className="text-gray-200"
+                          >
+                            {typeof currentCity !== 'string' &&
+                              currentCity.name}{' '}
+                            Speakers Coming Soon - Stay Tuned!
+                          </Heading>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          <div
+            id="tickets"
+            className="flex items-center flex-col justify-center pt-20 lg:pt-0"
+          >
+            <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
+              Tickets
+            </div>
+            <div
+              data-test="ticket-section"
+              className="flex flex-col items-center "
+            >
+              <Heading
+                typeStyle="heading-md"
+                className="text-gradient text-center lg:mt-10"
+              >
+                Get Tickets
+              </Heading>
+              <div className="max-w-3xl sm:w-full text-center">
+                <Paragraph
+                  typeStyle="body-lg"
+                  className="mt-6"
+                  textColor="text-gray-200"
+                >
+                  Experience the Future of Asynchronous Communication: Get
+                  Tickets for the AsyncAPI Conference!
+                </Paragraph>
+              </div>
+            </div>
+            <div className="w-full mt-12">
+              <Ticket />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sponsors" className="mt-20">
+        <Sponsors
+          eventSponsors={[
+            {
+              image: '/img/logos/developerweek-logo.webp',
+              websiteUrl: 'https://www.developerweek.com/',
+            },
+            {
+              image: '/img/logos/apidays.png',
+              websiteUrl: 'https://www.apidays.global/',
+            },
+          ]}
+        />
+      </div>
+      <div className="mt-5">
+        <Subscription />
+      </div>
+    </div>
+  );
+}

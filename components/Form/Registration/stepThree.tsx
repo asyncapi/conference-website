@@ -1,3 +1,5 @@
+'use client';
+
 import React, { JSX, useState } from 'react';
 import Button from '../../Buttons/button';
 import { CfpStepProps } from '../../../types/types';

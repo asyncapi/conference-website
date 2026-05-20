@@ -24,7 +24,7 @@
   {
     "name": "Amsterdam",
     "country": "Netherlands",
-    "date": "9 - 10 June, 2026",
+    "date": "10 June, 2026",
     "cfpDate": "12 April, 2026",
     "description": "Join us at apidays Amsterdam for the AsyncAPI Conference and explore event-driven architecture with the global open-source community.",
     "img": "/img/locations/amsterdam.webp",
@@ -39,7 +39,7 @@
       ]
     },
     "freeEntry": true,
-    "cfp": "https://apidays.typeform.com/speak",
+    "cfp": null,
     "recordings": null,
     "playlist": null
   },

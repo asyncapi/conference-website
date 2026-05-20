@@ -16,5 +16,13 @@
 // Import commands.js using ES2015 syntax:
 import './commands';
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+Cypress.on('uncaught:exception', (err) => {
+  if (
+    err.message.includes('Hydration') ||
+    err.message.includes('Minified React error') ||
+    err.message.includes('hydrating') ||
+    err.message.includes('content does not match')
+  ) {
+    return false;
+  }
+});

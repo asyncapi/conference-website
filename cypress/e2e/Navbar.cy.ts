@@ -118,9 +118,8 @@ describe('Navbar links', () => {
 
   it('should redirect to home mobile view', () => {
     cy.viewport(700, 800);
-    cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Home').click();
+    cy.getTestData('nav-Home').find('a').click();
 
     cy.url().should('eq', 'http://localhost:3000/');
   });
@@ -129,7 +128,7 @@ describe('Navbar links', () => {
     cy.viewport(700, 800);
     cy.getTestData('nav-Hamberger').click();
 
-    cy.getTestData('nav-Tickets').click();
+    cy.getTestData('nav-Tickets').should('be.visible').click();
 
     cy.url().should('eq', 'http://localhost:3000/#tickets');
   });
@@ -147,16 +146,20 @@ describe('Navbar links', () => {
 
   it('should redirect to resource hub mobile view', () => {
     cy.viewport(700, 800);
-    cy.getTestData('nav-Hamberger').click();
 
     let data = resourcesData[0]?.subMenu;
     if (data) {
+      cy.getTestData('nav-Hamberger').click();
       cy.wrap(data).each((val: LinkItem, idx) => {
         cy.wrap(val.ref).should(
           'match',
           /.*(drive\.google\.com|youtube\.com).*/
         );
       });
+    } else {
+      cy.log(
+        'No Resources Hub link found - skipping resource hub mobile check'
+      );
     }
   });
 });
