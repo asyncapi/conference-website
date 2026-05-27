@@ -94,8 +94,8 @@
   },
   {
     "time": "17:00 PM CEST - 17:25 PM CEST",
-    "session": "TBC",
-    "speaker": 0,
+    "session": "AsyncAPI Explained: Building the Open Standard for Event Driven APIs",
+    "speaker": 5,
     "type": "Technical Speaker",
     "city": "Amsterdam"
   }
