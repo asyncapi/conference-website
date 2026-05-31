@@ -2,9 +2,6 @@
   "compilerOptions": {
     "jsx": "preserve",
     "target": "esnext",
-    "types": [
-      "cypress"
-    ],
     "module": "commonjs",
     "allowJs": true,
     "checkJs": true,
@@ -19,7 +16,7 @@
       "esnext"
     ],
     "incremental": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "plugins": [
