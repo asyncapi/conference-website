@@ -41,10 +41,18 @@ jobs:
         with:
           branch: chore/sync-pretalx-schedule
           commit-message: "chore: sync pretalx schedule"
-          title: Sync Pretalx schedule
+          title: "chore: sync pretalx schedule"
           body: |
-            Syncs public Pretalx events, location metadata, city images, released schedule slots, and speaker data into generated website JSON config.
-            Private submissions and review data are not fetched by this workflow.
+            ## Description
+            Automatically syncs public Pretalx data to update the website configuration.
+            
+            ## What's included
+            - Public events and schedule slots
+            - Location metadata and city images
+            - Speaker information
+            
+            ## What's excluded
+            - Private submissions and review data
           add-paths: |
             config/pretalx/agenda.json
             config/pretalx/city-lists.json
