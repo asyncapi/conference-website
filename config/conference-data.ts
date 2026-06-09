@@ -6,8 +6,13 @@ import pretalxCitiesJson from './pretalx/city-lists.json';
 import pretalxSpeakersJson from './pretalx/speakers.json';
 import { Agenda, City, Speaker } from '../types/types';
 
+type GeneratedCity = Omit<
+  City,
+  'sponsors' | 'freeEntry' | 'recordings' | 'playlist'
+>;
+
 const thirdPartyCities = thirdPartyCitiesJson as City[];
-const pretalxCities = pretalxCitiesJson as City[];
+const pretalxCities = pretalxCitiesJson as GeneratedCity[];
 const thirdPartySpeakers = thirdPartySpeakersJson as Speaker[];
 const pretalxSpeakers = pretalxSpeakersJson as Speaker[];
 const thirdPartyAgenda = thirdPartyAgendaJson as Agenda[];
@@ -25,14 +30,27 @@ const mergedSchedule = mergeScheduleData(
 export const speakers: Speaker[] = mergedSchedule.speakers;
 export const agenda: Agenda[] = mergedSchedule.agenda;
 
-function mergeCities(manualCities: City[], generatedCities: City[]): City[] {
+function withGeneratedDefaults(generatedCity: GeneratedCity): City {
+  return {
+    ...generatedCity,
+    sponsors: { eventSponsors: [] },
+    freeEntry: true,
+    recordings: null,
+    playlist: null,
+  };
+}
+
+function mergeCities(
+  manualCities: City[],
+  generatedCities: GeneratedCity[]
+): City[] {
   const mergedCities = [...manualCities];
 
   for (const generatedCity of generatedCities) {
     const existingIndex = findMergeableCityIndex(mergedCities, generatedCity);
 
     if (existingIndex === -1) {
-      mergedCities.push(generatedCity);
+      mergedCities.push(withGeneratedDefaults(generatedCity));
       continue;
     }
 
@@ -45,7 +63,10 @@ function mergeCities(manualCities: City[], generatedCities: City[]): City[] {
   return mergedCities;
 }
 
-function findMergeableCityIndex(citiesToSearch: City[], generatedCity: City) {
+function findMergeableCityIndex(
+  citiesToSearch: City[],
+  generatedCity: GeneratedCity
+) {
   const generatedSlug = getPretalxEventSlug(generatedCity);
   const generatedName = normalize(generatedCity.name);
 
@@ -64,7 +85,7 @@ function findMergeableCityIndex(citiesToSearch: City[], generatedCity: City) {
   });
 }
 
-function mergeCity(manualCity: City, generatedCity: City): City {
+function mergeCity(manualCity: City, generatedCity: GeneratedCity): City {
   return {
     ...generatedCity,
     ...manualCity,
@@ -75,10 +96,10 @@ function mergeCity(manualCity: City, generatedCity: City): City {
         : generatedCity.cfpDate,
     cfp: generatedCity.cfp || manualCity.cfp,
     mapUrl: manualCity.mapUrl || generatedCity.mapUrl,
-    sponsors:
-      manualCity.sponsors?.eventSponsors?.length > 0
-        ? manualCity.sponsors
-        : generatedCity.sponsors,
+    sponsors: manualCity.sponsors ?? { eventSponsors: [] },
+    freeEntry: manualCity.freeEntry ?? true,
+    recordings: manualCity.recordings ?? null,
+    playlist: manualCity.playlist ?? null,
   };
 }
 
@@ -124,7 +145,7 @@ function remapSpeakerReference(
   return speakerIdMap.get(speakerReference) ?? speakerReference;
 }
 
-function getPretalxEventSlug(city: City): string | null {
+function getPretalxEventSlug(city: Pick<City, 'cfp'>): string | null {
   if (!city.cfp || typeof city.cfp === 'string') {
     return null;
   }

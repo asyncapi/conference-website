@@ -86,5 +86,19 @@
     "cfp": null,
     "recordings": null,
     "playlist": null
+  },
+  {
+    "name": "London",
+    "sponsors": {
+      "eventSponsors": [
+        {
+          "image": "/img/logos/apidays.png",
+          "websiteUrl": "https://www.apidays.global/"
+        }
+      ]
+    },
+    "freeEntry": true,
+    "recordings": null,
+    "playlist": null
   }
 ]
