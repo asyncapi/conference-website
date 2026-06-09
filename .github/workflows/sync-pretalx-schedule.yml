@@ -41,6 +41,8 @@ jobs:
         with:
           branch: chore/sync-pretalx-schedule
           commit-message: "chore: sync pretalx schedule"
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
           title: "chore: sync pretalx schedule"
           body: |
             ## Description
