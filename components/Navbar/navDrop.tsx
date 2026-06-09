@@ -5,10 +5,11 @@ import React, {
   SetStateAction,
   JSX,
 } from 'react';
-import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { LinkItem } from '../../types/types';
+import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
+import { links } from '../../config/navigation';
 
 interface INavDropProp {
   setDrop: Dispatch<SetStateAction<boolean>>;
@@ -24,8 +25,23 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
       >
         <div className="flex flex-col p-5 pb-8 w-full">
           {links.map((link: LinkItem) => {
+            const resolvedCfpRef = resolveCfpUrl(link.ref);
+            const resolvedRef =
+              link.ref === 'pretalx'
+                ? resolvedCfpRef
+                : (resolvedCfpRef ?? link.ref);
+
+            if (!link.subMenu && link.ref === 'pretalx' && !resolvedCfpRef) {
+              return null;
+            }
+
             return (
-              <Link href={link.ref || '#'} key={link.title}>
+              <Link
+                href={resolvedRef || '#'}
+                key={link.title}
+                target={isExternalUrl(resolvedRef) ? '_blank' : undefined}
+                rel={isExternalUrl(resolvedRef) ? 'noreferrer' : undefined}
+              >
                 <div
                   className="min-h-[50px] cursor-pointer"
                   data-test={`nav-${link.title}`}

@@ -11,6 +11,15 @@ export interface LinkItem {
   subMenu?: LinkItem[];
 }
 
+export type CfpConfig =
+  | string
+  | null
+  | {
+      provider: string;
+      eventSlug: string;
+      path?: string;
+    };
+
 export interface EventSponsor {
   image: string;
   websiteUrl: string;
@@ -31,7 +40,7 @@ export interface City {
   mapUrl: string | undefined;
   sponsors: Sponsors;
   freeEntry: boolean;
-  cfp: string | null;
+  cfp: CfpConfig;
   recordings: string | null;
   playlist: string | null;
 }
@@ -74,7 +83,7 @@ export interface Ticket {
 export interface ExtendedCity extends City {
   speakers: Speaker[];
   agenda: Agenda[];
-  ticket?: Ticket;
+  ticket?: Ticket | null;
 }
 
 export interface Social {

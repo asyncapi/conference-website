@@ -3,12 +3,15 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import ReactSlider from '../Slider/slider';
-import cities from '../../config/city-lists.json';
 import VenueCard from '../Cards/VenueCard/VenueCard';
 import Announcement from '../announcement';
 import Link from 'next/link';
+import { resolveCfpUrl } from '../../utils/pretalx';
+import { cities } from '../../config/conference-data';
 
 function Header(): JSX.Element {
+  const hasOpenCfp = cities.some((city) => resolveCfpUrl(city.cfp));
+
   return (
     <div className="relative">
       <div className="container w-full flex items-center justify-center">
@@ -36,7 +39,7 @@ function Header(): JSX.Element {
                   AsyncAPI technology to locations worldwide!
                 </Paragraph>
               </div>
-              <div className="mt-[54px] relative flex items-center justify-center">
+              <div className="mt-[54px] relative flex items-center justify-center gap-4 flex-wrap">
                 <Link href="/register/2026">
                   <Button
                     type="button"
@@ -44,6 +47,15 @@ function Header(): JSX.Element {
                     text="Register Now"
                   />
                 </Link>
+                {hasOpenCfp && (
+                  <Link href="/cfp">
+                    <Button
+                      type="button"
+                      className="w-[250px]"
+                      text="Submit a Talk"
+                    />
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import cities from '../../../config/city-lists.json';
+import { cities } from '../../../config/conference-data';
 
 export const alt = 'AsyncAPI Conference Venue';
 export const size = { width: 1200, height: 630 };
@@ -11,7 +11,8 @@ export default async function Image({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const city = cities.find((c) => c.name === id);
+  const decodedId = decodeURIComponent(id);
+  const city = cities.find((c) => c.name === decodedId);
 
   return new ImageResponse(
     (
@@ -40,7 +41,7 @@ export default async function Image({
             display: 'flex',
           }}
         >
-          {city ? `${city.name}, ${city.country}` : id}
+          {city ? `${city.name}, ${city.country}` : decodedId}
         </div>
         <div
           style={{

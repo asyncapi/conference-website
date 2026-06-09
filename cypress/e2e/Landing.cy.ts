@@ -1,6 +1,5 @@
 import path from 'path';
-import speakers from '../../config/speakers.json';
-import cities from '../../config/city-lists.json';
+import { cities, speakers } from '../../config/conference-data';
 
 describe('Landing Page Tests', () => {
   beforeEach(() => {
