@@ -8,7 +8,7 @@ This directory contains the Pretalx deployment files used by the GitHub Actions 
 - `DO_SSH_USER`
 - `DO_SSH_PRIVATE_KEY`
 - `POSTGRES_PASSWORD`
-- `PRETALX_ADMIN_EMAIL`
+- `PRETALX_LOGGING_EMAIL`
 - `PRETALX_MAIL_FROM`
 - `PRETALX_MAIL_HOST`
 - `PRETALX_MAIL_PORT`

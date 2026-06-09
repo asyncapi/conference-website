@@ -44,28 +44,6 @@
     "playlist": null
   },
   {
-    "name": "London",
-    "country": "UK",
-    "date": "30 September - 1 October, 2026",
-    "cfpDate": "Not announced yet",
-    "description": "Join us at apidays London for the AsyncAPI Conference and explore event-driven architecture with the global open-source community.",
-    "img": "/img/locations/london.webp",
-    "address": "Convene Sancroft, St. Paul's, London",
-    "mapUrl": "https://maps.app.goo.gl/vu9KaqbZkZQCj6F48",
-    "sponsors": {
-      "eventSponsors": [
-        {
-          "image": "/img/logos/apidays.png",
-          "websiteUrl": "https://www.apidays.global/"
-        }
-      ]
-    },
-    "freeEntry": true,
-    "cfp": null,
-    "recordings": null,
-    "playlist": null
-  },
-  {
     "name": "Online",
     "country": " Edition",
     "date": "28 October, 2026",

@@ -7,10 +7,10 @@ This guide covers the local and personal-droplet flow before opening a PR.
 Pretalx sends CFP confirmations, speaker notifications, password resets, and organizer emails through SMTP. The deploy template already has a `[mail]` section in `deploy/pretalx/pretalx.cfg.template`, rendered from these values:
 
 ```env
-PRETALX_MAIL_FROM=cfp@example.com
-PRETALX_MAIL_HOST=smtp.example.com
+PRETALX_MAIL_FROM=cfp@asyncapi.com
+PRETALX_MAIL_HOST=smtp.asyncapi.com
 PRETALX_MAIL_PORT=587
-PRETALX_MAIL_USER=cfp@example.com
+PRETALX_MAIL_USER=cfp@asyncapi.com
 PRETALX_MAIL_PASSWORD=your-smtp-password
 PRETALX_MAIL_TLS=True
 PRETALX_MAIL_SSL=False
@@ -91,7 +91,7 @@ PRETALX_MAIL_PASSWORD= \
 PRETALX_MAIL_TLS=False \
 PRETALX_MAIL_SSL=False \
 PRETALX_FILE_UPLOAD_LIMIT=2 \
-PRETALX_ADMIN_EMAIL=admin@localhost \
+PRETALX_LOGGING_EMAIL=admin@localhost \
 python3 - <<'PY'
 from pathlib import Path
 from string import Template
@@ -115,7 +115,7 @@ PRETALX_MAIL_PASSWORD=<mailjet-secret-key> \
 PRETALX_MAIL_TLS=True \
 PRETALX_MAIL_SSL=False \
 PRETALX_FILE_UPLOAD_LIMIT=2 \
-PRETALX_ADMIN_EMAIL=admin@localhost \
+PRETALX_LOGGING_EMAIL=admin@localhost \
 python3 - <<'PY'
 from pathlib import Path
 from string import Template
@@ -162,9 +162,9 @@ If you need to seed test events quickly, you can also write the same values from
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env exec -T pretalx python -m pretalx shell --event=asyncapi-online-2026 -c 'from pretalx.event.models import Event; e=Event.objects.get(slug="asyncapi-online-2026"); e.display_settings["asyncapi_location"]={"city":"Online","country":" Edition","address":"AsyncAPI YouTube Channel","map_url":"https://www.youtube.com/@AsyncAPI","image_url":"http://localhost:8346/media/event-online.webp"}; e.save(); print(e.display_settings["asyncapi_location"])'
 
-docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env exec -T pretalx python -m pretalx shell --event=asyncapi-india-2026 -c 'from pretalx.event.models import Event; e=Event.objects.get(slug="asyncapi-india-2026"); e.display_settings["asyncapi_location"]={"city":"Bengaluru","country":"India","address":"NIMHANS Convention Centre, Bengaluru","map_url":"https://maps.example.com/bengaluru","image_url":"http://localhost:8346/media/event-bengaluru.webp"}; e.save(); print(e.display_settings["asyncapi_location"])'
+docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env exec -T pretalx python -m pretalx shell --event=asyncapi-india-2026 -c 'from pretalx.event.models import Event; e=Event.objects.get(slug="asyncapi-india-2026"); e.display_settings["asyncapi_location"]={"city":"Bengaluru","country":"India","address":"NIMHANS Convention Centre, Bengaluru","map_url":"https://maps.asyncapi.com/bengaluru","image_url":"http://localhost:8346/media/event-bengaluru.webp"}; e.save(); print(e.display_settings["asyncapi_location"])'
 
-docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env exec -T pretalx python -m pretalx shell --event=asyncapi-europe-2026 -c 'from pretalx.event.models import Event; e=Event.objects.get(slug="asyncapi-europe-2026"); e.display_settings["asyncapi_location"]={"city":"Amsterdam","country":"Netherlands","address":"Tolhuistuin, Amsterdam","map_url":"https://maps.example.com/amsterdam","image_url":"http://localhost:8346/media/event-amsterdam.webp"}; e.save(); print(e.display_settings["asyncapi_location"])'
+docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env exec -T pretalx python -m pretalx shell --event=asyncapi-europe-2026 -c 'from pretalx.event.models import Event; e=Event.objects.get(slug="asyncapi-europe-2026"); e.display_settings["asyncapi_location"]={"city":"Amsterdam","country":"Netherlands","address":"Tolhuistuin, Amsterdam","map_url":"https://maps.asyncapi.com/amsterdam","image_url":"http://localhost:8346/media/event-amsterdam.webp"}; e.save(); print(e.display_settings["asyncapi_location"])'
 ```
 
 Test the custom endpoint:
@@ -194,7 +194,7 @@ npm run sync:pretalx
 After scheduled talks are visible through the local Pretalx API, run the full API sync. This writes generated Pretalx data into `config/pretalx/city-lists.json`, `config/pretalx/speakers.json`, and `config/pretalx/agenda.json`. If the custom plugin is enabled, `city-lists.json` also gets global CFP deadline, city, country, address, map URL, and image URL from Pretalx.
 
 ```bash
-PRETALX_BASE_URL=http://localhost:8346 \
+PRETALX_SITE_URL=http://localhost:8346 \
 PRETALX_API_TOKEN=<pretalx-api-token> \
 npm run sync:pretalx
 ```
@@ -452,7 +452,7 @@ PRETALX_MAIL_PASSWORD='<mailjet-secret-key>' \
 PRETALX_MAIL_TLS='True' \
 PRETALX_MAIL_SSL='False' \
 PRETALX_FILE_UPLOAD_LIMIT='2' \
-PRETALX_ADMIN_EMAIL='<your-email>' \
+PRETALX_LOGGING_EMAIL='<your-email>' \
 python3 - <<'PY'
 from pathlib import Path
 from string import Template
@@ -508,7 +508,7 @@ Do not open `8346` in the DigitalOcean firewall for the normal setup.
 For a domain, create an `A` record pointing to the droplet public IPv4 address:
 
 ```text
-cfp.example.com -> <droplet-ip>
+cfp.asyncapi.com -> <droplet-ip>
 ```
 
 Install Caddy on the droplet:
@@ -525,7 +525,7 @@ Configure Caddy:
 
 ```bash
 sudo tee /etc/caddy/Caddyfile >/dev/null <<'EOF'
-cfp.example.com {
+cfp.asyncapi.com {
   reverse_proxy 127.0.0.1:8346
 }
 EOF
@@ -536,8 +536,8 @@ sudo systemctl reload caddy
 Caddy gets and renews the TLS certificate automatically after DNS points to the droplet and ports `80` and `443` are reachable. Trigger and verify certificate issuance:
 
 ```bash
-curl -I http://cfp.example.com
-curl -I https://cfp.example.com/orga/
+curl -I http://cfp.asyncapi.com
+curl -I https://cfp.asyncapi.com/orga/
 sudo journalctl -u caddy -n 120 --no-pager
 ```
 
@@ -569,7 +569,7 @@ After the public URL is ready, re-render `conf/pretalx.cfg` with the real URL an
 
 ```bash
 cd /opt/asyncapi-pretalx
-PRETALX_SITE_URL='https://cfp.example.com' \
+PRETALX_SITE_URL='https://cfp.asyncapi.com' \
 POSTGRES_PASSWORD='<same-password-as-env>' \
 PRETALX_MAIL_FROM='cfp@asyncapi.com' \
 PRETALX_MAIL_HOST='in-v3.mailjet.com' \
@@ -579,7 +579,7 @@ PRETALX_MAIL_PASSWORD='<mailjet-secret-key>' \
 PRETALX_MAIL_TLS='True' \
 PRETALX_MAIL_SSL='False' \
 PRETALX_FILE_UPLOAD_LIMIT='2' \
-PRETALX_ADMIN_EMAIL='<your-email>' \
+PRETALX_LOGGING_EMAIL='<your-email>' \
 python3 - <<'PY'
 from pathlib import Path
 from string import Template
@@ -778,7 +778,7 @@ Configure Caddy:
 
 ```bash
 cat > /etc/caddy/Caddyfile <<'EOF'
-cfp.example.com {
+cfp.asyncapi.com {
   reverse_proxy 127.0.0.1:8346
 }
 EOF
@@ -789,7 +789,7 @@ systemctl reload caddy
 Caddy gets and renews the TLS certificate automatically. Before enabling the GitHub Action, verify HTTPS from outside the droplet:
 
 ```bash
-curl -I https://cfp.example.com/orga/
+curl -I https://cfp.asyncapi.com/orga/
 journalctl -u caddy -n 120 --no-pager
 ```
 
@@ -847,7 +847,7 @@ DO_SSH_HOST=<droplet-ip-or-hostname>
 DO_SSH_USER=pretalx
 DO_SSH_PRIVATE_KEY=<private-key-that-can-ssh-as-pretalx>
 POSTGRES_PASSWORD=<same-password-used-on-droplet>
-PRETALX_ADMIN_EMAIL=<admin-email>
+PRETALX_LOGGING_EMAIL=<admin-email>
 PRETALX_MAIL_FROM=cfp@asyncapi.com
 PRETALX_MAIL_HOST=in-v3.mailjet.com
 PRETALX_MAIL_PORT=587
@@ -860,7 +860,7 @@ Recommended repository variables:
 
 ```text
 DO_SSH_PORT=22
-PRETALX_SITE_URL=https://your-pretalx-domain.example.com
+PRETALX_SITE_URL=https://your-pretalx-domain.asyncapi.com
 PRETALX_REMOTE_PATH=/opt/asyncapi-pretalx
 PRETALX_HTTP_PORT=8346
 PRETALX_IMAGE_TAG=v2026.1.2
@@ -888,7 +888,7 @@ find /opt/asyncapi-pretalx/backups -type f -maxdepth 3 -print
 Then set the website env to the deployed Pretalx URL:
 
 ```env
-NEXT_PUBLIC_PRETALX_BASE_URL=https://your-pretalx-domain.example.com
+NEXT_PUBLIC_PRETALX_BASE_URL=https://your-pretalx-domain.asyncapi.com
 NEXT_PUBLIC_PRETALX_CFP_PATH=cfp
 ```
 

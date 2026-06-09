@@ -50,7 +50,7 @@ jobs:
           PRETALX_MAIL_PASSWORD: ${{ secrets.PRETALX_MAIL_PASSWORD }}
           PRETALX_MAIL_TLS: ${{ vars.PRETALX_MAIL_TLS || 'True' }}
           PRETALX_MAIL_SSL: ${{ vars.PRETALX_MAIL_SSL || 'False' }}
-          PRETALX_ADMIN_EMAIL: ${{ secrets.PRETALX_ADMIN_EMAIL }}
+          PRETALX_LOGGING_EMAIL: ${{ secrets.PRETALX_LOGGING_EMAIL }}
           PRETALX_FILE_UPLOAD_LIMIT: ${{ vars.PRETALX_FILE_UPLOAD_LIMIT || '2' }}
         run: |
           mkdir -p deploy/pretalx/conf
@@ -67,7 +67,7 @@ jobs:
               'PRETALX_MAIL_PORT',
               'PRETALX_MAIL_USER',
               'PRETALX_MAIL_PASSWORD',
-              'PRETALX_ADMIN_EMAIL',
+              'PRETALX_LOGGING_EMAIL',
           ]
           missing = [name for name in required if not os.environ.get(name)]
           if missing:

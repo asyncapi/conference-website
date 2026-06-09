@@ -161,7 +161,7 @@ export function mergePretalxSchedules(mappedSchedules) {
 
 export async function syncPretalxData({
   repoRoot,
-  baseUrl = process.env.PRETALX_BASE_URL,
+  baseUrl = process.env.PRETALX_SITE_URL,
   apiToken = process.env.PRETALX_API_TOKEN,
   fetchImpl = globalThis.fetch,
   outputPaths = {},
@@ -249,11 +249,11 @@ function remapSpeakerReference(speakerReference, speakerIdMap) {
   return speakerIdMap.get(speakerReference);
 }
 
-function buildEventsApiUrl(baseUrl = process.env.PRETALX_BASE_URL || '') {
+function buildEventsApiUrl(baseUrl = process.env.PRETALX_SITE_URL || '') {
   const cleanBaseUrl = trimTrailingSlash(baseUrl);
 
   if (!cleanBaseUrl) {
-    throw new Error('Set PRETALX_BASE_URL to sync from the Pretalx API.');
+    throw new Error('Set PRETALX_SITE_URL to sync from the Pretalx API.');
   }
 
   const url = new URL(`${cleanBaseUrl}/api/events/`);
@@ -263,13 +263,13 @@ function buildEventsApiUrl(baseUrl = process.env.PRETALX_BASE_URL || '') {
 
 function buildScheduleApiUrlForEvent(eventConfig) {
   const baseUrl = trimTrailingSlash(
-    eventConfig.baseUrl || process.env.PRETALX_BASE_URL || ''
+    eventConfig.baseUrl || process.env.PRETALX_SITE_URL || ''
   );
   const eventSlug = trimSlashes(eventConfig.eventSlug || '');
 
   if (!baseUrl || !eventSlug) {
     throw new Error(
-      'Each discovered Pretalx event needs a slug and PRETALX_BASE_URL.'
+      'Each discovered Pretalx event needs a slug and PRETALX_SITE_URL.'
     );
   }
 
@@ -284,13 +284,13 @@ function buildScheduleApiUrlForEvent(eventConfig) {
 
 function buildEventInfoApiUrlForEvent(eventConfig) {
   const baseUrl = trimTrailingSlash(
-    eventConfig.baseUrl || process.env.PRETALX_BASE_URL || ''
+    eventConfig.baseUrl || process.env.PRETALX_SITE_URL || ''
   );
   const eventSlug = trimSlashes(eventConfig.eventSlug || '');
 
   if (!baseUrl || !eventSlug) {
     throw new Error(
-      'Each discovered Pretalx event needs a slug and PRETALX_BASE_URL.'
+      'Each discovered Pretalx event needs a slug and PRETALX_SITE_URL.'
     );
   }
 

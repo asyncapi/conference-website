@@ -37,4 +37,4 @@ backend = redis://pretalx-redis/1
 broker = redis://pretalx-redis/2
 
 [logging]
-email = ${PRETALX_ADMIN_EMAIL}
+email = ${PRETALX_LOGGING_EMAIL}
