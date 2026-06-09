@@ -11,7 +11,6 @@ import { LinkItem } from '../../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { links } from '../../config/navigation';
 import { usePathname } from 'next/navigation';
-
 import { useSectionTracker } from '../../hooks/useSectionTracker';
 
 interface INavDropProp {
