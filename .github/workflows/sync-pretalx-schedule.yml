@@ -40,6 +40,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           branch: chore/sync-pretalx-schedule
+          token: ${{ secrets.GH_TOKEN }}
           commit-message: "chore: sync pretalx schedule"
           committer: asyncapi-bot <info@asyncapi.io>
           author: asyncapi-bot <info@asyncapi.io>
