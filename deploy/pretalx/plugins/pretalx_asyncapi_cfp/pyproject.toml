@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pretalx-asyncapi-cfp"
+version = "0.1.0"
+description = "AsyncAPI CFP metadata API for pretalx"
+
+[project.entry-points."pretalx.plugin"]
+pretalx_asyncapi_cfp = "pretalx_asyncapi_cfp:PretalxPluginMeta"
+
+[tool.setuptools.package-data]
+pretalx_asyncapi_cfp = ["templates/**/*.html"]
