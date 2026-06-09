@@ -52,16 +52,10 @@ export function mapPretalxEventsToCities(events, options = {}) {
           DEFAULT_LOCATION_IMAGE,
         address: location.address || 'Pretalx event page',
         mapUrl: location.map_url || eventUrl || undefined,
-        sponsors: {
-          eventSponsors: [],
-        },
-        freeEntry: true,
         cfp: {
           provider: 'pretalx',
           eventSlug: event.slug,
         },
-        recordings: null,
-        playlist: null,
       };
     });
 }
