@@ -6,6 +6,7 @@ on:
       base_url:
         description: Pretalx base URL, for example https://your-test-pretalx.example.com
         required: false
+        default: https://cfp.asyncapi.com
   schedule:
     - cron: '0 7 * * 1'
 
@@ -15,7 +16,6 @@ permissions:
 
 jobs:
   sync:
-    if: github.event_name == 'workflow_dispatch' || vars.PRETALX_SITE_URL != ''
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,7 +32,7 @@ jobs:
 
       - name: Sync public Pretalx schedule
         env:
-          PRETALX_SITE_URL: ${{ github.event.inputs.base_url || vars.PRETALX_SITE_URL }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.base_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
           PRETALX_API_TOKEN: ${{ secrets.PRETALX_API_TOKEN }}
         run: npm run sync:pretalx
 
