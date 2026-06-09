@@ -79,16 +79,10 @@ test('maps public Pretalx events into generated website cities', async () => {
     img: '/img/locations/teasers.webp',
     address: 'Pretalx event page',
     mapUrl: 'https://pretalx.test/asyncapi-europe-2026/',
-    sponsors: {
-      eventSponsors: [],
-    },
-    freeEntry: true,
     cfp: {
       provider: 'pretalx',
       eventSlug: 'asyncapi-europe-2026',
     },
-    recordings: null,
-    playlist: null,
   });
 });
 
@@ -132,16 +126,10 @@ test('maps Pretalx event metadata into website cities', async () => {
       img: 'https://pretalx.test/media/event-new-york.webp',
       address: 'Javits Center, New York',
       mapUrl: 'https://maps.example.com/new-york',
-      sponsors: {
-        eventSponsors: [],
-      },
-      freeEntry: true,
       cfp: {
         provider: 'pretalx',
         eventSlug: 'asyncapi-us-conf-2026',
       },
-      recordings: null,
-      playlist: null,
     }
   );
 });

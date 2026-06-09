@@ -8,15 +8,9 @@
     "img": "https://conference.asyncapi.com//img/locations/london.webp",
     "address": "Convene Sancroft, St. Paul's, London",
     "mapUrl": "https://maps.app.goo.gl/vu9KaqbZkZQCj6F48",
-    "sponsors": {
-      "eventSponsors": []
-    },
-    "freeEntry": true,
     "cfp": {
       "provider": "pretalx",
       "eventSlug": "london-2026"
-    },
-    "recordings": null,
-    "playlist": null
+    }
   }
 ]
