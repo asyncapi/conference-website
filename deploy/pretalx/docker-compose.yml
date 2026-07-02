@@ -1,0 +1,61 @@
+services:
+  pretalx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PRETALX_IMAGE_TAG: ${PRETALX_IMAGE_TAG:-v2026.1.2}
+    image: asyncapi-pretalx:${PRETALX_IMAGE_TAG:-v2026.1.2}
+    container_name: pretalx
+    restart: unless-stopped
+    depends_on:
+      - db
+      - redis
+    environment:
+      PRETALX_FILESYSTEM_MEDIA: /public/media
+      PRETALX_FILESYSTEM_STATIC: /public/static
+      GUNICORN_FORWARDED_ALLOW_IPS: ${GUNICORN_FORWARDED_ALLOW_IPS:-127.0.0.1}
+    volumes:
+      - ./conf/pretalx.cfg:/etc/pretalx/pretalx.cfg:ro
+      - pretalx-data:/data
+      - pretalx-public:/public
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: pretalx-nginx
+    restart: unless-stopped
+    depends_on:
+      - pretalx
+    ports:
+      - '127.0.0.1:${PRETALX_HTTP_PORT:-8346}:80'
+    volumes:
+      - ./nginx-container.conf:/etc/nginx/conf.d/default.conf:ro
+      - pretalx-public:/public:ro
+
+  db:
+    image: docker.io/library/postgres:15-alpine
+    container_name: pretalx-db
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      POSTGRES_DB: pretalx
+      POSTGRES_USER: pretalx
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    volumes:
+      - pretalx-database:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: pretalx-redis
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - pretalx-redis:/data
+
+volumes:
+  pretalx-database:
+  pretalx-data:
+  pretalx-public:
+  pretalx-redis:

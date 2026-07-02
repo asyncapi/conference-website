@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
-import { City } from '../../types/types';
 import Arrows from '../illustration/arrows';
 
 interface IDropdown<T> {
@@ -53,7 +52,7 @@ function Dropdown<T>({
       <div className="w-full">
         <button
           type="button"
-          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg no-border rounded-md cursor-pointer`}
+          className={`flex justify-between text-white p-4 w-full gap-x-1.5 shadow-sm card-bg hover:bg-gray-50 gradient-bg border-none rounded-md cursor-pointer`}
           id="menu-button"
           aria-expanded={show}
           aria-haspopup="true"

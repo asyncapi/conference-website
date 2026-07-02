@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Paris",
+    "country": "France",
+    "date": "1 - 3 December, 2026",
+    "cfpDate": "27 September, 2026",
+    "description": "Join us for AsyncAPI Conference: Paris 2026. CFP and schedule data are managed in Pretalx.",
+    "img": "https://conference.asyncapi.com/img/locations/paris.webp",
+    "address": "CNIT Forest, Paris",
+    "mapUrl": "https://maps.app.goo.gl/B7kxsPgSGZ9xkW3x7",
+    "cfp": {
+      "provider": "pretalx",
+      "eventSlug": "paris-2026"
+    }
+  },
+  {
+    "name": "Online",
+    "country": "Edition",
+    "date": "28 October, 2026",
+    "cfpDate": "6 September, 2026",
+    "description": "Join us for AsyncAPI Conference: Online Edition 2026. CFP and schedule data are managed in Pretalx.",
+    "img": "https://conference.asyncapi.com/img/locations/testMic.webp",
+    "address": "AsyncAPI YouTube Channel",
+    "mapUrl": "https://www.youtube.com/@AsyncAPI",
+    "cfp": {
+      "provider": "pretalx",
+      "eventSlug": "online-2026"
+    }
+  },
+  {
+    "name": "London",
+    "country": "UK",
+    "date": "30 September, 2026 - 1 October, 2026",
+    "cfpDate": "9 August, 2026",
+    "description": "Join us for AsyncAPI Conference: London 2026. CFP and schedule data are managed in Pretalx.",
+    "img": "https://conference.asyncapi.com//img/locations/london.webp",
+    "address": "Convene Sancroft, St. Paul's, London",
+    "mapUrl": "https://maps.app.goo.gl/vu9KaqbZkZQCj6F48",
+    "cfp": {
+      "provider": "pretalx",
+      "eventSlug": "london-2026"
+    }
+  }
+]

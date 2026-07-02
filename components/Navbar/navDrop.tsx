@@ -5,10 +5,13 @@ import React, {
   SetStateAction,
   JSX,
 } from 'react';
-import links from '../../config/links.json';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
 import { LinkItem } from '../../types/types';
+import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
+import { links } from '../../config/navigation';
+import { usePathname } from 'next/navigation';
+import { useSectionTracker } from '../../hooks/useSectionTracker';
 
 interface INavDropProp {
   setDrop: Dispatch<SetStateAction<boolean>>;
@@ -17,6 +20,9 @@ interface INavDropProp {
 const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
   ({ setDrop }, ref): JSX.Element => {
     const [show, setShow] = useState<string | null>(null);
+    const pathname = usePathname();
+    const { isActive } = useSectionTracker(pathname);
+
     return (
       <div
         ref={ref}
@@ -24,8 +30,23 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
       >
         <div className="flex flex-col p-5 pb-8 w-full">
           {links.map((link: LinkItem) => {
+            const resolvedCfpRef = resolveCfpUrl(link.ref);
+            const resolvedRef =
+              link.ref === 'pretalx'
+                ? resolvedCfpRef
+                : (resolvedCfpRef ?? link.ref);
+
+            if (!link.subMenu && link.ref === 'pretalx' && !resolvedCfpRef) {
+              return null;
+            }
+
             return (
-              <Link href={link.ref || '#'} key={link.title}>
+              <Link
+                href={resolvedRef || '#'}
+                key={link.title}
+                target={isExternalUrl(resolvedRef) ? '_blank' : undefined}
+                rel={isExternalUrl(resolvedRef) ? 'noreferrer' : undefined}
+              >
                 <div
                   className="min-h-[50px] cursor-pointer"
                   data-test={`nav-${link.title}`}
@@ -39,7 +60,11 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                         className="flex items-center"
                         onClick={(e) => e.preventDefault()}
                       >
-                        <div className="text-white">{link.title}</div>
+                        <div
+                          className={`text-white ${isActive(link) ? 'font-semibold border-l-2 border-[#C6BED9] pl-2 text-[#C6BED9]' : ''}`}
+                        >
+                          {link.title}
+                        </div>
                         <Dropdown
                           fill="white"
                           className={`ml-2 transition-transform duration-500 ${
@@ -54,7 +79,11 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                               <div
                                 data-test={`nav-sub-${sub.title}`}
                                 onClick={() => setDrop(false)}
-                                className="h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer"
+                                className={`h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer ${
+                                  pathname === sub.ref
+                                    ? 'font-semibold bg-white/10 text-[#C6BED9]'
+                                    : ''
+                                }`}
                               >
                                 {sub.title}
                               </div>
@@ -64,7 +93,14 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                       )}
                     </div>
                   ) : (
-                    <div className="text-white" onClick={() => setDrop(false)}>
+                    <div
+                      className={`text-white ${
+                        isActive(link)
+                          ? 'font-semibold border-l-2 border-[#C6BED9] pl-2 text-[#C6BED9]'
+                          : ''
+                      }`}
+                      onClick={() => setDrop(false)}
+                    >
                       {link.title}
                     </div>
                   )}

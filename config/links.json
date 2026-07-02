@@ -38,12 +38,20 @@
     "ref": "/#speakers"
   },
   {
+    "title": "CFP",
+    "ref": "/cfp"
+  },
+  {
     "title": "Tickets",
     "ref": "/#tickets"
   },
   {
     "title": "Gallery",
     "ref": "/#gallery"
+  },
+  {
+    "title": "Register",
+    "ref": "/register/2026"
   },
   {
     "title": "Sponsors",

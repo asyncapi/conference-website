@@ -3,8 +3,10 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "16.13.2"
-  NPM_VERSION = "8.1.2"
+  NODE_VERSION = "20"
+  NPM_VERSION = "10"
+  NEXT_PUBLIC_PRETALX_BASE_URL = "https://cfp.asyncapi.com"
+  NEXT_PUBLIC_PRETALX_CFP_PATH = "cfp"
 
 [functions]
   directory = "netlify/functions"
@@ -12,7 +14,8 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "ALLOW-FROM https://www.youtube.com/"
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "frame-ancestors 'self'"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

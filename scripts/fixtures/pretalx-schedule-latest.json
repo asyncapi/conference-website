@@ -1,0 +1,53 @@
+{
+  "id": 9,
+  "version": "0.1",
+  "published": "2026-06-05T13:46:52.667931Z",
+  "comment": {
+    "en": "We released our first schedule!"
+  },
+  "slots": [
+    {
+      "id": 327,
+      "room": 9,
+      "start": "2026-06-18T09:30:00Z",
+      "end": "2026-06-18T10:00:00Z",
+      "submission": {
+        "code": "FN7M8A",
+        "title": "Test Proposal",
+        "speakers": [
+          {
+            "code": "EMTVZL",
+            "name": "Thulie Sibasanda",
+            "biography": "Hello this is a test bio.",
+            "submissions": [],
+            "avatar_url": "http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp",
+            "answers": []
+          }
+        ],
+        "submission_type": {
+          "id": 9,
+          "name": {
+            "en": "Talk"
+          },
+          "default_duration": 30,
+          "deadline": null,
+          "requires_access_code": false
+        },
+        "track": null,
+        "tags": [],
+        "state": "confirmed",
+        "abstract": "Test abstract",
+        "description": "",
+        "duration": 30,
+        "slot_count": 1,
+        "content_locale": "en",
+        "do_not_record": false,
+        "image": "http://localhost:8346/media/asyncapi-us-conf-2026/submissions/FN7M8A/image_MfasF2T.webp",
+        "resources": [],
+        "answers": []
+      },
+      "description": null,
+      "duration": 30
+    }
+  ]
+}

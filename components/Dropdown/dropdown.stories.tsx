@@ -6,7 +6,7 @@ import Dropdown from './dropdown';
 
 import { City } from '../../types/types';
 
-import cities from '../../config/city-lists.json';
+import { cities } from '../../config/conference-data';
 
 const meta: Meta<typeof Dropdown> = {
   title: 'Components/Dropdown',
@@ -40,7 +40,7 @@ const DropdownWrapper = (args: any) => {
       <Dropdown<City>
         {...args}
         selectedItem={selectedCity}
-        items={cities as City[]}
+        items={cities}
         onSelect={setSelectedCity}
         getDisplayValue={(city) =>
           city ? `${city.name}, ${city.country}` : ''

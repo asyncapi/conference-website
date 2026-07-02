@@ -1,0 +1,13 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ${PRETALX_DOMAIN};
+    client_max_body_size 3m;
+
+    location / {
+        proxy_pass http://127.0.0.1:${PRETALX_HTTP_PORT}/;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header Host $http_host;
+    }
+}

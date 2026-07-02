@@ -3,7 +3,6 @@ import React, { JSX } from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
-import Image from 'next/image';
 import Download from '../illustration/download';
 
 function About(): JSX.Element {
@@ -60,7 +59,7 @@ function About(): JSX.Element {
             </a>
             <a
               className="flex justify-center "
-              href="/pdf/conf-2025.pdf"
+              href="/pdf/conf-2026.pdf"
               download={`conf ${new Date().getFullYear()}.pdf`}
             >
               <Button
