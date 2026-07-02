@@ -32,28 +32,12 @@ export function Gallery() {
       <div className="text-lg capitalize sm:text-sm text-white font-semibold border-b-2 border-blue-400 mb-1">
         gallery
       </div>
-
-      <Heading
-        typeStyle="heading-md"
-        className="capitalize text-gradient text-center lg:mt-8"
-      >
+      
+      <Heading typeStyle="heading-md" className="capitalize text-gradient text-center lg:mt-8">
         our event gallery
       </Heading>
 
-      <div
-        className="
-          max-w-6xl
-          w-full
-          mx-auto
-          grid
-          grid-cols-3
-          md:grid-cols-3
-          lg:grid-cols-4
-          gap-4
-          my-6
-          px-4
-        "
-      >
+      <div className="max-w-6xl w-full mx-auto grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6 px-4">
         {images.map((image) => (
           <div
             key={image.url}
