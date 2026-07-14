@@ -63,34 +63,34 @@ function Dropdown<T>({
         </button>
       </div>
 
-      {show && (
-        <div
-          className="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabIndex={-1}
-        >
-          <div className="rounded-md gradient-bg" role="none">
-            {items &&
-              items.map((item, i) => {
-                const displayText = getDisplayValue(item);
-                return (
-                  <div
-                    key={i}
-                    onClick={() => handleItemSelect(item)}
-                    className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
-                    role="menuitem"
-                    tabIndex={-1}
-                    id={`menu-item-${i}`}
-                  >
-                    {displayText}
-                  </div>
-                );
-              })}
-          </div>
+      <div
+        className={`w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-300 ease-in-out ${
+          show ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
+        }`}
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+        tabIndex={-1}
+      >
+        <div className="rounded-md gradient-bg" role="none">
+          {items &&
+            items.map((item, i) => {
+              const displayText = getDisplayValue(item);
+              return (
+                <div
+                  key={i}
+                  onClick={() => handleItemSelect(item)}
+                  className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
+                  role="menuitem"
+                  tabIndex={-1}
+                  id={`menu-item-${i}`}
+                >
+                  {displayText}
+                </div>
+              );
+            })}
         </div>
-      )}
+      </div>
     </div>
   );
 }
