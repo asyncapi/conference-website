@@ -28,7 +28,7 @@
     "net": "^1.0.2",
     "next": "^15.5.18",
     "next-on-netlify": "^3.0.1",
-    "nodemailer": "^8.0.5",
+    "nodemailer": "^9.0.1",
     "react": "^18.2.1",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.1",
