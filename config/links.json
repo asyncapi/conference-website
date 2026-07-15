@@ -46,6 +46,10 @@
     "ref": "/#tickets"
   },
   {
+    "title": "Gallery",
+    "ref": "/#gallery"
+  },
+  {
     "title": "Register",
     "ref": "/register/2026"
   },

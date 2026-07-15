@@ -15,6 +15,7 @@ import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../types/types';
+import { Gallery } from '../components/Gallery/gallery';
 import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
 import { cities, speakers } from '../config/conference-data';
 
@@ -258,6 +259,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </div>
+      <div id="gallery">
+        <Gallery />
       </div>
       <div id="sponsors" className="mt-20">
         <Sponsors
