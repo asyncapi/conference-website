@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import Link from 'next/link';
 import Dropdown from '../illustration/dropdown';
-import { LinkItem } from '../../types/types';
+import { LinkItem, ConferenceStatus } from '../../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { links } from '../../config/navigation';
 import { usePathname } from 'next/navigation';
@@ -83,7 +83,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                                   pathname === sub.ref
                                     ? 'font-semibold bg-white/10 text-[#C6BED9]'
                                     : ''
-                                }`}
+                                } ${sub.status === ConferenceStatus.ENDED ? 'opacity-50' : ''}`}
                               >
                                 {sub.title}
                               </div>

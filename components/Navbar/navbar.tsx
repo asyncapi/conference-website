@@ -8,7 +8,7 @@ import Hamburger from '../illustration/hamburger';
 import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
-import { LinkItem } from '../../types/types';
+import { LinkItem, ConferenceStatus } from '../../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { links } from '../../config/navigation';
 import { usePathname } from 'next/navigation';
@@ -248,7 +248,7 @@ function Navbar(): JSX.Element {
                                 isActive(subL)
                                   ? 'bg-white bg-opacity-10 font-semibold text-[#C6BED9]'
                                   : ''
-                              }`}
+                              } ${subL.status === ConferenceStatus.ENDED ? 'opacity-50' : ''}`}
                               data-test={`nav-sub-${subL.title}`}
                               onKeyDown={(e) => {
                                 const currentIndex = index;

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, SetStateAction, JSX } from 'react';
 import Arrows from '../illustration/arrows';
+import { ConferenceStatus } from '../../types/types';
+import { getEventStatus } from '../../utils/status';
 
 interface IDropdown<T> {
   selectedItem: T | null;
@@ -75,11 +77,16 @@ function Dropdown<T>({
             {items &&
               items.map((item, i) => {
                 const displayText = getDisplayValue(item);
+                const isEnded =
+                  item && typeof item === 'object' && 'date' in item && typeof (item as any).date === 'string'
+                    ? getEventStatus((item as any).date) === ConferenceStatus.ENDED
+                    : false;
+
                 return (
                   <div
                     key={i}
                     onClick={() => handleItemSelect(item)}
-                    className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10`}
+                    className={`block p-4 text-md text-white cursor-pointer hover:bg-black/10 ${isEnded ? 'opacity-50' : ''}`}
                     role="menuitem"
                     tabIndex={-1}
                     id={`menu-item-${i}`}

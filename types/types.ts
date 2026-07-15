@@ -9,6 +9,7 @@ export interface LinkItem {
   title: string;
   ref: string;
   subMenu?: LinkItem[];
+  status?: ConferenceStatus;
 }
 
 export type CfpConfig =
