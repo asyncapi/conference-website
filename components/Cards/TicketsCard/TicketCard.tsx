@@ -22,36 +22,36 @@ const TicketCard = ({
   today,
 }: TicketCardProps): JSX.Element => {
   return (
-    <div className="relative max-w-2xl mx-auto p-6 sm:overflow-x-clip">
-      <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between z-20 px-4">
+    <div className="relative mx-auto max-w-2xl p-6 sm:overflow-x-clip sm:px-2">
+      <div className="absolute left-0 right-0 top-1/2 z-20 flex -translate-y-1/2 justify-between px-2 sm:px-0">
         <Button
           type="button"
           onClick={prevTicket}
-          className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
+          className="h-11 w-11 border border-white/20 bg-[#382855] p-0 shadow-lg shadow-black/20 transition-colors hover:bg-[#49346d] !justify-center"
           aria-label="Previous ticket"
           outline={true}
-          icon={<Arrows direction="left" className="w-6 h-6" fill="#4B5563" />}
+          icon={<Arrows direction="left" className="h-6 w-6" fill="#ffffff" />}
           iconPosition="left"
         />
 
         <Button
           type="button"
           onClick={nextTicket}
-          className="bg-white p-2 shadow-lg hover:bg-gray-100 transition-colors"
+          className="h-11 w-11 border border-white/20 bg-[#382855] p-0 shadow-lg shadow-black/20 transition-colors hover:bg-[#49346d] !justify-center"
           aria-label="Next ticket"
           outline={true}
-          icon={<Arrows direction="right" className="w-6 h-6" fill="#4B5563" />}
+          icon={<Arrows direction="right" className="h-6 w-6" fill="#ffffff" />}
           iconPosition="left"
         />
       </div>
 
-      <div className="relative h-96">
+      <div className="relative h-[410px] sm:h-[480px]">
         {availableTickets.map((ticket, index) => {
           const isCurrentCard: boolean = index === currentIndex;
           const isPrevCard: boolean =
             index ===
             (currentIndex - 1 + availableTickets.length) %
-            availableTickets.length;
+              availableTickets.length;
           const isNextCard: boolean =
             index === (currentIndex + 1) % availableTickets.length;
           const isEnded: boolean = today > new Date(ticket.eventDate);
@@ -84,35 +84,46 @@ const TicketCard = ({
                 zIndex,
               }}
             >
-              <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-                <div className="p-6">
-                  <div className="flex justify-between items-start">
+              <div className="overflow-hidden rounded-lg border border-white/15 bg-[#25163d] shadow-2xl shadow-black/25">
+                <div className="relative p-7 sm:p-6">
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#2dccfd] to-[#ad20e2]" />
+                  <div className="flex items-start justify-between gap-4 sm:flex-col">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">
+                      <p className="text-sm font-medium uppercase text-cyan-200">
+                        Conference pass
+                      </p>
+                      <h3 className="mt-2 text-2xl font-semibold text-white">
                         {ticket.type}
                       </h3>
-                      <p className="text-gray-500 mt-1">{ticket.description}</p>
+                      <p className="mt-2 leading-6 text-gray-200">
+                        {ticket.description}
+                      </p>
                     </div>
                     <div
-                      className={`px-2 py-1 rounded-full text-sm font-medium ${isEnded ? 'bg-red-100 text-red-600' : 'text-gradient'
-                        }`}
+                      className={`shrink-0 rounded-md border px-3 py-1 text-sm font-medium ${
+                        isEnded
+                          ? 'border-red-300/50 bg-red-500/20 text-red-100'
+                          : 'border-cyan-300/50 bg-cyan-300/10 text-cyan-100'
+                      }`}
                     >
                       {isEnded ? 'Closed' : ticket.status}
                     </div>
                   </div>
 
-                  <div className="mt-4">
-                    <span className="text-3xl font-bold text-gray-900">
+                  <div className="mt-6 flex items-end">
+                    <span className="text-4xl font-bold text-white">
                       ${ticket.price}
                     </span>
-                    <span className="text-gray-500 ml-2">/person</span>
+                    <span className="ml-2 pb-1 text-gray-300">/person</span>
                   </div>
 
-                  <ul className="mt-6 space-y-2">
+                  <ul className="mt-6 grid gap-3">
                     {ticket.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-center text-gray-600">
-                        <TicketIcon className="h-4 w-4 mr-2 text-blue-500" />
-                        {benefit}
+                      <li key={i} className="flex items-center text-white">
+                        <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#35264f]">
+                          <TicketIcon className="h-4 w-4 text-cyan-200" />
+                        </span>
+                        <span>{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -130,7 +141,7 @@ const TicketCard = ({
                       type="button"
                       disabled={true}
                       outline={true}
-                      className="mt-8 w-full bg-gray-300"
+                      className="mt-8 w-full border border-white/20 bg-[#34234f] text-gray-200"
                     >
                       {isEnded ? 'Event Closed' : 'Get a Ticket'}
                     </Button>
@@ -147,8 +158,9 @@ const TicketCard = ({
           return (
             <button
               key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex ? 'w-6 bg-blue-400' : 'w-2 bg-gray-300'
-                }`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-6 bg-cyan-200' : 'w-2 bg-white/40'
+              }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to ticket ${index + 1}`}
             />
