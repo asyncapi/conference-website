@@ -15,9 +15,9 @@ export default function ClientLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Navbar />
-      {children}
+      <main className="flex-1">{children}</main>
       <Footer />
       <BackToTopButton />
     </div>

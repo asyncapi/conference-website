@@ -94,7 +94,7 @@ function Navbar(): JSX.Element {
       <div
         className={`flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
       >
-        <div className="p-5 flex justify-between h-[75px] w-full items-center">
+        <div className="container flex justify-between h-[75px] items-center">
           <div
             className="flex items-center sm:justify-between sm:w-full z-[99]"
             data-test="nav-Home"
