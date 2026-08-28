@@ -1,8 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
-
 // Popup component code commented out for 2026 migration. Uncomment to restore in the future.
 /*
 import Image from 'next/image';
@@ -59,9 +54,11 @@ function Popup() {
               <div>
                 <div className="flex items-center justify-between">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <img
+                    <Image
                       src="/img/logos/2025-logo.png"
                       alt="conference logo"
+                      width={150}
+                      height={33}
                       className="w-[150px]"
                     />
                   </div>

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
