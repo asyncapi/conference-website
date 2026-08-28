@@ -7,6 +7,7 @@ import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
 import Cancel from '../illustration/cancel';
+import { BLUR_DATA_URL } from '../../utils/image-blur';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -59,6 +60,9 @@ function Popup() {
                       alt="conference logo"
                       width={150}
                       height={33}
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
                       className="w-[150px]"
                     />
                   </div>
@@ -79,6 +83,9 @@ function Popup() {
                     alt="rocket"
                     width={0}
                     height={0}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                     className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
                   />
                 </div>

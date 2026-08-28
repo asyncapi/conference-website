@@ -4,6 +4,7 @@ import Paragraph from '../Typography/paragraph';
 import Image from 'next/image';
 import Link from 'next/link';
 import { EventSponsor } from '../../types/types';
+import { BLUR_DATA_URL } from '../../utils/image-blur';
 
 interface ISponsors {
   eventSponsors: EventSponsor[];
@@ -51,6 +52,9 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
                       alt={sponsor.image}
                       height={230}
                       width={280}
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
                       className="object-contain"
                     />
                   </Link>
@@ -85,6 +89,9 @@ function Sponsors({ eventSponsors, financialSponsor }: ISponsors) {
                       alt={sponsor.image}
                       height={120}
                       width={260}
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
                       className="object-contain"
                     />
                   </Link>
