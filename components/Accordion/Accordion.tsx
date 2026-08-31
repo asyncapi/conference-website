@@ -24,7 +24,7 @@ function Accordion({ faq }: AccordionProps) {
                 }
               }}
             >
-              <div className="pb-4 cursor-pointer mt-4 border border-[#333] p-4 rounded-xl">
+              <div className="pb-4 cursor-pointer mt-4 border border-charcoal p-4 rounded-xl">
                 <div
                   className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                 >

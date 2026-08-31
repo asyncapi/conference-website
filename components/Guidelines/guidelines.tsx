@@ -42,12 +42,7 @@ function Guidelines({
                     }
                   }}
                 >
-                  <div
-                    className="pb-4 cursor-pointer mt-4 "
-                    style={{
-                      borderBottom: '1px solid #333',
-                    }}
-                  >
+                  <div className="pb-4 cursor-pointer mt-4 border-b border-b-charcoal">
                     <div
                       className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                     >
@@ -87,7 +82,7 @@ function Guidelines({
                     }
                   }}
                 >
-                  <div className="pb-4 cursor-pointer mt-4 border-b border-b-[#333]">
+                  <div className="pb-4 cursor-pointer mt-4 border-b border-b-charcoal">
                     <div
                       className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                     >
@@ -133,7 +128,7 @@ function Guidelines({
                   }
                 }}
               >
-                <div className="pb-4 cursor-pointer mt-4 border-b border-b-[#333]">
+                <div className="pb-4 cursor-pointer mt-4 border-b border-b-charcoal">
                   <div
                     className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                   >

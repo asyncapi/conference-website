@@ -177,7 +177,7 @@ export default async function VenuePage({
       </div>
       <div
         id="agenda"
-        className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
+        className="border border-x-0 border-b-0 border-t-charcoal py-28 container flex flex-col justify-center items-center "
       >
         {city.agenda.length > 0 ? (
           <div className="w-full max-w-6xl">

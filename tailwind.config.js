@@ -31,6 +31,10 @@ module.exports = {
     extend: {
       colors: {
         dark: dark,
+        brand: {
+          pink: 'var(--color-brand-pink)',
+        },
+        charcoal: 'var(--color-charcoal)',
       },
     },
     screens: {

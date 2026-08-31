@@ -19,7 +19,7 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
             id="fullName"
             required
             value={fullName}
-            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-pink focus:ring-offset-2 focus:ring-offset-gray-900 border border-brand-pink"
             onChange={(e) => setForm((prev) => ({ ...prev, fullName: e.target.value }))}
             data-test="reg-step-one-name"
           />
@@ -35,7 +35,7 @@ function StepOneRegistration({ setStep, setForm, data }: CfpStepProps): JSX.Elem
             required
             type="email"
             value={email}
-            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-pink focus:ring-offset-2 focus:ring-offset-gray-900 border border-brand-pink"
             onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
             data-test="reg-step-one-email"
           />

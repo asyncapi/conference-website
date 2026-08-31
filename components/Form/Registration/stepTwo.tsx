@@ -33,7 +33,7 @@ function StepTwoRegistration({
           </label>
           <input
             id="company"
-            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-pink focus:ring-offset-2 focus:ring-offset-gray-900 border border-brand-pink"
             value={company}
             onChange={(e) =>
               setForm((prev) => ({ ...prev, company: e.target.value }))
@@ -47,7 +47,7 @@ function StepTwoRegistration({
           </label>
           <input
             id="role"
-            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-pink focus:ring-offset-2 focus:ring-offset-gray-900 border border-brand-pink"
             value={role}
             onChange={(e) =>
               setForm((prev) => ({ ...prev, role: e.target.value }))
@@ -64,7 +64,7 @@ function StepTwoRegistration({
           </label>
           <select
             id="preferredCity"
-            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-pink focus:ring-offset-2 focus:ring-offset-gray-900 border border-brand-pink"
             value={preferredCity}
             onChange={(e) =>
               setForm((prev) => ({ ...prev, preferredCity: e.target.value }))

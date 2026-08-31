@@ -2,11 +2,13 @@ import React, { useState, useEffect, JSX } from 'react';
 import Select, { StylesConfig } from 'react-select';
 import { SelectOptions } from '../../types/types';
 
+const brandPink = 'var(--color-brand-pink)';
+
 const customStyles: StylesConfig<Partial<SelectOptions>, true> = {
   option: (provided, state) => ({
     ...provided,
     color: state.isSelected ? 'white' : 'black',
-    background: state.isSelected ? '#E50E99' : undefined,
+    background: state.isSelected ? brandPink : undefined,
     padding: 10,
   }),
   multiValue: () => ({
@@ -22,7 +24,7 @@ const customStyles: StylesConfig<Partial<SelectOptions>, true> = {
     padding: '10px',
     borderRadius: '5px',
     background: '#2e2344',
-    border: '1px solid #E50E99',
+    border: `1px solid ${brandPink}`,
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
