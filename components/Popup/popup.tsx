@@ -45,7 +45,7 @@ function Popup() {
             onClick={handleClose}
           >
             <div
-              className={`w-full max-w-[650px] sm:max-w-[400px] h-auto my-auto card p-6 transition-all duration-300 ease-out transform ${
+              className={`w-full max-w-2xl sm:max-w-sm h-auto my-auto card p-6 transition-all duration-300 ease-out transform ${
                 isVisible
                   ? 'translate-y-0 opacity-100 scale-100'
                   : 'translate-y-8 opacity-0 scale-95'
@@ -62,7 +62,7 @@ function Popup() {
                     <img
                       src="/img/logos/2025-logo.png"
                       alt="conference logo"
-                      className="w-[150px]"
+                      className="w-36"
                     />
                   </div>
                   <Button
@@ -82,12 +82,12 @@ function Popup() {
                     alt="rocket"
                     width={0}
                     height={0}
-                    className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
+                    className="w-44 h-44 sm:w-36 sm:h-36 max-w-full"
                   />
                 </div>
 
                 <div className="flex flex-col items-center text-center space-y-6 pb-4">
-                  <h1 className=" text-[30px] sm:text-[25px] font-bold text-white leading-tight">
+                  <h1 className=" text-3xl sm:text-2xl font-bold text-white leading-tight">
                     AsyncAPI Is Headed to
                     <br />
                     DeveloperWeek <span className="text-[#B31942]">U</span>
@@ -109,7 +109,7 @@ function Popup() {
                     event-driven APIs!
                   </Paragraph>
                   <Link href="/venue/California">
-                    <Button type="button" className="w-[200px]" text="See What&apos;s Next" />
+                    <Button type="button" className="w-48" text="See What&apos;s Next" />
                   </Link>
                 </div>
               </div>

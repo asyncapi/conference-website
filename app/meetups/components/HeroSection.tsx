@@ -15,13 +15,13 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <motion.div
-      className="container mt-[150px] justify-center sm:py-6"
+      className="container mt-36 justify-center sm:py-6"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="mt-10 w-full max-w-[1300px] lg:mt-6 sm:mt-2">
+      <div className="mt-10 w-full max-w-7xl lg:mt-6 sm:mt-2">
         <motion.div
           className="flex flex-wrap items-center sm:flex-col sm:items-start"
           variants={itemVariants}
@@ -49,7 +49,7 @@ export default function HeroSection({
         </motion.div>
         <motion.div variants={itemVariants}>
           <Paragraph
-            className="mt-4 w-full max-w-[600px] sm:max-w-full"
+            className="mt-4 w-full max-w-xl sm:max-w-full"
             textColor="text-gray-300"
           >
             Connect with the AsyncAPI community through local and virtual

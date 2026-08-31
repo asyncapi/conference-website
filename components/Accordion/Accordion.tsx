@@ -28,14 +28,14 @@ function Accordion({ faq }: AccordionProps) {
                 <div
                   className={`flex justify-between ${show === i ? 'text-white' : 'text-gray-400'} hover:text-white`}
                 >
-                  <h2 className={`text-xl w-[90%]`}>{q.q}</h2>
+                  <h2 className="text-xl w-11/12">{q.q}</h2>
                   <Button
                     type="button"
                     outline={true}
-                    className="pointer h-[30px] border-[#ffff] mr-[20px] rounded-3xl p-1"
+                    className="pointer h-8 border-white mr-5 rounded-3xl p-1"
                     icon={
                       <Plus
-                        className={`w-[20px] transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`}
+                        className={`w-5 transition-transform  duration-700 ${show === i ? 'rotate-45' : 'rotate-90'}`}
                       />
                     }
                     iconPosition="left"
