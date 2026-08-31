@@ -33,12 +33,12 @@ export default function Heading({
   const Tag = level as keyof JSX.IntrinsicElements;
   switch (typeStyle) {
     case 'heading-lg':
-      classNames = `font-heading text-heading-md font-bold text-[60px] tracking-heading sm:text-[30px] lg:text-[40px] ${
+      classNames = `font-heading text-heading-md font-bold text-6xl tracking-heading sm:text-3xl lg:text-4xl ${
         className || ''
       }`;
       break;
     case 'heading-md':
-      classNames = `font-heading text-heading-md font-bold text-[40px] tracking-heading ${
+      classNames = `font-heading text-heading-md font-bold text-4xl tracking-heading ${
         className || ''
       }`;
       break;
