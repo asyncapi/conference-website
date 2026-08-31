@@ -45,7 +45,7 @@ const TicketCard = ({
         />
       </div>
 
-      <div className="relative min-h-[500px] sm:min-h-[550px] pb-8">
+      <div className="relative min-h-96 pb-8">
         {availableTickets.map((ticket, index) => {
           const isCurrentCard: boolean = index === currentIndex;
           const isPrevCard: boolean =
@@ -85,7 +85,7 @@ const TicketCard = ({
               }}
             >
               <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 h-full flex flex-col">
-                <div className="p-6 flex flex-col flex-grow min-h-[450px] sm:min-h-[480px]">
+                <div className="p-6 flex flex-col flex-grow min-h-96">
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">
