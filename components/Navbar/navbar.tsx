@@ -94,7 +94,7 @@ function Navbar(): JSX.Element {
       <div
         className={`flex justify-center fixed items-center w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}
       >
-        <div className="p-5 flex justify-between h-[75px] w-full items-center">
+        <div className="p-5 flex justify-between h-20 w-full items-center">
           <div
             className="flex items-center sm:justify-between sm:w-full z-[99]"
             data-test="nav-Home"
@@ -144,7 +144,7 @@ function Navbar(): JSX.Element {
                     <div
                       onMouseEnter={() => handleMouseEnter(link.title)}
                       onMouseLeave={handleMouseLeave}
-                      className="ml-16 text-[14px] group cursor-pointer relative flex flex-col"
+                      className="ml-16 text-sm group cursor-pointer relative flex flex-col"
                       data-test={`nav-${link.title}`}
                     >
                       <div>
@@ -232,7 +232,7 @@ function Navbar(): JSX.Element {
                       ></span>
                       {show === link.title && link.subMenu && (
                         <div
-                          className="subMenu absolute z-[9] mt-8 min-w-[150px] whitespace-nowrap rounded-md left-[-15px] gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
+                          className="subMenu absolute z-[9] mt-8 min-w-36 whitespace-nowrap rounded-md -left-4 gradient-bg px-2 py-1 flex flex-col justify-center space-y-0"
                           onMouseEnter={handleSubMenuEnter}
                           onMouseLeave={handleSubMenuLeave}
                         >
@@ -244,9 +244,9 @@ function Navbar(): JSX.Element {
                               ref={(el) => {
                                 subMenuRefs.current[index] = el;
                               }}
-                              className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-[32px] text-[16px] hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1 ${
+                              className={`flex items-center ${link.subMenu!.length === 1 ? 'justify-center' : 'justify-start'} min-h-8 text-base hover:scale-95 hover:translate-x-1 transition-all focus:outline-none focus:bg-white focus:bg-opacity-20 focus:scale-95 focus:translate-x-1 rounded px-2 py-1 ${
                                 isActive(subL)
-                                  ? 'bg-white bg-opacity-10 font-semibold text-[#C6BED9]'
+                                  ? 'bg-white bg-opacity-10 font-semibold text-dark-400'
                                   : ''
                               } ${subL.status === ConferenceStatus.ENDED ? 'opacity-50' : ''}`}
                               data-test={`nav-sub-${subL.title}`}

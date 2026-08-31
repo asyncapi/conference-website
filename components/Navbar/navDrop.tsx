@@ -26,7 +26,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
     return (
       <div
         ref={ref}
-        className="z-[99] absolute left-0 top-[74px] w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md"
+        className="z-[99] absolute left-0 top-20 w-full h-screen bg-[#1B1130]/90 backdrop-filter backdrop-blur-md"
       >
         <div className="flex flex-col p-5 pb-8 w-full">
           {links.map((link: LinkItem) => {
@@ -48,7 +48,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                 rel={isExternalUrl(resolvedRef) ? 'noreferrer' : undefined}
               >
                 <div
-                  className="min-h-[50px] cursor-pointer"
+                  className="min-h-12 cursor-pointer"
                   data-test={`nav-${link.title}`}
                   onClick={(e) =>
                     show === link.title ? setShow(null) : setShow(link.title)
@@ -61,7 +61,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                         onClick={(e) => e.preventDefault()}
                       >
                         <div
-                          className={`text-white ${isActive(link) ? 'font-semibold border-l-2 border-[#C6BED9] pl-2 text-[#C6BED9]' : ''}`}
+                          className={`text-white ${isActive(link) ? 'font-semibold border-l-2 border-dark-400 pl-2 text-dark-400' : ''}`}
                         >
                           {link.title}
                         </div>
@@ -79,9 +79,9 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                               <div
                                 data-test={`nav-sub-${sub.title}`}
                                 onClick={() => setDrop(false)}
-                                className={`h-[40px] flex navbg items-center p-6 hover:text-black text-white cursor-pointer ${
+                                className={`h-10 flex navbg items-center p-6 hover:text-black text-white cursor-pointer ${
                                   pathname === sub.ref
-                                    ? 'font-semibold bg-white/10 text-[#C6BED9]'
+                                    ? 'font-semibold bg-white/10 text-dark-400'
                                     : ''
                                 } ${sub.status === ConferenceStatus.ENDED ? 'opacity-50' : ''}`}
                               >
@@ -96,7 +96,7 @@ const NavDrop = forwardRef<HTMLDivElement, INavDropProp>(
                     <div
                       className={`text-white ${
                         isActive(link)
-                          ? 'font-semibold border-l-2 border-[#C6BED9] pl-2 text-[#C6BED9]'
+                          ? 'font-semibold border-l-2 border-dark-400 pl-2 text-dark-400'
                           : ''
                       }`}
                       onClick={() => setDrop(false)}
