@@ -95,7 +95,7 @@ export default async function VenuePage({
         className={`w-full h-[500px] sm:h-auto ${city.name == 'Online' ? 'bg-online' : ''}`}
       >
         <div className="w-full h-full kinda-dark items-center flex flex-col justify-between">
-          <div className="mt-16 container text-center flex flex-col items-center w-full max-w-6xl sm:text-center">
+          <div className="mt-20 container text-center flex flex-col items-center w-full max-w-6xl sm:text-center">
             {city.name == 'Online' ? (
               <Heading className={textColor}>
                 {city.name} {city.country}
