@@ -71,7 +71,7 @@ function Socials(): JSX.Element {
               >
                 {name}
               </span>
-              <Icon className="h-[1em]" fill="currentColor" aria-hidden="true" aria-label={name}
+              <Icon className="h-1em" fill="currentColor" aria-hidden="true" aria-label={name}
               />
             </a>
           </li>

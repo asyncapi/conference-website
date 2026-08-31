@@ -43,7 +43,7 @@ function Accordion({ faq }: AccordionProps) {
                 </div>
                 {
                   <p
-                    className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-2 max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                    className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-2 max-h-1000 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                   >
                     {q.a}
                   </p>

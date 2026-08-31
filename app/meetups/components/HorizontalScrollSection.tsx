@@ -59,7 +59,7 @@ export default function HorizontalScrollSection({
         >
           <div className="sticky top-24 flex w-full items-start overflow-hidden pt-8 lg:top-20">
             <motion.div
-              className="flex gap-8 pl-[10vw] will-change-transform lg:gap-5 lg:pl-[6vw]"
+              className="flex gap-8 pl-10vw will-change-transform lg:gap-5 lg:pl-6vw"
               style={{ x }}
             >
               {MEETUP_ITEMS.map((item) => (

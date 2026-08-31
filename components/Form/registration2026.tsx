@@ -79,7 +79,7 @@ export default function Registration2026(): JSX.Element {
       <p className="text-dark-500 text-lg">Please provide your details to register for the event.</p>
       <div className="mt-2 border-b border-charcoal" />
       <div className="flex lg:flex-col">
-        <nav className="lg:hidden border-r w-[30rem] border-charcoal" aria-label="Registration progress">
+        <nav className="lg:hidden border-r w-480 border-charcoal" aria-label="Registration progress">
           <ol className="list-none">
             {fields.map((field, i) => {
               return (

@@ -61,7 +61,7 @@ function Guidelines({
                     </div>
 
                     <p
-                      className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                      className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-1000 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                     >
                       {faq.a1 + talkDeadLine + faq.a2}
                     </p>
@@ -101,13 +101,13 @@ function Guidelines({
                     </div>
                     {virtual ? (
                       <p
-                        className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                        className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-1000 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                       >
                         {faq.av}
                       </p>
                     ) : (
                       <p
-                        className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                        className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-1000 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                       >
                         {faq.ai}
                       </p>
@@ -147,7 +147,7 @@ function Guidelines({
                   </div>
                   {
                     <p
-                      className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-[1000px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+                      className={`text-md text-white overflow-hidden transition-all duration-500 ease-in-out transform ${show === i ? 'mt-8 max-h-1000 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
                     >
                       {faq.a}
                     </p>

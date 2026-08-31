@@ -15,9 +15,9 @@ function MeetupCard({ color, label, description, image, isDesktop = true }: Meet
 
   if (isDesktop) {
     return (
-      <div className="relative h-[600px] w-[400px] rounded-2xl border lg:h-[560px] lg:w-[380px]">
+      <div className="relative h-600 w-400 rounded-2xl border lg:h-560 lg:w-380">
         <div
-          className="h-[350px] w-full bg-cover bg-center lg:h-80"
+          className="h-350 w-full bg-cover bg-center lg:h-80"
           style={{
             backgroundImage: gradientStyle,
             backgroundSize: 'cover',

@@ -12,8 +12,8 @@ function About(): JSX.Element {
       data-test="about-section"
     >
       <div className="w-full max-w-6xl flex lg:flex-col-reverse items-center justify-between">
-        <div className="lg:mt-16 bg-[url('/img/about.jpeg')]  bg-center bg-cover w-[450px] h-[550px] sm:w-full sm:h-[500px] rounded-3xl"></div>
-        <div className="w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center">
+        <div className="lg:mt-16 bg-[url('/img/about.jpeg')]  bg-center bg-cover w-450 h-550 sm:w-full sm:h-500 rounded-3xl"></div>
+        <div className="w-600 ml-10 lg:ml-0 lg:w-full lg:text-center">
           <div className="flex items-center lg:justify-center">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               About The Event

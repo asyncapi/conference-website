@@ -92,7 +92,7 @@ export default async function VenuePage({
           backgroundPosition: 'center 30%',
           backgroundRepeat: 'no-repeat',
         }}
-        className={`w-full h-[500px] sm:h-auto ${city.name == 'Online' ? 'bg-online' : ''}`}
+        className={`w-full h-500 sm:h-auto ${city.name == 'Online' ? 'bg-online' : ''}`}
       >
         <div className="w-full h-full kinda-dark items-center flex flex-col justify-between">
           <div className="mt-20 container text-center flex flex-col items-center w-full max-w-6xl sm:text-center">
