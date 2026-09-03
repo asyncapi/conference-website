@@ -11,9 +11,16 @@ interface GuidelinesProps {
   virtual: boolean;
   name: string;
   cfp: string;
+  cfpDeadlinePassed?: boolean;
 }
 
-function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
+function Guidelines({
+  talkDeadLine,
+  virtual,
+  name,
+  cfp,
+  cfpDeadlinePassed = false,
+}: GuidelinesProps) {
   const [show, setShow] = useState<number | null>(null);
   return (
     <div className="z-[9]" data-test="guideline-com">
@@ -156,19 +163,23 @@ function Guidelines({ talkDeadLine, virtual, name, cfp }: GuidelinesProps) {
           })}
         </div>
         <div className="flex items-center justify-center text-center mt-20">
-          {cfp && (
-            <a
-              href={name === 'online' ? '/venue/online/register' : cfp}
-              target={name == 'Online' ? '' : '_blank'}
-              rel="noreferrer"
-            >
+          {cfp &&
+            (cfpDeadlinePassed ? (
               <Button
                 type="button"
-                className="x-8 m-2 w-[250px] text-center"
-                text="Submit Talk Proposal"
+                disabled
+                className="x-8 m-2 w-[250px] text-center opacity-60 text-sm"
+                text="CFP deadline has passed"
               />
-            </a>
-          )}
+            ) : (
+              <a href={cfp} target="_blank" rel="noreferrer">
+                <Button
+                  type="button"
+                  className="x-8 m-2 w-[250px] text-center"
+                  text="Submit Talk Proposal"
+                />
+              </a>
+            ))}
         </div>
       </div>
     </div>

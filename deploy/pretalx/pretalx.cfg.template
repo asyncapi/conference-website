@@ -1,0 +1,40 @@
+[filesystem]
+data = /data
+logs = /data/logs
+media = /public/media
+static = /public/static
+
+[files]
+upload_limit = ${PRETALX_FILE_UPLOAD_LIMIT}
+
+[site]
+debug = False
+url = ${PRETALX_SITE_URL}
+
+[database]
+backend = postgresql
+name = pretalx
+user = pretalx
+password = ${POSTGRES_PASSWORD}
+host = pretalx-db
+port = 5432
+
+[mail]
+from = ${PRETALX_MAIL_FROM}
+host = ${PRETALX_MAIL_HOST}
+port = ${PRETALX_MAIL_PORT}
+user = ${PRETALX_MAIL_USER}
+password = ${PRETALX_MAIL_PASSWORD}
+tls = ${PRETALX_MAIL_TLS}
+ssl = ${PRETALX_MAIL_SSL}
+
+[redis]
+location = redis://pretalx-redis/0
+sessions = true
+
+[celery]
+backend = redis://pretalx-redis/1
+broker = redis://pretalx-redis/2
+
+[logging]
+email = ${PRETALX_LOGGING_EMAIL}

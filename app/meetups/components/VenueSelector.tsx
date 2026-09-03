@@ -43,10 +43,11 @@ function VenueSelector({
           </Paragraph>
         </motion.div>
 
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {!selectedVenue && (
             <motion.div
-              className="mt-20"
+              key="venue-list"
+              className="mt-20 min-h-[220px]"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -68,43 +69,50 @@ function VenueSelector({
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
 
-        {selectedVenue && (
-          <div className="mt-20 text-left sm:mt-12">
-            <Button
-              type="button"
-              className="mb-10 flex items-center sm:mb-6"
-              onClick={() => onVenueSelect(null)}
-              outline
-              icon={<Arrow className="w-4 rotate-180" />}
-              iconPosition="left"
+          {selectedVenue && (
+            <motion.div
+              key="venue-details"
+              className="mt-20 text-left sm:mt-12 min-h-[220px]"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
             >
-              <div className="ml-2 text-white text-md">
-                {selectedVenue.country}
-              </div>
-            </Button>
+              <Button
+                type="button"
+                className="mb-10 flex items-center sm:mb-6"
+                onClick={() => onVenueSelect(null)}
+                outline
+                icon={<Arrow className="w-4 rotate-180" />}
+                iconPosition="left"
+              >
+                <div className="ml-2 text-white text-md">
+                  {selectedVenue.country}
+                </div>
+              </Button>
 
-            {selectedVenue.cities.length > 0 ? (
-              <div className="grid grid-cols-3 gap-4 lg:grid-cols-2 sm:grid-cols-1">
-                {selectedVenue.cities.map((city) => (
-                  <Button
-                    type="button"
-                    outline
-                    key={city.name}
-                    className="text-white border border-white/20 px-6 py-3 rounded-full text-center"
-                  >
-                    {city.name}
-                  </Button>
-                ))}
-              </div>
-            ) : (
-              <Paragraph className="text-gray-300 text-center">
-                No meetups in this country yet. Stay tuned!
-              </Paragraph>
-            )}
-          </div>
-        )}
+              {selectedVenue.cities.length > 0 ? (
+                <div className="grid grid-cols-3 gap-4 lg:grid-cols-2 sm:grid-cols-1">
+                  {selectedVenue.cities.map((city) => (
+                    <Button
+                      type="button"
+                      outline
+                      key={city.name}
+                      className="text-white border border-white/20 px-6 py-3 rounded-full text-center"
+                    >
+                      {city.name}
+                    </Button>
+                  ))}
+                </div>
+              ) : (
+                <Paragraph className="text-gray-300 text-center">
+                  No meetups in this country yet. Stay tuned!
+                </Paragraph>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
         <motion.div variants={itemVariants}>
           <Paragraph className="mt-10" typeStyle="body-md">
             Please be sure to read and understand our Terms & Conditions for{' '}

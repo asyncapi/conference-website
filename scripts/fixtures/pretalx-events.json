@@ -1,0 +1,52 @@
+[
+  {
+    "name": {
+      "en": "AsyncAPI Conf Europe 2026"
+    },
+    "slug": "asyncapi-europe-2026",
+    "is_public": true,
+    "date_from": "2026-11-05",
+    "date_to": "2026-11-06",
+    "timezone": "Europe/Amsterdam"
+  },
+  {
+    "name": {
+      "en": "AsyncAPI Conf Online 2026"
+    },
+    "slug": "asyncapi-online-2026",
+    "is_public": true,
+    "date_from": "2026-10-28",
+    "date_to": "2026-10-28",
+    "timezone": "UTC"
+  },
+  {
+    "name": {
+      "en": "AsyncAPI Conf India 2026"
+    },
+    "slug": "asyncapi-india-2026",
+    "is_public": true,
+    "date_from": "2026-08-22",
+    "date_to": "2026-08-23",
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": {
+      "en": "AsyncAPI US Conf"
+    },
+    "slug": "asyncapi-us-conf-2026",
+    "is_public": true,
+    "date_from": "2026-06-17",
+    "date_to": "2026-06-20",
+    "timezone": "UTC"
+  },
+  {
+    "name": {
+      "en": "DemoConf"
+    },
+    "slug": "democonf",
+    "is_public": true,
+    "date_from": "2026-06-02",
+    "date_to": "2026-06-04",
+    "timezone": "Europe/Berlin"
+  }
+]

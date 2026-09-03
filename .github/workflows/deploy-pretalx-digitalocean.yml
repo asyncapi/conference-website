@@ -1,0 +1,158 @@
+name: Deploy Pretalx to DigitalOcean
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: GitHub deployment environment name
+        required: true
+        default: pretalx-prod
+      pretalx_site_url:
+        description: Public Pretalx base URL
+        required: false
+        default: https://cfp.asyncapi.com
+  push:
+    branches:
+      - master
+    paths:
+      - 'deploy/pretalx/**'
+      - '.github/workflows/deploy-pretalx-digitalocean.yml'
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.event.inputs.target_environment || 'pretalx-prod' }}
+      url: ${{ steps.deployment-url.outputs.url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set deployment URL
+        id: deployment-url
+        env:
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
+        run: |
+          echo "url=$PRETALX_SITE_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Render Pretalx configuration
+        env:
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          PRETALX_MAIL_FROM: ${{ secrets.PRETALX_MAIL_FROM }}
+          PRETALX_MAIL_HOST: ${{ secrets.PRETALX_MAIL_HOST }}
+          PRETALX_MAIL_PORT: ${{ secrets.PRETALX_MAIL_PORT }}
+          PRETALX_MAIL_USER: ${{ secrets.PRETALX_MAIL_USER }}
+          PRETALX_MAIL_PASSWORD: ${{ secrets.PRETALX_MAIL_PASSWORD }}
+          PRETALX_MAIL_TLS: ${{ vars.PRETALX_MAIL_TLS || 'True' }}
+          PRETALX_MAIL_SSL: ${{ vars.PRETALX_MAIL_SSL || 'False' }}
+          PRETALX_LOGGING_EMAIL: ${{ secrets.PRETALX_LOGGING_EMAIL }}
+          PRETALX_FILE_UPLOAD_LIMIT: ${{ vars.PRETALX_FILE_UPLOAD_LIMIT || '2' }}
+        run: |
+          mkdir -p deploy/pretalx/conf
+          python3 - <<'PY'
+          from pathlib import Path
+          from string import Template
+          import os
+
+          required = [
+              'PRETALX_SITE_URL',
+              'POSTGRES_PASSWORD',
+              'PRETALX_MAIL_FROM',
+              'PRETALX_MAIL_HOST',
+              'PRETALX_MAIL_PORT',
+              'PRETALX_MAIL_USER',
+              'PRETALX_MAIL_PASSWORD',
+              'PRETALX_LOGGING_EMAIL',
+          ]
+          missing = [name for name in required if not os.environ.get(name)]
+          if missing:
+              raise SystemExit(f"Missing required deployment values: {', '.join(missing)}")
+
+          template = Template(Path('deploy/pretalx/pretalx.cfg.template').read_text())
+          Path('deploy/pretalx/conf/pretalx.cfg').write_text(template.safe_substitute(os.environ))
+          PY
+
+      - name: Prepare SSH
+        env:
+          DO_SSH_PRIVATE_KEY: ${{ secrets.DO_SSH_PRIVATE_KEY }}
+        run: |
+          if [ -z "$DO_SSH_PRIVATE_KEY" ]; then
+            echo "DO_SSH_PRIVATE_KEY is empty or unavailable"
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DO_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keygen -y -f ~/.ssh/id_ed25519 > ~/.ssh/id_ed25519.pub
+          ssh-keygen -lf ~/.ssh/id_ed25519.pub
+
+      - name: Prepare remote directory
+        env:
+          DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
+          DO_SSH_USER: ${{ secrets.DO_SSH_USER }}
+          DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
+          PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -p "$DO_SSH_PORT" -o StrictHostKeyChecking=accept-new "$DO_SSH_USER@$DO_SSH_HOST" "
+            set -e
+            if [ \"\$(id -u)\" = '0' ]; then
+              install -d -o '$DO_SSH_USER' -g '$DO_SSH_USER' '$PRETALX_REMOTE_PATH' '$PRETALX_REMOTE_PATH/conf' '$PRETALX_REMOTE_PATH/plugins'
+            else
+              mkdir -p '$PRETALX_REMOTE_PATH/conf' '$PRETALX_REMOTE_PATH/plugins'
+            fi
+          "
+
+      - name: Upload deployment files
+        env:
+          DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
+          DO_SSH_USER: ${{ secrets.DO_SSH_USER }}
+          DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
+          PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
+        run: |
+          rsync -az -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -p $DO_SSH_PORT" deploy/pretalx/Dockerfile deploy/pretalx/docker-compose.yml deploy/pretalx/nginx-container.conf deploy/pretalx/conf deploy/pretalx/plugins "$DO_SSH_USER@$DO_SSH_HOST:$PRETALX_REMOTE_PATH/"
+
+      - name: Write remote environment
+        env:
+          DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
+          DO_SSH_USER: ${{ secrets.DO_SSH_USER }}
+          DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
+          PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          PRETALX_HTTP_PORT: ${{ vars.PRETALX_HTTP_PORT || '8346' }}
+          PRETALX_IMAGE_TAG: ${{ vars.PRETALX_IMAGE_TAG || 'v2026.1.2' }}
+          PRETALX_FILE_UPLOAD_LIMIT: ${{ vars.PRETALX_FILE_UPLOAD_LIMIT || '2' }}
+          GUNICORN_FORWARDED_ALLOW_IPS: ${{ vars.GUNICORN_FORWARDED_ALLOW_IPS || '127.0.0.1' }}
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -p "$DO_SSH_PORT" "$DO_SSH_USER@$DO_SSH_HOST" "cat > '$PRETALX_REMOTE_PATH/.env'" <<EOF
+          POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+          PRETALX_HTTP_PORT=$PRETALX_HTTP_PORT
+          PRETALX_IMAGE_TAG=$PRETALX_IMAGE_TAG
+          PRETALX_FILE_UPLOAD_LIMIT=$PRETALX_FILE_UPLOAD_LIMIT
+          GUNICORN_FORWARDED_ALLOW_IPS=$GUNICORN_FORWARDED_ALLOW_IPS
+          EOF
+
+      - name: Deploy containers
+        env:
+          DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
+          DO_SSH_USER: ${{ secrets.DO_SSH_USER }}
+          DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
+          PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -p "$DO_SSH_PORT" "$DO_SSH_USER@$DO_SSH_HOST" "cd '$PRETALX_REMOTE_PATH' && docker compose --env-file .env pull db redis nginx && docker compose --env-file .env build pretalx && docker compose --env-file .env up -d"
+
+      - name: Health check
+        env:
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
+        run: |
+          healthcheck_url="${PRETALX_SITE_URL%/}/healthcheck"
+          curl --fail --location --retry 8 --retry-delay 10 --retry-all-errors "$healthcheck_url"
+          status_code=$(curl --location -o /dev/null -s -w "%{http_code}" "$healthcheck_url")
+          if [ "$status_code" -ne 200 ]; then
+            echo "Health check failed with status code $status_code"
+            exit 1
+          fi

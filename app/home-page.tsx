@@ -11,12 +11,12 @@ import Heading from '../components/Typography/heading';
 import Paragraph from '../components/Typography/paragraph';
 import Subscription from '../components/Form/subscription';
 import SpeakerCard from '../components/Cards/SpeakerCard/SpeakerCard';
-import cities from '../config/city-lists.json';
-import speakers from '../config/speakers.json';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../types/types';
+import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
+import { cities, speakers } from '../config/conference-data';
 
 export default function HomePage() {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -37,6 +37,8 @@ export default function HomePage() {
       setSpeakersList([]);
     }
   };
+  const currentCfpUrl = resolveCfpUrl(currentCity.cfp);
+
   return (
     <div className="relative">
       <Header />
@@ -176,7 +178,7 @@ export default function HomePage() {
                 ) : (
                   <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
                     <div className="w-[720px] lg:w-full">
-                      {typeof currentCity !== 'string' && currentCity.cfp ? (
+                      {typeof currentCity !== 'string' && currentCfpUrl ? (
                         <div>
                           <Paragraph className="text-gray-200">
                             We are actively accepting speaker applications, and
@@ -186,8 +188,17 @@ export default function HomePage() {
                           </Paragraph>
                           <Link
                             className="flex justify-center"
-                            href={currentCity.cfp}
-                            target="_blank"
+                            href={currentCfpUrl}
+                            target={
+                              isExternalUrl(currentCfpUrl)
+                                ? '_blank'
+                                : undefined
+                            }
+                            rel={
+                              isExternalUrl(currentCfpUrl)
+                                ? 'noreferrer'
+                                : undefined
+                            }
                           >
                             <Button
                               type="button"

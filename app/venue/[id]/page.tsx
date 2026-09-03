@@ -11,13 +11,12 @@ import {
   Speaker as SpeakerType,
 } from '../../../types/types';
 import { getEventStatus } from '../../../utils/status';
-import agenda from '../../../config/agenda.json';
-import speakers from '../../../config/speakers.json';
-import cities from '../../../config/city-lists.json';
 import tickets from '../../../config/tickets.json';
 import AgendaComponent from '../../../components/Agenda/agenda';
 import Guidelines from '../../../components/Guidelines/guidelines';
-import CFPdata from '../../../config/cfp-data.json';
+import { isCfpDeadlinePassed } from '../../../utils/cfp-deadline';
+import { isExternalUrl, resolveCfpUrl } from '../../../utils/pretalx';
+import { agenda, cities, speakers } from '../../../config/conference-data';
 
 export async function generateStaticParams() {
   return cities.map((city) => ({
@@ -31,7 +30,8 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const city = cities.find((c) => c.name === id);
+  const decodedId = decodeURIComponent(id);
+  const city = cities.find((c) => c.name === decodedId);
 
   return {
     title: city
@@ -44,16 +44,26 @@ export async function generateMetadata({
 }
 
 function getCityData(cityName: string): ExtendedCity {
-  const city = cities.filter((city) => city.name === cityName);
-  const currentCity: Partial<ExtendedCity> = city[0];
+  const decodedCityName = decodeURIComponent(cityName);
+  const city = cities.find((city) => city.name === decodedCityName);
+
+  if (!city) {
+    throw new Error(`Unknown venue city: ${decodedCityName}`);
+  }
+
+  const currentCity: Partial<ExtendedCity> = { ...city };
   const citySpeakers = speakers.filter((speaker: SpeakerType) =>
-    speaker.city.includes(cityName)
+    speaker.city.includes(decodedCityName)
   );
-  const cityAgenda = agenda.filter((a: AgendaType) => a.city === cityName);
-  const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
+  const cityAgenda = agenda.filter(
+    (a: AgendaType) => a.city === decodedCityName
+  );
+  const cityTicket = tickets.filter((ticket) =>
+    ticket.type.includes(decodedCityName)
+  );
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
-  currentCity.ticket = cityTicket[0];
+  currentCity.ticket = cityTicket[0] ?? null;
   return currentCity as ExtendedCity;
 }
 
@@ -65,6 +75,11 @@ export default async function VenuePage({
   const { id } = await params;
   const city = getCityData(id);
   const eventStatus = getEventStatus(city.date);
+  const cfpUrl = resolveCfpUrl(city.cfp);
+  const cfpDeadlinePassed = isCfpDeadlinePassed(city.cfpDate);
+  const shouldShowCfpGuidelines = Boolean(
+    city.agenda.length === 0 && cfpUrl && !cfpDeadlinePassed
+  );
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
 
@@ -134,23 +149,27 @@ export default async function VenuePage({
                     />
                   </a>
                 )}
-                {city.cfp && (
-                  <a
-                    href={
-                      city.name === 'online'
-                        ? '/venue/online/register'
-                        : city.cfp
-                    }
-                    target={city.name == 'Online' ? '' : '_blank'}
-                    rel="noreferrer"
-                  >
+                {cfpUrl &&
+                  (cfpDeadlinePassed ? (
                     <Button
-                      type="submit"
-                      className="px-8 m-2 w-[250px]"
-                      text="Apply to be a speaker"
+                      type="button"
+                      disabled
+                      className="px-8 m-2 w-[250px] opacity-60 text-sm"
+                      text="CFP deadline has passed"
                     />
-                  </a>
-                )}
+                  ) : (
+                    <a
+                      href={cfpUrl}
+                      target={isExternalUrl(cfpUrl) ? '_blank' : undefined}
+                      rel={isExternalUrl(cfpUrl) ? 'noreferrer' : undefined}
+                    >
+                      <Button
+                        type="submit"
+                        className="px-8 m-2 w-[250px]"
+                        text="Apply to be a speaker"
+                      />
+                    </a>
+                  ))}
               </div>
             )}
           </div>
@@ -160,15 +179,18 @@ export default async function VenuePage({
         id="agenda"
         className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
       >
-        {city.cfp ? (
+        {city.agenda.length > 0 ? (
+          <div className="w-[1130px] lg:w-full">
+            <AgendaComponent city={city} />
+          </div>
+        ) : shouldShowCfpGuidelines && cfpUrl ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
-              talkDeadLine={
-                (city.name == 'Online' && CFPdata.CallEndDate) || city.cfpDate
-              }
+              talkDeadLine={city.cfpDate}
               virtual={city.name == 'Online'}
               name={city.name}
-              cfp={city.cfp}
+              cfp={cfpUrl}
+              cfpDeadlinePassed={cfpDeadlinePassed}
             />
           </div>
         ) : (

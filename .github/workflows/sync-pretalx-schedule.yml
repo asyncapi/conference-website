@@ -1,0 +1,62 @@
+name: Sync Pretalx Schedule
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Pretalx base URL, for example https://your-test-pretalx.example.com
+        required: false
+        default: https://cfp.asyncapi.com
+  schedule:
+    - cron: '0 7 * * 1'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync public Pretalx schedule
+        env:
+          PRETALX_SITE_URL: ${{ github.event.inputs.base_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
+          PRETALX_API_TOKEN: ${{ secrets.PRETALX_API_TOKEN }}
+        run: npm run sync:pretalx
+
+      - name: Create schedule update pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/sync-pretalx-schedule
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: "chore: sync pretalx schedule"
+          committer: asyncapi-bot <info@asyncapi.io>
+          author: asyncapi-bot <info@asyncapi.io>
+          title: "chore: sync pretalx schedule"
+          body: |
+            ## Description
+            Automatically syncs public Pretalx data to update the website configuration.
+            
+            ## What's included
+            - Public events and schedule slots
+            - Location metadata and city images
+            - Speaker information
+            
+            ## What's excluded
+            - Private submissions and review data
+          add-paths: |
+            config/pretalx/agenda.json
+            config/pretalx/city-lists.json
+            config/pretalx/speakers.json

@@ -1,5 +1,5 @@
-import navData from '../../config/links.json';
-import speakers from '../../config/speakers.json';
+import { links as navData } from '../../config/navigation';
+import { speakers } from '../../config/conference-data';
 import { LinkItem } from '../../types/types';
 
 let venueData = (navData as LinkItem[]).filter((idx) => {

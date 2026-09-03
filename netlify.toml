@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_VERSION = "10"
+  NEXT_PUBLIC_PRETALX_BASE_URL = "https://cfp.asyncapi.com"
+  NEXT_PUBLIC_PRETALX_CFP_PATH = "cfp"
 
 [functions]
   directory = "netlify/functions"

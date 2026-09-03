@@ -1,0 +1,45 @@
+{% extends "orga/settings/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_title %}{% translate "AsyncAPI location metadata" %} ::
+{% endblock extra_title %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'orga/css/ui/settings.css' %}">
+{% endblock %}
+
+{% block settings_content %}
+    <form method="post" class="d-flex flex-column">
+        {% csrf_token %}
+
+        <h2>{% translate "AsyncAPI location metadata" %}</h2>
+        <p class="text-muted">
+            {% blocktranslate trimmed %}
+                These fields are read by the conference website sync and shown on the generated venue page.
+            {% endblocktranslate %}
+        </p>
+
+        {% include "common/forms/errors.html" %}
+        {% for field in form %}
+            <div class="form-group row">
+                <label for="{{ field.id_for_label }}" class="col-md-3 col-form-label">
+                    {{ field.label }}
+                </label>
+                <div class="col-md-9">
+                    {{ field }}
+                    {% if field.help_text %}<div class="text-muted">{{ field.help_text }}</div>{% endif %}
+                    {{ field.errors }}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="submit-group panel">
+            <span></span>
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-check"></i>
+                {% translate "Save" %}
+            </button>
+        </div>
+    </form>
+{% endblock settings_content %}

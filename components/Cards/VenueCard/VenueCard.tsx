@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { City } from '../../../types/types';
 import { getEventStatus } from '../../../utils/status';
 import MapPointer from '../../illustration/mapPointer';
+import { resolveCfpUrl } from '../../../utils/pretalx';
 
 interface IVenue {
   city: City;
@@ -11,6 +12,7 @@ interface IVenue {
 
 function VenueCard({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
+  const cfpUrl = resolveCfpUrl(city.cfp);
 
   return (
     <Link href={`/venue/${city.name}`}>
@@ -23,7 +25,7 @@ function VenueCard({ city }: IVenue) {
       >
         <div className="flex justify-between flex-col w-full h-full">
           <div className="flex items-center">
-            {city.cfp && (
+            {cfpUrl && (
               <div
                 className={`border text-white text-md rounded-lg px-2 py-1 text-center mt-2`}
               >
