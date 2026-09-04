@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';

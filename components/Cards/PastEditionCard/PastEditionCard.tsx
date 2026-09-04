@@ -1,6 +1,7 @@
 import React, { JSX } from 'react';
 import Image from 'next/image';
 import ILink from '../../illustration/link';
+import { BLUR_DATA_URL } from '../../../utils/image-blur';
 
 interface PastEditonCardProp {
   url: string;
@@ -30,6 +31,9 @@ const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
           src={`/img/past-editions/${year}.webp`}
           alt={`AsyncAPI Conference ${year}`}
           fill
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL={BLUR_DATA_URL}
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
