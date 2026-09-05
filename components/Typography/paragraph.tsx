@@ -20,7 +20,7 @@ export default function Paragraph({
   let classNames = '';
   switch (typeStyle) {
     case 'body-lg':
-      classNames = `text-[20px] sm:text-[16px] ${fontWeight} ${className || ''}`;
+      classNames = `text-xl sm:text-base ${fontWeight} ${className || ''}`;
       break;
     case 'body-md':
       classNames = `text-md ${fontWeight} ${className || ''}`;

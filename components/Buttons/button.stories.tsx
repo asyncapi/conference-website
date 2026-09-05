@@ -108,7 +108,7 @@ export const IconWithOutline: Story = {
     icon: <Download />,
     iconPosition: 'left',
     outline: true,
-    className: 'w-[240px] border',
+    className: 'w-60 border',
     type: 'button',
   },
 };

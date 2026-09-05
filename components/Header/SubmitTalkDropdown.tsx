@@ -41,7 +41,7 @@ function SubmitTalkDropdown(): JSX.Element | null {
     <div className="relative" ref={containerRef}>
       <Button
         type="button"
-        className="w-[250px]"
+        className="w-64"
         test="submit-talk-dropdown"
         onClick={() => setShow((isOpen) => !isOpen)}
         text={
@@ -58,7 +58,7 @@ function SubmitTalkDropdown(): JSX.Element | null {
       />
       {show && (
         <div
-          className="absolute z-10 mt-2 w-full min-w-[250px] rounded-md gradient-bg shadow-lg py-1"
+          className="absolute z-10 mt-2 w-full min-w-64 rounded-md gradient-bg shadow-lg py-1"
           role="menu"
         >
           {openVenues.map((city) => (

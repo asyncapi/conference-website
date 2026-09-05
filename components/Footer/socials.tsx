@@ -9,8 +9,8 @@ const socials = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/company/asyncapi',
     icon: LinkedIn,
-    iconHoverClass: 'hover:bg-[#0077b5] hover:text-white',
-    tooltipHoverClass: 'group-hover:bg-[#0077b5]',
+    iconHoverClass: 'hover:bg-social-linkedin hover:text-white',
+    tooltipHoverClass: 'group-hover:bg-social-linkedin',
     itemTest: 'footer-icon-linkedin',
     linkTest: 'footer-Linkedin',
     tooltipTest: 'footer-tooltip-linkedin',
@@ -19,8 +19,8 @@ const socials = [
     name: 'GitHub',
     href: 'https://github.com/asyncapi',
     icon: Github,
-    iconHoverClass: 'hover:bg-[#333] hover:text-white',
-    tooltipHoverClass: 'group-hover:bg-[#333]',
+    iconHoverClass: 'hover:bg-charcoal hover:text-white',
+    tooltipHoverClass: 'group-hover:bg-charcoal',
     itemTest: 'footer-icon-github',
     linkTest: 'footer-Github',
     tooltipTest: 'footer-tooltip-github',
@@ -29,8 +29,8 @@ const socials = [
     name: 'Twitter',
     href: 'https://x.com/asyncapispec',
     icon: X,
-    iconHoverClass: 'hover:bg-[#333] hover:text-white',
-    tooltipHoverClass: 'group-hover:bg-[#333]',
+    iconHoverClass: 'hover:bg-charcoal hover:text-white',
+    tooltipHoverClass: 'group-hover:bg-charcoal',
     itemTest: 'footer-icon-twitter',
     linkTest: 'footer-Twitter(X)',
     tooltipTest: 'footer-tooltip-twitter',
@@ -39,8 +39,8 @@ const socials = [
     name: 'YouTube',
     href: 'https://www.youtube.com/asyncapi',
     icon: Youtube,
-    iconHoverClass: 'hover:bg-[#ff0000] hover:text-white',
-    tooltipHoverClass: 'group-hover:bg-[#ff0000]',
+    iconHoverClass: 'hover:bg-social-youtube hover:text-white',
+    tooltipHoverClass: 'group-hover:bg-social-youtube',
     itemTest: 'footer-icon-youtube',
     linkTest: 'footer-youtube',
     tooltipTest: 'footer-tooltip-youtube',
@@ -71,7 +71,7 @@ function Socials(): JSX.Element {
               >
                 {name}
               </span>
-              <Icon className="h-[1em]" fill="currentColor" aria-hidden="true" aria-label={name}
+              <Icon className="h-4" fill="currentColor" aria-hidden="true" aria-label={name}
               />
             </a>
           </li>

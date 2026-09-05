@@ -25,24 +25,24 @@ function Header(): JSX.Element {
                 data-test="landing-heading"
               >
                 <Heading
-                  className="leading-normal sm:leading-38px tracking-[-3px] sm:tracking-[-0.02em] font-extrabold text-gradient px-2 pb-2"
+                  className="leading-normal sm:leading-38px tracking-tighter sm:tracking-tight font-extrabold text-gradient px-2 pb-2"
                   level="h1"
                   typeStyle="heading-lg"
                 >
                   AsyncAPI Conference {new Date().getFullYear()}
                 </Heading>
               </div>
-              <div className="w-[624px] sm:w-full text-center">
-                <Paragraph className="mt-[16px]" textColor="text-gray-200">
+              <div className="w-content-xs sm:w-full text-center">
+                <Paragraph className="mt-4" textColor="text-gray-200">
                   Join us for the AsyncAPI Conference, bringing the latest in
                   AsyncAPI technology to locations worldwide!
                 </Paragraph>
               </div>
-              <div className="mt-[54px] relative flex items-center justify-center gap-4 flex-wrap">
+              <div className="mt-14 relative flex items-center justify-center gap-4 flex-wrap">
                 <Link href="/register/2026">
                   <Button
                     type="button"
-                    className="w-[250px]"
+                    className="w-64"
                     text="Register Now"
                   />
                 </Link>
