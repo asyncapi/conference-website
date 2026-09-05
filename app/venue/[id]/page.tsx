@@ -92,10 +92,10 @@ export default async function VenuePage({
           backgroundPosition: 'center 30%',
           backgroundRepeat: 'no-repeat',
         }}
-        className={`w-full h-[500px] sm:h-[auto] ${city.name == 'Online' ? 'bg-online' : ''}`}
+        className={`w-full h-125 sm:h-auto ${city.name == 'Online' ? 'bg-online' : ''}`}
       >
         <div className="w-full h-full kinda-dark items-center flex flex-col justify-between">
-          <div className="mt-[68px] container text-center flex flex-col items-center w-[1100px] lg:w-full sm:text-center">
+          <div className="mt-16 container text-center flex flex-col items-center w-content-lg lg:w-full sm:text-center">
             {city.name == 'Online' ? (
               <Heading className={textColor}>
                 {city.name} {city.country}
@@ -106,13 +106,13 @@ export default async function VenuePage({
               </Heading>
             )}
 
-            <Paragraph className="mt-[24px]" textColor={textColor}>
+            <Paragraph className="mt-6" textColor={textColor}>
               {city.description}
             </Paragraph>
 
             <Paragraph
               typeStyle="body-md"
-              className={`${textColor} mt-[24px] underline font-bold`}
+              className={`${textColor} mt-6 underline font-bold`}
             >
               <a href={city.mapUrl} target="_blank" rel="noreferrer">
                 {city.address}
@@ -120,7 +120,7 @@ export default async function VenuePage({
             </Paragraph>
             <Paragraph
               typeStyle="body-lg"
-              className={`${textColor} mt-[24px] font-bold`}
+              className={`${textColor} mt-6 font-bold`}
             >
               {city.date}
             </Paragraph>
@@ -129,18 +129,18 @@ export default async function VenuePage({
                 <a href="#recordings">
                   <Button
                     type="button"
-                    className="w-[250px] h-[50px] m-8"
+                    className="w-64 h-12 m-8"
                     text="Watch Recordings"
                   />
                 </a>
               )
             ) : (
-              <div className="m-[30px]">
+              <div className="m-8">
                 {city.ticket && city.ticket.url && (
                   <a href={city.ticket.url} target="_blank" rel="noreferrer">
                     <Button
                       type="button"
-                      className="px-8 m-2 w-[250px]"
+                      className="px-8 m-2 w-64"
                       text={
                         city.ticket.price
                           ? 'Get Your Free Ticket'
@@ -154,7 +154,7 @@ export default async function VenuePage({
                     <Button
                       type="button"
                       disabled
-                      className="px-8 m-2 w-[250px] opacity-60 text-sm"
+                      className="px-8 m-2 w-64 opacity-60 text-sm"
                       text="CFP deadline has passed"
                     />
                   ) : (
@@ -165,7 +165,7 @@ export default async function VenuePage({
                     >
                       <Button
                         type="submit"
-                        className="px-8 m-2 w-[250px]"
+                        className="px-8 m-2 w-64"
                         text="Apply to be a speaker"
                       />
                     </a>
@@ -177,14 +177,14 @@ export default async function VenuePage({
       </div>
       <div
         id="agenda"
-        className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
+        className="border border-x-0 border-b-0 border-t-charcoal py-28 container flex flex-col justify-center items-center "
       >
         {city.agenda.length > 0 ? (
-          <div className="w-[1130px] lg:w-full">
+          <div className="w-content-lg lg:w-full">
             <AgendaComponent city={city} />
           </div>
         ) : shouldShowCfpGuidelines && cfpUrl ? (
-          <div className="w-[1090px] lg:w-full">
+          <div className="w-content-lg lg:w-full">
             <Guidelines
               talkDeadLine={city.cfpDate}
               virtual={city.name == 'Online'}
@@ -194,7 +194,7 @@ export default async function VenuePage({
             />
           </div>
         ) : (
-          <div className="w-[1130px] lg:w-full">
+          <div className="w-content-lg lg:w-full">
             <AgendaComponent city={city} />
           </div>
         )}

@@ -11,9 +11,9 @@ function About(): JSX.Element {
       className="p-24 lg:pt-8 container flex items-center justify-center w-full"
       data-test="about-section"
     >
-      <div className="w-[1120px] lg:w-full flex lg:flex-col-reverse items-center justify-between">
-        <div className="lg:mt-16 bg-[url('/img/about.jpeg')]  bg-center bg-cover w-[450px] h-[550px] sm:w-[100%] sm:h-[500px] rounded-[30px]"></div>
-        <div className="w-[600px] ml-10 lg:ml-0 lg:w-full lg:text-center">
+      <div className="w-content-lg lg:w-full flex lg:flex-col-reverse items-center justify-between">
+        <div className="lg:mt-16 bg-about  bg-center bg-cover w-112 h-138 sm:w-full sm:h-125 rounded-3xl"></div>
+        <div className="w-content-xs ml-10 lg:ml-0 lg:w-full lg:text-center">
           <div className="flex items-center lg:justify-center">
             <div className="text-lg sm:text-sm text-white font-semi-bold border-b-2 border-blue-400 mb-1">
               About The Event
@@ -53,7 +53,7 @@ function About(): JSX.Element {
             >
               <Button
                 type="button"
-                className="w-[200px]"
+                className="w-50"
                 text="Become a sponsor now"
               />
             </a>
@@ -65,7 +65,7 @@ function About(): JSX.Element {
               <Button
                 type="button"
                 outline={true}
-                className="w-[240px] border"
+                className="w-60 border"
                 text="Sponsorship prospectus"
                 icon={<Download />}
                 iconPosition="left"

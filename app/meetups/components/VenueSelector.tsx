@@ -47,7 +47,7 @@ function VenueSelector({
           {!selectedVenue && (
             <motion.div
               key="venue-list"
-              className="mt-20 min-h-[220px]"
+              className="mt-20 min-h-56"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -73,7 +73,7 @@ function VenueSelector({
           {selectedVenue && (
             <motion.div
               key="venue-details"
-              className="mt-20 text-left sm:mt-12 min-h-[220px]"
+              className="mt-20 text-left sm:mt-12 min-h-56"
               variants={containerVariants}
               initial="hidden"
               animate="visible"

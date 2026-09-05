@@ -15,19 +15,17 @@ function MeetupCard({ color, label, description, image, isDesktop = true }: Meet
 
   if (isDesktop) {
     return (
-      <div className="relative h-[600px] w-[400px] rounded-[20px] border lg:h-[560px] lg:w-[380px]">
+      <div className="relative h-150 w-100 rounded-2xl border lg:h-140 lg:w-96">
         <div
-          className="h-[350px] w-full bg-cover bg-center lg:h-[320px]"
+          className="h-88 w-full rounded-t-2xl bg-cover bg-center lg:h-80"
           style={{
             backgroundImage: gradientStyle,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            borderTopRightRadius: '19px',
-            borderTopLeftRadius: '19px',
           }}
         />
         <div className="z-10 p-6 lg:p-5">
-          <h3 className="text-[28px] font-semibold text-white lg:text-[24px]">
+          <h3 className="text-3xl font-semibold text-white lg:text-2xl">
             {label}
           </h3>
           <Paragraph typeStyle="body-md" className="mt-4">
@@ -41,7 +39,7 @@ function MeetupCard({ color, label, description, image, isDesktop = true }: Meet
   return (
     <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/5">
       <div
-        className="h-[220px] w-full bg-cover bg-center"
+        className="h-56 w-full bg-cover bg-center"
         style={{
           backgroundImage: gradientStyle,
         }}

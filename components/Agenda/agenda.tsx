@@ -25,7 +25,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
         data-test="agenda-com"
         className="flex flex-col justify-center items-center"
       >
-        <div className="w-[720px] lg:w-full mt-[10px] text-center">
+        <div className="w-content-sm lg:w-full mt-2.5 text-center">
           <Heading typeStyle="heading-md" className="text-white">
             Agenda Coming Soon - Stay Tuned!
           </Heading>
@@ -40,16 +40,16 @@ function Agenda({ city }: IAgenda): JSX.Element {
       className="flex flex-col justify-center items-center"
     >
       <div className="w-full">
-        <Heading className="text-[30px] text-white text-center mb-[40px]">
+        <Heading className="text-3xl text-white text-center mb-10">
           Agenda
         </Heading>
         {Object.entries(agendaByDay).map(([day, talks]) => (
-          <div key={day} className="mb-[80px]">
+          <div key={day} className="mb-20">
             {hasMultiDayAgenda && (
               <Heading
                 typeStyle="heading-md"
                 level="h3"
-                className="text-gradient mb-[30px]"
+                className="text-gradient mb-8"
               >
                 {day}
               </Heading>
@@ -64,16 +64,16 @@ function Agenda({ city }: IAgenda): JSX.Element {
               return (
                 <div
                   key={talk.time}
-                  className={`flex sm:flex-col justify-between mt-[50px] ${!talk.speaker ? 'countdown-text-gradient' : ''}`}
+                  className={`flex sm:flex-col justify-between mt-12 ${!talk.speaker ? 'countdown-text-gradient' : ''}`}
                 >
                   <Paragraph typeStyle="body-md">{talk.time}</Paragraph>
-                  <div className="flex justify-between lg:flex-col w-[75%] lg:w-full">
-                    <div className="w-[50%] lg:w-full">
+                  <div className="flex justify-between lg:flex-col w-3/4 lg:w-full">
+                    <div className="w-1/2 lg:w-full">
                       <Paragraph typeStyle="body-sm">{talk.type}</Paragraph>
                       <Heading
                         level="h3"
                         typeStyle="heading-md-semibold"
-                        className="mt-[23px] text-white text-[20px] sm:text-[18px]"
+                        className="mt-6 text-white text-xl sm:text-lg"
                       >
                         {talk.session}
                       </Heading>
@@ -81,7 +81,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
                     {/* Single speaker */}
                     {typeof talk.speaker === 'number' && getSpeaker[0] && (
                       <div className="flex items-center lg:mt-4">
-                        <div className="w-[94px] h-[94px]">
+                        <div className="w-24 h-24">
                           <Image
                             src={getSpeaker[0].img}
                             alt={getSpeaker[0].name}
@@ -93,7 +93,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
                             className="object-cover rounded-full w-full h-full"
                           />
                         </div>
-                        <div className="ml-4 w-[300px] sm:w-[250px]">
+                        <div className="ml-4 w-75 sm:w-64">
                           <Heading
                             typeStyle="heading-sm-semibold"
                             className="text-white"
@@ -112,7 +112,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
                         {getSpeaker.map((speaker, i) => (
                           <div key={i} className="mt-6">
                             <div className="flex items-center lg:mt-4">
-                              <div className="w-[94px] h-[94px]">
+                              <div className="w-24 h-24">
                                 <Image
                                   src={speaker.img}
                                   alt={speaker.name}
@@ -124,7 +124,7 @@ function Agenda({ city }: IAgenda): JSX.Element {
                                   className="object-cover rounded-full w-full h-full"
                                 />
                               </div>
-                              <div className="ml-4 w-[300px] sm:w-[250px]">
+                              <div className="ml-4 w-75 sm:w-64">
                                 <Heading
                                   typeStyle="heading-sm-semibold"
                                   className="text-white"

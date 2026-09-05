@@ -10,7 +10,7 @@ interface PastEditonCardProp {
 const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
   const year = url.split('.')[1];
   return (
-    <div className="bg-white bg-opacity-10 backdrop-blur-lg bg-clip-padding shadow-lg p-4 w-full mx-auto border-[1.66px] border-[#FFFFFF66] rounded-xl transition-all hover:scale-[1.03]">
+    <div className="bg-white bg-opacity-10 backdrop-blur-lg bg-clip-padding shadow-lg p-4 w-full mx-auto border-2 border-white/40 rounded-xl transition-all hover:scale-105">
       <div className="flex items-center flex-wrap justify-between">
         <h1 className="text-2xl text-white font-semibold">{year}</h1>
         <div className='transition'>
@@ -26,7 +26,7 @@ const PastEditonCard = ({ url }: PastEditonCardProp): JSX.Element => {
         </div>
       </div>
 
-      <div className="relative w-full h-[250px] my-4 rounded-lg overflow-hidden">
+      <div className="relative w-full h-64 my-4 rounded-lg overflow-hidden">
         <Image
           src={`/img/past-editions/${year}.webp`}
           alt={`AsyncAPI Conference ${year}`}

@@ -74,8 +74,8 @@ export default function HomePage() {
                 respective fields.
               </Paragraph>
             </div>
-            <div className="lg:py-20 w-[1130px] lg:w-full">
-              <div className="mt-[64px] lg:mt-0">
+            <div className="lg:py-20 w-content-lg lg:w-full">
+              <div className="mt-16 lg:mt-0">
                 {isTablet ? (
                   <div className="w-full">
                     <Dropdown
@@ -98,7 +98,7 @@ export default function HomePage() {
                           handleSpeakers('all');
                           setCurrentCity({ name: 'All' });
                         }}
-                        className={`w-[120px] ${
+                        className={`w-30 ${
                           currentCity.name === 'All'
                             ? 'gradient-bg'
                             : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
@@ -121,7 +121,7 @@ export default function HomePage() {
                           >
                             <Button
                               type="button"
-                              className={`w-[120px] ${
+                              className={`w-30 ${
                                 typeof currentCity !== 'string' &&
                                 currentCity.name === city.name
                                   ? 'gradient-bg'
@@ -152,7 +152,7 @@ export default function HomePage() {
                 )}
               </div>
 
-              <div className="mt-[64px] pb-[181px] lg:pb-[80px]">
+              <div className="mt-16 pb-44 lg:pb-20">
                 {speakersList.length > 0 ? (
                   <div className="w-full grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-4">
                     {speakersList.map((speaker) => {
@@ -175,8 +175,8 @@ export default function HomePage() {
                     })}
                   </div>
                 ) : (
-                  <div className="mt-[64px] pb-[181px] flex items-center justify-center text-center">
-                    <div className="w-[720px] lg:w-full">
+                  <div className="mt-16 pb-44 flex items-center justify-center text-center">
+                    <div className="w-content-sm lg:w-full">
                       {typeof currentCity !== 'string' && currentCfpUrl ? (
                         <div>
                           <Paragraph className="text-gray-200">
@@ -201,7 +201,7 @@ export default function HomePage() {
                           >
                             <Button
                               type="button"
-                              className="mt-[80px] w-[244px] border border-gray"
+                              className="mt-20 w-60 border border-gray"
                               text="Apply as a speaker"
                             />
                           </Link>
