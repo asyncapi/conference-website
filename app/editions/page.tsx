@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PastEditions() {
   return (
     <div>
-      <div className="my-16">
+      <div className="my-20">
         <h1 className="text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold">
           Past Editions of
         </h1>
