@@ -1,8 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
-
 // Popup component code commented out for 2026 migration. Uncomment to restore in the future.
 /*
 import Image from 'next/image';
@@ -12,6 +7,7 @@ import Paragraph from '../Typography/paragraph';
 import Button from '../Buttons/button';
 import Link from 'next/link';
 import Cancel from '../illustration/cancel';
+import { BLUR_DATA_URL } from '../../utils/image-blur';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -59,9 +55,14 @@ function Popup() {
               <div>
                 <div className="flex items-center justify-between">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <img
+                    <Image
                       src="/img/logos/2025-logo.png"
                       alt="conference logo"
+                      width={150}
+                      height={33}
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
                       className="w-[150px]"
                     />
                   </div>
@@ -82,6 +83,9 @@ function Popup() {
                     alt="rocket"
                     width={0}
                     height={0}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                     className="w-[180px] h-[180px] sm:w-[150px] sm:h-[150px] max-w-full"
                   />
                 </div>

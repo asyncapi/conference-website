@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { JSX } from 'react';
+import { BLUR_DATA_URL } from '../../../utils/image-blur';
 
 interface ISpeaker {
   name: string;
@@ -28,6 +29,9 @@ function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX
           width={0}
           height={0}
           sizes="100vw"
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL={BLUR_DATA_URL}
           className="rounded-full object-cover transition-all duration-300 hover:scale-110 w-[100%] h-[100%]"
         />
       </div>

@@ -6,11 +6,10 @@ import ReactSlider from '../Slider/slider';
 import VenueCard from '../Cards/VenueCard/VenueCard';
 import Announcement from '../announcement';
 import Link from 'next/link';
-import { resolveCfpUrl } from '../../utils/pretalx';
 import { cities } from '../../config/conference-data';
+import SubmitTalkDropdown from './SubmitTalkDropdown';
 
 function Header(): JSX.Element {
-  const hasOpenCfp = cities.some((city) => resolveCfpUrl(city.cfp));
 
   return (
     <div className="relative">
@@ -47,15 +46,7 @@ function Header(): JSX.Element {
                     text="Register Now"
                   />
                 </Link>
-                {hasOpenCfp && (
-                  <Link href="/cfp">
-                    <Button
-                      type="button"
-                      className="w-[250px]"
-                      text="Submit a Talk"
-                    />
-                  </Link>
-                )}
+                <SubmitTalkDropdown />
               </div>
             </div>
           </div>

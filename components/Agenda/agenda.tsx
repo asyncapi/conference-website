@@ -3,6 +3,7 @@ import Heading from '../Typography/heading';
 import Paragraph from '../Typography/paragraph';
 import { Agenda as AgendaType, ExtendedCity } from '../../types/types';
 import Image from 'next/image';
+import { BLUR_DATA_URL } from '../../utils/image-blur';
 
 interface IAgenda {
   city: ExtendedCity;
@@ -86,6 +87,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
                             alt={getSpeaker[0].name}
                             width={0}
                             height={0}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL={BLUR_DATA_URL}
                             className="object-cover rounded-full w-full h-full"
                           />
                         </div>
@@ -114,6 +118,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
                                   alt={speaker.name}
                                   width={0}
                                   height={0}
+                                  loading="lazy"
+                                  placeholder="blur"
+                                  blurDataURL={BLUR_DATA_URL}
                                   className="object-cover rounded-full w-full h-full"
                                 />
                               </div>

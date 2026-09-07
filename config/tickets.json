@@ -25,10 +25,10 @@
     "id": 3,
     "type": "London",
     "price": 0,
-    "url": null,
+    "url": "https://portal.joinfost.io/event/future-of-software-technologies-london-2026/f3ad7d08-6cc8-4e07-9342-9cca27c47ce4/asyncapi-conference?coupon=ASYNCAPIVIP",
     "description": "Access to all conference talks and workshops",
-    "status": "Not Yet Available",
-    "available": 100,
+    "status": "Attend the AsyncAPI Conference",
+    "available": 20,
     "eventDate": "2026-09-30T00:00:00.000Z",
     "benefits": ["AsyncAPI Track", "All talks", "Networking"]
   },
@@ -36,12 +36,12 @@
     "id": 4,
     "type": "Online",
     "price": 0,
-    "url": null,
+    "url": "https://conference.asyncapi.com/register/2026",
     "description": "Access to all conference talks and workshops",
-    "status": "Not Yet Available",
-    "available": 100,
+    "status": "Register To Attend",
+    "available": 300,
     "eventDate": "2026-10-28T00:00:00.000Z",
-    "benefits": ["AsyncAPI Track", "All talks", "Networking"]
+    "benefits": ["AsyncAPI Online Conference"]
   },
   {
     "id": 5,
