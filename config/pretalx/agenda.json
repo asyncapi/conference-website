@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "time": "13:00 - 13:25 UTC",
+    "session": "The Storyteller Agent: Beyond Code, Into Context",
+    "speaker": 1,
+    "type": "Short Talk",
+    "city": "London",
+    "day": "Thursday, October 1, 2026"
+  },
+  {
+    "time": "13:30 - 13:55 UTC",
+    "session": "Designing Governance for Sustainable Open Standards",
+    "speaker": 2,
+    "type": "Short Talk",
+    "city": "London",
+    "day": "Thursday, October 1, 2026"
+  },
+  {
+    "time": "14:00 - 14:25 UTC",
+    "session": "Passports for Payloads: Standardising B2B Event Pattern with AsyncAPI",
+    "speaker": 3,
+    "type": "Short Talk",
+    "city": "London",
+    "day": "Thursday, October 1, 2026"
+  },
+  {
+    "time": "15:00 - 15:25 UTC",
+    "session": "Discover. Authorize. Observe. Building Agent-Ready Event Streams",
+    "speaker": 4,
+    "type": "Short Talk",
+    "city": "London",
+    "day": "Thursday, October 1, 2026"
+  },
+  {
+    "time": "15:30 - 15:55 UTC",
+    "session": "From Generated Specs to Published Contracts: Our AsyncAPI Journey",
+    "speaker": 5,
+    "type": "Short Talk",
+    "city": "London",
+    "day": "Thursday, October 1, 2026"
+  }
+]
