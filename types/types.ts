@@ -55,6 +55,7 @@ export enum ConferenceStatus {
 export interface Speaker {
   name: string;
   title: string;
+  company?: string;
   img: string;
   id: number;
   city: string[];

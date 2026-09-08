@@ -5,12 +5,20 @@ import { BLUR_DATA_URL } from '../../../utils/image-blur';
 interface ISpeaker {
   name: string;
   title: string;
+  company?: string;
   image: string;
   location?: string;
   className?: string;
 }
 
-function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX.Element {
+function SpeakerCard({
+  name,
+  title,
+  company,
+  image,
+  location,
+  className,
+}: ISpeaker): JSX.Element {
   function getName(names: string[]) {
     return `${names[0]} ${names[1]}`;
   }
@@ -41,7 +49,7 @@ function SpeakerCard({ name, title, image, location, className }: ISpeaker): JSX
           <div>
             {' '}
             <p className="mt-[6.6px] text-[18px] text-gray-500">
-              {title}
+              {company ? `${title}, ${company}` : title}
             </p>
           </div>
           <div>

@@ -166,6 +166,54 @@ test('maps expanded Pretalx schedule slots into website speakers and agenda', as
   ]);
 });
 
+test('maps schedule slots using speaker answers fetched separately by code', async () => {
+  const fixture = JSON.parse(
+    await readFile(
+      new URL('./fixtures/pretalx-schedule-latest.json', import.meta.url)
+    )
+  );
+
+  // The public /schedules/latest/ endpoint returns an empty answers array for
+  // each speaker even when the speaker has answered custom questions - those
+  // answers only come back from the dedicated /speakers/ endpoint.
+  fixture.slots[0].submission.speakers[0].answers = [];
+
+  const speakersByCode = new Map([
+    [
+      'EMTVZL',
+      {
+        code: 'EMTVZL',
+        answers: [
+          {
+            question: { question: { en: 'Speaker Title' } },
+            answer: 'Senior Software Engineer',
+          },
+          {
+            question: { question: { en: 'Company' } },
+            answer: 'AsyncAPI Initiative',
+          },
+        ],
+      },
+    ],
+  ]);
+
+  const result = mapPretalxSchedule(fixture, {
+    city: 'Online',
+    speakersByCode,
+  });
+
+  assert.deepEqual(result.speakers, [
+    {
+      id: 1,
+      name: 'Thulie Sibanda',
+      title: 'Senior Software Engineer',
+      company: 'AsyncAPI Initiative',
+      img: 'http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp',
+      city: ['Online'],
+    },
+  ]);
+});
+
 test('writeJson creates missing parent directories', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'pretalx-sync-'));
   const outputPath = join(directory, 'nested', 'speakers.json');
@@ -262,6 +310,40 @@ test('syncPretalxData writes generated Pretalx data under config/pretalx', async
       }
 
       return notFoundResponse();
+    }
+
+    if (parsedUrl.pathname.endsWith('/speakers/')) {
+      assert.deepEqual(parsedUrl.searchParams.getAll('expand'), [
+        'answers.question',
+      ]);
+
+      if (
+        parsedUrl.pathname === '/api/events/asyncapi-us-conf-2026/speakers/'
+      ) {
+        return jsonResponse({
+          count: 1,
+          next: null,
+          previous: null,
+          results: [
+            {
+              code: 'EMTVZL',
+              name: 'Thulie Sibanda',
+              answers: [
+                {
+                  question: { question: { en: 'Speaker Title' } },
+                  answer: 'Senior Software Engineer',
+                },
+                {
+                  question: { question: { en: 'Company' } },
+                  answer: 'AsyncAPI Initiative',
+                },
+              ],
+            },
+          ],
+        });
+      }
+
+      return jsonResponse({ count: 0, next: null, previous: null, results: [] });
     }
 
     throw new Error(`Unexpected URL ${url}`);
