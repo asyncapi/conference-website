@@ -146,8 +146,9 @@ test('maps expanded Pretalx schedule slots into website speakers and agenda', as
   assert.deepEqual(result.speakers, [
     {
       id: 1,
-      name: 'Thulie Sibasanda',
-      title: 'Hello this is a test bio.',
+      name: 'Thulie Sibanda',
+      title: 'Senior Software Engineer',
+      company: 'AsyncAPI Initiative',
       img: 'http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp',
       city: ['Online'],
     },
