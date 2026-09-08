@@ -97,7 +97,8 @@ export function mapPretalxSchedule(schedule, options = {}) {
         speakers.push({
           id: speakerId,
           name: person.public_name || person.name || 'Speaker',
-          title: person.biography || 'Speaker',
+          title: person.speaker_title || 'Speaker',
+          company: person.company,
           img:
             person.avatar_url ||
             person.avatar ||
