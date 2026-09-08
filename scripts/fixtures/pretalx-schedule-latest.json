@@ -17,11 +17,32 @@
         "speakers": [
           {
             "code": "EMTVZL",
-            "name": "Thulie Sibasanda",
+            "name": "Thulie Sibanda",
             "biography": "Hello this is a test bio.",
             "submissions": [],
             "avatar_url": "http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp",
-            "answers": []
+            "answers": [
+              {
+                "id": 1,
+                "question": {
+                  "id": 1,
+                  "question": {
+                    "en": "Speaker Title"
+                  }
+                },
+                "answer": "Senior Software Engineer"
+              },
+              {
+                "id": 2,
+                "question": {
+                  "id": 2,
+                  "question": {
+                    "en": "Company"
+                  }
+                },
+                "answer": "AsyncAPI Initiative"
+              }
+            ]
           }
         ],
         "submission_type": {

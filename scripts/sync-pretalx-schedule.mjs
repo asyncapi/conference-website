@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 const DEFAULT_SPEAKER_IMAGE = '/img/speaker-images/paris/TBA.webp';
 const DEFAULT_LOCATION_IMAGE = '/img/locations/teasers.webp';
+const SPEAKER_TITLE_QUESTION_LABEL = 'Speaker Title';
+const SPEAKER_COMPANY_QUESTION_LABEL = 'Company';
 const SCHEDULE_EXPANDS = [
   'slots.submission.speakers',
   'slots.submission.submission_type',
@@ -94,11 +96,18 @@ export function mapPretalxSchedule(schedule, options = {}) {
       if (!speakerIds.has(stableKey)) {
         const speakerId = speakers.length + 1;
         speakerIds.set(stableKey, speakerId);
+        const company = getSpeakerAnswer(
+          person,
+          SPEAKER_COMPANY_QUESTION_LABEL
+        );
+
         speakers.push({
           id: speakerId,
           name: person.public_name || person.name || 'Speaker',
-          title: person.speaker_title || 'Speaker',
-          company: person.company,
+          title:
+            getSpeakerAnswer(person, SPEAKER_TITLE_QUESTION_LABEL) ||
+            'Speaker',
+          ...(company ? { company } : {}),
           img:
             person.avatar_url ||
             person.avatar ||
@@ -440,6 +449,25 @@ function deriveCityName(event) {
   }
 
   return titleCase(event.slug || 'Pretalx Event');
+}
+
+function getSpeakerAnswer(person, questionLabel) {
+  const answers = person?.answers || [];
+  const target = normalizeQuestionLabel(questionLabel);
+
+  const match = answers.find(
+    (answer) =>
+      normalizeQuestionLabel(localizedText(answer?.question?.question)) ===
+      target
+  );
+
+  return match?.answer || undefined;
+}
+
+function normalizeQuestionLabel(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase();
 }
 
 function localizedText(value) {
