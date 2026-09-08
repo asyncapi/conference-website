@@ -101,7 +101,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
                             {getSpeaker[0].name}
                           </Heading>
                           <Paragraph typeStyle="body-sm" className="mt-2">
-                            {getSpeaker[0].title}
+                            {getSpeaker[0].company
+                              ? `${getSpeaker[0].title}, ${getSpeaker[0].company}`
+                              : getSpeaker[0].title}
                           </Paragraph>
                         </div>
                       </div>
@@ -132,7 +134,9 @@ function Agenda({ city }: IAgenda): JSX.Element {
                                   {speaker.name}
                                 </Heading>
                                 <Paragraph typeStyle="body-sm" className="mt-2">
-                                  {speaker.title}
+                                  {speaker.company
+                                    ? `${speaker.title}, ${speaker.company}`
+                                    : speaker.title}
                                 </Paragraph>
                               </div>
                             </div>

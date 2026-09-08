@@ -161,6 +161,7 @@ export default function HomePage() {
                           key={speaker.id}
                           name={speaker.name}
                           title={speaker.title}
+                          company={speaker.company}
                           image={speaker.img}
                           location={
                             currentCity.name !== 'All'

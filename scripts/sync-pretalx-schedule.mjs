@@ -4,11 +4,14 @@ import { fileURLToPath } from 'node:url';
 
 const DEFAULT_SPEAKER_IMAGE = '/img/speaker-images/paris/TBA.webp';
 const DEFAULT_LOCATION_IMAGE = '/img/locations/teasers.webp';
+const SPEAKER_TITLE_QUESTION_LABEL = 'Speaker Title';
+const SPEAKER_COMPANY_QUESTION_LABEL = 'Company';
 const SCHEDULE_EXPANDS = [
   'slots.submission.speakers',
   'slots.submission.submission_type',
   'slots.submission.track',
 ];
+const SPEAKER_EXPANDS = ['answers.question'];
 
 export async function readJson(filePath) {
   return JSON.parse(await readFile(filePath, 'utf8'));
@@ -63,6 +66,7 @@ export function mapPretalxEventsToCities(events, options = {}) {
 export function mapPretalxSchedule(schedule, options = {}) {
   const city = options.city || 'Online';
   const timezoneLabel = options.timezoneLabel || 'UTC';
+  const speakersByCode = options.speakersByCode || new Map();
   const speakerIds = new Map();
   const speakers = [];
   const agenda = [];
@@ -94,11 +98,23 @@ export function mapPretalxSchedule(schedule, options = {}) {
       if (!speakerIds.has(stableKey)) {
         const speakerId = speakers.length + 1;
         speakerIds.set(stableKey, speakerId);
+        const speakerAnswers = speakersByCode.get(person.code)?.answers;
+        const personWithAnswers =
+          speakerAnswers && speakerAnswers.length > 0
+            ? { ...person, answers: speakerAnswers }
+            : person;
+        const company = getSpeakerAnswer(
+          personWithAnswers,
+          SPEAKER_COMPANY_QUESTION_LABEL
+        );
+
         speakers.push({
           id: speakerId,
           name: person.public_name || person.name || 'Speaker',
-          title: person.speaker_title || 'Speaker',
-          company: person.company,
+          title:
+            getSpeakerAnswer(personWithAnswers, SPEAKER_TITLE_QUESTION_LABEL) ||
+            'Speaker',
+          ...(company ? { company } : {}),
           img:
             person.avatar_url ||
             person.avatar ||
@@ -204,10 +220,18 @@ export async function syncPretalxData({
       continue;
     }
 
+    const speakersByCode = await fetchPretalxSpeakersByCode({
+      baseUrl: cleanBaseUrl,
+      eventSlug: city.cfp.eventSlug,
+      apiToken,
+      fetchImpl,
+    });
+
     mappedSchedules.push(
       mapPretalxSchedule(schedule, {
         city: city.name,
         timezoneLabel: event?.timezone || 'UTC',
+        speakersByCode,
       })
     );
   }
@@ -271,6 +295,27 @@ function buildScheduleApiUrlForEvent(eventConfig) {
   const url = new URL(`${baseUrl}/api/events/${eventSlug}/schedules/latest/`);
 
   for (const expand of SCHEDULE_EXPANDS) {
+    url.searchParams.append('expand', expand);
+  }
+
+  return url.toString();
+}
+
+function buildSpeakersApiUrlForEvent(eventConfig) {
+  const baseUrl = trimTrailingSlash(
+    eventConfig.baseUrl || process.env.PRETALX_SITE_URL || ''
+  );
+  const eventSlug = trimSlashes(eventConfig.eventSlug || '');
+
+  if (!baseUrl || !eventSlug) {
+    throw new Error(
+      'Each discovered Pretalx event needs a slug and PRETALX_SITE_URL.'
+    );
+  }
+
+  const url = new URL(`${baseUrl}/api/events/${eventSlug}/speakers/`);
+
+  for (const expand of SPEAKER_EXPANDS) {
     url.searchParams.append('expand', expand);
   }
 
@@ -377,6 +422,22 @@ async function fetchPretalxSchedule(
   return response.json();
 }
 
+async function fetchPretalxSpeakersByCode({
+  baseUrl,
+  eventSlug,
+  apiToken,
+  fetchImpl,
+}) {
+  const speakers = await fetchPaginatedPretalxResource(
+    buildSpeakersApiUrlForEvent({ baseUrl, eventSlug }),
+    apiToken,
+    fetchImpl,
+    'speakers'
+  );
+
+  return new Map(speakers.map((speaker) => [speaker.code, speaker]));
+}
+
 async function fetchPaginatedPretalxResource(
   apiUrl,
   apiToken,
@@ -440,6 +501,25 @@ function deriveCityName(event) {
   }
 
   return titleCase(event.slug || 'Pretalx Event');
+}
+
+function getSpeakerAnswer(person, questionLabel) {
+  const answers = person?.answers || [];
+  const target = normalizeQuestionLabel(questionLabel);
+
+  const match = answers.find(
+    (answer) =>
+      normalizeQuestionLabel(localizedText(answer?.question?.question)) ===
+      target
+  );
+
+  return match?.answer || undefined;
+}
+
+function normalizeQuestionLabel(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase();
 }
 
 function localizedText(value) {
