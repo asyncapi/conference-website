@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Eduardo Maldonado Fonseca Silva",
-    "title": "Senior Platform Engineer at The LEGO Group with 16+ years in IT and 8+ years specialising in CloudOps, DevOps/SRE, and platform engineering. I work as a senior individual contributor on enterprise-scale platforms, focusing on reliability, observability, developer experience, and cloud efficiency. My experience includes Apache Pulsar, OpenTelemetry, Kubernetes, AWS, and Go, with a strong emphasis on building resilient, scalable, and self-service cloud-native systems.\r\n\r\nI partner closely with technical leadership and engineering teams to evolve platform capabilities, API design, and operational practices aligned with business needs. I’m an active conference speaker and community contributor (apidays London, Munich) and hold AWS Solutions Architect – Professional, CKAD, and Prometheus Certified Associate certifications. I’m driven by improving platform adoption, operational excellence, and developer productivity across distributed systems.",
+    "title": "Speaker",
     "img": "https://cfp.asyncapi.com/media/avatars/WDDK9E_4HjvQmY.webp",
     "city": [
       "London"
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Thulisile Sibanda",
-    "title": "I build and support Open Source programs and communities, the kind where contributors feel welcome, documentation makes sense, and people want to stick around.\r\n\r\nI wear many hats: Maintainer, Contributor, Program Manager, Documentation Writer, Community Advocate, and occasional data person. What ties it all together? Helping individuals do their best work in Open Source.",
+    "title": "Speaker",
     "img": "https://cfp.asyncapi.com/media/avatars/7ZR7AK_zjFYaoD.webp",
     "city": [
       "London"
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Aravind Viswanathan",
-    "title": "Senior Technical Architect with 20 years of IT experience driving architecture design, digital transformation, and scalable enterprise solutions across global organisations.\r\nSpecialises in designing high-performance, cloud-native architectures, with extensive domain expertise across Event-Driven Architecture (EDA), Microservices, API Management & Governance, and AI-enabled system integration. A technology strategist who bridges complex business requirements with modern, future-proof engineering solutions",
+    "title": "Speaker",
     "img": "https://cfp.asyncapi.com/media/avatars/NHXN7H_qAScVU4.webp",
     "city": [
       "London"
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Dakshitha Ratnayake",
-    "title": "Dakshitha is a Director of Developer Relations at WSO2, with over 15 years of experience in software development, solution architecture, and technical evangelism. Her work focuses on open-source technologies, particularly in integration, APIs, and identity and access management. She’s passionate about growing developer communities and making complex concepts accessible.",
+    "title": "Speaker",
     "img": "https://cfp.asyncapi.com/media/avatars/XVDSTR_ToN0zAF.webp",
     "city": [
       "London"
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "Velmurugan Manickavelu",
-    "title": "**Velmurugan Manickavelu** is a Senior Solutions Architect passionate about turning complex business challenges into scalable technology platforms. He has led architecture initiatives across cloud-native ecosystems, distributed platforms, and enterprise modernization programs, with deep expertise in domain-driven design, microservices, platform engineering, and cloud technologies. His current focus is the intersection of software architecture and artificial intelligence, where he is building AI-assisted approaches for requirements analysis, architecture design, documentation generation, and engineering productivity. He believes the next evolution of software architecture will be driven by the combination of human expertise, architectural governance, and AI-powered decision support.",
+    "title": "Speaker",
     "img": "https://cfp.asyncapi.com/media/avatars/9APENK_P6dOXKc.webp",
     "city": [
       "London"
