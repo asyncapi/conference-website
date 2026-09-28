@@ -1,6 +1,6 @@
 [
   {
-    "time": "13:00 - 13:25 UTC",
+    "time": "13:10 - 13:35 UTC",
     "session": "The Storyteller Agent: Beyond Code, Into Context",
     "speaker": 1,
     "type": "Short Talk",
@@ -8,7 +8,7 @@
     "day": "Thursday, October 1, 2026"
   },
   {
-    "time": "13:30 - 13:55 UTC",
+    "time": "13:35 - 14:00 UTC",
     "session": "Designing Governance for Sustainable Open Standards",
     "speaker": 2,
     "type": "Short Talk",
@@ -32,7 +32,7 @@
     "day": "Thursday, October 1, 2026"
   },
   {
-    "time": "15:30 - 15:55 UTC",
+    "time": "15:25 - 15:50 UTC",
     "session": "From Generated Specs to Published Contracts: Our AsyncAPI Journey",
     "speaker": 5,
     "type": "Short Talk",
