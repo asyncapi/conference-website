@@ -40,3 +40,6 @@ credentials.json
 storybook-static
 tmp/
 deploy/pretalx/conf/
+
+# photos waiting to be uploaded with `npm run gallery:upload`
+/gallery-src/

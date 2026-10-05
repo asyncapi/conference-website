@@ -72,6 +72,40 @@ npx cypress run --spec "cypress/e2e/Navbar.cy.ts"
 - `cypress/e2e/Footer.cy.ts` - Footer component tests
 - `cypress/e2e/Landing.cy.ts` - Landing page tests
 - `cypress/e2e/Venue.cy.ts` - Venue page tests
+- `cypress/e2e/Gallery.cy.ts` - Gallery page tests
+
+## Gallery
+
+Photos on the `/gallery` page are hosted on [Cloudinary](https://cloudinary.com/) and listed in `config/gallery.json`. The website only reads that file and public image URLs, so no Cloudinary credentials are needed to build or run the site.
+
+**Adding photos**
+
+1. Download the album folders from Google Drive (right-click a folder → Download) and unzip them into one directory (`gallery-src/` in the repo root is git-ignored for this). Each subfolder is one album, named after the event:
+
+   ```
+   gallery-src/
+   ├── Bangalore 2025/
+   └── Paris 2025/
+   ```
+
+2. Add the Cloudinary credentials of the AsyncAPI account to `.env.local` (see `example.env.local`):
+
+   ```bash
+   CLOUDINARY_URL=cloudinary://<api_key>:<api_secret>@<cloud_name>
+   ```
+
+3. Check what will be uploaded, then upload (requires Node.js 20.9 or newer):
+
+   ```bash
+   npm run gallery:upload -- ./gallery-src --dry-run
+   npm run gallery:upload -- ./gallery-src
+   ```
+
+   Photos are resized to at most 2560px, stripped of location metadata and uploaded to `conference-gallery/<album>/`. Photos that are already uploaded are skipped, so the command is safe to re-run. HEIC photos from phones are converted automatically; videos are skipped.
+
+4. Commit the updated `config/gallery.json`.
+
+If photos are added or removed directly in the Cloudinary console, run `npm run gallery:sync` to refresh `config/gallery.json`.
 
 ## Storybook
 
