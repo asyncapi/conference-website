@@ -225,7 +225,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
         </div>
       )}
 
-      <div className="grid grid-cols-4 gap-4 lg:grid-cols-3 sm:grid-cols-2">
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-2">
         {items.slice(0, visibleCount).map((item, index) => (
           <button
             key={item.publicId}
@@ -242,7 +242,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
               loading="lazy"
               placeholder="blur"
               blurDataURL={BLUR_DATA_URL}
-              sizes="(max-width: 715px) 50vw, (max-width: 1118px) 33vw, 25vw"
+              sizes="(max-width: 715px) 50vw, 33vw"
               className="object-cover transition-transform duration-300 hover:scale-105"
             />
           </button>
