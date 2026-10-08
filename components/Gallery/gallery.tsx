@@ -1,17 +1,19 @@
 'use client';
 
 import React, { JSX, useEffect, useMemo, useRef, useState } from 'react';
+import Image from 'next/image';
 import { createPortal } from 'react-dom';
 import Button from '../Buttons/button';
 import Paragraph from '../Typography/paragraph';
 import Arrow from '../illustration/arrow';
 import Cancel from '../illustration/cancel';
 import { GalleryAlbum, GalleryPhoto } from '../../types/types';
-import { cloudinarySrcSet, cloudinaryUrl } from '../../utils/cloudinary';
+import { cloudinaryUrl } from '../../utils/cloudinary';
+import { BLUR_DATA_URL } from '../../utils/image-blur';
 
 const PAGE_SIZE = 24;
 const ALL_ALBUMS = 'all';
-const GRID_WIDTH = 480;
+const GRID_WIDTH = 720;
 const LIGHTBOX_WIDTH = 1920;
 
 interface GalleryItem extends GalleryPhoto {
@@ -144,16 +146,14 @@ function Lightbox({
         </>
       )}
 
-      {/* next/image cannot build a Cloudinary srcSet while images.unoptimized is on. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         key={item.publicId}
         src={cloudinaryUrl(cloudName, item.publicId, LIGHTBOX_WIDTH)}
-        srcSet={cloudinarySrcSet(cloudName, item.publicId)}
-        sizes="100vw"
         width={item.width}
         height={item.height}
         alt={item.alt}
+        placeholder="blur"
+        blurDataURL={BLUR_DATA_URL}
         data-test="gallery-lightbox-image"
         className="h-auto max-h-full min-h-0 w-auto max-w-full rounded-lg object-contain"
         onClick={(e) => e.stopPropagation()}
@@ -232,18 +232,18 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
             type="button"
             aria-label={`View ${item.alt}`}
             data-test="gallery-photo"
-            className="aspect-square overflow-hidden rounded-xl bg-white/10 focus:outline-none focus:ring-2 focus:ring-white"
+            className="relative aspect-square overflow-hidden rounded-xl bg-white/10 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => setOpenIndex(index)}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={cloudinaryUrl(cloudName, item.publicId, GRID_WIDTH)}
-              srcSet={cloudinarySrcSet(cloudName, item.publicId)}
-              sizes="(max-width: 715px) 50vw, (max-width: 1118px) 33vw, 25vw"
               alt={item.alt}
+              fill
               loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
+              sizes="(max-width: 715px) 50vw, (max-width: 1118px) 33vw, 25vw"
+              className="object-cover transition-transform duration-300 hover:scale-105"
             />
           </button>
         ))}
