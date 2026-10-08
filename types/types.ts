@@ -142,3 +142,8 @@ export interface GalleryAlbum {
   year: number | null;
   photos: GalleryPhoto[];
 }
+
+export interface GalleryData {
+  cloudName: string;
+  albums: GalleryAlbum[];
+}

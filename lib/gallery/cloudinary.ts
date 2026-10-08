@@ -1,4 +1,4 @@
-import { GalleryAlbum, GalleryPhoto } from '../../types/types';
+import { GalleryAlbum, GalleryData, GalleryPhoto } from '../../types/types';
 
 const CLOUDINARY_API = 'https://api.cloudinary.com/v1_1';
 const DEFAULT_ROOT_FOLDER = 'conference-gallery';
@@ -26,11 +26,6 @@ interface SearchResource {
 interface SearchResponse {
   resources: SearchResource[];
   next_cursor?: string;
-}
-
-export interface GalleryData {
-  cloudName: string;
-  albums: GalleryAlbum[];
 }
 
 const EMPTY_GALLERY: GalleryData = { cloudName: '', albums: [] };
