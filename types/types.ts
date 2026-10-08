@@ -129,3 +129,16 @@ export type FaqTypes = {
   q: string;
   a: string;
 };
+
+export interface GalleryPhoto {
+  publicId: string;
+  width: number;
+  height: number;
+}
+
+export interface GalleryAlbum {
+  slug: string;
+  title: string;
+  year: number | null;
+  photos: GalleryPhoto[];
+}
