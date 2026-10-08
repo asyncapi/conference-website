@@ -1,6 +1,3 @@
-// Photos come from Cloudinary at build time. Without Cloudinary credentials
-// (for example in CI) the page renders its empty state, so the photo checks
-// run only when photos are present.
 const withPhotos = (callback: () => void): void => {
   cy.get('body').then(($body) => {
     if ($body.find('[data-test="gallery-photo"]').length === 0) {

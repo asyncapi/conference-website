@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   description: 'Photos from past AsyncAPI Conference events around the world.',
 };
 
-// Photos change a few times a year, so re-read Cloudinary at most hourly.
-// Next.js requires a literal here; keep it in sync with
-// GALLERY_REVALIDATE_SECONDS in lib/gallery/cloudinary.ts.
 export const revalidate = 3600;
 
 export default async function GalleryPage() {

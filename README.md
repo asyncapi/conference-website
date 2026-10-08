@@ -85,19 +85,6 @@ The `/gallery` page shows photos hosted on [Cloudinary](https://cloudinary.com/)
 2. Create a folder for the event, named `<city>-<year>`, for example `london-2026`. The folder name becomes the album title on the page ("London 2026"), and albums are ordered by year, newest first.
 3. Drag and drop the photos into that folder. Photos inside sub-folders are shown in the same album.
 
-The page refreshes from Cloudinary at most once an hour, so new photos appear within an hour. To see them sooner, trigger a new deploy on Netlify.
-
-**Configuration**
-
-The site needs these environment variables (set them in the Netlify site settings; locally they are optional and the page shows an empty state without them):
-
-| Variable                    | Description                                                                                  |
-| --------------------------- | -------------------------------------------------------------------------------------------- |
-| `CLOUDINARY_URL`            | The `cloudinary://<api_key>:<api_secret>@<cloud_name>` URL shown on the Cloudinary dashboard |
-| `CLOUDINARY_GALLERY_FOLDER` | Root folder that holds the event folders (optional, defaults to `conference-gallery`)        |
-
-Instead of `CLOUDINARY_URL` you can set `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY` and `CLOUDINARY_API_SECRET` separately. The credentials are only used server-side to list the folder and never reach the browser; the page only ships public image URLs.
-
 ## Storybook
 
 This project uses [Storybook](https://storybook.js.org/) for component development and documentation.

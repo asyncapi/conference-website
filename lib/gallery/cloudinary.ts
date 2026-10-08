@@ -1,9 +1,5 @@
 import { GalleryAlbum, GalleryPhoto } from '../../types/types';
 
-// Photos live in Cloudinary under one root folder, with one sub-folder per
-// event (for example `conference-gallery/london-2026`). Maintainers upload
-// photos with the Cloudinary console; this module only reads what is there.
-
 const CLOUDINARY_API = 'https://api.cloudinary.com/v1_1';
 const DEFAULT_ROOT_FOLDER = 'conference-gallery';
 const MAX_RESULTS = 500; // Cloudinary's maximum per search request.
@@ -39,34 +35,29 @@ export interface GalleryData {
 
 const EMPTY_GALLERY: GalleryData = { cloudName: '', albums: [] };
 
-// Accepts either the single `CLOUDINARY_URL` shown on the Cloudinary
-// dashboard (cloudinary://<api_key>:<api_secret>@<cloud_name>) or the three
-// separate variables.
 export const getGalleryConfig = (): GalleryConfig | null => {
-  let cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-  let apiKey = process.env.CLOUDINARY_API_KEY;
-  let apiSecret = process.env.CLOUDINARY_API_SECRET;
+  if (!process.env.CLOUDINARY_URL) {
+    return null;
+  }
+
   const rootFolder = (
     process.env.CLOUDINARY_GALLERY_FOLDER || DEFAULT_ROOT_FOLDER
   ).replace(/^\/+|\/+$/g, '');
 
-  if (process.env.CLOUDINARY_URL) {
-    try {
-      const url = new URL(process.env.CLOUDINARY_URL);
+  try {
+    const url = new URL(process.env.CLOUDINARY_URL);
+    const cloudName = url.hostname;
+    const apiKey = decodeURIComponent(url.username);
+    const apiSecret = decodeURIComponent(url.password);
 
-      cloudName ||= url.hostname;
-      apiKey ||= decodeURIComponent(url.username);
-      apiSecret ||= decodeURIComponent(url.password);
-    } catch {
-      // Fall through to the separate variables.
+    if (!cloudName || !apiKey || !apiSecret) {
+      return null;
     }
-  }
 
-  if (!cloudName || !apiKey || !apiSecret) {
+    return { cloudName, apiKey, apiSecret, rootFolder };
+  } catch {
     return null;
   }
-
-  return { cloudName, apiKey, apiSecret, rootFolder };
 };
 
 // `london-2026` -> `London 2026`
@@ -89,7 +80,6 @@ const albumSlugOf = (
   rootFolder: string
 ): string | null => {
   // Dynamic folder mode reports `asset_folder`; the legacy fixed folder mode
-  // reports `folder`. Fall back to the public ID path for safety.
   const folder =
     resource.asset_folder ??
     resource.folder ??
@@ -100,8 +90,6 @@ const albumSlugOf = (
     return null;
   }
 
-  // Only the first level below the root is an album; deeper folders are
-  // flattened into it.
   return folder.slice(prefix.length).split('/')[0] || null;
 };
 
@@ -203,9 +191,6 @@ export const fetchGallery = async (): Promise<GalleryData> => {
     return EMPTY_GALLERY;
   }
 
-  // Product environments use either dynamic folders (`asset_folder`) or the
-  // legacy fixed folders (`folder`). Depending on the mode, the other field
-  // is either rejected or silently matches nothing, so try both.
   const expressions = [
     `resource_type:image AND asset_folder:${config.rootFolder}/*`,
     `resource_type:image AND folder:${config.rootFolder}/*`,
