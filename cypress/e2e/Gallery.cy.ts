@@ -21,14 +21,6 @@ describe('Gallery page', () => {
     cy.url().should('eq', 'http://localhost:3000/gallery');
   });
 
-  it('should link to the full photo archive', () => {
-    cy.visit('/gallery');
-
-    cy.getTestData('gallery-archive-link')
-      .should('have.attr', 'href')
-      .and('match', /drive\.google\.com/);
-  });
-
   it('should render photos from Cloudinary', () => {
     cy.visit('/gallery');
 

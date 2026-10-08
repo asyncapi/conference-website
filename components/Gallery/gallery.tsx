@@ -212,8 +212,10 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
               type="button"
               aria-pressed={activeAlbum === album.slug}
               data-test={`gallery-filter-${album.slug}`}
-              className={`rounded-full border border-white/20 px-6 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white ${
-                activeAlbum === album.slug ? 'gradient-bg' : 'hover:bg-white/10'
+              className={`rounded-full border px-6 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white ${
+                activeAlbum === album.slug
+                  ? 'border-transparent bg-violet-700'
+                  : 'border-white/20 hover:bg-white/10'
               }`}
               onClick={() => selectAlbum(album.slug)}
             >
