@@ -52,14 +52,14 @@ export default function CfpPage() {
         {openCfps.map((city) => (
           <div
             key={city.name}
-            className="card rounded-md p-6 flex flex-col justify-between min-h-[260px]"
+            className="card rounded-md p-6 flex flex-col justify-between min-h-64"
             data-test={`cfp-card-${city.name}`}
           >
             <div>
               <Heading
                 level="h2"
                 typeStyle="heading-md-semibold"
-                className="text-white text-[24px]"
+                className="text-white text-2xl"
               >
                 {city.name === 'Online'
                   ? `${city.name}${city.country}`

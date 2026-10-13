@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
-  background: #1b1130;
+  background: theme('colors.dark.900');
 }
 
 

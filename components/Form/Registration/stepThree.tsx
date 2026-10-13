@@ -30,7 +30,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
                 setForm((prev) => ({ ...prev, updatesOptIn: e.target.checked }));
               }}
               data-test="reg-step-three-updates"
-              className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+              className="mr-2 focus:ring-2 focus:ring-pink-500"
             />
             <label className="items-start">
               Subscribe to our newsletter and be notified when community tickets are available
@@ -46,7 +46,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
                 setForm((prev) => ({ ...prev, sponsorDataSharing: e.target.checked }));
               }}
               data-test="reg-step-three-sponsor"
-              className="mr-2 focus:ring-2 focus:ring-[#E50E99]"
+              className="mr-2 focus:ring-2 focus:ring-pink-500"
             />
             <label className="items-start">
               I understand my information will be shared with conference sponsors, but I can opt out anytime
@@ -72,7 +72,7 @@ function StepThreeRegistration({ setStep, setForm, data }: CfpStepProps): JSX.El
           <label htmlFor="notes" className="text-dark-600  block">Notes (optional)</label>
           <textarea
             id="notes"
-            className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E50E99] focus:ring-offset-2 focus:ring-offset-gray-900 border border-[#E50E99]"
+            className="mt-3 w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-gray-900 border border-pink-500"
             value={notes}
             onChange={(e) => setForm((prev) => ({ ...prev, notes: e.target.value }))}
             data-test="reg-step-three-notes"

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PastEditions() {
   return (
     <div>
-      <div className="my-[70px]">
+      <div className="my-20">
         <h1 className="text-5xl sm:text-4xl sm:w-full text-white my-4 text-center w-1/2 mx-auto font-bold">
           Past Editions of
         </h1>
@@ -18,7 +18,7 @@ export default function PastEditions() {
         </h1>
       </div>
 
-      <div className="w-3/4 sm:w-10/12 my-10 mx-auto grid grid-cols-2 lg:grid-cols-1 gap-[60px]">
+      <div className="w-3/4 sm:w-10/12 my-10 mx-auto grid grid-cols-2 lg:grid-cols-1 gap-16">
         {pastEditionsArchiveLinks.map((item: string, index) => {
           return <PastEditonCard key={index} url={item} />;
         })}

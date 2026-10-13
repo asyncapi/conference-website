@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Eduardo Maldonado Fonseca Silva",
+    "title": "Senior Platform Engineer",
+    "company": "The LEGO Group",
+    "img": "https://cfp.asyncapi.com/media/avatars/WDDK9E_4HjvQmY.webp",
+    "city": [
+      "London"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Thulisile Sibanda",
+    "title": "Senior Community Manager",
+    "company": "AsyncAPI Initiative",
+    "img": "https://cfp.asyncapi.com/media/avatars/7ZR7AK_zjFYaoD.webp",
+    "city": [
+      "London"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Aravind Viswanathan",
+    "title": "Senior Technical Architect",
+    "company": "Opencast",
+    "img": "https://cfp.asyncapi.com/media/avatars/NHXN7H_qAScVU4.webp",
+    "city": [
+      "London"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dakshitha Ratnayake",
+    "title": "Director - Developer Relations",
+    "company": "WSO2",
+    "img": "https://cfp.asyncapi.com/media/avatars/XVDSTR_ToN0zAF.webp",
+    "city": [
+      "London"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Velmurugan Manickavelu",
+    "title": "Senior Solutions Architect",
+    "company": "Aristocrat",
+    "img": "https://cfp.asyncapi.com/media/avatars/9APENK_P6dOXKc.webp",
+    "city": [
+      "London"
+    ]
+  }
+]

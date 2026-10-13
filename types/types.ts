@@ -9,6 +9,7 @@ export interface LinkItem {
   title: string;
   ref: string;
   subMenu?: LinkItem[];
+  status?: ConferenceStatus;
 }
 
 export type CfpConfig =
@@ -54,6 +55,7 @@ export enum ConferenceStatus {
 export interface Speaker {
   name: string;
   title: string;
+  company?: string;
   img: string;
   id: number;
   city: string[];

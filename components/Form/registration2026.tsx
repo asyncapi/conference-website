@@ -77,9 +77,9 @@ export default function Registration2026(): JSX.Element {
     <div className="p-4" id="registration-2026" ref={confetiRef}>
       <h1 className="text-white font-bold text-5xl lg:text-3xl">Conference 2026 Registration</h1>
       <p className="text-dark-500 text-lg">Please provide your details to register for the event.</p>
-      <div className="mt-2 border-b border-[#333]" />
+      <div className="mt-2 border-b border-charcoal" />
       <div className="flex lg:flex-col">
-        <nav className="lg:hidden border-r w-[30rem] border-[#333]" aria-label="Registration progress">
+        <nav className="lg:hidden border-r w-120 border-charcoal" aria-label="Registration progress">
           <ol className="list-none">
             {fields.map((field, i) => {
               return (
@@ -90,7 +90,7 @@ export default function Registration2026(): JSX.Element {
                 >
                   <div className="flex justify-between">
                     <div className="sm:hidden my-4">
-                      <h3 className={`font-bold text-lg ${(i + 1 <= step && 'text-[#E50E99]') || 'text-white'}`}>
+                      <h3 className={`font-bold text-lg ${(i + 1 <= step && 'text-pink-500') || 'text-white'}`}>
                         {field.title}
                       </h3>
                       <p className="text-dark-600">{field.description}</p>

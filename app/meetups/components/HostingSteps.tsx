@@ -15,7 +15,7 @@ export default function HostingSteps({
   itemVariants,
 }: HostingStepsProps) {
   return (
-    <div className="sponsor-bg mt-[100px] h-auto min-h-[100vh] lg:mt-16 sm:mt-12">
+    <div className="sponsor-bg mt-24 h-auto min-h-screen lg:mt-16 sm:mt-12">
       <motion.div
         className="container flex justify-center px-4 sm:px-0"
         variants={containerVariants}

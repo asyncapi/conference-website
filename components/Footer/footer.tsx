@@ -10,7 +10,7 @@ function Footer(): JSX.Element {
         data-test="footer-asyncAPI-logo"
       >
         {/* Code of Conduct Section */}
-        <div className="text-[16px] md:text-[18px] text-gray-100 flex items-center flex-shrink-0 sm:hidden">
+        <div className="text-base md:text-lg text-gray-100 flex items-center flex-shrink-0 sm:hidden">
           <a
             href="https://github.com/asyncapi/community/blob/master/CODE_OF_CONDUCT.md"
             target="_blank"
@@ -24,11 +24,11 @@ function Footer(): JSX.Element {
         </div>
 
         <div className="flex flex-row items-center gap-4 text-center sm:flex-col sm:items-center">
-          <span className="text-white text-[16px] md:text-[18px] leading-tight">
+          <span className="text-white text-base md:text-lg leading-tight">
             Made with ❤️ by AsyncAPI contributors. By the community for the
             community!
           </span>
-          <div className="w-[1px] h-6 bg-white sm:hidden" />
+          <div className="w-px h-6 bg-white sm:hidden" />
           <div className="flex items-center gap-2 flex-shrink-0">
             <Socials />
           </div>
