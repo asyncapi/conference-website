@@ -144,7 +144,7 @@ function Navbar(): JSX.Element {
                     <div
                       onMouseEnter={() => handleMouseEnter(link.title)}
                       onMouseLeave={handleMouseLeave}
-                      className="ml-16 text-sm group cursor-pointer relative flex flex-col"
+                      className="ml-16 xl:ml-12 text-sm group cursor-pointer relative flex flex-col"
                       data-test={`nav-${link.title}`}
                     >
                       <div>

@@ -49,6 +49,7 @@ npm run cy:open
 ```
 
 Then in the Cypress UI:
+
 1. Select "E2E Testing"
 2. Choose your browser
 3. Click on any test file to run tests
@@ -72,6 +73,17 @@ npx cypress run --spec "cypress/e2e/Navbar.cy.ts"
 - `cypress/e2e/Footer.cy.ts` - Footer component tests
 - `cypress/e2e/Landing.cy.ts` - Landing page tests
 - `cypress/e2e/Venue.cy.ts` - Venue page tests
+- `cypress/e2e/Gallery.cy.ts` - Gallery page tests
+
+## Gallery
+
+The `/gallery` page shows photos hosted on [Cloudinary](https://cloudinary.com/). The site reads them straight from the AsyncAPI Cloudinary account, so there is no photo list to maintain in this repository.
+
+**Adding photos (no code needed)**
+
+1. Open the Cloudinary console and go to **Media Library → conference-gallery**.
+2. Create a folder for the event, named `<city>-<year>`, for example `london-2026`. The folder name becomes the album title on the page ("London 2026"), and albums are ordered by year, newest first.
+3. Drag and drop the photos into that folder. Photos inside sub-folders are shown in the same album.
 
 ## Storybook
 
