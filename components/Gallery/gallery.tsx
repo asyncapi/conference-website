@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, useMemo, useState } from 'react';
+import React, { JSX, useState } from 'react';
 import Image from 'next/image';
 import Button from '../Buttons/button';
 import Paragraph from '../Typography/paragraph';
@@ -23,21 +23,15 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const items = useMemo<GalleryItem[]>(
-    () =>
-      albums
-        .filter(
-          (album) => activeAlbum === ALL_ALBUMS || album.slug === activeAlbum
-        )
-        .flatMap((album) =>
-          album.photos.map((photo, index) => ({
-            ...photo,
-            albumTitle: album.title,
-            alt: `${album.title} photo ${index + 1}`,
-          }))
-        ),
-    [albums, activeAlbum]
-  );
+  const items: GalleryItem[] = albums
+    .filter((album) => activeAlbum === ALL_ALBUMS || album.slug === activeAlbum)
+    .flatMap((album) =>
+      album.photos.map((photo, index) => ({
+        ...photo,
+        albumTitle: album.title,
+        alt: `${album.title} photo ${index + 1}`,
+      }))
+    );
 
   const selectAlbum = (slug: string): void => {
     setActiveAlbum(slug);
@@ -65,8 +59,8 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
               aria-pressed={activeAlbum === album.slug}
               data-test={`gallery-filter-${album.slug}`}
               className={`rounded-full border px-6 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white ${activeAlbum === album.slug
-                  ? 'border-transparent bg-violet-700'
-                  : 'border-white/20 hover:bg-white/10'
+                ? 'border-transparent bg-violet-700'
+                : 'border-white/20 hover:bg-white/10'
                 }`}
               onClick={() => selectAlbum(album.slug)}
             >
