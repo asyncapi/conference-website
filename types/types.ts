@@ -136,6 +136,11 @@ export interface GalleryPhoto {
   height: number;
 }
 
+export interface GalleryItem extends GalleryPhoto {
+  albumTitle: string;
+  alt: string;
+}
+
 export interface GalleryAlbum {
   slug: string;
   title: string;
