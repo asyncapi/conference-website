@@ -1,36 +1,32 @@
 import { ConferenceStatus } from '../types/types';
 
-function parseDateRange(date: string): Date[] {
-  const fullRangeMatch = date.match(
-    /^(\d{1,2}\s+\w+,?\s+\d{4})\s*-\s*(\d{1,2}\s+\w+,?\s+\d{4})$/
-  );
-  if (fullRangeMatch) {
-    return [new Date(fullRangeMatch[1]), new Date(fullRangeMatch[2])];
+export function getEventStatus(
+  startDate?: string,
+  endDate?: string
+): ConferenceStatus {
+  if (!startDate) {
+    return ConferenceStatus.UPCOMING;
   }
 
-  const dayRangeMatch = date.match(
-    /^(\d{1,2})\s*-\s*(\d{1,2}),?\s+(\w+,?\s+\d{4})$/
-  );
-  if (dayRangeMatch) {
-    const monthYear = dayRangeMatch[3];
-    return [
-      new Date(`${dayRangeMatch[1]} ${monthYear}`),
-      new Date(`${dayRangeMatch[2]} ${monthYear}`),
-    ];
-  }
-
-  return [new Date(date)];
-}
-
-export function getEventStatus(date: string) {
   const today = new Date();
-  const eventDates = parseDateRange(date);
+  today.setHours(0, 0, 0, 0);
 
-  if (
-    eventDates.some((event) => event.toDateString() === today.toDateString())
-  ) {
+  let start = new Date(startDate.replace(/-/g, '/'));
+  if (isNaN(start.getTime())) {
+    start = new Date(startDate);
+  }
+  start.setHours(0, 0, 0, 0);
+
+  const endStr = endDate || startDate;
+  let end = new Date(endStr.replace(/-/g, '/'));
+  if (isNaN(end.getTime())) {
+    end = new Date(endStr);
+  }
+  end.setHours(23, 59, 59, 999);
+
+  if (today >= start && today <= end) {
     return ConferenceStatus.ONGOING;
-  } else if (eventDates.some((event) => event > today)) {
+  } else if (today < start) {
     return ConferenceStatus.UPCOMING;
   } else {
     return ConferenceStatus.ENDED;
