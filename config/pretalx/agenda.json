@@ -8,7 +8,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "11:00 - 11:25 UTC",
+    "time": "11:00 - 11:30 UTC",
     "session": "Stop API Drift: Generate Java from AsyncAPI",
     "speaker": 2,
     "type": "Short Talk",
@@ -16,7 +16,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "11:40 - 12:05 UTC",
+    "time": "11:40 - 12:10 UTC",
     "session": "Keeping WebSocket APIs honest with AsyncAPI: a code-first approach in Python",
     "speaker": 3,
     "type": "Short Talk",
@@ -24,7 +24,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "12:20 - 12:45 UTC",
+    "time": "12:20 - 12:50 UTC",
     "session": "Taming Schema Evolution in Kafka-Based Event Pipelines",
     "speaker": 4,
     "type": "Short Talk",
@@ -32,7 +32,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "13:00 - 13:25 UTC",
+    "time": "13:00 - 13:15 UTC",
     "session": "AsyncAPI CLI: From Specification to Production",
     "speaker": 5,
     "type": "Short Talk",
@@ -40,7 +40,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "13:40 - 14:05 UTC",
+    "time": "13:25 - 13:55 UTC",
     "session": "Stop API Drift: Provision Kafka from AsyncAPI",
     "speaker": 2,
     "type": "Short Talk",
@@ -48,7 +48,7 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "14:15 - 14:40 UTC",
+    "time": "14:05 - 14:35 UTC",
     "session": "Secure by Default Is a Lie: What Building DaloyJS Taught Me About Making It True",
     "speaker": 6,
     "type": "Technical Deep-Dive / Case Study",
@@ -56,17 +56,9 @@
     "day": "Wednesday, October 28, 2026"
   },
   {
-    "time": "14:50 - 15:15 UTC",
-    "session": "AsyncAPI and Machine Learning for Proactive Enterprise IT Operations",
-    "speaker": 7,
-    "type": "Short Talk",
-    "city": "Online",
-    "day": "Wednesday, October 28, 2026"
-  },
-  {
     "time": "13:10 - 13:35 UTC",
     "session": "The Storyteller Agent: Beyond Code, Into Context",
-    "speaker": 8,
+    "speaker": 7,
     "type": "Short Talk",
     "city": "London",
     "day": "Thursday, October 1, 2026"
@@ -74,7 +66,7 @@
   {
     "time": "13:35 - 14:00 UTC",
     "session": "Designing Governance for Sustainable Open Standards",
-    "speaker": 9,
+    "speaker": 8,
     "type": "Short Talk",
     "city": "London",
     "day": "Thursday, October 1, 2026"
@@ -82,7 +74,7 @@
   {
     "time": "14:00 - 14:25 UTC",
     "session": "Passports for Payloads: Standardising B2B Event Pattern with AsyncAPI",
-    "speaker": 10,
+    "speaker": 9,
     "type": "Short Talk",
     "city": "London",
     "day": "Thursday, October 1, 2026"
@@ -90,7 +82,7 @@
   {
     "time": "15:00 - 15:25 UTC",
     "session": "Discover. Authorize. Observe. Building Agent-Ready Event Streams",
-    "speaker": 11,
+    "speaker": 10,
     "type": "Short Talk",
     "city": "London",
     "day": "Thursday, October 1, 2026"
@@ -98,7 +90,7 @@
   {
     "time": "15:25 - 15:50 UTC",
     "session": "From Generated Specs to Published Contracts: Our AsyncAPI Journey",
-    "speaker": 12,
+    "speaker": 11,
     "type": "Short Talk",
     "city": "London",
     "day": "Thursday, October 1, 2026"
