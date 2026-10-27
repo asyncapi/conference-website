@@ -34,6 +34,8 @@ export interface City {
   name: string;
   country: string;
   date: string;
+  startDate?: string;
+  endDate?: string;
   cfpDate: string;
   description: string;
   img: string;

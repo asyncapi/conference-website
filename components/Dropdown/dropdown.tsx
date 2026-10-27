@@ -78,8 +78,14 @@ function Dropdown<T>({
               items.map((item, i) => {
                 const displayText = getDisplayValue(item);
                 const isEnded =
-                  item && typeof item === 'object' && 'date' in item && typeof (item as any).date === 'string'
-                    ? getEventStatus((item as any).date) === ConferenceStatus.ENDED
+                  item &&
+                  typeof item === 'object' &&
+                  'startDate' in item &&
+                  typeof (item as any).startDate === 'string'
+                    ? getEventStatus(
+                        (item as any).startDate,
+                        (item as any).endDate
+                      ) === ConferenceStatus.ENDED
                     : false;
 
                 return (
