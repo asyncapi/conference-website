@@ -16,9 +16,12 @@ import Dropdown from '../components/Dropdown/dropdown';
 import { City, Speaker as SpeakerType } from '../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
 import { cities, speakers } from '../config/conference-data';
+import { useIsMounted } from '../hooks/useIsMounted';
 
 export default function HomePage() {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isMounted = useIsMounted();
+  const matchesTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isTablet = isMounted && matchesTablet;
   const [speakersList, setSpeakersList] = useState(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
