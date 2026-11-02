@@ -55,6 +55,15 @@ describe('Gallery', () => {
     cy.getTestData('gallery-load-more').should('not.exist');
   });
 
+  it('should show only the first photos when given a limit', () => {
+    // This is how the home page teaser renders.
+    cy.mount(<Gallery cloudName="demo" albums={albums} limit={6} />);
+
+    cy.getTestData('gallery-photo').should('have.length', 6);
+    cy.getTestData('gallery-filter-all').should('not.exist');
+    cy.getTestData('gallery-load-more').should('not.exist');
+  });
+
   it('should filter photos by album', () => {
     cy.mount(<Gallery cloudName="demo" albums={albums} />);
 

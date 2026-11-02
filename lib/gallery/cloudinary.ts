@@ -144,7 +144,8 @@ export const groupIntoAlbums = (
 
 const search = async (
   config: GalleryConfig,
-  expression: string
+  expression: string,
+  limit?: number
 ): Promise<SearchResource[]> => {
   const auth = Buffer.from(`${config.apiKey}:${config.apiSecret}`).toString(
     'base64'
@@ -163,7 +164,8 @@ const search = async (
         },
         body: JSON.stringify({
           expression,
-          max_results: MAX_RESULTS,
+          max_results: limit ?? MAX_RESULTS,
+          ...(limit && { sort_by: [{ created_at: 'desc' }] }),
           ...(nextCursor && { next_cursor: nextCursor }),
         }),
         next: { revalidate: GALLERY_REVALIDATE_SECONDS },
@@ -180,24 +182,23 @@ const search = async (
 
     resources.push(...data.resources);
     nextCursor = data.next_cursor;
-  } while (nextCursor);
+  } while (nextCursor && !limit);
 
   return resources;
 };
 
-export const fetchGallery = async (): Promise<GalleryData> => {
+export const fetchGallery = async (limit?: number): Promise<GalleryData> => {
   const config = getGalleryConfig();
 
   if (!config) {
     return EMPTY_GALLERY;
   }
 
-
   const folder = `"${config.rootFolder}/*"`;
   const expression = `resource_type:image AND (asset_folder:${folder} OR folder:${folder})`;
 
   try {
-    const resources = await search(config, expression);
+    const resources = await search(config, expression, limit);
 
     return {
       cloudName: config.cloudName,

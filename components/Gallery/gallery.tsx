@@ -16,9 +16,10 @@ const GRID_WIDTH = 720;
 interface GalleryProps {
   cloudName: string;
   albums: GalleryAlbum[];
+  limit?: number;
 }
 
-function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
+function Gallery({ cloudName, albums, limit }: GalleryProps): JSX.Element {
   const [activeAlbum, setActiveAlbum] = useState<string>(ALL_ALBUMS);
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -52,7 +53,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
 
   return (
     <div data-test="gallery">
-      {albums.length > 1 && (
+      {!limit && albums.length > 1 && (
         <div className="mb-10 flex flex-wrap justify-center gap-4">
           {[{ slug: ALL_ALBUMS, title: 'All' }, ...albums].map((album) => (
             <button
@@ -73,7 +74,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
       )}
 
       <div className="grid grid-cols-3 gap-4 sm:grid-cols-2">
-        {items.slice(0, visibleCount).map((item, index) => (
+        {items.slice(0, limit ?? visibleCount).map((item, index) => (
           <button
             key={item.publicId}
             type="button"
@@ -96,7 +97,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
         ))}
       </div>
 
-      {visibleCount < items.length && (
+      {!limit && visibleCount < items.length && (
         <div className="mt-10 flex justify-center">
           <Button
             type="button"
