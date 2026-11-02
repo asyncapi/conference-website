@@ -39,20 +39,26 @@ export const getGalleryConfig = (): GalleryConfig | null => {
     process.env.CLOUDINARY_GALLERY_FOLDER || DEFAULT_ROOT_FOLDER
   ).replace(/^\/+|\/+$/g, '');
 
+  const invalid = new Error(
+    'CLOUDINARY_URL must look like cloudinary://<api_key>:<api_secret>@<cloud_name>'
+  );
+  let url: URL;
+
   try {
-    const url = new URL(process.env.CLOUDINARY_URL);
-    const cloudName = url.hostname;
-    const apiKey = decodeURIComponent(url.username);
-    const apiSecret = decodeURIComponent(url.password);
-
-    if (!cloudName || !apiKey || !apiSecret) {
-      return null;
-    }
-
-    return { cloudName, apiKey, apiSecret, rootFolder };
+    url = new URL(process.env.CLOUDINARY_URL);
   } catch {
-    return null;
+    throw invalid;
   }
+
+  const cloudName = url.hostname;
+  const apiKey = decodeURIComponent(url.username);
+  const apiSecret = decodeURIComponent(url.password);
+
+  if (!cloudName || !apiKey || !apiSecret) {
+    throw invalid;
+  }
+
+  return { cloudName, apiKey, apiSecret, rootFolder };
 };
 
 // `london-2026` -> `London 2026`
@@ -147,19 +153,19 @@ const search = async (
   let nextCursor: string | undefined;
 
   do {
-    const params = new URLSearchParams({
-      expression,
-      max_results: String(MAX_RESULTS),
-    });
-
-    if (nextCursor) {
-      params.set('next_cursor', nextCursor);
-    }
-
     const response = await fetch(
-      `${CLOUDINARY_API}/${config.cloudName}/resources/search?${params}`,
+      `${CLOUDINARY_API}/${config.cloudName}/resources/search`,
       {
-        headers: { Authorization: `Basic ${auth}` },
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${auth}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          expression,
+          max_results: MAX_RESULTS,
+          ...(nextCursor && { next_cursor: nextCursor }),
+        }),
         next: { revalidate: GALLERY_REVALIDATE_SECONDS },
       }
     );
@@ -186,32 +192,19 @@ export const fetchGallery = async (): Promise<GalleryData> => {
     return EMPTY_GALLERY;
   }
 
-  const expressions = [
-    `resource_type:image AND asset_folder:${config.rootFolder}/*`,
-    `resource_type:image AND folder:${config.rootFolder}/*`,
-  ];
-  let lastError: unknown;
 
-  for (const expression of expressions) {
-    try {
-      const resources = await search(config, expression);
+  const folder = `"${config.rootFolder}/*"`;
+  const expression = `resource_type:image AND (asset_folder:${folder} OR folder:${folder})`;
 
-      if (resources.length === 0) {
-        continue;
-      }
+  try {
+    const resources = await search(config, expression);
 
-      return {
-        cloudName: config.cloudName,
-        albums: groupIntoAlbums(resources, config.rootFolder),
-      };
-    } catch (error) {
-      lastError = error;
-    }
+    return {
+      cloudName: config.cloudName,
+      albums: groupIntoAlbums(resources, config.rootFolder),
+    };
+  } catch (error) {
+    console.error('Could not load gallery photos from Cloudinary:', error);
+    throw error;
   }
-
-  if (lastError) {
-    console.error('Could not load gallery photos from Cloudinary:', lastError);
-  }
-
-  return { cloudName: config.cloudName, albums: [] };
 };
