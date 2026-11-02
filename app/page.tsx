@@ -8,9 +8,15 @@ export const metadata: Metadata = {
   title: 'AsyncAPI Conference',
   description: 'AsyncAPI Conference - The conference for the AsyncAPI community',
 };
+export const revalidate = 3600;
 
 export default async function Page() {
-  const { cloudName, albums } = await fetchGallery(GALLERY_PHOTO_COUNT);
+  const { cloudName, albums } = await fetchGallery(GALLERY_PHOTO_COUNT).catch(
+    (error) => {
+      console.error('Rendering the homepage without the gallery:', error);
+      return { cloudName: '', albums: [] };
+    }
+  );
 
   return (
     <HomePage
