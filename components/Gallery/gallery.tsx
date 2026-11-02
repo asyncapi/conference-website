@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, useState } from 'react';
+import React, { JSX, useCallback, useState } from 'react';
 import Image from 'next/image';
 import Button from '../Buttons/button';
 import Paragraph from '../Typography/paragraph';
@@ -32,6 +32,8 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
         alt: `${album.title} photo ${index + 1}`,
       }))
     );
+
+  const closeLightbox = useCallback((): void => setOpenIndex(null), []);
 
   const selectAlbum = (slug: string): void => {
     setActiveAlbum(slug);
@@ -113,7 +115,7 @@ function Gallery({ cloudName, albums }: GalleryProps): JSX.Element {
           items={items}
           index={openIndex}
           onNavigate={setOpenIndex}
-          onClose={() => setOpenIndex(null)}
+          onClose={closeLightbox}
         />
       )}
     </div>
