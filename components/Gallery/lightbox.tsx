@@ -55,11 +55,11 @@ function Lightbox({
       if (e.key === 'Escape') {
         onClose();
       }
-      if (e.key === 'ArrowLeft' && hasMultiple) {
-        showPrevious();
+      if (e.key === 'ArrowLeft' && items.length > 1) {
+        onNavigate((index - 1 + items.length) % items.length);
       }
-      if (e.key === 'ArrowRight' && hasMultiple) {
-        showNext();
+      if (e.key === 'ArrowRight' && items.length > 1) {
+        onNavigate((index + 1) % items.length);
       }
       if (e.key === 'Tab') {
         // Keep keyboard focus inside the dialog while it is open.
@@ -83,7 +83,7 @@ function Lightbox({
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  });
+  }, [index, items.length, onClose, onNavigate]);
 
   return createPortal(
     <div
@@ -149,7 +149,12 @@ function Lightbox({
         className="h-auto max-h-full min-h-0 w-auto max-w-full rounded-lg object-contain"
         onClick={(e) => e.stopPropagation()}
       />
-      <p className="mt-4 text-sm text-white" aria-live="polite">
+      <p
+        className="mt-4 text-sm text-white"
+        aria-live="polite"
+        data-test="gallery-lightbox-caption"
+        onClick={(e) => e.stopPropagation()}
+      >
         {item.albumTitle} · {index + 1} / {items.length}
       </p>
     </div>,
