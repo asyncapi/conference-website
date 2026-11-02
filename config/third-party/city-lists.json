@@ -62,8 +62,8 @@
     },
     "freeEntry": true,
     "cfp": null,
-    "recordings": null,
-    "playlist": null
+    "recordings": "https://youtube.com/playlist?list=PLEIhCC9TfRbo&si=-y8DvA5tCqcgnqAI",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLEIhCC9TfRbo"
   },
   {
     "name": "Paris",
