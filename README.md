@@ -85,6 +85,15 @@ The `/gallery` page shows photos hosted on [Cloudinary](https://cloudinary.com/)
 2. Create a folder for the event, named `<city>-<year>`, for example `london-2026`. The folder name becomes the album title on the page ("London 2026"), and albums are ordered by year, newest first.
 3. Drag and drop the photos into that folder. Photos inside sub-folders are shown in the same album.
 
+**Deployment**
+
+The deployed site needs these variables in the host's environment (refer `example.env.local`):
+
+- `CLOUDINARY_URL` - the API environment variable from the Cloudinary console, in the form `cloudinary://<api_key>:<api_secret>@<cloud_name>`. Keep it secret.
+- `CLOUDINARY_GALLERY_FOLDER` - the root folder that holds the album folders, `conference-gallery`.
+
+Without `CLOUDINARY_URL` the page keeps showing the "Photos from our past conferences are on their way" message, even after photos are uploaded.
+
 ## Storybook
 
 This project uses [Storybook](https://storybook.js.org/) for component development and documentation.
