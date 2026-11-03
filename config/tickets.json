@@ -49,7 +49,7 @@
     "price": 0,
     "url": "https://portal.joinfost.io/event/future-of-software-technologies-paris-2026/5e27c773-7fa8-4169-b6a7-93494701212a/api-standards-conference?coupon=APISTANDARDSFREE144",
     "description": "Access to all conference talks and workshops",
-    "status": "Attend the AsyncAPI Conference",
+    "status": "Attend the API Standards Conference",
     "available": 100,
     "eventDate": "2026-12-01T00:00:00.000Z",
     "benefits": ["AsyncAPI Track", "All talks", "Networking"]
