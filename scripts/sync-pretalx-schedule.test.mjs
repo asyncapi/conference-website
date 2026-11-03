@@ -73,6 +73,8 @@ test('maps public Pretalx events into generated website cities', async () => {
     name: 'Europe',
     country: 'TBA',
     date: '5 - 6 November, 2026',
+    startDate: '2026-11-05',
+    endDate: '2026-11-06',
     cfpDate: 'Not announced yet',
     description:
       'Join us for AsyncAPI Conf Europe 2026. CFP and schedule data are managed in Pretalx.',
@@ -120,6 +122,8 @@ test('maps Pretalx event metadata into website cities', async () => {
       name: 'New York',
       country: 'United States',
       date: '17 - 20 June, 2026',
+      startDate: '2026-06-17',
+      endDate: '2026-06-20',
       cfpDate: '10 June, 2026',
       description:
         'Join us for AsyncAPI US Conf. CFP and schedule data are managed in Pretalx.',
@@ -343,7 +347,12 @@ test('syncPretalxData writes generated Pretalx data under config/pretalx', async
         });
       }
 
-      return jsonResponse({ count: 0, next: null, previous: null, results: [] });
+      return jsonResponse({
+        count: 0,
+        next: null,
+        previous: null,
+        results: [],
+      });
     }
 
     throw new Error(`Unexpected URL ${url}`);
