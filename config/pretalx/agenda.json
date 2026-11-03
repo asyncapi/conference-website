@@ -1,6 +1,6 @@
 [
   {
-    "time": "13:00 - 13:25 UTC",
+    "time": "12:00 - 12:25 Europe/Paris",
     "session": "Securing Open Source CI/CD Pipelines: Lessons from Handling 2 Supply Chain Incidents",
     "speaker": [
       1,
@@ -11,7 +11,7 @@
     "day": "Tuesday, December 1, 2026"
   },
   {
-    "time": "13:20 - 13:45 UTC",
+    "time": "12:20 - 12:45 Europe/Paris",
     "session": "Events as Contracts, Events as Data: Our AsyncAPI Journey",
     "speaker": 3,
     "type": "Technical Deep Dive/Case Study",
@@ -19,7 +19,7 @@
     "day": "Wednesday, December 2, 2026"
   },
   {
-    "time": "18:00 - 18:25 UTC",
+    "time": "17:00 - 17:25 Europe/Paris",
     "session": "Beyond the Broker: What Event Gateways Are Really Trying to Solve",
     "speaker": 4,
     "type": "Short Talk",
@@ -27,7 +27,7 @@
     "day": "Wednesday, December 2, 2026"
   },
   {
-    "time": "10:45 - 11:10 UTC",
+    "time": "09:45 - 10:10 Europe/Paris",
     "session": "Event Contracts Are Domain Decisions",
     "speaker": 5,
     "type": "Short Talk",
