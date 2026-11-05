@@ -25,3 +25,10 @@ jobs:
         with:
           build: npm run build
           start: npm start
+
+      - name: Cypress component tests
+        if: ${{ !cancelled() }}
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          component: true

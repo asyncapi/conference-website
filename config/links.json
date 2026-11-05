@@ -48,5 +48,9 @@
   {
     "title": "Past Editions",
     "ref": "/editions"
+  },
+  {
+    "title": "Gallery",
+    "ref": "/gallery"
   }
 ]
