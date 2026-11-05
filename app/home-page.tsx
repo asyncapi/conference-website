@@ -17,6 +17,7 @@ import Gallery from '../components/Gallery/gallery';
 import { City, GalleryAlbum, Speaker as SpeakerType } from '../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
 import { cities, speakers } from '../config/conference-data';
+import { useIsMounted } from '../hooks/useIsMounted';
 
 interface HomePageProps {
   galleryCloudName: string;
@@ -29,7 +30,10 @@ export default function HomePage({
   galleryAlbums,
   galleryLimit,
 }: HomePageProps) {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isMounted = useIsMounted();
+  const matchesTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isTablet = isMounted && matchesTablet;
+
   const [speakersList, setSpeakersList] = useState(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',

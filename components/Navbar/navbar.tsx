@@ -13,9 +13,12 @@ import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { links } from '../../config/navigation';
 import { usePathname } from 'next/navigation';
 import { useSectionTracker } from '../../hooks/useSectionTracker';
+import { useIsMounted } from '../../hooks/useIsMounted';
 
 function Navbar(): JSX.Element {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isMounted = useIsMounted();
+  const matchesTablet = useMediaQuery({ maxWidth: '1118px' });
+  const isTablet = isMounted && matchesTablet;
   const pathname = usePathname();
   const { isActive } = useSectionTracker(pathname);
   const [drop, setDrop] = useState<boolean>(false);
