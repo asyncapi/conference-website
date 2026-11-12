@@ -2,16 +2,17 @@
 
 import React, { JSX, useCallback, useState } from 'react';
 import Image from 'next/image';
-import Button from '../Buttons/button';
+import { motion } from 'framer-motion';
 import Paragraph from '../Typography/paragraph';
 import Lightbox from './lightbox';
 import { GalleryAlbum, GalleryItem } from '../../types/types';
 import { cloudinaryUrl } from '../../utils/cloudinary';
 import { BLUR_DATA_URL } from '../../utils/image-blur';
 
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 7;
 const ALL_ALBUMS = 'all';
-const GRID_WIDTH = 720;
+const TILE_WIDTH = 720;
+const WIDE_TILE_WIDTH = 1080;
 
 interface GalleryProps {
   cloudName: string;
@@ -32,7 +33,8 @@ function Gallery({ cloudName, albums, limit }: GalleryProps): JSX.Element {
         albumTitle: album.title,
         alt: `${album.title} photo ${index + 1}`,
       }))
-    );
+    )
+    .slice(0, limit);
 
   const closeLightbox = useCallback((): void => setOpenIndex(null), []);
 
@@ -61,10 +63,11 @@ function Gallery({ cloudName, albums, limit }: GalleryProps): JSX.Element {
               type="button"
               aria-pressed={activeAlbum === album.slug}
               data-test={`gallery-filter-${album.slug}`}
-              className={`rounded-full border px-6 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white ${activeAlbum === album.slug
-                ? 'border-transparent bg-violet-700'
-                : 'border-white/20 hover:bg-white/10'
-                }`}
+              className={`rounded-full border px-6 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white ${
+                activeAlbum === album.slug
+                  ? 'border-transparent bg-violet-700'
+                  : 'border-white/20 hover:bg-white/10'
+              }`}
               onClick={() => selectAlbum(album.slug)}
             >
               {album.title}
@@ -73,41 +76,48 @@ function Gallery({ cloudName, albums, limit }: GalleryProps): JSX.Element {
         </div>
       )}
 
-      <div className="grid grid-cols-3 gap-4 sm:grid-cols-2">
-        {items.slice(0, limit ?? visibleCount).map((item, index) => (
-          <button
-            key={item.publicId}
-            type="button"
-            aria-label={`View ${item.alt}`}
-            data-test="gallery-photo"
-            className="relative aspect-square overflow-hidden rounded-xl bg-white/10 focus:outline-none focus:ring-2 focus:ring-white"
-            onClick={() => setOpenIndex(index)}
-          >
-            <Image
-              src={cloudinaryUrl(cloudName, item.publicId, GRID_WIDTH)}
-              alt={item.alt}
-              fill
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL={BLUR_DATA_URL}
-              sizes="(max-width: 715px) 50vw, 33vw"
-              className="object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </button>
-        ))}
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-2">
+        {items.slice(0, visibleCount).map((item, index) => {
+          const position = index % PAGE_SIZE;
+          const isLast = position === PAGE_SIZE - 1;
+          const isWide = position === 0 || isLast;
+
+          return (
+            <button
+              key={item.publicId}
+              type="button"
+              aria-label={`View ${item.alt}`}
+              data-test="gallery-photo"
+              className={`relative h-85 overflow-hidden rounded-2xl bg-white/10 focus:outline-none focus:ring-2 focus:ring-white lg:h-60 sm:h-40 ${
+                isWide ? 'col-span-2' : ''
+              } ${isLast ? 'sm:col-span-1' : ''}`}
+              onClick={() => setOpenIndex(index)}
+            >
+              <Image
+                src={cloudinaryUrl(
+                  cloudName,
+                  item.publicId,
+                  isWide ? WIDE_TILE_WIDTH : TILE_WIDTH
+                )}
+                alt={item.alt}
+                fill
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </button>
+          );
+        })}
       </div>
 
-      {!limit && visibleCount < items.length && (
-        <div className="mt-10 flex justify-center">
-          <Button
-            type="button"
-            test="gallery-load-more"
-            className="px-8"
-            onClick={() => setVisibleCount(visibleCount + PAGE_SIZE)}
-          >
-            Load more
-          </Button>
-        </div>
+      {visibleCount < items.length && (
+        <motion.div
+          key={visibleCount}
+          data-test="gallery-sentinel"
+          viewport={{ margin: '300px' }}
+          onViewportEnter={() => setVisibleCount(visibleCount + PAGE_SIZE)}
+        />
       )}
 
       {openIndex !== null && (
