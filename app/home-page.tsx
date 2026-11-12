@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import Header from '../components/Header/header';
 import Sponsors from '../components/Sponsors/sponsors';
 import About from '../components/About/about';
@@ -17,7 +16,6 @@ import Gallery from '../components/Gallery/gallery';
 import { City, GalleryAlbum, Speaker as SpeakerType } from '../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
 import { cities, speakers } from '../config/conference-data';
-import { useIsMounted } from '../hooks/useIsMounted';
 
 interface HomePageProps {
   galleryCloudName: string;
@@ -30,10 +28,6 @@ export default function HomePage({
   galleryAlbums,
   galleryLimit,
 }: HomePageProps) {
-  const isMounted = useIsMounted();
-  const matchesTablet = useMediaQuery({ maxWidth: '1118px' });
-  const isTablet = isMounted && matchesTablet;
-
   const [speakersList, setSpeakersList] = useState(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
     name: 'All',
@@ -92,8 +86,7 @@ export default function HomePage({
               </div>
               <div className="lg:py-20 w-content-lg lg:w-full">
                 <div className="mt-16 lg:mt-0">
-                  {isTablet ? (
-                    <div className="w-full">
+                  <div className="w-full hidden lg:block">
                       <Dropdown
                         selectedItem={currentCity as City}
                         items={cities}
@@ -104,9 +97,8 @@ export default function HomePage({
                         getDisplayValue={(city) => city?.name}
                         placeholder="Select a city"
                       />
-                    </div>
-                  ) : (
-                    <div className="flex justify-center">
+                  </div>
+                  <div className="flex justify-center lg:hidden">
                       <div className="space-x-4 lg:w-full flex justify-between">
                         <Button
                           type="button"
@@ -162,8 +154,7 @@ export default function HomePage({
                           );
                         })}
                       </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
 
                 <div className="mt-16 pb-44 lg:pb-20">
