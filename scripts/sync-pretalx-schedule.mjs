@@ -44,6 +44,10 @@ export function mapPretalxEventsToCities(events, options = {}) {
           location.country ||
           (normalize(cityName) === 'online' ? ' Edition' : 'TBA'),
         date: formatEventDateRange(event.date_from, event.date_to),
+        startDate: event.date_from
+          ? String(event.date_from).slice(0, 10)
+          : undefined,
+        endDate: event.date_to ? String(event.date_to).slice(0, 10) : undefined,
         cfpDate: cfp.deadline
           ? formatEventDateRange(cfp.deadline, cfp.deadline)
           : 'Not announced yet',

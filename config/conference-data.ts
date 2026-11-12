@@ -90,6 +90,8 @@ function mergeCity(manualCity: City, generatedCity: GeneratedCity): City {
     ...generatedCity,
     ...manualCity,
     date: generatedCity.date || manualCity.date,
+    startDate: generatedCity.startDate || manualCity.startDate,
+    endDate: generatedCity.endDate || manualCity.endDate,
     cfpDate:
       manualCity.cfpDate && manualCity.cfpDate !== 'Not announced yet'
         ? manualCity.cfpDate

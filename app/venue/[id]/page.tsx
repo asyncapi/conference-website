@@ -74,7 +74,7 @@ export default async function VenuePage({
 }) {
   const { id } = await params;
   const city = getCityData(id);
-  const eventStatus = getEventStatus(city.date);
+  const eventStatus = getEventStatus(city.startDate, city.endDate);
   const cfpUrl = resolveCfpUrl(city.cfp);
   const cfpDeadlinePassed = isCfpDeadlinePassed(city.cfpDate);
   const shouldShowCfpGuidelines = Boolean(
