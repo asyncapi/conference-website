@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import HomePage from './home-page';
 import { fetchGallery } from '../lib/gallery/cloudinary';
 
-const GALLERY_PHOTO_COUNT = 6;
+const GALLERY_PHOTO_COUNT = 5;
 
 export const metadata: Metadata = {
   title: 'AsyncAPI Conference',
