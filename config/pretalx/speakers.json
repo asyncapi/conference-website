@@ -21,20 +21,20 @@
   },
   {
     "id": 3,
-    "name": "Ignacio Castillejos",
-    "title": "Staff Engineer",
-    "company": "The New York Times",
-    "img": "https://cfp.asyncapi.com/media/avatars/9UY9HT_UEOKfxE.webp",
+    "name": "Daniel Kocot",
+    "title": "Principal Integration Architect",
+    "company": "adorsys GmbH&Co. KG",
+    "img": "https://cfp.asyncapi.com/media/avatars/SBTWQR_QXyP5WG.webp",
     "city": [
       "Paris"
     ]
   },
   {
     "id": 4,
-    "name": "Daniel Kocot",
-    "title": "Principal Integration Architect",
-    "company": "adorsys GmbH&Co. KG",
-    "img": "https://cfp.asyncapi.com/media/avatars/SBTWQR_QXyP5WG.webp",
+    "name": "Ignacio Castillejos",
+    "title": "Staff Engineer",
+    "company": "The New York Times",
+    "img": "https://cfp.asyncapi.com/media/avatars/9UY9HT_UEOKfxE.webp",
     "city": [
       "Paris"
     ]
@@ -51,6 +51,16 @@
   },
   {
     "id": 6,
+    "name": "Thulisile Sibanda",
+    "title": "Senior Community Manager",
+    "company": "AsyncAPI Initiative",
+    "img": "https://cfp.asyncapi.com/media/avatars/7ZR7AK_PGvVKqD.webp",
+    "city": [
+      "Paris"
+    ]
+  },
+  {
+    "id": 7,
     "name": "Daniel Kocot",
     "title": "Principal Integration Architect",
     "company": "adorsys GmbH&Co. KG",
@@ -60,7 +70,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Ivan Garcia Sainz-Aja",
     "title": "Software Engineer",
     "company": "ZenWave360",
@@ -70,7 +80,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Huy Nguyen",
     "title": "Software Engineer & Open Source Maintainer",
     "company": "Independent",
@@ -80,7 +90,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Sreekanth Nalla",
     "title": "Sr. Software Engineer",
     "company": "Southwest Airlines",
@@ -90,7 +100,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Tushar Anand",
     "title": "AsyncAPI Mentee",
     "company": "AsyncAPI",
@@ -100,7 +110,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "devlin duldulao",
     "title": "Devlin Duldulao",
     "company": "SoftwareOne",
@@ -110,7 +120,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Eduardo Maldonado Fonseca Silva",
     "title": "Senior Platform Engineer",
     "company": "The LEGO Group",
@@ -120,7 +130,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Thulisile Sibanda",
     "title": "Senior Community Manager",
     "company": "AsyncAPI Initiative",
@@ -130,7 +140,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Aravind Viswanathan",
     "title": "Senior Technical Architect",
     "company": "Opencast",
@@ -140,7 +150,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Dakshitha Ratnayake",
     "title": "Director - Developer Relations",
     "company": "WSO2",
@@ -150,7 +160,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Velmurugan Manickavelu",
     "title": "Senior Solutions Architect",
     "company": "Aristocrat",
