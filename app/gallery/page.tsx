@@ -21,7 +21,7 @@ export default async function GalleryPage() {
         </Heading>
       </div>
 
-      <div className="w-3/4 sm:w-10/12 my-10 mx-auto">
+      <div className="w-3/4 max-w-6xl sm:w-10/12 my-10 mx-auto">
         <Gallery cloudName={cloudName} albums={albums} />
       </div>
     </div>

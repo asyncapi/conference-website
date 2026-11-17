@@ -24,6 +24,9 @@ const albums = [
 
 describe('Gallery', () => {
   beforeEach(() => {
+    // Shorter than one block of photos, so nothing loads before scrolling.
+    cy.viewport(1536, 600);
+
     // The fake public IDs do not exist, so serve a stub instead of hitting Cloudinary.
     cy.intercept('GET', 'https://res.cloudinary.com/**', {
       statusCode: 200,
@@ -39,29 +42,34 @@ describe('Gallery', () => {
     cy.getTestData('gallery-photo').should('not.exist');
   });
 
-  it('should render a page of photos and load more', () => {
+  it('should render a bento grid and load more photos on scroll', () => {
     cy.mount(<Gallery cloudName="demo" albums={albums} />);
 
     cy.getTestData('gallery-photo')
-      .should('have.length', 24)
+      .should('have.length', 7)
       .first()
+      .should('have.class', 'col-span-2')
       .find('img')
       .should('have.attr', 'src')
       .and('include', 'res.cloudinary.com/demo/')
       .and('include', 'conference-gallery/london-2026/photo-1');
-
-    cy.getTestData('gallery-load-more').click();
-    cy.getTestData('gallery-photo').should('have.length', 30);
     cy.getTestData('gallery-load-more').should('not.exist');
+
+    // Each scroll to the end of the grid brings in the next block of photos.
+    [14, 21, 28, 30].forEach((count) => {
+      cy.scrollTo('bottom');
+      cy.getTestData('gallery-photo').should('have.length', count);
+    });
+    cy.getTestData('gallery-sentinel').should('not.exist');
   });
 
   it('should show only the first photos when given a limit', () => {
     // This is how the home page teaser renders.
-    cy.mount(<Gallery cloudName="demo" albums={albums} limit={6} />);
+    cy.mount(<Gallery cloudName="demo" albums={albums} limit={5} />);
 
-    cy.getTestData('gallery-photo').should('have.length', 6);
+    cy.getTestData('gallery-photo').should('have.length', 5);
     cy.getTestData('gallery-filter-all').should('not.exist');
-    cy.getTestData('gallery-load-more').should('not.exist');
+    cy.getTestData('gallery-sentinel').should('not.exist');
   });
 
   it('should filter photos by album', () => {
@@ -73,10 +81,19 @@ describe('Gallery', () => {
       'aria-pressed',
       'true'
     );
+    cy.getTestData('gallery-photo').should('have.length', 7);
+    cy.getTestData('gallery-photo')
+      .eq(1)
+      .find('img')
+      .should('have.attr', 'src')
+      .and('include', 'conference-gallery/online-2025/photo-2');
+
+    cy.scrollTo('bottom');
     cy.getTestData('gallery-photo').should('have.length', 10);
 
+    // Switching albums starts again from the first block.
     cy.getTestData('gallery-filter-all').click();
-    cy.getTestData('gallery-photo').should('have.length', 24);
+    cy.getTestData('gallery-photo').should('have.length', 7);
   });
 
   it('should open, navigate and close the photo viewer', () => {
