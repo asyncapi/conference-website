@@ -11,7 +11,7 @@ interface IVenue {
 }
 
 function VenueCard({ city }: IVenue) {
-  const eventStatus = getEventStatus(city.date);
+  const eventStatus = getEventStatus(city.startDate, city.endDate);
   const cfpUrl = resolveCfpUrl(city.cfp);
 
   return (
