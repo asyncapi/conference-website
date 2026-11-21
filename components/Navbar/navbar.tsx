@@ -5,7 +5,6 @@ import Dropdown from '../illustration/dropdown';
 import { useState, useEffect, useRef, useCallback, JSX } from 'react';
 import NavDrop from './navDrop';
 import Hamburger from '../illustration/hamburger';
-import { useMediaQuery } from 'react-responsive';
 import Cancel from '../illustration/cancel';
 import Image from 'next/image';
 import { LinkItem, ConferenceStatus } from '../../types/types';
@@ -15,7 +14,6 @@ import { usePathname } from 'next/navigation';
 import { useSectionTracker } from '../../hooks/useSectionTracker';
 
 function Navbar(): JSX.Element {
-  const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const pathname = usePathname();
   const { isActive } = useSectionTracker(pathname);
   const [drop, setDrop] = useState<boolean>(false);
@@ -110,8 +108,7 @@ function Navbar(): JSX.Element {
               </div>
             </Link>
           </div>
-          {isTablet ? (
-            <div data-test="nav-Hamberger" className="z-navbar">
+          <div data-test="nav-Hamberger" className="z-navbar hidden lg:block">
               {drop ? (
                 <button>
                   <Cancel />
@@ -121,9 +118,8 @@ function Navbar(): JSX.Element {
                   <Hamburger ref={svg} />
                 </button>
               )}
-            </div>
-          ) : (
-            <div className="flex items-center">
+          </div>
+          <div className="flex items-center lg:hidden">
               {links.map((link: LinkItem) => {
                 const resolvedCfpRef = resolveCfpUrl(link.ref);
                 const resolvedRef =
@@ -295,19 +291,16 @@ function Navbar(): JSX.Element {
                   </div>
                 );
               })}
-            </div>
-          )}
-          {isTablet && (
-            <div
-              className={`fixed inset-0 z-overlay bg-dark-900/90 backdrop-blur-md transition-all duration-500 ${
-                drop
-                  ? 'opacity-100'
-                  : 'opacity-0 -translate-y-full pointer-events-none'
-              }`}
-            >
-              {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
-            </div>
-          )}
+          </div>
+          <div
+            className={`fixed inset-0 z-overlay bg-dark-900/90 backdrop-blur-md transition-all duration-500 hidden lg:block ${
+              drop
+                ? 'opacity-100'
+                : 'opacity-0 -translate-y-full pointer-events-none'
+            }`}
+          >
+            {drop && <NavDrop setDrop={setDrop} ref={menuRef} />}
+          </div>
         </div>
       </div>
     </div>
