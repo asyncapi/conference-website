@@ -14,7 +14,7 @@ export const links: LinkItem[] = (linksJson as LinkItem[]).map((link) => {
       title:
         city.name === 'Online' ? city.name : `${city.name}, ${city.country}`,
       ref: `/venue/${encodeURIComponent(city.name)}`,
-      status: getEventStatus(city.date),
+      status: getEventStatus(city.startDate, city.endDate),
     })),
   };
 });
