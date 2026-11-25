@@ -13,11 +13,22 @@ import SpeakerCard from '../components/Cards/SpeakerCard/SpeakerCard';
 import Link from 'next/link';
 import Button from '../components/Buttons/button';
 import Dropdown from '../components/Dropdown/dropdown';
-import { City, Speaker as SpeakerType } from '../types/types';
+import Gallery from '../components/Gallery/gallery';
+import { City, GalleryAlbum, Speaker as SpeakerType } from '../types/types';
 import { isExternalUrl, resolveCfpUrl } from '../utils/pretalx';
 import { cities, speakers } from '../config/conference-data';
 
-export default function HomePage() {
+interface HomePageProps {
+  galleryCloudName: string;
+  galleryAlbums: GalleryAlbum[];
+  galleryLimit: number;
+}
+
+export default function HomePage({
+  galleryCloudName,
+  galleryAlbums,
+  galleryLimit,
+}: HomePageProps) {
   const isTablet = useMediaQuery({ maxWidth: '1118px' });
   const [speakersList, setSpeakersList] = useState(speakers);
   const [currentCity, setCurrentCity] = useState<Partial<City>>({
@@ -100,8 +111,8 @@ export default function HomePage() {
                             setCurrentCity({ name: 'All' });
                           }}
                           className={`w-30 ${currentCity.name === 'All'
-                              ? 'gradient-bg'
-                              : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                            ? 'gradient-bg'
+                            : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                             }`}
                           outline={true}
                         >
@@ -122,9 +133,9 @@ export default function HomePage() {
                               <Button
                                 type="button"
                                 className={`w-30 ${typeof currentCity !== 'string' &&
-                                    currentCity.name === city.name
-                                    ? 'gradient-bg'
-                                    : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
+                                  currentCity.name === city.name
+                                  ? 'gradient-bg'
+                                  : 'border border-gray btn relative  overflow-hidden  transition-all  rounded  group py-1.5 px-2.5'
                                   }`}
                                 outline={true}
                               >
@@ -226,6 +237,48 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        {galleryCloudName && galleryAlbums.length > 0 && (
+          <div
+            id="gallery"
+            data-test="gallery-teaser"
+            className="container flex flex-col items-center justify-center pb-20"
+          >
+            <div className="text-lg sm:text-sm text-white font-semibold border-b-2 border-blue-400 mb-1">
+              Gallery
+            </div>
+            <Heading
+              typeStyle="heading-md"
+              className="text-gradient text-center lg:mt-10"
+            >
+              Moments from AsyncAPI Conf
+            </Heading>
+            <div className="max-w-3xl sm:w-full text-center">
+              <Paragraph
+                typeStyle="body-lg"
+                className="mt-6"
+                textColor="text-gray-200"
+              >
+                A look back at the talks, workshops and people from our recent
+                conferences.
+              </Paragraph>
+            </div>
+            <div className="mt-16 w-content-lg lg:w-full">
+              <Gallery
+                cloudName={galleryCloudName}
+                albums={galleryAlbums}
+                limit={galleryLimit}
+              />
+            </div>
+            <Link
+              href="/gallery"
+              data-test="gallery-teaser-see-all"
+              className="gradient-bg mt-12 flex h-14 items-center justify-center rounded-md px-8 text-white"
+            >
+              See all photos
+            </Link>
+          </div>
+        )}
 
         <div
           id="tickets"

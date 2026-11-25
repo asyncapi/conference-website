@@ -9,4 +9,13 @@ module.exports = defineConfig({
     viewportHeight: 960,
     viewportWidth: 1536,
   },
+  component: {
+    devServer: {
+      framework: 'next',
+      bundler: 'webpack',
+    },
+    specPattern: 'cypress/component/**/*.cy.{ts,tsx}',
+    viewportHeight: 960,
+    viewportWidth: 1536,
+  },
 });
